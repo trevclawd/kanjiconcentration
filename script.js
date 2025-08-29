@@ -7,6 +7,10 @@ class KanjiConcentrationGame {
         this.matchedPairs = [];
         this.currentRound = 1;
         this.attempts = 0;
+        this.score = 1000;
+        this.isRestricted = false;
+        this.activeCardIndices = [];
+        this.restrictionPenalty = 50;
         this.settings = {
             matchedPairBehavior: 'stay',
             autoAdvance: false,
@@ -245,6 +249,9 @@ class KanjiConcentrationGame {
         this.isGameActive = true;
         this.currentRound = 1;
         this.attempts = 0;
+        this.score = 1000;
+        this.isRestricted = false;
+        this.activeCardIndices = [];
         this.matchedPairs = [];
         this.flippedCards = [];
         
@@ -379,6 +386,9 @@ class KanjiConcentrationGame {
         const card = this.gameCards[index];
         if (card.isFlipped || card.isMatched || this.flippedCards.length >= 2) return;
         
+        // Block clicks on inactive cards when in restricted mode
+        if (this.isRestricted && !this.activeCardIndices.includes(index)) return;
+        
         // Flip the card
         card.isFlipped = true;
         this.flippedCards.push(index);
@@ -421,13 +431,21 @@ class KanjiConcentrationGame {
                 }, 500);
             }
             
+            // Update score for correct match
+            this.updateScore(true);
+            
             // Show celebration
             this.showMatchCelebration(card1);
+            
+            // Check if restricted mode is complete
+            if (this.isRestricted && this.isRestrictedModeComplete()) {
+                this.exitRestrictedMode();
+            }
             
             // Check if game is complete
             if (this.matchedPairs.length === this.cards.length) {
                 setTimeout(() => {
-                    alert(`Congratulations! You completed Round ${this.currentRound} in ${this.attempts} attempts!`);
+                    alert(`Congratulations! You completed Round ${this.currentRound} in ${this.attempts} attempts! Final Score: ${this.score}`);
                 }, 2000);
             }
         } else {
@@ -442,6 +460,14 @@ class KanjiConcentrationGame {
                 cardElement1.classList.remove('flipped');
                 cardElement2.classList.remove('flipped');
             }, 500);
+            
+            // Update score for incorrect attempt
+            this.updateScore(false);
+        }
+        
+        // If in restricted mode and user has attempted one pair, enable exit option
+        if (this.isRestricted && this.attempts > 0) {
+            this.enableFocusExit();
         }
         
         this.flippedCards = [];
@@ -508,6 +534,11 @@ class KanjiConcentrationGame {
         this.shuffleArray(this.gameCards);
         this.displayGameBoard();
         this.updateGameUI();
+        
+        // Reapply restriction if it was active
+        if (this.isRestricted) {
+            this.updateBoardRestriction();
+        }
     }
 
     // UI Management
@@ -540,12 +571,21 @@ class KanjiConcentrationGame {
         
         document.getElementById('roundTitle').textContent = roundTitles[this.currentRound];
         document.getElementById('roundDescription').textContent = roundDescriptions[this.currentRound];
+        document.getElementById('currentScore').textContent = `Score: ${this.score}`;
         document.getElementById('matchesFound').textContent = `Matches: ${this.matchedPairs.length}/${this.cards.length}`;
         document.getElementById('attempts').textContent = `Attempts: ${this.attempts}`;
         
         // Update button states
         document.getElementById('prevRoundBtn').disabled = this.currentRound === 1;
         document.getElementById('nextRoundBtn').disabled = this.currentRound === 4;
+        
+        // Update restriction button
+        this.updateRestrictButton();
+        
+        // Update board restriction if active
+        if (this.isRestricted) {
+            this.updateBoardRestriction();
+        }
     }
 
     getSuitSymbol(suit) {
@@ -556,6 +596,183 @@ class KanjiConcentrationGame {
             spades: '♠'
         };
         return symbols[suit] || '';
+    }
+
+    // Scoring System
+    updateScore(isCorrect) {
+        let scoreChange = 0;
+        
+        if (isCorrect) {
+            // Bonus points for correct matches
+            if (this.isRestricted) {
+                // Higher bonus in restricted mode
+                scoreChange = 100;
+            } else {
+                // Base bonus for normal matches
+                scoreChange = 50;
+            }
+        } else {
+            // Penalty for incorrect attempts
+            if (this.isRestricted) {
+                // Lower penalty in restricted mode
+                scoreChange = -10;
+            } else {
+                // Base penalty for normal attempts
+                scoreChange = -20;
+            }
+        }
+        
+        this.score += scoreChange;
+        this.showScoreChange(scoreChange);
+    }
+    
+    showScoreChange(change) {
+        const scoreChangeElement = document.getElementById('scoreChange');
+        
+        if (change > 0) {
+            scoreChangeElement.textContent = `+${change}`;
+            scoreChangeElement.className = 'score-change positive show';
+        } else {
+            scoreChangeElement.textContent = `${change}`;
+            scoreChangeElement.className = 'score-change negative show';
+        }
+        
+        // Hide after animation
+        setTimeout(() => {
+            scoreChangeElement.className = 'score-change';
+        }, 2000);
+        
+        // Update the main score display immediately to reflect the change
+        document.getElementById('currentScore').textContent = `Score: ${this.score}`;
+    }
+
+    // 4-Card Restriction System
+    restrictBoard() {
+        if (this.isRestricted) return;
+        
+        // Deduct penalty points
+        this.score -= this.restrictionPenalty;
+        this.showScoreChange(-this.restrictionPenalty);
+        
+        // Get available cards (not matched)
+        const availableIndices = this.gameCards
+            .map((card, index) => ({ card, index }))
+            .filter(item => !item.card.isMatched)
+            .map(item => item.index);
+        
+        if (availableIndices.length < 4) {
+            alert('Not enough cards remaining for 4-card focus mode!');
+            return;
+        }
+        
+        // Select 4 cards ensuring at least one pair
+        this.activeCardIndices = this.selectFourCardsWithPair(availableIndices);
+        this.isRestricted = true;
+        
+        // Update UI
+        this.updateBoardRestriction();
+        this.updateRestrictButton();
+    }
+    
+    selectFourCardsWithPair(availableIndices) {
+        // Group available cards by pair ID
+        const pairGroups = {};
+        availableIndices.forEach(index => {
+            const card = this.gameCards[index];
+            if (!pairGroups[card.pairId]) {
+                pairGroups[card.pairId] = [];
+            }
+            pairGroups[card.pairId].push(index);
+        });
+        
+        // Find pairs that have both cards available
+        const completePairs = Object.keys(pairGroups).filter(pairId => 
+            pairGroups[pairId].length === 2
+        );
+        
+        if (completePairs.length === 0) {
+            // Fallback: just select 4 random cards
+            const shuffled = [...availableIndices];
+            this.shuffleArray(shuffled);
+            return shuffled.slice(0, 4);
+        }
+        
+        // Randomly select 1-2 complete pairs
+        const shuffledPairs = [...completePairs];
+        this.shuffleArray(shuffledPairs);
+        const selectedPairs = shuffledPairs.slice(0, 2);
+        let selectedIndices = [];
+        
+        selectedPairs.forEach(pairId => {
+            selectedIndices.push(...pairGroups[pairId]);
+        });
+        
+        // If we need more cards, add random ones
+        while (selectedIndices.length < 4 && availableIndices.length > selectedIndices.length) {
+            const remaining = availableIndices.filter(index => !selectedIndices.includes(index));
+            if (remaining.length > 0) {
+                selectedIndices.push(remaining[Math.floor(Math.random() * remaining.length)]);
+            } else {
+                break;
+            }
+        }
+        
+        return selectedIndices.slice(0, 4);
+    }
+    
+    updateBoardRestriction() {
+        this.gameCards.forEach((card, index) => {
+            const cardElement = document.querySelector(`[data-index="${index}"]`);
+            if (!cardElement) return;
+            
+            if (this.isRestricted) {
+                if (this.activeCardIndices.includes(index)) {
+                    cardElement.classList.add('active-focus');
+                    cardElement.classList.remove('inactive');
+                } else {
+                    cardElement.classList.add('inactive');
+                    cardElement.classList.remove('active-focus');
+                }
+            } else {
+                cardElement.classList.remove('active-focus', 'inactive');
+            }
+        });
+    }
+    
+    isRestrictedModeComplete() {
+        // Check if all active cards are matched
+        return this.activeCardIndices.every(index => 
+            this.gameCards[index].isMatched
+        );
+    }
+    
+    exitRestrictedMode() {
+        this.isRestricted = false;
+        this.activeCardIndices = [];
+        this.updateBoardRestriction();
+        this.updateRestrictButton();
+    }
+    
+    updateRestrictButton() {
+        const restrictBtn = document.getElementById('restrictBoardBtn');
+        if (this.isRestricted) {
+            if (this.attempts > 0) {
+                restrictBtn.textContent = '❌ Exit Focus Mode';
+                restrictBtn.disabled = false;
+                restrictBtn.onclick = () => this.exitRestrictedMode();
+            } else {
+                restrictBtn.textContent = '🎯 Focus Mode Active';
+                restrictBtn.disabled = true;
+            }
+        } else {
+            restrictBtn.textContent = '🎯 4-Card Focus (-50 pts)';
+            restrictBtn.disabled = false;
+            restrictBtn.onclick = () => this.restrictBoard();
+        }
+    }
+    
+    enableFocusExit() {
+        this.updateRestrictButton();
     }
 
     // Event Listeners
@@ -615,6 +832,11 @@ class KanjiConcentrationGame {
         document.getElementById('backToPreGameBtn').addEventListener('click', () => {
             this.isGameActive = false;
             this.showPreGameScreen();
+        });
+        
+        // 4-Card Restriction button
+        document.getElementById('restrictBoardBtn').addEventListener('click', () => {
+            this.restrictBoard();
         });
         
         // Close modals when clicking outside

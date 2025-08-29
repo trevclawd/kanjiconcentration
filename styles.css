@@ -56,6 +56,29 @@ header h1 {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
+.special-btn {
+    background: linear-gradient(135deg, #FF6B35, #F7931E);
+    position: relative;
+    overflow: hidden;
+}
+
+.special-btn:hover {
+    background: linear-gradient(135deg, #e55a2b, #e8851a);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+}
+
+.special-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.special-btn:disabled:hover {
+    transform: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
 .start-btn {
     background: #FF6B35;
     color: white;
@@ -332,6 +355,40 @@ header h1 {
     color: #1e3c72;
 }
 
+.score-display {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.score-value {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #2E8B57;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.score-change {
+    font-size: 1rem;
+    font-weight: bold;
+    opacity: 0;
+    transition: all 0.5s ease;
+    transform: translateY(-10px);
+}
+
+.score-change.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.score-change.positive {
+    color: #28a745;
+}
+
+.score-change.negative {
+    color: #dc3545;
+}
+
 .game-controls {
     display: flex;
     justify-content: center;
@@ -376,6 +433,32 @@ header h1 {
     opacity: 0;
     transform: scale(0);
     pointer-events: none;
+}
+
+.playing-card.inactive {
+    opacity: 0.3;
+    filter: grayscale(70%);
+}
+
+.playing-card.inactive:not(.flipped) {
+    transform: scale(0.9);
+}
+
+.playing-card.active-focus {
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+    border: 3px solid #FFD700;
+    animation: focusPulse 2s infinite;
+}
+
+@keyframes focusPulse {
+    0%, 100% { 
+        box-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+        transform: scale(1);
+    }
+    50% { 
+        box-shadow: 0 0 30px rgba(255, 215, 0, 1);
+        transform: scale(1.02);
+    }
 }
 
 .card-face {
@@ -540,5 +623,12 @@ header h1 {
 
 /* Ensure flipped cards maintain their transform */
 .playing-card.flipped {
-    transform: rotateY(180deg);
+    transform: rotateY(180deg) !important;
+}
+
+/* Ensure inactive flipped cards still flip properly */
+.playing-card.inactive.flipped {
+    transform: rotateY(180deg) scale(0.9) !important;
+    opacity: 0.3;
+    filter: grayscale(70%);
 }
