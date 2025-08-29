@@ -526,6 +526,10 @@ class KanjiConcentrationGame {
         this.matchedPairs = [];
         this.flippedCards = [];
         
+        // Exit restricted mode when resetting
+        this.isRestricted = false;
+        this.activeCardIndices = [];
+        
         this.gameCards.forEach(card => {
             card.isFlipped = false;
             card.isMatched = false;
@@ -534,11 +538,6 @@ class KanjiConcentrationGame {
         this.shuffleArray(this.gameCards);
         this.displayGameBoard();
         this.updateGameUI();
-        
-        // Reapply restriction if it was active
-        if (this.isRestricted) {
-            this.updateBoardRestriction();
-        }
     }
 
     // UI Management
@@ -749,25 +748,44 @@ class KanjiConcentrationGame {
     exitRestrictedMode() {
         this.isRestricted = false;
         this.activeCardIndices = [];
+        
+        // Clear any flipped cards that aren't matched
+        this.flippedCards.forEach(index => {
+            const card = this.gameCards[index];
+            if (!card.isMatched) {
+                card.isFlipped = false;
+                const cardElement = document.querySelector(`[data-index="${index}"]`);
+                if (cardElement) {
+                    cardElement.classList.remove('flipped');
+                }
+            }
+        });
+        this.flippedCards = [];
+        
         this.updateBoardRestriction();
         this.updateRestrictButton();
     }
     
     updateRestrictButton() {
         const restrictBtn = document.getElementById('restrictBoardBtn');
+        
+        // Remove any existing event listeners
+        const newBtn = restrictBtn.cloneNode(true);
+        restrictBtn.parentNode.replaceChild(newBtn, restrictBtn);
+        
         if (this.isRestricted) {
             if (this.attempts > 0) {
-                restrictBtn.textContent = '❌ Exit Focus Mode';
-                restrictBtn.disabled = false;
-                restrictBtn.onclick = () => this.exitRestrictedMode();
+                newBtn.textContent = '❌ Exit Focus Mode';
+                newBtn.disabled = false;
+                newBtn.addEventListener('click', () => this.exitRestrictedMode());
             } else {
-                restrictBtn.textContent = '🎯 Focus Mode Active';
-                restrictBtn.disabled = true;
+                newBtn.textContent = '🎯 Focus Mode Active';
+                newBtn.disabled = true;
             }
         } else {
-            restrictBtn.textContent = '🎯 4-Card Focus (-50 pts)';
-            restrictBtn.disabled = false;
-            restrictBtn.onclick = () => this.restrictBoard();
+            newBtn.textContent = '🎯 4-Card Focus (-50 pts)';
+            newBtn.disabled = false;
+            newBtn.addEventListener('click', () => this.restrictBoard());
         }
     }
     
