@@ -1,0 +1,524 @@
+{
+  "cards": [
+    {
+      "id": "A_hearts_1",
+      "rank": "A",
+      "suit": "hearts",
+      "kanji": "一つ",
+      "hiragana": "ひとつ",
+      "romaji": "hitotsu",
+      "english": "one (thing)",
+      "rhyme": "It's hitotsu — 'one (thing)'"
+    },
+    {
+      "id": "2_hearts_2",
+      "rank": "2",
+      "suit": "hearts",
+      "kanji": "一",
+      "hiragana": "いち",
+      "romaji": "ichi",
+      "english": "one",
+      "rhyme": "It's ichi — 'one'"
+    },
+    {
+      "id": "3_hearts_3",
+      "rank": "3",
+      "suit": "hearts",
+      "kanji": "二",
+      "hiragana": "に",
+      "romaji": "ni",
+      "english": "two",
+      "rhyme": "It's ni — 'two'"
+    },
+    {
+      "id": "4_hearts_4",
+      "rank": "4",
+      "suit": "hearts",
+      "kanji": "二つ",
+      "hiragana": "ふたつ",
+      "romaji": "futatsu",
+      "english": "two (things)",
+      "rhyme": "It's futatsu — 'two (things)'"
+    },
+    {
+      "id": "5_hearts_5",
+      "rank": "5",
+      "suit": "hearts",
+      "kanji": "三",
+      "hiragana": "さん",
+      "romaji": "san",
+      "english": "three",
+      "rhyme": "It's san — 'three'"
+    },
+    {
+      "id": "6_hearts_6",
+      "rank": "6",
+      "suit": "hearts",
+      "kanji": "三つ",
+      "hiragana": "みっつ",
+      "romaji": "mittsu",
+      "english": "three (things)",
+      "rhyme": "It's mittsu — 'three (things)'"
+    },
+    {
+      "id": "7_hearts_7",
+      "rank": "7",
+      "suit": "hearts",
+      "kanji": "四つ",
+      "hiragana": "よっつ",
+      "romaji": "yottsu",
+      "english": "four (things)",
+      "rhyme": "It's yottsu — 'four (things)'"
+    },
+    {
+      "id": "8_hearts_8",
+      "rank": "8",
+      "suit": "hearts",
+      "kanji": "四",
+      "hiragana": "し",
+      "romaji": "shi",
+      "english": "four",
+      "rhyme": "It's shi — 'four'"
+    },
+    {
+      "id": "9_hearts_9",
+      "rank": "9",
+      "suit": "hearts",
+      "kanji": "四",
+      "hiragana": "よん",
+      "romaji": "yon",
+      "english": "four",
+      "rhyme": "It's yon — 'four'"
+    },
+    {
+      "id": "10_hearts_10",
+      "rank": "10",
+      "suit": "hearts",
+      "kanji": "五つ",
+      "hiragana": "いつつ",
+      "romaji": "itsutsu",
+      "english": "five (things)",
+      "rhyme": "It's itsutsu — 'five (things)'"
+    },
+    {
+      "id": "J_hearts_11",
+      "rank": "J",
+      "suit": "hearts",
+      "kanji": "五",
+      "hiragana": "ご",
+      "romaji": "go",
+      "english": "five",
+      "rhyme": "It's go — 'five'"
+    },
+    {
+      "id": "Q_hearts_12",
+      "rank": "Q",
+      "suit": "hearts",
+      "kanji": "六つ",
+      "hiragana": "むっつ",
+      "romaji": "muttsu",
+      "english": "six (things)",
+      "rhyme": "It's muttsu — 'six (things)'"
+    },
+    {
+      "id": "K_hearts_13",
+      "rank": "K",
+      "suit": "hearts",
+      "kanji": "六",
+      "hiragana": "ろく",
+      "romaji": "roku",
+      "english": "six",
+      "rhyme": "It's roku — 'six'"
+    },
+    {
+      "id": "A_diamonds_14",
+      "rank": "A",
+      "suit": "diamonds",
+      "kanji": "七",
+      "hiragana": "なな",
+      "romaji": "nana",
+      "english": "seven",
+      "rhyme": "It's nana — 'seven'"
+    },
+    {
+      "id": "2_diamonds_15",
+      "rank": "2",
+      "suit": "diamonds",
+      "kanji": "七つ",
+      "hiragana": "ななつ",
+      "romaji": "nanatsu",
+      "english": "seven (things)",
+      "rhyme": "It's nanatsu — 'seven (things)'"
+    },
+    {
+      "id": "3_diamonds_16",
+      "rank": "3",
+      "suit": "diamonds",
+      "kanji": "八",
+      "hiragana": "はち",
+      "romaji": "hachi",
+      "english": "eight",
+      "rhyme": "It's hachi — 'eight'"
+    },
+    {
+      "id": "4_diamonds_17",
+      "rank": "4",
+      "suit": "diamonds",
+      "kanji": "八つ",
+      "hiragana": "やっつ",
+      "romaji": "yattsu",
+      "english": "eight (things)",
+      "rhyme": "It's yattsu — 'eight (things)'"
+    },
+    {
+      "id": "5_diamonds_18",
+      "rank": "5",
+      "suit": "diamonds",
+      "kanji": "九",
+      "hiragana": "きゅう",
+      "romaji": "kyuu",
+      "english": "nine",
+      "rhyme": "It's kyuu — 'nine'"
+    },
+    {
+      "id": "6_diamonds_19",
+      "rank": "6",
+      "suit": "diamonds",
+      "kanji": "九つ",
+      "hiragana": "ここのつ",
+      "romaji": "kokonotsu",
+      "english": "nine (things)",
+      "rhyme": "It's kokonotsu — 'nine (things)'"
+    },
+    {
+      "id": "7_diamonds_20",
+      "rank": "7",
+      "suit": "diamonds",
+      "kanji": "十",
+      "hiragana": "じゅう",
+      "romaji": "juu",
+      "english": "ten",
+      "rhyme": "It's juu — 'ten'"
+    },
+    {
+      "id": "8_diamonds_21",
+      "rank": "8",
+      "suit": "diamonds",
+      "kanji": "日",
+      "hiragana": "にち",
+      "romaji": "nichi",
+      "english": "day",
+      "rhyme": "It's nichi — 'day'"
+    },
+    {
+      "id": "9_diamonds_22",
+      "rank": "9",
+      "suit": "diamonds",
+      "kanji": "六日",
+      "hiragana": "むいか",
+      "romaji": "muika",
+      "english": "six days, 6th of the month",
+      "rhyme": "It's muika — 'six days, 6th of the month'"
+    },
+    {
+      "id": "10_diamonds_23",
+      "rank": "10",
+      "suit": "diamonds",
+      "kanji": "三日",
+      "hiragana": "みっか",
+      "romaji": "mikka",
+      "english": "three days, 3rd of the month",
+      "rhyme": "It's mikka — 'three days, 3rd of the month'"
+    },
+    {
+      "id": "J_diamonds_24",
+      "rank": "J",
+      "suit": "diamonds",
+      "kanji": "五日",
+      "hiragana": "いつか",
+      "romaji": "itsuka",
+      "english": "five days, 5th of the month",
+      "rhyme": "It's itsuka — 'five days, 5th of the month'"
+    },
+    {
+      "id": "Q_diamonds_25",
+      "rank": "Q",
+      "suit": "diamonds",
+      "kanji": "八日",
+      "hiragana": "ようか",
+      "romaji": "youka",
+      "english": "eight days, 8th of the month",
+      "rhyme": "It's youka — 'eight days, 8th of the month'"
+    },
+    {
+      "id": "K_diamonds_26",
+      "rank": "K",
+      "suit": "diamonds",
+      "kanji": "二十日",
+      "hiragana": "はつか",
+      "romaji": "hatsuka",
+      "english": "20 days, 20th of the month",
+      "rhyme": "It's hatsuka — '20 days, 20th of the month'"
+    },
+    {
+      "id": "A_clubs_27",
+      "rank": "A",
+      "suit": "clubs",
+      "kanji": "二日",
+      "hiragana": "ふつか",
+      "romaji": "futsuka",
+      "english": "two days, 2nd of the month",
+      "rhyme": "It's futsuka — 'two days, 2nd of the month'"
+    },
+    {
+      "id": "2_clubs_28",
+      "rank": "2",
+      "suit": "clubs",
+      "kanji": "九日",
+      "hiragana": "ここのか",
+      "romaji": "kokonoka",
+      "english": "nine days, 9th of the month",
+      "rhyme": "It's kokonoka — 'nine days, 9th of the month'"
+    },
+    {
+      "id": "3_clubs_29",
+      "rank": "3",
+      "suit": "clubs",
+      "kanji": "一日",
+      "hiragana": "ついたち",
+      "romaji": "tsuitachi",
+      "english": "1st of the month",
+      "rhyme": "It's tsuitachi — '1st of the month'"
+    },
+    {
+      "id": "4_clubs_30",
+      "rank": "4",
+      "suit": "clubs",
+      "kanji": "十日",
+      "hiragana": "とおか",
+      "romaji": "tooka",
+      "english": "ten days, 10th of the month",
+      "rhyme": "It's tooka — 'ten days, 10th of the month'"
+    },
+    {
+      "id": "5_clubs_31",
+      "rank": "5",
+      "suit": "clubs",
+      "kanji": "七日",
+      "hiragana": "なのか",
+      "romaji": "nanoka",
+      "english": "seven days, 7th of the month",
+      "rhyme": "It's nanoka — 'seven days, 7th of the month'"
+    },
+    {
+      "id": "6_clubs_32",
+      "rank": "6",
+      "suit": "clubs",
+      "kanji": "四日",
+      "hiragana": "よっか",
+      "romaji": "yokka",
+      "english": "four days, 4th of the month",
+      "rhyme": "It's yokka — 'four days, 4th of the month'"
+    },
+    {
+      "id": "7_clubs_33",
+      "rank": "7",
+      "suit": "clubs",
+      "kanji": "月",
+      "hiragana": "つき",
+      "romaji": "tsuki",
+      "english": "moon",
+      "rhyme": "It's tsuki — 'moon'"
+    },
+    {
+      "id": "8_clubs_34",
+      "rank": "8",
+      "suit": "clubs",
+      "kanji": "目",
+      "hiragana": "め",
+      "romaji": "me",
+      "english": "eye",
+      "rhyme": "It's me — 'eye'"
+    },
+    {
+      "id": "9_clubs_35",
+      "rank": "9",
+      "suit": "clubs",
+      "kanji": "口",
+      "hiragana": "くち",
+      "romaji": "kuchi",
+      "english": "mouth",
+      "rhyme": "It's kuchi — 'mouth'"
+    },
+    {
+      "id": "10_clubs_36",
+      "rank": "10",
+      "suit": "clubs",
+      "kanji": "九",
+      "hiragana": "く",
+      "romaji": "ku",
+      "english": "nine",
+      "rhyme": "It's ku — 'nine'"
+    },
+    {
+      "id": "J_clubs_37",
+      "rank": "J",
+      "suit": "clubs",
+      "kanji": "日",
+      "hiragana": "ひ",
+      "romaji": "hi",
+      "english": "sun, sunlight, day",
+      "rhyme": "It's hi — 'sun, sunlight, day'"
+    },
+    {
+      "id": "Q_clubs_38",
+      "rank": "Q",
+      "suit": "clubs",
+      "kanji": "田んぼ",
+      "hiragana": "たんぼ",
+      "romaji": "tanbo",
+      "english": "rice field",
+      "rhyme": "It's tanbo — 'rice field'"
+    },
+    {
+      "id": "K_clubs_39",
+      "rank": "K",
+      "suit": "clubs",
+      "kanji": "月日",
+      "hiragana": "がっぴ",
+      "romaji": "gappi",
+      "english": "date",
+      "rhyme": "It's gappi — 'date'"
+    },
+    {
+      "id": "A_spades_40",
+      "rank": "A",
+      "suit": "spades",
+      "kanji": "口げんか",
+      "hiragana": "くちげんか",
+      "romaji": "kuchigenka",
+      "english": "quarrel",
+      "rhyme": "It's kuchigenka — 'quarrel'"
+    },
+    {
+      "id": "2_spades_41",
+      "rank": "2",
+      "suit": "spades",
+      "kanji": "日ごろ",
+      "hiragana": "ひごろ",
+      "romaji": "higoro",
+      "english": "routinely, daily",
+      "rhyme": "It's higoro — 'routinely, daily'"
+    },
+    {
+      "id": "3_spades_42",
+      "rank": "3",
+      "suit": "spades",
+      "kanji": "日ソ",
+      "hiragana": "にっそ",
+      "romaji": "nisso",
+      "english": "Japanese-Soviet",
+      "rhyme": "It's nisso — 'Japanese-Soviet'"
+    },
+    {
+      "id": "4_spades_43",
+      "rank": "4",
+      "suit": "spades",
+      "kanji": "日",
+      "hiragana": "にち",
+      "romaji": "nichi",
+      "english": "Japan",
+      "rhyme": "It's nichi — 'Japan'"
+    },
+    {
+      "id": "5_spades_44",
+      "rank": "5",
+      "suit": "spades",
+      "kanji": "日日",
+      "hiragana": "ひにち",
+      "romaji": "hinichi",
+      "english": "date, number of days",
+      "rhyme": "It's hinichi — 'date, number of days'"
+    },
+    {
+      "id": "6_spades_45",
+      "rank": "6",
+      "suit": "spades",
+      "kanji": "日々",
+      "hiragana": "ひび",
+      "romaji": "hibi",
+      "english": "daily, every day",
+      "rhyme": "It's hibi — 'daily, every day'"
+    },
+    {
+      "id": "7_spades_46",
+      "rank": "7",
+      "suit": "spades",
+      "kanji": "三日月",
+      "hiragana": "みかづき",
+      "romaji": "mikazuki",
+      "english": "new moon, crescent moon",
+      "rhyme": "It's mikazuki — 'new moon, crescent moon'"
+    },
+    {
+      "id": "8_spades_47",
+      "rank": "8",
+      "suit": "spades",
+      "kanji": "月日",
+      "hiragana": "つきひ",
+      "romaji": "tsukihi",
+      "english": "time, days",
+      "rhyme": "It's tsukihi — 'time, days'"
+    },
+    {
+      "id": "9_spades_48",
+      "rank": "9",
+      "suit": "spades",
+      "kanji": "一口",
+      "hiragana": "ひとくち",
+      "romaji": "hitokuchi",
+      "english": "mouthful, bite",
+      "rhyme": "It's hitokuchi — 'mouthful, bite'"
+    },
+    {
+      "id": "10_spades_49",
+      "rank": "10",
+      "suit": "spades",
+      "kanji": "田",
+      "hiragana": "た",
+      "romaji": "ta",
+      "english": "rice field, rice paddy",
+      "rhyme": "It's ta — 'rice field, rice paddy'"
+    },
+    {
+      "id": "J_spades_50",
+      "rank": "J",
+      "suit": "spades",
+      "kanji": "本",
+      "hiragana": "ほん",
+      "romaji": "hon",
+      "english": "book, volume",
+      "rhyme": "It's hon — 'book, volume'"
+    },
+    {
+      "id": "Q_spades_51",
+      "rank": "Q",
+      "suit": "spades",
+      "kanji": "未だ",
+      "hiragana": "まだ",
+      "romaji": "mada",
+      "english": "yet, more",
+      "rhyme": "It's mada — 'yet, more'"
+    },
+    {
+      "id": "K_spades_52",
+      "rank": "K",
+      "suit": "spades",
+      "kanji": "妹",
+      "hiragana": "いもうと",
+      "romaji": "imouto",
+      "english": "younger sister",
+      "rhyme": "It's imouto — 'younger sister'"
+    }
+  ]
+}
