@@ -42,6 +42,30 @@
         </div>
     </div>
 
+    <!-- Review Modal -->
+    <div id="reviewModal" class="modal">
+        <div class="modal-content review-modal-content">
+            <span class="close" id="reviewModalClose">&times;</span>
+            <h2>Review Matched Pairs</h2>
+            <div class="review-header">
+                <div id="reviewCounter" class="review-counter">Pair 1 of 0</div>
+                <div class="review-navigation">
+                    <button id="prevPairBtn" class="nav-btn">⬅️ Previous</button>
+                    <button id="nextPairBtn" class="nav-btn">Next ➡️</button>
+                </div>
+            </div>
+            <div id="reviewContent" class="review-content">
+                <div id="reviewRhyme" class="review-rhyme"></div>
+                <div id="reviewPairDisplay" class="review-pair-display">
+                    <!-- Current pair will be displayed here -->
+                </div>
+            </div>
+            <div class="review-footer">
+                <p class="review-hint">Use arrow keys to navigate • Press Escape to close</p>
+            </div>
+        </div>
+    </div>
+
     <!-- Main Game Container -->
     <div id="gameContainer">
         <!-- Header -->
@@ -90,6 +114,7 @@
                 <button id="prevRoundBtn" class="control-btn">⬅️ Previous Round</button>
                 <button id="nextRoundBtn" class="control-btn">➡️ Next Round</button>
                 <button id="restrictBoardBtn" class="control-btn special-btn">🎯 4-Card Focus (-50 pts)</button>
+                <button id="reviewBtn" class="control-btn">📖 Review Matches</button>
                 <button id="backToPreGameBtn" class="control-btn">📚 Back to Study</button>
             </div>
 

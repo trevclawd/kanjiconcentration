@@ -793,6 +793,121 @@ class KanjiConcentrationGame {
         this.updateRestrictButton();
     }
 
+    // Review Modal Functionality
+    showReviewModal() {
+        if (this.matchedPairs.length === 0) {
+            alert('No matched pairs to review yet!');
+            return;
+        }
+
+        this.currentReviewIndex = 0;
+        this.reviewPairs = this.getMatchedPairsData();
+        
+        const modal = document.getElementById('reviewModal');
+        modal.style.display = 'block';
+        
+        this.updateReviewDisplay();
+        this.updateReviewNavigation();
+    }
+
+    getMatchedPairsData() {
+        return this.matchedPairs.map(pairId => {
+            return this.cards.find(card => card.id === pairId);
+        }).filter(card => card !== undefined);
+    }
+
+    updateReviewDisplay() {
+        if (this.reviewPairs.length === 0) return;
+
+        const currentPair = this.reviewPairs[this.currentReviewIndex];
+        
+        // Update counter
+        document.getElementById('reviewCounter').textContent = 
+            `Pair ${this.currentReviewIndex + 1} of ${this.reviewPairs.length}`;
+        
+        // Update rhyme
+        document.getElementById('reviewRhyme').textContent = currentPair.rhyme;
+        
+        // Update pair display
+        const pairDisplay = document.getElementById('reviewPairDisplay');
+        pairDisplay.innerHTML = '';
+        
+        // Create kanji card
+        const kanjiCard = this.createReviewCard(currentPair, 'kanji');
+        // Create romaji card
+        const romajiCard = this.createReviewCard(currentPair, 'romaji');
+        
+        pairDisplay.appendChild(kanjiCard);
+        pairDisplay.appendChild(romajiCard);
+    }
+
+    createReviewCard(cardData, type) {
+        const card = document.createElement('div');
+        card.className = 'playing-card';
+        
+        const cardFace = document.createElement('div');
+        cardFace.className = 'card-face card-front';
+        
+        // Rank and suit indicators
+        const rankSuitTop = document.createElement('div');
+        rankSuitTop.className = `card-rank-suit suit-${cardData.suit}`;
+        rankSuitTop.innerHTML = `${cardData.rank}<span class="suit-symbol">${this.getSuitSymbol(cardData.suit)}</span>`;
+        
+        const rankSuitBottom = document.createElement('div');
+        rankSuitBottom.className = `card-rank-suit bottom suit-${cardData.suit}`;
+        rankSuitBottom.innerHTML = `${cardData.rank}<span class="suit-symbol">${this.getSuitSymbol(cardData.suit)}</span>`;
+        
+        // Card content
+        const content = document.createElement('div');
+        content.className = 'card-content';
+        
+        if (type === 'kanji') {
+            content.innerHTML = `
+                <div class="kanji-content">
+                    <div class="kanji">${cardData.kanji}</div>
+                    <div class="hiragana">${cardData.hiragana}</div>
+                </div>
+            `;
+        } else {
+            content.innerHTML = `
+                <div class="romaji-content">
+                    <div class="romaji">${cardData.romaji}</div>
+                    <div class="english">${cardData.english}</div>
+                </div>
+            `;
+        }
+        
+        cardFace.appendChild(rankSuitTop);
+        cardFace.appendChild(content);
+        cardFace.appendChild(rankSuitBottom);
+        card.appendChild(cardFace);
+        
+        return card;
+    }
+
+    updateReviewNavigation() {
+        const prevBtn = document.getElementById('prevPairBtn');
+        const nextBtn = document.getElementById('nextPairBtn');
+        
+        prevBtn.disabled = this.currentReviewIndex === 0;
+        nextBtn.disabled = this.currentReviewIndex === this.reviewPairs.length - 1;
+    }
+
+    navigateReview(direction) {
+        if (direction === 'prev' && this.currentReviewIndex > 0) {
+            this.currentReviewIndex--;
+        } else if (direction === 'next' && this.currentReviewIndex < this.reviewPairs.length - 1) {
+            this.currentReviewIndex++;
+        }
+        
+        this.updateReviewDisplay();
+        this.updateReviewNavigation();
+    }
+
+    closeReviewModal() {
+        document.getElementById('reviewModal').style.display = 'none';
+    }
+
     // Event Listeners
     setupEventListeners() {
         // Settings modal
@@ -857,16 +972,58 @@ class KanjiConcentrationGame {
             this.restrictBoard();
         });
         
+        // Review modal functionality
+        document.getElementById('reviewBtn').addEventListener('click', () => {
+            this.showReviewModal();
+        });
+        
+        document.getElementById('reviewModalClose').addEventListener('click', () => {
+            this.closeReviewModal();
+        });
+        
+        document.getElementById('prevPairBtn').addEventListener('click', () => {
+            this.navigateReview('prev');
+        });
+        
+        document.getElementById('nextPairBtn').addEventListener('click', () => {
+            this.navigateReview('next');
+        });
+        
+        // Keyboard navigation for review modal
+        document.addEventListener('keydown', (e) => {
+            const reviewModal = document.getElementById('reviewModal');
+            if (reviewModal.style.display === 'block') {
+                switch(e.key) {
+                    case 'ArrowLeft':
+                        e.preventDefault();
+                        this.navigateReview('prev');
+                        break;
+                    case 'ArrowRight':
+                        e.preventDefault();
+                        this.navigateReview('next');
+                        break;
+                    case 'Escape':
+                        e.preventDefault();
+                        this.closeReviewModal();
+                        break;
+                }
+            }
+        });
+        
         // Close modals when clicking outside
         window.addEventListener('click', (e) => {
             const settingsModal = document.getElementById('settingsModal');
             const celebrationModal = document.getElementById('celebrationModal');
+            const reviewModal = document.getElementById('reviewModal');
             
             if (e.target === settingsModal) {
                 settingsModal.style.display = 'none';
             }
             if (e.target === celebrationModal) {
                 celebrationModal.style.display = 'none';
+            }
+            if (e.target === reviewModal) {
+                reviewModal.style.display = 'none';
             }
         });
     }
