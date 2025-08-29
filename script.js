@@ -1,0 +1,638 @@
+// Game State Management
+class KanjiConcentrationGame {
+    constructor() {
+        this.cards = [];
+        this.gameCards = [];
+        this.flippedCards = [];
+        this.matchedPairs = [];
+        this.currentRound = 1;
+        this.attempts = 0;
+        this.settings = {
+            matchedPairBehavior: 'stay',
+            autoAdvance: false,
+            timerDuration: 60
+        };
+        this.preGameTimer = null;
+        this.isGameActive = false;
+        
+        this.init();
+    }
+
+    init() {
+        this.loadSettings();
+        this.loadSampleData();
+        this.setupEventListeners();
+        this.showPreGameScreen();
+    }
+
+    // Settings Management
+    loadSettings() {
+        const savedSettings = localStorage.getItem('kanjiGameSettings');
+        if (savedSettings) {
+            this.settings = { ...this.settings, ...JSON.parse(savedSettings) };
+        }
+        this.updateSettingsUI();
+    }
+
+    saveSettings() {
+        localStorage.setItem('kanjiGameSettings', JSON.stringify(this.settings));
+    }
+
+    updateSettingsUI() {
+        document.getElementById('matchedPairBehavior').value = this.settings.matchedPairBehavior;
+        document.getElementById('autoAdvance').checked = this.settings.autoAdvance;
+        document.getElementById('timerDuration').value = this.settings.timerDuration;
+    }
+
+    // Data Management
+    async loadSampleData() {
+        // Embedded sample data to avoid CORS issues
+        const sampleData = {
+            "cards": [
+                {
+                    "id": "ace_hearts",
+                    "rank": "A",
+                    "suit": "hearts",
+                    "kanji": "下り",
+                    "hiragana": "くだり",
+                    "romaji": "kudari",
+                    "english": "downhill",
+                    "rhyme": "We go downhill you see, it's Kudari"
+                },
+                {
+                    "id": "2_hearts",
+                    "rank": "2",
+                    "suit": "hearts",
+                    "kanji": "上り",
+                    "hiragana": "のぼり",
+                    "romaji": "nobori",
+                    "english": "uphill",
+                    "rhyme": "Up the hill we climb so free, it's Nobori"
+                },
+                {
+                    "id": "3_hearts",
+                    "rank": "3",
+                    "suit": "hearts",
+                    "kanji": "水",
+                    "hiragana": "みず",
+                    "romaji": "mizu",
+                    "english": "water",
+                    "rhyme": "Clear and blue like morning dew, it's Mizu"
+                },
+                {
+                    "id": "4_hearts",
+                    "rank": "4",
+                    "suit": "hearts",
+                    "kanji": "火",
+                    "hiragana": "ひ",
+                    "romaji": "hi",
+                    "english": "fire",
+                    "rhyme": "Burning bright for all to see, it's Hi"
+                },
+                {
+                    "id": "5_hearts",
+                    "rank": "5",
+                    "suit": "hearts",
+                    "kanji": "木",
+                    "hiragana": "き",
+                    "romaji": "ki",
+                    "english": "tree",
+                    "rhyme": "Growing tall and strong and free, it's Ki"
+                },
+                {
+                    "id": "6_hearts",
+                    "rank": "6",
+                    "suit": "hearts",
+                    "kanji": "金",
+                    "hiragana": "きん",
+                    "romaji": "kin",
+                    "english": "gold",
+                    "rhyme": "Shining bright like treasure's glee, it's Kin"
+                }
+            ]
+        };
+        
+        try {
+            // Try to fetch external file first
+            const response = await fetch('sample-data.json');
+            const data = await response.json();
+            this.cards = data.cards;
+        } catch (error) {
+            // Fall back to embedded data
+            this.cards = sampleData.cards;
+        }
+        
+        this.displayPreGameCards();
+    }
+
+    importData(file) {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+            try {
+                const data = JSON.parse(e.target.result);
+                if (data.cards && Array.isArray(data.cards)) {
+                    this.cards = data.cards;
+                    this.displayPreGameCards();
+                    alert('Data imported successfully!');
+                } else {
+                    alert('Invalid file format. Please ensure the JSON has a "cards" array.');
+                }
+            } catch (error) {
+                alert('Error parsing JSON file: ' + error.message);
+            }
+        };
+        reader.readAsText(file);
+    }
+
+    // Pre-game Screen
+    displayPreGameCards() {
+        const container = document.getElementById('cardPairsDisplay');
+        container.innerHTML = '';
+
+        this.cards.forEach(card => {
+            const pairDiv = document.createElement('div');
+            pairDiv.className = 'card-pair';
+            
+            // Kanji card
+            const kanjiCard = this.createPreGameCard(card, 'kanji');
+            // Romaji card
+            const romajiCard = this.createPreGameCard(card, 'romaji');
+            
+            pairDiv.appendChild(kanjiCard);
+            pairDiv.appendChild(romajiCard);
+            container.appendChild(pairDiv);
+        });
+    }
+
+    createPreGameCard(cardData, type) {
+        const card = document.createElement('div');
+        card.className = 'playing-card';
+        
+        const cardFace = document.createElement('div');
+        cardFace.className = 'card-face card-front';
+        
+        // Rank and suit indicators
+        const rankSuitTop = document.createElement('div');
+        rankSuitTop.className = `card-rank-suit suit-${cardData.suit}`;
+        rankSuitTop.innerHTML = `${cardData.rank}<span class="suit-symbol">${this.getSuitSymbol(cardData.suit)}</span>`;
+        
+        const rankSuitBottom = document.createElement('div');
+        rankSuitBottom.className = `card-rank-suit bottom suit-${cardData.suit}`;
+        rankSuitBottom.innerHTML = `${cardData.rank}<span class="suit-symbol">${this.getSuitSymbol(cardData.suit)}</span>`;
+        
+        // Card content
+        const content = document.createElement('div');
+        content.className = 'card-content';
+        
+        if (type === 'kanji') {
+            content.innerHTML = `
+                <div class="kanji-content">
+                    <div class="kanji">${cardData.kanji}</div>
+                    <div class="hiragana">${cardData.hiragana}</div>
+                </div>
+            `;
+        } else {
+            content.innerHTML = `
+                <div class="romaji-content">
+                    <div class="romaji">${cardData.romaji}</div>
+                    <div class="english">${cardData.english}</div>
+                </div>
+            `;
+        }
+        
+        cardFace.appendChild(rankSuitTop);
+        cardFace.appendChild(content);
+        cardFace.appendChild(rankSuitBottom);
+        card.appendChild(cardFace);
+        
+        return card;
+    }
+
+    startPreGameTimer() {
+        if (!this.settings.autoAdvance) return;
+        
+        let timeLeft = this.settings.timerDuration;
+        const timerDisplay = document.getElementById('preGameTimer');
+        
+        const updateTimer = () => {
+            const minutes = Math.floor(timeLeft / 60);
+            const seconds = timeLeft % 60;
+            timerDisplay.textContent = `Auto-start in: ${minutes}:${seconds.toString().padStart(2, '0')}`;
+            
+            if (timeLeft <= 0) {
+                this.startGame();
+                return;
+            }
+            
+            timeLeft--;
+        };
+        
+        updateTimer();
+        this.preGameTimer = setInterval(updateTimer, 1000);
+    }
+
+    stopPreGameTimer() {
+        if (this.preGameTimer) {
+            clearInterval(this.preGameTimer);
+            this.preGameTimer = null;
+        }
+        document.getElementById('preGameTimer').textContent = '';
+    }
+
+    // Game Logic
+    startGame() {
+        this.stopPreGameTimer();
+        this.isGameActive = true;
+        this.currentRound = 1;
+        this.attempts = 0;
+        this.matchedPairs = [];
+        this.flippedCards = [];
+        
+        this.createGameCards();
+        this.showGameScreen();
+        this.updateGameUI();
+    }
+
+    createGameCards() {
+        this.gameCards = [];
+        
+        // Create pairs: one kanji card and one romaji card for each data entry
+        this.cards.forEach(cardData => {
+            // Kanji card
+            this.gameCards.push({
+                ...cardData,
+                id: cardData.id + '_kanji',
+                type: 'kanji',
+                pairId: cardData.id,
+                isFlipped: false,
+                isMatched: false
+            });
+            
+            // Romaji card
+            this.gameCards.push({
+                ...cardData,
+                id: cardData.id + '_romaji',
+                type: 'romaji',
+                pairId: cardData.id,
+                isFlipped: false,
+                isMatched: false
+            });
+        });
+        
+        // Shuffle the cards
+        this.shuffleArray(this.gameCards);
+    }
+
+    shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+    }
+
+    displayGameBoard() {
+        const gameBoard = document.getElementById('gameBoard');
+        gameBoard.innerHTML = '';
+        
+        this.gameCards.forEach((card, index) => {
+            const cardElement = this.createGameCard(card, index);
+            gameBoard.appendChild(cardElement);
+        });
+    }
+
+    createGameCard(cardData, index) {
+        const card = document.createElement('div');
+        card.className = 'playing-card';
+        card.dataset.index = index;
+        
+        if (cardData.isFlipped) card.classList.add('flipped');
+        if (cardData.isMatched) {
+            card.classList.add('matched');
+            if (this.settings.matchedPairBehavior === 'disappear') {
+                card.classList.add('disappear');
+            }
+        }
+        
+        // Card back
+        const cardBack = document.createElement('div');
+        cardBack.className = 'card-face card-back';
+        cardBack.innerHTML = '<div>?</div>';
+        
+        // Card front
+        const cardFront = document.createElement('div');
+        cardFront.className = 'card-face card-front';
+        
+        // Add rank and suit based on current round
+        if (this.shouldShowRank()) {
+            const rankSuitTop = document.createElement('div');
+            rankSuitTop.className = `card-rank-suit suit-${cardData.suit}`;
+            rankSuitTop.innerHTML = `${cardData.rank}<span class="suit-symbol">${this.getSuitSymbol(cardData.suit)}</span>`;
+            cardFront.appendChild(rankSuitTop);
+            
+            const rankSuitBottom = document.createElement('div');
+            rankSuitBottom.className = `card-rank-suit bottom suit-${cardData.suit}`;
+            rankSuitBottom.innerHTML = `${cardData.rank}<span class="suit-symbol">${this.getSuitSymbol(cardData.suit)}</span>`;
+            cardFront.appendChild(rankSuitBottom);
+        }
+        
+        if (this.shouldShowSuit() && !this.shouldShowRank()) {
+            const suitOnly = document.createElement('div');
+            suitOnly.className = `card-rank-suit suit-${cardData.suit}`;
+            suitOnly.innerHTML = `<span class="suit-symbol">${this.getSuitSymbol(cardData.suit)}</span>`;
+            cardFront.appendChild(suitOnly);
+        }
+        
+        // Card content
+        const content = document.createElement('div');
+        content.className = 'card-content';
+        
+        if (cardData.type === 'kanji') {
+            content.innerHTML = `
+                <div class="kanji-content">
+                    <div class="kanji">${cardData.kanji}</div>
+                    <div class="hiragana">${cardData.hiragana}</div>
+                </div>
+            `;
+        } else {
+            content.innerHTML = `
+                <div class="romaji-content">
+                    <div class="romaji">${cardData.romaji}</div>
+                    <div class="english">${cardData.english}</div>
+                </div>
+            `;
+        }
+        
+        cardFront.appendChild(content);
+        
+        card.appendChild(cardBack);
+        card.appendChild(cardFront);
+        
+        // Add click event
+        card.addEventListener('click', () => this.handleCardClick(index));
+        
+        return card;
+    }
+
+    handleCardClick(index) {
+        if (!this.isGameActive) return;
+        
+        const card = this.gameCards[index];
+        if (card.isFlipped || card.isMatched || this.flippedCards.length >= 2) return;
+        
+        // Flip the card
+        card.isFlipped = true;
+        this.flippedCards.push(index);
+        
+        const cardElement = document.querySelector(`[data-index="${index}"]`);
+        cardElement.classList.add('flipped');
+        
+        // Check for match when two cards are flipped
+        if (this.flippedCards.length === 2) {
+            this.attempts++;
+            this.updateGameUI();
+            
+            setTimeout(() => {
+                this.checkForMatch();
+            }, 1000);
+        }
+    }
+
+    checkForMatch() {
+        const [index1, index2] = this.flippedCards;
+        const card1 = this.gameCards[index1];
+        const card2 = this.gameCards[index2];
+        
+        if (card1.pairId === card2.pairId && card1.type !== card2.type) {
+            // Match found!
+            card1.isMatched = true;
+            card2.isMatched = true;
+            this.matchedPairs.push(card1.pairId);
+            
+            const cardElement1 = document.querySelector(`[data-index="${index1}"]`);
+            const cardElement2 = document.querySelector(`[data-index="${index2}"]`);
+            
+            cardElement1.classList.add('matched');
+            cardElement2.classList.add('matched');
+            
+            if (this.settings.matchedPairBehavior === 'disappear') {
+                setTimeout(() => {
+                    cardElement1.classList.add('disappear');
+                    cardElement2.classList.add('disappear');
+                }, 500);
+            }
+            
+            // Show celebration
+            this.showMatchCelebration(card1);
+            
+            // Check if game is complete
+            if (this.matchedPairs.length === this.cards.length) {
+                setTimeout(() => {
+                    alert(`Congratulations! You completed Round ${this.currentRound} in ${this.attempts} attempts!`);
+                }, 2000);
+            }
+        } else {
+            // No match - flip cards back
+            setTimeout(() => {
+                card1.isFlipped = false;
+                card2.isFlipped = false;
+                
+                const cardElement1 = document.querySelector(`[data-index="${index1}"]`);
+                const cardElement2 = document.querySelector(`[data-index="${index2}"]`);
+                
+                cardElement1.classList.remove('flipped');
+                cardElement2.classList.remove('flipped');
+            }, 500);
+        }
+        
+        this.flippedCards = [];
+        this.updateGameUI();
+    }
+
+    showMatchCelebration(cardData) {
+        const modal = document.getElementById('celebrationModal');
+        const rhymeDisplay = document.getElementById('celebrationRhyme');
+        const cardsDisplay = document.getElementById('celebrationCards');
+        
+        rhymeDisplay.textContent = cardData.rhyme;
+        
+        // Show the matched cards in celebration
+        cardsDisplay.innerHTML = '';
+        const kanjiCard = this.createPreGameCard(cardData, 'kanji');
+        const romajiCard = this.createPreGameCard(cardData, 'romaji');
+        kanjiCard.style.transform = 'scale(0.8)';
+        romajiCard.style.transform = 'scale(0.8)';
+        cardsDisplay.appendChild(kanjiCard);
+        cardsDisplay.appendChild(romajiCard);
+        
+        modal.style.display = 'block';
+        
+        // Auto-close after 3 seconds
+        setTimeout(() => {
+            modal.style.display = 'none';
+        }, 3000);
+    }
+
+    // Round Management
+    shouldShowRank() {
+        return this.currentRound === 1 || this.currentRound === 2;
+    }
+
+    shouldShowSuit() {
+        return this.currentRound === 1 || this.currentRound === 3;
+    }
+
+    nextRound() {
+        if (this.currentRound < 4) {
+            this.currentRound++;
+            this.resetGame();
+        }
+    }
+
+    previousRound() {
+        if (this.currentRound > 1) {
+            this.currentRound--;
+            this.resetGame();
+        }
+    }
+
+    resetGame() {
+        this.attempts = 0;
+        this.matchedPairs = [];
+        this.flippedCards = [];
+        
+        this.gameCards.forEach(card => {
+            card.isFlipped = false;
+            card.isMatched = false;
+        });
+        
+        this.shuffleArray(this.gameCards);
+        this.displayGameBoard();
+        this.updateGameUI();
+    }
+
+    // UI Management
+    showPreGameScreen() {
+        document.getElementById('preGameScreen').classList.add('active');
+        document.getElementById('gameScreen').classList.remove('active');
+        this.startPreGameTimer();
+    }
+
+    showGameScreen() {
+        document.getElementById('preGameScreen').classList.remove('active');
+        document.getElementById('gameScreen').classList.add('active');
+        this.displayGameBoard();
+    }
+
+    updateGameUI() {
+        const roundTitles = {
+            1: 'Round 1',
+            2: 'Round 2', 
+            3: 'Round 3',
+            4: 'Round 4'
+        };
+        
+        const roundDescriptions = {
+            1: 'Rank + Suit + Content',
+            2: 'Rank + Content',
+            3: 'Suit + Content',
+            4: 'Content Only'
+        };
+        
+        document.getElementById('roundTitle').textContent = roundTitles[this.currentRound];
+        document.getElementById('roundDescription').textContent = roundDescriptions[this.currentRound];
+        document.getElementById('matchesFound').textContent = `Matches: ${this.matchedPairs.length}/${this.cards.length}`;
+        document.getElementById('attempts').textContent = `Attempts: ${this.attempts}`;
+        
+        // Update button states
+        document.getElementById('prevRoundBtn').disabled = this.currentRound === 1;
+        document.getElementById('nextRoundBtn').disabled = this.currentRound === 4;
+    }
+
+    getSuitSymbol(suit) {
+        const symbols = {
+            hearts: '♥',
+            diamonds: '♦',
+            clubs: '♣',
+            spades: '♠'
+        };
+        return symbols[suit] || '';
+    }
+
+    // Event Listeners
+    setupEventListeners() {
+        // Settings modal
+        document.getElementById('settingsBtn').addEventListener('click', () => {
+            document.getElementById('settingsModal').style.display = 'block';
+        });
+        
+        document.querySelector('.close').addEventListener('click', () => {
+            document.getElementById('settingsModal').style.display = 'none';
+        });
+        
+        document.getElementById('saveSettings').addEventListener('click', () => {
+            this.settings.matchedPairBehavior = document.getElementById('matchedPairBehavior').value;
+            this.settings.autoAdvance = document.getElementById('autoAdvance').checked;
+            this.settings.timerDuration = parseInt(document.getElementById('timerDuration').value);
+            this.saveSettings();
+            document.getElementById('settingsModal').style.display = 'none';
+            
+            // Restart timer if settings changed
+            if (document.getElementById('preGameScreen').classList.contains('active')) {
+                this.stopPreGameTimer();
+                this.startPreGameTimer();
+            }
+        });
+        
+        // Import functionality
+        document.getElementById('importBtn').addEventListener('click', () => {
+            document.getElementById('fileInput').click();
+        });
+        
+        document.getElementById('fileInput').addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (file) {
+                this.importData(file);
+            }
+        });
+        
+        // Game controls
+        document.getElementById('startGameBtn').addEventListener('click', () => {
+            this.startGame();
+        });
+        
+        document.getElementById('resetBtn').addEventListener('click', () => {
+            this.resetGame();
+        });
+        
+        document.getElementById('prevRoundBtn').addEventListener('click', () => {
+            this.previousRound();
+        });
+        
+        document.getElementById('nextRoundBtn').addEventListener('click', () => {
+            this.nextRound();
+        });
+        
+        document.getElementById('backToPreGameBtn').addEventListener('click', () => {
+            this.isGameActive = false;
+            this.showPreGameScreen();
+        });
+        
+        // Close modals when clicking outside
+        window.addEventListener('click', (e) => {
+            const settingsModal = document.getElementById('settingsModal');
+            const celebrationModal = document.getElementById('celebrationModal');
+            
+            if (e.target === settingsModal) {
+                settingsModal.style.display = 'none';
+            }
+            if (e.target === celebrationModal) {
+                celebrationModal.style.display = 'none';
+            }
+        });
+    }
+}
+
+// Initialize the game when the page loads
+document.addEventListener('DOMContentLoaded', () => {
+    new KanjiConcentrationGame();
+});

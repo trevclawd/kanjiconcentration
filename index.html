@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanji Card Concentration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Settings Modal -->
+    <div id="settingsModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Game Settings</h2>
+            <div class="setting-group">
+                <label for="matchedPairBehavior">When pairs are matched:</label>
+                <select id="matchedPairBehavior">
+                    <option value="stay">Stay face up</option>
+                    <option value="disappear">Disappear</option>
+                </select>
+            </div>
+            <div class="setting-group">
+                <label for="autoAdvance">Auto-advance from pre-game:</label>
+                <input type="checkbox" id="autoAdvance">
+            </div>
+            <div class="setting-group">
+                <label for="timerDuration">Pre-game timer (seconds):</label>
+                <input type="number" id="timerDuration" min="10" max="300" value="60">
+            </div>
+            <button id="saveSettings">Save Settings</button>
+        </div>
+    </div>
+
+    <!-- Match Celebration Modal -->
+    <div id="celebrationModal" class="modal celebration-modal">
+        <div class="modal-content celebration-content">
+            <div class="celebration-text">
+                <h2>Perfect Match!</h2>
+                <div id="celebrationRhyme" class="rhyme-display"></div>
+                <div id="celebrationCards" class="celebration-cards"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Game Container -->
+    <div id="gameContainer">
+        <!-- Header -->
+        <header>
+            <h1>Kanji Card Concentration</h1>
+            <div class="header-controls">
+                <button id="settingsBtn" class="control-btn">⚙️ Settings</button>
+                <button id="importBtn" class="control-btn">📁 Import Data</button>
+                <input type="file" id="fileInput" accept=".json" style="display: none;">
+            </div>
+        </header>
+
+        <!-- Pre-game Screen -->
+        <div id="preGameScreen" class="screen active">
+            <div class="pre-game-header">
+                <h2>Memorize the Card Pairs</h2>
+                <div id="preGameTimer" class="timer"></div>
+            </div>
+            <div id="cardPairsDisplay" class="card-pairs-container">
+                <!-- Card pairs will be dynamically generated here -->
+            </div>
+            <div class="pre-game-controls">
+                <button id="startGameBtn" class="start-btn">Start Game</button>
+            </div>
+        </div>
+
+        <!-- Game Screen -->
+        <div id="gameScreen" class="screen">
+            <div class="game-header">
+                <div class="round-info">
+                    <h2 id="roundTitle">Round 1</h2>
+                    <p id="roundDescription">Rank + Suit + Content</p>
+                </div>
+                <div class="game-stats">
+                    <span id="matchesFound">Matches: 0/52</span>
+                    <span id="attempts">Attempts: 0</span>
+                </div>
+            </div>
+            
+            <div class="game-controls">
+                <button id="resetBtn" class="control-btn">🔄 Reset</button>
+                <button id="prevRoundBtn" class="control-btn">⬅️ Previous Round</button>
+                <button id="nextRoundBtn" class="control-btn">➡️ Next Round</button>
+                <button id="backToPreGameBtn" class="control-btn">📚 Back to Study</button>
+            </div>
+
+            <div id="gameBoard" class="game-board">
+                <!-- Game cards will be dynamically generated here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
