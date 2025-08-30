@@ -604,11 +604,11 @@ class KanjiConcentrationGame {
         if (isCorrect) {
             // Bonus points for correct matches
             if (this.isRestricted) {
-                // Higher bonus in restricted mode
-                scoreChange = 100;
-            } else {
-                // Base bonus for normal matches
+                // Base bonus in restricted mode
                 scoreChange = 50;
+            } else {
+                // Higher bonus for normal matches (not using 4-card focus)
+                scoreChange = 100;
             }
         } else {
             // Penalty for incorrect attempts
@@ -811,7 +811,8 @@ class KanjiConcentrationGame {
     }
 
     getMatchedPairsData() {
-        return this.matchedPairs.map(pairId => {
+        // Reverse the order so most recently matched pairs appear first
+        return this.matchedPairs.slice().reverse().map(pairId => {
             return this.cards.find(card => card.id === pairId);
         }).filter(card => card !== undefined);
     }
@@ -908,6 +909,274 @@ class KanjiConcentrationGame {
         document.getElementById('reviewModal').style.display = 'none';
     }
 
+    // Print Cards Functionality
+    printCards() {
+        // Create a new window for printing
+        const printWindow = window.open('', '_blank');
+        
+        // Generate the print HTML
+        const printHTML = this.generatePrintHTML();
+        
+        // Write the HTML to the new window
+        printWindow.document.write(printHTML);
+        printWindow.document.close();
+        
+        // Wait for content to load, then print
+        printWindow.onload = () => {
+            printWindow.print();
+        };
+    }
+
+    generatePrintHTML() {
+        const currentDate = new Date().toLocaleDateString();
+        
+        let html = `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanji Card Study Sheet</title>
+    <style>
+        @media print {
+            body { margin: 0; }
+            .no-print { display: none; }
+        }
+        
+        body {
+            font-family: 'Arial', 'Hiragino Sans', 'Yu Gothic', 'Meiryo', 'Takao', 'IPAexGothic', 'IPAPGothic', 'VL PGothic', 'Noto Sans CJK JP', sans-serif;
+            margin: 20px;
+            background: white;
+            color: #333;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+        
+        .print-header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #1e3c72;
+            padding-bottom: 20px;
+        }
+        
+        .print-header h1 {
+            color: #1e3c72;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .print-header p {
+            color: #666;
+            font-size: 1.1rem;
+            margin: 5px 0;
+        }
+        
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .card-pair-print {
+            border: 2px solid #ddd;
+            border-radius: 15px;
+            padding: 20px;
+            background: #fafafa;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            break-inside: avoid;
+        }
+        
+        .pair-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .card-rank-suit-print {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        
+        .suit-hearts, .suit-diamonds { color: #DC143C; }
+        .suit-clubs, .suit-spades { color: #000; }
+        
+        .cards-display {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .card-print {
+            flex: 1;
+            border: 2px solid #333;
+            border-radius: 10px;
+            padding: 15px;
+            background: white;
+            text-align: center;
+            min-height: 120px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .kanji-print {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #1e3c72 !important;
+            margin-bottom: 8px;
+            font-family: 'Hiragino Sans', 'Yu Gothic', 'Meiryo', 'MS Gothic', 'Takao', 'IPAexGothic', 'IPAPGothic', 'VL PGothic', 'Noto Sans CJK JP', 'Arial Unicode MS', sans-serif !important;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+        
+        .hiragana-print {
+            font-size: 1.2rem;
+            color: #666 !important;
+            margin-bottom: 5px;
+            font-family: 'Hiragino Sans', 'Yu Gothic', 'Meiryo', 'MS Gothic', 'Takao', 'IPAexGothic', 'IPAPGothic', 'VL PGothic', 'Noto Sans CJK JP', 'Arial Unicode MS', sans-serif !important;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+        
+        .romaji-print {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #1e3c72;
+            margin-bottom: 8px;
+        }
+        
+        .english-print {
+            font-size: 1.1rem;
+            color: #666;
+        }
+        
+        .rhyme-print {
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            border: 2px solid #FF6B35;
+            border-radius: 10px;
+            padding: 15px;
+            font-size: 1.3rem;
+            font-style: italic;
+            font-weight: 600;
+            color: #4B0082;
+            text-align: center;
+            margin-top: 10px;
+        }
+        
+        .print-footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #1e3c72;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .study-tips {
+            background: #f0f8ff;
+            border: 2px solid #1e3c72;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+        
+        .study-tips h3 {
+            color: #1e3c72;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        .study-tips ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        
+        .study-tips li {
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+        
+        @media print {
+            .cards-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .card-pair-print {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="print-header">
+        <h1>🎴 Kanji Card Study Sheet</h1>
+        <p>Complete Card Pairs with Rhyming Phrases</p>
+        <p>Generated on: ${currentDate} • Total Pairs: ${this.cards.length}</p>
+    </div>
+    
+    <div class="study-tips">
+        <h3>📚 Study Tips:</h3>
+        <ul>
+            <li><strong>Read the rhyme first</strong> - It helps you remember the pronunciation</li>
+            <li><strong>Cover one card</strong> - Test yourself by covering either the kanji or romaji side</li>
+            <li><strong>Practice writing</strong> - Write the kanji characters while saying the rhyme</li>
+            <li><strong>Use spaced repetition</strong> - Review cards you find difficult more frequently</li>
+            <li><strong>Make connections</strong> - Link the English meaning to the rhyming phrase</li>
+        </ul>
+    </div>
+    
+    <div class="cards-grid">`;
+
+        // Generate each card pair
+        this.cards.forEach(card => {
+            html += `
+        <div class="card-pair-print">
+            <div class="pair-header">
+                <div class="card-rank-suit-print suit-${card.suit}">
+                    ${card.rank} ${this.getSuitSymbol(card.suit)}
+                </div>
+                <div class="card-rank-suit-print suit-${card.suit}">
+                    ${card.rank} ${this.getSuitSymbol(card.suit)}
+                </div>
+            </div>
+            
+            <div class="cards-display">
+                <div class="card-print">
+                    <div class="kanji-print">${card.kanji}</div>
+                    <div class="hiragana-print">${card.hiragana}</div>
+                </div>
+                
+                <div class="card-print">
+                    <div class="romaji-print">${card.romaji}</div>
+                    <div class="english-print">${card.english}</div>
+                </div>
+            </div>
+            
+            <div class="rhyme-print">
+                "${card.rhyme}"
+            </div>
+        </div>`;
+        });
+
+        html += `
+    </div>
+    
+    <div class="print-footer">
+        <p>🎯 Practice regularly and use the rhymes to build strong memory connections!</p>
+        <p>Generated by Kanji Card Concentration Game</p>
+    </div>
+</body>
+</html>`;
+
+        return html;
+    }
+
     // Event Listeners
     setupEventListeners() {
         // Settings modal
@@ -943,6 +1212,11 @@ class KanjiConcentrationGame {
             if (file) {
                 this.importData(file);
             }
+        });
+        
+        // Print cards functionality
+        document.getElementById('printCardsBtn').addEventListener('click', () => {
+            this.printCards();
         });
         
         // Game controls
