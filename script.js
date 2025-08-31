@@ -1260,6 +1260,184 @@ class KanjiConcentrationGame {
         return html;
     }
 
+    // Print Rhymes Only Functionality
+    printRhymesOnly() {
+        // Create a new window for printing
+        const printWindow = window.open('', '_blank');
+        
+        // Generate the print HTML for rhymes only
+        const printHTML = this.generateRhymesOnlyHTML();
+        
+        // Write the HTML to the new window
+        printWindow.document.write(printHTML);
+        printWindow.document.close();
+        
+        // Wait for content to load, then print
+        printWindow.onload = () => {
+            printWindow.print();
+        };
+    }
+
+    generateRhymesOnlyHTML() {
+        const currentDate = new Date().toLocaleDateString();
+        
+        let html = `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanji Rhymes Study Sheet</title>
+    <style>
+        @media print {
+            body { margin: 0; }
+            .no-print { display: none; }
+        }
+        
+        body {
+            font-family: 'Arial', 'Hiragino Sans', 'Yu Gothic', 'Meiryo', 'Takao', 'IPAexGothic', 'IPAPGothic', 'VL PGothic', 'Noto Sans CJK JP', sans-serif;
+            margin: 20px;
+            background: white;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .print-header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #1e3c72;
+            padding-bottom: 20px;
+        }
+        
+        .print-header h1 {
+            color: #1e3c72;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .print-header p {
+            color: #666;
+            font-size: 1.1rem;
+            margin: 5px 0;
+        }
+        
+        .rhymes-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .rhyme-item {
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            border: 2px solid #FF6B35;
+            border-radius: 15px;
+            padding: 20px;
+            font-size: 1.4rem;
+            font-style: italic;
+            font-weight: 600;
+            color: #4B0082;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            break-inside: avoid;
+            page-break-inside: avoid;
+        }
+        
+        .rhyme-number {
+            font-size: 0.9rem;
+            font-weight: normal;
+            color: #666;
+            margin-bottom: 10px;
+            font-style: normal;
+        }
+        
+        .print-footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #1e3c72;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .study-tips {
+            background: #f0f8ff;
+            border: 2px solid #1e3c72;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+        
+        .study-tips h3 {
+            color: #1e3c72;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        .study-tips ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        
+        .study-tips li {
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+        
+        @media print {
+            .rhymes-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .rhyme-item {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="print-header">
+        <h1>🎵 Kanji Rhymes Study Sheet</h1>
+        <p>Rhyming Phrases for Memory Practice</p>
+        <p>Generated on: ${currentDate} • Total Rhymes: ${this.cards.length}</p>
+    </div>
+    
+    <div class="study-tips">
+        <h3>🎯 How to Use These Rhymes:</h3>
+        <ul>
+            <li><strong>Read aloud</strong> - Say each rhyme out loud to help with pronunciation</li>
+            <li><strong>Visualize</strong> - Create mental images that connect to the rhyme</li>
+            <li><strong>Practice regularly</strong> - Review these rhymes daily for best retention</li>
+            <li><strong>Test yourself</strong> - Cover the rhymes and try to recall them from memory</li>
+            <li><strong>Make connections</strong> - Link the rhymes to the actual kanji meanings</li>
+        </ul>
+    </div>
+    
+    <div class="rhymes-container">`;
+
+        // Generate each rhyme
+        this.cards.forEach((card, index) => {
+            html += `
+        <div class="rhyme-item">
+            <div class="rhyme-number">#${index + 1}</div>
+            "${card.rhyme}"
+        </div>`;
+        });
+
+        html += `
+    </div>
+    
+    <div class="print-footer">
+        <p>🎵 Use these rhymes to build strong memory connections with your kanji!</p>
+        <p>Generated by Kanji Card Concentration Game</p>
+    </div>
+</body>
+</html>`;
+
+        return html;
+    }
+
     // Mode Selection Screen
     showModeSelectionScreen() {
         document.getElementById('gameModeScreen').classList.add('active');
@@ -1793,6 +1971,11 @@ class KanjiConcentrationGame {
         // Print cards functionality
         document.getElementById('printCardsBtn').addEventListener('click', () => {
             this.showPrintClozeModal();
+        });
+        
+        // Print rhymes functionality
+        document.getElementById('printRhymesBtn').addEventListener('click', () => {
+            this.printRhymesOnly();
         });
         
         // Print cloze modal functionality
