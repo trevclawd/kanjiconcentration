@@ -470,10 +470,8 @@ class KanjiConcentrationGame {
         
         // Show the matched cards in celebration
         cardsDisplay.innerHTML = '';
-        const kanjiCard = this.createPreGameCard(cardData, 'kanji');
-        const romajiCard = this.createPreGameCard(cardData, 'romaji');
-        kanjiCard.style.transform = 'scale(0.8)';
-        romajiCard.style.transform = 'scale(0.8)';
+        const kanjiCard = this.createCelebrationCard(cardData, 'kanji');
+        const romajiCard = this.createCelebrationCard(cardData, 'romaji');
         cardsDisplay.appendChild(kanjiCard);
         cardsDisplay.appendChild(romajiCard);
         
@@ -483,6 +481,50 @@ class KanjiConcentrationGame {
         setTimeout(() => {
             modal.style.display = 'none';
         }, 3000);
+    }
+
+    createCelebrationCard(cardData, type) {
+        const card = document.createElement('div');
+        card.className = 'playing-card celebration-card';
+        
+        const cardFace = document.createElement('div');
+        cardFace.className = 'card-face card-front';
+        
+        // Rank and suit indicators
+        const rankSuitTop = document.createElement('div');
+        rankSuitTop.className = `card-rank-suit suit-${cardData.suit}`;
+        rankSuitTop.innerHTML = `${cardData.rank}<span class="suit-symbol">${this.getSuitSymbol(cardData.suit)}</span>`;
+        
+        const rankSuitBottom = document.createElement('div');
+        rankSuitBottom.className = `card-rank-suit bottom suit-${cardData.suit}`;
+        rankSuitBottom.innerHTML = `${cardData.rank}<span class="suit-symbol">${this.getSuitSymbol(cardData.suit)}</span>`;
+        
+        // Card content
+        const content = document.createElement('div');
+        content.className = 'card-content';
+        
+        if (type === 'kanji') {
+            content.innerHTML = `
+                <div class="kanji-content">
+                    <div class="kanji">${cardData.kanji}</div>
+                    <div class="hiragana">${cardData.hiragana}</div>
+                </div>
+            `;
+        } else {
+            content.innerHTML = `
+                <div class="romaji-content">
+                    <div class="romaji">${cardData.romaji}</div>
+                    <div class="english">${cardData.english}</div>
+                </div>
+            `;
+        }
+        
+        cardFace.appendChild(rankSuitTop);
+        cardFace.appendChild(content);
+        cardFace.appendChild(rankSuitBottom);
+        card.appendChild(cardFace);
+        
+        return card;
     }
 
     // Round Management
@@ -1740,6 +1782,11 @@ class KanjiConcentrationGame {
         
         document.getElementById('backToModeSelectBtn').addEventListener('click', () => {
             this.showModeSelectionScreen();
+        });
+        
+        // Celebration modal close button
+        document.getElementById('celebrationModalClose').addEventListener('click', () => {
+            document.getElementById('celebrationModal').style.display = 'none';
         });
         
         // Close modals when clicking outside

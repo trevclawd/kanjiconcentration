@@ -231,6 +231,91 @@ header h1 {
     margin-top: 1.5rem;
 }
 
+.celebration-card {
+    width: 120px !important;
+    height: 168px !important;
+    position: relative !important;
+    transform: none !important;
+    animation: celebrationCardBounce 0.8s ease-out;
+}
+
+@keyframes celebrationCardBounce {
+    0% { transform: scale(0.5) rotate(-10deg); opacity: 0; }
+    50% { transform: scale(1.1) rotate(5deg); }
+    100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+
+.celebration-card .card-face {
+    position: absolute !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: white !important;
+    border: 3px solid #333 !important;
+    border-radius: 15px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 1rem !important;
+    box-sizing: border-box !important;
+    backface-visibility: visible !important;
+    transform: none !important;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3) !important;
+}
+
+.celebration-card .card-rank-suit {
+    position: absolute !important;
+    font-size: 1.2rem !important;
+    font-weight: bold !important;
+    z-index: 10 !important;
+}
+
+.celebration-card .card-rank-suit:first-child {
+    top: 10px !important;
+    left: 10px !important;
+}
+
+.celebration-card .card-rank-suit.bottom {
+    bottom: 10px !important;
+    right: 10px !important;
+    top: auto !important;
+    left: auto !important;
+    transform: rotate(180deg) !important;
+}
+
+.celebration-card .card-content {
+    flex: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+    text-align: center !important;
+    z-index: 5 !important;
+}
+
+.celebration-card .kanji {
+    font-size: 2rem !important;
+    font-weight: bold !important;
+    color: #1e3c72 !important;
+}
+
+.celebration-card .hiragana {
+    font-size: 1.1rem !important;
+    color: #666 !important;
+}
+
+.celebration-card .romaji {
+    font-size: 1.4rem !important;
+    font-weight: bold !important;
+    color: #1e3c72 !important;
+}
+
+.celebration-card .english {
+    font-size: 1.1rem !important;
+    color: #666 !important;
+}
+
 /* Review Modal Styles */
 .review-modal-content {
     max-width: 800px;
