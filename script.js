@@ -1380,14 +1380,6 @@ class KanjiConcentrationGame {
         sourceCard.draggable = true;
         sourceCard.dataset.cardId = cardData.id;
 
-        const rankSuitTop = document.createElement('div');
-        rankSuitTop.className = `kanji-card-rank-suit suit-${cardData.suit}`;
-        rankSuitTop.innerHTML = `${cardData.rank}<span class="suit-symbol">${this.getSuitSymbol(cardData.suit)}</span>`;
-
-        const rankSuitBottom = document.createElement('div');
-        rankSuitBottom.className = `kanji-card-rank-suit bottom suit-${cardData.suit}`;
-        rankSuitBottom.innerHTML = `${cardData.rank}<span class="suit-symbol">${this.getSuitSymbol(cardData.suit)}</span>`;
-
         const content = document.createElement('div');
         content.className = 'kanji-card-content';
 
@@ -1398,9 +1390,7 @@ class KanjiConcentrationGame {
 
         content.appendChild(kanji);
 
-        sourceCard.appendChild(rankSuitTop);
         sourceCard.appendChild(content);
-        sourceCard.appendChild(rankSuitBottom);
 
         // Add drag event listeners
         sourceCard.addEventListener('dragstart', this.handleDragStart.bind(this));
@@ -1533,14 +1523,6 @@ class KanjiConcentrationGame {
         const droppedCard = document.createElement('div');
         droppedCard.className = 'dropped-kanji-card';
 
-        const rankSuitTop = document.createElement('div');
-        rankSuitTop.className = `kanji-card-rank-suit suit-${cardData.suit}`;
-        rankSuitTop.innerHTML = `${cardData.rank}<span class="suit-symbol">${this.getSuitSymbol(cardData.suit)}</span>`;
-
-        const rankSuitBottom = document.createElement('div');
-        rankSuitBottom.className = `kanji-card-rank-suit bottom suit-${cardData.suit}`;
-        rankSuitBottom.innerHTML = `${cardData.rank}<span class="suit-symbol">${this.getSuitSymbol(cardData.suit)}</span>`;
-
         const content = document.createElement('div');
         content.className = 'kanji-card-content';
 
@@ -1550,9 +1532,7 @@ class KanjiConcentrationGame {
 
         content.appendChild(kanji);
 
-        droppedCard.appendChild(rankSuitTop);
         droppedCard.appendChild(content);
-        droppedCard.appendChild(rankSuitBottom);
 
         return droppedCard;
     }
