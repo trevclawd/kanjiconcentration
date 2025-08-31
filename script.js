@@ -1264,9 +1264,6 @@ class KanjiConcentrationGame {
         targetCard.className = 'target-card';
         targetCard.dataset.cardId = cardData.id;
 
-        const targetContent = document.createElement('div');
-        targetContent.className = 'target-content';
-
         const rankSuit = document.createElement('div');
         rankSuit.className = `target-rank-suit suit-${cardData.suit}`;
         rankSuit.innerHTML = `${cardData.rank} ${this.getSuitSymbol(cardData.suit)}`;
@@ -1305,11 +1302,10 @@ class KanjiConcentrationGame {
         rhyme.className = 'target-rhyme';
         rhyme.textContent = cardData.rhyme;
 
-        targetContent.appendChild(rankSuit);
-        targetContent.appendChild(targetInfo);
-        targetContent.appendChild(rhyme);
-
-        targetCard.appendChild(targetContent);
+        // Add all elements directly to the target card
+        targetCard.appendChild(rankSuit);
+        targetCard.appendChild(targetInfo);
+        targetCard.appendChild(rhyme);
 
         return targetCard;
     }
