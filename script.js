@@ -1302,10 +1302,18 @@ class KanjiConcentrationGame {
         rhyme.className = 'target-rhyme';
         rhyme.textContent = cardData.rhyme;
 
+        // Add quick answer button
+        const quickAnswerBtn = document.createElement('button');
+        quickAnswerBtn.className = 'quick-answer-btn';
+        quickAnswerBtn.textContent = '💡 Show Answer';
+        quickAnswerBtn.dataset.cardId = cardData.id;
+        quickAnswerBtn.addEventListener('click', () => this.handleQuickAnswer(cardData.id));
+
         // Add all elements directly to the target card
         targetCard.appendChild(rankSuit);
         targetCard.appendChild(targetInfo);
         targetCard.appendChild(rhyme);
+        targetCard.appendChild(quickAnswerBtn);
 
         return targetCard;
     }
@@ -1554,6 +1562,42 @@ class KanjiConcentrationGame {
         
         this.displayDragDropGame();
         this.updateDragDropUI();
+    }
+
+    // Quick Answer functionality
+    handleQuickAnswer(cardId) {
+        // Check if this card is already matched
+        if (this.dragDropMatches.has(cardId)) {
+            return;
+        }
+
+        // Find the target card and its drop zone
+        const targetCard = document.querySelector(`[data-card-id="${cardId}"].target-card`);
+        const dropZone = targetCard.querySelector('.drop-zone');
+        
+        // Check if drop zone already has a card
+        if (dropZone.classList.contains('has-card')) {
+            return;
+        }
+
+        // Find the corresponding kanji card in the source area
+        const sourceCard = document.querySelector(`[data-card-id="${cardId}"].draggable-kanji-card`);
+        if (!sourceCard || sourceCard.classList.contains('matched')) {
+            return;
+        }
+
+        // Automatically match the cards
+        this.handleCorrectMatch(sourceCard, dropZone, cardId);
+        
+        // Update attempts (but don't penalize for using quick answer)
+        this.attempts++;
+        this.updateDragDropUI();
+
+        // Hide the quick answer button after use
+        const quickAnswerBtn = targetCard.querySelector('.quick-answer-btn');
+        if (quickAnswerBtn) {
+            quickAnswerBtn.style.display = 'none';
+        }
     }
 
     // Event Listeners

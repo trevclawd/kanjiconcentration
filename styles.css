@@ -902,6 +902,35 @@ header h1 {
     margin-top: 1rem;
 }
 
+.quick-answer-btn {
+    background: linear-gradient(135deg, #28a745, #20c997);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 0.8rem;
+    box-shadow: 0 2px 5px rgba(40, 167, 69, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+}
+
+.quick-answer-btn:hover {
+    background: linear-gradient(135deg, #218838, #1ea085);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(40, 167, 69, 0.4);
+}
+
+.quick-answer-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(40, 167, 69, 0.3);
+}
+
 .drop-zone {
     width: 120px;
     height: 120px;
