@@ -597,6 +597,65 @@ header h1 {
     color: #666 !important;
 }
 
+/* Card Selection Styles */
+.card-pair.selected {
+    background: linear-gradient(135deg, #FFD700, #FFA500) !important;
+    border: 3px solid #FF6B35 !important;
+    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.5) !important;
+    transform: scale(1.02);
+    position: relative;
+}
+
+.card-pair.selected::before {
+    content: "⭐";
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 2rem;
+    z-index: 100;
+    background: #FF6B35;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(255, 107, 53, 0.4);
+    animation: starPulse 2s infinite;
+}
+
+@keyframes starPulse {
+    0%, 100% { 
+        transform: scale(1);
+        box-shadow: 0 4px 10px rgba(255, 107, 53, 0.4);
+    }
+    50% { 
+        transform: scale(1.1);
+        box-shadow: 0 6px 15px rgba(255, 107, 53, 0.6);
+    }
+}
+
+.card-pair.selected .playing-card {
+    border: 3px solid #FF6B35 !important;
+    box-shadow: 0 6px 15px rgba(255, 107, 53, 0.4) !important;
+}
+
+.card-pair.selected .card-face {
+    border: 3px solid #FF6B35 !important;
+    background: linear-gradient(135deg, #FFFACD, #FFF8DC) !important;
+}
+
+.card-pair.selectable {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.card-pair.selectable:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(255, 215, 0, 0.3);
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 165, 0, 0.1)) !important;
+}
+
 .pre-game-controls {
     text-align: center;
 }
@@ -605,7 +664,7 @@ header h1 {
     display: flex;
     justify-content: center;
     gap: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     flex-wrap: wrap;
 }
 
@@ -631,6 +690,69 @@ header h1 {
 .flip-btn:active {
     transform: translateY(0);
     box-shadow: 0 2px 5px rgba(108, 92, 231, 0.3);
+}
+
+/* Card Selection Controls */
+.card-selection-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.selection-btn {
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    color: #4B0082;
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 8px rgba(255, 215, 0, 0.3);
+    border: 2px solid #FF6B35;
+}
+
+.selection-btn:hover {
+    background: linear-gradient(135deg, #FFC700, #FF9500);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(255, 215, 0, 0.4);
+}
+
+.selection-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(255, 215, 0, 0.3);
+}
+
+.selection-btn.active {
+    background: linear-gradient(135deg, #28a745, #20c997);
+    color: white;
+    border-color: #1e7e34;
+    box-shadow: 0 3px 8px rgba(40, 167, 69, 0.3);
+}
+
+.selection-btn.active:hover {
+    background: linear-gradient(135deg, #218838, #1ea085);
+    box-shadow: 0 5px 12px rgba(40, 167, 69, 0.4);
+}
+
+.selection-status {
+    background: rgba(255, 255, 255, 0.9);
+    color: #1e3c72;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 1rem;
+    border: 2px solid #FFD700;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.selection-status span {
+    color: #FF6B35;
+    font-weight: bold;
 }
 
 /* Card flip states */

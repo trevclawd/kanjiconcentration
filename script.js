@@ -19,6 +19,10 @@ class KanjiConcentrationGame {
         this.preGameTimer = null;
         this.isGameActive = false;
         
+        // Card selection functionality
+        this.isCardSelectionMode = false;
+        this.selectedCards = new Set();
+        
         this.init();
     }
 
@@ -143,6 +147,16 @@ class KanjiConcentrationGame {
         this.cards.forEach(card => {
             const pairDiv = document.createElement('div');
             pairDiv.className = 'card-pair';
+            pairDiv.dataset.cardId = card.id;
+            
+            // Add selection functionality if in selection mode
+            if (this.isCardSelectionMode) {
+                pairDiv.classList.add('selectable');
+                if (this.selectedCards.has(card.id)) {
+                    pairDiv.classList.add('selected');
+                }
+                pairDiv.addEventListener('click', () => this.toggleCardSelection(card.id));
+            }
             
             // Kanji card
             const kanjiCard = this.createPreGameCard(card, 'kanji');
@@ -250,8 +264,11 @@ class KanjiConcentrationGame {
     createGameCards() {
         this.gameCards = [];
         
+        // Use selected cards if any are selected, otherwise use all cards
+        const cardsToUse = this.getCardsForGame();
+        
         // Create pairs: one kanji card and one romaji card for each data entry
-        this.cards.forEach(cardData => {
+        cardsToUse.forEach(cardData => {
             // Kanji card
             this.gameCards.push({
                 ...cardData,
@@ -1931,6 +1948,94 @@ class KanjiConcentrationGame {
         document.getElementById('flipKanjiBtn').textContent = '🔄 Hide Kanji';
     }
 
+    // Card Selection Functionality
+    toggleCardSelectionMode() {
+        this.isCardSelectionMode = !this.isCardSelectionMode;
+        
+        const toggleBtn = document.getElementById('toggleCardSelectionBtn');
+        const resetBtn = document.getElementById('resetCardSelectionBtn');
+        const statusDiv = document.getElementById('selectionStatus');
+        
+        if (this.isCardSelectionMode) {
+            // Entering selection mode
+            toggleBtn.textContent = '✅ Finish Selection';
+            toggleBtn.classList.add('active');
+            resetBtn.style.display = 'inline-block';
+            statusDiv.style.display = 'inline-block';
+            this.updateSelectionStatus();
+        } else {
+            // Exiting selection mode
+            toggleBtn.textContent = '⭐ Select Specific Cards';
+            toggleBtn.classList.remove('active');
+            resetBtn.style.display = 'none';
+            statusDiv.style.display = 'none';
+        }
+        
+        // Refresh the card display to apply/remove selection functionality
+        this.displayPreGameCards();
+    }
+
+    toggleCardSelection(cardId) {
+        if (!this.isCardSelectionMode) return;
+        
+        if (this.selectedCards.has(cardId)) {
+            this.selectedCards.delete(cardId);
+        } else {
+            this.selectedCards.add(cardId);
+        }
+        
+        // Update the visual state of the card
+        const cardPair = document.querySelector(`[data-card-id="${cardId}"]`);
+        if (cardPair) {
+            if (this.selectedCards.has(cardId)) {
+                cardPair.classList.add('selected');
+            } else {
+                cardPair.classList.remove('selected');
+            }
+        }
+        
+        this.updateSelectionStatus();
+    }
+
+    updateSelectionStatus() {
+        const selectedCount = document.getElementById('selectedCount');
+        selectedCount.textContent = this.selectedCards.size;
+    }
+
+    resetCardSelection() {
+        this.selectedCards.clear();
+        this.updateSelectionStatus();
+        
+        // Remove selected class from all cards
+        const cardPairs = document.querySelectorAll('.card-pair');
+        cardPairs.forEach(pair => {
+            pair.classList.remove('selected');
+        });
+        
+        // Exit selection mode
+        this.isCardSelectionMode = false;
+        const toggleBtn = document.getElementById('toggleCardSelectionBtn');
+        const resetBtn = document.getElementById('resetCardSelectionBtn');
+        const statusDiv = document.getElementById('selectionStatus');
+        
+        toggleBtn.textContent = '⭐ Select Specific Cards';
+        toggleBtn.classList.remove('active');
+        resetBtn.style.display = 'none';
+        statusDiv.style.display = 'none';
+        
+        // Refresh the card display
+        this.displayPreGameCards();
+    }
+
+    getCardsForGame() {
+        // If cards are selected, use only those cards
+        if (this.selectedCards.size > 0) {
+            return this.cards.filter(card => this.selectedCards.has(card.id));
+        }
+        // Otherwise, use all cards
+        return this.cards;
+    }
+
     // Event Listeners
     setupEventListeners() {
         // Settings modal
@@ -2076,6 +2181,15 @@ class KanjiConcentrationGame {
         
         document.getElementById('resetFlipBtn').addEventListener('click', () => {
             this.resetAllCardFlips();
+        });
+        
+        // Card selection event listeners
+        document.getElementById('toggleCardSelectionBtn').addEventListener('click', () => {
+            this.toggleCardSelectionMode();
+        });
+        
+        document.getElementById('resetCardSelectionBtn').addEventListener('click', () => {
+            this.resetCardSelection();
         });
         
         // Drag & Drop mode controls
