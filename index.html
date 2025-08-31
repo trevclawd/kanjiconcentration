@@ -128,8 +128,30 @@
             </div>
         </header>
 
+        <!-- Game Mode Selection Screen -->
+        <div id="gameModeScreen" class="screen active">
+            <div class="mode-selection-header">
+                <h2>Choose Your Game Mode</h2>
+                <p>Select how you want to practice your kanji cards</p>
+            </div>
+            <div class="mode-options">
+                <div class="mode-card" id="concentrationMode">
+                    <div class="mode-icon">🎴</div>
+                    <h3>Concentration Game</h3>
+                    <p>Classic memory matching game with kanji and romaji cards</p>
+                    <button class="mode-btn">Play Concentration</button>
+                </div>
+                <div class="mode-card" id="dragDropMode">
+                    <div class="mode-icon">🎯</div>
+                    <h3>Drag & Drop Match</h3>
+                    <p>Drag kanji cards to match with English/romaji phrases</p>
+                    <button class="mode-btn">Play Drag & Drop</button>
+                </div>
+            </div>
+        </div>
+
         <!-- Pre-game Screen -->
-        <div id="preGameScreen" class="screen active">
+        <div id="preGameScreen" class="screen">
             <div class="pre-game-header">
                 <h2>Memorize the Card Pairs</h2>
                 <div id="preGameTimer" class="timer"></div>
@@ -139,6 +161,48 @@
             </div>
             <div class="pre-game-controls">
                 <button id="startGameBtn" class="start-btn">Start Game</button>
+            </div>
+        </div>
+
+        <!-- Drag & Drop Screen -->
+        <div id="dragDropScreen" class="screen">
+            <div class="drag-drop-header">
+                <div class="round-info">
+                    <h2 id="dragDropTitle">Drag & Drop Match</h2>
+                    <p id="dragDropDescription">Drag kanji cards to match with English/romaji phrases</p>
+                </div>
+                <div class="game-stats">
+                    <div class="score-display">
+                        <span id="dragDropScore" class="score-value">Score: 1000</span>
+                        <span id="dragDropScoreChange" class="score-change"></span>
+                    </div>
+                    <span id="dragDropMatches">Matches: 0/52</span>
+                    <span id="dragDropAttempts">Attempts: 0</span>
+                </div>
+            </div>
+            
+            <div class="drag-drop-controls">
+                <button id="dragDropResetBtn" class="control-btn">🔄 Reset</button>
+                <button id="dragDropBackBtn" class="control-btn">📚 Back to Study</button>
+                <button id="backToModeSelectBtn" class="control-btn">🏠 Mode Select</button>
+            </div>
+
+            <div id="dragDropGameArea" class="drag-drop-game-area">
+                <!-- Left side: English/Romaji cards with rhymes -->
+                <div id="dragDropTargets" class="drag-drop-targets">
+                    <h3>Match the Kanji Cards</h3>
+                    <div id="targetCardsContainer" class="target-cards-container">
+                        <!-- Target cards will be generated here -->
+                    </div>
+                </div>
+                
+                <!-- Right side: Scrollable kanji cards -->
+                <div id="dragDropSource" class="drag-drop-source">
+                    <h3>Kanji Cards</h3>
+                    <div id="sourceCardsContainer" class="source-cards-container">
+                        <!-- Draggable kanji cards will be generated here -->
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -160,7 +224,7 @@
             </div>
             
             <div class="game-controls">
-                <button id="resetBtn" class="control-btn">🔄 Reset</button>
+                <button id="resetBtn" class="control-btn">� Reset</button>
                 <button id="prevRoundBtn" class="control-btn">⬅️ Previous Round</button>
                 <button id="nextRoundBtn" class="control-btn">➡️ Next Round</button>
                 <button id="restrictBoardBtn" class="control-btn special-btn">🎯 4-Card Focus (-50 pts)</button>

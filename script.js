@@ -26,7 +26,7 @@ class KanjiConcentrationGame {
         this.loadSettings();
         this.loadSampleData();
         this.setupEventListeners();
-        this.showPreGameScreen();
+        this.showModeSelectionScreen();
     }
 
     // Settings Management
@@ -50,80 +50,67 @@ class KanjiConcentrationGame {
 
     // Data Management
     async loadSampleData() {
-        // Embedded sample data to avoid CORS issues
-        const sampleData = {
-            "cards": [
-                {
-                    "id": "ace_hearts",
-                    "rank": "A",
-                    "suit": "hearts",
-                    "kanji": "下り",
-                    "hiragana": "くだり",
-                    "romaji": "kudari",
-                    "english": "downhill",
-                    "rhyme": "We go downhill you see, it's Kudari"
-                },
-                {
-                    "id": "2_hearts",
-                    "rank": "2",
-                    "suit": "hearts",
-                    "kanji": "上り",
-                    "hiragana": "のぼり",
-                    "romaji": "nobori",
-                    "english": "uphill",
-                    "rhyme": "Up the hill we climb so free, it's Nobori"
-                },
-                {
-                    "id": "3_hearts",
-                    "rank": "3",
-                    "suit": "hearts",
-                    "kanji": "水",
-                    "hiragana": "みず",
-                    "romaji": "mizu",
-                    "english": "water",
-                    "rhyme": "Clear and blue like morning dew, it's Mizu"
-                },
-                {
-                    "id": "4_hearts",
-                    "rank": "4",
-                    "suit": "hearts",
-                    "kanji": "火",
-                    "hiragana": "ひ",
-                    "romaji": "hi",
-                    "english": "fire",
-                    "rhyme": "Burning bright for all to see, it's Hi"
-                },
-                {
-                    "id": "5_hearts",
-                    "rank": "5",
-                    "suit": "hearts",
-                    "kanji": "木",
-                    "hiragana": "き",
-                    "romaji": "ki",
-                    "english": "tree",
-                    "rhyme": "Growing tall and strong and free, it's Ki"
-                },
-                {
-                    "id": "6_hearts",
-                    "rank": "6",
-                    "suit": "hearts",
-                    "kanji": "金",
-                    "hiragana": "きん",
-                    "romaji": "kin",
-                    "english": "gold",
-                    "rhyme": "Shining bright like treasure's glee, it's Kin"
-                }
-            ]
-        };
-        
         try {
             // Try to fetch external file first
             const response = await fetch('sample-data.json');
             const data = await response.json();
             this.cards = data.cards;
         } catch (error) {
-            // Fall back to embedded data
-            this.cards = sampleData.cards;
+            // Fall back to embedded data - use the full dataset
+            this.cards = [
+                {"id": "ace_hearts", "rank": "A", "suit": "hearts", "kanji": "下り", "hiragana": "くだり", "romaji": "kudari", "english": "downhill", "rhyme": "We go downhill you see, it's Kudari"},
+                {"id": "2_hearts", "rank": "2", "suit": "hearts", "kanji": "上り", "hiragana": "のぼり", "romaji": "nobori", "english": "uphill", "rhyme": "Up the hill we climb so free, it's Nobori"},
+                {"id": "3_hearts", "rank": "3", "suit": "hearts", "kanji": "水", "hiragana": "みず", "romaji": "mizu", "english": "water", "rhyme": "Clear and blue like morning dew, it's Mizu"},
+                {"id": "4_hearts", "rank": "4", "suit": "hearts", "kanji": "火", "hiragana": "ひ", "romaji": "hi", "english": "fire", "rhyme": "Burning bright for all to see, it's Hi"},
+                {"id": "5_hearts", "rank": "5", "suit": "hearts", "kanji": "木", "hiragana": "き", "romaji": "ki", "english": "tree", "rhyme": "Growing tall and strong and free, it's Ki"},
+                {"id": "6_hearts", "rank": "6", "suit": "hearts", "kanji": "金", "hiragana": "きん", "romaji": "kin", "english": "gold", "rhyme": "Shining bright like treasure's glee, it's Kin"},
+                {"id": "7_hearts", "rank": "7", "suit": "hearts", "kanji": "土", "hiragana": "つち", "romaji": "tsuchi", "english": "earth", "rhyme": "Rich and brown beneath the tree, it's Tsuchi"},
+                {"id": "8_hearts", "rank": "8", "suit": "hearts", "kanji": "空", "hiragana": "そら", "romaji": "sora", "english": "sky", "rhyme": "Blue and vast for all to see, it's Sora"},
+                {"id": "9_hearts", "rank": "9", "suit": "hearts", "kanji": "海", "hiragana": "うみ", "romaji": "umi", "english": "ocean", "rhyme": "Deep and wide and wild and free, it's Umi"},
+                {"id": "10_hearts", "rank": "10", "suit": "hearts", "kanji": "山", "hiragana": "やま", "romaji": "yama", "english": "mountain", "rhyme": "Tall and proud for all to see, it's Yama"},
+                {"id": "jack_hearts", "rank": "J", "suit": "hearts", "kanji": "川", "hiragana": "かわ", "romaji": "kawa", "english": "river", "rhyme": "Flowing swift and wild and free, it's Kawa"},
+                {"id": "queen_hearts", "rank": "Q", "suit": "hearts", "kanji": "花", "hiragana": "はな", "romaji": "hana", "english": "flower", "rhyme": "Blooming bright for all to see, it's Hana"},
+                {"id": "king_hearts", "rank": "K", "suit": "hearts", "kanji": "月", "hiragana": "つき", "romaji": "tsuki", "english": "moon", "rhyme": "Glowing bright in night's decree, it's Tsuki"},
+                {"id": "ace_diamonds", "rank": "A", "suit": "diamonds", "kanji": "日", "hiragana": "ひ", "romaji": "hi", "english": "sun", "rhyme": "Shining bright for you and me, it's Hi"},
+                {"id": "2_diamonds", "rank": "2", "suit": "diamonds", "kanji": "星", "hiragana": "ほし", "romaji": "hoshi", "english": "star", "rhyme": "Twinkling bright for all to see, it's Hoshi"},
+                {"id": "3_diamonds", "rank": "3", "suit": "diamonds", "kanji": "雲", "hiragana": "くも", "romaji": "kumo", "english": "cloud", "rhyme": "Floating white and soft and free, it's Kumo"},
+                {"id": "4_diamonds", "rank": "4", "suit": "diamonds", "kanji": "雨", "hiragana": "あめ", "romaji": "ame", "english": "rain", "rhyme": "Falling down from clouds we see, it's Ame"},
+                {"id": "5_diamonds", "rank": "5", "suit": "diamonds", "kanji": "雪", "hiragana": "ゆき", "romaji": "yuki", "english": "snow", "rhyme": "White and cold as cold can be, it's Yuki"},
+                {"id": "6_diamonds", "rank": "6", "suit": "diamonds", "kanji": "風", "hiragana": "かぜ", "romaji": "kaze", "english": "wind", "rhyme": "Blowing strong and wild and free, it's Kaze"},
+                {"id": "7_diamonds", "rank": "7", "suit": "diamonds", "kanji": "石", "hiragana": "いし", "romaji": "ishi", "english": "stone", "rhyme": "Hard and strong as strong can be, it's Ishi"},
+                {"id": "8_diamonds", "rank": "8", "suit": "diamonds", "kanji": "草", "hiragana": "くさ", "romaji": "kusa", "english": "grass", "rhyme": "Green and soft beneath the tree, it's Kusa"},
+                {"id": "9_diamonds", "rank": "9", "suit": "diamonds", "kanji": "葉", "hiragana": "は", "romaji": "ha", "english": "leaf", "rhyme": "Green and fresh for all to see, it's Ha"},
+                {"id": "10_diamonds", "rank": "10", "suit": "diamonds", "kanji": "根", "hiragana": "ね", "romaji": "ne", "english": "root", "rhyme": "Deep below where none can see, it's Ne"},
+                {"id": "jack_diamonds", "rank": "J", "suit": "diamonds", "kanji": "種", "hiragana": "たね", "romaji": "tane", "english": "seed", "rhyme": "Small but full of life to be, it's Tane"},
+                {"id": "queen_diamonds", "rank": "Q", "suit": "diamonds", "kanji": "実", "hiragana": "み", "romaji": "mi", "english": "fruit", "rhyme": "Sweet and ripe upon the tree, it's Mi"},
+                {"id": "king_diamonds", "rank": "K", "suit": "diamonds", "kanji": "森", "hiragana": "もり", "romaji": "mori", "english": "forest", "rhyme": "Dark and deep and wild and free, it's Mori"},
+                {"id": "ace_clubs", "rank": "A", "suit": "clubs", "kanji": "家", "hiragana": "いえ", "romaji": "ie", "english": "house", "rhyme": "Warm and safe for you and me, it's Ie"},
+                {"id": "2_clubs", "rank": "2", "suit": "clubs", "kanji": "門", "hiragana": "もん", "romaji": "mon", "english": "gate", "rhyme": "Standing tall for all to see, it's Mon"},
+                {"id": "3_clubs", "rank": "3", "suit": "clubs", "kanji": "道", "hiragana": "みち", "romaji": "michi", "english": "road", "rhyme": "Leading far where we can't see, it's Michi"},
+                {"id": "4_clubs", "rank": "4", "suit": "clubs", "kanji": "橋", "hiragana": "はし", "romaji": "hashi", "english": "bridge", "rhyme": "Crossing over streams so free, it's Hashi"},
+                {"id": "5_clubs", "rank": "5", "suit": "clubs", "kanji": "車", "hiragana": "くるま", "romaji": "kuruma", "english": "car", "rhyme": "Rolling fast for all to see, it's Kuruma"},
+                {"id": "6_clubs", "rank": "6", "suit": "clubs", "kanji": "船", "hiragana": "ふね", "romaji": "fune", "english": "boat", "rhyme": "Sailing on the deep blue sea, it's Fune"},
+                {"id": "7_clubs", "rank": "7", "suit": "clubs", "kanji": "電車", "hiragana": "でんしゃ", "romaji": "densha", "english": "train", "rhyme": "Racing fast for all to see, it's Densha"},
+                {"id": "8_clubs", "rank": "8", "suit": "clubs", "kanji": "飛行機", "hiragana": "ひこうき", "romaji": "hikouki", "english": "airplane", "rhyme": "Flying high above the sea, it's Hikouki"},
+                {"id": "9_clubs", "rank": "9", "suit": "clubs", "kanji": "自転車", "hiragana": "じてんしゃ", "romaji": "jitensha", "english": "bicycle", "rhyme": "Pedaling fast and wild and free, it's Jitensha"},
+                {"id": "10_clubs", "rank": "10", "suit": "clubs", "kanji": "歩く", "hiragana": "あるく", "romaji": "aruku", "english": "walk", "rhyme": "Step by step so carefully, it's Aruku"},
+                {"id": "jack_clubs", "rank": "J", "suit": "clubs", "kanji": "走る", "hiragana": "はしる", "romaji": "hashiru", "english": "run", "rhyme": "Fast and quick as quick can be, it's Hashiru"},
+                {"id": "queen_clubs", "rank": "Q", "suit": "clubs", "kanji": "泳ぐ", "hiragana": "およぐ", "romaji": "oyogu", "english": "swim", "rhyme": "Through the water wild and free, it's Oyogu"},
+                {"id": "king_clubs", "rank": "K", "suit": "clubs", "kanji": "飛ぶ", "hiragana": "とぶ", "romaji": "tobu", "english": "fly", "rhyme": "High above for all to see, it's Tobu"},
+                {"id": "ace_spades", "rank": "A", "suit": "spades", "kanji": "人", "hiragana": "ひと", "romaji": "hito", "english": "person", "rhyme": "Walking tall for all to see, it's Hito"},
+                {"id": "2_spades", "rank": "2", "suit": "spades", "kanji": "男", "hiragana": "おとこ", "romaji": "otoko", "english": "man", "rhyme": "Strong and brave as brave can be, it's Otoko"},
+                {"id": "3_spades", "rank": "3", "suit": "spades", "kanji": "女", "hiragana": "おんな", "romaji": "onna", "english": "woman", "rhyme": "Graceful, kind, and strong and free, it's Onna"},
+                {"id": "4_spades", "rank": "4", "suit": "spades", "kanji": "子供", "hiragana": "こども", "romaji": "kodomo", "english": "child", "rhyme": "Playing games so happily, it's Kodomo"},
+                {"id": "5_spades", "rank": "5", "suit": "spades", "kanji": "友達", "hiragana": "ともだち", "romaji": "tomodachi", "english": "friend", "rhyme": "Always there for you and me, it's Tomodachi"},
+                {"id": "6_spades", "rank": "6", "suit": "spades", "kanji": "家族", "hiragana": "かぞく", "romaji": "kazoku", "english": "family", "rhyme": "Together strong as strong can be, it's Kazoku"},
+                {"id": "7_spades", "rank": "7", "suit": "spades", "kanji": "先生", "hiragana": "せんせい", "romaji": "sensei", "english": "teacher", "rhyme": "Wise and kind for all to see, it's Sensei"},
+                {"id": "8_spades", "rank": "8", "suit": "spades", "kanji": "学生", "hiragana": "がくせい", "romaji": "gakusei", "english": "student", "rhyme": "Learning new things happily, it's Gakusei"},
+                {"id": "9_spades", "rank": "9", "suit": "spades", "kanji": "医者", "hiragana": "いしゃ", "romaji": "isha", "english": "doctor", "rhyme": "Healing all so carefully, it's Isha"},
+                {"id": "10_spades", "rank": "10", "suit": "spades", "kanji": "料理人", "hiragana": "りょうりにん", "romaji": "ryourinin", "english": "cook", "rhyme": "Making food so tastily, it's Ryourinin"},
+                {"id": "jack_spades", "rank": "J", "suit": "spades", "kanji": "警察官", "hiragana": "けいさつかん", "romaji": "keisatsukan", "english": "police officer", "rhyme": "Keeping safe our community, it's Keisatsukan"},
+                {"id": "queen_spades", "rank": "Q", "suit": "spades", "kanji": "消防士", "hiragana": "しょうぼうし", "romaji": "shouboushi", "english": "firefighter", "rhyme": "Brave and strong for all to see, it's Shouboushi"},
+                {"id": "king_spades", "rank": "K", "suit": "spades", "kanji": "王様", "hiragana": "おうさま", "romaji": "ousama", "english": "king", "rhyme": "Ruling fair for all to see, it's Ousama"}
+            ];
         }
         
         this.displayPreGameCards();
@@ -1210,7 +1197,7 @@ class KanjiConcentrationGame {
             
             <div class="rhyme-print">
                 "${isClozeMode && clozeSettings.hideRomajiFromRhyme ? 
-                    card.rhyme.replace(new RegExp(card.romaji, 'gi'), '_____') : 
+                    card.rhyme.replace(new RegExp('\\b' + card.romaji.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\b', 'gi'), '_____') : 
                     card.rhyme}"
             </div>
         </div>`;
@@ -1227,6 +1214,350 @@ class KanjiConcentrationGame {
 </html>`;
 
         return html;
+    }
+
+    // Mode Selection Screen
+    showModeSelectionScreen() {
+        document.getElementById('gameModeScreen').classList.add('active');
+        document.getElementById('preGameScreen').classList.remove('active');
+        document.getElementById('gameScreen').classList.remove('active');
+        document.getElementById('dragDropScreen').classList.remove('active');
+    }
+
+    // Drag & Drop Mode
+    startDragDropMode() {
+        this.isGameActive = true;
+        this.attempts = 0;
+        this.score = 1000;
+        this.matchedPairs = [];
+        this.dragDropMatches = new Set();
+        
+        this.showDragDropScreen();
+        this.displayDragDropGame();
+        this.updateDragDropUI();
+    }
+
+    showDragDropScreen() {
+        document.getElementById('gameModeScreen').classList.remove('active');
+        document.getElementById('preGameScreen').classList.remove('active');
+        document.getElementById('gameScreen').classList.remove('active');
+        document.getElementById('dragDropScreen').classList.add('active');
+    }
+
+    displayDragDropGame() {
+        this.displayTargetCards();
+        this.displaySourceCards();
+    }
+
+    displayTargetCards() {
+        const container = document.getElementById('targetCardsContainer');
+        container.innerHTML = '';
+
+        this.cards.forEach(card => {
+            const targetCard = this.createTargetCard(card);
+            container.appendChild(targetCard);
+        });
+    }
+
+    createTargetCard(cardData) {
+        const targetCard = document.createElement('div');
+        targetCard.className = 'target-card';
+        targetCard.dataset.cardId = cardData.id;
+
+        const targetContent = document.createElement('div');
+        targetContent.className = 'target-content';
+
+        const rankSuit = document.createElement('div');
+        rankSuit.className = `target-rank-suit suit-${cardData.suit}`;
+        rankSuit.innerHTML = `${cardData.rank} ${this.getSuitSymbol(cardData.suit)}`;
+
+        const targetInfo = document.createElement('div');
+        targetInfo.className = 'target-info';
+
+        const targetText = document.createElement('div');
+        targetText.className = 'target-text';
+
+        const romaji = document.createElement('div');
+        romaji.className = 'target-romaji';
+        romaji.textContent = cardData.romaji;
+
+        const english = document.createElement('div');
+        english.className = 'target-english';
+        english.textContent = cardData.english;
+
+        targetText.appendChild(romaji);
+        targetText.appendChild(english);
+
+        const dropZone = document.createElement('div');
+        dropZone.className = 'drop-zone';
+        dropZone.textContent = 'Drop Kanji Here';
+        dropZone.dataset.cardId = cardData.id;
+
+        // Add drag and drop event listeners
+        dropZone.addEventListener('dragover', this.handleDragOver.bind(this));
+        dropZone.addEventListener('drop', this.handleDrop.bind(this));
+        dropZone.addEventListener('dragleave', this.handleDragLeave.bind(this));
+
+        targetInfo.appendChild(targetText);
+        targetInfo.appendChild(dropZone);
+
+        const rhyme = document.createElement('div');
+        rhyme.className = 'target-rhyme';
+        rhyme.textContent = cardData.rhyme;
+
+        targetContent.appendChild(rankSuit);
+        targetContent.appendChild(targetInfo);
+        targetContent.appendChild(rhyme);
+
+        targetCard.appendChild(targetContent);
+
+        return targetCard;
+    }
+
+    displaySourceCards() {
+        const container = document.getElementById('sourceCardsContainer');
+        container.innerHTML = '';
+
+        // Shuffle the cards for the source area
+        const shuffledCards = [...this.cards];
+        this.shuffleArray(shuffledCards);
+
+        shuffledCards.forEach(card => {
+            const sourceCard = this.createSourceCard(card);
+            container.appendChild(sourceCard);
+        });
+    }
+
+    createSourceCard(cardData) {
+        const sourceCard = document.createElement('div');
+        sourceCard.className = 'draggable-kanji-card';
+        sourceCard.draggable = true;
+        sourceCard.dataset.cardId = cardData.id;
+
+        const rankSuitTop = document.createElement('div');
+        rankSuitTop.className = `kanji-card-rank-suit suit-${cardData.suit}`;
+        rankSuitTop.innerHTML = `${cardData.rank}<span class="suit-symbol">${this.getSuitSymbol(cardData.suit)}</span>`;
+
+        const rankSuitBottom = document.createElement('div');
+        rankSuitBottom.className = `kanji-card-rank-suit bottom suit-${cardData.suit}`;
+        rankSuitBottom.innerHTML = `${cardData.rank}<span class="suit-symbol">${this.getSuitSymbol(cardData.suit)}</span>`;
+
+        const content = document.createElement('div');
+        content.className = 'kanji-card-content';
+
+        const kanji = document.createElement('div');
+        kanji.className = 'kanji-card-kanji';
+        kanji.textContent = cardData.kanji;
+        // Note: Not showing hiragana as per requirements
+
+        content.appendChild(kanji);
+
+        sourceCard.appendChild(rankSuitTop);
+        sourceCard.appendChild(content);
+        sourceCard.appendChild(rankSuitBottom);
+
+        // Add drag event listeners
+        sourceCard.addEventListener('dragstart', this.handleDragStart.bind(this));
+        sourceCard.addEventListener('dragend', this.handleDragEnd.bind(this));
+
+        return sourceCard;
+    }
+
+    // Drag and Drop Event Handlers
+    handleDragStart(e) {
+        const card = e.target;
+        if (card.classList.contains('matched')) {
+            e.preventDefault();
+            return;
+        }
+
+        card.classList.add('dragging');
+        e.dataTransfer.setData('text/plain', card.dataset.cardId);
+        e.dataTransfer.effectAllowed = 'move';
+    }
+
+    handleDragEnd(e) {
+        e.target.classList.remove('dragging');
+    }
+
+    handleDragOver(e) {
+        e.preventDefault();
+        e.dataTransfer.dropEffect = 'move';
+        
+        const dropZone = e.target;
+        if (dropZone.classList.contains('drop-zone') && !dropZone.classList.contains('has-card')) {
+            dropZone.classList.add('drag-over');
+            dropZone.parentElement.classList.add('drag-over');
+        }
+    }
+
+    handleDragLeave(e) {
+        const dropZone = e.target;
+        if (dropZone.classList.contains('drop-zone')) {
+            dropZone.classList.remove('drag-over');
+            dropZone.parentElement.classList.remove('drag-over');
+        }
+    }
+
+    handleDrop(e) {
+        e.preventDefault();
+        
+        const dropZone = e.target;
+        const draggedCardId = e.dataTransfer.getData('text/plain');
+        const targetCardId = dropZone.dataset.cardId;
+
+        // Remove drag-over styling
+        dropZone.classList.remove('drag-over');
+        dropZone.parentElement.classList.remove('drag-over');
+
+        // Check if drop zone already has a card
+        if (dropZone.classList.contains('has-card')) {
+            return;
+        }
+
+        // Find the dragged card element
+        const draggedCard = document.querySelector(`[data-card-id="${draggedCardId}"].draggable-kanji-card`);
+        if (!draggedCard || draggedCard.classList.contains('matched')) {
+            return;
+        }
+
+        this.attempts++;
+
+        // Check if it's a correct match
+        if (draggedCardId === targetCardId) {
+            // Correct match!
+            this.handleCorrectMatch(draggedCard, dropZone, draggedCardId);
+        } else {
+            // Incorrect match
+            this.handleIncorrectMatch(draggedCard, dropZone);
+        }
+
+        this.updateDragDropUI();
+    }
+
+    handleCorrectMatch(draggedCard, dropZone, cardId) {
+        // Mark as matched
+        this.dragDropMatches.add(cardId);
+        this.matchedPairs.push(cardId);
+
+        // Create a smaller version of the kanji card for the drop zone
+        const droppedCard = this.createDroppedCard(draggedCard);
+        dropZone.innerHTML = '';
+        dropZone.appendChild(droppedCard);
+        dropZone.classList.add('has-card');
+
+        // Mark the original card as matched
+        draggedCard.classList.add('matched');
+        dropZone.parentElement.classList.add('matched');
+
+        // Update score
+        this.updateDragDropScore(true);
+
+        // Show celebration
+        const cardData = this.cards.find(card => card.id === cardId);
+        if (cardData) {
+            this.showMatchCelebration(cardData);
+        }
+
+        // Check if game is complete
+        if (this.dragDropMatches.size === this.cards.length) {
+            setTimeout(() => {
+                alert(`Congratulations! You completed the Drag & Drop mode in ${this.attempts} attempts! Final Score: ${this.score}`);
+            }, 2000);
+        }
+    }
+
+    handleIncorrectMatch(draggedCard, dropZone) {
+        // Update score for incorrect attempt
+        this.updateDragDropScore(false);
+
+        // Visual feedback for incorrect match
+        dropZone.style.backgroundColor = '#ffebee';
+        dropZone.style.borderColor = '#f44336';
+        
+        setTimeout(() => {
+            dropZone.style.backgroundColor = '';
+            dropZone.style.borderColor = '';
+        }, 1000);
+    }
+
+    createDroppedCard(originalCard) {
+        const cardData = this.cards.find(card => card.id === originalCard.dataset.cardId);
+        
+        const droppedCard = document.createElement('div');
+        droppedCard.className = 'dropped-kanji-card';
+
+        const rankSuitTop = document.createElement('div');
+        rankSuitTop.className = `kanji-card-rank-suit suit-${cardData.suit}`;
+        rankSuitTop.innerHTML = `${cardData.rank}<span class="suit-symbol">${this.getSuitSymbol(cardData.suit)}</span>`;
+
+        const rankSuitBottom = document.createElement('div');
+        rankSuitBottom.className = `kanji-card-rank-suit bottom suit-${cardData.suit}`;
+        rankSuitBottom.innerHTML = `${cardData.rank}<span class="suit-symbol">${this.getSuitSymbol(cardData.suit)}</span>`;
+
+        const content = document.createElement('div');
+        content.className = 'kanji-card-content';
+
+        const kanji = document.createElement('div');
+        kanji.className = 'kanji-card-kanji';
+        kanji.textContent = cardData.kanji;
+
+        content.appendChild(kanji);
+
+        droppedCard.appendChild(rankSuitTop);
+        droppedCard.appendChild(content);
+        droppedCard.appendChild(rankSuitBottom);
+
+        return droppedCard;
+    }
+
+    updateDragDropScore(isCorrect) {
+        let scoreChange = 0;
+        
+        if (isCorrect) {
+            scoreChange = 100; // Bonus for correct match
+        } else {
+            scoreChange = -20; // Penalty for incorrect attempt
+        }
+        
+        this.score += scoreChange;
+        this.showDragDropScoreChange(scoreChange);
+    }
+
+    showDragDropScoreChange(change) {
+        const scoreChangeElement = document.getElementById('dragDropScoreChange');
+        
+        if (change > 0) {
+            scoreChangeElement.textContent = `+${change}`;
+            scoreChangeElement.className = 'score-change positive show';
+        } else {
+            scoreChangeElement.textContent = `${change}`;
+            scoreChangeElement.className = 'score-change negative show';
+        }
+        
+        // Hide after animation
+        setTimeout(() => {
+            scoreChangeElement.className = 'score-change';
+        }, 2000);
+        
+        // Update the main score display
+        document.getElementById('dragDropScore').textContent = `Score: ${this.score}`;
+    }
+
+    updateDragDropUI() {
+        document.getElementById('dragDropScore').textContent = `Score: ${this.score}`;
+        document.getElementById('dragDropMatches').textContent = `Matches: ${this.dragDropMatches.size}/${this.cards.length}`;
+        document.getElementById('dragDropAttempts').textContent = `Attempts: ${this.attempts}`;
+    }
+
+    resetDragDropGame() {
+        this.attempts = 0;
+        this.score = 1000;
+        this.matchedPairs = [];
+        this.dragDropMatches = new Set();
+        
+        this.displayDragDropGame();
+        this.updateDragDropUI();
     }
 
     // Event Listeners
@@ -1347,6 +1678,28 @@ class KanjiConcentrationGame {
                         break;
                 }
             }
+        });
+        
+        // Mode selection event listeners
+        document.getElementById('concentrationMode').addEventListener('click', () => {
+            this.showPreGameScreen();
+        });
+        
+        document.getElementById('dragDropMode').addEventListener('click', () => {
+            this.startDragDropMode();
+        });
+        
+        // Drag & Drop mode controls
+        document.getElementById('dragDropResetBtn').addEventListener('click', () => {
+            this.resetDragDropGame();
+        });
+        
+        document.getElementById('dragDropBackBtn').addEventListener('click', () => {
+            this.showPreGameScreen();
+        });
+        
+        document.getElementById('backToModeSelectBtn').addEventListener('click', () => {
+            this.showModeSelectionScreen();
         });
         
         // Close modals when clicking outside

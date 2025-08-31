@@ -742,6 +742,381 @@ header h1 {
     font-size: 1.2rem;
 }
 
+/* Drag & Drop Mode Styles */
+.drag-drop-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 1.5rem;
+    border-radius: 15px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.drag-drop-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.drag-drop-game-area {
+    display: flex;
+    gap: 2rem;
+    height: 70vh;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 1.5rem;
+}
+
+.drag-drop-targets {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.drag-drop-targets h3 {
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.target-cards-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+}
+
+.drag-drop-source {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border-left: 3px solid rgba(255, 255, 255, 0.3);
+    padding-left: 1.5rem;
+}
+
+.drag-drop-source h3 {
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.source-cards-container {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1rem;
+    overflow-y: auto;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    max-height: 100%;
+}
+
+/* Target Card Styles */
+.target-card {
+    display: block;
+    background: white;
+    border: 3px solid #ddd;
+    border-radius: 15px;
+    padding: 1.5rem;
+    min-height: 160px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.target-card.drag-over {
+    border-color: #4CAF50;
+    background: #f0fff0;
+    transform: scale(1.02);
+    box-shadow: 0 6px 15px rgba(76, 175, 80, 0.3);
+}
+
+.target-card.matched {
+    border-color: #28a745;
+    background: linear-gradient(135deg, #d4edda, #c3e6cb);
+    opacity: 0.8;
+}
+
+.target-card.matched .drop-zone {
+    background: #28a745;
+    color: white;
+}
+
+.target-content {
+    margin-bottom: 1rem;
+}
+
+.target-rank-suit {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.8rem;
+    text-align: center;
+}
+
+.target-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    gap: 1rem;
+}
+
+.target-text {
+    flex: 1;
+}
+
+.target-romaji {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #1e3c72;
+    margin-bottom: 0.3rem;
+}
+
+.target-english {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.target-rhyme {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #4B0082;
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    padding: 0.8rem;
+    border-radius: 8px;
+    border: 2px solid #FF6B35;
+    font-weight: 600;
+    text-align: center;
+    clear: both;
+    margin-top: 1rem;
+}
+
+.drop-zone {
+    width: 120px;
+    height: 120px;
+    border: 3px dashed #ccc;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f9f9f9;
+    color: #999;
+    font-size: 0.9rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.drop-zone.drag-over {
+    border-color: #4CAF50;
+    background: #f0fff0;
+    color: #4CAF50;
+}
+
+.drop-zone.has-card {
+    border-style: solid;
+    border-color: #28a745;
+    background: white;
+    padding: 0;
+}
+
+/* Draggable Kanji Card Styles */
+.draggable-kanji-card {
+    width: 100px;
+    height: 140px;
+    background: white;
+    border: 3px solid #333;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: grab;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+    user-select: none;
+}
+
+.draggable-kanji-card:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.draggable-kanji-card:active {
+    cursor: grabbing;
+}
+
+.draggable-kanji-card.dragging {
+    opacity: 0.7;
+    transform: rotate(5deg) scale(1.1);
+    z-index: 1000;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.draggable-kanji-card.matched {
+    opacity: 0.3;
+    cursor: not-allowed;
+    filter: grayscale(70%);
+}
+
+.draggable-kanji-card.matched:hover {
+    transform: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.kanji-card-rank-suit {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.kanji-card-rank-suit.bottom {
+    bottom: 8px;
+    right: 8px;
+    top: auto;
+    left: auto;
+    transform: rotate(180deg);
+}
+
+.kanji-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    text-align: center;
+}
+
+.kanji-card-kanji {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1e3c72;
+    font-family: 'Hiragino Sans', 'Yu Gothic', 'Meiryo', 'MS Gothic', sans-serif;
+}
+
+/* Dropped Kanji Card in Drop Zone */
+.dropped-kanji-card {
+    width: 90px;
+    height: 126px;
+    background: white;
+    border: 2px solid #28a745;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.dropped-kanji-card .kanji-card-rank-suit {
+    font-size: 0.8rem;
+    top: 6px;
+    left: 6px;
+}
+
+.dropped-kanji-card .kanji-card-rank-suit.bottom {
+    bottom: 6px;
+    right: 6px;
+}
+
+.dropped-kanji-card .kanji-card-kanji {
+    font-size: 1.6rem;
+}
+
+/* Mode Selection Styles */
+.mode-selection-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: white;
+}
+
+.mode-selection-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.mode-selection-header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.mode-options {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.mode-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 2.5rem;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    min-width: 300px;
+    max-width: 350px;
+}
+
+.mode-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.mode-icon {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+}
+
+.mode-card h3 {
+    color: #1e3c72;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.mode-card p {
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+}
+
+.mode-btn {
+    background: #FF6B35;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(255, 107, 53, 0.3);
+}
+
+.mode-btn:hover {
+    background: #e55a2b;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(255, 107, 53, 0.4);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     header {
@@ -837,6 +1212,74 @@ header h1 {
 
     .review-counter {
         font-size: 1.1rem;
+    }
+
+    /* Drag & Drop Mobile Styles */
+    .drag-drop-game-area {
+        flex-direction: column;
+        height: auto;
+        gap: 1.5rem;
+    }
+
+    .drag-drop-source {
+        border-left: none;
+        border-top: 3px solid rgba(255, 255, 255, 0.3);
+        padding-left: 0;
+        padding-top: 1.5rem;
+    }
+
+    .source-cards-container {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+        gap: 0.5rem;
+        padding: 0.5rem;
+    }
+
+    .draggable-kanji-card {
+        width: 80px;
+        height: 112px;
+    }
+
+    .kanji-card-kanji {
+        font-size: 1.6rem !important;
+    }
+
+    .target-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .drop-zone {
+        margin-left: 0;
+        margin-top: 1rem;
+        min-width: 80px;
+        min-height: 80px;
+    }
+
+    .target-rhyme {
+        font-size: 1rem;
+        padding: 0.6rem;
+    }
+
+    .mode-options {
+        gap: 2rem;
+    }
+
+    .mode-card {
+        min-width: 280px;
+        padding: 2rem;
+    }
+
+    .mode-icon {
+        font-size: 3rem;
+    }
+
+    .mode-card h3 {
+        font-size: 1.5rem;
+    }
+
+    .mode-card p {
+        font-size: 1rem;
     }
 }
 
