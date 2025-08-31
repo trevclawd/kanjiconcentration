@@ -144,7 +144,10 @@ class KanjiConcentrationGame {
         const container = document.getElementById('cardPairsDisplay');
         container.innerHTML = '';
 
-        this.cards.forEach(card => {
+        // Use displayCards array if it exists (for scrambled order), otherwise use original cards array
+        const cardsToDisplay = this.displayCards || this.cards;
+
+        cardsToDisplay.forEach(card => {
             const pairDiv = document.createElement('div');
             pairDiv.className = 'card-pair';
             pairDiv.dataset.cardId = card.id;
@@ -1948,6 +1951,19 @@ class KanjiConcentrationGame {
         document.getElementById('flipKanjiBtn').textContent = '🔄 Hide Kanji';
     }
 
+    // Card Scramble Functionality for Pre-game Screen
+    scrambleCardOrder() {
+        // Create a copy of the cards array and shuffle it for display purposes only
+        this.displayCards = [...this.cards];
+        this.shuffleArray(this.displayCards);
+        
+        // Redisplay the cards in the new scrambled order
+        this.displayPreGameCards();
+        
+        // Preserve any existing flip states and selection states
+        this.updateCardSelectionState();
+    }
+
     // Card Selection Functionality
     toggleCardSelectionMode() {
         this.isCardSelectionMode = !this.isCardSelectionMode;
@@ -2221,6 +2237,11 @@ class KanjiConcentrationGame {
         
         document.getElementById('resetFlipBtn').addEventListener('click', () => {
             this.resetAllCardFlips();
+        });
+        
+        // Scramble cards event listener
+        document.getElementById('scrambleCardsBtn').addEventListener('click', () => {
+            this.scrambleCardOrder();
         });
         
         // Card selection event listeners
