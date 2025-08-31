@@ -571,8 +571,10 @@ class KanjiConcentrationGame {
 
     // UI Management
     showPreGameScreen() {
+        document.getElementById('gameModeScreen').classList.remove('active');
         document.getElementById('preGameScreen').classList.add('active');
         document.getElementById('gameScreen').classList.remove('active');
+        document.getElementById('dragDropScreen').classList.remove('active');
         this.startPreGameTimer();
     }
 
