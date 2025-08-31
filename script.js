@@ -1971,8 +1971,8 @@ class KanjiConcentrationGame {
             statusDiv.style.display = 'none';
         }
         
-        // Refresh the card display to apply/remove selection functionality
-        this.displayPreGameCards();
+        // Update selection functionality without regenerating cards to preserve flip states
+        this.updateCardSelectionState();
     }
 
     toggleCardSelection(cardId) {
@@ -2025,6 +2025,46 @@ class KanjiConcentrationGame {
         
         // Refresh the card display
         this.displayPreGameCards();
+    }
+
+    updateCardSelectionState() {
+        // Update existing card pairs without regenerating them to preserve flip states
+        const cardPairs = document.querySelectorAll('.card-pair');
+        cardPairs.forEach(pair => {
+            const cardId = pair.dataset.cardId;
+            
+            if (this.isCardSelectionMode) {
+                // Add selection functionality
+                pair.classList.add('selectable');
+                if (this.selectedCards.has(cardId)) {
+                    pair.classList.add('selected');
+                }
+                
+                // Remove existing click listeners to avoid duplicates
+                const newPair = pair.cloneNode(true);
+                pair.parentNode.replaceChild(newPair, pair);
+                
+                // Add selection click listener
+                newPair.addEventListener('click', () => this.toggleCardSelection(cardId));
+            } else {
+                // Remove selection functionality
+                pair.classList.remove('selectable', 'selected');
+                
+                // Remove click listeners by cloning, but preserve flip functionality
+                const newPair = pair.cloneNode(true);
+                pair.parentNode.replaceChild(newPair, pair);
+                
+                // Re-add individual card flip listeners for ALL cards that should have flip functionality
+                const cards = newPair.querySelectorAll('.playing-card');
+                cards.forEach(card => {
+                    // Check if this card has a card-back element (meaning it was set up for flipping)
+                    const hasCardBack = card.querySelector('.card-back');
+                    if (hasCardBack) {
+                        this.addCardClickListener(card);
+                    }
+                });
+            }
+        });
     }
 
     getCardsForGame() {
