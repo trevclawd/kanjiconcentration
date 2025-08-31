@@ -31,6 +31,55 @@
         </div>
     </div>
 
+    <!-- Print Cloze Settings Modal -->
+    <div id="printClozeModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="printClozeClose">&times;</span>
+            <h2>Print Cloze Settings</h2>
+            <p>Choose what to hide in the printed study sheet for cloze practice:</p>
+            
+            <div class="setting-group">
+                <label>
+                    <input type="checkbox" id="hideRomajiFromMeaning" checked>
+                    Hide romaji from meaning card
+                </label>
+            </div>
+            
+            <div class="setting-group">
+                <label>
+                    <input type="checkbox" id="hideHiraganaFromKanji" checked>
+                    Hide hiragana from kanji card
+                </label>
+            </div>
+            
+            <div class="setting-group">
+                <label>
+                    <input type="checkbox" id="hideRomajiFromRhyme" checked>
+                    Hide romaji from the rhyme
+                </label>
+            </div>
+            
+            <div class="setting-group">
+                <label>
+                    <input type="checkbox" id="hideKanjiFromKanji">
+                    Hide kanji from kanji card
+                </label>
+            </div>
+            
+            <div class="setting-group">
+                <label>
+                    <input type="checkbox" id="hideEnglishFromMeaning">
+                    Hide english from meaning card
+                </label>
+            </div>
+            
+            <div class="modal-buttons">
+                <button id="printWithCloze" class="control-btn">🖨️ Print with Cloze</button>
+                <button id="printNormal" class="control-btn">🖨️ Print Normal</button>
+            </div>
+        </div>
+    </div>
+
     <!-- Match Celebration Modal -->
     <div id="celebrationModal" class="modal celebration-modal">
         <div class="modal-content celebration-content">

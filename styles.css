@@ -167,6 +167,32 @@ header h1 {
     margin-top: 1rem;
 }
 
+/* Print Cloze Modal Styles */
+.modal-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    justify-content: center;
+}
+
+.modal-buttons .control-btn {
+    flex: 1;
+    max-width: 200px;
+}
+
+.setting-group label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    padding: 0.5rem 0;
+}
+
+.setting-group input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+}
+
 /* Celebration Modal */
 .celebration-modal .modal-content {
     background: linear-gradient(135deg, #FFD700, #FFA500);

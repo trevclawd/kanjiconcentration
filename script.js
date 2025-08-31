@@ -909,8 +909,49 @@ class KanjiConcentrationGame {
         document.getElementById('reviewModal').style.display = 'none';
     }
 
+    // Print Cloze Modal Functionality
+    showPrintClozeModal() {
+        document.getElementById('printClozeModal').style.display = 'block';
+    }
+
+    closePrintClozeModal() {
+        document.getElementById('printClozeModal').style.display = 'none';
+    }
+
+    printCardsWithCloze() {
+        // Get cloze settings
+        const clozeSettings = {
+            hideRomajiFromMeaning: document.getElementById('hideRomajiFromMeaning').checked,
+            hideHiraganaFromKanji: document.getElementById('hideHiraganaFromKanji').checked,
+            hideRomajiFromRhyme: document.getElementById('hideRomajiFromRhyme').checked,
+            hideKanjiFromKanji: document.getElementById('hideKanjiFromKanji').checked,
+            hideEnglishFromMeaning: document.getElementById('hideEnglishFromMeaning').checked
+        };
+
+        // Close the modal
+        this.closePrintClozeModal();
+
+        // Create a new window for printing
+        const printWindow = window.open('', '_blank');
+        
+        // Generate the print HTML with cloze settings
+        const printHTML = this.generatePrintHTML(clozeSettings);
+        
+        // Write the HTML to the new window
+        printWindow.document.write(printHTML);
+        printWindow.document.close();
+        
+        // Wait for content to load, then print
+        printWindow.onload = () => {
+            printWindow.print();
+        };
+    }
+
     // Print Cards Functionality
     printCards() {
+        // Close the modal
+        this.closePrintClozeModal();
+        
         // Create a new window for printing
         const printWindow = window.open('', '_blank');
         
@@ -927,8 +968,9 @@ class KanjiConcentrationGame {
         };
     }
 
-    generatePrintHTML() {
+    generatePrintHTML(clozeSettings = null) {
         const currentDate = new Date().toLocaleDateString();
+        const isClozeMode = clozeSettings !== null;
         
         let html = `
 <!DOCTYPE html>
@@ -1148,18 +1190,28 @@ class KanjiConcentrationGame {
             
             <div class="cards-display">
                 <div class="card-print">
-                    <div class="kanji-print">${card.kanji}</div>
-                    <div class="hiragana-print">${card.hiragana}</div>
+                    ${isClozeMode && clozeSettings.hideKanjiFromKanji ? 
+                        '<div class="kanji-print">_____</div>' : 
+                        `<div class="kanji-print">${card.kanji}</div>`}
+                    ${isClozeMode && clozeSettings.hideHiraganaFromKanji ? 
+                        '<div class="hiragana-print">_____</div>' : 
+                        `<div class="hiragana-print">${card.hiragana}</div>`}
                 </div>
                 
                 <div class="card-print">
-                    <div class="romaji-print">${card.romaji}</div>
-                    <div class="english-print">${card.english}</div>
+                    ${isClozeMode && clozeSettings.hideRomajiFromMeaning ? 
+                        '<div class="romaji-print">_____</div>' : 
+                        `<div class="romaji-print">${card.romaji}</div>`}
+                    ${isClozeMode && clozeSettings.hideEnglishFromMeaning ? 
+                        '<div class="english-print">_____</div>' : 
+                        `<div class="english-print">${card.english}</div>`}
                 </div>
             </div>
             
             <div class="rhyme-print">
-                "${card.rhyme}"
+                "${isClozeMode && clozeSettings.hideRomajiFromRhyme ? 
+                    card.rhyme.replace(new RegExp(card.romaji, 'gi'), '_____') : 
+                    card.rhyme}"
             </div>
         </div>`;
         });
@@ -1216,6 +1268,19 @@ class KanjiConcentrationGame {
         
         // Print cards functionality
         document.getElementById('printCardsBtn').addEventListener('click', () => {
+            this.showPrintClozeModal();
+        });
+        
+        // Print cloze modal functionality
+        document.getElementById('printClozeClose').addEventListener('click', () => {
+            this.closePrintClozeModal();
+        });
+        
+        document.getElementById('printWithCloze').addEventListener('click', () => {
+            this.printCardsWithCloze();
+        });
+        
+        document.getElementById('printNormal').addEventListener('click', () => {
             this.printCards();
         });
         
