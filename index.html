@@ -130,30 +130,8 @@
             </div>
         </header>
 
-        <!-- Game Mode Selection Screen -->
-        <div id="gameModeScreen" class="screen active">
-            <div class="mode-selection-header">
-                <h2>Choose Your Game Mode</h2>
-                <p>Select how you want to practice your kanji cards</p>
-            </div>
-            <div class="mode-options">
-                <div class="mode-card" id="concentrationMode">
-                    <div class="mode-icon">🎴</div>
-                    <h3>Concentration Game</h3>
-                    <p>Classic memory matching game with kanji and romaji cards</p>
-                    <button class="mode-btn">Play Concentration</button>
-                </div>
-                <div class="mode-card" id="dragDropMode">
-                    <div class="mode-icon">🎯</div>
-                    <h3>Drag & Drop Match</h3>
-                    <p>Drag kanji cards to match with English/romaji phrases</p>
-                    <button class="mode-btn">Play Drag & Drop</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Pre-game Screen -->
-        <div id="preGameScreen" class="screen">
+        <!-- Pre-game Screen (Now the first screen) -->
+        <div id="preGameScreen" class="screen active">
             <div class="pre-game-header">
                 <h2>Memorize the Card Pairs</h2>
                 <div id="preGameTimer" class="timer"></div>
@@ -175,7 +153,29 @@
                         <span id="selectedCount">0</span> cards selected
                     </div>
                 </div>
-                <button id="startGameBtn" class="start-btn">Start Game</button>
+                <button id="startGameBtn" class="start-btn">Choose Game Mode</button>
+            </div>
+        </div>
+
+        <!-- Game Mode Selection Screen -->
+        <div id="gameModeScreen" class="screen">
+            <div class="mode-selection-header">
+                <h2>Choose Your Game Mode</h2>
+                <p>Select how you want to practice your kanji cards</p>
+            </div>
+            <div class="mode-options">
+                <div class="mode-card" id="concentrationMode">
+                    <div class="mode-icon">🎴</div>
+                    <h3>Concentration Game</h3>
+                    <p>Classic memory matching game with kanji and romaji cards</p>
+                    <button class="mode-btn">Play Concentration</button>
+                </div>
+                <div class="mode-card" id="dragDropMode">
+                    <div class="mode-icon">🎯</div>
+                    <h3>Drag & Drop Match</h3>
+                    <p>Drag kanji cards to match with English/romaji phrases</p>
+                    <button class="mode-btn">Play Drag & Drop</button>
+                </div>
             </div>
         </div>
 

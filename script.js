@@ -30,7 +30,7 @@ class KanjiConcentrationGame {
         this.loadSettings();
         this.loadSampleData();
         this.setupEventListeners();
-        this.showModeSelectionScreen();
+        this.showPreGameScreen();
     }
 
     // Settings Management
@@ -170,6 +170,14 @@ class KanjiConcentrationGame {
             pairDiv.appendChild(romajiCard);
             container.appendChild(pairDiv);
         });
+
+        // Add click listeners to all cards after they're added to the DOM (only if not in selection mode)
+        if (!this.isCardSelectionMode) {
+            const allCards = container.querySelectorAll('.playing-card');
+            allCards.forEach(card => {
+                this.addCardClickListener(card);
+            });
+        }
     }
 
     createPreGameCard(cardData, type) {
@@ -212,6 +220,12 @@ class KanjiConcentrationGame {
         cardFace.appendChild(content);
         cardFace.appendChild(rankSuitBottom);
         card.appendChild(cardFace);
+        
+        // Always create a card back for flip functionality
+        const cardBack = document.createElement('div');
+        cardBack.className = 'card-face card-back';
+        cardBack.innerHTML = '<div>?</div>';
+        card.appendChild(cardBack);
         
         return card;
     }
@@ -600,8 +614,13 @@ class KanjiConcentrationGame {
 
     showGameScreen() {
         document.getElementById('preGameScreen').classList.remove('active');
+        document.getElementById('gameModeScreen').classList.remove('active');
+        document.getElementById('dragDropScreen').classList.remove('active');
         document.getElementById('gameScreen').classList.add('active');
         this.displayGameBoard();
+        
+        // Scroll to top to ensure the game is visible
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     updateGameUI() {
@@ -1495,7 +1514,9 @@ class KanjiConcentrationGame {
         const container = document.getElementById('targetCardsContainer');
         container.innerHTML = '';
 
-        this.cards.forEach(card => {
+        // Use selected cards if any are selected, otherwise use all cards
+        const cardsToUse = this.getCardsForGame();
+        cardsToUse.forEach(card => {
             const targetCard = this.createTargetCard(card);
             container.appendChild(targetCard);
         });
@@ -1564,8 +1585,10 @@ class KanjiConcentrationGame {
         const container = document.getElementById('sourceCardsContainer');
         container.innerHTML = '';
 
+        // Use selected cards if any are selected, otherwise use all cards
+        const cardsToUse = this.getCardsForGame();
         // Shuffle the cards for the source area
-        const shuffledCards = [...this.cards];
+        const shuffledCards = [...cardsToUse];
         this.shuffleArray(shuffledCards);
 
         shuffledCards.forEach(card => {
@@ -2070,12 +2093,23 @@ class KanjiConcentrationGame {
                 const newPair = pair.cloneNode(true);
                 pair.parentNode.replaceChild(newPair, pair);
                 
-                // Re-add individual card flip listeners for ALL cards that should have flip functionality
+                // Re-add individual card flip listeners for cards that were previously flipped
                 const cards = newPair.querySelectorAll('.playing-card');
                 cards.forEach(card => {
-                    // Check if this card has a card-back element (meaning it was set up for flipping)
+                    // Check if this card was previously set up for flipping by looking for:
+                    // 1. Cards that have a card-back element, OR
+                    // 2. Cards that have the flipped-back class (indicating they were hidden)
                     const hasCardBack = card.querySelector('.card-back');
-                    if (hasCardBack) {
+                    const wasFlipped = card.classList.contains('flipped-back');
+                    
+                    if (hasCardBack || wasFlipped) {
+                        // Ensure card back exists if it was flipped
+                        if (wasFlipped && !hasCardBack) {
+                            const cardBack = document.createElement('div');
+                            cardBack.className = 'card-face card-back';
+                            cardBack.innerHTML = '<div>?</div>';
+                            card.appendChild(cardBack);
+                        }
                         this.addCardClickListener(card);
                     }
                 });
@@ -2154,7 +2188,8 @@ class KanjiConcentrationGame {
         
         // Game controls
         document.getElementById('startGameBtn').addEventListener('click', () => {
-            this.startGame();
+            this.stopPreGameTimer();
+            this.showModeSelectionScreen();
         });
         
         document.getElementById('resetBtn').addEventListener('click', () => {
@@ -2219,7 +2254,7 @@ class KanjiConcentrationGame {
         
         // Mode selection event listeners
         document.getElementById('concentrationMode').addEventListener('click', () => {
-            this.showPreGameScreen();
+            this.startGame();
         });
         
         document.getElementById('dragDropMode').addEventListener('click', () => {
