@@ -1624,6 +1624,135 @@ class KanjiConcentrationGame {
         }
     }
 
+    // Card Flip Functionality for Pre-game Screen
+    flipAllRomajiCards() {
+        const flipBtn = document.getElementById('flipRomajiBtn');
+        const isCurrentlyHidden = flipBtn.textContent.includes('Show');
+        
+        const cardPairs = document.querySelectorAll('.card-pair');
+        cardPairs.forEach(pair => {
+            const cards = pair.querySelectorAll('.playing-card');
+            cards.forEach(card => {
+                const content = card.querySelector('.card-content');
+                if (content && content.querySelector('.romaji-content')) {
+                    if (isCurrentlyHidden) {
+                        // Show all romaji/english cards
+                        card.classList.remove('flipped-back');
+                    } else {
+                        // Hide all romaji/english cards
+                        card.classList.add('flipped-back');
+                        
+                        // Create card back if it doesn't exist
+                        if (!card.querySelector('.card-back')) {
+                            const cardBack = document.createElement('div');
+                            cardBack.className = 'card-face card-back';
+                            cardBack.innerHTML = '<div>?</div>';
+                            card.appendChild(cardBack);
+                        }
+                    }
+                    
+                    // Add click event listener for individual card toggling
+                    this.addCardClickListener(card);
+                }
+            });
+        });
+        
+        // Update button text to indicate current state
+        if (isCurrentlyHidden) {
+            flipBtn.textContent = '🔄 Hide Romaji/English';
+        } else {
+            flipBtn.textContent = '👁️ Show Romaji/English';
+        }
+    }
+
+    flipAllKanjiCards() {
+        const flipBtn = document.getElementById('flipKanjiBtn');
+        const isCurrentlyHidden = flipBtn.textContent.includes('Show');
+        
+        const cardPairs = document.querySelectorAll('.card-pair');
+        cardPairs.forEach(pair => {
+            const cards = pair.querySelectorAll('.playing-card');
+            cards.forEach(card => {
+                const content = card.querySelector('.card-content');
+                if (content && content.querySelector('.kanji-content')) {
+                    if (isCurrentlyHidden) {
+                        // Show all kanji cards
+                        card.classList.remove('flipped-back');
+                    } else {
+                        // Hide all kanji cards
+                        card.classList.add('flipped-back');
+                        
+                        // Create card back if it doesn't exist
+                        if (!card.querySelector('.card-back')) {
+                            const cardBack = document.createElement('div');
+                            cardBack.className = 'card-face card-back';
+                            cardBack.innerHTML = '<div>?</div>';
+                            card.appendChild(cardBack);
+                        }
+                    }
+                    
+                    // Add click event listener for individual card toggling
+                    this.addCardClickListener(card);
+                }
+            });
+        });
+        
+        // Update button text to indicate current state
+        if (isCurrentlyHidden) {
+            flipBtn.textContent = '🔄 Hide Kanji';
+        } else {
+            flipBtn.textContent = '👁️ Show Kanji';
+        }
+    }
+
+    addCardClickListener(card) {
+        // Remove any existing click listeners to avoid duplicates
+        const newCard = card.cloneNode(true);
+        card.parentNode.replaceChild(newCard, card);
+        
+        // Add click event to toggle the card back and forth
+        newCard.addEventListener('click', () => {
+            if (newCard.classList.contains('flipped-back')) {
+                // Card is currently hidden - show it
+                newCard.classList.remove('flipped-back');
+                // Add a temporary highlight effect
+                newCard.style.boxShadow = '0 0 20px rgba(255, 215, 0, 0.8)';
+                setTimeout(() => {
+                    newCard.style.boxShadow = '';
+                }, 1000);
+            } else {
+                // Card is currently visible - hide it
+                newCard.classList.add('flipped-back');
+                
+                // Create card back if it doesn't exist
+                if (!newCard.querySelector('.card-back')) {
+                    const cardBack = document.createElement('div');
+                    cardBack.className = 'card-face card-back';
+                    cardBack.innerHTML = '<div>?</div>';
+                    newCard.appendChild(cardBack);
+                }
+            }
+        });
+    }
+
+    resetAllCardFlips() {
+        const cardPairs = document.querySelectorAll('.card-pair');
+        cardPairs.forEach(pair => {
+            const cards = pair.querySelectorAll('.playing-card');
+            cards.forEach(card => {
+                // Remove the flipped-back class to show front again
+                card.classList.remove('flipped-back');
+                // Remove any click event listeners by cloning the card
+                const newCard = card.cloneNode(true);
+                card.parentNode.replaceChild(newCard, card);
+            });
+        });
+        
+        // Reset button texts
+        document.getElementById('flipRomajiBtn').textContent = '🔄 Hide Romaji/English';
+        document.getElementById('flipKanjiBtn').textContent = '🔄 Hide Kanji';
+    }
+
     // Event Listeners
     setupEventListeners() {
         // Settings modal
@@ -1751,6 +1880,19 @@ class KanjiConcentrationGame {
         
         document.getElementById('dragDropMode').addEventListener('click', () => {
             this.startDragDropMode();
+        });
+        
+        // Flip control event listeners
+        document.getElementById('flipRomajiBtn').addEventListener('click', () => {
+            this.flipAllRomajiCards();
+        });
+        
+        document.getElementById('flipKanjiBtn').addEventListener('click', () => {
+            this.flipAllKanjiCards();
+        });
+        
+        document.getElementById('resetFlipBtn').addEventListener('click', () => {
+            this.resetAllCardFlips();
         });
         
         // Drag & Drop mode controls
