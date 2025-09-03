@@ -1492,6 +1492,8 @@ class KanjiConcentrationGame {
         this.score = 1000;
         this.matchedPairs = [];
         this.dragDropMatches = new Set();
+        this.isEnglishHidden = false;
+        this.isRhymeHidden = false;
         
         this.showDragDropScreen();
         this.displayDragDropGame();
@@ -1807,6 +1809,54 @@ class KanjiConcentrationGame {
         
         this.displayDragDropGame();
         this.updateDragDropUI();
+    }
+
+    // Toggle English visibility in drag and drop mode
+    toggleEnglishVisibility() {
+        this.isEnglishHidden = !this.isEnglishHidden;
+        
+        const toggleBtn = document.getElementById('hideEnglishBtn');
+        const englishElements = document.querySelectorAll('.target-english');
+        
+        if (this.isEnglishHidden) {
+            // Hide English meanings
+            englishElements.forEach(element => {
+                element.classList.add('hidden');
+            });
+            toggleBtn.textContent = '👁️ Show English';
+            toggleBtn.classList.add('active');
+        } else {
+            // Show English meanings
+            englishElements.forEach(element => {
+                element.classList.remove('hidden');
+            });
+            toggleBtn.textContent = '🙈 Hide English';
+            toggleBtn.classList.remove('active');
+        }
+    }
+
+    // Toggle rhyme visibility in drag and drop mode
+    toggleRhymeVisibility() {
+        this.isRhymeHidden = !this.isRhymeHidden;
+        
+        const toggleBtn = document.getElementById('hideRhymeBtn');
+        const rhymeElements = document.querySelectorAll('.target-rhyme');
+        
+        if (this.isRhymeHidden) {
+            // Hide rhymes
+            rhymeElements.forEach(element => {
+                element.classList.add('hidden');
+            });
+            toggleBtn.textContent = '🎵 Show Rhymes';
+            toggleBtn.classList.add('active');
+        } else {
+            // Show rhymes
+            rhymeElements.forEach(element => {
+                element.classList.remove('hidden');
+            });
+            toggleBtn.textContent = '🎵 Hide Rhymes';
+            toggleBtn.classList.remove('active');
+        }
     }
 
     // Quick Answer functionality
@@ -2289,6 +2339,14 @@ class KanjiConcentrationGame {
         });
         
         // Drag & Drop mode controls
+        document.getElementById('hideEnglishBtn').addEventListener('click', () => {
+            this.toggleEnglishVisibility();
+        });
+        
+        document.getElementById('hideRhymeBtn').addEventListener('click', () => {
+            this.toggleRhymeVisibility();
+        });
+        
         document.getElementById('dragDropResetBtn').addEventListener('click', () => {
             this.resetDragDropGame();
         });

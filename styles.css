@@ -1031,6 +1031,26 @@ header h1 {
     flex-wrap: wrap;
 }
 
+.toggle-btn {
+    background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.toggle-btn:hover {
+    background: linear-gradient(135deg, #5f4fcf, #9085e8);
+    transform: translateY(-2px);
+}
+
+.toggle-btn.active {
+    background: linear-gradient(135deg, #e17055, #fdcb6e);
+    color: #2d3436;
+}
+
+.toggle-btn.active:hover {
+    background: linear-gradient(135deg, #d63031, #f39c12);
+}
+
 .drag-drop-game-area {
     display: flex;
     gap: 2rem;
@@ -1155,6 +1175,23 @@ header h1 {
 .target-english {
     font-size: 1.2rem;
     color: #666;
+    transition: opacity 0.3s ease;
+}
+
+.target-english.hidden {
+    opacity: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.target-rhyme.hidden {
+    opacity: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
 
 .target-rhyme {
