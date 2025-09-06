@@ -10,9 +10,9 @@
       "english": "downhill",
       "rhyme": "We go downhill you see, it's Kudari",
       "sentence": {
-        "kanji": "坂を下りで歩きます。",
-        "romaji": "Saka wo kudari de arukimasu.",
-        "english": "I walk downhill on the slope."
+        "kanji": "山の下りは危険です。",
+        "romaji": "Yama no kudari wa kiken desu.",
+        "english": "Going downhill on the mountain is dangerous."
       }
     },
     {
@@ -25,9 +25,9 @@
       "english": "uphill",
       "rhyme": "Up the hill we climb so free, it's Nobori",
       "sentence": {
-        "kanji": "山の上りは大変です。",
-        "romaji": "Yama no nobori wa taihen desu.",
-        "english": "Going uphill on the mountain is difficult."
+        "kanji": "急な上りを歩きます。",
+        "romaji": "Kyuu na nobori wo arukimasu.",
+        "english": "I walk up the steep uphill path."
       }
     },
     {
@@ -55,9 +55,9 @@
       "english": "fire",
       "rhyme": "Burning bright for all to see, it's Hi",
       "sentence": {
-        "kanji": "火が熱いです。",
-        "romaji": "Hi ga atsui desu.",
-        "english": "The fire is hot."
+        "kanji": "キャンプで火を起こします。",
+        "romaji": "Kyanpu de hi wo okoshimasu.",
+        "english": "I start a fire at the camp."
       }
     },
     {
@@ -70,9 +70,9 @@
       "english": "tree",
       "rhyme": "Growing tall and strong and free, it's Ki",
       "sentence": {
-        "kanji": "大きな木があります。",
-        "romaji": "Ookina ki ga arimasu.",
-        "english": "There is a big tree."
+        "kanji": "大きな木の下で休みます。",
+        "romaji": "Ookina ki no shita de yasumimasu.",
+        "english": "I rest under the big tree."
       }
     },
     {
@@ -85,9 +85,9 @@
       "english": "gold",
       "rhyme": "Shining bright like treasure's glee, it's Kin",
       "sentence": {
-        "kanji": "金の指輪は美しいです。",
-        "romaji": "Kin no yubiwa wa utsukushii desu.",
-        "english": "The gold ring is beautiful."
+        "kanji": "金の指輪を見つけました。",
+        "romaji": "Kin no yubiwa wo mitsukemashita.",
+        "english": "I found a gold ring."
       }
     },
     {
@@ -100,9 +100,9 @@
       "english": "earth",
       "rhyme": "Rich and brown beneath the tree, it's Tsuchi",
       "sentence": {
-        "kanji": "土に花を植えます。",
-        "romaji": "Tsuchi ni hana wo uemasu.",
-        "english": "I plant flowers in the earth."
+        "kanji": "土に宝物を埋めます。",
+        "romaji": "Tsuchi ni takaramono wo uzumemasu.",
+        "english": "I bury the treasure in the earth."
       }
     },
     {
@@ -115,9 +115,9 @@
       "english": "sky",
       "rhyme": "Blue and vast for all to see, it's Sora",
       "sentence": {
-        "kanji": "青い空がきれいです。",
-        "romaji": "Aoi sora ga kirei desu.",
-        "english": "The blue sky is beautiful."
+        "kanji": "青い空を見上げます。",
+        "romaji": "Aoi sora wo miagimasu.",
+        "english": "I look up at the blue sky."
       }
     },
     {
@@ -130,9 +130,9 @@
       "english": "ocean",
       "rhyme": "Deep and wide and wild and free, it's Umi",
       "sentence": {
-        "kanji": "海で泳ぎます。",
-        "romaji": "Umi de oyogimasu.",
-        "english": "I swim in the ocean."
+        "kanji": "遠くに海が見えます。",
+        "romaji": "Tooku ni umi ga miemasu.",
+        "english": "I can see the ocean in the distance."
       }
     },
     {
@@ -160,9 +160,9 @@
       "english": "river",
       "rhyme": "Flowing swift and wild and free, it's Kawa",
       "sentence": {
-        "kanji": "川の水は冷たいです。",
-        "romaji": "Kawa no mizu wa tsumetai desu.",
-        "english": "The river water is cold."
+        "kanji": "川で魚を釣ります。",
+        "romaji": "Kawa de sakana wo tsurimasu.",
+        "english": "I fish in the river."
       }
     },
     {
@@ -175,9 +175,9 @@
       "english": "flower",
       "rhyme": "Blooming bright for all to see, it's Hana",
       "sentence": {
-        "kanji": "きれいな花が咲いています。",
-        "romaji": "Kirei na hana ga saiteimasu.",
-        "english": "Beautiful flowers are blooming."
+        "kanji": "美しい花を摘みます。",
+        "romaji": "Utsukushii hana wo tsumimasu.",
+        "english": "I pick beautiful flowers."
       }
     },
     {
@@ -190,9 +190,9 @@
       "english": "moon",
       "rhyme": "Glowing bright in night's decree, it's Tsuki",
       "sentence": {
-        "kanji": "夜の月が明るいです。",
-        "romaji": "Yoru no tsuki ga akarui desu.",
-        "english": "The moon at night is bright."
+        "kanji": "夜の月が明るく照らします。",
+        "romaji": "Yoru no tsuki ga akaruku terashimasu.",
+        "english": "The night moon shines brightly."
       }
     },
     {
@@ -205,9 +205,9 @@
       "english": "sun",
       "rhyme": "Shining bright for you and me, it's Hi",
       "sentence": {
-        "kanji": "日が昇ります。",
-        "romaji": "Hi ga noborimasu.",
-        "english": "The sun rises."
+        "kanji": "朝の日が昇ります。",
+        "romaji": "Asa no hi ga noborimasu.",
+        "english": "The morning sun rises."
       }
     },
     {
@@ -220,9 +220,9 @@
       "english": "star",
       "rhyme": "Twinkling bright for all to see, it's Hoshi",
       "sentence": {
-        "kanji": "夜空に星が光ります。",
-        "romaji": "Yozora ni hoshi ga hikarimasu.",
-        "english": "Stars shine in the night sky."
+        "kanji": "夜空に星が輝きます。",
+        "romaji": "Yozora ni hoshi ga kagayakimasu.",
+        "english": "Stars twinkle in the night sky."
       }
     },
     {
@@ -235,9 +235,9 @@
       "english": "cloud",
       "rhyme": "Floating white and soft and free, it's Kumo",
       "sentence": {
-        "kanji": "白い雲が空に浮いています。",
-        "romaji": "Shiroi kumo ga sora ni uiteimasu.",
-        "english": "White clouds are floating in the sky."
+        "kanji": "白い雲が空に浮かびます。",
+        "romaji": "Shiroi kumo ga sora ni ukabimasu.",
+        "english": "White clouds float in the sky."
       }
     },
     {
@@ -250,9 +250,9 @@
       "english": "rain",
       "rhyme": "Falling down from clouds we see, it's Ame",
       "sentence": {
-        "kanji": "雨が降っています。",
-        "romaji": "Ame ga futteimasu.",
-        "english": "It is raining."
+        "kanji": "雨が降り始めます。",
+        "romaji": "Ame ga furi hajimemasu.",
+        "english": "Rain begins to fall."
       }
     },
     {
@@ -265,9 +265,9 @@
       "english": "snow",
       "rhyme": "White and cold as cold can be, it's Yuki",
       "sentence": {
-        "kanji": "雪が降って寒いです。",
-        "romaji": "Yuki ga futte samui desu.",
-        "english": "It's snowing and cold."
+        "kanji": "冬に雪が降ります。",
+        "romaji": "Fuyu ni yuki ga furimasu.",
+        "english": "Snow falls in winter."
       }
     },
     {
@@ -295,9 +295,9 @@
       "english": "stone",
       "rhyme": "Hard and strong as strong can be, it's Ishi",
       "sentence": {
-        "kanji": "大きな石があります。",
-        "romaji": "Ookina ishi ga arimasu.",
-        "english": "There is a big stone."
+        "kanji": "大きな石を見つけます。",
+        "romaji": "Ookina ishi wo mitsukemasu.",
+        "english": "I find a big stone."
       }
     },
     {
@@ -310,9 +310,9 @@
       "english": "grass",
       "rhyme": "Green and soft beneath the tree, it's Kusa",
       "sentence": {
-        "kanji": "緑の草が生えています。",
-        "romaji": "Midori no kusa ga haeteimasu.",
-        "english": "Green grass is growing."
+        "kanji": "緑の草の上に座ります。",
+        "romaji": "Midori no kusa no ue ni suwarimasu.",
+        "english": "I sit on the green grass."
       }
     },
     {
@@ -325,9 +325,9 @@
       "english": "leaf",
       "rhyme": "Green and fresh for all to see, it's Ha",
       "sentence": {
-        "kanji": "木の葉が落ちます。",
-        "romaji": "Ki no ha ga ochimasu.",
-        "english": "The tree leaves fall."
+        "kanji": "木の葉が風で揺れます。",
+        "romaji": "Ki no ha ga kaze de yuremasu.",
+        "english": "The tree leaves sway in the wind."
       }
     },
     {
@@ -340,9 +340,9 @@
       "english": "root",
       "rhyme": "Deep below where none can see, it's Ne",
       "sentence": {
-        "kanji": "木の根が深いです。",
-        "romaji": "Ki no ne ga fukai desu.",
-        "english": "The tree roots are deep."
+        "kanji": "木の根が深く伸びています。",
+        "romaji": "Ki no ne ga fukaku nobiteimasu.",
+        "english": "The tree roots extend deep."
       }
     },
     {
@@ -370,9 +370,9 @@
       "english": "fruit",
       "rhyme": "Sweet and ripe upon the tree, it's Mi",
       "sentence": {
-        "kanji": "甘い実を食べます。",
-        "romaji": "Amai mi wo tabemasu.",
-        "english": "I eat sweet fruit."
+        "kanji": "甘い実を収穫します。",
+        "romaji": "Amai mi wo shuukaku shimasu.",
+        "english": "I harvest sweet fruit."
       }
     },
     {
@@ -385,9 +385,9 @@
       "english": "forest",
       "rhyme": "Dark and deep and wild and free, it's Mori",
       "sentence": {
-        "kanji": "深い森を歩きます。",
-        "romaji": "Fukai mori wo arukimasu.",
-        "english": "I walk through the deep forest."
+        "kanji": "深い森を探検します。",
+        "romaji": "Fukai mori wo tanken shimasu.",
+        "english": "I explore the deep forest."
       }
     },
     {
@@ -400,9 +400,9 @@
       "english": "house",
       "rhyme": "Warm and safe for you and me, it's Ie",
       "sentence": {
-        "kanji": "新しい家に住みます。",
-        "romaji": "Atarashii ie ni sumimasu.",
-        "english": "I live in a new house."
+        "kanji": "小さな家を見つけます。",
+        "romaji": "Chiisana ie wo mitsukemasu.",
+        "english": "I find a small house."
       }
     },
     {
@@ -415,9 +415,9 @@
       "english": "gate",
       "rhyme": "Standing tall for all to see, it's Mon",
       "sentence": {
-        "kanji": "大きな門があります。",
-        "romaji": "Ookina mon ga arimasu.",
-        "english": "There is a big gate."
+        "kanji": "古い門を開けます。",
+        "romaji": "Furui mon wo akemasu.",
+        "english": "I open the old gate."
       }
     },
     {
@@ -432,7 +432,7 @@
       "sentence": {
         "kanji": "長い道を歩きます。",
         "romaji": "Nagai michi wo arukimasu.",
-        "english": "I walk on the long road."
+        "english": "I walk along the long road."
       }
     },
     {
@@ -445,9 +445,9 @@
       "english": "bridge",
       "rhyme": "Crossing over streams so free, it's Hashi",
       "sentence": {
-        "kanji": "橋を渡ります。",
-        "romaji": "Hashi wo watarimasu.",
-        "english": "I cross the bridge."
+        "kanji": "木の橋を渡ります。",
+        "romaji": "Ki no hashi wo watarimasu.",
+        "english": "I cross the wooden bridge."
       }
     },
     {
@@ -460,9 +460,9 @@
       "english": "car",
       "rhyme": "Rolling fast for all to see, it's Kuruma",
       "sentence": {
-        "kanji": "赤い車を運転します。",
-        "romaji": "Akai kuruma wo unten shimasu.",
-        "english": "I drive a red car."
+        "kanji": "古い車を運転します。",
+        "romaji": "Furui kuruma wo unten shimasu.",
+        "english": "I drive an old car."
       }
     },
     {
@@ -477,7 +477,7 @@
       "sentence": {
         "kanji": "小さな船に乗ります。",
         "romaji": "Chiisana fune ni norimasu.",
-        "english": "I ride in a small boat."
+        "english": "I board a small boat."
       }
     },
     {
@@ -490,9 +490,9 @@
       "english": "train",
       "rhyme": "Racing fast for all to see, it's Densha",
       "sentence": {
-        "kanji": "電車で学校に行きます。",
-        "romaji": "Densha de gakkou ni ikimasu.",
-        "english": "I go to school by train."
+        "kanji": "電車で町に行きます。",
+        "romaji": "Densha de machi ni ikimasu.",
+        "english": "I go to town by train."
       }
     },
     {
@@ -535,9 +535,9 @@
       "english": "walk",
       "rhyme": "Step by step so carefully, it's Aruku",
       "sentence": {
-        "kanji": "毎日歩きます。",
-        "romaji": "Mainichi arukimasu.",
-        "english": "I walk every day."
+        "kanji": "ゆっくり歩くのが好きです。",
+        "romaji": "Yukkuri aruku no ga suki desu.",
+        "english": "I like to walk slowly."
       }
     },
     {
@@ -550,9 +550,9 @@
       "english": "run",
       "rhyme": "Fast and quick as quick can be, it's Hashiru",
       "sentence": {
-        "kanji": "公園で走ります。",
-        "romaji": "Kouen de hashirimasu.",
-        "english": "I run in the park."
+        "kanji": "公園で走る練習をします。",
+        "romaji": "Kouen de hashiru renshuu wo shimasu.",
+        "english": "I practice running in the park."
       }
     },
     {
@@ -565,9 +565,9 @@
       "english": "swim",
       "rhyme": "Through the water wild and free, it's Oyogu",
       "sentence": {
-        "kanji": "プールで泳ぎます。",
-        "romaji": "Puuru de oyogimasu.",
-        "english": "I swim in the pool."
+        "kanji": "湖で泳ぐことにします。",
+        "romaji": "Mizuumi de oyogu koto ni shimasu.",
+        "english": "I decide to swim in the lake."
       }
     },
     {
@@ -580,9 +580,9 @@
       "english": "fly",
       "rhyme": "High above for all to see, it's Tobu",
       "sentence": {
-        "kanji": "鳥が空を飛びます。",
-        "romaji": "Tori ga sora wo tobimasu.",
-        "english": "Birds fly in the sky."
+        "kanji": "鳥のように飛ぶ夢を見ます。",
+        "romaji": "Tori no you ni tobu yume wo mimasu.",
+        "english": "I dream of flying like a bird."
       }
     },
     {
@@ -595,9 +595,9 @@
       "english": "person",
       "rhyme": "Walking tall for all to see, it's Hito",
       "sentence": {
-        "kanji": "親切な人に会いました。",
-        "romaji": "Shinsetsu na hito ni aimashita.",
-        "english": "I met a kind person."
+        "kanji": "親切な人に出会います。",
+        "romaji": "Shinsetsu na hito ni deaimasu.",
+        "english": "I meet a kind person."
       }
     },
     {
@@ -610,9 +610,9 @@
       "english": "man",
       "rhyme": "Strong and brave as brave can be, it's Otoko",
       "sentence": {
-        "kanji": "背の高い男の人です。",
-        "romaji": "Se no takai otoko no hito desu.",
-        "english": "He is a tall man."
+        "kanji": "その男の人は漁師です。",
+        "romaji": "Sono otoko no hito wa ryoushi desu.",
+        "english": "That man is a fisherman."
       }
     },
     {
@@ -625,9 +625,9 @@
       "english": "woman",
       "rhyme": "Graceful, kind, and strong and free, it's Onna",
       "sentence": {
-        "kanji": "美しい女の人です。",
-        "romaji": "Utsukushii onna no hito desu.",
-        "english": "She is a beautiful woman."
+        "kanji": "美しい女の人が歌います。",
+        "romaji": "Utsukushii onna no hito ga utaimasu.",
+        "english": "A beautiful woman sings."
       }
     },
     {
@@ -640,9 +640,9 @@
       "english": "child",
       "rhyme": "Playing games so happily, it's Kodomo",
       "sentence": {
-        "kanji": "子供が公園で遊んでいます。",
-        "romaji": "Kodomo ga kouen de asondeimasu.",
-        "english": "Children are playing in the park."
+        "kanji": "子供たちが笑って遊びます。",
+        "romaji": "Kodomo-tachi ga waratte asobimasu.",
+        "english": "The children laugh and play."
       }
     },
     {
@@ -655,9 +655,9 @@
       "english": "friend",
       "rhyme": "Always there for you and me, it's Tomodachi",
       "sentence": {
-        "kanji": "友達と映画を見ます。",
-        "romaji": "Tomodachi to eiga wo mimasu.",
-        "english": "I watch movies with friends."
+        "kanji": "新しい友達を作ります。",
+        "romaji": "Atarashii tomodachi wo tsukurimasu.",
+        "english": "I make new friends."
       }
     },
     {
@@ -670,9 +670,9 @@
       "english": "family",
       "rhyme": "Together strong as strong can be, it's Kazoku",
       "sentence": {
-        "kanji": "家族と夕食を食べます。",
-        "romaji": "Kazoku to yuushoku wo tabemasu.",
-        "english": "I eat dinner with my family."
+        "kanji": "家族と一緒に住みます。",
+        "romaji": "Kazoku to issho ni sumimasu.",
+        "english": "I live together with my family."
       }
     },
     {
@@ -685,9 +685,9 @@
       "english": "teacher",
       "rhyme": "Wise and kind for all to see, it's Sensei",
       "sentence": {
-        "kanji": "先生が日本語を教えます。",
-        "romaji": "Sensei ga nihongo wo oshiemasu.",
-        "english": "The teacher teaches Japanese."
+        "kanji": "村の先生が本を読みます。",
+        "romaji": "Mura no sensei ga hon wo yomimasu.",
+        "english": "The village teacher reads a book."
       }
     },
     {
@@ -700,9 +700,9 @@
       "english": "student",
       "rhyme": "Learning new things happily, it's Gakusei",
       "sentence": {
-        "kanji": "学生が勉強しています。",
-        "romaji": "Gakusei ga benkyou shiteimasu.",
-        "english": "The student is studying."
+        "kanji": "学生として勉強します。",
+        "romaji": "Gakusei to shite benkyou shimasu.",
+        "english": "I study as a student."
       }
     },
     {
@@ -715,9 +715,9 @@
       "english": "doctor",
       "rhyme": "Healing all so carefully, it's Isha",
       "sentence": {
-        "kanji": "医者が病気を治します。",
-        "romaji": "Isha ga byouki wo naoshimasu.",
-        "english": "The doctor cures illnesses."
+        "kanji": "町の医者が病気を治します。",
+        "romaji": "Machi no isha ga byouki wo naoshimasu.",
+        "english": "The town doctor cures illnesses."
       }
     },
     {
@@ -747,7 +747,7 @@
       "sentence": {
         "kanji": "警察官が街を守ります。",
         "romaji": "Keisatsukan ga machi wo mamorimasu.",
-        "english": "Police officers protect the city."
+        "english": "The police officer protects the town."
       }
     },
     {
@@ -762,7 +762,7 @@
       "sentence": {
         "kanji": "消防士が火事を消します。",
         "romaji": "Shouboushi ga kaji wo keshimasu.",
-        "english": "Firefighters put out fires."
+        "english": "The firefighter puts out the fire."
       }
     },
     {
@@ -775,9 +775,9 @@
       "english": "king",
       "rhyme": "Ruling fair for all to see, it's Ousama",
       "sentence": {
-        "kanji": "王様が国を治めます。",
-        "romaji": "Ousama ga kuni wo osamemasuu.",
-        "english": "The king rules the country."
+        "kanji": "王様が平和を守ります。",
+        "romaji": "Ousama ga heiwa wo mamorimasu.",
+        "english": "The king protects the peace."
       }
     }
   ]

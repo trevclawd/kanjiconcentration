@@ -1871,6 +1871,44 @@ header h1 {
     margin-bottom: 2rem;
 }
 
+.story-narrative {
+    padding: 2rem;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    border-radius: 15px;
+    border-left: 5px solid #FF6B35;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.story-narrative:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.story-kanji-text {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #1e3c72;
+    margin-bottom: 1.5rem;
+    font-family: 'Hiragino Sans', 'Yu Gothic', 'Meiryo', 'MS Gothic', sans-serif;
+    line-height: 1.8;
+    text-align: left;
+}
+
+.story-translation-text {
+    font-size: 1.1rem;
+    color: #636e72;
+    font-style: italic;
+    text-align: left;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    border: 2px solid #74b9ff;
+    transition: all 0.3s ease;
+    line-height: 1.6;
+}
+
+/* Legacy styles for backward compatibility */
 .story-paragraph {
     margin-bottom: 2rem;
     padding: 1.5rem;
@@ -2093,4 +2131,221 @@ header h1 {
     border-color: #FF6B35;
     background: rgba(255, 107, 53, 0.05);
     transition: all 0.3s ease;
+}
+
+/* New Story Mode Structure Styles */
+.story-wrapper {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    max-height: 70vh;
+    overflow-y: auto;
+    margin-bottom: 2rem;
+}
+
+.story-section {
+    margin-bottom: 2.5rem;
+    padding: 2rem;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    animation: storyFadeIn 0.6s ease-out;
+}
+
+.story-kanji-section {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    border-left: 5px solid #1e3c72;
+    box-shadow: 0 4px 10px rgba(30, 60, 114, 0.1);
+}
+
+.story-romaji-section {
+    background: linear-gradient(135deg, #fff5f5, #fed7d7);
+    border-left: 5px solid #e53e3e;
+    box-shadow: 0 4px 10px rgba(229, 62, 62, 0.1);
+}
+
+.story-english-section {
+    background: linear-gradient(135deg, #f0fff4, #c6f6d5);
+    border-left: 5px solid #38a169;
+    box-shadow: 0 4px 10px rgba(56, 161, 105, 0.1);
+}
+
+.story-section:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.story-section h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    padding: 0.8rem;
+    border-radius: 10px;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.story-kanji-section h3 {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+}
+
+.story-romaji-section h3 {
+    background: linear-gradient(135deg, #e53e3e, #fc8181);
+}
+
+.story-english-section h3 {
+    background: linear-gradient(135deg, #38a169, #68d391);
+}
+
+.story-text {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    text-align: left;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.story-kanji-section .story-text {
+    font-family: 'Hiragino Sans', 'Yu Gothic', 'Meiryo', 'MS Gothic', sans-serif;
+    font-weight: bold;
+    color: #1e3c72;
+    border-color: #74b9ff;
+}
+
+.story-romaji-section .story-text {
+    font-style: italic;
+    color: #636e72;
+    border-color: #fab1a0;
+}
+
+.story-english-section .story-text {
+    color: #2d3436;
+    border-color: #81ecec;
+}
+
+/* Vocabulary Highlighting */
+.vocabulary-highlight {
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    color: #4B0082;
+    font-weight: bold;
+    padding: 0.2rem 0.4rem;
+    border-radius: 5px;
+    border: 2px solid #FF6B35;
+    box-shadow: 0 2px 5px rgba(255, 215, 0, 0.3);
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin: 0 0.1rem;
+}
+
+.vocabulary-highlight:hover {
+    background: linear-gradient(135deg, #FFC700, #FF9500);
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(255, 215, 0, 0.5);
+}
+
+/* Section Visibility Control */
+.hidden {
+    display: none !important;
+    opacity: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Story Mode Print Styles Enhancement */
+@media print {
+    .story-wrapper {
+        background: white !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        padding: 0 !important;
+        max-height: none !important;
+        overflow: visible !important;
+        margin: 0 !important;
+    }
+    
+    .story-section {
+        background: white !important;
+        border: 2px solid #ddd !important;
+        border-radius: 10px !important;
+        padding: 1.5rem !important;
+        margin-bottom: 2rem !important;
+        box-shadow: none !important;
+        page-break-inside: avoid;
+    }
+    
+    .story-kanji-section {
+        border-left: 5px solid #333 !important;
+    }
+    
+    .story-romaji-section {
+        border-left: 5px solid #666 !important;
+    }
+    
+    .story-english-section {
+        border-left: 5px solid #999 !important;
+    }
+    
+    .story-section h3 {
+        background: #333 !important;
+        color: white !important;
+        font-size: 1.3rem !important;
+        padding: 0.6rem !important;
+        border-radius: 8px !important;
+        text-shadow: none !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    .story-text {
+        background: #f8f9fa !important;
+        border: 1px solid #ddd !important;
+        color: #333 !important;
+        font-size: 1.2rem !important;
+        padding: 1rem !important;
+        border-radius: 8px !important;
+    }
+    
+    .vocabulary-highlight {
+        background: #f0f0f0 !important;
+        color: #000 !important;
+        border: 1px solid #ccc !important;
+        box-shadow: none !important;
+        font-weight: bold !important;
+    }
+}
+
+/* Story Mode Mobile Responsive Enhancement */
+@media (max-width: 768px) {
+    .story-wrapper {
+        padding: 1.5rem;
+        max-height: 60vh;
+    }
+    
+    .story-section {
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .story-section h3 {
+        font-size: 1.3rem;
+        padding: 0.6rem;
+        margin-bottom: 1rem;
+    }
+    
+    .story-text {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        padding: 1rem;
+    }
+    
+    .vocabulary-highlight {
+        padding: 0.15rem 0.3rem;
+        font-size: 0.95em;
+        margin: 0 0.05rem;
+    }
 }

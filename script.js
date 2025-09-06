@@ -71,60 +71,60 @@ class KanjiConcentrationGame {
                 this.cards = data.cards;
             }
         } catch (error) {
-            // Fall back to embedded data - use the full dataset
+            // Fall back to embedded data - use the full dataset with sentences
             this.cards = [
-                {"id": "ace_hearts", "rank": "A", "suit": "hearts", "kanji": "下り", "hiragana": "くだり", "romaji": "kudari", "english": "downhill", "rhyme": "We go downhill you see, it's Kudari"},
-                {"id": "2_hearts", "rank": "2", "suit": "hearts", "kanji": "上り", "hiragana": "のぼり", "romaji": "nobori", "english": "uphill", "rhyme": "Up the hill we climb so free, it's Nobori"},
-                {"id": "3_hearts", "rank": "3", "suit": "hearts", "kanji": "水", "hiragana": "みず", "romaji": "mizu", "english": "water", "rhyme": "Clear and blue like morning dew, it's Mizu"},
-                {"id": "4_hearts", "rank": "4", "suit": "hearts", "kanji": "火", "hiragana": "ひ", "romaji": "hi", "english": "fire", "rhyme": "Burning bright for all to see, it's Hi"},
-                {"id": "5_hearts", "rank": "5", "suit": "hearts", "kanji": "木", "hiragana": "き", "romaji": "ki", "english": "tree", "rhyme": "Growing tall and strong and free, it's Ki"},
-                {"id": "6_hearts", "rank": "6", "suit": "hearts", "kanji": "金", "hiragana": "きん", "romaji": "kin", "english": "gold", "rhyme": "Shining bright like treasure's glee, it's Kin"},
-                {"id": "7_hearts", "rank": "7", "suit": "hearts", "kanji": "土", "hiragana": "つち", "romaji": "tsuchi", "english": "earth", "rhyme": "Rich and brown beneath the tree, it's Tsuchi"},
-                {"id": "8_hearts", "rank": "8", "suit": "hearts", "kanji": "空", "hiragana": "そら", "romaji": "sora", "english": "sky", "rhyme": "Blue and vast for all to see, it's Sora"},
-                {"id": "9_hearts", "rank": "9", "suit": "hearts", "kanji": "海", "hiragana": "うみ", "romaji": "umi", "english": "ocean", "rhyme": "Deep and wide and wild and free, it's Umi"},
-                {"id": "10_hearts", "rank": "10", "suit": "hearts", "kanji": "山", "hiragana": "やま", "romaji": "yama", "english": "mountain", "rhyme": "Tall and proud for all to see, it's Yama"},
-                {"id": "jack_hearts", "rank": "J", "suit": "hearts", "kanji": "川", "hiragana": "かわ", "romaji": "kawa", "english": "river", "rhyme": "Flowing swift and wild and free, it's Kawa"},
-                {"id": "queen_hearts", "rank": "Q", "suit": "hearts", "kanji": "花", "hiragana": "はな", "romaji": "hana", "english": "flower", "rhyme": "Blooming bright for all to see, it's Hana"},
-                {"id": "king_hearts", "rank": "K", "suit": "hearts", "kanji": "月", "hiragana": "つき", "romaji": "tsuki", "english": "moon", "rhyme": "Glowing bright in night's decree, it's Tsuki"},
-                {"id": "ace_diamonds", "rank": "A", "suit": "diamonds", "kanji": "日", "hiragana": "ひ", "romaji": "hi", "english": "sun", "rhyme": "Shining bright for you and me, it's Hi"},
-                {"id": "2_diamonds", "rank": "2", "suit": "diamonds", "kanji": "星", "hiragana": "ほし", "romaji": "hoshi", "english": "star", "rhyme": "Twinkling bright for all to see, it's Hoshi"},
-                {"id": "3_diamonds", "rank": "3", "suit": "diamonds", "kanji": "雲", "hiragana": "くも", "romaji": "kumo", "english": "cloud", "rhyme": "Floating white and soft and free, it's Kumo"},
-                {"id": "4_diamonds", "rank": "4", "suit": "diamonds", "kanji": "雨", "hiragana": "あめ", "romaji": "ame", "english": "rain", "rhyme": "Falling down from clouds we see, it's Ame"},
-                {"id": "5_diamonds", "rank": "5", "suit": "diamonds", "kanji": "雪", "hiragana": "ゆき", "romaji": "yuki", "english": "snow", "rhyme": "White and cold as cold can be, it's Yuki"},
-                {"id": "6_diamonds", "rank": "6", "suit": "diamonds", "kanji": "風", "hiragana": "かぜ", "romaji": "kaze", "english": "wind", "rhyme": "Blowing strong and wild and free, it's Kaze"},
-                {"id": "7_diamonds", "rank": "7", "suit": "diamonds", "kanji": "石", "hiragana": "いし", "romaji": "ishi", "english": "stone", "rhyme": "Hard and strong as strong can be, it's Ishi"},
-                {"id": "8_diamonds", "rank": "8", "suit": "diamonds", "kanji": "草", "hiragana": "くさ", "romaji": "kusa", "english": "grass", "rhyme": "Green and soft beneath the tree, it's Kusa"},
-                {"id": "9_diamonds", "rank": "9", "suit": "diamonds", "kanji": "葉", "hiragana": "は", "romaji": "ha", "english": "leaf", "rhyme": "Green and fresh for all to see, it's Ha"},
-                {"id": "10_diamonds", "rank": "10", "suit": "diamonds", "kanji": "根", "hiragana": "ね", "romaji": "ne", "english": "root", "rhyme": "Deep below where none can see, it's Ne"},
-                {"id": "jack_diamonds", "rank": "J", "suit": "diamonds", "kanji": "種", "hiragana": "たね", "romaji": "tane", "english": "seed", "rhyme": "Small but full of life to be, it's Tane"},
-                {"id": "queen_diamonds", "rank": "Q", "suit": "diamonds", "kanji": "実", "hiragana": "み", "romaji": "mi", "english": "fruit", "rhyme": "Sweet and ripe upon the tree, it's Mi"},
-                {"id": "king_diamonds", "rank": "K", "suit": "diamonds", "kanji": "森", "hiragana": "もり", "romaji": "mori", "english": "forest", "rhyme": "Dark and deep and wild and free, it's Mori"},
-                {"id": "ace_clubs", "rank": "A", "suit": "clubs", "kanji": "家", "hiragana": "いえ", "romaji": "ie", "english": "house", "rhyme": "Warm and safe for you and me, it's Ie"},
-                {"id": "2_clubs", "rank": "2", "suit": "clubs", "kanji": "門", "hiragana": "もん", "romaji": "mon", "english": "gate", "rhyme": "Standing tall for all to see, it's Mon"},
-                {"id": "3_clubs", "rank": "3", "suit": "clubs", "kanji": "道", "hiragana": "みち", "romaji": "michi", "english": "road", "rhyme": "Leading far where we can't see, it's Michi"},
-                {"id": "4_clubs", "rank": "4", "suit": "clubs", "kanji": "橋", "hiragana": "はし", "romaji": "hashi", "english": "bridge", "rhyme": "Crossing over streams so free, it's Hashi"},
-                {"id": "5_clubs", "rank": "5", "suit": "clubs", "kanji": "車", "hiragana": "くるま", "romaji": "kuruma", "english": "car", "rhyme": "Rolling fast for all to see, it's Kuruma"},
-                {"id": "6_clubs", "rank": "6", "suit": "clubs", "kanji": "船", "hiragana": "ふね", "romaji": "fune", "english": "boat", "rhyme": "Sailing on the deep blue sea, it's Fune"},
-                {"id": "7_clubs", "rank": "7", "suit": "clubs", "kanji": "電車", "hiragana": "でんしゃ", "romaji": "densha", "english": "train", "rhyme": "Racing fast for all to see, it's Densha"},
-                {"id": "8_clubs", "rank": "8", "suit": "clubs", "kanji": "飛行機", "hiragana": "ひこうき", "romaji": "hikouki", "english": "airplane", "rhyme": "Flying high above the sea, it's Hikouki"},
-                {"id": "9_clubs", "rank": "9", "suit": "clubs", "kanji": "自転車", "hiragana": "じてんしゃ", "romaji": "jitensha", "english": "bicycle", "rhyme": "Pedaling fast and wild and free, it's Jitensha"},
-                {"id": "10_clubs", "rank": "10", "suit": "clubs", "kanji": "歩く", "hiragana": "あるく", "romaji": "aruku", "english": "walk", "rhyme": "Step by step so carefully, it's Aruku"},
-                {"id": "jack_clubs", "rank": "J", "suit": "clubs", "kanji": "走る", "hiragana": "はしる", "romaji": "hashiru", "english": "run", "rhyme": "Fast and quick as quick can be, it's Hashiru"},
-                {"id": "queen_clubs", "rank": "Q", "suit": "clubs", "kanji": "泳ぐ", "hiragana": "およぐ", "romaji": "oyogu", "english": "swim", "rhyme": "Through the water wild and free, it's Oyogu"},
-                {"id": "king_clubs", "rank": "K", "suit": "clubs", "kanji": "飛ぶ", "hiragana": "とぶ", "romaji": "tobu", "english": "fly", "rhyme": "High above for all to see, it's Tobu"},
-                {"id": "ace_spades", "rank": "A", "suit": "spades", "kanji": "人", "hiragana": "ひと", "romaji": "hito", "english": "person", "rhyme": "Walking tall for all to see, it's Hito"},
-                {"id": "2_spades", "rank": "2", "suit": "spades", "kanji": "男", "hiragana": "おとこ", "romaji": "otoko", "english": "man", "rhyme": "Strong and brave as brave can be, it's Otoko"},
-                {"id": "3_spades", "rank": "3", "suit": "spades", "kanji": "女", "hiragana": "おんな", "romaji": "onna", "english": "woman", "rhyme": "Graceful, kind, and strong and free, it's Onna"},
-                {"id": "4_spades", "rank": "4", "suit": "spades", "kanji": "子供", "hiragana": "こども", "romaji": "kodomo", "english": "child", "rhyme": "Playing games so happily, it's Kodomo"},
-                {"id": "5_spades", "rank": "5", "suit": "spades", "kanji": "友達", "hiragana": "ともだち", "romaji": "tomodachi", "english": "friend", "rhyme": "Always there for you and me, it's Tomodachi"},
-                {"id": "6_spades", "rank": "6", "suit": "spades", "kanji": "家族", "hiragana": "かぞく", "romaji": "kazoku", "english": "family", "rhyme": "Together strong as strong can be, it's Kazoku"},
-                {"id": "7_spades", "rank": "7", "suit": "spades", "kanji": "先生", "hiragana": "せんせい", "romaji": "sensei", "english": "teacher", "rhyme": "Wise and kind for all to see, it's Sensei"},
-                {"id": "8_spades", "rank": "8", "suit": "spades", "kanji": "学生", "hiragana": "がくせい", "romaji": "gakusei", "english": "student", "rhyme": "Learning new things happily, it's Gakusei"},
-                {"id": "9_spades", "rank": "9", "suit": "spades", "kanji": "医者", "hiragana": "いしゃ", "romaji": "isha", "english": "doctor", "rhyme": "Healing all so carefully, it's Isha"},
-                {"id": "10_spades", "rank": "10", "suit": "spades", "kanji": "料理人", "hiragana": "りょうりにん", "romaji": "ryourinin", "english": "cook", "rhyme": "Making food so tastily, it's Ryourinin"},
-                {"id": "jack_spades", "rank": "J", "suit": "spades", "kanji": "警察官", "hiragana": "けいさつかん", "romaji": "keisatsukan", "english": "police officer", "rhyme": "Keeping safe our community, it's Keisatsukan"},
-                {"id": "queen_spades", "rank": "Q", "suit": "spades", "kanji": "消防士", "hiragana": "しょうぼうし", "romaji": "shouboushi", "english": "firefighter", "rhyme": "Brave and strong for all to see, it's Shouboushi"},
-                {"id": "king_spades", "rank": "K", "suit": "spades", "kanji": "王様", "hiragana": "おうさま", "romaji": "ousama", "english": "king", "rhyme": "Ruling fair for all to see, it's Ousama"}
+                {"id": "ace_hearts", "rank": "A", "suit": "hearts", "kanji": "下り", "hiragana": "くだり", "romaji": "kudari", "english": "downhill", "rhyme": "We go downhill you see, it's Kudari", "sentence": {"kanji": "山の下りは危険です。", "romaji": "Yama no kudari wa kiken desu.", "english": "Going downhill on the mountain is dangerous."}},
+                {"id": "2_hearts", "rank": "2", "suit": "hearts", "kanji": "上り", "hiragana": "のぼり", "romaji": "nobori", "english": "uphill", "rhyme": "Up the hill we climb so free, it's Nobori", "sentence": {"kanji": "急な上りを歩きます。", "romaji": "Kyuu na nobori wo arukimasu.", "english": "I walk up the steep uphill path."}},
+                {"id": "3_hearts", "rank": "3", "suit": "hearts", "kanji": "水", "hiragana": "みず", "romaji": "mizu", "english": "water", "rhyme": "Clear and blue like morning dew, it's Mizu", "sentence": {"kanji": "冷たい水を飲みます。", "romaji": "Tsumetai mizu wo nomimasu.", "english": "I drink cold water."}},
+                {"id": "4_hearts", "rank": "4", "suit": "hearts", "kanji": "火", "hiragana": "ひ", "romaji": "hi", "english": "fire", "rhyme": "Burning bright for all to see, it's Hi", "sentence": {"kanji": "キャンプで火を起こします。", "romaji": "Kyanpu de hi wo okoshimasu.", "english": "I start a fire at the camp."}},
+                {"id": "5_hearts", "rank": "5", "suit": "hearts", "kanji": "木", "hiragana": "き", "romaji": "ki", "english": "tree", "rhyme": "Growing tall and strong and free, it's Ki", "sentence": {"kanji": "大きな木の下で休みます。", "romaji": "Ookina ki no shita de yasumimasu.", "english": "I rest under the big tree."}},
+                {"id": "6_hearts", "rank": "6", "suit": "hearts", "kanji": "金", "hiragana": "きん", "romaji": "kin", "english": "gold", "rhyme": "Shining bright like treasure's glee, it's Kin", "sentence": {"kanji": "金の指輪を見つけました。", "romaji": "Kin no yubiwa wo mitsukemashita.", "english": "I found a gold ring."}},
+                {"id": "7_hearts", "rank": "7", "suit": "hearts", "kanji": "土", "hiragana": "つち", "romaji": "tsuchi", "english": "earth", "rhyme": "Rich and brown beneath the tree, it's Tsuchi", "sentence": {"kanji": "土に宝物を埋めます。", "romaji": "Tsuchi ni takaramono wo uzumemasu.", "english": "I bury the treasure in the earth."}},
+                {"id": "8_hearts", "rank": "8", "suit": "hearts", "kanji": "空", "hiragana": "そら", "romaji": "sora", "english": "sky", "rhyme": "Blue and vast for all to see, it's Sora", "sentence": {"kanji": "青い空を見上げます。", "romaji": "Aoi sora wo miagimasu.", "english": "I look up at the blue sky."}},
+                {"id": "9_hearts", "rank": "9", "suit": "hearts", "kanji": "海", "hiragana": "うみ", "romaji": "umi", "english": "ocean", "rhyme": "Deep and wide and wild and free, it's Umi", "sentence": {"kanji": "遠くに海が見えます。", "romaji": "Tooku ni umi ga miemasu.", "english": "I can see the ocean in the distance."}},
+                {"id": "10_hearts", "rank": "10", "suit": "hearts", "kanji": "山", "hiragana": "やま", "romaji": "yama", "english": "mountain", "rhyme": "Tall and proud for all to see, it's Yama", "sentence": {"kanji": "高い山に登ります。", "romaji": "Takai yama ni noborimasu.", "english": "I climb the tall mountain."}},
+                {"id": "jack_hearts", "rank": "J", "suit": "hearts", "kanji": "川", "hiragana": "かわ", "romaji": "kawa", "english": "river", "rhyme": "Flowing swift and wild and free, it's Kawa", "sentence": {"kanji": "川で魚を釣ります。", "romaji": "Kawa de sakana wo tsurimasu.", "english": "I fish in the river."}},
+                {"id": "queen_hearts", "rank": "Q", "suit": "hearts", "kanji": "花", "hiragana": "はな", "romaji": "hana", "english": "flower", "rhyme": "Blooming bright for all to see, it's Hana", "sentence": {"kanji": "美しい花を摘みます。", "romaji": "Utsukushii hana wo tsumimasu.", "english": "I pick beautiful flowers."}},
+                {"id": "king_hearts", "rank": "K", "suit": "hearts", "kanji": "月", "hiragana": "つき", "romaji": "tsuki", "english": "moon", "rhyme": "Glowing bright in night's decree, it's Tsuki", "sentence": {"kanji": "夜の月が明るく照らします。", "romaji": "Yoru no tsuki ga akaruku terashimasu.", "english": "The night moon shines brightly."}},
+                {"id": "ace_diamonds", "rank": "A", "suit": "diamonds", "kanji": "日", "hiragana": "ひ", "romaji": "hi", "english": "sun", "rhyme": "Shining bright for you and me, it's Hi", "sentence": {"kanji": "朝の日が昇ります。", "romaji": "Asa no hi ga noborimasu.", "english": "The morning sun rises."}},
+                {"id": "2_diamonds", "rank": "2", "suit": "diamonds", "kanji": "星", "hiragana": "ほし", "romaji": "hoshi", "english": "star", "rhyme": "Twinkling bright for all to see, it's Hoshi", "sentence": {"kanji": "夜空に星が輝きます。", "romaji": "Yozora ni hoshi ga kagayakimasu.", "english": "Stars twinkle in the night sky."}},
+                {"id": "3_diamonds", "rank": "3", "suit": "diamonds", "kanji": "雲", "hiragana": "くも", "romaji": "kumo", "english": "cloud", "rhyme": "Floating white and soft and free, it's Kumo", "sentence": {"kanji": "白い雲が空に浮かびます。", "romaji": "Shiroi kumo ga sora ni ukabimasu.", "english": "White clouds float in the sky."}},
+                {"id": "4_diamonds", "rank": "4", "suit": "diamonds", "kanji": "雨", "hiragana": "あめ", "romaji": "ame", "english": "rain", "rhyme": "Falling down from clouds we see, it's Ame", "sentence": {"kanji": "雨が降り始めます。", "romaji": "Ame ga furi hajimemasu.", "english": "Rain begins to fall."}},
+                {"id": "5_diamonds", "rank": "5", "suit": "diamonds", "kanji": "雪", "hiragana": "ゆき", "romaji": "yuki", "english": "snow", "rhyme": "White and cold as cold can be, it's Yuki", "sentence": {"kanji": "冬に雪が降ります。", "romaji": "Fuyu ni yuki ga furimasu.", "english": "Snow falls in winter."}},
+                {"id": "6_diamonds", "rank": "6", "suit": "diamonds", "kanji": "風", "hiragana": "かぜ", "romaji": "kaze", "english": "wind", "rhyme": "Blowing strong and wild and free, it's Kaze", "sentence": {"kanji": "強い風が吹いています。", "romaji": "Tsuyoi kaze ga fuiteimasu.", "english": "A strong wind is blowing."}},
+                {"id": "7_diamonds", "rank": "7", "suit": "diamonds", "kanji": "石", "hiragana": "いし", "romaji": "ishi", "english": "stone", "rhyme": "Hard and strong as strong can be, it's Ishi", "sentence": {"kanji": "大きな石を見つけます。", "romaji": "Ookina ishi wo mitsukemasu.", "english": "I find a big stone."}},
+                {"id": "8_diamonds", "rank": "8", "suit": "diamonds", "kanji": "草", "hiragana": "くさ", "romaji": "kusa", "english": "grass", "rhyme": "Green and soft beneath the tree, it's Kusa", "sentence": {"kanji": "緑の草の上に座ります。", "romaji": "Midori no kusa no ue ni suwarimasu.", "english": "I sit on the green grass."}},
+                {"id": "9_diamonds", "rank": "9", "suit": "diamonds", "kanji": "葉", "hiragana": "は", "romaji": "ha", "english": "leaf", "rhyme": "Green and fresh for all to see, it's Ha", "sentence": {"kanji": "木の葉が風で揺れます。", "romaji": "Ki no ha ga kaze de yuremasu.", "english": "The tree leaves sway in the wind."}},
+                {"id": "10_diamonds", "rank": "10", "suit": "diamonds", "kanji": "根", "hiragana": "ね", "romaji": "ne", "english": "root", "rhyme": "Deep below where none can see, it's Ne", "sentence": {"kanji": "木の根が深く伸びています。", "romaji": "Ki no ne ga fukaku nobiteimasu.", "english": "The tree roots extend deep."}},
+                {"id": "jack_diamonds", "rank": "J", "suit": "diamonds", "kanji": "種", "hiragana": "たね", "romaji": "tane", "english": "seed", "rhyme": "Small but full of life to be, it's Tane", "sentence": {"kanji": "小さな種を植えます。", "romaji": "Chiisana tane wo uemasu.", "english": "I plant small seeds."}},
+                {"id": "queen_diamonds", "rank": "Q", "suit": "diamonds", "kanji": "実", "hiragana": "み", "romaji": "mi", "english": "fruit", "rhyme": "Sweet and ripe upon the tree, it's Mi", "sentence": {"kanji": "甘い実を収穫します。", "romaji": "Amai mi wo shuukaku shimasu.", "english": "I harvest sweet fruit."}},
+                {"id": "king_diamonds", "rank": "K", "suit": "diamonds", "kanji": "森", "hiragana": "もり", "romaji": "mori", "english": "forest", "rhyme": "Dark and deep and wild and free, it's Mori", "sentence": {"kanji": "深い森を探検します。", "romaji": "Fukai mori wo tanken shimasu.", "english": "I explore the deep forest."}},
+                {"id": "ace_clubs", "rank": "A", "suit": "clubs", "kanji": "家", "hiragana": "いえ", "romaji": "ie", "english": "house", "rhyme": "Warm and safe for you and me, it's Ie", "sentence": {"kanji": "小さな家を見つけます。", "romaji": "Chiisana ie wo mitsukemasu.", "english": "I find a small house."}},
+                {"id": "2_clubs", "rank": "2", "suit": "clubs", "kanji": "門", "hiragana": "もん", "romaji": "mon", "english": "gate", "rhyme": "Standing tall for all to see, it's Mon", "sentence": {"kanji": "古い門を開けます。", "romaji": "Furui mon wo akemasu.", "english": "I open the old gate."}},
+                {"id": "3_clubs", "rank": "3", "suit": "clubs", "kanji": "道", "hiragana": "みち", "romaji": "michi", "english": "road", "rhyme": "Leading far where we can't see, it's Michi", "sentence": {"kanji": "長い道を歩きます。", "romaji": "Nagai michi wo arukimasu.", "english": "I walk along the long road."}},
+                {"id": "4_clubs", "rank": "4", "suit": "clubs", "kanji": "橋", "hiragana": "はし", "romaji": "hashi", "english": "bridge", "rhyme": "Crossing over streams so free, it's Hashi", "sentence": {"kanji": "木の橋を渡ります。", "romaji": "Ki no hashi wo watarimasu.", "english": "I cross the wooden bridge."}},
+                {"id": "5_clubs", "rank": "5", "suit": "clubs", "kanji": "車", "hiragana": "くるま", "romaji": "kuruma", "english": "car", "rhyme": "Rolling fast for all to see, it's Kuruma", "sentence": {"kanji": "古い車を運転します。", "romaji": "Furui kuruma wo unten shimasu.", "english": "I drive an old car."}},
+                {"id": "6_clubs", "rank": "6", "suit": "clubs", "kanji": "船", "hiragana": "ふね", "romaji": "fune", "english": "boat", "rhyme": "Sailing on the deep blue sea, it's Fune", "sentence": {"kanji": "小さな船に乗ります。", "romaji": "Chiisana fune ni norimasu.", "english": "I board a small boat."}},
+                {"id": "7_clubs", "rank": "7", "suit": "clubs", "kanji": "電車", "hiragana": "でんしゃ", "romaji": "densha", "english": "train", "rhyme": "Racing fast for all to see, it's Densha", "sentence": {"kanji": "電車で町に行きます。", "romaji": "Densha de machi ni ikimasu.", "english": "I go to town by train."}},
+                {"id": "8_clubs", "rank": "8", "suit": "clubs", "kanji": "飛行機", "hiragana": "ひこうき", "romaji": "hikouki", "english": "airplane", "rhyme": "Flying high above the sea, it's Hikouki", "sentence": {"kanji": "飛行機で旅行します。", "romaji": "Hikouki de ryokou shimasu.", "english": "I travel by airplane."}},
+                {"id": "9_clubs", "rank": "9", "suit": "clubs", "kanji": "自転車", "hiragana": "じてんしゃ", "romaji": "jitensha", "english": "bicycle", "rhyme": "Pedaling fast and wild and free, it's Jitensha", "sentence": {"kanji": "自転車で公園に行きます。", "romaji": "Jitensha de kouen ni ikimasu.", "english": "I go to the park by bicycle."}},
+                {"id": "10_clubs", "rank": "10", "suit": "clubs", "kanji": "歩く", "hiragana": "あるく", "romaji": "aruku", "english": "walk", "rhyme": "Step by step so carefully, it's Aruku", "sentence": {"kanji": "ゆっくり歩くのが好きです。", "romaji": "Yukkuri aruku no ga suki desu.", "english": "I like to walk slowly."}},
+                {"id": "jack_clubs", "rank": "J", "suit": "clubs", "kanji": "走る", "hiragana": "はしる", "romaji": "hashiru", "english": "run", "rhyme": "Fast and quick as quick can be, it's Hashiru", "sentence": {"kanji": "公園で走る練習をします。", "romaji": "Kouen de hashiru renshuu wo shimasu.", "english": "I practice running in the park."}},
+                {"id": "queen_clubs", "rank": "Q", "suit": "clubs", "kanji": "泳ぐ", "hiragana": "およぐ", "romaji": "oyogu", "english": "swim", "rhyme": "Through the water wild and free, it's Oyogu", "sentence": {"kanji": "湖で泳ぐことにします。", "romaji": "Mizuumi de oyogu koto ni shimasu.", "english": "I decide to swim in the lake."}},
+                {"id": "king_clubs", "rank": "K", "suit": "clubs", "kanji": "飛ぶ", "hiragana": "とぶ", "romaji": "tobu", "english": "fly", "rhyme": "High above for all to see, it's Tobu", "sentence": {"kanji": "鳥のように飛ぶ夢を見ます。", "romaji": "Tori no you ni tobu yume wo mimasu.", "english": "I dream of flying like a bird."}},
+                {"id": "ace_spades", "rank": "A", "suit": "spades", "kanji": "人", "hiragana": "ひと", "romaji": "hito", "english": "person", "rhyme": "Walking tall for all to see, it's Hito", "sentence": {"kanji": "親切な人に出会います。", "romaji": "Shinsetsu na hito ni deaimasu.", "english": "I meet a kind person."}},
+                {"id": "2_spades", "rank": "2", "suit": "spades", "kanji": "男", "hiragana": "おとこ", "romaji": "otoko", "english": "man", "rhyme": "Strong and brave as brave can be, it's Otoko", "sentence": {"kanji": "その男の人は漁師です。", "romaji": "Sono otoko no hito wa ryoushi desu.", "english": "That man is a fisherman."}},
+                {"id": "3_spades", "rank": "3", "suit": "spades", "kanji": "女", "hiragana": "おんな", "romaji": "onna", "english": "woman", "rhyme": "Graceful, kind, and strong and free, it's Onna", "sentence": {"kanji": "美しい女の人が歌います。", "romaji": "Utsukushii onna no hito ga utaimasu.", "english": "A beautiful woman sings."}},
+                {"id": "4_spades", "rank": "4", "suit": "spades", "kanji": "子供", "hiragana": "こども", "romaji": "kodomo", "english": "child", "rhyme": "Playing games so happily, it's Kodomo", "sentence": {"kanji": "子供たちが笑って遊びます。", "romaji": "Kodomo-tachi ga waratte asobimasu.", "english": "The children laugh and play."}},
+                {"id": "5_spades", "rank": "5", "suit": "spades", "kanji": "友達", "hiragana": "ともだち", "romaji": "tomodachi", "english": "friend", "rhyme": "Always there for you and me, it's Tomodachi", "sentence": {"kanji": "新しい友達を作ります。", "romaji": "Atarashii tomodachi wo tsukurimasu.", "english": "I make new friends."}},
+                {"id": "6_spades", "rank": "6", "suit": "spades", "kanji": "家族", "hiragana": "かぞく", "romaji": "kazoku", "english": "family", "rhyme": "Together strong as strong can be, it's Kazoku", "sentence": {"kanji": "家族と一緒に住みます。", "romaji": "Kazoku to issho ni sumimasu.", "english": "I live together with my family."}},
+                {"id": "7_spades", "rank": "7", "suit": "spades", "kanji": "先生", "hiragana": "せんせい", "romaji": "sensei", "english": "teacher", "rhyme": "Wise and kind for all to see, it's Sensei", "sentence": {"kanji": "村の先生が本を読みます。", "romaji": "Mura no sensei ga hon wo yomimasu.", "english": "The village teacher reads a book."}},
+                {"id": "8_spades", "rank": "8", "suit": "spades", "kanji": "学生", "hiragana": "がくせい", "romaji": "gakusei", "english": "student", "rhyme": "Learning new things happily, it's Gakusei", "sentence": {"kanji": "学生として勉強します。", "romaji": "Gakusei to shite benkyou shimasu.", "english": "I study as a student."}},
+                {"id": "9_spades", "rank": "9", "suit": "spades", "kanji": "医者", "hiragana": "いしゃ", "romaji": "isha", "english": "doctor", "rhyme": "Healing all so carefully, it's Isha", "sentence": {"kanji": "町の医者が病気を治します。", "romaji": "Machi no isha ga byouki wo naoshimasu.", "english": "The town doctor cures illnesses."}},
+                {"id": "10_spades", "rank": "10", "suit": "spades", "kanji": "料理人", "hiragana": "りょうりにん", "romaji": "ryourinin", "english": "cook", "rhyme": "Making food so tastily, it's Ryourinin", "sentence": {"kanji": "料理人が美味しい食事を作ります。", "romaji": "Ryourinin ga oishii shokuji wo tsukurimasu.", "english": "The cook makes delicious meals."}},
+                {"id": "jack_spades", "rank": "J", "suit": "spades", "kanji": "警察官", "hiragana": "けいさつかん", "romaji": "keisatsukan", "english": "police officer", "rhyme": "Keeping safe our community, it's Keisatsukan", "sentence": {"kanji": "警察官が街を守ります。", "romaji": "Keisatsukan ga machi wo mamorimasu.", "english": "The police officer protects the town."}},
+                {"id": "queen_spades", "rank": "Q", "suit": "spades", "kanji": "消防士", "hiragana": "しょうぼうし", "romaji": "shouboushi", "english": "firefighter", "rhyme": "Brave and strong for all to see, it's Shouboushi", "sentence": {"kanji": "消防士が火事を消します。", "romaji": "Shouboushi ga kaji wo keshimasu.", "english": "The firefighter puts out the fire."}},
+                {"id": "king_spades", "rank": "K", "suit": "spades", "kanji": "王様", "hiragana": "おうさま", "romaji": "ousama", "english": "king", "rhyme": "Ruling fair for all to see, it's Ousama", "sentence": {"kanji": "王様が平和を守ります。", "romaji": "Ousama ga heiwa wo mamorimasu.", "english": "The king protects the peace."}}
             ];
         }
         
@@ -138,9 +138,22 @@ class KanjiConcentrationGame {
             try {
                 const data = JSON.parse(e.target.result);
                 if (data.cards && Array.isArray(data.cards)) {
-                    this.cards = data.cards;
+                    // Validate and enhance the imported data
+                    const validationResult = this.validateAndEnhanceCards(data.cards);
+                    
+                    this.cards = validationResult.cards;
                     this.displayPreGameCards();
-                    alert('Data imported successfully!');
+                    
+                    // Provide detailed feedback to the user
+                    let message = 'Data imported successfully!';
+                    if (validationResult.warnings.length > 0) {
+                        message += '\n\nWarnings:\n' + validationResult.warnings.join('\n');
+                    }
+                    if (validationResult.enhancements.length > 0) {
+                        message += '\n\nEnhancements applied:\n' + validationResult.enhancements.join('\n');
+                    }
+                    
+                    alert(message);
                 } else {
                     alert('Invalid file format. Please ensure the JSON has a "cards" array.');
                 }
@@ -149,6 +162,88 @@ class KanjiConcentrationGame {
             }
         };
         reader.readAsText(file);
+    }
+
+    validateAndEnhanceCards(cards) {
+        const warnings = [];
+        const enhancements = [];
+        const validatedCards = [];
+
+        cards.forEach((card, index) => {
+            const cardNum = index + 1;
+            
+            // Check for required basic fields
+            const requiredFields = ['id', 'kanji', 'hiragana', 'romaji', 'english', 'rhyme'];
+            const missingFields = requiredFields.filter(field => !card[field]);
+            
+            if (missingFields.length > 0) {
+                warnings.push(`Card ${cardNum}: Missing required fields: ${missingFields.join(', ')}`);
+                return; // Skip this card if basic fields are missing
+            }
+
+            // Create a copy of the card to avoid modifying the original
+            const validatedCard = { ...card };
+
+            // Check for sentence data
+            if (!card.sentence) {
+                warnings.push(`Card ${cardNum} (${card.kanji}): No sentence data found. Story Mode and sentence features will not work for this card.`);
+            } else {
+                // Validate sentence structure
+                const sentenceFields = ['kanji', 'romaji', 'english'];
+                const missingSentenceFields = sentenceFields.filter(field => !card.sentence[field]);
+                
+                if (missingSentenceFields.length > 0) {
+                    warnings.push(`Card ${cardNum} (${card.kanji}): Sentence missing fields: ${missingSentenceFields.join(', ')}`);
+                } else {
+                    // Sentence is complete
+                    enhancements.push(`Card ${cardNum} (${card.kanji}): Sentence data validated successfully`);
+                }
+            }
+
+            // Check for optional card game fields (rank, suit)
+            if (!card.rank || !card.suit) {
+                // Add default rank and suit if missing
+                const defaultRanks = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
+                const defaultSuits = ['hearts', 'diamonds', 'clubs', 'spades'];
+                
+                if (!validatedCard.rank) {
+                    validatedCard.rank = defaultRanks[index % defaultRanks.length];
+                    enhancements.push(`Card ${cardNum}: Added default rank (${validatedCard.rank})`);
+                }
+                
+                if (!validatedCard.suit) {
+                    validatedCard.suit = defaultSuits[Math.floor(index / defaultRanks.length) % defaultSuits.length];
+                    enhancements.push(`Card ${cardNum}: Added default suit (${validatedCard.suit})`);
+                }
+            }
+
+            validatedCards.push(validatedCard);
+        });
+
+        // Summary statistics
+        const totalCards = cards.length;
+        const validCards = validatedCards.length;
+        const cardsWithSentences = validatedCards.filter(card => card.sentence && 
+            card.sentence.kanji && card.sentence.romaji && card.sentence.english).length;
+
+        if (validCards < totalCards) {
+            warnings.push(`${totalCards - validCards} cards were skipped due to missing required fields`);
+        }
+
+        enhancements.push(`Successfully processed ${validCards} cards`);
+        enhancements.push(`${cardsWithSentences} cards have complete sentence data`);
+        
+        if (cardsWithSentences === 0) {
+            warnings.push('No cards have sentence data. Story Mode and sentence features will not be available.');
+        } else if (cardsWithSentences < validCards) {
+            warnings.push(`Only ${cardsWithSentences} out of ${validCards} cards have sentence data. Some features may be limited.`);
+        }
+
+        return {
+            cards: validatedCards,
+            warnings,
+            enhancements
+        };
     }
 
     // Pre-game Screen
@@ -2906,7 +3001,8 @@ class KanjiConcentrationGame {
     startStoryMode() {
         this.showStoryScreen();
         this.displayStory();
-        this.isShowingEnglish = false; // Start with romaji under kanji+kana
+        this.isRomajiHidden = false;
+        this.isEnglishHidden = false;
     }
 
     showStoryScreen() {
@@ -2921,135 +3017,141 @@ class KanjiConcentrationGame {
         const storyContainer = document.getElementById('storyText');
         storyContainer.innerHTML = '';
 
-        // Create a coherent story by reordering sentences logically
-        const storyOrder = this.createCoherentStoryOrder();
+        // Create the coherent story narrative
+        const storyNarrative = this.createCoherentStoryNarrative();
         
-        storyOrder.forEach((card, index) => {
-            if (card.sentence) {
-                const storyParagraph = document.createElement('div');
-                storyParagraph.className = 'story-paragraph';
-                
-                const sentenceNumber = document.createElement('div');
-                sentenceNumber.className = 'story-sentence-number';
-                sentenceNumber.textContent = `${index + 1}.`;
-                
-                const kanjiSentence = document.createElement('div');
-                kanjiSentence.className = 'story-kanji';
-                kanjiSentence.textContent = card.sentence.kanji;
-                
-                const translationSentence = document.createElement('div');
-                translationSentence.className = 'story-translation';
-                translationSentence.textContent = this.isShowingEnglish ? card.sentence.english : card.sentence.romaji;
-                
-                storyParagraph.appendChild(sentenceNumber);
-                storyParagraph.appendChild(kanjiSentence);
-                storyParagraph.appendChild(translationSentence);
-                
-                storyContainer.appendChild(storyParagraph);
-            }
-        });
+        // Create three separate story sections
+        const storyWrapper = document.createElement('div');
+        storyWrapper.className = 'story-wrapper';
+        
+        // Kanji story section
+        const kanjiSection = document.createElement('div');
+        kanjiSection.className = 'story-section story-kanji-section';
+        kanjiSection.innerHTML = `
+            <h3>Japanese (Kanji + Hiragana/Katakana)</h3>
+            <div class="story-text story-kanji-text">${this.highlightVocabulary(storyNarrative.kanji, 'kanji')}</div>
+        `;
+        
+        // Romaji story section
+        const romajiSection = document.createElement('div');
+        romajiSection.className = 'story-section story-romaji-section';
+        romajiSection.innerHTML = `
+            <h3>Romaji</h3>
+            <div class="story-text story-romaji-text">${this.highlightVocabulary(storyNarrative.romaji, 'romaji')}</div>
+        `;
+        
+        // English story section
+        const englishSection = document.createElement('div');
+        englishSection.className = 'story-section story-english-section';
+        englishSection.innerHTML = `
+            <h3>English</h3>
+            <div class="story-text story-english-text">${this.highlightVocabulary(storyNarrative.english, 'english')}</div>
+        `;
+        
+        storyWrapper.appendChild(kanjiSection);
+        storyWrapper.appendChild(romajiSection);
+        storyWrapper.appendChild(englishSection);
+        storyContainer.appendChild(storyWrapper);
+        
+        // Apply current visibility settings
+        this.applyStoryVisibility();
+    }
+
+    createCoherentStoryNarrative() {
+        // Create a coherent story using the vocabulary words
+        // This creates logically connected sentences that form a flowing narrative
+        
+        const storyCards = this.getCardsForStory();
+        
+        // Create the story text by connecting sentences logically
+        const kanjiStory = storyCards.map(card => card.sentence.kanji).join(' ');
+        const romajiStory = storyCards.map(card => card.sentence.romaji).join(' ');
+        const englishStory = storyCards.map(card => card.sentence.english).join(' ');
+        
+        return {
+            kanji: kanjiStory,
+            romaji: romajiStory,
+            english: englishStory
+        };
+    }
+
+    getCardsForStory() {
+        // Use cards in the exact same order as they appear on the memory screen
+        // Use selected cards if any are selected, otherwise use all cards
+        const cardsToUse = this.selectedCards.size > 0 
+            ? this.cards.filter(card => this.selectedCards.has(card.id))
+            : this.cards;
+        
+        // Filter out any cards that don't have sentences and return in original order
+        return cardsToUse.filter(card => card && card.sentence);
     }
 
     createCoherentStoryOrder() {
-        // Create a logical story flow by reordering the sentences
-        // This creates a narrative about a person's day and activities
-        const storySequence = [
-            // Morning and waking up
-            'ace_diamonds', // sun - The sun rises
-            'king_hearts', // moon - The moon at night is bright (previous night)
-            'ace_spades', // person - I met a kind person
-            'ace_clubs', // house - I live in a new house
-            
-            // Getting ready and going out
-            '10_clubs', // walk - I walk every day
-            '3_clubs', // road - I walk on the long road
-            '4_clubs', // bridge - I cross the bridge
-            '2_clubs', // gate - There is a big gate
-            
-            // Transportation and travel
-            '5_clubs', // car - I drive a red car
-            '7_clubs', // train - I go to school by train
-            '9_clubs', // bicycle - I go to the park by bicycle
-            '8_clubs', // airplane - I travel by airplane
-            
-            // Nature and environment
-            '8_hearts', // sky - The blue sky is beautiful
-            '3_diamonds', // cloud - White clouds are floating in the sky
-            '2_diamonds', // star - Stars shine in the night sky
-            '4_diamonds', // rain - It is raining
-            '5_diamonds', // snow - It's snowing and cold
-            '6_diamonds', // wind - A strong wind is blowing
-            
-            // Landscape and natural features
-            '10_hearts', // mountain - I climb the tall mountain
-            '2_hearts', // uphill - Going uphill on the mountain is difficult
-            '1_hearts', // downhill - I walk downhill on the slope
-            '9_hearts', // ocean - I swim in the ocean
-            '11_hearts', // river - The river water is cold
-            '3_hearts', // water - I drink cold water
-            
-            // Plants and nature
-            '5_hearts', // tree - There is a big tree
-            '25_diamonds', // forest - I walk through the deep forest
-            '12_hearts', // flower - Beautiful flowers are blooming
-            '7_hearts', // earth - I plant flowers in the earth
-            '21_diamonds', // grass - Green grass is growing
-            '22_diamonds', // leaf - The tree leaves fall
-            '24_diamonds', // seed - I plant small seeds
-            '25_diamonds', // fruit - I eat sweet fruit
-            
-            // Activities and actions
-            '11_clubs', // run - I run in the park
-            '12_clubs', // swim - I swim in the pool
-            '13_clubs', // fly - Birds fly in the sky
-            
-            // People and relationships
-            '2_spades', // man - He is a tall man
-            '3_spades', // woman - She is a beautiful woman
-            '4_spades', // child - Children are playing in the park
-            '5_spades', // friend - I watch movies with friends
-            '6_spades', // family - I eat dinner with my family
-            
-            // Education and work
-            '7_spades', // teacher - The teacher teaches Japanese
-            '8_spades', // student - The student is studying
-            '9_spades', // doctor - The doctor cures illnesses
-            '10_spades', // cook - The cook makes delicious meals
-            '11_spades', // police officer - Police officers protect the city
-            '12_spades', // firefighter - Firefighters put out fires
-            '13_spades' // king - The king rules the country
-        ];
-
-        // Map the sequence to actual card objects, filtering out any that don't exist
-        return storySequence.map(id => this.cards.find(card => card.id === id))
-                           .filter(card => card && card.sentence);
+        // Keep this method for backward compatibility with print functionality
+        return this.getCardsForStory();
     }
 
-    toggleStoryLanguage() {
-        this.isShowingEnglish = !this.isShowingEnglish;
+    // Highlight vocabulary words in the story
+    highlightVocabulary(text, type) {
+        // For now, return the text without highlighting to avoid HTML corruption
+        // This is a temporary solution until we can implement a proper HTML-safe highlighting system
+        return text;
+    }
+
+    // Apply story visibility settings
+    applyStoryVisibility() {
+        const romajiSection = document.querySelector('.story-romaji-section');
+        const englishSection = document.querySelector('.story-english-section');
         
-        const toggleBtn = document.getElementById('toggleStoryLanguage');
-        const translationElements = document.querySelectorAll('.story-translation');
-        
-        if (this.isShowingEnglish) {
-            toggleBtn.textContent = '🌐 Show Romaji';
-            // Update all translation elements to show English
-            const storyOrder = this.createCoherentStoryOrder();
-            translationElements.forEach((element, index) => {
-                if (storyOrder[index] && storyOrder[index].sentence) {
-                    element.textContent = storyOrder[index].sentence.english;
-                }
-            });
-        } else {
-            toggleBtn.textContent = '🌐 Show English';
-            // Update all translation elements to show Romaji
-            const storyOrder = this.createCoherentStoryOrder();
-            translationElements.forEach((element, index) => {
-                if (storyOrder[index] && storyOrder[index].sentence) {
-                    element.textContent = storyOrder[index].sentence.romaji;
-                }
-            });
+        if (romajiSection) {
+            if (this.isRomajiHidden) {
+                romajiSection.classList.add('hidden');
+            } else {
+                romajiSection.classList.remove('hidden');
+            }
         }
+        
+        if (englishSection) {
+            if (this.isEnglishHidden) {
+                englishSection.classList.add('hidden');
+            } else {
+                englishSection.classList.remove('hidden');
+            }
+        }
+    }
+
+    // Toggle romaji visibility in story mode
+    toggleStoryRomaji() {
+        this.isRomajiHidden = !this.isRomajiHidden;
+        
+        const toggleBtn = document.getElementById('hideStoryRomajiBtn');
+        
+        if (this.isRomajiHidden) {
+            toggleBtn.textContent = '👁️ Show Romaji';
+            toggleBtn.classList.add('active');
+        } else {
+            toggleBtn.textContent = '🙈 Hide Romaji';
+            toggleBtn.classList.remove('active');
+        }
+        
+        this.applyStoryVisibility();
+    }
+
+    // Toggle english visibility in story mode
+    toggleStoryEnglish() {
+        this.isEnglishHidden = !this.isEnglishHidden;
+        
+        const toggleBtn = document.getElementById('hideStoryEnglishBtn');
+        
+        if (this.isEnglishHidden) {
+            toggleBtn.textContent = '👁️ Show English';
+            toggleBtn.classList.add('active');
+        } else {
+            toggleBtn.textContent = '🙈 Hide English';
+            toggleBtn.classList.remove('active');
+        }
+        
+        this.applyStoryVisibility();
     }
 
     printStory() {
@@ -3072,6 +3174,9 @@ class KanjiConcentrationGame {
     generateStoryHTML() {
         const currentDate = new Date().toLocaleDateString();
         const storyOrder = this.createCoherentStoryOrder();
+        
+        // Create the coherent story narrative like Story Mode does
+        const storyNarrative = this.createCoherentStoryNarrative();
         
         let html = `
 <!DOCTYPE html>
@@ -3123,40 +3228,42 @@ class KanjiConcentrationGame {
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
         
-        .story-paragraph {
-            margin-bottom: 25px;
-            padding: 15px;
+        .story-section {
+            margin-bottom: 30px;
+            padding: 20px;
             background: white;
             border-radius: 10px;
             border-left: 4px solid #74b9ff;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
         }
         
-        .story-sentence-number {
-            font-size: 0.9rem;
-            font-weight: bold;
-            color: #74b9ff;
-            margin-bottom: 8px;
+        .story-section h3 {
+            color: #1e3c72;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            text-align: center;
+            border-bottom: 2px solid #74b9ff;
+            padding-bottom: 10px;
         }
         
-        .story-kanji {
-            font-size: 1.6rem;
+        .story-text {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            text-align: justify;
+        }
+        
+        .story-kanji-text {
             font-weight: bold;
             color: #1e3c72;
-            margin-bottom: 10px;
             font-family: 'Hiragino Sans', 'Yu Gothic', 'Meiryo', 'MS Gothic', sans-serif;
-            line-height: 1.4;
         }
         
-        .story-romaji {
-            font-size: 1.2rem;
+        .story-romaji-text {
             color: #636e72;
             font-style: italic;
-            margin-bottom: 8px;
         }
         
-        .story-english {
-            font-size: 1.1rem;
+        .story-english-text {
             color: #2d3436;
         }
         
@@ -3198,7 +3305,7 @@ class KanjiConcentrationGame {
                 box-shadow: none;
             }
             
-            .story-paragraph {
+            .story-section {
                 break-inside: avoid;
                 page-break-inside: avoid;
             }
@@ -3214,25 +3321,24 @@ class KanjiConcentrationGame {
     
     <div class="story-intro">
         <h3>🌅 About This Story</h3>
-        <p>This story connects all the kanji vocabulary words in a logical sequence, following a person through their day in Japan. Each sentence builds upon the previous ones to create a coherent narrative that helps you understand the words in context.</p>
+        <p>This story connects all the kanji vocabulary words in a logical sequence, following a person through their day in Japan. The story is presented in three versions to help you understand the flow and context of the vocabulary words.</p>
     </div>
     
-    <div class="story-container">`;
-
-        // Generate each story paragraph
-        storyOrder.forEach((card, index) => {
-            if (card.sentence) {
-                html += `
-        <div class="story-paragraph">
-            <div class="story-sentence-number">${index + 1}.</div>
-            <div class="story-kanji">${card.sentence.kanji}</div>
-            <div class="story-romaji">${card.sentence.romaji}</div>
-            <div class="story-english">${card.sentence.english}</div>
-        </div>`;
-            }
-        });
-
-        html += `
+    <div class="story-container">
+        <div class="story-section">
+            <h3>Japanese (Kanji + Hiragana/Katakana)</h3>
+            <div class="story-text story-kanji-text">${storyNarrative.kanji}</div>
+        </div>
+        
+        <div class="story-section">
+            <h3>Romaji</h3>
+            <div class="story-text story-romaji-text">${storyNarrative.romaji}</div>
+        </div>
+        
+        <div class="story-section">
+            <h3>English</h3>
+            <div class="story-text story-english-text">${storyNarrative.english}</div>
+        </div>
     </div>
     
     <div class="print-footer">
@@ -3484,8 +3590,12 @@ class KanjiConcentrationGame {
         });
         
         // Story mode controls
-        document.getElementById('toggleStoryLanguage').addEventListener('click', () => {
-            this.toggleStoryLanguage();
+        document.getElementById('hideStoryRomajiBtn').addEventListener('click', () => {
+            this.toggleStoryRomaji();
+        });
+        
+        document.getElementById('hideStoryEnglishBtn').addEventListener('click', () => {
+            this.toggleStoryEnglish();
         });
         
         document.getElementById('printStoryBtn').addEventListener('click', () => {
