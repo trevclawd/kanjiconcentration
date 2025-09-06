@@ -1814,3 +1814,283 @@ header h1 {
     opacity: 0.3;
     filter: grayscale(70%);
 }
+
+/* Story Mode Styles */
+.story-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+.story-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.story-header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 1.5rem;
+}
+
+.story-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.story-controls .control-btn {
+    background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.story-controls .control-btn:hover {
+    background: linear-gradient(135deg, #5f4fcf, #9085e8);
+    transform: translateY(-2px);
+}
+
+.story-controls .special-btn {
+    background: linear-gradient(135deg, #FF6B35, #F7931E);
+}
+
+.story-controls .special-btn:hover {
+    background: linear-gradient(135deg, #e55a2b, #e8851a);
+}
+
+.story-content {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    max-height: 70vh;
+    overflow-y: auto;
+    margin-bottom: 2rem;
+}
+
+.story-paragraph {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    border-radius: 15px;
+    border-left: 5px solid #FF6B35;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.story-paragraph:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.story-sentence-number {
+    display: inline-block;
+    background: linear-gradient(135deg, #FF6B35, #F7931E);
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 5px rgba(255, 107, 53, 0.3);
+}
+
+.story-kanji {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #1e3c72;
+    margin-bottom: 1rem;
+    font-family: 'Hiragino Sans', 'Yu Gothic', 'Meiryo', 'MS Gothic', sans-serif;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.story-translation {
+    font-size: 1.2rem;
+    color: #2d3436;
+    font-style: italic;
+    text-align: center;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    border: 2px solid #74b9ff;
+    transition: all 0.3s ease;
+}
+
+.story-translation.romaji {
+    color: #636e72;
+    font-weight: 500;
+}
+
+.story-translation.english {
+    color: #2d3436;
+    font-weight: normal;
+}
+
+/* Story Print Styles */
+@media print {
+    body {
+        background: white !important;
+        color: black !important;
+        font-family: 'Times New Roman', serif !important;
+    }
+    
+    .story-header h2 {
+        color: black !important;
+        text-shadow: none !important;
+        font-size: 2rem !important;
+        margin-bottom: 1.5rem !important;
+        text-align: center;
+        border-bottom: 3px solid #333;
+        padding-bottom: 1rem;
+    }
+    
+    .story-header p {
+        color: #666 !important;
+        font-size: 1rem !important;
+        margin-bottom: 2rem !important;
+        text-align: center;
+    }
+    
+    .story-controls {
+        display: none !important;
+    }
+    
+    .story-content {
+        background: white !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        padding: 0 !important;
+        max-height: none !important;
+        overflow: visible !important;
+        margin: 0 !important;
+    }
+    
+    .story-paragraph {
+        background: white !important;
+        border: 2px solid #ddd !important;
+        border-left: 5px solid #333 !important;
+        border-radius: 10px !important;
+        padding: 1.5rem !important;
+        margin-bottom: 2rem !important;
+        box-shadow: none !important;
+        page-break-inside: avoid;
+    }
+    
+    .story-sentence-number {
+        background: #333 !important;
+        color: white !important;
+        font-size: 0.9rem !important;
+        padding: 0.4rem 0.8rem !important;
+        border-radius: 15px !important;
+        box-shadow: none !important;
+    }
+    
+    .story-kanji {
+        color: black !important;
+        font-size: 1.6rem !important;
+        margin-bottom: 1rem !important;
+        font-weight: bold !important;
+    }
+    
+    .story-translation {
+        background: #f8f9fa !important;
+        border: 1px solid #ddd !important;
+        color: #333 !important;
+        font-size: 1.1rem !important;
+        padding: 0.8rem !important;
+        border-radius: 8px !important;
+    }
+    
+    .story-translation.romaji {
+        color: #555 !important;
+    }
+    
+    .story-translation.english {
+        color: #333 !important;
+    }
+}
+
+/* Story Mode Mobile Responsive */
+@media (max-width: 768px) {
+    .story-header h2 {
+        font-size: 2rem;
+    }
+    
+    .story-header p {
+        font-size: 1rem;
+    }
+    
+    .story-controls {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .story-controls .control-btn {
+        width: 200px;
+    }
+    
+    .story-content {
+        padding: 1.5rem;
+        max-height: 60vh;
+    }
+    
+    .story-paragraph {
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .story-kanji {
+        font-size: 1.5rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .story-translation {
+        font-size: 1.1rem;
+        padding: 0.8rem;
+    }
+    
+    .story-sentence-number {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+    }
+}
+
+/* Story Mode Animation */
+@keyframes storyFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.story-paragraph {
+    animation: storyFadeIn 0.6s ease-out;
+}
+
+.story-paragraph:nth-child(even) {
+    animation-delay: 0.1s;
+}
+
+.story-paragraph:nth-child(odd) {
+    animation-delay: 0.2s;
+}
+
+/* Story Mode Hover Effects */
+.story-paragraph:hover .story-kanji {
+    color: #FF6B35;
+    transition: color 0.3s ease;
+}
+
+.story-paragraph:hover .story-translation {
+    border-color: #FF6B35;
+    background: rgba(255, 107, 53, 0.05);
+    transition: all 0.3s ease;
+}

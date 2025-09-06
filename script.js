@@ -2902,6 +2902,349 @@ class KanjiConcentrationGame {
         return html;
     }
 
+    // Story Mode Functionality
+    startStoryMode() {
+        this.showStoryScreen();
+        this.displayStory();
+        this.isShowingEnglish = false; // Start with romaji under kanji+kana
+    }
+
+    showStoryScreen() {
+        document.getElementById('gameModeScreen').classList.remove('active');
+        document.getElementById('preGameScreen').classList.remove('active');
+        document.getElementById('gameScreen').classList.remove('active');
+        document.getElementById('dragDropScreen').classList.remove('active');
+        document.getElementById('storyScreen').classList.add('active');
+    }
+
+    displayStory() {
+        const storyContainer = document.getElementById('storyText');
+        storyContainer.innerHTML = '';
+
+        // Create a coherent story by reordering sentences logically
+        const storyOrder = this.createCoherentStoryOrder();
+        
+        storyOrder.forEach((card, index) => {
+            if (card.sentence) {
+                const storyParagraph = document.createElement('div');
+                storyParagraph.className = 'story-paragraph';
+                
+                const sentenceNumber = document.createElement('div');
+                sentenceNumber.className = 'story-sentence-number';
+                sentenceNumber.textContent = `${index + 1}.`;
+                
+                const kanjiSentence = document.createElement('div');
+                kanjiSentence.className = 'story-kanji';
+                kanjiSentence.textContent = card.sentence.kanji;
+                
+                const translationSentence = document.createElement('div');
+                translationSentence.className = 'story-translation';
+                translationSentence.textContent = this.isShowingEnglish ? card.sentence.english : card.sentence.romaji;
+                
+                storyParagraph.appendChild(sentenceNumber);
+                storyParagraph.appendChild(kanjiSentence);
+                storyParagraph.appendChild(translationSentence);
+                
+                storyContainer.appendChild(storyParagraph);
+            }
+        });
+    }
+
+    createCoherentStoryOrder() {
+        // Create a logical story flow by reordering the sentences
+        // This creates a narrative about a person's day and activities
+        const storySequence = [
+            // Morning and waking up
+            'ace_diamonds', // sun - The sun rises
+            'king_hearts', // moon - The moon at night is bright (previous night)
+            'ace_spades', // person - I met a kind person
+            'ace_clubs', // house - I live in a new house
+            
+            // Getting ready and going out
+            '10_clubs', // walk - I walk every day
+            '3_clubs', // road - I walk on the long road
+            '4_clubs', // bridge - I cross the bridge
+            '2_clubs', // gate - There is a big gate
+            
+            // Transportation and travel
+            '5_clubs', // car - I drive a red car
+            '7_clubs', // train - I go to school by train
+            '9_clubs', // bicycle - I go to the park by bicycle
+            '8_clubs', // airplane - I travel by airplane
+            
+            // Nature and environment
+            '8_hearts', // sky - The blue sky is beautiful
+            '3_diamonds', // cloud - White clouds are floating in the sky
+            '2_diamonds', // star - Stars shine in the night sky
+            '4_diamonds', // rain - It is raining
+            '5_diamonds', // snow - It's snowing and cold
+            '6_diamonds', // wind - A strong wind is blowing
+            
+            // Landscape and natural features
+            '10_hearts', // mountain - I climb the tall mountain
+            '2_hearts', // uphill - Going uphill on the mountain is difficult
+            '1_hearts', // downhill - I walk downhill on the slope
+            '9_hearts', // ocean - I swim in the ocean
+            '11_hearts', // river - The river water is cold
+            '3_hearts', // water - I drink cold water
+            
+            // Plants and nature
+            '5_hearts', // tree - There is a big tree
+            '25_diamonds', // forest - I walk through the deep forest
+            '12_hearts', // flower - Beautiful flowers are blooming
+            '7_hearts', // earth - I plant flowers in the earth
+            '21_diamonds', // grass - Green grass is growing
+            '22_diamonds', // leaf - The tree leaves fall
+            '24_diamonds', // seed - I plant small seeds
+            '25_diamonds', // fruit - I eat sweet fruit
+            
+            // Activities and actions
+            '11_clubs', // run - I run in the park
+            '12_clubs', // swim - I swim in the pool
+            '13_clubs', // fly - Birds fly in the sky
+            
+            // People and relationships
+            '2_spades', // man - He is a tall man
+            '3_spades', // woman - She is a beautiful woman
+            '4_spades', // child - Children are playing in the park
+            '5_spades', // friend - I watch movies with friends
+            '6_spades', // family - I eat dinner with my family
+            
+            // Education and work
+            '7_spades', // teacher - The teacher teaches Japanese
+            '8_spades', // student - The student is studying
+            '9_spades', // doctor - The doctor cures illnesses
+            '10_spades', // cook - The cook makes delicious meals
+            '11_spades', // police officer - Police officers protect the city
+            '12_spades', // firefighter - Firefighters put out fires
+            '13_spades' // king - The king rules the country
+        ];
+
+        // Map the sequence to actual card objects, filtering out any that don't exist
+        return storySequence.map(id => this.cards.find(card => card.id === id))
+                           .filter(card => card && card.sentence);
+    }
+
+    toggleStoryLanguage() {
+        this.isShowingEnglish = !this.isShowingEnglish;
+        
+        const toggleBtn = document.getElementById('toggleStoryLanguage');
+        const translationElements = document.querySelectorAll('.story-translation');
+        
+        if (this.isShowingEnglish) {
+            toggleBtn.textContent = '🌐 Show Romaji';
+            // Update all translation elements to show English
+            const storyOrder = this.createCoherentStoryOrder();
+            translationElements.forEach((element, index) => {
+                if (storyOrder[index] && storyOrder[index].sentence) {
+                    element.textContent = storyOrder[index].sentence.english;
+                }
+            });
+        } else {
+            toggleBtn.textContent = '🌐 Show English';
+            // Update all translation elements to show Romaji
+            const storyOrder = this.createCoherentStoryOrder();
+            translationElements.forEach((element, index) => {
+                if (storyOrder[index] && storyOrder[index].sentence) {
+                    element.textContent = storyOrder[index].sentence.romaji;
+                }
+            });
+        }
+    }
+
+    printStory() {
+        // Create a new window for printing
+        const printWindow = window.open('', '_blank');
+        
+        // Generate the print HTML for the story
+        const printHTML = this.generateStoryHTML();
+        
+        // Write the HTML to the new window
+        printWindow.document.write(printHTML);
+        printWindow.document.close();
+        
+        // Wait for content to load, then print
+        printWindow.onload = () => {
+            printWindow.print();
+        };
+    }
+
+    generateStoryHTML() {
+        const currentDate = new Date().toLocaleDateString();
+        const storyOrder = this.createCoherentStoryOrder();
+        
+        let html = `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanji Story - A Day in Japan</title>
+    <style>
+        @media print {
+            body { margin: 0; }
+            .no-print { display: none; }
+        }
+        
+        body {
+            font-family: 'Arial', 'Hiragino Sans', 'Yu Gothic', 'Meiryo', 'Takao', 'IPAexGothic', 'IPAPGothic', 'VL PGothic', 'Noto Sans CJK JP', sans-serif;
+            margin: 20px;
+            background: white;
+            color: #333;
+            line-height: 1.8;
+        }
+        
+        .print-header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 3px solid #1e3c72;
+            padding-bottom: 20px;
+        }
+        
+        .print-header h1 {
+            color: #1e3c72;
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+        }
+        
+        .print-header p {
+            color: #666;
+            font-size: 1.2rem;
+            margin: 5px 0;
+        }
+        
+        .story-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fafafa;
+            border: 2px solid #ddd;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .story-paragraph {
+            margin-bottom: 25px;
+            padding: 15px;
+            background: white;
+            border-radius: 10px;
+            border-left: 4px solid #74b9ff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        
+        .story-sentence-number {
+            font-size: 0.9rem;
+            font-weight: bold;
+            color: #74b9ff;
+            margin-bottom: 8px;
+        }
+        
+        .story-kanji {
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: #1e3c72;
+            margin-bottom: 10px;
+            font-family: 'Hiragino Sans', 'Yu Gothic', 'Meiryo', 'MS Gothic', sans-serif;
+            line-height: 1.4;
+        }
+        
+        .story-romaji {
+            font-size: 1.2rem;
+            color: #636e72;
+            font-style: italic;
+            margin-bottom: 8px;
+        }
+        
+        .story-english {
+            font-size: 1.1rem;
+            color: #2d3436;
+        }
+        
+        .print-footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #1e3c72;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .story-intro {
+            background: #e8f4fd;
+            border: 2px solid #74b9ff;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .story-intro h3 {
+            color: #1e3c72;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+        
+        .story-intro p {
+            color: #2d3436;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin: 0;
+        }
+        
+        @media print {
+            .story-container {
+                max-width: none;
+                margin: 0;
+                box-shadow: none;
+            }
+            
+            .story-paragraph {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="print-header">
+        <h1>📖 A Day in Japan</h1>
+        <p>A Coherent Story Using Kanji Vocabulary</p>
+        <p>Generated on: ${currentDate} • ${storyOrder.length} Connected Sentences</p>
+    </div>
+    
+    <div class="story-intro">
+        <h3>🌅 About This Story</h3>
+        <p>This story connects all the kanji vocabulary words in a logical sequence, following a person through their day in Japan. Each sentence builds upon the previous ones to create a coherent narrative that helps you understand the words in context.</p>
+    </div>
+    
+    <div class="story-container">`;
+
+        // Generate each story paragraph
+        storyOrder.forEach((card, index) => {
+            if (card.sentence) {
+                html += `
+        <div class="story-paragraph">
+            <div class="story-sentence-number">${index + 1}.</div>
+            <div class="story-kanji">${card.sentence.kanji}</div>
+            <div class="story-romaji">${card.sentence.romaji}</div>
+            <div class="story-english">${card.sentence.english}</div>
+        </div>`;
+            }
+        });
+
+        html += `
+    </div>
+    
+    <div class="print-footer">
+        <p>📖 This story helps you see kanji vocabulary in a connected, meaningful context!</p>
+        <p>Generated by Kanji Card Concentration Game</p>
+    </div>
+</body>
+</html>`;
+
+        return html;
+    }
+
     // Event Listeners
     setupEventListeners() {
         // Settings modal
@@ -3037,6 +3380,10 @@ class KanjiConcentrationGame {
             this.startDragDropMode();
         });
         
+        document.getElementById('storyMode').addEventListener('click', () => {
+            this.startStoryMode();
+        });
+        
         // Flip control event listeners
         document.getElementById('flipRomajiBtn').addEventListener('click', () => {
             this.flipAllRomajiCards();
@@ -3134,6 +3481,19 @@ class KanjiConcentrationGame {
         // Print combined functionality
         document.getElementById('printCombinedBtn').addEventListener('click', () => {
             this.printCombined();
+        });
+        
+        // Story mode controls
+        document.getElementById('toggleStoryLanguage').addEventListener('click', () => {
+            this.toggleStoryLanguage();
+        });
+        
+        document.getElementById('printStoryBtn').addEventListener('click', () => {
+            this.printStory();
+        });
+        
+        document.getElementById('backToModeSelectFromStory').addEventListener('click', () => {
+            this.showModeSelectionScreen();
         });
         
         // Close modals when clicking outside

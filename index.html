@@ -212,6 +212,12 @@
                     <p>Drag kanji cards to match with English/romaji phrases</p>
                     <button class="mode-btn">Play Drag & Drop</button>
                 </div>
+                <div class="mode-card" id="storyMode">
+                    <div class="mode-icon">📖</div>
+                    <h3>Story Mode</h3>
+                    <p>Read a coherent story using all vocabulary words in context</p>
+                    <button class="mode-btn">Read Story</button>
+                </div>
             </div>
         </div>
 
@@ -256,6 +262,25 @@
                     <div id="sourceCardsContainer" class="source-cards-container">
                         <!-- Draggable kanji cards will be generated here -->
                     </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Story Screen -->
+        <div id="storyScreen" class="screen">
+            <div class="story-header">
+                <h2>Story Mode</h2>
+                <p>Read the vocabulary words in a coherent story</p>
+                <div class="story-controls">
+                    <button id="toggleStoryLanguage" class="control-btn toggle-btn">🌐 Show English</button>
+                    <button id="printStoryBtn" class="control-btn">🖨️ Print Story</button>
+                    <button id="backToModeSelectFromStory" class="control-btn">🏠 Mode Select</button>
+                </div>
+            </div>
+            
+            <div id="storyContent" class="story-content">
+                <div id="storyText" class="story-text">
+                    <!-- Story will be generated here -->
                 </div>
             </div>
         </div>
