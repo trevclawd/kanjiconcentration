@@ -58,10 +58,18 @@ class KanjiConcentrationGame {
     // Data Management
     async loadSampleData() {
         try {
-            // Try to fetch external file first
-            const response = await fetch('sample-data.json');
-            const data = await response.json();
-            this.cards = data.cards;
+            // Try to fetch external file first - prefer the one with sentences
+            let response;
+            try {
+                response = await fetch('sample-data-with-sentences.json');
+                const data = await response.json();
+                this.cards = data.cards;
+            } catch (sentenceError) {
+                // Fall back to regular sample data
+                response = await fetch('sample-data.json');
+                const data = await response.json();
+                this.cards = data.cards;
+            }
         } catch (error) {
             // Fall back to embedded data - use the full dataset
             this.cards = [
@@ -120,6 +128,7 @@ class KanjiConcentrationGame {
             ];
         }
         
+        // Always call displayPreGameCards after loading data
         this.displayPreGameCards();
     }
 
@@ -174,13 +183,8 @@ class KanjiConcentrationGame {
             container.appendChild(pairDiv);
         });
 
-        // Add click listeners to all cards after they're added to the DOM (only if not in selection mode)
-        if (!this.isCardSelectionMode) {
-            const allCards = container.querySelectorAll('.playing-card');
-            allCards.forEach(card => {
-                this.addCardClickListener(card);
-            });
-        }
+        // Don't add click listeners immediately - they will be added when flip functionality is used
+        // This prevents the cards from being cloned and replaced immediately, which was causing them to disappear
     }
 
     createPreGameCard(cardData, type) {
@@ -501,9 +505,18 @@ class KanjiConcentrationGame {
     showMatchCelebration(cardData) {
         const modal = document.getElementById('celebrationModal');
         const rhymeDisplay = document.getElementById('celebrationRhyme');
+        const sentenceDisplay = document.getElementById('celebrationSentence');
         const cardsDisplay = document.getElementById('celebrationCards');
         
         rhymeDisplay.textContent = cardData.rhyme;
+        
+        // Show sentence if available
+        if (cardData.sentence) {
+            this.displaySentence(sentenceDisplay, cardData.sentence);
+            sentenceDisplay.style.display = 'block';
+        } else {
+            sentenceDisplay.style.display = 'none';
+        }
         
         // Show the matched cards in celebration
         cardsDisplay.innerHTML = '';
@@ -514,10 +527,10 @@ class KanjiConcentrationGame {
         
         modal.style.display = 'block';
         
-        // Auto-close after 3 seconds
+        // Auto-close after 5 seconds (increased for sentence reading)
         setTimeout(() => {
             modal.style.display = 'none';
-        }, 3000);
+        }, 5000);
     }
 
     createCelebrationCard(cardData, type) {
@@ -901,6 +914,15 @@ class KanjiConcentrationGame {
         
         // Update rhyme
         document.getElementById('reviewRhyme').textContent = currentPair.rhyme;
+        
+        // Update sentence if available
+        const sentenceDisplay = document.getElementById('reviewSentence');
+        if (currentPair.sentence) {
+            this.displaySentence(sentenceDisplay, currentPair.sentence);
+            sentenceDisplay.style.display = 'block';
+        } else {
+            sentenceDisplay.style.display = 'none';
+        }
         
         // Update pair display
         const pairDisplay = document.getElementById('reviewPairDisplay');
@@ -1570,6 +1592,14 @@ class KanjiConcentrationGame {
         rhyme.className = 'target-rhyme';
         rhyme.textContent = cardData.rhyme;
 
+        // Add sentence if available
+        let sentence = null;
+        if (cardData.sentence) {
+            sentence = document.createElement('div');
+            sentence.className = 'target-sentence';
+            this.displaySentence(sentence, cardData.sentence);
+        }
+
         // Add quick answer button
         const quickAnswerBtn = document.createElement('button');
         quickAnswerBtn.className = 'quick-answer-btn';
@@ -1581,6 +1611,9 @@ class KanjiConcentrationGame {
         targetCard.appendChild(rankSuit);
         targetCard.appendChild(targetInfo);
         targetCard.appendChild(rhyme);
+        if (sentence) {
+            targetCard.appendChild(sentence);
+        }
         targetCard.appendChild(quickAnswerBtn);
 
         return targetCard;
@@ -1858,6 +1891,30 @@ class KanjiConcentrationGame {
                 element.classList.remove('hidden');
             });
             toggleBtn.textContent = '🎵 Hide Rhymes';
+            toggleBtn.classList.remove('active');
+        }
+    }
+
+    // Toggle sentence visibility in drag and drop mode
+    toggleSentenceVisibility() {
+        this.isSentenceHidden = !this.isSentenceHidden;
+        
+        const toggleBtn = document.getElementById('hideSentencesBtn');
+        const sentenceElements = document.querySelectorAll('.target-sentence');
+        
+        if (this.isSentenceHidden) {
+            // Hide sentences
+            sentenceElements.forEach(element => {
+                element.classList.add('hidden');
+            });
+            toggleBtn.textContent = '📝 Show Sentences';
+            toggleBtn.classList.add('active');
+        } else {
+            // Show sentences
+            sentenceElements.forEach(element => {
+                element.classList.remove('hidden');
+            });
+            toggleBtn.textContent = '📝 Hide Sentences';
             toggleBtn.classList.remove('active');
         }
     }
@@ -2273,6 +2330,578 @@ class KanjiConcentrationGame {
         return this.cards;
     }
 
+    // Sentence Display Functionality
+    displaySentence(container, sentence) {
+        container.innerHTML = '';
+        
+        const kanjiDiv = document.createElement('div');
+        kanjiDiv.className = 'sentence-kanji';
+        kanjiDiv.textContent = sentence.kanji;
+        
+        const romajiDiv = document.createElement('div');
+        romajiDiv.className = 'sentence-romaji';
+        romajiDiv.textContent = sentence.romaji;
+        
+        const englishDiv = document.createElement('div');
+        englishDiv.className = 'sentence-english';
+        englishDiv.textContent = sentence.english;
+        
+        container.appendChild(kanjiDiv);
+        container.appendChild(romajiDiv);
+        container.appendChild(englishDiv);
+    }
+
+    // Sentence Toggle Functionality for Celebration Modal
+    toggleCelebrationSentenceKanji() {
+        const kanjiElements = document.querySelectorAll('#celebrationSentence .sentence-kanji');
+        const toggleBtn = document.getElementById('toggleSentenceKanji');
+        
+        kanjiElements.forEach(element => {
+            element.classList.toggle('hidden');
+        });
+        
+        if (toggleBtn.classList.contains('hidden')) {
+            toggleBtn.classList.remove('hidden');
+            toggleBtn.textContent = '👁️ Kanji';
+        } else {
+            toggleBtn.classList.add('hidden');
+            toggleBtn.textContent = '🙈 Kanji';
+        }
+    }
+
+    toggleCelebrationSentenceRomaji() {
+        const romajiElements = document.querySelectorAll('#celebrationSentence .sentence-romaji');
+        const toggleBtn = document.getElementById('toggleSentenceRomaji');
+        
+        romajiElements.forEach(element => {
+            element.classList.toggle('hidden');
+        });
+        
+        if (toggleBtn.classList.contains('hidden')) {
+            toggleBtn.classList.remove('hidden');
+            toggleBtn.textContent = '👁️ Romaji';
+        } else {
+            toggleBtn.classList.add('hidden');
+            toggleBtn.textContent = '🙈 Romaji';
+        }
+    }
+
+    toggleCelebrationSentenceEnglish() {
+        const englishElements = document.querySelectorAll('#celebrationSentence .sentence-english');
+        const toggleBtn = document.getElementById('toggleSentenceEnglish');
+        
+        englishElements.forEach(element => {
+            element.classList.toggle('hidden');
+        });
+        
+        if (toggleBtn.classList.contains('hidden')) {
+            toggleBtn.classList.remove('hidden');
+            toggleBtn.textContent = '👁️ English';
+        } else {
+            toggleBtn.classList.add('hidden');
+            toggleBtn.textContent = '🙈 English';
+        }
+    }
+
+    // Review Modal Sentence Toggle Functionality
+    toggleReviewSentenceKanji() {
+        const kanjiElements = document.querySelectorAll('#reviewSentence .sentence-kanji');
+        const toggleBtn = document.getElementById('reviewToggleSentenceKanji');
+        
+        kanjiElements.forEach(element => {
+            element.classList.toggle('hidden');
+        });
+        
+        if (toggleBtn.classList.contains('hidden')) {
+            toggleBtn.classList.remove('hidden');
+            toggleBtn.textContent = '👁️ Kanji';
+        } else {
+            toggleBtn.classList.add('hidden');
+            toggleBtn.textContent = '🙈 Kanji';
+        }
+    }
+
+    toggleReviewSentenceRomaji() {
+        const romajiElements = document.querySelectorAll('#reviewSentence .sentence-romaji');
+        const toggleBtn = document.getElementById('reviewToggleSentenceRomaji');
+        
+        romajiElements.forEach(element => {
+            element.classList.toggle('hidden');
+        });
+        
+        if (toggleBtn.classList.contains('hidden')) {
+            toggleBtn.classList.remove('hidden');
+            toggleBtn.textContent = '👁️ Romaji';
+        } else {
+            toggleBtn.classList.add('hidden');
+            toggleBtn.textContent = '🙈 Romaji';
+        }
+    }
+
+    toggleReviewSentenceEnglish() {
+        const englishElements = document.querySelectorAll('#reviewSentence .sentence-english');
+        const toggleBtn = document.getElementById('reviewToggleSentenceEnglish');
+        
+        englishElements.forEach(element => {
+            element.classList.toggle('hidden');
+        });
+        
+        if (toggleBtn.classList.contains('hidden')) {
+            toggleBtn.classList.remove('hidden');
+            toggleBtn.textContent = '👁️ English';
+        } else {
+            toggleBtn.classList.add('hidden');
+            toggleBtn.textContent = '🙈 English';
+        }
+    }
+
+    // Print Sentences Only Functionality
+    printSentencesOnly() {
+        // Create a new window for printing
+        const printWindow = window.open('', '_blank');
+        
+        // Generate the print HTML for sentences only
+        const printHTML = this.generateSentencesOnlyHTML();
+        
+        // Write the HTML to the new window
+        printWindow.document.write(printHTML);
+        printWindow.document.close();
+        
+        // Wait for content to load, then print
+        printWindow.onload = () => {
+            printWindow.print();
+        };
+    }
+
+    generateSentencesOnlyHTML() {
+        const currentDate = new Date().toLocaleDateString();
+        
+        let html = `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanji Sentences Study Sheet</title>
+    <style>
+        @media print {
+            body { margin: 0; }
+            .no-print { display: none; }
+        }
+        
+        body {
+            font-family: 'Arial', 'Hiragino Sans', 'Yu Gothic', 'Meiryo', 'Takao', 'IPAexGothic', 'IPAPGothic', 'VL PGothic', 'Noto Sans CJK JP', sans-serif;
+            margin: 20px;
+            background: white;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .print-header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #1e3c72;
+            padding-bottom: 20px;
+        }
+        
+        .print-header h1 {
+            color: #1e3c72;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .print-header p {
+            color: #666;
+            font-size: 1.1rem;
+            margin: 5px 0;
+        }
+        
+        .sentences-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .sentence-item {
+            background: rgba(255, 255, 255, 0.9);
+            border: 2px solid #74b9ff;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            break-inside: avoid;
+            page-break-inside: avoid;
+        }
+        
+        .sentence-number {
+            font-size: 0.9rem;
+            font-weight: bold;
+            color: #1e3c72;
+            margin-bottom: 10px;
+        }
+        
+        .word-definition {
+            background: #e8f4fd;
+            border: 1px solid #74b9ff;
+            border-radius: 8px;
+            padding: 10px;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+            color: #2d3436;
+        }
+        
+        .word-definition strong {
+            color: #1e3c72;
+        }
+        
+        .sentence-kanji {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #1e3c72;
+            margin-bottom: 8px;
+            font-family: 'Hiragino Sans', 'Yu Gothic', 'Meiryo', 'MS Gothic', sans-serif;
+        }
+        
+        .sentence-romaji {
+            font-size: 1.1rem;
+            color: #636e72;
+            margin-bottom: 8px;
+            font-style: italic;
+        }
+        
+        .sentence-english {
+            font-size: 1rem;
+            color: #2d3436;
+        }
+        
+        .print-footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #1e3c72;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .study-tips {
+            background: #f0f8ff;
+            border: 2px solid #1e3c72;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+        
+        .study-tips h3 {
+            color: #1e3c72;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        .study-tips ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        
+        .study-tips li {
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+        
+        @media print {
+            .sentences-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .sentence-item {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="print-header">
+        <h1>📝 Kanji Sentences Study Sheet</h1>
+        <p>Example Sentences with Definitions for Context Practice</p>
+        <p>Generated on: ${currentDate} • Total Sentences: ${this.cards.filter(card => card.sentence).length}</p>
+    </div>
+    
+    <div class="study-tips">
+        <h3>📚 How to Use These Sentences:</h3>
+        <ul>
+            <li><strong>Read aloud</strong> - Practice pronunciation by reading the sentences out loud</li>
+            <li><strong>Cover sections</strong> - Hide different parts to test your understanding</li>
+            <li><strong>Practice writing</strong> - Write out the kanji sentences from memory</li>
+            <li><strong>Make connections</strong> - Link the sentences to the vocabulary words</li>
+            <li><strong>Create variations</strong> - Try making your own sentences with the same words</li>
+        </ul>
+    </div>
+    
+    <div class="sentences-container">`;
+
+        // Generate each sentence
+        let sentenceCount = 0;
+        this.cards.forEach((card) => {
+            if (card.sentence) {
+                sentenceCount++;
+                html += `
+        <div class="sentence-item">
+            <div class="sentence-number">#${sentenceCount} - ${card.kanji} (${card.romaji})</div>
+            <div class="word-definition"><strong>Definition:</strong> ${card.english}</div>
+            <div class="sentence-kanji">${card.sentence.kanji}</div>
+            <div class="sentence-romaji">${card.sentence.romaji}</div>
+            <div class="sentence-english">${card.sentence.english}</div>
+        </div>`;
+            }
+        });
+
+        html += `
+    </div>
+    
+    <div class="print-footer">
+        <p>📝 Use these sentences to understand kanji in context!</p>
+        <p>Generated by Kanji Card Concentration Game</p>
+    </div>
+</body>
+</html>`;
+
+        return html;
+    }
+
+    // Print Combined (Rhymes + Sentences) Functionality
+    printCombined() {
+        // Create a new window for printing
+        const printWindow = window.open('', '_blank');
+        
+        // Generate the print HTML for combined content
+        const printHTML = this.generateCombinedHTML();
+        
+        // Write the HTML to the new window
+        printWindow.document.write(printHTML);
+        printWindow.document.close();
+        
+        // Wait for content to load, then print
+        printWindow.onload = () => {
+            printWindow.print();
+        };
+    }
+
+    generateCombinedHTML() {
+        const currentDate = new Date().toLocaleDateString();
+        
+        let html = `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanji Combined Study Sheet</title>
+    <style>
+        @media print {
+            body { margin: 0; }
+            .no-print { display: none; }
+        }
+        
+        body {
+            font-family: 'Arial', 'Hiragino Sans', 'Yu Gothic', 'Meiryo', 'Takao', 'IPAexGothic', 'IPAPGothic', 'VL PGothic', 'Noto Sans CJK JP', sans-serif;
+            margin: 20px;
+            background: white;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .print-header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #1e3c72;
+            padding-bottom: 20px;
+        }
+        
+        .print-header h1 {
+            color: #1e3c72;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .print-header p {
+            color: #666;
+            font-size: 1.1rem;
+            margin: 5px 0;
+        }
+        
+        .combined-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .combined-item {
+            border: 2px solid #ddd;
+            border-radius: 15px;
+            padding: 20px;
+            background: #fafafa;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            break-inside: avoid;
+            page-break-inside: avoid;
+        }
+        
+        .item-header {
+            font-size: 1rem;
+            font-weight: bold;
+            color: #1e3c72;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .rhyme-section {
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            border: 2px solid #FF6B35;
+            border-radius: 10px;
+            padding: 15px;
+            font-size: 1.2rem;
+            font-style: italic;
+            font-weight: 600;
+            color: #4B0082;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        
+        .sentence-section {
+            background: rgba(255, 255, 255, 0.9);
+            border: 2px solid #74b9ff;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .sentence-kanji {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #1e3c72;
+            margin-bottom: 8px;
+            font-family: 'Hiragino Sans', 'Yu Gothic', 'Meiryo', 'MS Gothic', sans-serif;
+        }
+        
+        .sentence-romaji {
+            font-size: 1rem;
+            color: #636e72;
+            margin-bottom: 8px;
+            font-style: italic;
+        }
+        
+        .sentence-english {
+            font-size: 0.95rem;
+            color: #2d3436;
+        }
+        
+        .print-footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #1e3c72;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .study-tips {
+            background: #f0f8ff;
+            border: 2px solid #1e3c72;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+        
+        .study-tips h3 {
+            color: #1e3c72;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        .study-tips ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        
+        .study-tips li {
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+        
+        @media print {
+            .combined-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .combined-item {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="print-header">
+        <h1>📚 Kanji Combined Study Sheet</h1>
+        <p>Rhymes and Example Sentences Together</p>
+        <p>Generated on: ${currentDate} • Total Items: ${this.cards.length}</p>
+    </div>
+    
+    <div class="study-tips">
+        <h3>🎯 How to Use This Combined Sheet:</h3>
+        <ul>
+            <li><strong>Start with rhymes</strong> - Use the rhymes to memorize pronunciation</li>
+            <li><strong>Practice with sentences</strong> - See the words used in context</li>
+            <li><strong>Cover and test</strong> - Hide sections to test your memory</li>
+            <li><strong>Read aloud</strong> - Practice pronunciation with both rhymes and sentences</li>
+            <li><strong>Make connections</strong> - Link the rhyme memory aids to real usage</li>
+        </ul>
+    </div>
+    
+    <div class="combined-container">`;
+
+        // Generate each combined item
+        this.cards.forEach((card, index) => {
+            html += `
+        <div class="combined-item">
+            <div class="item-header">#${index + 1} - ${card.kanji} (${card.romaji})</div>
+            <div style="background: #e8f4fd; border: 1px solid #74b9ff; border-radius: 8px; padding: 10px; margin-bottom: 12px; font-size: 0.95rem; color: #2d3436; text-align: center;"><strong style="color: #1e3c72;">Definition:</strong> ${card.english}</div>
+            
+            <div class="rhyme-section">
+                "${card.rhyme}"
+            </div>`;
+            
+            if (card.sentence) {
+                html += `
+            <div class="sentence-section">
+                <div class="sentence-kanji">${card.sentence.kanji}</div>
+                <div class="sentence-romaji">${card.sentence.romaji}</div>
+                <div class="sentence-english">${card.sentence.english}</div>
+            </div>`;
+            } else {
+                html += `
+            <div class="sentence-section">
+                <div style="color: #999; font-style: italic;">No example sentence available</div>
+            </div>`;
+            }
+            
+            html += `
+        </div>`;
+        });
+
+        html += `
+    </div>
+    
+    <div class="print-footer">
+        <p>📚 Combine rhymes and sentences for comprehensive kanji learning!</p>
+        <p>Generated by Kanji Card Concentration Game</p>
+    </div>
+</body>
+</html>`;
+
+        return html;
+    }
+
     // Event Listeners
     setupEventListeners() {
         // Settings modal
@@ -2464,6 +3093,47 @@ class KanjiConcentrationGame {
         // Celebration modal close button
         document.getElementById('celebrationModalClose').addEventListener('click', () => {
             document.getElementById('celebrationModal').style.display = 'none';
+        });
+        
+        // Sentence toggle buttons for celebration modal
+        document.getElementById('toggleSentenceKanji').addEventListener('click', () => {
+            this.toggleCelebrationSentenceKanji();
+        });
+        
+        document.getElementById('toggleSentenceRomaji').addEventListener('click', () => {
+            this.toggleCelebrationSentenceRomaji();
+        });
+        
+        document.getElementById('toggleSentenceEnglish').addEventListener('click', () => {
+            this.toggleCelebrationSentenceEnglish();
+        });
+        
+        // Sentence toggle buttons for review modal
+        document.getElementById('reviewToggleSentenceKanji').addEventListener('click', () => {
+            this.toggleReviewSentenceKanji();
+        });
+        
+        document.getElementById('reviewToggleSentenceRomaji').addEventListener('click', () => {
+            this.toggleReviewSentenceRomaji();
+        });
+        
+        document.getElementById('reviewToggleSentenceEnglish').addEventListener('click', () => {
+            this.toggleReviewSentenceEnglish();
+        });
+        
+        // Drag & Drop sentence toggle button
+        document.getElementById('hideSentencesBtn').addEventListener('click', () => {
+            this.toggleSentenceVisibility();
+        });
+        
+        // Print sentences functionality
+        document.getElementById('printSentencesBtn').addEventListener('click', () => {
+            this.printSentencesOnly();
+        });
+        
+        // Print combined functionality
+        document.getElementById('printCombinedBtn').addEventListener('click', () => {
+            this.printCombined();
         });
         
         // Close modals when clicking outside

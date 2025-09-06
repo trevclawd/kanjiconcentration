@@ -224,6 +224,72 @@ header h1 {
     border: 3px solid #FFD700;
 }
 
+.sentence-display {
+    font-size: 1.2rem;
+    color: #2d3436;
+    margin: 1rem 0;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    border: 2px solid #74b9ff;
+    text-align: center;
+}
+
+.sentence-display .sentence-kanji {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #1e3c72;
+    margin-bottom: 0.5rem;
+    font-family: 'Hiragino Sans', 'Yu Gothic', 'Meiryo', 'MS Gothic', sans-serif;
+}
+
+.sentence-display .sentence-romaji {
+    font-size: 1.1rem;
+    color: #636e72;
+    margin-bottom: 0.5rem;
+    font-style: italic;
+}
+
+.sentence-display .sentence-english {
+    font-size: 1rem;
+    color: #2d3436;
+}
+
+.sentence-controls {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.sentence-toggle-btn {
+    background: #74b9ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.sentence-toggle-btn:hover {
+    background: #0984e3;
+    transform: translateY(-1px);
+}
+
+.sentence-toggle-btn.hidden {
+    background: #ddd;
+    color: #999;
+}
+
+.sentence-display .sentence-kanji.hidden,
+.sentence-display .sentence-romaji.hidden,
+.sentence-display .sentence-english.hidden {
+    opacity: 0.3;
+    text-decoration: line-through;
+}
+
 .celebration-cards {
     display: flex;
     justify-content: center;
@@ -375,13 +441,58 @@ header h1 {
     font-size: 1.4rem;
     font-style: italic;
     color: #4B0082;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     padding: 1.5rem;
     background: linear-gradient(135deg, #FFD700, #FFA500);
     border-radius: 15px;
     border: 3px solid #FF6B35;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     font-weight: 600;
+}
+
+.review-sentence {
+    font-size: 1.2rem;
+    color: #2d3436;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    border: 2px solid #74b9ff;
+    text-align: center;
+}
+
+.review-sentence .sentence-kanji {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #1e3c72;
+    margin-bottom: 0.5rem;
+    font-family: 'Hiragino Sans', 'Yu Gothic', 'Meiryo', 'MS Gothic', sans-serif;
+}
+
+.review-sentence .sentence-romaji {
+    font-size: 1.1rem;
+    color: #636e72;
+    margin-bottom: 0.5rem;
+    font-style: italic;
+}
+
+.review-sentence .sentence-english {
+    font-size: 1rem;
+    color: #2d3436;
+}
+
+.review-sentence-controls {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.review-sentence .sentence-kanji.hidden,
+.review-sentence .sentence-romaji.hidden,
+.review-sentence .sentence-english.hidden {
+    opacity: 0.3;
+    text-decoration: line-through;
 }
 
 .review-pair-display {
@@ -1215,6 +1326,46 @@ header h1 {
     text-align: center;
     clear: both;
     margin-top: 1rem;
+}
+
+.target-sentence {
+    font-size: 1rem;
+    color: #2d3436;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 0.8rem;
+    border-radius: 8px;
+    border: 2px solid #74b9ff;
+    text-align: center;
+    margin-top: 0.8rem;
+    transition: opacity 0.3s ease;
+}
+
+.target-sentence.hidden {
+    opacity: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.target-sentence .sentence-kanji {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #1e3c72;
+    margin-bottom: 0.3rem;
+    font-family: 'Hiragino Sans', 'Yu Gothic', 'Meiryo', 'MS Gothic', sans-serif;
+}
+
+.target-sentence .sentence-romaji {
+    font-size: 0.95rem;
+    color: #636e72;
+    margin-bottom: 0.3rem;
+    font-style: italic;
+}
+
+.target-sentence .sentence-english {
+    font-size: 0.9rem;
+    color: #2d3436;
 }
 
 .quick-answer-btn {

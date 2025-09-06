@@ -1,0 +1,784 @@
+{
+  "cards": [
+    {
+      "id": "ace_hearts",
+      "rank": "A",
+      "suit": "hearts",
+      "kanji": "下り",
+      "hiragana": "くだり",
+      "romaji": "kudari",
+      "english": "downhill",
+      "rhyme": "We go downhill you see, it's Kudari",
+      "sentence": {
+        "kanji": "坂を下りで歩きます。",
+        "romaji": "Saka wo kudari de arukimasu.",
+        "english": "I walk downhill on the slope."
+      }
+    },
+    {
+      "id": "2_hearts",
+      "rank": "2",
+      "suit": "hearts",
+      "kanji": "上り",
+      "hiragana": "のぼり",
+      "romaji": "nobori",
+      "english": "uphill",
+      "rhyme": "Up the hill we climb so free, it's Nobori",
+      "sentence": {
+        "kanji": "山の上りは大変です。",
+        "romaji": "Yama no nobori wa taihen desu.",
+        "english": "Going uphill on the mountain is difficult."
+      }
+    },
+    {
+      "id": "3_hearts",
+      "rank": "3",
+      "suit": "hearts",
+      "kanji": "水",
+      "hiragana": "みず",
+      "romaji": "mizu",
+      "english": "water",
+      "rhyme": "Clear and blue like morning dew, it's Mizu",
+      "sentence": {
+        "kanji": "冷たい水を飲みます。",
+        "romaji": "Tsumetai mizu wo nomimasu.",
+        "english": "I drink cold water."
+      }
+    },
+    {
+      "id": "4_hearts",
+      "rank": "4",
+      "suit": "hearts",
+      "kanji": "火",
+      "hiragana": "ひ",
+      "romaji": "hi",
+      "english": "fire",
+      "rhyme": "Burning bright for all to see, it's Hi",
+      "sentence": {
+        "kanji": "火が熱いです。",
+        "romaji": "Hi ga atsui desu.",
+        "english": "The fire is hot."
+      }
+    },
+    {
+      "id": "5_hearts",
+      "rank": "5",
+      "suit": "hearts",
+      "kanji": "木",
+      "hiragana": "き",
+      "romaji": "ki",
+      "english": "tree",
+      "rhyme": "Growing tall and strong and free, it's Ki",
+      "sentence": {
+        "kanji": "大きな木があります。",
+        "romaji": "Ookina ki ga arimasu.",
+        "english": "There is a big tree."
+      }
+    },
+    {
+      "id": "6_hearts",
+      "rank": "6",
+      "suit": "hearts",
+      "kanji": "金",
+      "hiragana": "きん",
+      "romaji": "kin",
+      "english": "gold",
+      "rhyme": "Shining bright like treasure's glee, it's Kin",
+      "sentence": {
+        "kanji": "金の指輪は美しいです。",
+        "romaji": "Kin no yubiwa wa utsukushii desu.",
+        "english": "The gold ring is beautiful."
+      }
+    },
+    {
+      "id": "7_hearts",
+      "rank": "7",
+      "suit": "hearts",
+      "kanji": "土",
+      "hiragana": "つち",
+      "romaji": "tsuchi",
+      "english": "earth",
+      "rhyme": "Rich and brown beneath the tree, it's Tsuchi",
+      "sentence": {
+        "kanji": "土に花を植えます。",
+        "romaji": "Tsuchi ni hana wo uemasu.",
+        "english": "I plant flowers in the earth."
+      }
+    },
+    {
+      "id": "8_hearts",
+      "rank": "8",
+      "suit": "hearts",
+      "kanji": "空",
+      "hiragana": "そら",
+      "romaji": "sora",
+      "english": "sky",
+      "rhyme": "Blue and vast for all to see, it's Sora",
+      "sentence": {
+        "kanji": "青い空がきれいです。",
+        "romaji": "Aoi sora ga kirei desu.",
+        "english": "The blue sky is beautiful."
+      }
+    },
+    {
+      "id": "9_hearts",
+      "rank": "9",
+      "suit": "hearts",
+      "kanji": "海",
+      "hiragana": "うみ",
+      "romaji": "umi",
+      "english": "ocean",
+      "rhyme": "Deep and wide and wild and free, it's Umi",
+      "sentence": {
+        "kanji": "海で泳ぎます。",
+        "romaji": "Umi de oyogimasu.",
+        "english": "I swim in the ocean."
+      }
+    },
+    {
+      "id": "10_hearts",
+      "rank": "10",
+      "suit": "hearts",
+      "kanji": "山",
+      "hiragana": "やま",
+      "romaji": "yama",
+      "english": "mountain",
+      "rhyme": "Tall and proud for all to see, it's Yama",
+      "sentence": {
+        "kanji": "高い山に登ります。",
+        "romaji": "Takai yama ni noborimasu.",
+        "english": "I climb the tall mountain."
+      }
+    },
+    {
+      "id": "jack_hearts",
+      "rank": "J",
+      "suit": "hearts",
+      "kanji": "川",
+      "hiragana": "かわ",
+      "romaji": "kawa",
+      "english": "river",
+      "rhyme": "Flowing swift and wild and free, it's Kawa",
+      "sentence": {
+        "kanji": "川の水は冷たいです。",
+        "romaji": "Kawa no mizu wa tsumetai desu.",
+        "english": "The river water is cold."
+      }
+    },
+    {
+      "id": "queen_hearts",
+      "rank": "Q",
+      "suit": "hearts",
+      "kanji": "花",
+      "hiragana": "はな",
+      "romaji": "hana",
+      "english": "flower",
+      "rhyme": "Blooming bright for all to see, it's Hana",
+      "sentence": {
+        "kanji": "きれいな花が咲いています。",
+        "romaji": "Kirei na hana ga saiteimasu.",
+        "english": "Beautiful flowers are blooming."
+      }
+    },
+    {
+      "id": "king_hearts",
+      "rank": "K",
+      "suit": "hearts",
+      "kanji": "月",
+      "hiragana": "つき",
+      "romaji": "tsuki",
+      "english": "moon",
+      "rhyme": "Glowing bright in night's decree, it's Tsuki",
+      "sentence": {
+        "kanji": "夜の月が明るいです。",
+        "romaji": "Yoru no tsuki ga akarui desu.",
+        "english": "The moon at night is bright."
+      }
+    },
+    {
+      "id": "ace_diamonds",
+      "rank": "A",
+      "suit": "diamonds",
+      "kanji": "日",
+      "hiragana": "ひ",
+      "romaji": "hi",
+      "english": "sun",
+      "rhyme": "Shining bright for you and me, it's Hi",
+      "sentence": {
+        "kanji": "日が昇ります。",
+        "romaji": "Hi ga noborimasu.",
+        "english": "The sun rises."
+      }
+    },
+    {
+      "id": "2_diamonds",
+      "rank": "2",
+      "suit": "diamonds",
+      "kanji": "星",
+      "hiragana": "ほし",
+      "romaji": "hoshi",
+      "english": "star",
+      "rhyme": "Twinkling bright for all to see, it's Hoshi",
+      "sentence": {
+        "kanji": "夜空に星が光ります。",
+        "romaji": "Yozora ni hoshi ga hikarimasu.",
+        "english": "Stars shine in the night sky."
+      }
+    },
+    {
+      "id": "3_diamonds",
+      "rank": "3",
+      "suit": "diamonds",
+      "kanji": "雲",
+      "hiragana": "くも",
+      "romaji": "kumo",
+      "english": "cloud",
+      "rhyme": "Floating white and soft and free, it's Kumo",
+      "sentence": {
+        "kanji": "白い雲が空に浮いています。",
+        "romaji": "Shiroi kumo ga sora ni uiteimasu.",
+        "english": "White clouds are floating in the sky."
+      }
+    },
+    {
+      "id": "4_diamonds",
+      "rank": "4",
+      "suit": "diamonds",
+      "kanji": "雨",
+      "hiragana": "あめ",
+      "romaji": "ame",
+      "english": "rain",
+      "rhyme": "Falling down from clouds we see, it's Ame",
+      "sentence": {
+        "kanji": "雨が降っています。",
+        "romaji": "Ame ga futteimasu.",
+        "english": "It is raining."
+      }
+    },
+    {
+      "id": "5_diamonds",
+      "rank": "5",
+      "suit": "diamonds",
+      "kanji": "雪",
+      "hiragana": "ゆき",
+      "romaji": "yuki",
+      "english": "snow",
+      "rhyme": "White and cold as cold can be, it's Yuki",
+      "sentence": {
+        "kanji": "雪が降って寒いです。",
+        "romaji": "Yuki ga futte samui desu.",
+        "english": "It's snowing and cold."
+      }
+    },
+    {
+      "id": "6_diamonds",
+      "rank": "6",
+      "suit": "diamonds",
+      "kanji": "風",
+      "hiragana": "かぜ",
+      "romaji": "kaze",
+      "english": "wind",
+      "rhyme": "Blowing strong and wild and free, it's Kaze",
+      "sentence": {
+        "kanji": "強い風が吹いています。",
+        "romaji": "Tsuyoi kaze ga fuiteimasu.",
+        "english": "A strong wind is blowing."
+      }
+    },
+    {
+      "id": "7_diamonds",
+      "rank": "7",
+      "suit": "diamonds",
+      "kanji": "石",
+      "hiragana": "いし",
+      "romaji": "ishi",
+      "english": "stone",
+      "rhyme": "Hard and strong as strong can be, it's Ishi",
+      "sentence": {
+        "kanji": "大きな石があります。",
+        "romaji": "Ookina ishi ga arimasu.",
+        "english": "There is a big stone."
+      }
+    },
+    {
+      "id": "8_diamonds",
+      "rank": "8",
+      "suit": "diamonds",
+      "kanji": "草",
+      "hiragana": "くさ",
+      "romaji": "kusa",
+      "english": "grass",
+      "rhyme": "Green and soft beneath the tree, it's Kusa",
+      "sentence": {
+        "kanji": "緑の草が生えています。",
+        "romaji": "Midori no kusa ga haeteimasu.",
+        "english": "Green grass is growing."
+      }
+    },
+    {
+      "id": "9_diamonds",
+      "rank": "9",
+      "suit": "diamonds",
+      "kanji": "葉",
+      "hiragana": "は",
+      "romaji": "ha",
+      "english": "leaf",
+      "rhyme": "Green and fresh for all to see, it's Ha",
+      "sentence": {
+        "kanji": "木の葉が落ちます。",
+        "romaji": "Ki no ha ga ochimasu.",
+        "english": "The tree leaves fall."
+      }
+    },
+    {
+      "id": "10_diamonds",
+      "rank": "10",
+      "suit": "diamonds",
+      "kanji": "根",
+      "hiragana": "ね",
+      "romaji": "ne",
+      "english": "root",
+      "rhyme": "Deep below where none can see, it's Ne",
+      "sentence": {
+        "kanji": "木の根が深いです。",
+        "romaji": "Ki no ne ga fukai desu.",
+        "english": "The tree roots are deep."
+      }
+    },
+    {
+      "id": "jack_diamonds",
+      "rank": "J",
+      "suit": "diamonds",
+      "kanji": "種",
+      "hiragana": "たね",
+      "romaji": "tane",
+      "english": "seed",
+      "rhyme": "Small but full of life to be, it's Tane",
+      "sentence": {
+        "kanji": "小さな種を植えます。",
+        "romaji": "Chiisana tane wo uemasu.",
+        "english": "I plant small seeds."
+      }
+    },
+    {
+      "id": "queen_diamonds",
+      "rank": "Q",
+      "suit": "diamonds",
+      "kanji": "実",
+      "hiragana": "み",
+      "romaji": "mi",
+      "english": "fruit",
+      "rhyme": "Sweet and ripe upon the tree, it's Mi",
+      "sentence": {
+        "kanji": "甘い実を食べます。",
+        "romaji": "Amai mi wo tabemasu.",
+        "english": "I eat sweet fruit."
+      }
+    },
+    {
+      "id": "king_diamonds",
+      "rank": "K",
+      "suit": "diamonds",
+      "kanji": "森",
+      "hiragana": "もり",
+      "romaji": "mori",
+      "english": "forest",
+      "rhyme": "Dark and deep and wild and free, it's Mori",
+      "sentence": {
+        "kanji": "深い森を歩きます。",
+        "romaji": "Fukai mori wo arukimasu.",
+        "english": "I walk through the deep forest."
+      }
+    },
+    {
+      "id": "ace_clubs",
+      "rank": "A",
+      "suit": "clubs",
+      "kanji": "家",
+      "hiragana": "いえ",
+      "romaji": "ie",
+      "english": "house",
+      "rhyme": "Warm and safe for you and me, it's Ie",
+      "sentence": {
+        "kanji": "新しい家に住みます。",
+        "romaji": "Atarashii ie ni sumimasu.",
+        "english": "I live in a new house."
+      }
+    },
+    {
+      "id": "2_clubs",
+      "rank": "2",
+      "suit": "clubs",
+      "kanji": "門",
+      "hiragana": "もん",
+      "romaji": "mon",
+      "english": "gate",
+      "rhyme": "Standing tall for all to see, it's Mon",
+      "sentence": {
+        "kanji": "大きな門があります。",
+        "romaji": "Ookina mon ga arimasu.",
+        "english": "There is a big gate."
+      }
+    },
+    {
+      "id": "3_clubs",
+      "rank": "3",
+      "suit": "clubs",
+      "kanji": "道",
+      "hiragana": "みち",
+      "romaji": "michi",
+      "english": "road",
+      "rhyme": "Leading far where we can't see, it's Michi",
+      "sentence": {
+        "kanji": "長い道を歩きます。",
+        "romaji": "Nagai michi wo arukimasu.",
+        "english": "I walk on the long road."
+      }
+    },
+    {
+      "id": "4_clubs",
+      "rank": "4",
+      "suit": "clubs",
+      "kanji": "橋",
+      "hiragana": "はし",
+      "romaji": "hashi",
+      "english": "bridge",
+      "rhyme": "Crossing over streams so free, it's Hashi",
+      "sentence": {
+        "kanji": "橋を渡ります。",
+        "romaji": "Hashi wo watarimasu.",
+        "english": "I cross the bridge."
+      }
+    },
+    {
+      "id": "5_clubs",
+      "rank": "5",
+      "suit": "clubs",
+      "kanji": "車",
+      "hiragana": "くるま",
+      "romaji": "kuruma",
+      "english": "car",
+      "rhyme": "Rolling fast for all to see, it's Kuruma",
+      "sentence": {
+        "kanji": "赤い車を運転します。",
+        "romaji": "Akai kuruma wo unten shimasu.",
+        "english": "I drive a red car."
+      }
+    },
+    {
+      "id": "6_clubs",
+      "rank": "6",
+      "suit": "clubs",
+      "kanji": "船",
+      "hiragana": "ふね",
+      "romaji": "fune",
+      "english": "boat",
+      "rhyme": "Sailing on the deep blue sea, it's Fune",
+      "sentence": {
+        "kanji": "小さな船に乗ります。",
+        "romaji": "Chiisana fune ni norimasu.",
+        "english": "I ride in a small boat."
+      }
+    },
+    {
+      "id": "7_clubs",
+      "rank": "7",
+      "suit": "clubs",
+      "kanji": "電車",
+      "hiragana": "でんしゃ",
+      "romaji": "densha",
+      "english": "train",
+      "rhyme": "Racing fast for all to see, it's Densha",
+      "sentence": {
+        "kanji": "電車で学校に行きます。",
+        "romaji": "Densha de gakkou ni ikimasu.",
+        "english": "I go to school by train."
+      }
+    },
+    {
+      "id": "8_clubs",
+      "rank": "8",
+      "suit": "clubs",
+      "kanji": "飛行機",
+      "hiragana": "ひこうき",
+      "romaji": "hikouki",
+      "english": "airplane",
+      "rhyme": "Flying high above the sea, it's Hikouki",
+      "sentence": {
+        "kanji": "飛行機で旅行します。",
+        "romaji": "Hikouki de ryokou shimasu.",
+        "english": "I travel by airplane."
+      }
+    },
+    {
+      "id": "9_clubs",
+      "rank": "9",
+      "suit": "clubs",
+      "kanji": "自転車",
+      "hiragana": "じてんしゃ",
+      "romaji": "jitensha",
+      "english": "bicycle",
+      "rhyme": "Pedaling fast and wild and free, it's Jitensha",
+      "sentence": {
+        "kanji": "自転車で公園に行きます。",
+        "romaji": "Jitensha de kouen ni ikimasu.",
+        "english": "I go to the park by bicycle."
+      }
+    },
+    {
+      "id": "10_clubs",
+      "rank": "10",
+      "suit": "clubs",
+      "kanji": "歩く",
+      "hiragana": "あるく",
+      "romaji": "aruku",
+      "english": "walk",
+      "rhyme": "Step by step so carefully, it's Aruku",
+      "sentence": {
+        "kanji": "毎日歩きます。",
+        "romaji": "Mainichi arukimasu.",
+        "english": "I walk every day."
+      }
+    },
+    {
+      "id": "jack_clubs",
+      "rank": "J",
+      "suit": "clubs",
+      "kanji": "走る",
+      "hiragana": "はしる",
+      "romaji": "hashiru",
+      "english": "run",
+      "rhyme": "Fast and quick as quick can be, it's Hashiru",
+      "sentence": {
+        "kanji": "公園で走ります。",
+        "romaji": "Kouen de hashirimasu.",
+        "english": "I run in the park."
+      }
+    },
+    {
+      "id": "queen_clubs",
+      "rank": "Q",
+      "suit": "clubs",
+      "kanji": "泳ぐ",
+      "hiragana": "およぐ",
+      "romaji": "oyogu",
+      "english": "swim",
+      "rhyme": "Through the water wild and free, it's Oyogu",
+      "sentence": {
+        "kanji": "プールで泳ぎます。",
+        "romaji": "Puuru de oyogimasu.",
+        "english": "I swim in the pool."
+      }
+    },
+    {
+      "id": "king_clubs",
+      "rank": "K",
+      "suit": "clubs",
+      "kanji": "飛ぶ",
+      "hiragana": "とぶ",
+      "romaji": "tobu",
+      "english": "fly",
+      "rhyme": "High above for all to see, it's Tobu",
+      "sentence": {
+        "kanji": "鳥が空を飛びます。",
+        "romaji": "Tori ga sora wo tobimasu.",
+        "english": "Birds fly in the sky."
+      }
+    },
+    {
+      "id": "ace_spades",
+      "rank": "A",
+      "suit": "spades",
+      "kanji": "人",
+      "hiragana": "ひと",
+      "romaji": "hito",
+      "english": "person",
+      "rhyme": "Walking tall for all to see, it's Hito",
+      "sentence": {
+        "kanji": "親切な人に会いました。",
+        "romaji": "Shinsetsu na hito ni aimashita.",
+        "english": "I met a kind person."
+      }
+    },
+    {
+      "id": "2_spades",
+      "rank": "2",
+      "suit": "spades",
+      "kanji": "男",
+      "hiragana": "おとこ",
+      "romaji": "otoko",
+      "english": "man",
+      "rhyme": "Strong and brave as brave can be, it's Otoko",
+      "sentence": {
+        "kanji": "背の高い男の人です。",
+        "romaji": "Se no takai otoko no hito desu.",
+        "english": "He is a tall man."
+      }
+    },
+    {
+      "id": "3_spades",
+      "rank": "3",
+      "suit": "spades",
+      "kanji": "女",
+      "hiragana": "おんな",
+      "romaji": "onna",
+      "english": "woman",
+      "rhyme": "Graceful, kind, and strong and free, it's Onna",
+      "sentence": {
+        "kanji": "美しい女の人です。",
+        "romaji": "Utsukushii onna no hito desu.",
+        "english": "She is a beautiful woman."
+      }
+    },
+    {
+      "id": "4_spades",
+      "rank": "4",
+      "suit": "spades",
+      "kanji": "子供",
+      "hiragana": "こども",
+      "romaji": "kodomo",
+      "english": "child",
+      "rhyme": "Playing games so happily, it's Kodomo",
+      "sentence": {
+        "kanji": "子供が公園で遊んでいます。",
+        "romaji": "Kodomo ga kouen de asondeimasu.",
+        "english": "Children are playing in the park."
+      }
+    },
+    {
+      "id": "5_spades",
+      "rank": "5",
+      "suit": "spades",
+      "kanji": "友達",
+      "hiragana": "ともだち",
+      "romaji": "tomodachi",
+      "english": "friend",
+      "rhyme": "Always there for you and me, it's Tomodachi",
+      "sentence": {
+        "kanji": "友達と映画を見ます。",
+        "romaji": "Tomodachi to eiga wo mimasu.",
+        "english": "I watch movies with friends."
+      }
+    },
+    {
+      "id": "6_spades",
+      "rank": "6",
+      "suit": "spades",
+      "kanji": "家族",
+      "hiragana": "かぞく",
+      "romaji": "kazoku",
+      "english": "family",
+      "rhyme": "Together strong as strong can be, it's Kazoku",
+      "sentence": {
+        "kanji": "家族と夕食を食べます。",
+        "romaji": "Kazoku to yuushoku wo tabemasu.",
+        "english": "I eat dinner with my family."
+      }
+    },
+    {
+      "id": "7_spades",
+      "rank": "7",
+      "suit": "spades",
+      "kanji": "先生",
+      "hiragana": "せんせい",
+      "romaji": "sensei",
+      "english": "teacher",
+      "rhyme": "Wise and kind for all to see, it's Sensei",
+      "sentence": {
+        "kanji": "先生が日本語を教えます。",
+        "romaji": "Sensei ga nihongo wo oshiemasu.",
+        "english": "The teacher teaches Japanese."
+      }
+    },
+    {
+      "id": "8_spades",
+      "rank": "8",
+      "suit": "spades",
+      "kanji": "学生",
+      "hiragana": "がくせい",
+      "romaji": "gakusei",
+      "english": "student",
+      "rhyme": "Learning new things happily, it's Gakusei",
+      "sentence": {
+        "kanji": "学生が勉強しています。",
+        "romaji": "Gakusei ga benkyou shiteimasu.",
+        "english": "The student is studying."
+      }
+    },
+    {
+      "id": "9_spades",
+      "rank": "9",
+      "suit": "spades",
+      "kanji": "医者",
+      "hiragana": "いしゃ",
+      "romaji": "isha",
+      "english": "doctor",
+      "rhyme": "Healing all so carefully, it's Isha",
+      "sentence": {
+        "kanji": "医者が病気を治します。",
+        "romaji": "Isha ga byouki wo naoshimasu.",
+        "english": "The doctor cures illnesses."
+      }
+    },
+    {
+      "id": "10_spades",
+      "rank": "10",
+      "suit": "spades",
+      "kanji": "料理人",
+      "hiragana": "りょうりにん",
+      "romaji": "ryourinin",
+      "english": "cook",
+      "rhyme": "Making food so tastily, it's Ryourinin",
+      "sentence": {
+        "kanji": "料理人が美味しい食事を作ります。",
+        "romaji": "Ryourinin ga oishii shokuji wo tsukurimasu.",
+        "english": "The cook makes delicious meals."
+      }
+    },
+    {
+      "id": "jack_spades",
+      "rank": "J",
+      "suit": "spades",
+      "kanji": "警察官",
+      "hiragana": "けいさつかん",
+      "romaji": "keisatsukan",
+      "english": "police officer",
+      "rhyme": "Keeping safe our community, it's Keisatsukan",
+      "sentence": {
+        "kanji": "警察官が街を守ります。",
+        "romaji": "Keisatsukan ga machi wo mamorimasu.",
+        "english": "Police officers protect the city."
+      }
+    },
+    {
+      "id": "queen_spades",
+      "rank": "Q",
+      "suit": "spades",
+      "kanji": "消防士",
+      "hiragana": "しょうぼうし",
+      "romaji": "shouboushi",
+      "english": "firefighter",
+      "rhyme": "Brave and strong for all to see, it's Shouboushi",
+      "sentence": {
+        "kanji": "消防士が火事を消します。",
+        "romaji": "Shouboushi ga kaji wo keshimasu.",
+        "english": "Firefighters put out fires."
+      }
+    },
+    {
+      "id": "king_spades",
+      "rank": "K",
+      "suit": "spades",
+      "kanji": "王様",
+      "hiragana": "おうさま",
+      "romaji": "ousama",
+      "english": "king",
+      "rhyme": "Ruling fair for all to see, it's Ousama",
+      "sentence": {
+        "kanji": "王様が国を治めます。",
+        "romaji": "Ousama ga kuni wo osamemasuu.",
+        "english": "The king rules the country."
+      }
+    }
+  ]
+}

@@ -73,6 +73,27 @@
                 </label>
             </div>
             
+            <div class="setting-group">
+                <label>
+                    <input type="checkbox" id="hideSentenceKanji">
+                    Hide kanji from sentences
+                </label>
+            </div>
+            
+            <div class="setting-group">
+                <label>
+                    <input type="checkbox" id="hideSentenceRomaji">
+                    Hide romaji from sentences
+                </label>
+            </div>
+            
+            <div class="setting-group">
+                <label>
+                    <input type="checkbox" id="hideSentenceEnglish">
+                    Hide english from sentences
+                </label>
+            </div>
+            
             <div class="modal-buttons">
                 <button id="printWithCloze" class="control-btn">🖨️ Print with Cloze</button>
                 <button id="printNormal" class="control-btn">🖨️ Print Normal</button>
@@ -87,7 +108,13 @@
             <div class="celebration-text">
                 <h2>Perfect Match!</h2>
                 <div id="celebrationRhyme" class="rhyme-display"></div>
+                <div id="celebrationSentence" class="sentence-display"></div>
                 <div id="celebrationCards" class="celebration-cards"></div>
+                <div class="sentence-controls">
+                    <button id="toggleSentenceKanji" class="sentence-toggle-btn">👁️ Kanji</button>
+                    <button id="toggleSentenceRomaji" class="sentence-toggle-btn">👁️ Romaji</button>
+                    <button id="toggleSentenceEnglish" class="sentence-toggle-btn">👁️ English</button>
+                </div>
             </div>
         </div>
     </div>
@@ -106,8 +133,14 @@
             </div>
             <div id="reviewContent" class="review-content">
                 <div id="reviewRhyme" class="review-rhyme"></div>
+                <div id="reviewSentence" class="review-sentence"></div>
                 <div id="reviewPairDisplay" class="review-pair-display">
                     <!-- Current pair will be displayed here -->
+                </div>
+                <div class="review-sentence-controls">
+                    <button id="reviewToggleSentenceKanji" class="sentence-toggle-btn">👁️ Kanji</button>
+                    <button id="reviewToggleSentenceRomaji" class="sentence-toggle-btn">👁️ Romaji</button>
+                    <button id="reviewToggleSentenceEnglish" class="sentence-toggle-btn">👁️ English</button>
                 </div>
             </div>
             <div class="review-footer">
@@ -126,6 +159,8 @@
                 <button id="importBtn" class="control-btn">📁 Import Data</button>
                 <button id="printCardsBtn" class="control-btn">🖨️ Print Cards</button>
                 <button id="printRhymesBtn" class="control-btn">🎵 Print Rhymes</button>
+                <button id="printSentencesBtn" class="control-btn">📝 Print Sentences</button>
+                <button id="printCombinedBtn" class="control-btn">📚 Print Combined</button>
                 <input type="file" id="fileInput" accept=".json" style="display: none;">
             </div>
         </header>
@@ -197,13 +232,14 @@
                 </div>
             </div>
             
-            <div class="drag-drop-controls">
-                <button id="hideEnglishBtn" class="control-btn toggle-btn">👁️ Hide English</button>
-                <button id="hideRhymeBtn" class="control-btn toggle-btn">🎵 Hide Rhymes</button>
-                <button id="dragDropResetBtn" class="control-btn">🔄 Reset</button>
-                <button id="dragDropBackBtn" class="control-btn">📚 Back to Study</button>
-                <button id="backToModeSelectBtn" class="control-btn">🏠 Mode Select</button>
-            </div>
+                <div class="drag-drop-controls">
+                    <button id="hideEnglishBtn" class="control-btn toggle-btn">👁️ Hide English</button>
+                    <button id="hideRhymeBtn" class="control-btn toggle-btn">🎵 Hide Rhymes</button>
+                    <button id="hideSentencesBtn" class="control-btn toggle-btn">📝 Hide Sentences</button>
+                    <button id="dragDropResetBtn" class="control-btn">🔄 Reset</button>
+                    <button id="dragDropBackBtn" class="control-btn">📚 Back to Study</button>
+                    <button id="backToModeSelectBtn" class="control-btn">🏠 Mode Select</button>
+                </div>
 
             <div id="dragDropGameArea" class="drag-drop-game-area">
                 <!-- Left side: English/Romaji cards with rhymes -->
