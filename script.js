@@ -23,6 +23,9 @@ class KanjiConcentrationGame {
         this.isCardSelectionMode = false;
         this.selectedCards = new Set();
         
+        // Hiragana visibility state
+        this.isHiraganaHidden = false;
+        
         this.init();
     }
 
@@ -2022,10 +2025,48 @@ class KanjiConcentrationGame {
         // Reset button texts
         document.getElementById('flipRomajiBtn').textContent = '🔄 Hide Romaji/English';
         document.getElementById('flipKanjiBtn').textContent = '🔄 Hide Kanji';
+        document.getElementById('hideHiraganaBtn').textContent = '👁️ Hide Hiragana';
+        
+        // Reset hiragana hidden state
+        this.isHiraganaHidden = false;
+        this.applyHiraganaVisibility();
+    }
+
+    // Hide Hiragana Functionality for Pre-game Screen
+    toggleHiraganaVisibility() {
+        this.isHiraganaHidden = !this.isHiraganaHidden;
+        
+        const toggleBtn = document.getElementById('hideHiraganaBtn');
+        
+        // Update button text to indicate current state
+        if (this.isHiraganaHidden) {
+            toggleBtn.textContent = '👁️ Show Hiragana';
+        } else {
+            toggleBtn.textContent = '🙈 Hide Hiragana';
+        }
+        
+        // Apply the visibility change
+        this.applyHiraganaVisibility();
+    }
+
+    applyHiraganaVisibility() {
+        const hiraganaElements = document.querySelectorAll('.card-pair .hiragana');
+        
+        hiraganaElements.forEach(element => {
+            if (this.isHiraganaHidden) {
+                element.classList.add('hidden');
+            } else {
+                element.classList.remove('hidden');
+            }
+        });
     }
 
     // Card Scramble Functionality for Pre-game Screen
     scrambleCardOrder() {
+        // Store current flip states before scrambling
+        const romajiFlipState = document.getElementById('flipRomajiBtn').textContent.includes('Show');
+        const kanjiFlipState = document.getElementById('flipKanjiBtn').textContent.includes('Show');
+        
         // Create a copy of the cards array and shuffle it for display purposes only
         this.displayCards = [...this.cards];
         this.shuffleArray(this.displayCards);
@@ -2033,8 +2074,64 @@ class KanjiConcentrationGame {
         // Redisplay the cards in the new scrambled order
         this.displayPreGameCards();
         
-        // Preserve any existing flip states and selection states
+        // Restore flip states after scrambling
+        if (romajiFlipState) {
+            // Romaji cards were hidden, hide them again
+            const cardPairs = document.querySelectorAll('.card-pair');
+            cardPairs.forEach(pair => {
+                const cards = pair.querySelectorAll('.playing-card');
+                cards.forEach(card => {
+                    const content = card.querySelector('.card-content');
+                    if (content && content.querySelector('.romaji-content')) {
+                        card.classList.add('flipped-back');
+                        
+                        // Create card back if it doesn't exist
+                        if (!card.querySelector('.card-back')) {
+                            const cardBack = document.createElement('div');
+                            cardBack.className = 'card-face card-back';
+                            cardBack.innerHTML = '<div>?</div>';
+                            card.appendChild(cardBack);
+                        }
+                        
+                        // Add click event listener for individual card toggling
+                        this.addCardClickListener(card);
+                    }
+                });
+            });
+            document.getElementById('flipRomajiBtn').textContent = '👁️ Show Romaji/English';
+        }
+        
+        if (kanjiFlipState) {
+            // Kanji cards were hidden, hide them again
+            const cardPairs = document.querySelectorAll('.card-pair');
+            cardPairs.forEach(pair => {
+                const cards = pair.querySelectorAll('.playing-card');
+                cards.forEach(card => {
+                    const content = card.querySelector('.card-content');
+                    if (content && content.querySelector('.kanji-content')) {
+                        card.classList.add('flipped-back');
+                        
+                        // Create card back if it doesn't exist
+                        if (!card.querySelector('.card-back')) {
+                            const cardBack = document.createElement('div');
+                            cardBack.className = 'card-face card-back';
+                            cardBack.innerHTML = '<div>?</div>';
+                            card.appendChild(cardBack);
+                        }
+                        
+                        // Add click event listener for individual card toggling
+                        this.addCardClickListener(card);
+                    }
+                });
+            });
+            document.getElementById('flipKanjiBtn').textContent = '👁️ Show Kanji';
+        }
+        
+        // Preserve any existing selection states
         this.updateCardSelectionState();
+        
+        // Maintain hiragana hidden state after scramble
+        this.applyHiraganaVisibility();
     }
 
     // Card Selection Functionality
@@ -2322,6 +2419,11 @@ class KanjiConcentrationGame {
         
         document.getElementById('resetFlipBtn').addEventListener('click', () => {
             this.resetAllCardFlips();
+        });
+        
+        // Hide hiragana event listener
+        document.getElementById('hideHiraganaBtn').addEventListener('click', () => {
+            this.toggleHiraganaVisibility();
         });
         
         // Scramble cards event listener
