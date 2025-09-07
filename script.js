@@ -1603,6 +1603,7 @@ class KanjiConcentrationGame {
         document.getElementById('preGameScreen').classList.remove('active');
         document.getElementById('gameScreen').classList.remove('active');
         document.getElementById('dragDropScreen').classList.remove('active');
+        document.getElementById('storyScreen').classList.remove('active');
     }
 
     // Drag & Drop Mode
@@ -3478,6 +3479,10 @@ class KanjiConcentrationGame {
         });
         
         // Mode selection event listeners
+        document.getElementById('memoryMode').addEventListener('click', () => {
+            this.showPreGameScreen();
+        });
+        
         document.getElementById('concentrationMode').addEventListener('click', () => {
             this.startGame();
         });
@@ -3603,6 +3608,7 @@ class KanjiConcentrationGame {
         });
         
         document.getElementById('backToModeSelectFromStory').addEventListener('click', () => {
+            console.log('Mode select button clicked from story mode');
             this.showModeSelectionScreen();
         });
         
