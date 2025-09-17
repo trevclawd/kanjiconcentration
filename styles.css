@@ -115,12 +115,15 @@ header h1 {
 
 .modal-content {
     background-color: white;
-    margin: 10% auto;
+    margin: 5% auto;
     padding: 2rem;
     border-radius: 15px;
     width: 90%;
     max-width: 500px;
+    max-height: 85vh;
+    overflow-y: auto;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
 }
 
 .close {

@@ -2551,6 +2551,33 @@ class KanjiConcentrationGame {
         }
     }
 
+    // Print Sentences with Options Functionality
+    printSentencesWithOptions() {
+        // Get sentence hiding settings
+        const sentenceSettings = {
+            hideRomaji: document.getElementById('hideSentencesRomaji').checked,
+            hideEnglish: document.getElementById('hideSentencesEnglish').checked
+        };
+
+        // Close the modal
+        this.closePrintClozeModal();
+
+        // Create a new window for printing
+        const printWindow = window.open('', '_blank');
+        
+        // Generate the print HTML with sentence settings
+        const printHTML = this.generateSentencesOnlyHTML(sentenceSettings);
+        
+        // Write the HTML to the new window
+        printWindow.document.write(printHTML);
+        printWindow.document.close();
+        
+        // Wait for content to load, then print
+        printWindow.onload = () => {
+            printWindow.print();
+        };
+    }
+
     // Print Sentences Only Functionality
     printSentencesOnly() {
         // Create a new window for printing
@@ -2569,8 +2596,9 @@ class KanjiConcentrationGame {
         };
     }
 
-    generateSentencesOnlyHTML() {
+    generateSentencesOnlyHTML(sentenceSettings = null) {
         const currentDate = new Date().toLocaleDateString();
+        const isHidingMode = sentenceSettings !== null;
         
         let html = `
 <!DOCTYPE html>
@@ -2745,8 +2773,12 @@ class KanjiConcentrationGame {
             <div class="sentence-number">#${sentenceCount} - ${card.kanji} (${card.romaji})</div>
             <div class="word-definition"><strong>Definition:</strong> ${card.english}</div>
             <div class="sentence-kanji">${card.sentence.kanji}</div>
-            <div class="sentence-romaji">${card.sentence.romaji}</div>
-            <div class="sentence-english">${card.sentence.english}</div>
+            ${isHidingMode && sentenceSettings.hideRomaji ? 
+                '<div class="sentence-romaji">_____</div>' : 
+                `<div class="sentence-romaji">${card.sentence.romaji}</div>`}
+            ${isHidingMode && sentenceSettings.hideEnglish ? 
+                '<div class="sentence-english">_____</div>' : 
+                `<div class="sentence-english">${card.sentence.english}</div>`}
         </div>`;
             }
         });
@@ -3412,6 +3444,10 @@ class KanjiConcentrationGame {
             this.printCards();
         });
         
+        document.getElementById('printSentencesWithOptions').addEventListener('click', () => {
+            this.printSentencesWithOptions();
+        });
+        
         // Game controls
         document.getElementById('startGameBtn').addEventListener('click', () => {
             this.stopPreGameTimer();
@@ -3584,9 +3620,9 @@ class KanjiConcentrationGame {
             this.toggleSentenceVisibility();
         });
         
-        // Print sentences functionality
+        // Print sentences functionality - now opens modal
         document.getElementById('printSentencesBtn').addEventListener('click', () => {
-            this.printSentencesOnly();
+            this.showPrintClozeModal();
         });
         
         // Print combined functionality
