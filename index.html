@@ -242,6 +242,12 @@
                     <p>Read a coherent story using all vocabulary words in context</p>
                     <button class="mode-btn">Read Story</button>
                 </div>
+                <div class="mode-card" id="focusedReadingMode">
+                    <div class="mode-icon">📋</div>
+                    <h3>Focused Reading Mode</h3>
+                    <p>Study with a clean side-by-side table of romaji and kanji/hiragana</p>
+                    <button class="mode-btn">Start Reading</button>
+                </div>
             </div>
         </div>
 
@@ -306,6 +312,24 @@
             <div id="storyContent" class="story-content">
                 <div id="storyText" class="story-text">
                     <!-- Story will be generated here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Focused Reading Screen -->
+        <div id="focusedReadingScreen" class="screen">
+            <div class="focused-reading-header">
+                <h2>Focused Reading Mode</h2>
+                <p>Clean side-by-side table for focused study</p>
+                <div class="focused-reading-controls">
+                    <button id="printFocusedReadingBtn" class="control-btn">🖨️ Print Table</button>
+                    <button id="backToModeSelectFromFocusedReading" class="control-btn">🏠 Mode Select</button>
+                </div>
+            </div>
+            
+            <div id="focusedReadingContent" class="focused-reading-content">
+                <div id="focusedReadingTable" class="focused-reading-table">
+                    <!-- Table will be generated here -->
                 </div>
             </div>
         </div>

@@ -2352,3 +2352,318 @@ header h1 {
         margin: 0 0.05rem;
     }
 }
+
+/* Focused Reading Mode Styles */
+.focused-reading-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+.focused-reading-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.focused-reading-header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 1.5rem;
+}
+
+.focused-reading-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.focused-reading-controls .control-btn {
+    background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.focused-reading-controls .control-btn:hover {
+    background: linear-gradient(135deg, #5f4fcf, #9085e8);
+    transform: translateY(-2px);
+}
+
+.focused-reading-content {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    max-height: 70vh;
+    overflow-y: auto;
+    margin-bottom: 2rem;
+}
+
+.focused-reading-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Arial', 'Hiragino Sans', 'Yu Gothic', 'Meiryo', 'MS Gothic', sans-serif;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.focused-reading-table th {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    border: none;
+}
+
+.focused-reading-table th:first-child {
+    border-top-left-radius: 15px;
+}
+
+.focused-reading-table th:last-child {
+    border-top-right-radius: 15px;
+}
+
+.focused-reading-table td {
+    padding: 1.5rem;
+    border-bottom: 2px solid #e9ecef;
+    vertical-align: middle;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.focused-reading-table tr:nth-child(even) {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+}
+
+.focused-reading-table tr:nth-child(odd) {
+    background: white;
+}
+
+.focused-reading-table tr:hover {
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb) !important;
+    transform: scale(1.01);
+    box-shadow: 0 4px 15px rgba(30, 60, 114, 0.2);
+}
+
+.focused-reading-table tr:last-child td:first-child {
+    border-bottom-left-radius: 15px;
+}
+
+.focused-reading-table tr:last-child td:last-child {
+    border-bottom-right-radius: 15px;
+}
+
+.focused-reading-table tr:last-child td {
+    border-bottom: none;
+}
+
+.focused-reading-romaji {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #1e3c72;
+    margin-bottom: 0.5rem;
+}
+
+.focused-reading-english {
+    font-size: 1.1rem;
+    color: #636e72;
+    font-style: italic;
+}
+
+.focused-reading-kanji {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1e3c72;
+    margin-bottom: 0.5rem;
+    font-family: 'Hiragino Sans', 'Yu Gothic', 'Meiryo', 'MS Gothic', sans-serif;
+}
+
+.focused-reading-hiragana {
+    font-size: 1.2rem;
+    color: #666;
+    font-family: 'Hiragana Sans', 'Yu Gothic', 'Meiryo', 'MS Gothic', sans-serif;
+}
+
+/* Focused Reading Mode Print Styles */
+@media print {
+    .focused-reading-header {
+        color: black !important;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    
+    .focused-reading-header h2 {
+        color: black !important;
+        text-shadow: none !important;
+        font-size: 2rem !important;
+        margin-bottom: 1rem !important;
+        border-bottom: 3px solid #333;
+        padding-bottom: 1rem;
+    }
+    
+    .focused-reading-header p {
+        color: #666 !important;
+        font-size: 1rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+    
+    .focused-reading-controls {
+        display: none !important;
+    }
+    
+    .focused-reading-content {
+        background: white !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        padding: 0 !important;
+        max-height: none !important;
+        overflow: visible !important;
+        margin: 0 !important;
+    }
+    
+    .focused-reading-table {
+        width: 100% !important;
+        border-collapse: collapse !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        overflow: visible !important;
+        page-break-inside: auto;
+    }
+    
+    .focused-reading-table th {
+        background: #333 !important;
+        color: white !important;
+        padding: 1rem !important;
+        font-size: 1.2rem !important;
+        text-shadow: none !important;
+        border: 2px solid #333 !important;
+        border-radius: 0 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    
+    .focused-reading-table td {
+        padding: 1rem !important;
+        border: 1px solid #ddd !important;
+        border-radius: 0 !important;
+        page-break-inside: avoid;
+    }
+    
+    .focused-reading-table tr:nth-child(even) {
+        background: #f8f9fa !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    
+    .focused-reading-table tr:nth-child(odd) {
+        background: white !important;
+    }
+    
+    .focused-reading-table tr:hover {
+        background: inherit !important;
+        transform: none !important;
+        box-shadow: none !important;
+    }
+    
+    .focused-reading-romaji {
+        color: #1e3c72 !important;
+        font-size: 1.3rem !important;
+    }
+    
+    .focused-reading-english {
+        color: #636e72 !important;
+        font-size: 1rem !important;
+    }
+    
+    .focused-reading-kanji {
+        color: #1e3c72 !important;
+        font-size: 1.8rem !important;
+    }
+    
+    .focused-reading-hiragana {
+        color: #666 !important;
+        font-size: 1.1rem !important;
+    }
+}
+
+/* Focused Reading Mode Mobile Responsive */
+@media (max-width: 768px) {
+    .focused-reading-header h2 {
+        font-size: 2rem;
+    }
+    
+    .focused-reading-header p {
+        font-size: 1rem;
+    }
+    
+    .focused-reading-controls {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .focused-reading-controls .control-btn {
+        width: 200px;
+    }
+    
+    .focused-reading-content {
+        padding: 1.5rem;
+        max-height: 60vh;
+    }
+    
+    .focused-reading-table th {
+        padding: 1rem;
+        font-size: 1.2rem;
+    }
+    
+    .focused-reading-table td {
+        padding: 1rem;
+    }
+    
+    .focused-reading-romaji {
+        font-size: 1.2rem;
+        margin-bottom: 0.3rem;
+    }
+    
+    .focused-reading-english {
+        font-size: 1rem;
+    }
+    
+    .focused-reading-kanji {
+        font-size: 1.6rem;
+        margin-bottom: 0.3rem;
+    }
+    
+    .focused-reading-hiragana {
+        font-size: 1rem;
+    }
+}
+
+/* Focused Reading Mode Animation */
+@keyframes focusedReadingFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.focused-reading-table tr {
+    animation: focusedReadingFadeIn 0.6s ease-out;
+}
+
+.focused-reading-table tr:nth-child(even) {
+    animation-delay: 0.1s;
+}
+
+.focused-reading-table tr:nth-child(odd) {
+    animation-delay: 0.2s;
+}

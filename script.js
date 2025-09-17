@@ -3384,6 +3384,297 @@ class KanjiConcentrationGame {
         return html;
     }
 
+    // Focused Reading Mode Functionality
+    startFocusedReadingMode() {
+        this.showFocusedReadingScreen();
+        this.displayFocusedReadingTable();
+    }
+
+    showFocusedReadingScreen() {
+        document.getElementById('gameModeScreen').classList.remove('active');
+        document.getElementById('preGameScreen').classList.remove('active');
+        document.getElementById('gameScreen').classList.remove('active');
+        document.getElementById('dragDropScreen').classList.remove('active');
+        document.getElementById('storyScreen').classList.remove('active');
+        document.getElementById('focusedReadingScreen').classList.add('active');
+    }
+
+    displayFocusedReadingTable() {
+        const tableContainer = document.getElementById('focusedReadingTable');
+        tableContainer.innerHTML = '';
+
+        // Create the table
+        const table = document.createElement('table');
+        table.className = 'focused-reading-table';
+
+        // Create table header
+        const thead = document.createElement('thead');
+        const headerRow = document.createElement('tr');
+        
+        const romajiHeader = document.createElement('th');
+        romajiHeader.textContent = 'Romaji Sentences';
+        
+        const kanjiHeader = document.createElement('th');
+        kanjiHeader.textContent = 'Kanji/Hiragana Sentences';
+        
+        headerRow.appendChild(romajiHeader);
+        headerRow.appendChild(kanjiHeader);
+        thead.appendChild(headerRow);
+        table.appendChild(thead);
+
+        // Create table body
+        const tbody = document.createElement('tbody');
+        
+        // Use selected cards if any are selected, otherwise use all cards
+        const cardsToUse = this.getCardsForGame();
+        
+        // Filter cards that have sentences
+        const cardsWithSentences = cardsToUse.filter(card => card.sentence && card.sentence.kanji && card.sentence.romaji);
+        
+        cardsWithSentences.forEach(card => {
+            const row = document.createElement('tr');
+            
+            // Romaji sentence cell
+            const romajiCell = document.createElement('td');
+            romajiCell.innerHTML = `
+                <div class="focused-reading-romaji">${card.sentence.romaji}</div>
+                <div class="focused-reading-english">${card.sentence.english}</div>
+            `;
+            
+            // Kanji sentence cell
+            const kanjiCell = document.createElement('td');
+            kanjiCell.innerHTML = `
+                <div class="focused-reading-kanji">${card.sentence.kanji}</div>
+            `;
+            
+            row.appendChild(romajiCell);
+            row.appendChild(kanjiCell);
+            tbody.appendChild(row);
+        });
+        
+        table.appendChild(tbody);
+        tableContainer.appendChild(table);
+    }
+
+    printFocusedReadingTable() {
+        // Create a new window for printing
+        const printWindow = window.open('', '_blank');
+        
+        // Generate the print HTML for the focused reading table
+        const printHTML = this.generateFocusedReadingHTML();
+        
+        // Write the HTML to the new window
+        printWindow.document.write(printHTML);
+        printWindow.document.close();
+        
+        // Wait for content to load, then print
+        printWindow.onload = () => {
+            printWindow.print();
+        };
+    }
+
+    generateFocusedReadingHTML() {
+        const currentDate = new Date().toLocaleDateString();
+        const cardsToUse = this.getCardsForGame();
+        
+        // Filter cards that have sentences
+        const cardsWithSentences = cardsToUse.filter(card => card.sentence && card.sentence.kanji && card.sentence.romaji);
+        
+        let html = `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focused Reading Study Table</title>
+    <style>
+        @media print {
+            body { margin: 0; }
+            .no-print { display: none; }
+        }
+        
+        body {
+            font-family: 'Arial', 'Hiragino Sans', 'Yu Gothic', 'Meiryo', 'Takao', 'IPAexGothic', 'IPAPGothic', 'VL PGothic', 'Noto Sans CJK JP', sans-serif;
+            margin: 20px;
+            background: white;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .print-header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #1e3c72;
+            padding-bottom: 20px;
+        }
+        
+        .print-header h1 {
+            color: #1e3c72;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .print-header p {
+            color: #666;
+            font-size: 1.1rem;
+            margin: 5px 0;
+        }
+        
+        .focused-reading-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        
+        .focused-reading-table th {
+            background: #1e3c72;
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+            font-size: 1.4rem;
+            font-weight: bold;
+            border: 2px solid #1e3c72;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+        
+        .focused-reading-table td {
+            padding: 1.5rem;
+            border: 1px solid #ddd;
+            vertical-align: middle;
+            text-align: center;
+            page-break-inside: avoid;
+        }
+        
+        .focused-reading-table tr:nth-child(even) {
+            background: #f8f9fa;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+        
+        .focused-reading-table tr:nth-child(odd) {
+            background: white;
+        }
+        
+        .focused-reading-romaji {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #1e3c72;
+            margin-bottom: 0.5rem;
+        }
+        
+        .focused-reading-english {
+            font-size: 1.1rem;
+            color: #636e72;
+            font-style: italic;
+        }
+        
+        .focused-reading-kanji {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #1e3c72;
+            margin-bottom: 0.5rem;
+            font-family: 'Hiragino Sans', 'Yu Gothic', 'Meiryo', 'MS Gothic', sans-serif;
+        }
+        
+        .focused-reading-hiragana {
+            font-size: 1.2rem;
+            color: #666;
+            font-family: 'Hiragino Sans', 'Yu Gothic', 'Meiryo', 'MS Gothic', sans-serif;
+        }
+        
+        .print-footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #1e3c72;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .study-tips {
+            background: #f0f8ff;
+            border: 2px solid #1e3c72;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+        
+        .study-tips h3 {
+            color: #1e3c72;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        .study-tips ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        
+        .study-tips li {
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+    <div class="print-header">
+        <h1>📋 Focused Reading Study Table</h1>
+        <p>Clean side-by-side sentence comparison for focused study</p>
+        <p>Generated on: ${currentDate} • Total Sentences: ${cardsWithSentences.length}</p>
+    </div>
+    
+    <div class="study-tips">
+        <h3>📚 How to Use This Table:</h3>
+        <ul>
+            <li><strong>Cover columns</strong> - Hide one side to test your reading comprehension</li>
+            <li><strong>Read aloud</strong> - Practice pronunciation by reading both sides</li>
+            <li><strong>Focus study</strong> - Use this clean format for concentrated sentence reading</li>
+            <li><strong>Track progress</strong> - Check off sentences you've mastered</li>
+            <li><strong>Review regularly</strong> - Use spaced repetition for best results</li>
+        </ul>
+    </div>
+    
+    <table class="focused-reading-table">
+        <thead>
+            <tr>
+                <th>Romaji Sentences</th>
+                <th>Kanji/Hiragana Sentences</th>
+            </tr>
+        </thead>
+        <tbody>`;
+
+        // Generate each row with sentences
+        cardsWithSentences.forEach(card => {
+            html += `
+            <tr>
+                <td>
+                    <div class="focused-reading-romaji">${card.sentence.romaji}</div>
+                    <div class="focused-reading-english">${card.sentence.english}</div>
+                </td>
+                <td>
+                    <div class="focused-reading-kanji">${card.sentence.kanji}</div>
+                </td>
+            </tr>`;
+        });
+
+        html += `
+        </tbody>
+    </table>
+    
+    <div class="print-footer">
+        <p>📋 Perfect for focused sentence reading and comprehension practice!</p>
+        <p>Generated by Kanji Card Concentration Game</p>
+    </div>
+</body>
+</html>`;
+
+        return html;
+    }
+
     // Event Listeners
     setupEventListeners() {
         // Settings modal
@@ -3531,6 +3822,10 @@ class KanjiConcentrationGame {
             this.startStoryMode();
         });
         
+        document.getElementById('focusedReadingMode').addEventListener('click', () => {
+            this.startFocusedReadingMode();
+        });
+        
         // Flip control event listeners
         document.getElementById('flipRomajiBtn').addEventListener('click', () => {
             this.flipAllRomajiCards();
@@ -3645,6 +3940,15 @@ class KanjiConcentrationGame {
         
         document.getElementById('backToModeSelectFromStory').addEventListener('click', () => {
             console.log('Mode select button clicked from story mode');
+            this.showModeSelectionScreen();
+        });
+        
+        // Focused Reading Mode controls
+        document.getElementById('printFocusedReadingBtn').addEventListener('click', () => {
+            this.printFocusedReadingTable();
+        });
+        
+        document.getElementById('backToModeSelectFromFocusedReading').addEventListener('click', () => {
             this.showModeSelectionScreen();
         });
         
