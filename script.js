@@ -3411,12 +3411,16 @@ class KanjiConcentrationGame {
         const thead = document.createElement('thead');
         const headerRow = document.createElement('tr');
         
+        const vocabularyHeader = document.createElement('th');
+        vocabularyHeader.textContent = 'Vocabulary Word';
+        
         const romajiHeader = document.createElement('th');
         romajiHeader.textContent = 'Romaji Sentences';
         
         const kanjiHeader = document.createElement('th');
         kanjiHeader.textContent = 'Kanji/Hiragana Sentences';
         
+        headerRow.appendChild(vocabularyHeader);
         headerRow.appendChild(romajiHeader);
         headerRow.appendChild(kanjiHeader);
         thead.appendChild(headerRow);
@@ -3434,6 +3438,14 @@ class KanjiConcentrationGame {
         cardsWithSentences.forEach(card => {
             const row = document.createElement('tr');
             
+            // Vocabulary word cell (far left)
+            const vocabularyCell = document.createElement('td');
+            vocabularyCell.innerHTML = `
+                <div class="focused-reading-vocabulary-kanji">${card.kanji}</div>
+                <div class="focused-reading-vocabulary-romaji">${card.romaji}</div>
+                <div class="focused-reading-vocabulary-english">${card.english}</div>
+            `;
+            
             // Romaji sentence cell
             const romajiCell = document.createElement('td');
             romajiCell.innerHTML = `
@@ -3447,6 +3459,7 @@ class KanjiConcentrationGame {
                 <div class="focused-reading-kanji">${card.sentence.kanji}</div>
             `;
             
+            row.appendChild(vocabularyCell);
             row.appendChild(romajiCell);
             row.appendChild(kanjiCell);
             tbody.appendChild(row);
@@ -3559,6 +3572,27 @@ class KanjiConcentrationGame {
             background: white;
         }
         
+        .focused-reading-vocabulary-kanji {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #1e3c72;
+            margin-bottom: 0.3rem;
+            font-family: 'Hiragino Sans', 'Yu Gothic', 'Meiryo', 'MS Gothic', sans-serif;
+        }
+        
+        .focused-reading-vocabulary-romaji {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #636e72;
+            margin-bottom: 0.3rem;
+        }
+        
+        .focused-reading-vocabulary-english {
+            font-size: 1rem;
+            color: #666;
+            font-style: italic;
+        }
+        
         .focused-reading-romaji {
             font-size: 1.4rem;
             font-weight: bold;
@@ -3641,6 +3675,7 @@ class KanjiConcentrationGame {
     <table class="focused-reading-table">
         <thead>
             <tr>
+                <th>Vocabulary Word</th>
                 <th>Romaji Sentences</th>
                 <th>Kanji/Hiragana Sentences</th>
             </tr>
@@ -3651,6 +3686,11 @@ class KanjiConcentrationGame {
         cardsWithSentences.forEach(card => {
             html += `
             <tr>
+                <td>
+                    <div class="focused-reading-vocabulary-kanji">${card.kanji}</div>
+                    <div class="focused-reading-vocabulary-romaji">${card.romaji}</div>
+                    <div class="focused-reading-vocabulary-english">${card.english}</div>
+                </td>
                 <td>
                     <div class="focused-reading-romaji">${card.sentence.romaji}</div>
                     <div class="focused-reading-english">${card.sentence.english}</div>

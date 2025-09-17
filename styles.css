@@ -2354,57 +2354,10 @@ header h1 {
 }
 
 /* Focused Reading Mode Styles */
-.focused-reading-header {
-    text-align: center;
-    margin-bottom: 2rem;
-    color: white;
-}
-
-.focused-reading-header h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.focused-reading-header p {
-    font-size: 1.2rem;
-    opacity: 0.9;
-    margin-bottom: 1.5rem;
-}
-
-.focused-reading-controls {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 2rem;
-    flex-wrap: wrap;
-}
-
-.focused-reading-controls .control-btn {
-    background: linear-gradient(135deg, #6c5ce7, #a29bfe);
-    color: white;
-    transition: all 0.3s ease;
-}
-
-.focused-reading-controls .control-btn:hover {
-    background: linear-gradient(135deg, #5f4fcf, #9085e8);
-    transform: translateY(-2px);
-}
-
-.focused-reading-content {
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 20px;
-    padding: 2.5rem;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-    max-height: 70vh;
-    overflow-y: auto;
-    margin-bottom: 2rem;
-}
-
 .focused-reading-table {
     width: 100%;
     border-collapse: collapse;
-    font-family: 'Arial', 'Hiragino Sans', 'Yu Gothic', 'Meiryo', 'MS Gothic', sans-serif;
+    margin: 20px 0;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
     overflow: hidden;
@@ -2417,8 +2370,78 @@ header h1 {
     text-align: center;
     font-size: 1.4rem;
     font-weight: bold;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-    border: none;
+    border: 2px solid #1e3c72;
+}
+
+.focused-reading-table td {
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.focused-reading-table tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+.focused-reading-table tr:nth-child(odd) {
+    background: white;
+}
+
+.focused-reading-table tr:hover {
+    background: #e3f2fd;
+    transform: scale(1.01);
+    transition: all 0.2s ease;
+}
+
+/* Vocabulary word column styles */
+.focused-reading-vocabulary-kanji {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #1e3c72;
+    margin-bottom: 0.3rem;
+    font-family: 'Hiragino Sans', 'Yu Gothic', 'Meiryo', 'MS Gothic', sans-serif;
+}
+
+.focused-reading-vocabulary-romaji {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #636e72;
+    margin-bottom: 0.3rem;
+}
+
+.focused-reading-vocabulary-english {
+    font-size: 1rem;
+    color: #666;
+    font-style: italic;
+}
+
+/* Sentence column styles */
+.focused-reading-romaji {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #1e3c72;
+    margin-bottom: 0.5rem;
+}
+
+.focused-reading-english {
+    font-size: 1.1rem;
+    color: #636e72;
+    font-style: italic;
+}
+
+.focused-reading-kanji {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1e3c72;
+    margin-bottom: 0.5rem;
+    font-family: 'Hiragino Sans', 'Yu Gothic', 'Meiryo', 'MS Gothic', sans-serif;
+}
+
+.focused-reading-hiragana {
+    font-size: 1.2rem;
+    color: #666;
+    font-family: 'Hiragino Sans', 'Yu Gothic', 'Meiryo', 'MS Gothic', sans-serif;
 }
 
 .focused-reading-table th:first-child {
