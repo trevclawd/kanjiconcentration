@@ -2615,6 +2615,70 @@ header h1 {
     }
 }
 
+/* Focused Reading Controls */
+.focused-reading-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    align-items: center;
+}
+
+.column-toggles {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.action-controls {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.toggle-btn.active {
+    background: linear-gradient(135deg, #28a745, #20c997);
+    color: white;
+    border: 2px solid #1e7e34;
+    box-shadow: 0 3px 8px rgba(40, 167, 69, 0.3);
+}
+
+.toggle-btn.active:hover {
+    background: linear-gradient(135deg, #218838, #1ea085);
+    box-shadow: 0 5px 12px rgba(40, 167, 69, 0.4);
+}
+
+.toggle-btn:not(.active) {
+    background: linear-gradient(135deg, #6c757d, #adb5bd);
+    color: white;
+    border: 2px solid #495057;
+    box-shadow: 0 3px 8px rgba(108, 117, 125, 0.3);
+}
+
+.toggle-btn:not(.active):hover {
+    background: linear-gradient(135deg, #5a6268, #95a5a6);
+    box-shadow: 0 5px 12px rgba(108, 117, 125, 0.4);
+}
+
+/* Column visibility states */
+.focused-reading-table .vocabulary-column.hidden {
+    display: none;
+}
+
+.focused-reading-table .romaji-column.hidden {
+    display: none;
+}
+
+.focused-reading-table .english-column.hidden {
+    display: none;
+}
+
+.focused-reading-table .kanji-column.hidden {
+    display: none;
+}
+
 /* Focused Reading Mode Mobile Responsive */
 @media (max-width: 768px) {
     .focused-reading-header h2 {
@@ -2627,6 +2691,19 @@ header h1 {
     
     .focused-reading-controls {
         flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .column-toggles {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+    
+    .action-controls {
+        flex-direction: column;
+        width: 100%;
         align-items: center;
     }
     

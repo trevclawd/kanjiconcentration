@@ -3715,6 +3715,104 @@ class KanjiConcentrationGame {
         return html;
     }
 
+    // Focused Reading Mode Column Toggle Functionality
+    toggleFocusedReadingColumn(columnType) {
+        const toggleBtn = document.getElementById(`toggle${columnType.charAt(0).toUpperCase() + columnType.slice(1)}Column`);
+        const isCurrentlyActive = toggleBtn.classList.contains('active');
+        
+        if (isCurrentlyActive) {
+            // Hide the column
+            toggleBtn.classList.remove('active');
+            this.hideFocusedReadingColumn(columnType);
+        } else {
+            // Show the column
+            toggleBtn.classList.add('active');
+            this.showFocusedReadingColumn(columnType);
+        }
+    }
+
+    hideFocusedReadingColumn(columnType) {
+        const table = document.querySelector('.focused-reading-table');
+        if (!table) return;
+
+        // Hide header
+        const headers = table.querySelectorAll('th');
+        let columnIndex = -1;
+        
+        if (columnType === 'vocabulary') {
+            columnIndex = 0; // Vocabulary Word column
+        } else if (columnType === 'romaji') {
+            columnIndex = 1; // Romaji Sentences column
+        } else if (columnType === 'english') {
+            columnIndex = 1; // English is part of the Romaji Sentences column
+            // Hide English elements within the romaji column
+            const englishElements = table.querySelectorAll('.focused-reading-english');
+            englishElements.forEach(element => {
+                element.style.display = 'none';
+            });
+            return; // Don't hide the entire column for English
+        } else if (columnType === 'kanji') {
+            columnIndex = 2; // Kanji/Hiragana Sentences column
+        }
+
+        if (columnIndex !== -1) {
+            // Hide header
+            if (headers[columnIndex]) {
+                headers[columnIndex].style.display = 'none';
+            }
+            
+            // Hide all cells in this column
+            const rows = table.querySelectorAll('tbody tr');
+            rows.forEach(row => {
+                const cells = row.querySelectorAll('td');
+                if (cells[columnIndex]) {
+                    cells[columnIndex].style.display = 'none';
+                }
+            });
+        }
+    }
+
+    showFocusedReadingColumn(columnType) {
+        const table = document.querySelector('.focused-reading-table');
+        if (!table) return;
+
+        // Show header
+        const headers = table.querySelectorAll('th');
+        let columnIndex = -1;
+        
+        if (columnType === 'vocabulary') {
+            columnIndex = 0; // Vocabulary Word column
+        } else if (columnType === 'romaji') {
+            columnIndex = 1; // Romaji Sentences column
+        } else if (columnType === 'english') {
+            columnIndex = 1; // English is part of the Romaji Sentences column
+            // Show English elements within the romaji column
+            const englishElements = table.querySelectorAll('.focused-reading-english');
+            englishElements.forEach(element => {
+                element.style.display = 'block';
+            });
+            return; // Don't show the entire column for English
+        } else if (columnType === 'kanji') {
+            columnIndex = 2; // Kanji/Hiragana Sentences column
+        }
+
+        if (columnIndex !== -1) {
+            // Show header
+            if (headers[columnIndex]) {
+                headers[columnIndex].style.display = 'table-cell';
+            }
+            
+            // Show all cells in this column
+            const rows = table.querySelectorAll('tbody tr');
+            rows.forEach(row => {
+                const cells = row.querySelectorAll('td');
+                if (cells[columnIndex]) {
+                    cells[columnIndex].style.display = 'table-cell';
+                }
+            });
+        }
+    }
+
     // Event Listeners
     setupEventListeners() {
         // Settings modal
@@ -3990,6 +4088,23 @@ class KanjiConcentrationGame {
         
         document.getElementById('backToModeSelectFromFocusedReading').addEventListener('click', () => {
             this.showModeSelectionScreen();
+        });
+        
+        // Focused Reading Mode column toggle controls
+        document.getElementById('toggleVocabularyColumn').addEventListener('click', () => {
+            this.toggleFocusedReadingColumn('vocabulary');
+        });
+        
+        document.getElementById('toggleRomajiColumn').addEventListener('click', () => {
+            this.toggleFocusedReadingColumn('romaji');
+        });
+        
+        document.getElementById('toggleEnglishColumn').addEventListener('click', () => {
+            this.toggleFocusedReadingColumn('english');
+        });
+        
+        document.getElementById('toggleKanjiColumn').addEventListener('click', () => {
+            this.toggleFocusedReadingColumn('kanji');
         });
         
         // Close modals when clicking outside
