@@ -15,7 +15,8 @@ class KanjiConcentrationGame {
             matchedPairBehavior: 'stay',
             autoAdvance: false,
             timerDuration: 60,
-            timedMemoryDuration: 5
+            timedMemoryDuration: 5,
+            timedMemoryTimerEnabled: true
         };
         this.preGameTimer = null;
         this.isGameActive = false;
@@ -55,6 +56,7 @@ class KanjiConcentrationGame {
         document.getElementById('autoAdvance').checked = this.settings.autoAdvance;
         document.getElementById('timerDuration').value = this.settings.timerDuration;
         document.getElementById('timedMemoryDuration').value = this.settings.timedMemoryDuration;
+        document.getElementById('timedMemoryTimerEnabled').checked = this.settings.timedMemoryTimerEnabled;
     }
 
     // Data Management
@@ -3928,6 +3930,14 @@ class KanjiConcentrationGame {
     }
 
     startTimedMemoryTimer() {
+        if (!this.settings.timedMemoryTimerEnabled) {
+            // Timer is disabled - hide timer display and change button text
+            document.getElementById('timedMemoryTimer').style.display = 'none';
+            document.getElementById('timedMemoryThumbsUp').innerHTML = '➡️ Next Card';
+            document.getElementById('timedMemoryThumbsDown').innerHTML = '⬅️ Previous Card';
+            return;
+        }
+        
         this.timedMemoryTimeLeft = this.settings.timedMemoryDuration;
         this.updateTimedMemoryTimer();
         
@@ -3954,20 +3964,30 @@ class KanjiConcentrationGame {
     handleTimedMemoryThumbsUp() {
         if (!this.timedMemoryActive) return;
         
-        // User knows this card - award points
-        this.timedMemoryScore += 10;
-        document.getElementById('timedMemoryScore').textContent = this.timedMemoryScore;
-        
-        this.stopTimedMemoryTimer();
-        this.proceedToNextTimedMemoryCard();
+        if (!this.settings.timedMemoryTimerEnabled) {
+            // Timer is disabled - this is the "Next Card" button
+            this.proceedToNextTimedMemoryCard();
+        } else {
+            // Timer is enabled - this is the "I Know This" button
+            this.timedMemoryScore += 10;
+            document.getElementById('timedMemoryScore').textContent = this.timedMemoryScore;
+            
+            this.stopTimedMemoryTimer();
+            this.proceedToNextTimedMemoryCard();
+        }
     }
 
     handleTimedMemoryThumbsDown() {
         if (!this.timedMemoryActive) return;
         
-        // User needs more practice - no points awarded
-        this.stopTimedMemoryTimer();
-        this.proceedToNextTimedMemoryCard();
+        if (!this.settings.timedMemoryTimerEnabled) {
+            // Timer is disabled - this is the "Previous Card" button
+            this.proceedToPreviousTimedMemoryCard();
+        } else {
+            // Timer is enabled - this is the "Need More Practice" button
+            this.stopTimedMemoryTimer();
+            this.proceedToNextTimedMemoryCard();
+        }
     }
 
     stopTimedMemoryTimer() {
@@ -3983,6 +4003,14 @@ class KanjiConcentrationGame {
         if (this.timedMemoryCurrentIndex >= this.timedMemoryCards.length) {
             this.endTimedMemoryMode();
         } else {
+            this.displayCurrentTimedMemoryCard();
+            this.startTimedMemoryTimer();
+        }
+    }
+
+    proceedToPreviousTimedMemoryCard() {
+        if (this.timedMemoryCurrentIndex > 0) {
+            this.timedMemoryCurrentIndex--;
             this.displayCurrentTimedMemoryCard();
             this.startTimedMemoryTimer();
         }
@@ -4039,6 +4067,7 @@ class KanjiConcentrationGame {
             this.settings.autoAdvance = document.getElementById('autoAdvance').checked;
             this.settings.timerDuration = parseInt(document.getElementById('timerDuration').value);
             this.settings.timedMemoryDuration = parseInt(document.getElementById('timedMemoryDuration').value);
+            this.settings.timedMemoryTimerEnabled = document.getElementById('timedMemoryTimerEnabled').checked;
             this.saveSettings();
             document.getElementById('settingsModal').style.display = 'none';
             
