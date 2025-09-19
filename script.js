@@ -168,6 +168,286 @@ class KanjiConcentrationGame {
         reader.readAsText(file);
     }
 
+    // Batch Import Functionality
+    showBatchImportModal() {
+        document.getElementById('batchImportModal').style.display = 'block';
+        this.resetBatchImportModal();
+    }
+
+    closeBatchImportModal() {
+        document.getElementById('batchImportModal').style.display = 'none';
+        this.resetBatchImportModal();
+    }
+
+    resetBatchImportModal() {
+        document.getElementById('selectedFilesList').innerHTML = '';
+        document.getElementById('maxCards').value = 52;
+        document.getElementById('reassignRanksSuits').checked = true;
+        document.getElementById('allowDuplicates').checked = false;
+        document.getElementById('startBatchImport').disabled = true;
+        document.getElementById('importProgress').style.display = 'none';
+        this.selectedBatchFiles = [];
+    }
+
+    selectBatchFiles() {
+        document.getElementById('batchFileInput').click();
+    }
+
+    handleBatchFileSelection(files) {
+        this.selectedBatchFiles = Array.from(files);
+        this.displaySelectedFiles();
+        document.getElementById('startBatchImport').disabled = this.selectedBatchFiles.length === 0;
+    }
+
+    displaySelectedFiles() {
+        const container = document.getElementById('selectedFilesList');
+        container.innerHTML = '';
+        
+        if (this.selectedBatchFiles.length === 0) {
+            container.innerHTML = '<p class="no-files">No files selected</p>';
+            return;
+        }
+
+        const fileList = document.createElement('div');
+        fileList.className = 'file-list';
+        
+        this.selectedBatchFiles.forEach((file, index) => {
+            const fileItem = document.createElement('div');
+            fileItem.className = 'file-item';
+            fileItem.innerHTML = `
+                <span class="file-name">${file.name}</span>
+                <span class="file-size">(${this.formatFileSize(file.size)})</span>
+                <button class="remove-file-btn" onclick="game.removeBatchFile(${index})">❌</button>
+            `;
+            fileList.appendChild(fileItem);
+        });
+        
+        container.appendChild(fileList);
+        
+        const summary = document.createElement('p');
+        summary.className = 'files-summary';
+        summary.textContent = `${this.selectedBatchFiles.length} file(s) selected`;
+        container.appendChild(summary);
+    }
+
+    formatFileSize(bytes) {
+        if (bytes === 0) return '0 Bytes';
+        const k = 1024;
+        const sizes = ['Bytes', 'KB', 'MB'];
+        const i = Math.floor(Math.log(bytes) / Math.log(k));
+        return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+    }
+
+    removeBatchFile(index) {
+        this.selectedBatchFiles.splice(index, 1);
+        this.displaySelectedFiles();
+        document.getElementById('startBatchImport').disabled = this.selectedBatchFiles.length === 0;
+    }
+
+    async startBatchImport() {
+        if (this.selectedBatchFiles.length === 0) {
+            alert('Please select at least one file to import.');
+            return;
+        }
+
+        const maxCards = parseInt(document.getElementById('maxCards').value);
+        const reassignRanksSuits = document.getElementById('reassignRanksSuits').checked;
+        const allowDuplicates = document.getElementById('allowDuplicates').checked;
+
+        // Show progress
+        document.getElementById('importProgress').style.display = 'block';
+        document.getElementById('startBatchImport').disabled = true;
+        
+        try {
+            const result = await this.processBatchFiles(this.selectedBatchFiles, {
+                maxCards,
+                reassignRanksSuits,
+                allowDuplicates
+            });
+
+            // Update the game with the new cards
+            this.cards = result.cards;
+            this.displayPreGameCards();
+            
+            // Close modal and show success message
+            this.closeBatchImportModal();
+            
+            let message = `Batch import completed successfully!\n\n`;
+            message += `Files processed: ${result.filesProcessed}\n`;
+            message += `Total cards found: ${result.totalCardsFound}\n`;
+            message += `Cards selected: ${result.cards.length}\n`;
+            
+            if (result.warnings.length > 0) {
+                message += '\nWarnings:\n' + result.warnings.join('\n');
+            }
+            if (result.enhancements.length > 0) {
+                message += '\nEnhancements applied:\n' + result.enhancements.join('\n');
+            }
+            
+            alert(message);
+            
+        } catch (error) {
+            alert('Error during batch import: ' + error.message);
+            document.getElementById('startBatchImport').disabled = false;
+        }
+        
+        document.getElementById('importProgress').style.display = 'none';
+    }
+
+    async processBatchFiles(files, options) {
+        const allCards = [];
+        const warnings = [];
+        const enhancements = [];
+        let filesProcessed = 0;
+        let totalCardsFound = 0;
+
+        // Process each file
+        for (let i = 0; i < files.length; i++) {
+            const file = files[i];
+            
+            // Update progress
+            const progress = ((i + 1) / files.length) * 50; // First 50% for file processing
+            this.updateImportProgress(progress, `Processing ${file.name}...`);
+            
+            try {
+                const fileCards = await this.readFileAsCards(file);
+                if (fileCards && fileCards.length > 0) {
+                    allCards.push(...fileCards);
+                    totalCardsFound += fileCards.length;
+                    filesProcessed++;
+                    enhancements.push(`${file.name}: ${fileCards.length} cards loaded`);
+                } else {
+                    warnings.push(`${file.name}: No valid cards found`);
+                }
+            } catch (error) {
+                warnings.push(`${file.name}: ${error.message}`);
+            }
+        }
+
+        if (allCards.length === 0) {
+            throw new Error('No valid cards found in any of the selected files.');
+        }
+
+        // Update progress
+        this.updateImportProgress(60, 'Removing duplicates...');
+        
+        // Remove duplicates if requested
+        let uniqueCards = allCards;
+        if (!options.allowDuplicates) {
+            uniqueCards = this.removeDuplicateCards(allCards);
+            if (uniqueCards.length < allCards.length) {
+                enhancements.push(`Removed ${allCards.length - uniqueCards.length} duplicate cards`);
+            }
+        }
+
+        // Update progress
+        this.updateImportProgress(70, 'Selecting cards...');
+        
+        // Randomly select cards up to maxCards
+        let selectedCards = uniqueCards;
+        if (uniqueCards.length > options.maxCards) {
+            selectedCards = this.randomlySelectCards(uniqueCards, options.maxCards);
+            enhancements.push(`Randomly selected ${options.maxCards} cards from ${uniqueCards.length} available`);
+        }
+
+        // Update progress
+        this.updateImportProgress(80, 'Assigning ranks and suits...');
+        
+        // Reassign ranks and suits if requested
+        if (options.reassignRanksSuits) {
+            selectedCards = this.reassignRanksAndSuits(selectedCards);
+            enhancements.push('Reassigned ranks and suits to selected cards');
+        }
+
+        // Update progress
+        this.updateImportProgress(90, 'Validating cards...');
+        
+        // Validate and enhance the final card set
+        const validationResult = this.validateAndEnhanceCards(selectedCards);
+        warnings.push(...validationResult.warnings);
+        enhancements.push(...validationResult.enhancements);
+
+        // Update progress
+        this.updateImportProgress(100, 'Import complete!');
+
+        return {
+            cards: validationResult.cards,
+            filesProcessed,
+            totalCardsFound,
+            warnings,
+            enhancements
+        };
+    }
+
+    readFileAsCards(file) {
+        return new Promise((resolve, reject) => {
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                try {
+                    const data = JSON.parse(e.target.result);
+                    if (data.cards && Array.isArray(data.cards)) {
+                        resolve(data.cards);
+                    } else {
+                        reject(new Error('Invalid file format - no cards array found'));
+                    }
+                } catch (error) {
+                    reject(new Error('Invalid JSON format'));
+                }
+            };
+            reader.onerror = () => reject(new Error('Failed to read file'));
+            reader.readAsText(file);
+        });
+    }
+
+    removeDuplicateCards(cards) {
+        const seen = new Set();
+        return cards.filter(card => {
+            // Create a unique key based on kanji and romaji
+            const key = `${card.kanji}-${card.romaji}`;
+            if (seen.has(key)) {
+                return false;
+            }
+            seen.add(key);
+            return true;
+        });
+    }
+
+    randomlySelectCards(cards, maxCount) {
+        const shuffled = [...cards];
+        this.shuffleArray(shuffled);
+        return shuffled.slice(0, maxCount);
+    }
+
+    reassignRanksAndSuits(cards) {
+        const ranks = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
+        const suits = ['hearts', 'diamonds', 'clubs', 'spades'];
+        
+        // Create a shuffled deck of rank-suit combinations
+        const deckCombinations = [];
+        for (const suit of suits) {
+            for (const rank of ranks) {
+                deckCombinations.push({ rank, suit });
+            }
+        }
+        this.shuffleArray(deckCombinations);
+        
+        // Assign new ranks and suits to cards
+        return cards.map((card, index) => {
+            const combination = deckCombinations[index % deckCombinations.length];
+            return {
+                ...card,
+                rank: combination.rank,
+                suit: combination.suit,
+                id: `${combination.rank.toLowerCase()}_${combination.suit}_${index}`
+            };
+        });
+    }
+
+    updateImportProgress(percentage, text) {
+        document.getElementById('progressFill').style.width = `${percentage}%`;
+        document.getElementById('progressText').textContent = text;
+    }
+
     validateAndEnhanceCards(cards) {
         const warnings = [];
         const enhancements = [];
@@ -4090,6 +4370,31 @@ class KanjiConcentrationGame {
             }
         });
         
+        // Batch Import functionality
+        document.getElementById('batchImportBtn').addEventListener('click', () => {
+            this.showBatchImportModal();
+        });
+        
+        document.getElementById('batchImportClose').addEventListener('click', () => {
+            this.closeBatchImportModal();
+        });
+        
+        document.getElementById('batchFileSelector').addEventListener('click', () => {
+            this.selectBatchFiles();
+        });
+        
+        document.getElementById('batchFileInput').addEventListener('change', (e) => {
+            this.handleBatchFileSelection(e.target.files);
+        });
+        
+        document.getElementById('startBatchImport').addEventListener('click', () => {
+            this.startBatchImport();
+        });
+        
+        document.getElementById('cancelBatchImport').addEventListener('click', () => {
+            this.closeBatchImportModal();
+        });
+        
         // Print cards functionality
         document.getElementById('printCardsBtn').addEventListener('click', () => {
             this.showPrintClozeModal();
@@ -4385,5 +4690,5 @@ class KanjiConcentrationGame {
 
 // Initialize the game when the page loads
 document.addEventListener('DOMContentLoaded', () => {
-    new KanjiConcentrationGame();
+    window.game = new KanjiConcentrationGame();
 });
