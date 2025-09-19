@@ -14,7 +14,8 @@ class KanjiConcentrationGame {
         this.settings = {
             matchedPairBehavior: 'stay',
             autoAdvance: false,
-            timerDuration: 60
+            timerDuration: 60,
+            timedMemoryDuration: 5
         };
         this.preGameTimer = null;
         this.isGameActive = false;
@@ -53,6 +54,7 @@ class KanjiConcentrationGame {
         document.getElementById('matchedPairBehavior').value = this.settings.matchedPairBehavior;
         document.getElementById('autoAdvance').checked = this.settings.autoAdvance;
         document.getElementById('timerDuration').value = this.settings.timerDuration;
+        document.getElementById('timedMemoryDuration').value = this.settings.timedMemoryDuration;
     }
 
     // Data Management
@@ -2418,12 +2420,15 @@ class KanjiConcentrationGame {
     }
 
     getCardsForGame() {
-        // If cards are selected, use only those cards
+        // Use displayCards (scrambled order) if it exists, otherwise use original cards
+        const cardsToUse = this.displayCards || this.cards;
+        
+        // If cards are selected, use only those cards (but maintain scrambled order if applicable)
         if (this.selectedCards.size > 0) {
-            return this.cards.filter(card => this.selectedCards.has(card.id));
+            return cardsToUse.filter(card => this.selectedCards.has(card.id));
         }
-        // Otherwise, use all cards
-        return this.cards;
+        // Otherwise, use all cards (in scrambled order if applicable)
+        return cardsToUse;
     }
 
     // Sentence Display Functionality
@@ -3813,6 +3818,211 @@ class KanjiConcentrationGame {
         }
     }
 
+    // Timed Memory Mode Functionality
+    startTimedMemoryMode() {
+        // Initialize timed memory mode state
+        this.timedMemoryActive = true;
+        this.timedMemoryCurrentIndex = 0;
+        this.timedMemoryScore = 0;
+        this.timedMemoryTimer = null;
+        this.timedMemoryTimeLeft = this.settings.timedMemoryDuration;
+        
+        // Get cards to use for timed memory mode
+        const cardsToUse = this.getCardsForGame();
+        this.timedMemoryCards = [...cardsToUse];
+        
+        // Show the timed memory overlay
+        this.showTimedMemoryOverlay();
+        this.displayCurrentTimedMemoryCard();
+        this.startTimedMemoryTimer();
+    }
+
+    showTimedMemoryOverlay() {
+        const overlay = document.getElementById('timedMemoryOverlay');
+        overlay.style.display = 'flex';
+        
+        // Update total cards count
+        document.getElementById('timedMemoryTotalCards').textContent = this.timedMemoryCards.length;
+        document.getElementById('timedMemoryScore').textContent = this.timedMemoryScore;
+    }
+
+    displayCurrentTimedMemoryCard() {
+        if (this.timedMemoryCurrentIndex >= this.timedMemoryCards.length) {
+            this.endTimedMemoryMode();
+            return;
+        }
+
+        const currentCard = this.timedMemoryCards[this.timedMemoryCurrentIndex];
+        const cardPairContainer = document.getElementById('timedMemoryCardPair');
+        
+        // Update progress
+        document.getElementById('timedMemoryCurrentCard').textContent = this.timedMemoryCurrentIndex + 1;
+        
+        // Clear previous cards
+        cardPairContainer.innerHTML = '';
+        
+        // Create kanji card
+        const kanjiCard = this.createTimedMemoryCard(currentCard, 'kanji');
+        // Create romaji card
+        const romajiCard = this.createTimedMemoryCard(currentCard, 'romaji');
+        
+        cardPairContainer.appendChild(kanjiCard);
+        cardPairContainer.appendChild(romajiCard);
+    }
+
+    createTimedMemoryCard(cardData, type) {
+        const card = document.createElement('div');
+        card.className = 'playing-card';
+        
+        // Check if this card type should be hidden based on memorize screen settings
+        const shouldHideCard = this.shouldHideCardInTimedMode(type);
+        
+        if (shouldHideCard) {
+            // Show card back instead of front
+            const cardBack = document.createElement('div');
+            cardBack.className = 'card-face card-back';
+            cardBack.innerHTML = '<div>?</div>';
+            card.appendChild(cardBack);
+            return card;
+        }
+        
+        const cardFace = document.createElement('div');
+        cardFace.className = 'card-face card-front';
+        
+        // Rank and suit indicators
+        const rankSuitTop = document.createElement('div');
+        rankSuitTop.className = `card-rank-suit suit-${cardData.suit}`;
+        rankSuitTop.innerHTML = `${cardData.rank}<span class="suit-symbol">${this.getSuitSymbol(cardData.suit)}</span>`;
+        
+        const rankSuitBottom = document.createElement('div');
+        rankSuitBottom.className = `card-rank-suit bottom suit-${cardData.suit}`;
+        rankSuitBottom.innerHTML = `${cardData.rank}<span class="suit-symbol">${this.getSuitSymbol(cardData.suit)}</span>`;
+        
+        // Card content
+        const content = document.createElement('div');
+        content.className = 'card-content';
+        
+        if (type === 'kanji') {
+            const hiraganaClass = this.isHiraganaHidden ? 'hiragana hidden' : 'hiragana';
+            content.innerHTML = `
+                <div class="kanji-content">
+                    <div class="kanji">${cardData.kanji}</div>
+                    <div class="${hiraganaClass}">${cardData.hiragana}</div>
+                </div>
+            `;
+        } else {
+            content.innerHTML = `
+                <div class="romaji-content">
+                    <div class="romaji">${cardData.romaji}</div>
+                    <div class="english">${cardData.english}</div>
+                </div>
+            `;
+        }
+        
+        cardFace.appendChild(rankSuitTop);
+        cardFace.appendChild(content);
+        cardFace.appendChild(rankSuitBottom);
+        card.appendChild(cardFace);
+        
+        return card;
+    }
+
+    startTimedMemoryTimer() {
+        this.timedMemoryTimeLeft = this.settings.timedMemoryDuration;
+        this.updateTimedMemoryTimer();
+        
+        this.timedMemoryTimer = setInterval(() => {
+            this.timedMemoryTimeLeft--;
+            this.updateTimedMemoryTimer();
+            
+            if (this.timedMemoryTimeLeft <= 0) {
+                this.handleTimedMemoryTimeout();
+            }
+        }, 1000);
+    }
+
+    updateTimedMemoryTimer() {
+        document.getElementById('timedMemoryTimer').textContent = this.timedMemoryTimeLeft;
+    }
+
+    handleTimedMemoryTimeout() {
+        // Time's up - automatically proceed to next card
+        this.stopTimedMemoryTimer();
+        this.proceedToNextTimedMemoryCard();
+    }
+
+    handleTimedMemoryThumbsUp() {
+        if (!this.timedMemoryActive) return;
+        
+        // User knows this card - award points
+        this.timedMemoryScore += 10;
+        document.getElementById('timedMemoryScore').textContent = this.timedMemoryScore;
+        
+        this.stopTimedMemoryTimer();
+        this.proceedToNextTimedMemoryCard();
+    }
+
+    handleTimedMemoryThumbsDown() {
+        if (!this.timedMemoryActive) return;
+        
+        // User needs more practice - no points awarded
+        this.stopTimedMemoryTimer();
+        this.proceedToNextTimedMemoryCard();
+    }
+
+    stopTimedMemoryTimer() {
+        if (this.timedMemoryTimer) {
+            clearInterval(this.timedMemoryTimer);
+            this.timedMemoryTimer = null;
+        }
+    }
+
+    proceedToNextTimedMemoryCard() {
+        this.timedMemoryCurrentIndex++;
+        
+        if (this.timedMemoryCurrentIndex >= this.timedMemoryCards.length) {
+            this.endTimedMemoryMode();
+        } else {
+            this.displayCurrentTimedMemoryCard();
+            this.startTimedMemoryTimer();
+        }
+    }
+
+    endTimedMemoryMode() {
+        this.stopTimedMemoryTimer();
+        this.timedMemoryActive = false;
+        
+        // Show completion message
+        const totalCards = this.timedMemoryCards.length;
+        const maxScore = totalCards * 10;
+        const percentage = Math.round((this.timedMemoryScore / maxScore) * 100);
+        
+        alert(`Timed Memory Mode Complete!\n\nScore: ${this.timedMemoryScore}/${maxScore} (${percentage}%)\nCards reviewed: ${totalCards}`);
+        
+        // Hide the overlay
+        document.getElementById('timedMemoryOverlay').style.display = 'none';
+    }
+
+    exitTimedMemoryMode() {
+        this.stopTimedMemoryTimer();
+        this.timedMemoryActive = false;
+        document.getElementById('timedMemoryOverlay').style.display = 'none';
+    }
+
+    // Helper method to determine if a card should be hidden in timed memory mode
+    shouldHideCardInTimedMode(cardType) {
+        if (cardType === 'kanji') {
+            // Check if kanji cards are currently flipped/hidden in the memorize screen
+            const flipKanjiBtn = document.getElementById('flipKanjiBtn');
+            return flipKanjiBtn && flipKanjiBtn.textContent.includes('Show');
+        } else if (cardType === 'romaji') {
+            // Check if romaji cards are currently flipped/hidden in the memorize screen
+            const flipRomajiBtn = document.getElementById('flipRomajiBtn');
+            return flipRomajiBtn && flipRomajiBtn.textContent.includes('Show');
+        }
+        return false;
+    }
+
     // Event Listeners
     setupEventListeners() {
         // Settings modal
@@ -3828,6 +4038,7 @@ class KanjiConcentrationGame {
             this.settings.matchedPairBehavior = document.getElementById('matchedPairBehavior').value;
             this.settings.autoAdvance = document.getElementById('autoAdvance').checked;
             this.settings.timerDuration = parseInt(document.getElementById('timerDuration').value);
+            this.settings.timedMemoryDuration = parseInt(document.getElementById('timedMemoryDuration').value);
             this.saveSettings();
             document.getElementById('settingsModal').style.display = 'none';
             
@@ -4105,6 +4316,23 @@ class KanjiConcentrationGame {
         
         document.getElementById('toggleKanjiColumn').addEventListener('click', () => {
             this.toggleFocusedReadingColumn('kanji');
+        });
+        
+        // Timed Memory Mode controls
+        document.getElementById('startTimedMemoryBtn').addEventListener('click', () => {
+            this.startTimedMemoryMode();
+        });
+        
+        document.getElementById('timedMemoryThumbsUp').addEventListener('click', () => {
+            this.handleTimedMemoryThumbsUp();
+        });
+        
+        document.getElementById('timedMemoryThumbsDown').addEventListener('click', () => {
+            this.handleTimedMemoryThumbsDown();
+        });
+        
+        document.getElementById('exitTimedMemoryBtn').addEventListener('click', () => {
+            this.exitTimedMemoryMode();
         });
         
         // Close modals when clicking outside

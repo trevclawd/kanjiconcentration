@@ -27,6 +27,10 @@
                 <label for="timerDuration">Pre-game timer (seconds):</label>
                 <input type="number" id="timerDuration" min="10" max="300" value="60">
             </div>
+            <div class="setting-group">
+                <label for="timedMemoryDuration">Timed memory mode duration (seconds):</label>
+                <input type="number" id="timedMemoryDuration" min="3" max="30" value="5">
+            </div>
             <button id="saveSettings">Save Settings</button>
         </div>
     </div>
@@ -137,6 +141,45 @@
         </div>
     </div>
 
+    <!-- Timed Memory Mode Overlay -->
+    <div id="timedMemoryOverlay" class="timed-memory-overlay" style="display: none;">
+        <div class="timed-memory-content">
+            <div class="timed-memory-header">
+                <h2>Timed Memory Mode</h2>
+                <div class="timed-memory-stats">
+                    <div class="timed-memory-timer">
+                        <span id="timedMemoryTimer">5</span>
+                    </div>
+                    <div class="timed-memory-progress">
+                        Card <span id="timedMemoryCurrentCard">1</span> of <span id="timedMemoryTotalCards">52</span>
+                    </div>
+                    <div class="timed-memory-score">
+                        Score: <span id="timedMemoryScore">0</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="timed-memory-card-display">
+                <div id="timedMemoryCardPair" class="timed-memory-card-pair">
+                    <!-- Current card pair will be displayed here -->
+                </div>
+            </div>
+            
+            <div class="timed-memory-controls">
+                <button id="timedMemoryThumbsDown" class="timed-memory-btn thumbs-down">
+                    👎 Need More Practice
+                </button>
+                <button id="timedMemoryThumbsUp" class="timed-memory-btn thumbs-up">
+                    👍 I Know This
+                </button>
+            </div>
+            
+            <div class="timed-memory-exit">
+                <button id="exitTimedMemoryBtn" class="control-btn">❌ Exit Timed Memory</button>
+            </div>
+        </div>
+    </div>
+
     <!-- Review Modal -->
     <div id="reviewModal" class="modal">
         <div class="modal-content review-modal-content">
@@ -206,6 +249,9 @@
                     <div id="selectionStatus" class="selection-status" style="display: none;">
                         <span id="selectedCount">0</span> cards selected
                     </div>
+                </div>
+                <div class="timed-memory-controls">
+                    <button id="startTimedMemoryBtn" class="control-btn timed-memory-btn">⏱️ Start Timed Memory Mode</button>
                 </div>
                 <button id="startGameBtn" class="start-btn">Choose Game Mode</button>
             </div>
