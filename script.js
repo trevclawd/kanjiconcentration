@@ -1888,6 +1888,7 @@ class KanjiConcentrationGame {
         document.getElementById('gameScreen').classList.remove('active');
         document.getElementById('dragDropScreen').classList.remove('active');
         document.getElementById('storyScreen').classList.remove('active');
+        document.getElementById('focusedReadingScreen').classList.remove('active');
     }
 
     // Drag & Drop Mode
@@ -4236,9 +4237,76 @@ class KanjiConcentrationGame {
     }
 
     handleTimedMemoryTimeout() {
-        // Time's up - automatically proceed to next card
+        // Time's up - reveal hidden cards, pause, then proceed to next card
         this.stopTimedMemoryTimer();
-        this.proceedToNextTimedMemoryCard();
+        this.revealHiddenTimedMemoryCards();
+        
+        // Pause for 1 second before showing next card pair
+        setTimeout(() => {
+            this.proceedToNextTimedMemoryCard();
+        }, 1000);
+    }
+
+    revealHiddenTimedMemoryCards() {
+        // Find all cards in the timed memory overlay that are currently showing card backs
+        const cardPairContainer = document.getElementById('timedMemoryCardPair');
+        const cards = cardPairContainer.querySelectorAll('.playing-card');
+        
+        cards.forEach(card => {
+            const cardBack = card.querySelector('.card-back');
+            const cardFront = card.querySelector('.card-front');
+            
+            // If this card only has a back (was hidden), create and show the front
+            if (cardBack && !cardFront) {
+                const currentCard = this.timedMemoryCards[this.timedMemoryCurrentIndex];
+                
+                // Determine card type based on position (first card is kanji, second is romaji)
+                const cardIndex = Array.from(cards).indexOf(card);
+                const cardType = cardIndex === 0 ? 'kanji' : 'romaji';
+                
+                // Create the card front
+                const newCardFront = document.createElement('div');
+                newCardFront.className = 'card-face card-front';
+                
+                // Rank and suit indicators
+                const rankSuitTop = document.createElement('div');
+                rankSuitTop.className = `card-rank-suit suit-${currentCard.suit}`;
+                rankSuitTop.innerHTML = `${currentCard.rank}<span class="suit-symbol">${this.getSuitSymbol(currentCard.suit)}</span>`;
+                
+                const rankSuitBottom = document.createElement('div');
+                rankSuitBottom.className = `card-rank-suit bottom suit-${currentCard.suit}`;
+                rankSuitBottom.innerHTML = `${currentCard.rank}<span class="suit-symbol">${this.getSuitSymbol(currentCard.suit)}</span>`;
+                
+                // Card content
+                const content = document.createElement('div');
+                content.className = 'card-content';
+                
+                if (cardType === 'kanji') {
+                    const hiraganaClass = this.isHiraganaHidden ? 'hiragana hidden' : 'hiragana';
+                    content.innerHTML = `
+                        <div class="kanji-content">
+                            <div class="kanji">${currentCard.kanji}</div>
+                            <div class="${hiraganaClass}">${currentCard.hiragana}</div>
+                        </div>
+                    `;
+                } else {
+                    content.innerHTML = `
+                        <div class="romaji-content">
+                            <div class="romaji">${currentCard.romaji}</div>
+                            <div class="english">${currentCard.english}</div>
+                        </div>
+                    `;
+                }
+                
+                newCardFront.appendChild(rankSuitTop);
+                newCardFront.appendChild(content);
+                newCardFront.appendChild(rankSuitBottom);
+                card.appendChild(newCardFront);
+                
+                // Add flip animation by adding the flipped class
+                card.classList.add('flipped');
+            }
+        });
     }
 
     handleTimedMemoryThumbsUp() {
