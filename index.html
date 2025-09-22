@@ -88,6 +88,37 @@
         </div>
     </div>
 
+    <!-- Big Kanji Print Settings Modal -->
+    <div id="bigKanjiPrintModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="bigKanjiPrintClose">&times;</span>
+            <h2>Big Kanji Print Settings</h2>
+            <p>Choose your print format for large kanji study sheets:</p>
+            
+            <div class="setting-group">
+                <h3 style="color: #1e3c72; margin-bottom: 1rem;">Print Mode</h3>
+                <label>
+                    <input type="radio" name="bigKanjiMode" id="twoPageMode" value="twoPage" checked>
+                    Two-Page Mode
+                </label>
+                <small>Giant kanji on first page, then hiragana/romaji/english/sentence on second page</small>
+            </div>
+            
+            <div class="setting-group">
+                <label>
+                    <input type="radio" name="bigKanjiMode" id="singlePageMode" value="singlePage">
+                    Single-Page Mode
+                </label>
+                <small>Giant kanji with all information on the same page</small>
+            </div>
+            
+            <div class="modal-buttons">
+                <button id="printBigKanjiStart" class="control-btn">🎌 Print Big Kanji</button>
+                <button id="cancelBigKanjiPrint" class="control-btn">❌ Cancel</button>
+            </div>
+        </div>
+    </div>
+
     <!-- Print Cloze Settings Modal -->
     <div id="printClozeModal" class="modal">
         <div class="modal-content">
@@ -276,6 +307,7 @@
                 <button id="printRhymesBtn" class="control-btn">🎵 Print Rhymes</button>
                 <button id="printSentencesBtn" class="control-btn">📝 Print Sentences</button>
                 <button id="printCombinedBtn" class="control-btn">📚 Print Combined</button>
+                <button id="printBigKanjiBtn" class="control-btn">🎌 Big Kanji Print</button>
                 <input type="file" id="fileInput" accept=".json" style="display: none;">
                 <input type="file" id="batchFileInput" accept=".json" multiple style="display: none;">
             </div>

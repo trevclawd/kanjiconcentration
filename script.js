@@ -3102,6 +3102,467 @@ class KanjiConcentrationGame {
         };
     }
 
+    // Big Kanji Print Modal Functionality
+    showBigKanjiPrintModal() {
+        document.getElementById('bigKanjiPrintModal').style.display = 'block';
+    }
+
+    closeBigKanjiPrintModal() {
+        document.getElementById('bigKanjiPrintModal').style.display = 'none';
+    }
+
+    printBigKanji() {
+        // Get the selected mode
+        const twoPageMode = document.getElementById('twoPageMode').checked;
+        const singlePageMode = document.getElementById('singlePageMode').checked;
+        
+        // Close the modal
+        this.closeBigKanjiPrintModal();
+        
+        // Create a new window for printing
+        const printWindow = window.open('', '_blank');
+        
+        // Generate the appropriate print HTML
+        let printHTML;
+        if (twoPageMode) {
+            printHTML = this.generateBigKanjiTwoPageHTML();
+        } else {
+            printHTML = this.generateBigKanjiSinglePageHTML();
+        }
+        
+        // Write the HTML to the new window
+        printWindow.document.write(printHTML);
+        printWindow.document.close();
+        
+        // Wait for content to load, then print
+        printWindow.onload = () => {
+            printWindow.print();
+        };
+    }
+
+    generateBigKanjiTwoPageHTML() {
+        const currentDate = new Date().toLocaleDateString();
+        
+        let html = `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Kanji Study Sheets - Two Page Mode</title>
+    <style>
+        @media print {
+            body { margin: 0; }
+            .no-print { display: none; }
+        }
+        
+        body {
+            font-family: 'Arial', 'Hiragino Sans', 'Yu Gothic', 'Meiryo', 'Takao', 'IPAexGothic', 'IPAPGothic', 'VL PGothic', 'Noto Sans CJK JP', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: white;
+            color: black;
+        }
+        
+        .page {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            page-break-after: always;
+            padding: 2rem;
+            box-sizing: border-box;
+            position: relative;
+            background: white;
+        }
+        
+        .giant-kanji {
+            font-size: 25rem;
+            font-weight: bold;
+            color: black;
+            font-family: 'Hiragino Sans', 'Yu Gothic', 'Meiryo', 'MS Gothic', 'Takao', 'IPAexGothic', 'IPAPGothic', 'VL PGothic', 'Noto Sans CJK JP', 'Arial Unicode MS', sans-serif;
+            line-height: 0.8;
+            margin: 0;
+        }
+        
+        .card-number {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            font-size: 2rem;
+            font-weight: bold;
+            color: black;
+            background: white;
+            padding: 1rem 1.5rem;
+            border: 2px solid black;
+        }
+        
+        .info-content {
+            max-width: 900px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .hiragana-display {
+            font-size: 6rem;
+            font-weight: bold;
+            color: black;
+            margin: 1.5rem 0;
+            font-family: 'Hiragino Sans', 'Yu Gothic', 'Meiryo', 'MS Gothic', sans-serif;
+        }
+        
+        .romaji-display {
+            font-size: 5rem;
+            font-weight: bold;
+            color: black;
+            margin: 1.5rem 0;
+        }
+        
+        .english-display {
+            font-size: 4rem;
+            color: black;
+            margin: 1.5rem 0;
+            font-style: italic;
+        }
+        
+        .rhyme-display {
+            background: white;
+            border: 4px solid black;
+            padding: 2rem;
+            font-size: 2.5rem;
+            font-style: italic;
+            font-weight: 600;
+            color: black;
+            margin: 2rem 0;
+            max-width: 100%;
+            word-wrap: break-word;
+        }
+        
+        .sentence-display {
+            background: white;
+            border: 4px solid black;
+            padding: 2rem;
+            margin: 2rem 0;
+            max-width: 100%;
+        }
+        
+        .sentence-kanji {
+            font-size: 3rem;
+            font-weight: bold;
+            color: black;
+            margin-bottom: 1rem;
+            font-family: 'Hiragino Sans', 'Yu Gothic', 'Meiryo', 'MS Gothic', sans-serif;
+            word-wrap: break-word;
+        }
+        
+        .sentence-romaji {
+            font-size: 2.2rem;
+            color: black;
+            margin-bottom: 1rem;
+            font-style: italic;
+            word-wrap: break-word;
+        }
+        
+        .sentence-english {
+            font-size: 2rem;
+            color: black;
+            word-wrap: break-word;
+        }
+        
+        @media print {
+            .page {
+                width: 100%;
+                height: 100vh;
+                margin: 0;
+                padding: 1.5rem;
+            }
+            
+            .giant-kanji {
+                font-size: 20rem;
+            }
+            
+            .card-number {
+                font-size: 1.5rem;
+                top: 1rem;
+                right: 1rem;
+                padding: 0.5rem 1rem;
+            }
+            
+            .hiragana-display {
+                font-size: 5rem;
+            }
+            
+            .romaji-display {
+                font-size: 4rem;
+            }
+            
+            .english-display {
+                font-size: 3rem;
+            }
+            
+            .rhyme-display {
+                font-size: 2rem;
+                padding: 1.5rem;
+            }
+            
+            .sentence-kanji {
+                font-size: 2.5rem;
+            }
+            
+            .sentence-romaji {
+                font-size: 1.8rem;
+            }
+            
+            .sentence-english {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>`;
+
+        // Generate pages for each card
+        this.cards.forEach((card, index) => {
+            // Kanji page (front)
+            html += `
+    <div class="page">
+        <div class="card-number">Card ${index + 1} of ${this.cards.length}</div>
+        <div class="giant-kanji">${card.kanji}</div>
+    </div>`;
+            
+            // Info page (back)
+            html += `
+    <div class="page">
+        <div class="card-number">Card ${index + 1} of ${this.cards.length}</div>
+        <div class="info-content">
+            <div class="hiragana-display">${card.hiragana}</div>
+            <div class="romaji-display">${card.romaji}</div>
+            <div class="english-display">${card.english}</div>
+            <div class="rhyme-display">"${card.rhyme}"</div>`;
+            
+            if (card.sentence) {
+                html += `
+            <div class="sentence-display">
+                <div class="sentence-kanji">${card.sentence.kanji}</div>
+                <div class="sentence-romaji">${card.sentence.romaji}</div>
+                <div class="sentence-english">${card.sentence.english}</div>
+            </div>`;
+            }
+            
+            html += `
+        </div>
+    </div>`;
+        });
+
+        html += `
+</body>
+</html>`;
+
+        return html;
+    }
+
+    generateBigKanjiSinglePageHTML() {
+        const currentDate = new Date().toLocaleDateString();
+        
+        let html = `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Kanji Study Sheets - Single Page Mode</title>
+    <style>
+        @media print {
+            body { margin: 0; }
+            .no-print { display: none; }
+        }
+        
+        body {
+            font-family: 'Arial', 'Hiragino Sans', 'Yu Gothic', 'Meiryo', 'Takao', 'IPAexGothic', 'IPAPGothic', 'VL PGothic', 'Noto Sans CJK JP', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: white;
+            color: black;
+        }
+        
+        .single-page {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            page-break-after: always;
+            padding: 2rem;
+            box-sizing: border-box;
+            gap: 3rem;
+            background: white;
+        }
+        
+        .kanji-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .info-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 2rem;
+        }
+        
+        .giant-kanji {
+            font-size: 15rem;
+            font-weight: bold;
+            color: black;
+            font-family: 'Hiragino Sans', 'Yu Gothic', 'Meiryo', 'MS Gothic', 'Takao', 'IPAexGothic', 'IPAPGothic', 'VL PGothic', 'Noto Sans CJK JP', 'Arial Unicode MS', sans-serif;
+            line-height: 0.8;
+            margin: 0;
+        }
+        
+        .card-number {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            font-size: 2rem;
+            font-weight: bold;
+            color: black;
+            background: white;
+            padding: 1rem 1.5rem;
+            border: 2px solid black;
+        }
+        
+        .hiragana-display {
+            font-size: 3.5rem;
+            font-weight: bold;
+            color: black;
+            margin: 1.5rem 0;
+            font-family: 'Hiragino Sans', 'Yu Gothic', 'Meiryo', 'MS Gothic', sans-serif;
+            text-align: center;
+        }
+        
+        .romaji-display {
+            font-size: 3rem;
+            font-weight: bold;
+            color: black;
+            margin: 1.5rem 0;
+            text-align: center;
+        }
+        
+        .english-display {
+            font-size: 2.5rem;
+            color: black;
+            margin: 1.5rem 0;
+            font-style: italic;
+            text-align: center;
+        }
+        
+        .rhyme-display {
+            background: white;
+            border: 3px solid black;
+            padding: 1.5rem;
+            font-size: 1.8rem;
+            font-style: italic;
+            font-weight: 600;
+            color: black;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        
+        .sentence-display {
+            background: white;
+            border: 3px solid black;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        
+        .sentence-kanji {
+            font-size: 2rem;
+            font-weight: bold;
+            color: black;
+            margin-bottom: 0.8rem;
+            font-family: 'Hiragino Sans', 'Yu Gothic', 'Meiryo', 'MS Gothic', sans-serif;
+        }
+        
+        .sentence-romaji {
+            font-size: 1.5rem;
+            color: black;
+            margin-bottom: 0.8rem;
+            font-style: italic;
+        }
+        
+        .sentence-english {
+            font-size: 1.3rem;
+            color: black;
+        }
+        
+        @media print {
+            .single-page {
+                width: 100%;
+                height: 100vh;
+                margin: 0;
+                padding: 1.5rem;
+                gap: 2rem;
+            }
+            
+            .giant-kanji {
+                font-size: 12rem;
+            }
+            
+            .card-number {
+                font-size: 1.5rem;
+                top: 1rem;
+                right: 1rem;
+                padding: 0.5rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>`;
+
+        // Generate pages for each card
+        this.cards.forEach((card, index) => {
+            html += `
+    <div class="single-page">
+        <div class="card-number">Card ${index + 1} of ${this.cards.length}</div>
+        <div class="kanji-section">
+            <div class="giant-kanji">${card.kanji}</div>
+        </div>
+        <div class="info-section">
+            <div class="hiragana-display">${card.hiragana}</div>
+            <div class="romaji-display">${card.romaji}</div>
+            <div class="english-display">${card.english}</div>
+            <div class="rhyme-display">"${card.rhyme}"</div>`;
+            
+            if (card.sentence) {
+                html += `
+            <div class="sentence-display">
+                <div class="sentence-kanji">${card.sentence.kanji}</div>
+                <div class="sentence-romaji">${card.sentence.romaji}</div>
+                <div class="sentence-english">${card.sentence.english}</div>
+            </div>`;
+            }
+            
+            html += `
+        </div>
+    </div>`;
+        });
+
+        html += `
+</body>
+</html>`;
+
+        return html;
+    }
+
     generateCombinedHTML() {
         const currentDate = new Date().toLocaleDateString();
         
@@ -4674,6 +5135,23 @@ class KanjiConcentrationGame {
         // Print combined functionality
         document.getElementById('printCombinedBtn').addEventListener('click', () => {
             this.printCombined();
+        });
+        
+        // Big Kanji Print functionality
+        document.getElementById('printBigKanjiBtn').addEventListener('click', () => {
+            this.showBigKanjiPrintModal();
+        });
+        
+        document.getElementById('bigKanjiPrintClose').addEventListener('click', () => {
+            this.closeBigKanjiPrintModal();
+        });
+        
+        document.getElementById('printBigKanjiStart').addEventListener('click', () => {
+            this.printBigKanji();
+        });
+        
+        document.getElementById('cancelBigKanjiPrint').addEventListener('click', () => {
+            this.closeBigKanjiPrintModal();
         });
         
         // Story mode controls
