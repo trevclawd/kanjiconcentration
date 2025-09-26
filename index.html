@@ -112,6 +112,21 @@
                 <small>Giant kanji with all information on the same page</small>
             </div>
             
+            <div class="setting-group">
+                <h3 style="color: #1e3c72; margin-bottom: 1rem;">Kanji Size Settings</h3>
+                <label for="kanjiSizeSlider">Kanji Size:</label>
+                <input type="range" id="kanjiSizeSlider" min="25" max="200" value="100" step="5">
+                <span id="kanjiSizeValue">100%</span>
+                <small>Adjust the size of the kanji characters (50% - 200%)</small>
+            </div>
+            
+            <div class="setting-group">
+                <label for="lineSpacingSlider">Line Spacing:</label>
+                <input type="range" id="lineSpacingSlider" min="50" max="150" value="100" step="5">
+                <span id="lineSpacingValue">100%</span>
+                <small>Adjust spacing between lines to prevent overlapping (50% - 150%)</small>
+            </div>
+            
             <div class="modal-buttons">
                 <button id="printBigKanjiStart" class="control-btn">🎌 Print Big Kanji</button>
                 <button id="cancelBigKanjiPrint" class="control-btn">❌ Cancel</button>

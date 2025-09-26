@@ -3143,6 +3143,15 @@ class KanjiConcentrationGame {
     generateBigKanjiTwoPageHTML() {
         const currentDate = new Date().toLocaleDateString();
         
+        // Get user-selected kanji size and line spacing
+        const kanjiSize = document.getElementById('kanjiSizeSlider').value;
+        const lineSpacing = document.getElementById('lineSpacingSlider').value;
+        
+        // Calculate font sizes based on user selection
+        const baseFontSize = 20; // Base size in rem for better scaling
+        const adjustedFontSize = (baseFontSize * kanjiSize) / 100;
+        const adjustedLineHeight = Math.max(0.8, lineSpacing / 100); // Minimum line height to prevent overlap
+        
         let html = `
 <!DOCTYPE html>
 <html lang="en">
@@ -3180,11 +3189,11 @@ class KanjiConcentrationGame {
         }
         
         .giant-kanji {
-            font-size: 25rem;
+            font-size: ${adjustedFontSize}rem;
             font-weight: bold;
             color: black;
             font-family: 'Hiragino Sans', 'Yu Gothic', 'Meiryo', 'MS Gothic', 'Takao', 'IPAexGothic', 'IPAPGothic', 'VL PGothic', 'Noto Sans CJK JP', 'Arial Unicode MS', sans-serif;
-            line-height: 0.8;
+            line-height: ${adjustedLineHeight};
             margin: 0;
         }
         
@@ -3283,7 +3292,7 @@ class KanjiConcentrationGame {
             }
             
             .giant-kanji {
-                font-size: 20rem;
+                font-size: ${adjustedFontSize}rem;
             }
             
             .card-number {
@@ -3369,6 +3378,15 @@ class KanjiConcentrationGame {
     generateBigKanjiSinglePageHTML() {
         const currentDate = new Date().toLocaleDateString();
         
+        // Get user-selected kanji size and line spacing
+        const kanjiSize = document.getElementById('kanjiSizeSlider').value;
+        const lineSpacing = document.getElementById('lineSpacingSlider').value;
+        
+        // Calculate font sizes based on user selection
+        const baseFontSize = 12; // Base size in rem for single page mode
+        const adjustedFontSize = (baseFontSize * kanjiSize) / 100;
+        const adjustedLineHeight = Math.max(0.8, lineSpacing / 100); // Minimum line height to prevent overlap
+        
         let html = `
 <!DOCTYPE html>
 <html lang="en">
@@ -3419,11 +3437,11 @@ class KanjiConcentrationGame {
         }
         
         .giant-kanji {
-            font-size: 15rem;
+            font-size: ${adjustedFontSize}rem;
             font-weight: bold;
             color: black;
             font-family: 'Hiragino Sans', 'Yu Gothic', 'Meiryo', 'MS Gothic', 'Takao', 'IPAexGothic', 'IPAPGothic', 'VL PGothic', 'Noto Sans CJK JP', 'Arial Unicode MS', sans-serif;
-            line-height: 0.8;
+            line-height: ${adjustedLineHeight};
             margin: 0;
         }
         
@@ -5152,6 +5170,15 @@ class KanjiConcentrationGame {
         
         document.getElementById('cancelBigKanjiPrint').addEventListener('click', () => {
             this.closeBigKanjiPrintModal();
+        });
+        
+        // Big Kanji Print slider controls
+        document.getElementById('kanjiSizeSlider').addEventListener('input', (e) => {
+            document.getElementById('kanjiSizeValue').textContent = e.target.value + '%';
+        });
+        
+        document.getElementById('lineSpacingSlider').addEventListener('input', (e) => {
+            document.getElementById('lineSpacingValue').textContent = e.target.value + '%';
         });
         
         // Story mode controls

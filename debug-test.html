@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Kanji Print Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f0f0f0;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        
+        .modal-content {
+            background-color: white;
+            margin: 5% auto;
+            padding: 2rem;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 500px;
+            max-height: 85vh;
+            overflow-y: auto;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+        
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .close:hover {
+            color: #000;
+        }
+        
+        .setting-group {
+            margin: 1.5rem 0;
+        }
+        
+        .setting-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        
+        .setting-group input[type="range"] {
+            width: 100%;
+            margin: 10px 0;
+        }
+        
+        .modal-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        
+        .control-btn {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            background: #4CAF50;
+            color: white;
+        }
+        
+        .control-btn:hover {
+            background: #45a049;
+        }
+        
+        #testResult {
+            margin-top: 20px;
+            padding: 15px;
+            background: #e8f5e8;
+            border: 1px solid #4CAF50;
+            border-radius: 5px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Big Kanji Print Size Control Test</h1>
+    <p>This is a test to verify the kanji size controls are working properly.</p>
+    
+    <button id="openModal" class="control-btn">🎌 Open Big Kanji Print Modal</button>
+    
+    <div id="testResult">
+        <h3>Test Results:</h3>
+        <p><strong>Kanji Size:</strong> <span id="resultKanjiSize">100%</span></p>
+        <p><strong>Line Spacing:</strong> <span id="resultLineSpacing">100%</span></p>
+    </div>
+
+    <!-- Big Kanji Print Settings Modal -->
+    <div id="bigKanjiPrintModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="bigKanjiPrintClose">&times;</span>
+            <h2>Big Kanji Print Settings</h2>
+            <p>Choose your print format for large kanji study sheets:</p>
+            
+            <div class="setting-group">
+                <h3 style="color: #1e3c72; margin-bottom: 1rem;">Print Mode</h3>
+                <label>
+                    <input type="radio" name="bigKanjiMode" id="twoPageMode" value="twoPage" checked>
+                    Two-Page Mode
+                </label>
+                <small>Giant kanji on first page, then hiragana/romaji/english/sentence on second page</small>
+            </div>
+            
+            <div class="setting-group">
+                <label>
+                    <input type="radio" name="bigKanjiMode" id="singlePageMode" value="singlePage">
+                    Single-Page Mode
+                </label>
+                <small>Giant kanji with all information on the same page</small>
+            </div>
+            
+            <div class="setting-group">
+                <h3 style="color: #1e3c72; margin-bottom: 1rem;">Kanji Size Settings</h3>
+                <label for="kanjiSizeSlider">Kanji Size:</label>
+                <input type="range" id="kanjiSizeSlider" min="50" max="200" value="100" step="5">
+                <span id="kanjiSizeValue">100%</span>
+                <small>Adjust the size of the kanji characters (50% - 200%)</small>
+            </div>
+            
+            <div class="setting-group">
+                <label for="lineSpacingSlider">Line Spacing:</label>
+                <input type="range" id="lineSpacingSlider" min="50" max="150" value="100" step="5">
+                <span id="lineSpacingValue">100%</span>
+                <small>Adjust spacing between lines to prevent overlapping (50% - 150%)</small>
+            </div>
+            
+            <div class="modal-buttons">
+                <button id="testPrint" class="control-btn">🧪 Test Settings</button>
+                <button id="cancelTest" class="control-btn">❌ Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Modal functionality
+        const modal = document.getElementById('bigKanjiPrintModal');
+        const openBtn = document.getElementById('openModal');
+        const closeBtn = document.getElementById('bigKanjiPrintClose');
+        const cancelBtn = document.getElementById('cancelTest');
+        const testBtn = document.getElementById('testPrint');
+        
+        // Slider elements
+        const kanjiSizeSlider = document.getElementById('kanjiSizeSlider');
+        const kanjiSizeValue = document.getElementById('kanjiSizeValue');
+        const lineSpacingSlider = document.getElementById('lineSpacingSlider');
+        const lineSpacingValue = document.getElementById('lineSpacingValue');
+        
+        // Result elements
+        const testResult = document.getElementById('testResult');
+        const resultKanjiSize = document.getElementById('resultKanjiSize');
+        const resultLineSpacing = document.getElementById('resultLineSpacing');
+        
+        // Open modal
+        openBtn.addEventListener('click', () => {
+            modal.style.display = 'block';
+        });
+        
+        // Close modal
+        closeBtn.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+        
+        cancelBtn.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+        
+        // Close modal when clicking outside
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+        
+        // Slider event listeners
+        kanjiSizeSlider.addEventListener('input', (e) => {
+            kanjiSizeValue.textContent = e.target.value + '%';
+        });
+        
+        lineSpacingSlider.addEventListener('input', (e) => {
+            lineSpacingValue.textContent = e.target.value + '%';
+        });
+        
+        // Test button
+        testBtn.addEventListener('click', () => {
+            const kanjiSize = kanjiSizeSlider.value;
+            const lineSpacing = lineSpacingSlider.value;
+            
+            resultKanjiSize.textContent = kanjiSize + '%';
+            resultLineSpacing.textContent = lineSpacing + '%';
+            
+            testResult.style.display = 'block';
+            modal.style.display = 'none';
+            
+            console.log('Kanji Size:', kanjiSize + '%');
+            console.log('Line Spacing:', lineSpacing + '%');
+            
+            alert(`Settings captured successfully!\nKanji Size: ${kanjiSize}%\nLine Spacing: ${lineSpacing}%`);
+        });
+    </script>
+</body>
+</html>
