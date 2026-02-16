@@ -5229,8 +5229,6 @@ class KanjiConcentrationGame {
         this.audioCache[cacheKey] = blob;
         return blob;
     }
-        return blob;
-    }
 
     async playAllSentences() {
         if (this.isPlayingAll) return;
