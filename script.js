@@ -76,8 +76,13 @@ class KanjiConcentrationGame {
         document.getElementById('timerDuration').value = this.settings.timerDuration;
         document.getElementById('timedMemoryDuration').value = this.settings.timedMemoryDuration;
         document.getElementById('timedMemoryTimerEnabled').checked = this.settings.timedMemoryTimerEnabled;
-        document.getElementById('timedMemorySpeakJapanese').checked = this.settings.timedMemorySpeakJapanese;
-        document.getElementById('timedMemorySpeakEnglish').checked = this.settings.timedMemorySpeakEnglish;
+        
+        const speakJapaneseEl = document.getElementById('timedMemorySpeakJapanese');
+        if (speakJapaneseEl) speakJapaneseEl.checked = this.settings.timedMemorySpeakJapanese;
+        
+        const speakEnglishEl = document.getElementById('timedMemorySpeakEnglish');
+        if (speakEnglishEl) speakEnglishEl.checked = this.settings.timedMemorySpeakEnglish;
+        
         const apiKeyInput = document.getElementById('openaiApiKey');
         if (apiKeyInput) apiKeyInput.value = this.settings.openaiApiKey || '';
     }
@@ -5329,8 +5334,13 @@ class KanjiConcentrationGame {
             this.settings.timerDuration = parseInt(document.getElementById('timerDuration').value);
             this.settings.timedMemoryDuration = parseInt(document.getElementById('timedMemoryDuration').value);
             this.settings.timedMemoryTimerEnabled = document.getElementById('timedMemoryTimerEnabled').checked;
-            this.settings.timedMemorySpeakJapanese = document.getElementById('timedMemorySpeakJapanese').checked;
-            this.settings.timedMemorySpeakEnglish = document.getElementById('timedMemorySpeakEnglish').checked;
+            
+            const speakJapaneseEl = document.getElementById('timedMemorySpeakJapanese');
+            if (speakJapaneseEl) this.settings.timedMemorySpeakJapanese = speakJapaneseEl.checked;
+            
+            const speakEnglishEl = document.getElementById('timedMemorySpeakEnglish');
+            if (speakEnglishEl) this.settings.timedMemorySpeakEnglish = speakEnglishEl.checked;
+            
             const apiKeyInput = document.getElementById('openaiApiKey');
             if (apiKeyInput) this.settings.openaiApiKey = apiKeyInput.value;
             this.saveSettings();
