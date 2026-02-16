@@ -1,0 +1,23 @@
+{
+  "name": "kanjiconcentration",
+  "version": "1.0.0",
+  "description": "A web-based memory game that helps you learn Japanese Kanji characters through a concentration/memory card game format. Match Kanji cards with their corresponding Romaji translations while enjoying beautiful rhyming phrases that aid memorization.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fgeorgeiop/kanjiconcentration.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fgeorgeiop/kanjiconcentration/issues"
+  },
+  "homepage": "https://github.com/fgeorgeiop/kanjiconcentration#readme",
+  "dependencies": {
+    "serve": "^14.2.5"
+  }
+}

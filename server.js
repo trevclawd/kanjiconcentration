@@ -5,6 +5,7 @@ const url = require('url');
 
 const PORT = 8890;
 const ROOT_DIR = __dirname;
+const OPENAI_KEY = process.env.OPENAI_API_KEY || '';
 
 const MIME_TYPES = {
   '.html': 'text/html',
@@ -23,6 +24,13 @@ const server = http.createServer((req, res) => {
   const pathname = parsedUrl.pathname;
   
   console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}`);
+  
+  // API endpoint for OpenAI key
+  if (pathname === '/api/openai-key') {
+    res.writeHead(200, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify({ key: OPENAI_KEY }));
+    return;
+  }
   
   let filePath = path.join(ROOT_DIR, pathname === '/' ? 'index.html' : pathname);
   const ext = path.extname(filePath).toLowerCase();

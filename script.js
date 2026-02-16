@@ -36,9 +36,22 @@ class KanjiConcentrationGame {
 
     init() {
         this.loadSettings();
+        this.loadOpenAIKey();
         this.loadSampleData();
         this.setupEventListeners();
         this.showPreGameScreen();
+    }
+
+    async loadOpenAIKey() {
+        try {
+            const response = await fetch('/api/openai-key');
+            const data = await response.json();
+            if (data.key) {
+                this.settings.openaiApiKey = data.key;
+            }
+        } catch (e) {
+            console.log('Could not load OpenAI key from server');
+        }
     }
 
     // Settings Management
