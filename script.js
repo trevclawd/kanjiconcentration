@@ -5352,12 +5352,19 @@ class KanjiConcentrationGame {
 
             if (btn) btn.textContent = '▶️';
             
+            // Check if we should stop (before incrementing)
+            if (!this.isPlayingAll) break;
+            
             // Move to next card or loop back
             i++;
             if (i >= cardsWithSentences.length) {
-                if (this.listenLoop && this.isPlayingAll) {
+                // Reached the end
+                console.log('Reached end of sentences. Loop:', this.listenLoop, 'isPlayingAll:', this.isPlayingAll);
+                if (this.listenLoop) {
                     i = 0;  // Loop back to beginning
+                    console.log('Looping back to start');
                 } else {
+                    console.log('Not looping, stopping');
                     break;  // Stop if not looping
                 }
             }
