@@ -23,6 +23,7 @@ class KanjiConcentrationGame {
         this.isGameActive = false;
         this.currentAudio = null;
         this.isPlayingAll = false;
+        this.audioCache = {};  // Cache for TTS audio blobs
         
         // Card selection functionality
         this.isCardSelectionMode = false;
@@ -5096,6 +5097,11 @@ class KanjiConcentrationGame {
     }
 
     async getOpenAITTS(text) {
+        // Check cache first
+        if (this.audioCache[text]) {
+            return this.audioCache[text];
+        }
+        
         const response = await fetch('https://api.openai.com/v1/audio/speech', {
             method: 'POST',
             headers: {
@@ -5113,7 +5119,10 @@ class KanjiConcentrationGame {
             throw new Error(`OpenAI API error: ${response.status}`);
         }
 
-        return await response.blob();
+        const blob = await response.blob();
+        // Cache the result
+        this.audioCache[text] = blob;
+        return blob;
     }
 
     async playAllSentences() {
