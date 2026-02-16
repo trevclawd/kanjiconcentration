@@ -5252,15 +5252,15 @@ class KanjiConcentrationGame {
         
         if (language === 'japanese') {
             instructions = 'Speak only Japanese with natural native pronunciation (標準語). Read dates and numbers in Japanese.';
-            voice = 'coral';  // Japanese voice
+            voice = 'coral';  // Female Japanese voice
             // Add Japanese punctuation if missing
             if (!inputText.endsWith('。') && !inputText.endsWith('！') && !inputText.endsWith('？')) {
                 inputText = inputText + '。';
             }
         } else {
-            // English - use different voice for contrast
+            // English - use different female voice for contrast
             instructions = 'Speak in clear, natural English. Do not use Japanese pronunciation. Read the text as normal English words.';
-            voice = 'onyx';  // English voice (different from Japanese)
+            voice = 'nova';  // Female English voice
             // Add English punctuation if missing
             if (!inputText.endsWith('.') && !inputText.endsWith('!') && !inputText.endsWith('?')) {
                 inputText = inputText + '.';
