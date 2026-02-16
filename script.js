@@ -37,10 +37,10 @@ class KanjiConcentrationGame {
         this.init();
     }
 
-    init() {
+    async init() {
         this.loadSettings();
         this.loadOpenAIKey();
-        this.loadSampleData();
+        await this.loadSampleData();
         this.setupEventListeners();
         this.showPreGameScreen();
     }
