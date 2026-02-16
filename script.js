@@ -5001,9 +5001,9 @@ class KanjiConcentrationGame {
 
     // Listen to Sentences Mode Functionality
     startListenSentencesMode() {
-        if (!this.settings.openaiApiKey) {
-            alert('Please set your OpenAI API key in Settings to use this feature.');
-            return;
+        // Preload voices for Web Speech API
+        if ('speechSynthesis' in window) {
+            speechSynthesis.getVoices();
         }
         this.showListenSentencesScreen();
         this.displayListenSentencesList();
@@ -5068,7 +5068,7 @@ class KanjiConcentrationGame {
     }
 
     async playSentence(card, index) {
-        if (!card.sentence || !card.sentence.romaji) {
+        if (!card.sentence || (!card.sentence.kanji && !card.sentence.romaji)) {
             alert('No sentence to play for this card.');
             return;
         }
@@ -5077,23 +5077,58 @@ class KanjiConcentrationGame {
         this.stopPlayback();
 
         const btn = document.querySelector(`.listen-play-btn[data-index="${index}"]`);
-        if (btn) btn.textContent = '⏳';
+        if (btn) btn.textContent = '🔊';
 
-        try {
-            const audioBlob = await this.getOpenAITTS(card.sentence.romaji);
-            if (audioBlob) {
-                this.currentAudio = new Audio(URL.createObjectURL(audioBlob));
-                this.currentAudio.onended = () => {
-                    if (btn) btn.textContent = '▶️';
-                    this.currentAudio = null;
-                };
-                this.currentAudio.play();
+        // Use Web Speech API for Japanese TTS (better pronunciation)
+        const text = card.sentence.kanji || card.sentence.romaji;
+        
+        if ('speechSynthesis' in window) {
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'ja-JP';
+            utterance.rate = 0.9;
+            
+            // Find Japanese voice if available
+            const voices = speechSynthesis.getVoices();
+            const japaneseVoice = voices.find(v => v.lang.includes('ja'));
+            if (japaneseVoice) {
+                utterance.voice = japaneseVoice;
             }
-        } catch (error) {
-            console.error('TTS Error:', error);
-            alert('Failed to play audio. Check your API key and try again.');
-            if (btn) btn.textContent = '▶️';
+            
+            utterance.onend = () => {
+                if (btn) btn.textContent = '▶️';
+            };
+            utterance.onerror = () => {
+                if (btn) btn.textContent = '▶️';
+            };
+            
+            this.currentSpeech = utterance;
+            speechSynthesis.speak(utterance);
+        } else {
+            // Fallback to OpenAI TTS
+            try {
+                const audioBlob = await this.getOpenAITTS(card.sentence.romaji);
+                if (audioBlob) {
+                    this.currentAudio = new Audio(URL.createObjectURL(audioBlob));
+                    this.currentAudio.onended = () => {
+                        if (btn) btn.textContent = '▶️';
+                        this.currentAudio = null;
+                    };
+                    this.currentAudio.play();
+                }
+            } catch (error) {
+                console.error('TTS Error:', error);
+                alert('Failed to play audio.');
+                if (btn) btn.textContent = '▶️';
+            }
         }
+    }
+
+    clearTTSCache() {
+        this.audioCache = {};
+        if (speechSynthesis.speaking) {
+            speechSynthesis.cancel();
+        }
+        alert('TTS cache cleared!');
     }
 
     async getOpenAITTS(text) {
@@ -5129,7 +5164,7 @@ class KanjiConcentrationGame {
         if (this.isPlayingAll) return;
         
         const cardsToUse = this.getCardsForGame();
-        const cardsWithSentences = cardsToUse.filter(card => card.sentence && card.sentence.romaji);
+        const cardsWithSentences = cardsToUse.filter(card => card.sentence && card.sentence.kanji);
         
         if (cardsWithSentences.length === 0) {
             alert('No sentences to play.');
@@ -5153,18 +5188,26 @@ class KanjiConcentrationGame {
                 btn.textContent = '🔊';
             }
 
-            try {
-                const audioBlob = await this.getOpenAITTS(card.sentence.romaji);
-                if (audioBlob && this.isPlayingAll) {
-                    await new Promise((resolve) => {
-                        this.currentAudio = new Audio(URL.createObjectURL(audioBlob));
-                        this.currentAudio.onended = resolve;
-                        this.currentAudio.onerror = resolve;
-                        this.currentAudio.play();
-                    });
-                }
-            } catch (error) {
-                console.error('TTS Error for card:', card.kanji, error);
+            // Use Web Speech API
+            if ('speechSynthesis' in window && this.isPlayingAll) {
+                const text = card.sentence.kanji || card.sentence.romaji;
+                await new Promise((resolve) => {
+                    const utterance = new SpeechSynthesisUtterance(text);
+                    utterance.lang = 'ja-JP';
+                    utterance.rate = 0.9;
+                    
+                    const voices = speechSynthesis.getVoices();
+                    const japaneseVoice = voices.find(v => v.lang.includes('ja'));
+                    if (japaneseVoice) {
+                        utterance.voice = japaneseVoice;
+                    }
+                    
+                    utterance.onend = resolve;
+                    utterance.onerror = resolve;
+                    
+                    this.currentSpeech = utterance;
+                    speechSynthesis.speak(utterance);
+                });
             }
 
             if (btn) btn.textContent = '▶️';
@@ -5183,6 +5226,10 @@ class KanjiConcentrationGame {
         if (this.currentAudio) {
             this.currentAudio.pause();
             this.currentAudio = null;
+        }
+        // Cancel Web Speech API
+        if ('speechSynthesis' in window) {
+            speechSynthesis.cancel();
         }
         const playAllBtn = document.getElementById('playAllSentencesBtn');
         if (playAllBtn) {
@@ -5599,6 +5646,10 @@ class KanjiConcentrationGame {
         
         document.getElementById('toggleListenEnglish').addEventListener('click', () => {
             this.toggleListenSentenceVisibility('english');
+        });
+        
+        document.getElementById('clearTTSCacheBtn').addEventListener('click', () => {
+            this.clearTTSCache();
         });
         
         // Timed Memory Mode controls
