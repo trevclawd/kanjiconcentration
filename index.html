@@ -35,6 +35,11 @@
                 <label for="timedMemoryTimerEnabled">Enable timer in timed memory mode:</label>
                 <input type="checkbox" id="timedMemoryTimerEnabled" checked>
             </div>
+            <div class="setting-group">
+                <label for="openaiApiKey">OpenAI API Key (for TTS):</label>
+                <input type="password" id="openaiApiKey" placeholder="sk-..." style="width: 100%; margin-top: 5px;">
+                <small>Required for Listen to Sentences mode</small>
+            </div>
             <button id="saveSettings">Save Settings</button>
         </div>
     </div>
@@ -408,6 +413,12 @@
                     <p>Study with a clean side-by-side table of romaji and kanji/hiragana</p>
                     <button class="mode-btn">Start Reading</button>
                 </div>
+                <div class="mode-card" id="listenSentencesMode">
+                    <div class="mode-icon">🎧</div>
+                    <h3>Listen to Sentences</h3>
+                    <p>Read and listen to example sentences with text-to-speech</p>
+                    <button class="mode-btn">Start Listening</button>
+                </div>
             </div>
         </div>
 
@@ -498,6 +509,31 @@
             <div id="focusedReadingContent" class="focused-reading-content">
                 <div id="focusedReadingTable" class="focused-reading-table">
                     <!-- Table will be generated here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Listen to Sentences Screen -->
+        <div id="listenSentencesScreen" class="screen">
+            <div class="listen-sentences-header">
+                <h2>🎧 Listen to Sentences</h2>
+                <p>Read and listen to example sentences</p>
+                <div class="listen-sentences-controls">
+                    <div class="column-toggles">
+                        <button id="toggleListenRomaji" class="control-btn toggle-btn active">👁️ Romaji</button>
+                        <button id="toggleListenEnglish" class="control-btn toggle-btn active">👁️ English</button>
+                    </div>
+                    <div class="action-controls">
+                        <button id="playAllSentencesBtn" class="control-btn">▶️ Play All</button>
+                        <button id="stopPlaybackBtn" class="control-btn">⏹️ Stop</button>
+                        <button id="backToModeSelectFromListen" class="control-btn">🏠 Mode Select</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="listenSentencesContent" class="listen-sentences-content">
+                <div id="listenSentencesList" class="listen-sentences-list">
+                    <!-- Sentences will be generated here -->
                 </div>
             </div>
         </div>

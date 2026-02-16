@@ -16,10 +16,13 @@ class KanjiConcentrationGame {
             autoAdvance: false,
             timerDuration: 60,
             timedMemoryDuration: 5,
-            timedMemoryTimerEnabled: true
+            timedMemoryTimerEnabled: true,
+            openaiApiKey: ''
         };
         this.preGameTimer = null;
         this.isGameActive = false;
+        this.currentAudio = null;
+        this.isPlayingAll = false;
         
         // Card selection functionality
         this.isCardSelectionMode = false;
@@ -57,6 +60,8 @@ class KanjiConcentrationGame {
         document.getElementById('timerDuration').value = this.settings.timerDuration;
         document.getElementById('timedMemoryDuration').value = this.settings.timedMemoryDuration;
         document.getElementById('timedMemoryTimerEnabled').checked = this.settings.timedMemoryTimerEnabled;
+        const apiKeyInput = document.getElementById('openaiApiKey');
+        if (apiKeyInput) apiKeyInput.value = this.settings.openaiApiKey || '';
     }
 
     // Data Management
@@ -1990,6 +1995,7 @@ class KanjiConcentrationGame {
         document.getElementById('dragDropScreen').classList.remove('active');
         document.getElementById('storyScreen').classList.remove('active');
         document.getElementById('focusedReadingScreen').classList.remove('active');
+        document.getElementById('listenSentencesScreen').classList.remove('active');
     }
 
     // Drag & Drop Mode
@@ -4979,6 +4985,207 @@ class KanjiConcentrationGame {
         return false;
     }
 
+    // Listen to Sentences Mode Functionality
+    startListenSentencesMode() {
+        if (!this.settings.openaiApiKey) {
+            alert('Please set your OpenAI API key in Settings to use this feature.');
+            return;
+        }
+        this.showListenSentencesScreen();
+        this.displayListenSentencesList();
+    }
+
+    showListenSentencesScreen() {
+        document.getElementById('gameModeScreen').classList.remove('active');
+        document.getElementById('preGameScreen').classList.remove('active');
+        document.getElementById('gameScreen').classList.remove('active');
+        document.getElementById('dragDropScreen').classList.remove('active');
+        document.getElementById('storyScreen').classList.remove('active');
+        document.getElementById('focusedReadingScreen').classList.remove('active');
+        document.getElementById('listenSentencesScreen').classList.add('active');
+    }
+
+    displayListenSentencesList() {
+        const listContainer = document.getElementById('listenSentencesList');
+        listContainer.innerHTML = '';
+
+        const cardsToUse = this.getCardsForGame();
+        const cardsWithSentences = cardsToUse.filter(card => card.sentence && card.sentence.kanji);
+
+        if (cardsWithSentences.length === 0) {
+            listContainer.innerHTML = '<p class="no-sentences-msg">No sentences available. Import a deck with sentence data.</p>';
+            return;
+        }
+
+        cardsWithSentences.forEach((card, index) => {
+            const sentenceItem = document.createElement('div');
+            sentenceItem.className = 'listen-sentence-item';
+            sentenceItem.dataset.index = index;
+            
+            sentenceItem.innerHTML = `
+                <div class="listen-sentence-header">
+                    <span class="listen-sentence-number">${index + 1}</span>
+                    <div class="listen-sentence-vocab">
+                        <span class="listen-sentence-kanji">${card.kanji}</span>
+                        <span class="listen-sentence-romaji-vocab">${card.romaji}</span>
+                        <span class="listen-sentence-english-vocab">${card.english}</span>
+                    </div>
+                    <button class="listen-play-btn" data-index="${index}" title="Play sentence">
+                        ▶️
+                    </button>
+                </div>
+                <div class="listen-sentence-content">
+                    <div class="listen-sentence-japanese">${card.sentence.kanji}</div>
+                    <div class="listen-sentence-romaji">${card.sentence.romaji || ''}</div>
+                    <div class="listen-sentence-english">${card.sentence.english || ''}</div>
+                </div>
+            `;
+            
+            listContainer.appendChild(sentenceItem);
+        });
+
+        // Add click handlers for play buttons
+        listContainer.querySelectorAll('.listen-play-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const index = parseInt(e.target.dataset.index);
+                this.playSentence(cardsWithSentences[index], index);
+            });
+        });
+    }
+
+    async playSentence(card, index) {
+        if (!card.sentence || !card.sentence.romaji) {
+            alert('No sentence to play for this card.');
+            return;
+        }
+
+        // Stop any currently playing audio
+        this.stopPlayback();
+
+        const btn = document.querySelector(`.listen-play-btn[data-index="${index}"]`);
+        if (btn) btn.textContent = '⏳';
+
+        try {
+            const audioBlob = await this.getOpenAITTS(card.sentence.romaji);
+            if (audioBlob) {
+                this.currentAudio = new Audio(URL.createObjectURL(audioBlob));
+                this.currentAudio.onended = () => {
+                    if (btn) btn.textContent = '▶️';
+                    this.currentAudio = null;
+                };
+                this.currentAudio.play();
+            }
+        } catch (error) {
+            console.error('TTS Error:', error);
+            alert('Failed to play audio. Check your API key and try again.');
+            if (btn) btn.textContent = '▶️';
+        }
+    }
+
+    async getOpenAITTS(text) {
+        const response = await fetch('https://api.openai.com/v1/audio/speech', {
+            method: 'POST',
+            headers: {
+                'Authorization': `Bearer ${this.settings.openaiApiKey}`,
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                model: 'tts-1',
+                input: text,
+                voice: 'alloy'
+            })
+        });
+
+        if (!response.ok) {
+            throw new Error(`OpenAI API error: ${response.status}`);
+        }
+
+        return await response.blob();
+    }
+
+    async playAllSentences() {
+        if (this.isPlayingAll) return;
+        
+        const cardsToUse = this.getCardsForGame();
+        const cardsWithSentences = cardsToUse.filter(card => card.sentence && card.sentence.romaji);
+        
+        if (cardsWithSentences.length === 0) {
+            alert('No sentences to play.');
+            return;
+        }
+
+        this.isPlayingAll = true;
+        document.getElementById('playAllSentencesBtn').textContent = '⏳ Playing...';
+        document.getElementById('playAllSentencesBtn').disabled = true;
+
+        for (let i = 0; i < cardsWithSentences.length && this.isPlayingAll; i++) {
+            const card = cardsWithSentences[i];
+            const btn = document.querySelector(`.listen-play-btn[data-index="${i}"]`);
+            
+            // Highlight current item
+            document.querySelectorAll('.listen-sentence-item').forEach(item => {
+                item.classList.remove('playing');
+            });
+            if (btn) {
+                btn.closest('.listen-sentence-item').classList.add('playing');
+                btn.textContent = '🔊';
+            }
+
+            try {
+                const audioBlob = await this.getOpenAITTS(card.sentence.romaji);
+                if (audioBlob && this.isPlayingAll) {
+                    await new Promise((resolve) => {
+                        this.currentAudio = new Audio(URL.createObjectURL(audioBlob));
+                        this.currentAudio.onended = resolve;
+                        this.currentAudio.onerror = resolve;
+                        this.currentAudio.play();
+                    });
+                }
+            } catch (error) {
+                console.error('TTS Error for card:', card.kanji, error);
+            }
+
+            if (btn) btn.textContent = '▶️';
+        }
+
+        this.isPlayingAll = false;
+        document.getElementById('playAllSentencesBtn').textContent = '▶️ Play All';
+        document.getElementById('playAllSentencesBtn').disabled = false;
+        document.querySelectorAll('.listen-sentence-item').forEach(item => {
+            item.classList.remove('playing');
+        });
+    }
+
+    stopPlayback() {
+        this.isPlayingAll = false;
+        if (this.currentAudio) {
+            this.currentAudio.pause();
+            this.currentAudio = null;
+        }
+        const playAllBtn = document.getElementById('playAllSentencesBtn');
+        if (playAllBtn) {
+            playAllBtn.textContent = '▶️ Play All';
+            playAllBtn.disabled = false;
+        }
+        document.querySelectorAll('.listen-play-btn').forEach(btn => {
+            btn.textContent = '▶️';
+        });
+        document.querySelectorAll('.listen-sentence-item').forEach(item => {
+            item.classList.remove('playing');
+        });
+    }
+
+    toggleListenSentenceVisibility(type) {
+        const elements = document.querySelectorAll(`.listen-sentence-${type}`);
+        const btn = document.getElementById(`toggleListen${type.charAt(0).toUpperCase() + type.slice(1)}`);
+        const isVisible = btn.classList.contains('active');
+        
+        elements.forEach(el => {
+            el.style.display = isVisible ? 'none' : 'block';
+        });
+        btn.classList.toggle('active');
+    }
+
     // Event Listeners
     setupEventListeners() {
         // Settings modal
@@ -4996,6 +5203,8 @@ class KanjiConcentrationGame {
             this.settings.timerDuration = parseInt(document.getElementById('timerDuration').value);
             this.settings.timedMemoryDuration = parseInt(document.getElementById('timedMemoryDuration').value);
             this.settings.timedMemoryTimerEnabled = document.getElementById('timedMemoryTimerEnabled').checked;
+            const apiKeyInput = document.getElementById('openaiApiKey');
+            if (apiKeyInput) this.settings.openaiApiKey = apiKeyInput.value;
             this.saveSettings();
             document.getElementById('settingsModal').style.display = 'none';
             
@@ -5175,6 +5384,10 @@ class KanjiConcentrationGame {
             this.startFocusedReadingMode();
         });
         
+        document.getElementById('listenSentencesMode').addEventListener('click', () => {
+            this.startListenSentencesMode();
+        });
+        
         // Flip control event listeners
         document.getElementById('flipRomajiBtn').addEventListener('click', () => {
             this.flipAllRomajiCards();
@@ -5342,6 +5555,28 @@ class KanjiConcentrationGame {
         
         document.getElementById('toggleKanjiColumn').addEventListener('click', () => {
             this.toggleFocusedReadingColumn('kanji');
+        });
+        
+        // Listen to Sentences Mode controls
+        document.getElementById('playAllSentencesBtn').addEventListener('click', () => {
+            this.playAllSentences();
+        });
+        
+        document.getElementById('stopPlaybackBtn').addEventListener('click', () => {
+            this.stopPlayback();
+        });
+        
+        document.getElementById('backToModeSelectFromListen').addEventListener('click', () => {
+            this.stopPlayback();
+            this.showModeSelectionScreen();
+        });
+        
+        document.getElementById('toggleListenRomaji').addEventListener('click', () => {
+            this.toggleListenSentenceVisibility('romaji');
+        });
+        
+        document.getElementById('toggleListenEnglish').addEventListener('click', () => {
+            this.toggleListenSentenceVisibility('english');
         });
         
         // Timed Memory Mode controls
