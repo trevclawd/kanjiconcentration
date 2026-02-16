@@ -4904,14 +4904,38 @@ class KanjiConcentrationGame {
     }
 
     handleTimedMemoryTimeout() {
-        // Time's up - reveal hidden cards, pause, then proceed to next card
+        // Time's up - reveal hidden cards
         this.stopTimedMemoryTimer();
         this.revealHiddenTimedMemoryCards();
         
-        // Pause for 1 second before showing next card pair
-        setTimeout(() => {
+        // Wait for audio to finish (or max 3 extra seconds) before proceeding
+        const waitForAudio = () => {
+            if (this.currentAudio && !this.currentAudio.paused) {
+                // Audio still playing, wait and check again
+                setTimeout(waitForAudio, 200);
+            } else if (this.timedMemoryAudioQueue && this.timedMemoryAudioQueue.length > 0) {
+                // Still have audio in queue, wait
+                setTimeout(waitForAudio, 200);
+            } else {
+                // Audio done, proceed after short pause
+                setTimeout(() => {
+                    this.proceedToNextTimedMemoryCard();
+                }, 500);
+            }
+        };
+        
+        // Start waiting (with max timeout of 3 seconds)
+        const maxWait = setTimeout(() => {
+            // Force proceed after 3 seconds max
+            if (this.currentAudio) {
+                this.currentAudio.pause();
+                this.currentAudio = null;
+            }
+            this.timedMemoryAudioQueue = [];
             this.proceedToNextTimedMemoryCard();
-        }, 1000);
+        }, 3000);
+        
+        waitForAudio();
     }
 
     revealHiddenTimedMemoryCards() {
@@ -4979,11 +5003,12 @@ class KanjiConcentrationGame {
     handleTimedMemoryThumbsUp() {
         if (!this.timedMemoryActive) return;
         
-        // Stop any TTS audio
+        // Stop any TTS audio and clear queue
         if (this.currentAudio) {
             this.currentAudio.pause();
             this.currentAudio = null;
         }
+        this.timedMemoryAudioQueue = [];
         
         if (!this.settings.timedMemoryTimerEnabled) {
             // Timer is disabled - this is the "Next Card" button
@@ -5001,11 +5026,12 @@ class KanjiConcentrationGame {
     handleTimedMemoryThumbsDown() {
         if (!this.timedMemoryActive) return;
         
-        // Stop any TTS audio
+        // Stop any TTS audio and clear queue
         if (this.currentAudio) {
             this.currentAudio.pause();
             this.currentAudio = null;
         }
+        this.timedMemoryAudioQueue = [];
         
         if (!this.settings.timedMemoryTimerEnabled) {
             // Timer is disabled - this is the "Previous Card" button
@@ -5025,6 +5051,13 @@ class KanjiConcentrationGame {
     }
 
     proceedToNextTimedMemoryCard() {
+        // Stop any playing audio and clear queue before advancing
+        if (this.currentAudio) {
+            this.currentAudio.pause();
+            this.currentAudio = null;
+        }
+        this.timedMemoryAudioQueue = [];
+        
         this.timedMemoryCurrentIndex++;
         
         if (this.timedMemoryCurrentIndex >= this.timedMemoryCards.length) {
@@ -5036,6 +5069,13 @@ class KanjiConcentrationGame {
     }
 
     proceedToPreviousTimedMemoryCard() {
+        // Stop any playing audio and clear queue before going back
+        if (this.currentAudio) {
+            this.currentAudio.pause();
+            this.currentAudio = null;
+        }
+        this.timedMemoryAudioQueue = [];
+        
         if (this.timedMemoryCurrentIndex > 0) {
             this.timedMemoryCurrentIndex--;
             this.displayCurrentTimedMemoryCard();
