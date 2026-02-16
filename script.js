@@ -26,6 +26,7 @@ class KanjiConcentrationGame {
         this.currentAudio = null;
         this.isPlayingAll = false;
         this.audioCache = {};  // Cache for TTS audio blobs
+        this.timedMemoryAudioQueue = [];  // Queue for sequential TTS playback
         
         // Card selection functionality
         this.isCardSelectionMode = false;
@@ -4775,34 +4776,47 @@ class KanjiConcentrationGame {
             this.currentAudio = null;
         }
         
-        // Build the text to speak and determine language
-        let textParts = [];
-        let language = 'japanese';
+        // Build audio queue - separate calls for each language to avoid cross-language issues
+        this.timedMemoryAudioQueue = [];
         
         if (this.settings.timedMemorySpeakJapanese) {
             // Speak the word in Japanese (hiragana for better pronunciation)
-            textParts.push(card.hiragana || card.romaji);
+            const japaneseText = card.hiragana || card.romaji;
+            this.timedMemoryAudioQueue.push({ text: japaneseText, language: 'japanese' });
         }
         
         if (this.settings.timedMemorySpeakEnglish) {
-            // Add a pause between Japanese and English
-            if (textParts.length > 0) {
-                textParts.push('、'); // Japanese comma as separator
-                language = 'mixed'; // Mixed Japanese + English
-            }
-            textParts.push(card.english);
+            // Speak the English meaning - separate call for proper English pronunciation
+            this.timedMemoryAudioQueue.push({ text: card.english, language: 'english' });
         }
         
-        const textToSpeak = textParts.join(' ');
+        // Play the queue sequentially
+        this.playTimedMemoryAudioQueue();
+    }
+
+    async playTimedMemoryAudioQueue() {
+        if (!this.timedMemoryAudioQueue || this.timedMemoryAudioQueue.length === 0) return;
+        
+        const item = this.timedMemoryAudioQueue.shift();
         
         try {
-            const audioBlob = await this.getOpenAITTS(textToSpeak, language);
+            const audioBlob = await this.getOpenAITTS(item.text, item.language);
             if (audioBlob) {
                 this.currentAudio = new Audio(URL.createObjectURL(audioBlob));
+                this.currentAudio.onended = () => {
+                    // Play next item in queue after this one finishes
+                    if (this.timedMemoryAudioQueue.length > 0) {
+                        this.playTimedMemoryAudioQueue();
+                    }
+                };
                 this.currentAudio.play();
             }
         } catch (error) {
             console.error('TTS Error in timed memory:', error);
+            // Try to continue with next item even if this one failed
+            if (this.timedMemoryAudioQueue.length > 0) {
+                this.playTimedMemoryAudioQueue();
+            }
         }
     }
 
@@ -5033,11 +5047,12 @@ class KanjiConcentrationGame {
         this.stopTimedMemoryTimer();
         this.timedMemoryActive = false;
         
-        // Stop any TTS audio
+        // Stop any TTS audio and clear queue
         if (this.currentAudio) {
             this.currentAudio.pause();
             this.currentAudio = null;
         }
+        this.timedMemoryAudioQueue = [];
         
         // Show completion message
         const totalCards = this.timedMemoryCards.length;
@@ -5054,11 +5069,12 @@ class KanjiConcentrationGame {
         this.stopTimedMemoryTimer();
         this.timedMemoryActive = false;
         
-        // Stop any TTS audio
+        // Stop any TTS audio and clear queue
         if (this.currentAudio) {
             this.currentAudio.pause();
             this.currentAudio = null;
         }
+        this.timedMemoryAudioQueue = [];
         
         document.getElementById('timedMemoryOverlay').style.display = 'none';
     }
@@ -5188,21 +5204,23 @@ class KanjiConcentrationGame {
             return this.audioCache[cacheKey];
         }
         
-        // Ensure punctuation for better cadence
-        let inputText = text;
-        if (!inputText.endsWith('。') && !inputText.endsWith('！') && !inputText.endsWith('？') && !inputText.endsWith('.')) {
-            inputText = inputText + '。';
-        }
-        
         // Determine instructions based on language
         let instructions;
+        let inputText = text;
+        
         if (language === 'japanese') {
             instructions = 'Speak only Japanese with natural native pronunciation (標準語). Read dates and numbers in Japanese.';
-        } else if (language === 'english') {
-            instructions = 'Speak in clear, natural English.';
+            // Add Japanese punctuation if missing
+            if (!inputText.endsWith('。') && !inputText.endsWith('！') && !inputText.endsWith('？')) {
+                inputText = inputText + '。';
+            }
         } else {
-            // Mixed - Japanese followed by English
-            instructions = 'First read the Japanese text with native pronunciation (標準語), then pause briefly and read the English text clearly in natural English.';
+            // English
+            instructions = 'Speak in clear, natural English. Do not use Japanese pronunciation. Read the text as normal English words.';
+            // Add English punctuation if missing
+            if (!inputText.endsWith('.') && !inputText.endsWith('!') && !inputText.endsWith('?')) {
+                inputText = inputText + '.';
+            }
         }
         
         const response = await fetch('https://api.openai.com/v1/audio/speech', {
