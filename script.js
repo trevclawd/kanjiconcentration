@@ -5109,6 +5109,13 @@ class KanjiConcentrationGame {
             return this.audioCache[text];
         }
         
+        // Add Japanese language anchor and ensure punctuation for better pronunciation
+        let inputText = text;
+        if (!inputText.endsWith('。') && !inputText.endsWith('！') && !inputText.endsWith('？')) {
+            inputText = inputText + '。';
+        }
+        inputText = `日本語: ${inputText}`;
+        
         const response = await fetch('https://api.openai.com/v1/audio/speech', {
             method: 'POST',
             headers: {
@@ -5116,9 +5123,11 @@ class KanjiConcentrationGame {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                model: 'tts-1',
-                input: text,
-                voice: 'nova'  // nova handles Japanese better
+                model: 'gpt-4o-mini-tts',
+                input: inputText,
+                voice: 'coral',
+                instructions: 'Speak only Japanese with natural native pronunciation (標準語). Read dates and numbers in Japanese.',
+                response_format: 'mp3'
             })
         });
 
@@ -5127,7 +5136,7 @@ class KanjiConcentrationGame {
         }
 
         const blob = await response.blob();
-        // Cache the result
+        // Cache the result (use original text as key)
         this.audioCache[text] = blob;
         return blob;
     }
