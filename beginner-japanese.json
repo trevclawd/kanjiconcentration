@@ -1,0 +1,304 @@
+{
+  "cards": [
+    {
+      "id": "beginner_01",
+      "rank": "A",
+      "suit": "beginner",
+      "kanji": "日",
+      "hiragana": "ひ",
+      "romaji": "hi",
+      "english": "day / sun",
+      "rhyme": "Sun so bright up in the sky, it's Hi",
+      "sentence": {
+        "kanji": "今日はいい日です。",
+        "romaji": "Kyou wa ii hi desu.",
+        "english": "Today is a good day."
+      }
+    },
+    {
+      "id": "beginner_02",
+      "rank": "2",
+      "suit": "beginner",
+      "kanji": "月",
+      "hiragana": "つき",
+      "romaji": "tsuki",
+      "english": "moon / month",
+      "rhyme": "Shining softly in the night, it's Tsuki so bright",
+      "sentence": {
+        "kanji": "月がきれいです。",
+        "romaji": "Tsuki ga kirei desu.",
+        "english": "The moon is beautiful."
+      }
+    },
+    {
+      "id": "beginner_03",
+      "rank": "3",
+      "suit": "beginner",
+      "kanji": "人",
+      "hiragana": "ひと",
+      "romaji": "hito",
+      "english": "person",
+      "rhyme": "Walking tall for all to see, it's Hito you'll agree",
+      "sentence": {
+        "kanji": "あの人は先生です。",
+        "romaji": "Ano hito wa sensei desu.",
+        "english": "That person is a teacher."
+      }
+    },
+    {
+      "id": "beginner_04",
+      "rank": "4",
+      "suit": "beginner",
+      "kanji": "大",
+      "hiragana": "おお",
+      "romaji": "oo",
+      "english": "big / large",
+      "rhyme": "Stretch your arms out wide and free, it's Oo as big can be",
+      "sentence": {
+        "kanji": "これは大きいです。",
+        "romaji": "Kore wa ookii desu.",
+        "english": "This is big."
+      }
+    },
+    {
+      "id": "beginner_05",
+      "rank": "5",
+      "suit": "beginner",
+      "kanji": "小",
+      "hiragana": "ちい",
+      "romaji": "chii",
+      "english": "small",
+      "rhyme": "Tiny little thing you see, it's Chii as small can be",
+      "sentence": {
+        "kanji": "猫は小さいです。",
+        "romaji": "Neko wa chiisai desu.",
+        "english": "The cat is small."
+      }
+    },
+    {
+      "id": "beginner_06",
+      "rank": "6",
+      "suit": "beginner",
+      "kanji": "山",
+      "hiragana": "やま",
+      "romaji": "yama",
+      "english": "mountain",
+      "rhyme": "Climb up high and you will see, it's Yama calling me",
+      "sentence": {
+        "kanji": "山に行きます。",
+        "romaji": "Yama ni ikimasu.",
+        "english": "I go to the mountain."
+      }
+    },
+    {
+      "id": "beginner_07",
+      "rank": "7",
+      "suit": "beginner",
+      "kanji": "川",
+      "hiragana": "かわ",
+      "romaji": "kawa",
+      "english": "river",
+      "rhyme": "Water flows so wild and free, it's Kawa you can see",
+      "sentence": {
+        "kanji": "川で泳ぎます。",
+        "romaji": "Kawa de oyogimasu.",
+        "english": "I swim in the river."
+      }
+    },
+    {
+      "id": "beginner_08",
+      "rank": "8",
+      "suit": "beginner",
+      "kanji": "田",
+      "hiragana": "た",
+      "romaji": "ta",
+      "english": "rice field",
+      "rhyme": "Green and gold for all to see, it's Ta the field so free",
+      "sentence": {
+        "kanji": "田んぼがあります。",
+        "romaji": "Tanbo ga arimasu.",
+        "english": "There is a rice field."
+      }
+    },
+    {
+      "id": "beginner_09",
+      "rank": "9",
+      "suit": "beginner",
+      "kanji": "中",
+      "hiragana": "なか",
+      "romaji": "naka",
+      "english": "inside / middle",
+      "rhyme": "In the center there you'll be, it's Naka plain to see",
+      "sentence": {
+        "kanji": "猫は箱の中にいます。",
+        "romaji": "Neko wa hako no naka ni imasu.",
+        "english": "The cat is inside the box."
+      }
+    },
+    {
+      "id": "beginner_10",
+      "rank": "10",
+      "suit": "beginner",
+      "kanji": "上",
+      "hiragana": "うえ",
+      "romaji": "ue",
+      "english": "up / above",
+      "rhyme": "Look on high and you will see, it's Ue looking free",
+      "sentence": {
+        "kanji": "鳥は木の上にいます。",
+        "romaji": "Tori wa ki no ue ni imasu.",
+        "english": "The bird is up in the tree."
+      }
+    },
+    {
+      "id": "beginner_11",
+      "rank": "J",
+      "suit": "beginner",
+      "kanji": "下",
+      "hiragana": "した",
+      "romaji": "shita",
+      "english": "down / below",
+      "rhyme": "Look down low and you will see, it's Shita under me",
+      "sentence": {
+        "kanji": "本は机の下にあります。",
+        "romaji": "Hon wa tsukue no shita ni arimasu.",
+        "english": "The book is under the desk."
+      }
+    },
+    {
+      "id": "beginner_12",
+      "rank": "Q",
+      "suit": "beginner",
+      "kanji": "口",
+      "hiragana": "くち",
+      "romaji": "kuchi",
+      "english": "mouth / entrance",
+      "rhyme": "Open wide for all to see, it's Kuchi speaking free",
+      "sentence": {
+        "kanji": "口を開けてください。",
+        "romaji": "Kuchi wo akete kudasai.",
+        "english": "Please open your mouth."
+      }
+    },
+    {
+      "id": "beginner_13",
+      "rank": "K",
+      "suit": "beginner",
+      "kanji": "目",
+      "hiragana": "め",
+      "romaji": "me",
+      "english": "eye",
+      "rhyme": "Watch and look with vision free, it's Me that helps you see",
+      "sentence": {
+        "kanji": "目が大きいです。",
+        "romaji": "Me ga ookii desu.",
+        "english": "(My) eyes are big."
+      }
+    },
+    {
+      "id": "beginner_14",
+      "rank": "A",
+      "suit": "beginner2",
+      "kanji": "手",
+      "hiragana": "て",
+      "romaji": "te",
+      "english": "hand",
+      "rhyme": "Wave hello so merrily, it's Te you use with glee",
+      "sentence": {
+        "kanji": "手を洗ってください。",
+        "romaji": "Te wo aratte kudasai.",
+        "english": "Please wash your hands."
+      }
+    },
+    {
+      "id": "beginner_15",
+      "rank": "2",
+      "suit": "beginner2",
+      "kanji": "足",
+      "hiragana": "あし",
+      "romaji": "ashi",
+      "english": "foot / leg",
+      "rhyme": "Walk and run so happily, it's Ashi moving free",
+      "sentence": {
+        "kanji": "足が痛いです。",
+        "romaji": "Ashi ga itai desu.",
+        "english": "My leg/foot hurts."
+      }
+    },
+    {
+      "id": "beginner_16",
+      "rank": "3",
+      "suit": "beginner2",
+      "kanji": "耳",
+      "hiragana": "みみ",
+      "romaji": "mimi",
+      "english": "ear",
+      "rhyme": "Listen close and you will see, it's Mimi hearing free",
+      "sentence": {
+        "kanji": "耳がいいです。",
+        "romaji": "Mimi ga ii desu.",
+        "english": "(I) have good ears."
+      }
+    },
+    {
+      "id": "beginner_17",
+      "rank": "4",
+      "suit": "beginner2",
+      "kanji": "犬",
+      "hiragana": "いぬ",
+      "romaji": "inu",
+      "english": "dog",
+      "rhyme": "Barking loud for all to see, it's Inu full of glee",
+      "sentence": {
+        "kanji": "犬が好きです。",
+        "romaji": "Inu ga suki desu.",
+        "english": "I like dogs."
+      }
+    },
+    {
+      "id": "beginner_18",
+      "rank": "5",
+      "suit": "beginner2",
+      "kanji": "猫",
+      "hiragana": "ねこ",
+      "romaji": "neko",
+      "english": "cat",
+      "rhyme": "Meowing softly as can be, it's Neko cute and free",
+      "sentence": {
+        "kanji": "猫は寝ています。",
+        "romaji": "Neko wa nete imasu.",
+        "english": "The cat is sleeping."
+      }
+    },
+    {
+      "id": "beginner_19",
+      "rank": "6",
+      "suit": "beginner2",
+      "kanji": "本",
+      "hiragana": "ほん",
+      "romaji": "hon",
+      "english": "book",
+      "rhyme": "Read and learn so happily, it's Hon for you and me",
+      "sentence": {
+        "kanji": "本を読みます。",
+        "romaji": "Hon wo yomimasu.",
+        "english": "I read a book."
+      }
+    },
+    {
+      "id": "beginner_20",
+      "rank": "7",
+      "suit": "beginner2",
+      "kanji": "学",
+      "hiragana": "がく",
+      "romaji": "gaku",
+      "english": "learning / study",
+      "rhyme": "Study hard and you will see, it's Gaku setting you free",
+      "sentence": {
+        "kanji": "学校に行きます。",
+        "romaji": "Gakkou ni ikimasu.",
+        "english": "I go to school."
+      }
+    }
+  ]
+}

@@ -448,6 +448,107 @@ class KanjiConcentrationGame {
         document.getElementById('progressText').textContent = text;
     }
 
+    // Library functionality
+    showLibraryModal() {
+        document.getElementById('libraryModal').style.display = 'block';
+        this.loadLibraryIndex();
+    }
+
+    closeLibraryModal() {
+        document.getElementById('libraryModal').style.display = 'none';
+    }
+
+    async loadLibraryIndex() {
+        const container = document.getElementById('libraryContent');
+        container.innerHTML = '<p>Loading library...</p>';
+        
+        try {
+            const response = await fetch('decks/index.json');
+            if (!response.ok) {
+                throw new Error('Library not found');
+            }
+            
+            const index = await response.json();
+            this.renderLibrary(index);
+        } catch (error) {
+            container.innerHTML = `
+                <div class="library-section">
+                    <h3>📚 Built-in Library</h3>
+                    <p style="color: #666;">Library not found. Make sure the decks folder is available.</p>
+                    <p style="color: #888; font-size: 0.9rem;">Expected at: decks/index.json</p>
+                </div>
+            `;
+        }
+    }
+
+    renderLibrary(index) {
+        const container = document.getElementById('libraryContent');
+        
+        let html = `
+            <div class="library-section">
+                <h3>📚 ${index.name || 'Available Decks'}</h3>
+                <p style="color: #666; margin-bottom: 1rem;">
+                    ${index.description || ''} 
+                    ${index.totalCards ? `<br><strong>Total cards:</strong> ${index.totalCards}` : ''}
+                </p>
+                <div class="library-grid">
+        `;
+        
+        if (index.decks && index.decks.length > 0) {
+            index.decks.forEach((deck, idx) => {
+                const isLoaded = this.isDeckLoaded(deck.filename);
+                html += `
+                    <div class="library-item ${isLoaded ? 'loaded' : ''}" 
+                         onclick="game.loadDeckFromLibrary('${deck.filename}')">
+                        <div class="library-item-name">${deck.name}</div>
+                        <div class="library-item-count">${deck.cardCount} cards</div>
+                        ${isLoaded ? '<div class="library-item-count" style="color: #4CAF50;">✓ Loaded</div>' : ''}
+                    </div>
+                `;
+            });
+        }
+        
+        html += `
+                </div>
+            </div>
+        `;
+        
+        container.innerHTML = html;
+    }
+
+    isDeckLoaded(filename) {
+        // Check if this deck's cards are already in our cards array
+        return this.cards.some(card => card.id && card.id.startsWith('rtk_'));
+    }
+
+    async loadDeckFromLibrary(filename) {
+        try {
+            const response = await fetch(`decks/${filename}`);
+            if (!response.ok) {
+                throw new Error('Failed to load deck');
+            }
+            
+            const deck = await response.json();
+            
+            if (deck.cards && deck.cards.length > 0) {
+                // Replace current cards with deck cards
+                this.cards = deck.cards;
+                this.displayCards = null; // Reset display cards
+                this.displayPreGameCards();
+                this.stopPreGameTimer();
+                this.startPreGameTimer();
+                
+                alert(`Loaded: ${deck.name}\n${deck.cards.length} cards ready to study!`);
+                this.closeLibraryModal();
+            } else {
+                alert('This deck contains no cards.');
+            }
+        } catch (error) {
+            alert(`Error loading deck: ${error.message}`);
+        }
+    }
+
+
     validateAndEnhanceCards(cards) {
         const warnings = [];
         const enhancements = [];
@@ -4921,6 +5022,24 @@ class KanjiConcentrationGame {
         document.getElementById('batchImportBtn').addEventListener('click', () => {
             this.showBatchImportModal();
         });
+        
+        // Library functionality
+        document.getElementById('libraryBtn').addEventListener('click', () => {
+            this.showLibraryModal();
+        });
+        
+        document.getElementById('libraryClose').addEventListener('click', () => {
+            this.closeLibraryModal();
+        });
+        
+        // Close library modal when clicking outside
+        window.addEventListener('click', (e) => {
+            const libraryModal = document.getElementById('libraryModal');
+            if (e.target === libraryModal) {
+                this.closeLibraryModal();
+            }
+        });
+        
         
         document.getElementById('batchImportClose').addEventListener('click', () => {
             this.closeBatchImportModal();

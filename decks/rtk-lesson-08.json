@@ -1,0 +1,840 @@
+{
+  "name": "RTK Lesson 8",
+  "description": "RTK Lesson 8 - 49 cards",
+  "lesson": 8,
+  "cards": [
+    {
+      "id": "rtk_l08f0085",
+      "rank": "10",
+      "suit": "hearts",
+      "kanji": "消す",
+      "hiragana": "けす",
+      "romaji": "kesu",
+      "english": "switch off, turn off",
+      "rhyme": "Remember this word you see, it's kesu",
+      "sentence": {
+        "kanji": "昼間は電気を消してください。",
+        "romaji": "hiruma ha denki wo keshite kudasai",
+        "english": "Please turn the lights off during the day."
+      },
+      "rtkLesson": 8,
+      "rtkFrame": 85
+    },
+    {
+      "id": "rtk_l08f0154",
+      "rank": "7",
+      "suit": "diamonds",
+      "kanji": "時",
+      "hiragana": "とき",
+      "romaji": "toki",
+      "english": "time",
+      "rhyme": "Remember this word you see, it's toki",
+      "sentence": {
+        "kanji": "時の経つのは早い。",
+        "romaji": "toki no tatsu no ha hayai",
+        "english": "Time passes by quickly."
+      },
+      "rtkLesson": 8,
+      "rtkFrame": 154
+    },
+    {
+      "id": "rtk_l08f0186",
+      "rank": "11",
+      "suit": "diamonds",
+      "kanji": "泊まる",
+      "hiragana": "とまる",
+      "romaji": "tomaru",
+      "english": "stay overnight",
+      "rhyme": "Remember this word you see, it's tomaru",
+      "sentence": {
+        "kanji": "今日はこのホテルに泊まります。",
+        "romaji": "kyou ha kono hoteru ni tomarimasu",
+        "english": "I'm staying at this hotel today."
+      },
+      "rtkLesson": 8,
+      "rtkFrame": 186
+    },
+    {
+      "id": "rtk_l08f0267",
+      "rank": "9",
+      "suit": "spades",
+      "kanji": "水",
+      "hiragana": "みず",
+      "romaji": "mizu",
+      "english": "water",
+      "rhyme": "Remember this word you see, it's mizu",
+      "sentence": {
+        "kanji": "水を一杯ください。",
+        "romaji": "mizu wo ipai kudasai",
+        "english": "Please give me a glass of water."
+      },
+      "rtkLesson": 8,
+      "rtkFrame": 267
+    },
+    {
+      "id": "rtk_l08f0273",
+      "rank": "12",
+      "suit": "clubs",
+      "kanji": "お願い",
+      "hiragana": "おねがい",
+      "romaji": "onegai",
+      "english": "favor",
+      "rhyme": "Remember this word you see, it's onegai",
+      "sentence": {
+        "kanji": "お願いがあります。",
+        "romaji": "onegai ga arimasu",
+        "english": "I have a favor to ask."
+      },
+      "rtkLesson": 8,
+      "rtkFrame": 273
+    },
+    {
+      "id": "rtk_l08f0312",
+      "rank": "8",
+      "suit": "clubs",
+      "kanji": "時々",
+      "hiragana": "ときどき",
+      "romaji": "tokidoki",
+      "english": "sometimes",
+      "rhyme": "Remember this word you see, it's tokidoki",
+      "sentence": {
+        "kanji": "彼は時々遅刻します。",
+        "romaji": "kare ha tokidoki chikoku shimasu",
+        "english": "He's sometimes late."
+      },
+      "rtkLesson": 8,
+      "rtkFrame": 312
+    },
+    {
+      "id": "rtk_l08f0540",
+      "rank": "2",
+      "suit": "diamonds",
+      "kanji": "川",
+      "hiragana": "かわ",
+      "romaji": "kawa",
+      "english": "river, stream",
+      "rhyme": "Remember this word you see, it's kawa",
+      "sentence": {
+        "kanji": "小さな川を渡りました。",
+        "romaji": "chiisa na kawa wo watarimashita",
+        "english": "I crossed a stream."
+      },
+      "rtkLesson": 8,
+      "rtkFrame": 540
+    },
+    {
+      "id": "rtk_l08f0556",
+      "rank": "3",
+      "suit": "clubs",
+      "kanji": "魚",
+      "hiragana": "さかな",
+      "romaji": "sakana",
+      "english": "fish",
+      "rhyme": "Remember this word you see, it's sakana",
+      "sentence": {
+        "kanji": "肉と魚とどちらが好きですか。",
+        "romaji": "niku to sakana to dochira ga suki desu ka",
+        "english": "Which do you prefer, meat or fish?"
+      },
+      "rtkLesson": 8,
+      "rtkFrame": 556
+    },
+    {
+      "id": "rtk_l08f0576",
+      "rank": "1",
+      "suit": "hearts",
+      "kanji": "火",
+      "hiragana": "ひ",
+      "romaji": "hi",
+      "english": "fire",
+      "rhyme": "Remember this word you see, it's hi",
+      "sentence": {
+        "kanji": "火を消して。",
+        "romaji": "hi wo keshite",
+        "english": "Put the fire out."
+      },
+      "rtkLesson": 8,
+      "rtkFrame": 576
+    },
+    {
+      "id": "rtk_l08f0612",
+      "rank": "13",
+      "suit": "spades",
+      "kanji": "寺",
+      "hiragana": "てら",
+      "romaji": "tera",
+      "english": "buddhist temple",
+      "rhyme": "Remember this word you see, it's tera",
+      "sentence": {
+        "kanji": "あそこに古いお寺があります。",
+        "romaji": "asoko ni furui otera ga arimasu",
+        "english": "There's an old temple there."
+      },
+      "rtkLesson": 8,
+      "rtkFrame": 612
+    },
+    {
+      "id": "rtk_l08f0722",
+      "rank": "5",
+      "suit": "hearts",
+      "kanji": "消しゴム",
+      "hiragana": "けしごむ",
+      "romaji": "keshigomu",
+      "english": "eraser",
+      "rhyme": "Remember this word you see, it's keshigomu",
+      "sentence": {
+        "kanji": "消しゴムを貸して下さい。",
+        "romaji": "keshigomu wo kashite kudasai",
+        "english": "Please lend me your eraser."
+      },
+      "rtkLesson": 8,
+      "rtkFrame": 722
+    },
+    {
+      "id": "rtk_l08f0879",
+      "rank": "6",
+      "suit": "diamonds",
+      "kanji": "泊める",
+      "hiragana": "とめる",
+      "romaji": "tomeru",
+      "english": "lodge, give shelter",
+      "rhyme": "Remember this word you see, it's tomeru",
+      "sentence": {
+        "kanji": "友達をうちに泊めてあげました。",
+        "romaji": "tomodachi wo uchi ni tomete agemashita",
+        "english": "I put my friend up at my house."
+      },
+      "rtkLesson": 8,
+      "rtkFrame": 879
+    },
+    {
+      "id": "rtk_l08f1143",
+      "rank": "7",
+      "suit": "clubs",
+      "kanji": "願う",
+      "hiragana": "ねがう",
+      "romaji": "negau",
+      "english": "wish, ask a favor, apply for",
+      "rhyme": "Remember this word you see, it's negau",
+      "sentence": {
+        "kanji": "彼が元気になるよう願っています。",
+        "romaji": "kare ga genki ni naru you negate imasu",
+        "english": "We're praying that he gets well."
+      },
+      "rtkLesson": 8,
+      "rtkFrame": 1143
+    },
+    {
+      "id": "rtk_l08f1276",
+      "rank": "8",
+      "suit": "spades",
+      "kanji": "泳ぐ",
+      "hiragana": "およぐ",
+      "romaji": "oyogu",
+      "english": "swim",
+      "rhyme": "Remember this word you see, it's oyogu",
+      "sentence": {
+        "kanji": "彼女はダイエットのために泳いでいる。",
+        "romaji": "kanojo ha daieto no tame ni oyoide iru",
+        "english": "She swims to lose weight."
+      },
+      "rtkLesson": 8,
+      "rtkFrame": 1276
+    },
+    {
+      "id": "rtk_l08f1286",
+      "rank": "10",
+      "suit": "diamonds",
+      "kanji": "氷",
+      "hiragana": "こおり",
+      "romaji": "koori",
+      "english": "ice",
+      "rhyme": "Remember this word you see, it's koori",
+      "sentence": {
+        "kanji": "グラスに氷を入れてください。",
+        "romaji": "gurasu ni koori wo irete kudasai",
+        "english": "Please put some ice in my glass."
+      },
+      "rtkLesson": 8,
+      "rtkFrame": 1286
+    },
+    {
+      "id": "rtk_l08f1619",
+      "rank": "9",
+      "suit": "hearts",
+      "kanji": "水泳",
+      "hiragana": "すいえい",
+      "romaji": "suiei",
+      "english": "swimming",
+      "rhyme": "Remember this word you see, it's suiei",
+      "sentence": {
+        "kanji": "母は健康のために水泳をしている。",
+        "romaji": "haha ha kenkou no tame ni suiei wo shite iru",
+        "english": "My mother swims for her health."
+      },
+      "rtkLesson": 8,
+      "rtkFrame": 1619
+    },
+    {
+      "id": "rtk_l08f1693",
+      "rank": "4",
+      "suit": "spades",
+      "kanji": "消える",
+      "hiragana": "きえる",
+      "romaji": "kieru",
+      "english": "be extinguished, disappear",
+      "rhyme": "Remember this word you see, it's kieru",
+      "sentence": {
+        "kanji": "突然、電気が消えた。",
+        "romaji": "totsuzen denki ga kieta",
+        "english": "Suddenly the electricity went out."
+      },
+      "rtkLesson": 8,
+      "rtkFrame": 1693
+    },
+    {
+      "id": "rtk_l08f1760",
+      "rank": "11",
+      "suit": "clubs",
+      "kanji": "畑",
+      "hiragana": "はたけ",
+      "romaji": "hatake",
+      "english": "field, vegetable garden",
+      "rhyme": "Remember this word you see, it's hatake",
+      "sentence": {
+        "kanji": "母は畑仕事が好きだ。",
+        "romaji": "haha ha hatake shigoto ga suki da",
+        "english": "My mother likes working in the field."
+      },
+      "rtkLesson": 8,
+      "rtkFrame": 1760
+    },
+    {
+      "id": "rtk_l08f1764",
+      "rank": "12",
+      "suit": "spades",
+      "kanji": "灰",
+      "hiragana": "はい",
+      "romaji": "hai",
+      "english": "ashes",
+      "rhyme": "Remember this word you see, it's hai",
+      "sentence": {
+        "kanji": "火事ですべて灰になった。",
+        "romaji": "kaji de subete hai ni nata",
+        "english": "Everything turned to ashes in the fire."
+      },
+      "rtkLesson": 8,
+      "rtkFrame": 1764
+    },
+    {
+      "id": "rtk_l08f2119",
+      "rank": "3",
+      "suit": "spades",
+      "kanji": "下水",
+      "hiragana": "げすい",
+      "romaji": "gesui",
+      "english": "sewerage, drainage",
+      "rhyme": "Remember this word you see, it's gesui",
+      "sentence": {
+        "kanji": "その道は今、下水の工事をしているよ。",
+        "romaji": "sono michi ha ima gesui no kouji wo shite iru yo",
+        "english": "The street is now under construction for drainage."
+      },
+      "rtkLesson": 8,
+      "rtkFrame": 2119
+    },
+    {
+      "id": "rtk_l08f2180",
+      "rank": "6",
+      "suit": "clubs",
+      "kanji": "消火",
+      "hiragana": "しょうか",
+      "romaji": "shouka",
+      "english": "fire fighting",
+      "rhyme": "Remember this word you see, it's shouka",
+      "sentence": {
+        "kanji": "火事は無事消火されました。",
+        "romaji": "kaji ha buji shouka saremashita",
+        "english": "The fire was safely extinguished."
+      },
+      "rtkLesson": 8,
+      "rtkFrame": 2180
+    },
+    {
+      "id": "rtk_l08f2346",
+      "rank": "6",
+      "suit": "spades",
+      "kanji": "点",
+      "hiragana": "てん",
+      "romaji": "ten",
+      "english": "point, issue",
+      "rhyme": "Remember this word you see, it's ten",
+      "sentence": {
+        "kanji": "その点は心配ありません。",
+        "romaji": "sono ten ha shinpai arimasen",
+        "english": "There's nothing to worry about regarding that."
+      },
+      "rtkLesson": 8,
+      "rtkFrame": 2346
+    },
+    {
+      "id": "rtk_l08f2375",
+      "rank": "13",
+      "suit": "hearts",
+      "kanji": "一時",
+      "hiragana": "いちじ",
+      "romaji": "ichiji",
+      "english": "temporarily",
+      "rhyme": "Remember this word you see, it's ichiji",
+      "sentence": {
+        "kanji": "お店は一時休業になったんだ。",
+        "romaji": "omise ha ichiji kyuugyou ni nata n da",
+        "english": "The store was temporarily closed."
+      },
+      "rtkLesson": 8,
+      "rtkFrame": 2375
+    },
+    {
+      "id": "rtk_l08f2602",
+      "rank": "4",
+      "suit": "diamonds",
+      "kanji": "日時",
+      "hiragana": "にちじ",
+      "romaji": "nichiji",
+      "english": "date, time",
+      "rhyme": "Remember this word you see, it's nichiji",
+      "sentence": {
+        "kanji": "試写会の日時を教えてください。",
+        "romaji": "shishakai no nichiji wo oshiete kudasai",
+        "english": "Please tell me the date of the sneak preview."
+      },
+      "rtkLesson": 8,
+      "rtkFrame": 2602
+    },
+    {
+      "id": "rtk_l08f2684",
+      "rank": "5",
+      "suit": "diamonds",
+      "kanji": "水田",
+      "hiragana": "すいでん",
+      "romaji": "suiden",
+      "english": "paddy field, rice field",
+      "rhyme": "Remember this word you see, it's suiden",
+      "sentence": {
+        "kanji": "窓の外に水田が広がっていたよ。",
+        "romaji": "mado no soto ni suiden ga hirogate ita yo",
+        "english": "A sweep of rice field appeared outside the window."
+      },
+      "rtkLesson": 8,
+      "rtkFrame": 2684
+    },
+    {
+      "id": "rtk_l08f3244",
+      "rank": "8",
+      "suit": "hearts",
+      "kanji": "原則",
+      "hiragana": "げんそく",
+      "romaji": "gensoku",
+      "english": "principle, general rule",
+      "rhyme": "Remember this word you see, it's gensoku",
+      "sentence": {
+        "kanji": "原則としてキャンセルできません。",
+        "romaji": "gensoku to shite kyanseru dekimasen",
+        "english": "As a general rule, cancellations can't be accepted."
+      },
+      "rtkLesson": 8,
+      "rtkFrame": 3244
+    },
+    {
+      "id": "rtk_l08f3252",
+      "rank": "7",
+      "suit": "hearts",
+      "kanji": "原",
+      "hiragana": "はら",
+      "romaji": "hara",
+      "english": "plain, field",
+      "rhyme": "Remember this word you see, it's hara",
+      "sentence": {
+        "kanji": "クローバーの原でピクニックをしたよ。",
+        "romaji": "kuro-ba- no hara de pikuniku wo shita yo",
+        "english": "We had a picnic in a clover field."
+      },
+      "rtkLesson": 8,
+      "rtkFrame": 3252
+    },
+    {
+      "id": "rtk_l08f3267",
+      "rank": "8",
+      "suit": "diamonds",
+      "kanji": "願い",
+      "hiragana": "ねがい",
+      "romaji": "negai",
+      "english": "wish, request",
+      "rhyme": "Remember this word you see, it's negai",
+      "sentence": {
+        "kanji": "世界の平和が私たちの願いです。",
+        "romaji": "sekai no heiwa ga watashi tachi no negai desu",
+        "english": "Our wish is for world peace."
+      },
+      "rtkLesson": 8,
+      "rtkFrame": 3267
+    },
+    {
+      "id": "rtk_l08f3603",
+      "rank": "7",
+      "suit": "spades",
+      "kanji": "消火器",
+      "hiragana": "しょうかき",
+      "romaji": "shoukaki",
+      "english": "fire extinguisher",
+      "rhyme": "Remember this word you see, it's shoukaki",
+      "sentence": {
+        "kanji": "消火器を交換しました。",
+        "romaji": "shoukaki wo koukan shimashita",
+        "english": "The fire extinguisher was replaced."
+      },
+      "rtkLesson": 8,
+      "rtkFrame": 3603
+    },
+    {
+      "id": "rtk_l08f3682",
+      "rank": "9",
+      "suit": "clubs",
+      "kanji": "湖",
+      "hiragana": "みずうみ",
+      "romaji": "mizuumi",
+      "english": "lake",
+      "rhyme": "Remember this word you see, it's mizuumi",
+      "sentence": {
+        "kanji": "湖でスケートをした。",
+        "romaji": "mizuumi de suke-to wo shita",
+        "english": "We went skating on the lake."
+      },
+      "rtkLesson": 8,
+      "rtkFrame": 3682
+    },
+    {
+      "id": "rtk_l08f3702",
+      "rank": "4",
+      "suit": "hearts",
+      "kanji": "小川",
+      "hiragana": "おがわ",
+      "romaji": "ogawa",
+      "english": "brook, stream",
+      "rhyme": "Remember this word you see, it's ogawa",
+      "sentence": {
+        "kanji": "小川がさらさら流れています。",
+        "romaji": "ogawa ga sarasara nagarete imasu",
+        "english": "The stream flows smoothly."
+      },
+      "rtkLesson": 8,
+      "rtkFrame": 3702
+    },
+    {
+      "id": "rtk_l08f3780",
+      "rank": "10",
+      "suit": "spades",
+      "kanji": "測る",
+      "hiragana": "はかる",
+      "romaji": "hakaru",
+      "english": "measure, gauge",
+      "rhyme": "Remember this word you see, it's hakaru",
+      "sentence": {
+        "kanji": "このドアの高さを測ってください。",
+        "romaji": "kono doa no takasa wo hakate kudasai",
+        "english": "Please measure the height of this door."
+      },
+      "rtkLesson": 8,
+      "rtkFrame": 3780
+    },
+    {
+      "id": "rtk_l08f3782",
+      "rank": "10",
+      "suit": "clubs",
+      "kanji": "河口",
+      "hiragana": "かこう",
+      "romaji": "kakou",
+      "english": "river mouth, estuary",
+      "rhyme": "Remember this word you see, it's kakou",
+      "sentence": {
+        "kanji": "この川の河口は太平洋に注いでいます。",
+        "romaji": "kono kawa no kakou ha taiheiyou ni sosoide imasu",
+        "english": "The mouth of this river flows into the Pacific Ocean."
+      },
+      "rtkLesson": 8,
+      "rtkFrame": 3782
+    },
+    {
+      "id": "rtk_l08f4091",
+      "rank": "12",
+      "suit": "hearts",
+      "kanji": "順",
+      "hiragana": "じゅん",
+      "romaji": "jun",
+      "english": "order, sequence",
+      "rhyme": "Remember this word you see, it's jun",
+      "sentence": {
+        "kanji": "あいうえお順に並べて下さい。",
+        "romaji": "aiueo jun ni narabete kudasai",
+        "english": "Please line up in order of the Japanese syllabary."
+      },
+      "rtkLesson": 8,
+      "rtkFrame": 4091
+    },
+    {
+      "id": "rtk_l08f4217",
+      "rank": "11",
+      "suit": "spades",
+      "kanji": "州",
+      "hiragana": "しゅう",
+      "romaji": "shuu",
+      "english": "state",
+      "rhyme": "Remember this word you see, it's shuu",
+      "sentence": {
+        "kanji": "来月、隣の州に引っ越します。",
+        "romaji": "raigetsu tonari no shuu ni hikoshimasu",
+        "english": "I will move to the neighboring state next month."
+      },
+      "rtkLesson": 8,
+      "rtkFrame": 4217
+    },
+    {
+      "id": "rtk_l08f4315",
+      "rank": "1",
+      "suit": "clubs",
+      "kanji": "照明",
+      "hiragana": "しょうめい",
+      "romaji": "shoumei",
+      "english": "illumination, lighting",
+      "rhyme": "Remember this word you see, it's shoumei",
+      "sentence": {
+        "kanji": "もっと照明を明るくしてください。",
+        "romaji": "moto shoumei wo akaruku shite kudasai",
+        "english": "Please turn up the lighting more."
+      },
+      "rtkLesson": 8,
+      "rtkFrame": 4315
+    },
+    {
+      "id": "rtk_l08f4316",
+      "rank": "12",
+      "suit": "diamonds",
+      "kanji": "照る",
+      "hiragana": "てる",
+      "romaji": "teru",
+      "english": "shine, be fine",
+      "rhyme": "Remember this word you see, it's teru",
+      "sentence": {
+        "kanji": "日差しが強く照りつけますね。",
+        "romaji": "hizashi ga tsuyoku teritsukemasu ne",
+        "english": "The sun is shining strongly."
+      },
+      "rtkLesson": 8,
+      "rtkFrame": 4316
+    },
+    {
+      "id": "rtk_l08f4418",
+      "rank": "1",
+      "suit": "diamonds",
+      "kanji": "大水",
+      "hiragana": "おおみず",
+      "romaji": "oomizu",
+      "english": "flood, inundation",
+      "rhyme": "Remember this word you see, it's oomizu",
+      "sentence": {
+        "kanji": "その年、この地域では大水がありました。",
+        "romaji": "sono toshi kono chiiki de ha oomizu ga arimashita",
+        "english": "In that year there was a flood in this area."
+      },
+      "rtkLesson": 8,
+      "rtkFrame": 4418
+    },
+    {
+      "id": "rtk_l08f4515",
+      "rank": "11",
+      "suit": "hearts",
+      "kanji": "照らす",
+      "hiragana": "てらす",
+      "romaji": "terasu",
+      "english": "illuminate, shine on",
+      "rhyme": "Remember this word you see, it's terasu",
+      "sentence": {
+        "kanji": "月が庭を照らしている。",
+        "romaji": "tsuki ga niwa wo terashite iru",
+        "english": "The moon is shining on the garden."
+      },
+      "rtkLesson": 8,
+      "rtkFrame": 4515
+    },
+    {
+      "id": "rtk_l08f4634",
+      "rank": "2",
+      "suit": "clubs",
+      "kanji": "水中",
+      "hiragana": "すいちゅう",
+      "romaji": "suichuu",
+      "english": "in the water, underwater",
+      "rhyme": "Remember this word you see, it's suichuu",
+      "sentence": {
+        "kanji": "このカメラなら水中の写真が撮れますね。",
+        "romaji": "kono kamera nara suichuu no shashin ga toremasu ne",
+        "english": "With this camera you can take underwater photographs ."
+      },
+      "rtkLesson": 8,
+      "rtkFrame": 4634
+    },
+    {
+      "id": "rtk_l08f4653",
+      "rank": "9",
+      "suit": "diamonds",
+      "kanji": "火災",
+      "hiragana": "かさい",
+      "romaji": "kasai",
+      "english": "fire, conflagration",
+      "rhyme": "Remember this word you see, it's kasai",
+      "sentence": {
+        "kanji": "火災の原因は放火だそうです。",
+        "romaji": "kasai no genin ha houka da sou desu",
+        "english": "I hear that the cause of the fire was arson."
+      },
+      "rtkLesson": 8,
+      "rtkFrame": 4653
+    },
+    {
+      "id": "rtk_l08f5091",
+      "rank": "2",
+      "suit": "spades",
+      "kanji": "沖",
+      "hiragana": "おき",
+      "romaji": "oki",
+      "english": "offshore",
+      "rhyme": "Remember this word you see, it's oki",
+      "sentence": {
+        "kanji": "沖に小島が見えます。",
+        "romaji": "oki ni kojima ga miemasu",
+        "english": "A small island can be seen off the shore."
+      },
+      "rtkLesson": 8,
+      "rtkFrame": 5091
+    },
+    {
+      "id": "rtk_l08f5093",
+      "rank": "3",
+      "suit": "hearts",
+      "kanji": "泉",
+      "hiragana": "いずみ",
+      "romaji": "izumi",
+      "english": "spring, fountain",
+      "rhyme": "Remember this word you see, it's izumi",
+      "sentence": {
+        "kanji": "森の中にきれいな泉があるの。",
+        "romaji": "mori no naka ni kirei na izumi ga aru no",
+        "english": "There is a beautiful spring in the forest."
+      },
+      "rtkLesson": 8,
+      "rtkFrame": 5093
+    },
+    {
+      "id": "rtk_l08f5120",
+      "rank": "13",
+      "suit": "clubs",
+      "kanji": "吐く",
+      "hiragana": "はく",
+      "romaji": "haku",
+      "english": "holler, spew",
+      "rhyme": "Remember this word you see, it's haku",
+      "sentence": {
+        "kanji": "彼は乱暴な言葉を吐いたぞ。",
+        "romaji": "kare ha ranbou na kotoba wo haita zo",
+        "english": "He hollered some rough words."
+      },
+      "rtkLesson": 8,
+      "rtkFrame": 5120
+    },
+    {
+      "id": "rtk_l08f5156",
+      "rank": "1",
+      "suit": "spades",
+      "kanji": "田畑",
+      "hiragana": "たはた",
+      "romaji": "tahata",
+      "english": "fields and rice paddies",
+      "rhyme": "Remember this word you see, it's tahata",
+      "sentence": {
+        "kanji": "この村には田畑がたくさんあります。",
+        "romaji": "kono mura ni ha tahata ga takusan arimasu",
+        "english": "There are a lot of fields in this village."
+      },
+      "rtkLesson": 8,
+      "rtkFrame": 5156
+    },
+    {
+      "id": "rtk_l08f5160",
+      "rank": "2",
+      "suit": "hearts",
+      "kanji": "炎",
+      "hiragana": "ほのお",
+      "romaji": "honoo",
+      "english": "flame, blaze",
+      "rhyme": "Remember this word you see, it's honoo",
+      "sentence": {
+        "kanji": "ろうそくの炎が部屋を照らしたんだ。",
+        "romaji": "rousoku no honoo ga heya wo terashita n da",
+        "english": "The candle's flame lit the room."
+      },
+      "rtkLesson": 8,
+      "rtkFrame": 5160
+    },
+    {
+      "id": "rtk_l08f5196",
+      "rank": "5",
+      "suit": "clubs",
+      "kanji": "土",
+      "hiragana": "つち",
+      "romaji": "tsuchi",
+      "english": "soil, ground",
+      "rhyme": "Remember this word you see, it's tsuchi",
+      "sentence": {
+        "kanji": "土を掘って木を植えました。",
+        "romaji": "tsuchi wo hote ki wo uemashita",
+        "english": "I dug up the soil and planted a tree."
+      },
+      "rtkLesson": 8,
+      "rtkFrame": 5196
+    },
+    {
+      "id": "rtk_l08f5263",
+      "rank": "13",
+      "suit": "diamonds",
+      "kanji": "順々に",
+      "hiragana": "じゅんじゅんに",
+      "romaji": "junjunni",
+      "english": "by turns, in order",
+      "rhyme": "Remember this word you see, it's junjunni",
+      "sentence": {
+        "kanji": "子供たちは順々にお菓子を受け取ったよ。",
+        "romaji": "kodomotachi ha junjunni okashi wo uketota yo",
+        "english": "Children received snacks one at a time."
+      },
+      "rtkLesson": 8,
+      "rtkFrame": 5263
+    },
+    {
+      "id": "rtk_l08f5379",
+      "rank": "3",
+      "suit": "diamonds",
+      "kanji": "封",
+      "hiragana": "ふう",
+      "romaji": "fuu",
+      "english": "seal, sealing",
+      "rhyme": "Remember this word you see, it's fuu",
+      "sentence": {
+        "kanji": "手紙に封をしたよ。",
+        "romaji": "tegami ni fuu wo shita yo",
+        "english": "I sealed the letter."
+      },
+      "rtkLesson": 8,
+      "rtkFrame": 5379
+    }
+  ]
+}

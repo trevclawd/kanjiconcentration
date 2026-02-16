@@ -1,0 +1,1010 @@
+{
+  "name": "RTK Lesson 10",
+  "description": "RTK Lesson 10 - 59 cards",
+  "lesson": 10,
+  "cards": [
+    {
+      "id": "rtk_l10f0184",
+      "rank": "5",
+      "suit": "clubs",
+      "kanji": "未だ",
+      "hiragana": "まだ",
+      "romaji": "mada",
+      "english": "yet, more",
+      "rhyme": "Remember this word you see, it's mada",
+      "sentence": {
+        "kanji": "宿題は未だ終わっていません。",
+        "romaji": "shukudai ha mada owate imasen",
+        "english": "I haven't finished my homework yet."
+      },
+      "rtkLesson": 10,
+      "rtkFrame": 184
+    },
+    {
+      "id": "rtk_l10f0200",
+      "rank": "6",
+      "suit": "spades",
+      "kanji": "妹",
+      "hiragana": "いもうと",
+      "romaji": "imouto",
+      "english": "younger sister",
+      "rhyme": "Remember this word you see, it's imouto",
+      "sentence": {
+        "kanji": "私の妹は小学生です。",
+        "romaji": "watashi no imouto ha shougakusei desu",
+        "english": "My little sister goes to elementary school."
+      },
+      "rtkLesson": 10,
+      "rtkFrame": 200
+    },
+    {
+      "id": "rtk_l10f0216",
+      "rank": "7",
+      "suit": "hearts",
+      "kanji": "若い",
+      "hiragana": "わかい",
+      "romaji": "wakai",
+      "english": "young",
+      "rhyme": "Remember this word you see, it's wakai",
+      "sentence": {
+        "kanji": "彼はまだ若いです。",
+        "romaji": "kare ha mada wakai desu",
+        "english": "He's still young."
+      },
+      "rtkLesson": 10,
+      "rtkFrame": 216
+    },
+    {
+      "id": "rtk_l10f0309",
+      "rank": "4",
+      "suit": "diamonds",
+      "kanji": "本",
+      "hiragana": "ほん",
+      "romaji": "hon",
+      "english": "book, volume",
+      "rhyme": "Remember this word you see, it's hon",
+      "sentence": {
+        "kanji": "本を１冊買いました。",
+        "romaji": "hon wo isatsu kaimashita",
+        "english": "I bought one book."
+      },
+      "rtkLesson": 10,
+      "rtkFrame": 309
+    },
+    {
+      "id": "rtk_l10f0432",
+      "rank": "9",
+      "suit": "clubs",
+      "kanji": "林",
+      "hiragana": "はやし",
+      "romaji": "hayashi",
+      "english": "woods, grove",
+      "rhyme": "Remember this word you see, it's hayashi",
+      "sentence": {
+        "kanji": "私たちは林の中に入っていった。",
+        "romaji": "watashitachi ha hayashi no naka ni haite ita",
+        "english": "We entered the woods."
+      },
+      "rtkLesson": 10,
+      "rtkFrame": 432
+    },
+    {
+      "id": "rtk_l10f0538",
+      "rank": "10",
+      "suit": "spades",
+      "kanji": "森",
+      "hiragana": "もり",
+      "romaji": "mori",
+      "english": "thick woods, forest",
+      "rhyme": "Remember this word you see, it's mori",
+      "sentence": {
+        "kanji": "私は森を歩くのが好きです。",
+        "romaji": "watashi ha mori wo aruku no ga suki desu",
+        "english": "I like to walk in the forest."
+      },
+      "rtkLesson": 10,
+      "rtkFrame": 538
+    },
+    {
+      "id": "rtk_l10f0789",
+      "rank": "12",
+      "suit": "diamonds",
+      "kanji": "株",
+      "hiragana": "かぶ",
+      "romaji": "kabu",
+      "english": "stocks, shares",
+      "rhyme": "Remember this word you see, it's kabu",
+      "sentence": {
+        "kanji": "最近株を始めました。",
+        "romaji": "saikin kabu wo hajimemashita",
+        "english": "I recently started investing in stocks."
+      },
+      "rtkLesson": 10,
+      "rtkFrame": 789
+    },
+    {
+      "id": "rtk_l10f1190",
+      "rank": "13",
+      "suit": "clubs",
+      "kanji": "首相",
+      "hiragana": "しゅしょう",
+      "romaji": "shushou",
+      "english": "prime minister",
+      "rhyme": "Remember this word you see, it's shushou",
+      "sentence": {
+        "kanji": "今の首相はあまり力がない。",
+        "romaji": "ima no shushou ha amari chikara ga nai",
+        "english": "The current Prime Minister doesn't have much power."
+      },
+      "rtkLesson": 10,
+      "rtkFrame": 1190
+    },
+    {
+      "id": "rtk_l10f1456",
+      "rank": "1",
+      "suit": "spades",
+      "kanji": "苦しい",
+      "hiragana": "くるしい",
+      "romaji": "kurushii",
+      "english": "painful, difficult",
+      "rhyme": "Remember this word you see, it's kurushii",
+      "sentence": {
+        "kanji": "食べ過ぎておなかが苦しい。",
+        "romaji": "tabesugite onaka ga kurushii",
+        "english": "I have eaten too much and my stomach hurts."
+      },
+      "rtkLesson": 10,
+      "rtkFrame": 1456
+    },
+    {
+      "id": "rtk_l10f1457",
+      "rank": "2",
+      "suit": "hearts",
+      "kanji": "苦い",
+      "hiragana": "にがい",
+      "romaji": "nigai",
+      "english": "bitter, sour",
+      "rhyme": "Remember this word you see, it's nigai",
+      "sentence": {
+        "kanji": "私は苦いコーヒーが好きです。",
+        "romaji": "watashi ha nigai ko-hi- ga suki desu",
+        "english": "I like bitter coffee."
+      },
+      "rtkLesson": 10,
+      "rtkFrame": 1457
+    },
+    {
+      "id": "rtk_l10f1473",
+      "rank": "3",
+      "suit": "diamonds",
+      "kanji": "薄い",
+      "hiragana": "うすい",
+      "romaji": "usui",
+      "english": "thin, weak, pale",
+      "rhyme": "Remember this word you see, it's usui",
+      "sentence": {
+        "kanji": "この電子辞書はとても薄い。",
+        "romaji": "kono denshi jisho ha totemo usui",
+        "english": "This electronic dictionary is very thin."
+      },
+      "rtkLesson": 10,
+      "rtkFrame": 1473
+    },
+    {
+      "id": "rtk_l10f1474",
+      "rank": "11",
+      "suit": "hearts",
+      "kanji": "味",
+      "hiragana": "あじ",
+      "romaji": "aji",
+      "english": "taste, flavor",
+      "rhyme": "Remember this word you see, it's aji",
+      "sentence": {
+        "kanji": "この料理は味が薄い。",
+        "romaji": "kono ryouri ha aji ga usui",
+        "english": "This food is tasteless."
+      },
+      "rtkLesson": 10,
+      "rtkFrame": 1474
+    },
+    {
+      "id": "rtk_l10f1583",
+      "rank": "4",
+      "suit": "clubs",
+      "kanji": "植える",
+      "hiragana": "うえる",
+      "romaji": "ueru",
+      "english": "plant, raise",
+      "rhyme": "Remember this word you see, it's ueru",
+      "sentence": {
+        "kanji": "庭にバラを植えました。",
+        "romaji": "niwa ni bara wo uemashita",
+        "english": "I planted a rose in the garden."
+      },
+      "rtkLesson": 10,
+      "rtkFrame": 1583
+    },
+    {
+      "id": "rtk_l10f1592",
+      "rank": "5",
+      "suit": "spades",
+      "kanji": "草",
+      "hiragana": "くさ",
+      "romaji": "kusa",
+      "english": "grass, weed",
+      "rhyme": "Remember this word you see, it's kusa",
+      "sentence": {
+        "kanji": "庭に草が生えている。",
+        "romaji": "niwa ni kusa ga haete iru",
+        "english": "Weeds are growing in the garden."
+      },
+      "rtkLesson": 10,
+      "rtkFrame": 1592
+    },
+    {
+      "id": "rtk_l10f1593",
+      "rank": "6",
+      "suit": "hearts",
+      "kanji": "葉",
+      "hiragana": "は",
+      "romaji": "ha",
+      "english": "leaf, needle",
+      "rhyme": "Remember this word you see, it's ha",
+      "sentence": {
+        "kanji": "これは桜の葉です。",
+        "romaji": "kore ha sakura no ha desu",
+        "english": "This is a cherry tree leaf."
+      },
+      "rtkLesson": 10,
+      "rtkFrame": 1593
+    },
+    {
+      "id": "rtk_l10f1682",
+      "rank": "8",
+      "suit": "diamonds",
+      "kanji": "木",
+      "hiragana": "き",
+      "romaji": "ki",
+      "english": "tree, wood",
+      "rhyme": "Remember this word you see, it's ki",
+      "sentence": {
+        "kanji": "台風で木が倒れた。",
+        "romaji": "taifuu de ki ga taoreta",
+        "english": "The tree fell because of the typhoon."
+      },
+      "rtkLesson": 10,
+      "rtkFrame": 1682
+    },
+    {
+      "id": "rtk_l10f1722",
+      "rank": "7",
+      "suit": "diamonds",
+      "kanji": "机",
+      "hiragana": "つくえ",
+      "romaji": "tsukue",
+      "english": "desk, table",
+      "rhyme": "Remember this word you see, it's tsukue",
+      "sentence": {
+        "kanji": "新しい机を買ってもらいました。",
+        "romaji": "atarashii tsukue wo kate moraimashita",
+        "english": "They bought me a new desk."
+      },
+      "rtkLesson": 10,
+      "rtkFrame": 1722
+    },
+    {
+      "id": "rtk_l10f1725",
+      "rank": "8",
+      "suit": "clubs",
+      "kanji": "棚",
+      "hiragana": "たな",
+      "romaji": "tana",
+      "english": "cupboard, shelf, rack",
+      "rhyme": "Remember this word you see, it's tana",
+      "sentence": {
+        "kanji": "大きな棚はとても便利です。",
+        "romaji": "ooki na tana ha totemo benri desu",
+        "english": "A large set of shelves is very useful."
+      },
+      "rtkLesson": 10,
+      "rtkFrame": 1725
+    },
+    {
+      "id": "rtk_l10f1726",
+      "rank": "9",
+      "suit": "spades",
+      "kanji": "本棚",
+      "hiragana": "ほんだな",
+      "romaji": "hondana",
+      "english": "bookshelf",
+      "rhyme": "Remember this word you see, it's hondana",
+      "sentence": {
+        "kanji": "これはとても大きな本棚ですね。",
+        "romaji": "kore ha totemo ooki na hondana desu ne",
+        "english": "This is a very big bookcase."
+      },
+      "rtkLesson": 10,
+      "rtkFrame": 1726
+    },
+    {
+      "id": "rtk_l10f2026",
+      "rank": "10",
+      "suit": "clubs",
+      "kanji": "本日",
+      "hiragana": "ほんじつ",
+      "romaji": "honjitsu",
+      "english": "today",
+      "rhyme": "Remember this word you see, it's honjitsu",
+      "sentence": {
+        "kanji": "本日のランチはハンバーグでございます。",
+        "romaji": "honjitsu no ranchi ha hanba-gu de gozaimasu",
+        "english": "The lunch of the day is hamburger steak."
+      },
+      "rtkLesson": 10,
+      "rtkFrame": 2026
+    },
+    {
+      "id": "rtk_l10f2080",
+      "rank": "11",
+      "suit": "spades",
+      "kanji": "見本",
+      "hiragana": "みほん",
+      "romaji": "mihon",
+      "english": "sample, model",
+      "rhyme": "Remember this word you see, it's mihon",
+      "sentence": {
+        "kanji": "見本はこちらにございます。",
+        "romaji": "mihon ha kochira ni gozaimasu",
+        "english": "There's a sample here."
+      },
+      "rtkLesson": 10,
+      "rtkFrame": 2080
+    },
+    {
+      "id": "rtk_l10f2162",
+      "rank": "12",
+      "suit": "hearts",
+      "kanji": "末",
+      "hiragana": "まつ",
+      "romaji": "matsu",
+      "english": "last part, end",
+      "rhyme": "Remember this word you see, it's matsu",
+      "sentence": {
+        "kanji": "今月末にカナダに行きます。",
+        "romaji": "kongetsu matsu ni kanada ni ikimasu",
+        "english": "I will go to Canada at the end of this month."
+      },
+      "rtkLesson": 10,
+      "rtkFrame": 2162
+    },
+    {
+      "id": "rtk_l10f2422",
+      "rank": "12",
+      "suit": "clubs",
+      "kanji": "月末",
+      "hiragana": "げつまつ",
+      "romaji": "getsumatsu",
+      "english": "end of the month",
+      "rhyme": "Remember this word you see, it's getsumatsu",
+      "sentence": {
+        "kanji": "月末までに申込書を送ってください。",
+        "romaji": "getsumatsu made ni moushikomisho wo okute kudasai",
+        "english": "Please send the application form by the end of the month."
+      },
+      "rtkLesson": 10,
+      "rtkFrame": 2422
+    },
+    {
+      "id": "rtk_l10f2692",
+      "rank": "11",
+      "suit": "diamonds",
+      "kanji": "味わう",
+      "hiragana": "あじわう",
+      "romaji": "ajiwau",
+      "english": "taste, appreciate",
+      "rhyme": "Remember this word you see, it's ajiwau",
+      "sentence": {
+        "kanji": "母の手料理をゆっくり味わいました。",
+        "romaji": "haha no teryouri wo yukuri ajiwaimashita",
+        "english": "I took my time savoring my mother's homemade cooking."
+      },
+      "rtkLesson": 10,
+      "rtkFrame": 2692
+    },
+    {
+      "id": "rtk_l10f2801",
+      "rank": "13",
+      "suit": "spades",
+      "kanji": "末っ子",
+      "hiragana": "すえっこ",
+      "romaji": "sueko",
+      "english": "youngest child",
+      "rhyme": "Remember this word you see, it's sueko",
+      "sentence": {
+        "kanji": "彼は5人兄弟の末っ子です。",
+        "romaji": "kare ha gonin kyoudai no sueko desu",
+        "english": "He is the youngest of five siblings."
+      },
+      "rtkLesson": 10,
+      "rtkFrame": 2801
+    },
+    {
+      "id": "rtk_l10f2915",
+      "rank": "2",
+      "suit": "spades",
+      "kanji": "若々しい",
+      "hiragana": "わかわかしい",
+      "romaji": "wakawakashii",
+      "english": "youthful, young-looking",
+      "rhyme": "Remember this word you see, it's wakawakashii",
+      "sentence": {
+        "kanji": "彼女はとても若々しい人です。",
+        "romaji": "kanojo ha totemo wakawakashii hito desu",
+        "english": "She's a very youthful person."
+      },
+      "rtkLesson": 10,
+      "rtkFrame": 2915
+    },
+    {
+      "id": "rtk_l10f3238",
+      "rank": "10",
+      "suit": "hearts",
+      "kanji": "森林",
+      "hiragana": "しんりん",
+      "romaji": "shinrin",
+      "english": "forest, woodland",
+      "rhyme": "Remember this word you see, it's shinrin",
+      "sentence": {
+        "kanji": "世界中で森林が失われています。",
+        "romaji": "sekaijuu de shinrin ga ushinawarete imasu",
+        "english": "Forests are being lost all over the world."
+      },
+      "rtkLesson": 10,
+      "rtkFrame": 3238
+    },
+    {
+      "id": "rtk_l10f3314",
+      "rank": "2",
+      "suit": "diamonds",
+      "kanji": "案",
+      "hiragana": "あん",
+      "romaji": "an",
+      "english": "plan, proposal",
+      "rhyme": "Remember this word you see, it's an",
+      "sentence": {
+        "kanji": "もっと案を出し合いましょう。",
+        "romaji": "moto an wo dashiaimashou",
+        "english": "Let's share more ideas."
+      },
+      "rtkLesson": 10,
+      "rtkFrame": 3314
+    },
+    {
+      "id": "rtk_l10f3315",
+      "rank": "3",
+      "suit": "clubs",
+      "kanji": "案外",
+      "hiragana": "あんがい",
+      "romaji": "angai",
+      "english": "unexpectedly",
+      "rhyme": "Remember this word you see, it's angai",
+      "sentence": {
+        "kanji": "彼は案外いい人かも知れない。",
+        "romaji": "kare ha angai ii hito kamo shirenai",
+        "english": "He may unexpectedly turn out to be a good person."
+      },
+      "rtkLesson": 10,
+      "rtkFrame": 3315
+    },
+    {
+      "id": "rtk_l10f3537",
+      "rank": "5",
+      "suit": "hearts",
+      "kanji": "真相",
+      "hiragana": "しんそう",
+      "romaji": "shinsou",
+      "english": "the truth",
+      "rhyme": "Remember this word you see, it's shinsou",
+      "sentence": {
+        "kanji": "最近、事件の真相が明らかになったよ。",
+        "romaji": "saikin jiken no shinsou ga akiraka ni nata yo",
+        "english": "Recently the truth of the case has been revealed."
+      },
+      "rtkLesson": 10,
+      "rtkFrame": 3537
+    },
+    {
+      "id": "rtk_l10f3882",
+      "rank": "1",
+      "suit": "clubs",
+      "kanji": "村",
+      "hiragana": "むら",
+      "romaji": "mura",
+      "english": "village, hamlet",
+      "rhyme": "Remember this word you see, it's mura",
+      "sentence": {
+        "kanji": "私は隣の村から来ました。",
+        "romaji": "watashi ha tonari no mura kara kimashita",
+        "english": "I come from the next village over."
+      },
+      "rtkLesson": 10,
+      "rtkFrame": 3882
+    },
+    {
+      "id": "rtk_l10f3911",
+      "rank": "4",
+      "suit": "spades",
+      "kanji": "外相",
+      "hiragana": "がいしょう",
+      "romaji": "gaishou",
+      "english": "Minister of Foreign Affairs",
+      "rhyme": "Remember this word you see, it's gaishou",
+      "sentence": {
+        "kanji": "外相は来週訪米の予定です。",
+        "romaji": "gaishou ha raishuu houbei no yotei desu",
+        "english": "The Foreign Minister is scheduled to visit the United States next week."
+      },
+      "rtkLesson": 10,
+      "rtkFrame": 3911
+    },
+    {
+      "id": "rtk_l10f4010",
+      "rank": "13",
+      "suit": "diamonds",
+      "kanji": "古本",
+      "hiragana": "ふるほん",
+      "romaji": "furuhon",
+      "english": "secondhand book",
+      "rhyme": "Remember this word you see, it's furuhon",
+      "sentence": {
+        "kanji": "おととい古本を3冊買いました。",
+        "romaji": "ototoi furuhon wo 3 satsu kaimashita",
+        "english": "I bought three secondhand books the day before yesterday."
+      },
+      "rtkLesson": 10,
+      "rtkFrame": 4010
+    },
+    {
+      "id": "rtk_l10f4156",
+      "rank": "6",
+      "suit": "diamonds",
+      "kanji": "苦しむ",
+      "hiragana": "くるしむ",
+      "romaji": "kurushimu",
+      "english": "suffer, be troubled",
+      "rhyme": "Remember this word you see, it's kurushimu",
+      "sentence": {
+        "kanji": "彼女はアレルギーに苦しんでいます。",
+        "romaji": "kanojo ha arerugi- ni kurushinde imasu",
+        "english": "She suffers from an allergy."
+      },
+      "rtkLesson": 10,
+      "rtkFrame": 4156
+    },
+    {
+      "id": "rtk_l10f4159",
+      "rank": "8",
+      "suit": "spades",
+      "kanji": "苦しめる",
+      "hiragana": "くるしめる",
+      "romaji": "kurushimeru",
+      "english": "torment, trouble",
+      "rhyme": "Remember this word you see, it's kurushimeru",
+      "sentence": {
+        "kanji": "強い日差しが選手たちを苦しめたの。",
+        "romaji": "tsuyoi hizashi ga senshutachi wo kurushimeta no",
+        "english": "The strong sunlight troubled the athletes."
+      },
+      "rtkLesson": 10,
+      "rtkFrame": 4159
+    },
+    {
+      "id": "rtk_l10f4193",
+      "rank": "9",
+      "suit": "hearts",
+      "kanji": "砂漠",
+      "hiragana": "さばく",
+      "romaji": "sabaku",
+      "english": "desert",
+      "rhyme": "Remember this word you see, it's sabaku",
+      "sentence": {
+        "kanji": "砂漠ではほとんど雨が降らないのよ。",
+        "romaji": "sabaku de ha hotondo ame ga furanai no yo",
+        "english": "It hardly rains in the desert."
+      },
+      "rtkLesson": 10,
+      "rtkFrame": 4193
+    },
+    {
+      "id": "rtk_l10f4201",
+      "rank": "10",
+      "suit": "diamonds",
+      "kanji": "薄める",
+      "hiragana": "うすめる",
+      "romaji": "usumeru",
+      "english": "thin, dilute",
+      "rhyme": "Remember this word you see, it's usumeru",
+      "sentence": {
+        "kanji": "スープを少し薄めましょうか。",
+        "romaji": "su-pu wo sukoshi usumemashou ka",
+        "english": "Shall I water down the soup a little?"
+      },
+      "rtkLesson": 10,
+      "rtkFrame": 4201
+    },
+    {
+      "id": "rtk_l10f4232",
+      "rank": "11",
+      "suit": "clubs",
+      "kanji": "札",
+      "hiragana": "さつ",
+      "romaji": "satsu",
+      "english": "bill, paper money",
+      "rhyme": "Remember this word you see, it's satsu",
+      "sentence": {
+        "kanji": "彼はカバンから札の束を取り出したんだ。",
+        "romaji": "kare ha kaban kara satsu no taba wo toridashita n da 。",
+        "english": "He took a bundle of cash out of his bag."
+      },
+      "rtkLesson": 10,
+      "rtkFrame": 4232
+    },
+    {
+      "id": "rtk_l10f4234",
+      "rank": "3",
+      "suit": "hearts",
+      "kanji": "札",
+      "hiragana": "ふだ",
+      "romaji": "fuda",
+      "english": "sign, billboard",
+      "rhyme": "Remember this word you see, it's fuda",
+      "sentence": {
+        "kanji": "店の外にまだ営業中の札がでているよ。",
+        "romaji": "mise no soto ni mada eigyou chuu no fuda ga deteiru yo",
+        "english": "The \"open for business\" sign is still posted outside the store."
+      },
+      "rtkLesson": 10,
+      "rtkFrame": 4234
+    },
+    {
+      "id": "rtk_l10f4235",
+      "rank": "4",
+      "suit": "diamonds",
+      "kanji": "名札",
+      "hiragana": "なふだ",
+      "romaji": "nafuda",
+      "english": "name badge, tag",
+      "rhyme": "Remember this word you see, it's nafuda",
+      "sentence": {
+        "kanji": "生徒たちは校内では名札をつけます。",
+        "romaji": "seitotachi ha kounai de ha nafuda wo tsukemasu",
+        "english": "Students wear name tags in school."
+      },
+      "rtkLesson": 10,
+      "rtkFrame": 4235
+    },
+    {
+      "id": "rtk_l10f4341",
+      "rank": "7",
+      "suit": "clubs",
+      "kanji": "苦しみ",
+      "hiragana": "くるしみ",
+      "romaji": "kurushimi",
+      "english": "distress, suffering",
+      "rhyme": "Remember this word you see, it's kurushimi",
+      "sentence": {
+        "kanji": "誰も彼の苦しみを理解していなかったな。",
+        "romaji": "dare mo kare no kurushimi wo rikai shite inakata na",
+        "english": "No one recognized his suffering."
+      },
+      "rtkLesson": 10,
+      "rtkFrame": 4341
+    },
+    {
+      "id": "rtk_l10f4529",
+      "rank": "12",
+      "suit": "spades",
+      "kanji": "植木",
+      "hiragana": "うえき",
+      "romaji": "ueki",
+      "english": "garden plant, shrub",
+      "rhyme": "Remember this word you see, it's ueki",
+      "sentence": {
+        "kanji": "植木に水をやりました。",
+        "romaji": "ueki ni mizu wo yarimashita",
+        "english": "I watered the plant."
+      },
+      "rtkLesson": 10,
+      "rtkFrame": 4529
+    },
+    {
+      "id": "rtk_l10f4532",
+      "rank": "5",
+      "suit": "clubs",
+      "kanji": "田植え",
+      "hiragana": "たうえ",
+      "romaji": "taue",
+      "english": "rice planting",
+      "rhyme": "Remember this word you see, it's taue",
+      "sentence": {
+        "kanji": "5月は田植えの季節です。",
+        "romaji": "5 gatsu ha taue no kisetsu desu",
+        "english": "May is the rice planting season."
+      },
+      "rtkLesson": 10,
+      "rtkFrame": 4532
+    },
+    {
+      "id": "rtk_l10f4546",
+      "rank": "6",
+      "suit": "spades",
+      "kanji": "ほうれん草",
+      "hiragana": "ほうれんそう",
+      "romaji": "hourensou",
+      "english": "spinach",
+      "rhyme": "Remember this word you see, it's hourensou",
+      "sentence": {
+        "kanji": "ほうれん草はビタミンが豊富です。",
+        "romaji": "hourensou ha bitamin ga houfu desu 。",
+        "english": "Spinach is rich in vitamins."
+      },
+      "rtkLesson": 10,
+      "rtkFrame": 4546
+    },
+    {
+      "id": "rtk_l10f4551",
+      "rank": "1",
+      "suit": "diamonds",
+      "kanji": "木の葉",
+      "hiragana": "このは",
+      "romaji": "konoha",
+      "english": "tree leaves",
+      "rhyme": "Remember this word you see, it's konoha",
+      "sentence": {
+        "kanji": "秋には木の葉が赤くなります。",
+        "romaji": "aki ni ha konoha ga akaku narimasu",
+        "english": "Leaves go red in autumn."
+      },
+      "rtkLesson": 10,
+      "rtkFrame": 4551
+    },
+    {
+      "id": "rtk_l10f4559",
+      "rank": "7",
+      "suit": "hearts",
+      "kanji": "葉っぱ",
+      "hiragana": "はっぱ",
+      "romaji": "hapa",
+      "english": "leaf",
+      "rhyme": "Remember this word you see, it's hapa",
+      "sentence": {
+        "kanji": "もみじの葉っぱが赤くなりましたね。",
+        "romaji": "momiji no hapa ga akaku narimashita ne",
+        "english": "The maple leaves turned red."
+      },
+      "rtkLesson": 10,
+      "rtkFrame": 4559
+    },
+    {
+      "id": "rtk_l10f4852",
+      "rank": "1",
+      "suit": "hearts",
+      "kanji": "末",
+      "hiragana": "すえ",
+      "romaji": "sue",
+      "english": "(after) the end",
+      "rhyme": "Remember this word you see, it's sue",
+      "sentence": {
+        "kanji": "長い話合いの末、やっと同意に至った。",
+        "romaji": "nagai hanashiai no sue yato doui ni itata",
+        "english": "After long talks, they finally reached an agreement."
+      },
+      "rtkLesson": 10,
+      "rtkFrame": 4852
+    },
+    {
+      "id": "rtk_l10f5023",
+      "rank": "8",
+      "suit": "diamonds",
+      "kanji": "枠",
+      "hiragana": "わく",
+      "romaji": "waku",
+      "english": "frame, limits",
+      "rhyme": "Remember this word you see, it's waku",
+      "sentence": {
+        "kanji": "枠の中に答えを書いてください。",
+        "romaji": "waku no naka ni kotae wo kaite kudasai",
+        "english": "Please write the answer in the box."
+      },
+      "rtkLesson": 10,
+      "rtkFrame": 5023
+    },
+    {
+      "id": "rtk_l10f5037",
+      "rank": "13",
+      "suit": "hearts",
+      "kanji": "草木",
+      "hiragana": "くさき",
+      "romaji": "kusaki",
+      "english": "plants and trees",
+      "rhyme": "Remember this word you see, it's kusaki",
+      "sentence": {
+        "kanji": "この庭は草木が枯れているね。",
+        "romaji": "kono niwa ha kusaki ga karete iru ne",
+        "english": "The plants dry out in this garden."
+      },
+      "rtkLesson": 10,
+      "rtkFrame": 5037
+    },
+    {
+      "id": "rtk_l10f5038",
+      "rank": "3",
+      "suit": "spades",
+      "kanji": "木枯らし",
+      "hiragana": "こがらし",
+      "romaji": "kogarashi",
+      "english": "cold wintry wind",
+      "rhyme": "Remember this word you see, it's kogarashi",
+      "sentence": {
+        "kanji": "外は木枯らしが吹いているよ。",
+        "romaji": "soto ha kogarashi ga fuite iru yo",
+        "english": "A cold wintry wind is blowing outside."
+      },
+      "rtkLesson": 10,
+      "rtkFrame": 5038
+    },
+    {
+      "id": "rtk_l10f5162",
+      "rank": "4",
+      "suit": "hearts",
+      "kanji": "暦",
+      "hiragana": "こよみ",
+      "romaji": "koyomi",
+      "english": "calendar, almanac",
+      "rhyme": "Remember this word you see, it's koyomi",
+      "sentence": {
+        "kanji": "暦の上では今日から冬ですね。",
+        "romaji": "koyomi no ue de ha kyou kara fuyu desu ne",
+        "english": "Winter starts today according to the almanac."
+      },
+      "rtkLesson": 10,
+      "rtkFrame": 5162
+    },
+    {
+      "id": "rtk_l10f5244",
+      "rank": "5",
+      "suit": "diamonds",
+      "kanji": "暮らす",
+      "hiragana": "くらす",
+      "romaji": "kurasu",
+      "english": "live, earn one's livelihood",
+      "rhyme": "Remember this word you see, it's kurasu",
+      "sentence": {
+        "kanji": "将来は海の近くで暮らしたいな。",
+        "romaji": "shourai ha umi no chikaku de kurashitai na",
+        "english": "I want to live near the sea in the future."
+      },
+      "rtkLesson": 10,
+      "rtkFrame": 5244
+    },
+    {
+      "id": "rtk_l10f5245",
+      "rank": "6",
+      "suit": "clubs",
+      "kanji": "暮らし",
+      "hiragana": "くらし",
+      "romaji": "kurashi",
+      "english": "living, livelihood",
+      "rhyme": "Remember this word you see, it's kurashi",
+      "sentence": {
+        "kanji": "彼女は毎日の暮らしを楽しんでいますね。",
+        "romaji": "kanojo ha mainichi no kurashi wo tanoshinde imasu ne",
+        "english": "She's enjoying her daily life."
+      },
+      "rtkLesson": 10,
+      "rtkFrame": 5245
+    },
+    {
+      "id": "rtk_l10f5246",
+      "rank": "7",
+      "suit": "spades",
+      "kanji": "暮れ",
+      "hiragana": "くれ",
+      "romaji": "kure",
+      "english": "dusk, the end (of a season or a year)",
+      "rhyme": "Remember this word you see, it's kure",
+      "sentence": {
+        "kanji": "暮れは用事が多くて忙しいです。",
+        "romaji": "kure ha youji ga ookute isogashii desu",
+        "english": "I'm busy with a lot of things to do at the end of the year."
+      },
+      "rtkLesson": 10,
+      "rtkFrame": 5246
+    },
+    {
+      "id": "rtk_l10f5247",
+      "rank": "8",
+      "suit": "hearts",
+      "kanji": "暮れる",
+      "hiragana": "くれる",
+      "romaji": "kureru",
+      "english": "grow dark",
+      "rhyme": "Remember this word you see, it's kureru",
+      "sentence": {
+        "kanji": "日が暮れる前に帰りましょう。",
+        "romaji": "hi ga kureru mae ni kaerimashou",
+        "english": "Let's go home before it gets dark."
+      },
+      "rtkLesson": 10,
+      "rtkFrame": 5247
+    },
+    {
+      "id": "rtk_l10f5255",
+      "rank": "9",
+      "suit": "clubs",
+      "kanji": "夕暮れ",
+      "hiragana": "ゆうぐれ",
+      "romaji": "yuugure",
+      "english": "evening, twilight",
+      "rhyme": "Remember this word you see, it's yuugure",
+      "sentence": {
+        "kanji": "夕暮れの空がきれいですね。",
+        "romaji": "yuugure no sora ga kirei desu ne",
+        "english": "The twilight sky is beautiful."
+      },
+      "rtkLesson": 10,
+      "rtkFrame": 5255
+    },
+    {
+      "id": "rtk_l10f5748",
+      "rank": "10",
+      "suit": "spades",
+      "kanji": "墓",
+      "hiragana": "はか",
+      "romaji": "haka",
+      "english": "grave, gravestone",
+      "rhyme": "Remember this word you see, it's haka",
+      "sentence": {
+        "kanji": "祖父の墓は近くにあります。",
+        "romaji": "sofu no haka ha chikaku ni arimasu",
+        "english": "My grandfather's grave is nearby."
+      },
+      "rtkLesson": 10,
+      "rtkFrame": 5748
+    },
+    {
+      "id": "rtk_l10f5897",
+      "rank": "2",
+      "suit": "clubs",
+      "kanji": "枯れる",
+      "hiragana": "かれる",
+      "romaji": "kareru",
+      "english": "wither, die",
+      "rhyme": "Remember this word you see, it's kareru",
+      "sentence": {
+        "kanji": "花瓶の花が枯れました。",
+        "romaji": "kabin no hana ga karemashita",
+        "english": "The flowers in the vase died."
+      },
+      "rtkLesson": 10,
+      "rtkFrame": 5897
+    },
+    {
+      "id": "rtk_l10f5959",
+      "rank": "9",
+      "suit": "diamonds",
+      "kanji": "苛める",
+      "hiragana": "いじめる",
+      "romaji": "ijimeru",
+      "english": "ill-treat, abuse",
+      "rhyme": "Remember this word you see, it's ijimeru",
+      "sentence": {
+        "kanji": "動物を苛めてはいけません。",
+        "romaji": "doubutsu wo ijimete ha ikemasen",
+        "english": "Don't abuse animals."
+      },
+      "rtkLesson": 10,
+      "rtkFrame": 5959
+    }
+  ]
+}

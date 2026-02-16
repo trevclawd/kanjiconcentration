@@ -1,0 +1,330 @@
+{
+  "name": "RTK Lesson 16",
+  "description": "RTK Lesson 16 - 19 cards",
+  "lesson": 16,
+  "cards": [
+    {
+      "id": "rtk_l16f0339",
+      "rank": "11",
+      "suit": "hearts",
+      "kanji": "載せる",
+      "hiragana": "のせる",
+      "romaji": "noseru",
+      "english": "place, put on",
+      "rhyme": "Remember this word you see, it's noseru",
+      "sentence": {
+        "kanji": "皿にケーキを載せました。",
+        "romaji": "sara ni ke-ki wo nosemashita。",
+        "english": "I put the cake on the plate."
+      },
+      "rtkLesson": 16,
+      "rtkFrame": 339
+    },
+    {
+      "id": "rtk_l16f0755",
+      "rank": "12",
+      "suit": "diamonds",
+      "kanji": "減る",
+      "hiragana": "へる",
+      "romaji": "heru",
+      "english": "decrease, diminish",
+      "rhyme": "Remember this word you see, it's heru",
+      "sentence": {
+        "kanji": "体重がかなり減りました。",
+        "romaji": "taijuu ga kanari herimashita",
+        "english": "I've lost a lot of weight."
+      },
+      "rtkLesson": 16,
+      "rtkFrame": 755
+    },
+    {
+      "id": "rtk_l16f0756",
+      "rank": "13",
+      "suit": "clubs",
+      "kanji": "減らす",
+      "hiragana": "へらす",
+      "romaji": "herasu",
+      "english": "decrease, reduce",
+      "rhyme": "Remember this word you see, it's herasu",
+      "sentence": {
+        "kanji": "最近、食事を減らしています。",
+        "romaji": "saikin shokuji wo herashite imasu",
+        "english": "I've been eating less recently."
+      },
+      "rtkLesson": 16,
+      "rtkFrame": 756
+    },
+    {
+      "id": "rtk_l16f1135",
+      "rank": "1",
+      "suit": "spades",
+      "kanji": "完成",
+      "hiragana": "かんせい",
+      "romaji": "kansei",
+      "english": "completion, finish",
+      "rhyme": "Remember this word you see, it's kansei",
+      "sentence": {
+        "kanji": "新しいホームページが完成した。",
+        "romaji": "atarashii ho-mupe-ji ga kansei shita",
+        "english": "We finished our new home page."
+      },
+      "rtkLesson": 16,
+      "rtkFrame": 1135
+    },
+    {
+      "id": "rtk_l16f1273",
+      "rank": "2",
+      "suit": "hearts",
+      "kanji": "浅い",
+      "hiragana": "あさい",
+      "romaji": "asai",
+      "english": "shallow, superficial",
+      "rhyme": "Remember this word you see, it's asai",
+      "sentence": {
+        "kanji": "この川は浅いです。",
+        "romaji": "kono kawa ha asai desu",
+        "english": "This river is shallow."
+      },
+      "rtkLesson": 16,
+      "rtkFrame": 1273
+    },
+    {
+      "id": "rtk_l16f2469",
+      "rank": "7",
+      "suit": "diamonds",
+      "kanji": "減少",
+      "hiragana": "げんしょう",
+      "romaji": "genshou",
+      "english": "decrease, reduction",
+      "rhyme": "Remember this word you see, it's genshou",
+      "sentence": {
+        "kanji": "この国は人口が減少しているわね。",
+        "romaji": "kono kuni ha jinkou ga genshou shite iru wa ne",
+        "english": "The population of this country is decreasing."
+      },
+      "rtkLesson": 16,
+      "rtkFrame": 2469
+    },
+    {
+      "id": "rtk_l16f2741",
+      "rank": "4",
+      "suit": "clubs",
+      "kanji": "試みる",
+      "hiragana": "こころみる",
+      "romaji": "kokoromiru",
+      "english": "try, attempt",
+      "rhyme": "Remember this word you see, it's kokoromiru",
+      "sentence": {
+        "kanji": "彼は実験を試みたのよ。",
+        "romaji": "kare ha jiken wo kokoromita no yo",
+        "english": "He tried the experiment."
+      },
+      "rtkLesson": 16,
+      "rtkFrame": 2741
+    },
+    {
+      "id": "rtk_l16f2877",
+      "rank": "12",
+      "suit": "clubs",
+      "kanji": "試す",
+      "hiragana": "ためす",
+      "romaji": "tamesu",
+      "english": "try, test",
+      "rhyme": "Remember this word you see, it's tamesu",
+      "sentence": {
+        "kanji": "彼はそのソフトウェアを試したの。",
+        "romaji": "kare ha sono sofutouea wo tameshita no",
+        "english": "He tested the software."
+      },
+      "rtkLesson": 16,
+      "rtkFrame": 2877
+    },
+    {
+      "id": "rtk_l16f2977",
+      "rank": "3",
+      "suit": "diamonds",
+      "kanji": "試合",
+      "hiragana": "しあい",
+      "romaji": "shiai",
+      "english": "match, game",
+      "rhyme": "Remember this word you see, it's shiai",
+      "sentence": {
+        "kanji": "試合の結果を早く知りたい。",
+        "romaji": "shiai no keka wo hayaku shiritai",
+        "english": "I want to know soon the results of the game."
+      },
+      "rtkLesson": 16,
+      "rtkFrame": 2977
+    },
+    {
+      "id": "rtk_l16f3393",
+      "rank": "6",
+      "suit": "hearts",
+      "kanji": "式",
+      "hiragana": "しき",
+      "romaji": "shiki",
+      "english": "ceremony",
+      "rhyme": "Remember this word you see, it's shiki",
+      "sentence": {
+        "kanji": "彼らは教会で式を挙げました。",
+        "romaji": "karera ha kyoukai de shiki wo agemashita",
+        "english": "They had a wedding ceremony in the church."
+      },
+      "rtkLesson": 16,
+      "rtkFrame": 3393
+    },
+    {
+      "id": "rtk_l16f3586",
+      "rank": "8",
+      "suit": "clubs",
+      "kanji": "合成",
+      "hiragana": "ごうせい",
+      "romaji": "gousei",
+      "english": "composition, synthesis",
+      "rhyme": "Remember this word you see, it's gousei",
+      "sentence": {
+        "kanji": "このソフトで画像を合成できます。",
+        "romaji": "kono sofuto de gazou wo gousei dekimasu",
+        "english": "Images can be synthesized with this software."
+      },
+      "rtkLesson": 16,
+      "rtkFrame": 3586
+    },
+    {
+      "id": "rtk_l16f4022",
+      "rank": "1",
+      "suit": "hearts",
+      "kanji": "載る",
+      "hiragana": "のる",
+      "romaji": "noru",
+      "english": "appear in print",
+      "rhyme": "Remember this word you see, it's noru",
+      "sentence": {
+        "kanji": "先生の論文が雑誌に載りましたよ。",
+        "romaji": "sensei no ronbun ga zashi ni norimashita yo",
+        "english": "Our professor's paper was published in the journal."
+      },
+      "rtkLesson": 16,
+      "rtkFrame": 4022
+    },
+    {
+      "id": "rtk_l16f4189",
+      "rank": "9",
+      "suit": "spades",
+      "kanji": "削減",
+      "hiragana": "さくげん",
+      "romaji": "sakugen",
+      "english": "curtailment, reduction",
+      "rhyme": "Remember this word you see, it's sakugen",
+      "sentence": {
+        "kanji": "福祉予算は削減されないことに決まったのよ。",
+        "romaji": "fukushiyosan ha sakugen sarenai koto ni kimata no yo",
+        "english": "They decided not to reduce the social welfare budget."
+      },
+      "rtkLesson": 16,
+      "rtkFrame": 4189
+    },
+    {
+      "id": "rtk_l16f4465",
+      "rank": "5",
+      "suit": "spades",
+      "kanji": "株式",
+      "hiragana": "かぶしき",
+      "romaji": "kabushiki",
+      "english": "stock",
+      "rhyme": "Remember this word you see, it's kabushiki",
+      "sentence": {
+        "kanji": "彼は株式の売買で多額の利益を得たのさ。",
+        "romaji": "kare ha kabushiki no baibai de tagaku no rieki wo eta no sa",
+        "english": "He gained a large profit through buying and selling stocks."
+      },
+      "rtkLesson": 16,
+      "rtkFrame": 4465
+    },
+    {
+      "id": "rtk_l16f4926",
+      "rank": "13",
+      "suit": "spades",
+      "kanji": "試し",
+      "hiragana": "ためし",
+      "romaji": "tameshi",
+      "english": "trial, test",
+      "rhyme": "Remember this word you see, it's tameshi",
+      "sentence": {
+        "kanji": "試しにこの曲を弾いてみてください。",
+        "romaji": "tameshi ni kono kyoku wo hiite mite kudasai",
+        "english": "Try playing this tune, by way of experiment."
+      },
+      "rtkLesson": 16,
+      "rtkFrame": 4926
+    },
+    {
+      "id": "rtk_l16f4955",
+      "rank": "2",
+      "suit": "diamonds",
+      "kanji": "滅びる",
+      "hiragana": "ほろびる",
+      "romaji": "horobiru",
+      "english": "go to ruin, fall",
+      "rhyme": "Remember this word you see, it's horobiru",
+      "sentence": {
+        "kanji": "その文明は何千年も前に滅びてしまったの。",
+        "romaji": "sono bunmei ha nanzennen mo mae ni horobite shimata no",
+        "english": "That civilization was destroyed thousands of years ago."
+      },
+      "rtkLesson": 16,
+      "rtkFrame": 4955
+    },
+    {
+      "id": "rtk_l16f5050",
+      "rank": "3",
+      "suit": "clubs",
+      "kanji": "誠に",
+      "hiragana": "まことに",
+      "romaji": "makotoni",
+      "english": "truly, very",
+      "rhyme": "Remember this word you see, it's makotoni",
+      "sentence": {
+        "kanji": "誠にありがとうございます。",
+        "romaji": "makotoni arigatou gozaimasu",
+        "english": "Thank you very much indeed."
+      },
+      "rtkLesson": 16,
+      "rtkFrame": 5050
+    },
+    {
+      "id": "rtk_l16f5432",
+      "rank": "10",
+      "suit": "hearts",
+      "kanji": "城",
+      "hiragana": "しろ",
+      "romaji": "shiro",
+      "english": "castle, fort",
+      "rhyme": "Remember this word you see, it's shiro",
+      "sentence": {
+        "kanji": "今回の旅行ではヨーロッパの城を見て回ります。",
+        "romaji": "konkai no ryokou de ha yo-ropa no shiro wo mite mawarimasu",
+        "english": "I will look around some European castles on this trip."
+      },
+      "rtkLesson": 16,
+      "rtkFrame": 5432
+    },
+    {
+      "id": "rtk_l16f5689",
+      "rank": "11",
+      "suit": "diamonds",
+      "kanji": "金銭",
+      "hiragana": "きんせん",
+      "romaji": "kinsen",
+      "english": "money, cash",
+      "rhyme": "Remember this word you see, it's kinsen",
+      "sentence": {
+        "kanji": "金銭のトラブルには関わりたくありません。",
+        "romaji": "kinsen no toraburu ni ha kakawaritaku arimasen",
+        "english": "I don't want to get involved with money problems."
+      },
+      "rtkLesson": 16,
+      "rtkFrame": 5689
+    }
+  ]
+}

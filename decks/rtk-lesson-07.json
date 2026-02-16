@@ -1,0 +1,874 @@
+{
+  "name": "RTK Lesson 7",
+  "description": "RTK Lesson 7 - 51 cards",
+  "lesson": 7,
+  "cards": [
+    {
+      "id": "rtk_l07f0032",
+      "rank": "10",
+      "suit": "hearts",
+      "kanji": "少ない",
+      "hiragana": "すくない",
+      "romaji": "sukunai",
+      "english": "few, little",
+      "rhyme": "Remember this word you see, it's sukunai",
+      "sentence": {
+        "kanji": "今年は雨が少ないです。",
+        "romaji": "kotoshi ha ame ga sukunai desu 。",
+        "english": "There's not much rain this year."
+      },
+      "rtkLesson": 7,
+      "rtkFrame": 32
+    },
+    {
+      "id": "rtk_l07f0108",
+      "rank": "12",
+      "suit": "clubs",
+      "kanji": "多い",
+      "hiragana": "おおい",
+      "romaji": "ooi",
+      "english": "lots of",
+      "rhyme": "Remember this word you see, it's ooi",
+      "sentence": {
+        "kanji": "京都にはお寺が多い。",
+        "romaji": "kyouto ni ha otera ga ooi",
+        "english": "There are a lot of temples in Kyoto."
+      },
+      "rtkLesson": 7,
+      "rtkFrame": 108
+    },
+    {
+      "id": "rtk_l07f0263",
+      "rank": "11",
+      "suit": "diamonds",
+      "kanji": "少し",
+      "hiragana": "すこし",
+      "romaji": "sukoshi",
+      "english": "a bit, a little while",
+      "rhyme": "Remember this word you see, it's sukoshi",
+      "sentence": {
+        "kanji": "少し疲れました。",
+        "romaji": "sukoshi tsukaremashita",
+        "english": "I'm a little tired."
+      },
+      "rtkLesson": 7,
+      "rtkFrame": 263
+    },
+    {
+      "id": "rtk_l07f0282",
+      "rank": "1",
+      "suit": "hearts",
+      "kanji": "太い",
+      "hiragana": "ふとい",
+      "romaji": "futoi",
+      "english": "thick, fat",
+      "rhyme": "Remember this word you see, it's futoi",
+      "sentence": {
+        "kanji": "彼女は足が太い。",
+        "romaji": "kanojo ha ashi ga futoi",
+        "english": "She has fat legs."
+      },
+      "rtkLesson": 7,
+      "rtkFrame": 282
+    },
+    {
+      "id": "rtk_l07f0287",
+      "rank": "8",
+      "suit": "clubs",
+      "kanji": "大きい",
+      "hiragana": "おおきい",
+      "romaji": "ookii",
+      "english": "big",
+      "rhyme": "Remember this word you see, it's ookii",
+      "sentence": {
+        "kanji": "あの大きい建物は何ですか。",
+        "romaji": "ano ookii tatemono ha nan desu ka",
+        "english": "What's that big building?"
+      },
+      "rtkLesson": 7,
+      "rtkFrame": 287
+    },
+    {
+      "id": "rtk_l07f0333",
+      "rank": "9",
+      "suit": "spades",
+      "kanji": "小さい",
+      "hiragana": "ちいさい",
+      "romaji": "chiisai",
+      "english": "small",
+      "rhyme": "Remember this word you see, it's chiisai",
+      "sentence": {
+        "kanji": "小さい花が咲いています。",
+        "romaji": "chiisai hana ga saite imasu",
+        "english": "Small flowers are blooming."
+      },
+      "rtkLesson": 7,
+      "rtkFrame": 333
+    },
+    {
+      "id": "rtk_l07f0358",
+      "rank": "13",
+      "suit": "spades",
+      "kanji": "大好き",
+      "hiragana": "だいすき",
+      "romaji": "daisuki",
+      "english": "love",
+      "rhyme": "Remember this word you see, it's daisuki",
+      "sentence": {
+        "kanji": "私は犬が大好きだ。",
+        "romaji": "watashi ha inu ga daisuki da",
+        "english": "I love dogs."
+      },
+      "rtkLesson": 7,
+      "rtkFrame": 358
+    },
+    {
+      "id": "rtk_l07f0431",
+      "rank": "7",
+      "suit": "clubs",
+      "kanji": "石",
+      "hiragana": "いし",
+      "romaji": "ishi",
+      "english": "stone, small rock",
+      "rhyme": "Remember this word you see, it's ishi",
+      "sentence": {
+        "kanji": "私は石につまづいた。",
+        "romaji": "watashi ha ishi ni tsumazuita",
+        "english": "I tripped on a stone."
+      },
+      "rtkLesson": 7,
+      "rtkFrame": 431
+    },
+    {
+      "id": "rtk_l07f0598",
+      "rank": "6",
+      "suit": "diamonds",
+      "kanji": "外",
+      "hiragana": "そと",
+      "romaji": "soto",
+      "english": "outside, open air",
+      "rhyme": "Remember this word you see, it's soto",
+      "sentence": {
+        "kanji": "外は暑いよ。",
+        "romaji": "soto ha atsuiyo",
+        "english": "It's hot outside."
+      },
+      "rtkLesson": 7,
+      "rtkFrame": 598
+    },
+    {
+      "id": "rtk_l07f0615",
+      "rank": "3",
+      "suit": "clubs",
+      "kanji": "少しも",
+      "hiragana": "すこしも",
+      "romaji": "sukoshimo",
+      "english": "at all",
+      "rhyme": "Remember this word you see, it's sukoshimo",
+      "sentence": {
+        "kanji": "あなたは少しも悪くない。",
+        "romaji": "anata ha sukoshimo waruku nai",
+        "english": "It's not your fault at all."
+      },
+      "rtkLesson": 7,
+      "rtkFrame": 615
+    },
+    {
+      "id": "rtk_l07f0666",
+      "rank": "8",
+      "suit": "spades",
+      "kanji": "有名",
+      "hiragana": "ゆうめい",
+      "romaji": "yuumei",
+      "english": "famous",
+      "rhyme": "Remember this word you see, it's yuumei",
+      "sentence": {
+        "kanji": "ボルドーはワインの生産で有名だ。",
+        "romaji": "borudo- ha wain no seisan de yuumei da",
+        "english": "Bordeau is famous for wine production."
+      },
+      "rtkLesson": 7,
+      "rtkFrame": 666
+    },
+    {
+      "id": "rtk_l07f0869",
+      "rank": "5",
+      "suit": "hearts",
+      "kanji": "多く",
+      "hiragana": "おおく",
+      "romaji": "ooku",
+      "english": "much, largely",
+      "rhyme": "Remember this word you see, it's ooku",
+      "sentence": {
+        "kanji": "毎年多くの人が海外へ旅行する。",
+        "romaji": "maitoshi ooku no hito ga kaigai he ryokou suru",
+        "english": "A lot of people travel abroad every year."
+      },
+      "rtkLesson": 7,
+      "rtkFrame": 869
+    },
+    {
+      "id": "rtk_l07f1300",
+      "rank": "10",
+      "suit": "diamonds",
+      "kanji": "光る",
+      "hiragana": "ひかる",
+      "romaji": "hikaru",
+      "english": "shine, emit light",
+      "rhyme": "Remember this word you see, it's hikaru",
+      "sentence": {
+        "kanji": "波がきらきら光っていました。",
+        "romaji": "nami ga kirakira hikate imashita",
+        "english": "The waves sparkled brilliantly."
+      },
+      "rtkLesson": 7,
+      "rtkFrame": 1300
+    },
+    {
+      "id": "rtk_l07f1301",
+      "rank": "11",
+      "suit": "clubs",
+      "kanji": "太る",
+      "hiragana": "ふとる",
+      "romaji": "futoru",
+      "english": "grow fat, fatten",
+      "rhyme": "Remember this word you see, it's futoru",
+      "sentence": {
+        "kanji": "私の姉はすぐ太ります。",
+        "romaji": "watashi no ane ha sugu futorimasu",
+        "english": "My big sister puts on weight easily."
+      },
+      "rtkLesson": 7,
+      "rtkFrame": 1301
+    },
+    {
+      "id": "rtk_l07f1380",
+      "rank": "9",
+      "suit": "hearts",
+      "kanji": "大切",
+      "hiragana": "たいせつ",
+      "romaji": "taisetsu",
+      "english": "important, valuable",
+      "rhyme": "Remember this word you see, it's taisetsu",
+      "sentence": {
+        "kanji": "これは母が大切にしていた指輪です。",
+        "romaji": "kore ha haha ga taisetsu ni shite ita yubiwa desu",
+        "english": "This is a ring that meant a lot to my mother."
+      },
+      "rtkLesson": 7,
+      "rtkFrame": 1380
+    },
+    {
+      "id": "rtk_l07f1451",
+      "rank": "12",
+      "suit": "spades",
+      "kanji": "削る",
+      "hiragana": "けずる",
+      "romaji": "kezuru",
+      "english": "grind down, trim, scale back",
+      "rhyme": "Remember this word you see, it's kezuru",
+      "sentence": {
+        "kanji": "彼は家族のために仕事の時間を削った。",
+        "romaji": "kare ha kazoku no tame ni shigoto no jikan wo kezuta",
+        "english": "He reduced his working hours for his family's sake."
+      },
+      "rtkLesson": 7,
+      "rtkFrame": 1451
+    },
+    {
+      "id": "rtk_l07f1465",
+      "rank": "4",
+      "suit": "spades",
+      "kanji": "少々",
+      "hiragana": "しょうしょう",
+      "romaji": "shoushou",
+      "english": "a little, a few",
+      "rhyme": "Remember this word you see, it's shoushou",
+      "sentence": {
+        "kanji": "塩を少々入れてください。",
+        "romaji": "shio wo shoushou irete kudasai",
+        "english": "Please put in a little salt."
+      },
+      "rtkLesson": 7,
+      "rtkFrame": 1465
+    },
+    {
+      "id": "rtk_l07f1475",
+      "rank": "13",
+      "suit": "hearts",
+      "kanji": "厚い",
+      "hiragana": "あつい",
+      "romaji": "atsui",
+      "english": "thick, bulky",
+      "rhyme": "Remember this word you see, it's atsui",
+      "sentence": {
+        "kanji": "その辞書はとても厚い。",
+        "romaji": "sono jisho ha totemo atsui",
+        "english": "That dictionary is very thick."
+      },
+      "rtkLesson": 7,
+      "rtkFrame": 1475
+    },
+    {
+      "id": "rtk_l07f1586",
+      "rank": "1",
+      "suit": "diamonds",
+      "kanji": "厚さ",
+      "hiragana": "あつさ",
+      "romaji": "atsusa",
+      "english": "thickness",
+      "rhyme": "Remember this word you see, it's atsusa",
+      "sentence": {
+        "kanji": "私は板の厚さを測った。",
+        "romaji": "watashi ha ita no atsusa wo hakata",
+        "english": "I measured the thickness of the board."
+      },
+      "rtkLesson": 7,
+      "rtkFrame": 1586
+    },
+    {
+      "id": "rtk_l07f1774",
+      "rank": "2",
+      "suit": "clubs",
+      "kanji": "臭い",
+      "hiragana": "くさい",
+      "romaji": "kusai",
+      "english": "ill-smelling, stinking",
+      "rhyme": "Remember this word you see, it's kusai",
+      "sentence": {
+        "kanji": "納豆は臭い。",
+        "romaji": "natou ha kusai",
+        "english": "Natto stinks."
+      },
+      "rtkLesson": 7,
+      "rtkFrame": 1774
+    },
+    {
+      "id": "rtk_l07f1827",
+      "rank": "2",
+      "suit": "diamonds",
+      "kanji": "大きさ",
+      "hiragana": "おおきさ",
+      "romaji": "ookisa",
+      "english": "size, dimensions",
+      "rhyme": "Remember this word you see, it's ookisa",
+      "sentence": {
+        "kanji": "この大きさの封筒が欲しいのですが。",
+        "romaji": "kono ookisa no fuutou ga hoshii no desu ga",
+        "english": "I'd like an envelope of this size."
+      },
+      "rtkLesson": 7,
+      "rtkFrame": 1827
+    },
+    {
+      "id": "rtk_l07f2013",
+      "rank": "3",
+      "suit": "hearts",
+      "kanji": "大",
+      "hiragana": "だい",
+      "romaji": "dai",
+      "english": "bigness, large size",
+      "rhyme": "Remember this word you see, it's dai",
+      "sentence": {
+        "kanji": "チーズケーキの大を一つ下さい。",
+        "romaji": "chi-zuke-ki no dai wo hitotsu kudasai",
+        "english": "Please give me a slice of the large size cheesecake."
+      },
+      "rtkLesson": 7,
+      "rtkFrame": 2013
+    },
+    {
+      "id": "rtk_l07f2024",
+      "rank": "7",
+      "suit": "hearts",
+      "kanji": "外れる",
+      "hiragana": "はずれる",
+      "romaji": "hazureru",
+      "english": "come off",
+      "rhyme": "Remember this word you see, it's hazureru",
+      "sentence": {
+        "kanji": "びんのふたが外れません。",
+        "romaji": "bin no futa ga hazuremasen",
+        "english": "The jar's lid won't come off."
+      },
+      "rtkLesson": 7,
+      "rtkFrame": 2024
+    },
+    {
+      "id": "rtk_l07f2025",
+      "rank": "8",
+      "suit": "diamonds",
+      "kanji": "外れ",
+      "hiragana": "はずれ",
+      "romaji": "hazure",
+      "english": "blank",
+      "rhyme": "Remember this word you see, it's hazure",
+      "sentence": {
+        "kanji": "このくじは外れです。",
+        "romaji": "kono kuji ha hazure desu",
+        "english": "This is a losing ticket."
+      },
+      "rtkLesson": 7,
+      "rtkFrame": 2025
+    },
+    {
+      "id": "rtk_l07f2062",
+      "rank": "9",
+      "suit": "clubs",
+      "kanji": "七夕",
+      "hiragana": "たなばた",
+      "romaji": "tanabata",
+      "english": "Tanabata Festival, Star Festival",
+      "rhyme": "Remember this word you see, it's tanabata",
+      "sentence": {
+        "kanji": "日本では7月7日は七夕の日です。",
+        "romaji": "nihon de ha 7 gatsu 7 ka ha tanabata no hi desu",
+        "english": "July 7th is the day of the Tanabata Festival in Japan."
+      },
+      "rtkLesson": 7,
+      "rtkFrame": 2062
+    },
+    {
+      "id": "rtk_l07f2338",
+      "rank": "5",
+      "suit": "clubs",
+      "kanji": "多少",
+      "hiragana": "たしょう",
+      "romaji": "tashou",
+      "english": "a little, somewhat",
+      "rhyme": "Remember this word you see, it's tashou",
+      "sentence": {
+        "kanji": "このソフトには多少問題がある。",
+        "romaji": "kono sofuto ni ha tashou mondai ga aru",
+        "english": "There are some problems with this software."
+      },
+      "rtkLesson": 7,
+      "rtkFrame": 2338
+    },
+    {
+      "id": "rtk_l07f2382",
+      "rank": "6",
+      "suit": "clubs",
+      "kanji": "少なくとも",
+      "hiragana": "すくなくとも",
+      "romaji": "sukunakutomo",
+      "english": "at least",
+      "rhyme": "Remember this word you see, it's sukunakutomo",
+      "sentence": {
+        "kanji": "この仕事には少なくとも2週間必要でしょう。",
+        "romaji": "kono shigoto ni ha sukunakutomo nishuukan hitsuyou deshou",
+        "english": "At least two weeks will be needed for this job."
+      },
+      "rtkLesson": 7,
+      "rtkFrame": 2382
+    },
+    {
+      "id": "rtk_l07f2663",
+      "rank": "3",
+      "suit": "spades",
+      "kanji": "大いに",
+      "hiragana": "おおいに",
+      "romaji": "ooini",
+      "english": "very, greatly",
+      "rhyme": "Remember this word you see, it's ooini",
+      "sentence": {
+        "kanji": "大いに学び、大いに遊びなさい。",
+        "romaji": "ooini manabi ooini asobinasai",
+        "english": "Study hard, play hard."
+      },
+      "rtkLesson": 7,
+      "rtkFrame": 2663
+    },
+    {
+      "id": "rtk_l07f2689",
+      "rank": "11",
+      "suit": "hearts",
+      "kanji": "大工",
+      "hiragana": "だいく",
+      "romaji": "daiku",
+      "english": "carpenter",
+      "rhyme": "Remember this word you see, it's daiku",
+      "sentence": {
+        "kanji": "私の父は大工です。",
+        "romaji": "watashi no chichi ha daiku desu",
+        "english": "My father's a carpenter."
+      },
+      "rtkLesson": 7,
+      "rtkFrame": 2689
+    },
+    {
+      "id": "rtk_l07f2789",
+      "rank": "4",
+      "suit": "hearts",
+      "kanji": "大げさ",
+      "hiragana": "おおげさ",
+      "romaji": "oogesa",
+      "english": "exaggerate",
+      "rhyme": "Remember this word you see, it's oogesa",
+      "sentence": {
+        "kanji": "彼の話は大げさだ。",
+        "romaji": "kare no hanashi ha oogesa da",
+        "english": "His story is exaggerated."
+      },
+      "rtkLesson": 7,
+      "rtkFrame": 2789
+    },
+    {
+      "id": "rtk_l07f2854",
+      "rank": "6",
+      "suit": "spades",
+      "kanji": "外す",
+      "hiragana": "はずす",
+      "romaji": "hazusu",
+      "english": "remove",
+      "rhyme": "Remember this word you see, it's hazusu",
+      "sentence": {
+        "kanji": "彼はメガネを外しました。",
+        "romaji": "kare ha megane wo hazushimashita",
+        "english": "He removed his glasses."
+      },
+      "rtkLesson": 7,
+      "rtkFrame": 2854
+    },
+    {
+      "id": "rtk_l07f2929",
+      "rank": "13",
+      "suit": "clubs",
+      "kanji": "町外れ",
+      "hiragana": "まちはずれ",
+      "romaji": "machihazure",
+      "english": "outskirts of a town",
+      "rhyme": "Remember this word you see, it's machihazure",
+      "sentence": {
+        "kanji": "彼女は町外れの工場で働いているよ。",
+        "romaji": "kanojo ha machihazure no koujou de hataraite iru yo",
+        "english": "She's working in a factory on the outskirts of town."
+      },
+      "rtkLesson": 7,
+      "rtkFrame": 2929
+    },
+    {
+      "id": "rtk_l07f3175",
+      "rank": "9",
+      "suit": "diamonds",
+      "kanji": "器",
+      "hiragana": "うつわ",
+      "romaji": "utsuwa",
+      "english": "vessel, dish",
+      "rhyme": "Remember this word you see, it's utsuwa",
+      "sentence": {
+        "kanji": "この器は上等ね。",
+        "romaji": "kono utsuwa ha joutou ne",
+        "english": "This dish is really top quality."
+      },
+      "rtkLesson": 7,
+      "rtkFrame": 3175
+    },
+    {
+      "id": "rtk_l07f3185",
+      "rank": "10",
+      "suit": "clubs",
+      "kanji": "器具",
+      "hiragana": "きぐ",
+      "romaji": "kigu",
+      "english": "utensil, implement",
+      "rhyme": "Remember this word you see, it's kigu",
+      "sentence": {
+        "kanji": "これはスポーツ施設用の器具です。",
+        "romaji": "kore ha supo-tsu shisetsuyou no kigu desu",
+        "english": "This is equipment for the sports facility."
+      },
+      "rtkLesson": 7,
+      "rtkFrame": 3185
+    },
+    {
+      "id": "rtk_l07f3493",
+      "rank": "4",
+      "suit": "diamonds",
+      "kanji": "大小",
+      "hiragana": "だいしょう",
+      "romaji": "daishou",
+      "english": "size",
+      "rhyme": "Remember this word you see, it's daishou",
+      "sentence": {
+        "kanji": "応募作品の大小は問いません。",
+        "romaji": "oubo sakuhin no daishou ha toimasen",
+        "english": "Submitted works of all sizes accepted."
+      },
+      "rtkLesson": 7,
+      "rtkFrame": 3493
+    },
+    {
+      "id": "rtk_l07f3521",
+      "rank": "12",
+      "suit": "diamonds",
+      "kanji": "名",
+      "hiragana": "な",
+      "romaji": "na",
+      "english": "name, reputation",
+      "rhyme": "Remember this word you see, it's na",
+      "sentence": {
+        "kanji": "彼は名の通った会社に就職しました。",
+        "romaji": "kare ha na no toota kaisha ni shuushoku shimashita",
+        "english": "He found employment in a well-known company."
+      },
+      "rtkLesson": 7,
+      "rtkFrame": 3521
+    },
+    {
+      "id": "rtk_l07f3725",
+      "rank": "10",
+      "suit": "spades",
+      "kanji": "夕日",
+      "hiragana": "ゆうひ",
+      "romaji": "yuuhi",
+      "english": "setting sun",
+      "rhyme": "Remember this word you see, it's yuuhi",
+      "sentence": {
+        "kanji": "夕日が西の空に沈んだね。",
+        "romaji": "yuuhi ga nishi no sora ni shizunda ne",
+        "english": "The evening sun sunk in the western sky."
+      },
+      "rtkLesson": 7,
+      "rtkFrame": 3725
+    },
+    {
+      "id": "rtk_l07f3778",
+      "rank": "1",
+      "suit": "spades",
+      "kanji": "日光",
+      "hiragana": "にっこう",
+      "romaji": "nikou",
+      "english": "sunshine, sunlight",
+      "rhyme": "Remember this word you see, it's nikou",
+      "sentence": {
+        "kanji": "この部屋は日光がよく当たるね。",
+        "romaji": "kono heya ha nikou ga yoku ataru ne",
+        "english": "This room gets quite a lot of sunshine."
+      },
+      "rtkLesson": 7,
+      "rtkFrame": 3778
+    },
+    {
+      "id": "rtk_l07f4077",
+      "rank": "3",
+      "suit": "diamonds",
+      "kanji": "省く",
+      "hiragana": "はぶく",
+      "romaji": "habuku",
+      "english": "omit, dispense with",
+      "rhyme": "Remember this word you see, it's habuku",
+      "sentence": {
+        "kanji": "時間がないので詳細は省きます。",
+        "romaji": "jikan ga nai no de shousai ha habukimasu",
+        "english": "I'll omit the details as there is no time."
+      },
+      "rtkLesson": 7,
+      "rtkFrame": 4077
+    },
+    {
+      "id": "rtk_l07f5184",
+      "rank": "4",
+      "suit": "clubs",
+      "kanji": "臭い",
+      "hiragana": "におい",
+      "romaji": "nioi",
+      "english": "smell, odor",
+      "rhyme": "Remember this word you see, it's nioi",
+      "sentence": {
+        "kanji": "ここはいやな臭いがする。",
+        "romaji": "koko ha iya na nioi ga suru 。",
+        "english": "There's an unpleasant smell here."
+      },
+      "rtkLesson": 7,
+      "rtkFrame": 5184
+    },
+    {
+      "id": "rtk_l07f5186",
+      "rank": "5",
+      "suit": "spades",
+      "kanji": "臭う",
+      "hiragana": "におう",
+      "romaji": "niou",
+      "english": "stink (unpleasant)",
+      "rhyme": "Remember this word you see, it's niou",
+      "sentence": {
+        "kanji": "流しが臭うのできれいにしたよ。",
+        "romaji": "nagashi ga niou no de kirei ni shita yo",
+        "english": "I cleaned the sink because it smelled."
+      },
+      "rtkLesson": 7,
+      "rtkFrame": 5186
+    },
+    {
+      "id": "rtk_l07f5242",
+      "rank": "6",
+      "suit": "hearts",
+      "kanji": "大胆",
+      "hiragana": "だいたん",
+      "romaji": "daitan",
+      "english": "boldness, daring",
+      "rhyme": "Remember this word you see, it's daitan",
+      "sentence": {
+        "kanji": "彼女はずいぶん大胆なことを言うね。",
+        "romaji": "kanojo ha zuibun daitan na koto wo iu ne",
+        "english": "She says fairly bold things."
+      },
+      "rtkLesson": 7,
+      "rtkFrame": 5242
+    },
+    {
+      "id": "rtk_l07f5307",
+      "rank": "2",
+      "suit": "hearts",
+      "kanji": "光",
+      "hiragana": "ひかり",
+      "romaji": "hikari",
+      "english": "light, flash",
+      "rhyme": "Remember this word you see, it's hikari",
+      "sentence": {
+        "kanji": "一筋の光が窓から差し込んだの。",
+        "romaji": "hitosuji no hikari ga mado kara sashikonda no",
+        "english": "A beam of light shone through the window."
+      },
+      "rtkLesson": 7,
+      "rtkFrame": 5307
+    },
+    {
+      "id": "rtk_l07f5309",
+      "rank": "5",
+      "suit": "diamonds",
+      "kanji": "小",
+      "hiragana": "しょう",
+      "romaji": "shou",
+      "english": "smallness, small size",
+      "rhyme": "Remember this word you see, it's shou",
+      "sentence": {
+        "kanji": "この箱の小をください。",
+        "romaji": "kono hako no shou wo kudasai",
+        "english": "Please give me the small version of this box."
+      },
+      "rtkLesson": 7,
+      "rtkFrame": 5309
+    },
+    {
+      "id": "rtk_l07f5405",
+      "rank": "8",
+      "suit": "hearts",
+      "kanji": "少女",
+      "hiragana": "しょうじょ",
+      "romaji": "shoujo",
+      "english": "girl",
+      "rhyme": "Remember this word you see, it's shoujo",
+      "sentence": {
+        "kanji": "少女は母親の手を握った。",
+        "romaji": "shoujo ha hahaoya no te wo nigita",
+        "english": "The girl clasped her mother's hand."
+      },
+      "rtkLesson": 7,
+      "rtkFrame": 5405
+    },
+    {
+      "id": "rtk_l07f5514",
+      "rank": "7",
+      "suit": "spades",
+      "kanji": "少々",
+      "hiragana": "しょうしょう",
+      "romaji": "shoushou",
+      "english": "a little, a few",
+      "rhyme": "Remember this word you see, it's shoushou",
+      "sentence": {
+        "kanji": "少々のことは我慢します。",
+        "romaji": "shoushou no koto ha gaman shimasu",
+        "english": "I can put up with minor things."
+      },
+      "rtkLesson": 7,
+      "rtkFrame": 5514
+    },
+    {
+      "id": "rtk_l07f5551",
+      "rank": "12",
+      "suit": "hearts",
+      "kanji": "砕く",
+      "hiragana": "くだく",
+      "romaji": "kudaku",
+      "english": "crush, smash",
+      "rhyme": "Remember this word you see, it's kudaku",
+      "sentence": {
+        "kanji": "氷を細かく砕いてください。",
+        "romaji": "koori wo komakaku kudaite kudasai",
+        "english": "Please crush the ice into small pieces."
+      },
+      "rtkLesson": 7,
+      "rtkFrame": 5551
+    },
+    {
+      "id": "rtk_l07f5552",
+      "rank": "13",
+      "suit": "diamonds",
+      "kanji": "砕ける",
+      "hiragana": "くだける",
+      "romaji": "kudakeru",
+      "english": "be crushed, break down",
+      "rhyme": "Remember this word you see, it's kudakeru",
+      "sentence": {
+        "kanji": "石が粉々に砕けましたね。",
+        "romaji": "ishi ga konagona ni kudakemashita ne",
+        "english": "The stone was crushed to pieces."
+      },
+      "rtkLesson": 7,
+      "rtkFrame": 5552
+    },
+    {
+      "id": "rtk_l07f5880",
+      "rank": "11",
+      "suit": "spades",
+      "kanji": "砂",
+      "hiragana": "すな",
+      "romaji": "suna",
+      "english": "sand, grit",
+      "rhyme": "Remember this word you see, it's suna",
+      "sentence": {
+        "kanji": "靴に砂が入ってしまった。",
+        "romaji": "kutsu ni suna ga haite shimata",
+        "english": "Sand has got into my shoes."
+      },
+      "rtkLesson": 7,
+      "rtkFrame": 5880
+    },
+    {
+      "id": "rtk_l07f5936",
+      "rank": "2",
+      "suit": "spades",
+      "kanji": "大して",
+      "hiragana": "たいして",
+      "romaji": "taishite",
+      "english": "very, greatly",
+      "rhyme": "Remember this word you see, it's taishite",
+      "sentence": {
+        "kanji": "彼は大して嬉しそうには見えなかったよね。",
+        "romaji": "kare ha taishite ureshi sou ni ha mienakata yo ne",
+        "english": "He didn't look particularly happy."
+      },
+      "rtkLesson": 7,
+      "rtkFrame": 5936
+    },
+    {
+      "id": "rtk_l07f5999",
+      "rank": "1",
+      "suit": "clubs",
+      "kanji": "嗅ぐ",
+      "hiragana": "かぐ",
+      "romaji": "kagu",
+      "english": "smell, sniff",
+      "rhyme": "Remember this word you see, it's kagu",
+      "sentence": {
+        "kanji": "犬がお皿の匂いをクンクン嗅いでいるね。",
+        "romaji": "inu ga osara no nioi wo kunkun kaide iru ne",
+        "english": "The dog sniffed at the smell on the plate."
+      },
+      "rtkLesson": 7,
+      "rtkFrame": 5999
+    }
+  ]
+}

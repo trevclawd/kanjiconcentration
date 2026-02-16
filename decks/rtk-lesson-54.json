@@ -1,0 +1,942 @@
+{
+  "name": "RTK Lesson 54",
+  "description": "RTK Lesson 54 - 55 cards",
+  "lesson": 54,
+  "cards": [
+    {
+      "id": "rtk_l54f0068",
+      "rank": "6",
+      "suit": "clubs",
+      "kanji": "駅",
+      "hiragana": "えき",
+      "romaji": "eki",
+      "english": "railway station",
+      "rhyme": "Remember this word you see, it's eki",
+      "sentence": {
+        "kanji": "駅はどこですか。",
+        "romaji": "eki ha doko desu ka",
+        "english": "Where's the station?"
+      },
+      "rtkLesson": 54,
+      "rtkFrame": 68
+    },
+    {
+      "id": "rtk_l54f0382",
+      "rank": "7",
+      "suit": "spades",
+      "kanji": "駄目",
+      "hiragana": "だめ",
+      "romaji": "dame",
+      "english": "no good",
+      "rhyme": "Remember this word you see, it's dame",
+      "sentence": {
+        "kanji": "彼は駄目な男だ。",
+        "romaji": "kare ha dame na otoko da",
+        "english": "He's a loser."
+      },
+      "rtkLesson": 54,
+      "rtkFrame": 382
+    },
+    {
+      "id": "rtk_l54f0396",
+      "rank": "8",
+      "suit": "hearts",
+      "kanji": "奇麗",
+      "hiragana": "きれい",
+      "romaji": "kirei",
+      "english": "beautiful",
+      "rhyme": "Remember this word you see, it's kirei",
+      "sentence": {
+        "kanji": "彼女はとても奇麗だ。",
+        "romaji": "kanojo ha totemo kirei da",
+        "english": "She's very beautiful."
+      },
+      "rtkLesson": 54,
+      "rtkFrame": 396
+    },
+    {
+      "id": "rtk_l54f0524",
+      "rank": "9",
+      "suit": "diamonds",
+      "kanji": "駅員",
+      "hiragana": "えきいん",
+      "romaji": "ekiin",
+      "english": "station employee",
+      "rhyme": "Remember this word you see, it's ekiin",
+      "sentence": {
+        "kanji": "駅員に聞きましょう。",
+        "romaji": "ekiin ni kikimashou",
+        "english": "Let's ask the station employee."
+      },
+      "rtkLesson": 54,
+      "rtkFrame": 524
+    },
+    {
+      "id": "rtk_l54f0623",
+      "rank": "11",
+      "suit": "spades",
+      "kanji": "可能",
+      "hiragana": "かのう",
+      "romaji": "kanou",
+      "english": "possible, potential",
+      "rhyme": "Remember this word you see, it's kanou",
+      "sentence": {
+        "kanji": "20キロのダイエットは可能だと思いますか。",
+        "romaji": "nijukiro no daieto ha kanou da to omoimasu ka",
+        "english": "Do you think it's possible to go on a twenty kilogram diet?"
+      },
+      "rtkLesson": 54,
+      "rtkFrame": 623
+    },
+    {
+      "id": "rtk_l54f0707",
+      "rank": "13",
+      "suit": "diamonds",
+      "kanji": "経験",
+      "hiragana": "けいけん",
+      "romaji": "keiken",
+      "english": "experience",
+      "rhyme": "Remember this word you see, it's keiken",
+      "sentence": {
+        "kanji": "今日の試合はいい経験になりました。",
+        "romaji": "kyou no shiai ha ii keiken ni narimashita",
+        "english": "Today's game was a good experience."
+      },
+      "rtkLesson": 54,
+      "rtkFrame": 707
+    },
+    {
+      "id": "rtk_l54f0949",
+      "rank": "10",
+      "suit": "clubs",
+      "kanji": "能力",
+      "hiragana": "のうりょく",
+      "romaji": "nouryoku",
+      "english": "ability, capacity",
+      "rhyme": "Remember this word you see, it's nouryoku",
+      "sentence": {
+        "kanji": "彼は能力のある社員です。",
+        "romaji": "kare ha nouryoku no aru shain desu",
+        "english": "He's a resourceful employee."
+      },
+      "rtkLesson": 54,
+      "rtkFrame": 949
+    },
+    {
+      "id": "rtk_l54f1106",
+      "rank": "2",
+      "suit": "spades",
+      "kanji": "機能",
+      "hiragana": "きのう",
+      "romaji": "kinou",
+      "english": "function, feature",
+      "rhyme": "Remember this word you see, it's kinou",
+      "sentence": {
+        "kanji": "このソフトにはいろいろな機能があります。",
+        "romaji": "kono sofuto ni ha iroirona kinou ga arimasu",
+        "english": "This software has a lot of various features."
+      },
+      "rtkLesson": 54,
+      "rtkFrame": 1106
+    },
+    {
+      "id": "rtk_l54f1177",
+      "rank": "3",
+      "suit": "hearts",
+      "kanji": "状態",
+      "hiragana": "じょうたい",
+      "romaji": "joutai",
+      "english": "state, appearance",
+      "rhyme": "Remember this word you see, it's joutai",
+      "sentence": {
+        "kanji": "ここは道の状態がとても悪いです。",
+        "romaji": "koko ha michi no joutai ga totemo warui desu",
+        "english": "The road is in a very bad state here."
+      },
+      "rtkLesson": 54,
+      "rtkFrame": 1177
+    },
+    {
+      "id": "rtk_l54f1654",
+      "rank": "1",
+      "suit": "clubs",
+      "kanji": "実験",
+      "hiragana": "じっけん",
+      "romaji": "jiken",
+      "english": "experiment",
+      "rhyme": "Remember this word you see, it's jiken",
+      "sentence": {
+        "kanji": "科学の授業で実験をした。",
+        "romaji": "kagaku no jugyou de jiken wo shita",
+        "english": "We did an experiment in science class."
+      },
+      "rtkLesson": 54,
+      "rtkFrame": 1654
+    },
+    {
+      "id": "rtk_l54f1671",
+      "rank": "5",
+      "suit": "clubs",
+      "kanji": "駐車場",
+      "hiragana": "ちゅうしゃじょう",
+      "romaji": "chuushajou",
+      "english": "parking area",
+      "rhyme": "Remember this word you see, it's chuushajou",
+      "sentence": {
+        "kanji": "車は駐車場に止めてください。",
+        "romaji": "kuruma ha chuushajou ni tomete kudasai",
+        "english": "Please park the car in the parking lot."
+      },
+      "rtkLesson": 54,
+      "rtkFrame": 1671
+    },
+    {
+      "id": "rtk_l54f1672",
+      "rank": "6",
+      "suit": "spades",
+      "kanji": "騒ぐ",
+      "hiragana": "さわぐ",
+      "romaji": "sawagu",
+      "english": "make a racket, mess around, make a fuss",
+      "rhyme": "Remember this word you see, it's sawagu",
+      "sentence": {
+        "kanji": "電車の中で騒がないでください。",
+        "romaji": "densha no naka de sawaganai de kudasai",
+        "english": "Please don't make a racket in the train."
+      },
+      "rtkLesson": 54,
+      "rtkFrame": 1672
+    },
+    {
+      "id": "rtk_l54f1679",
+      "rank": "7",
+      "suit": "hearts",
+      "kanji": "驚く",
+      "hiragana": "おどろく",
+      "romaji": "odoroku",
+      "english": "be surprised, be startled",
+      "rhyme": "Remember this word you see, it's odoroku",
+      "sentence": {
+        "kanji": "彼は血を見て驚いた。",
+        "romaji": "kare ha chi wo mite odoroita",
+        "english": "He was surprised to see blood."
+      },
+      "rtkLesson": 54,
+      "rtkFrame": 1679
+    },
+    {
+      "id": "rtk_l54f1865",
+      "rank": "12",
+      "suit": "hearts",
+      "kanji": "試験",
+      "hiragana": "しけん",
+      "romaji": "shiken",
+      "english": "test, examination",
+      "rhyme": "Remember this word you see, it's shiken",
+      "sentence": {
+        "kanji": "明日の試験、頑張ってね。",
+        "romaji": "ashita no shiken ganbate ne",
+        "english": "Good luck on tomorrow's exam."
+      },
+      "rtkLesson": 54,
+      "rtkFrame": 1865
+    },
+    {
+      "id": "rtk_l54f1892",
+      "rank": "4",
+      "suit": "diamonds",
+      "kanji": "馬",
+      "hiragana": "うま",
+      "romaji": "uma",
+      "english": "horse",
+      "rhyme": "Remember this word you see, it's uma",
+      "sentence": {
+        "kanji": "彼は牧場で馬に乗った。",
+        "romaji": "kare ha bokujou de uma ni nota",
+        "english": "He rode a horse at the ranch."
+      },
+      "rtkLesson": 54,
+      "rtkFrame": 1892
+    },
+    {
+      "id": "rtk_l54f1976",
+      "rank": "8",
+      "suit": "diamonds",
+      "kanji": "馬鹿",
+      "hiragana": "ばか",
+      "romaji": "baka",
+      "english": "fool, nonsense",
+      "rhyme": "Remember this word you see, it's baka",
+      "sentence": {
+        "kanji": "私は馬鹿だった。",
+        "romaji": "watashi ha baka data",
+        "english": "I was foolish."
+      },
+      "rtkLesson": 54,
+      "rtkFrame": 1976
+    },
+    {
+      "id": "rtk_l54f2237",
+      "rank": "2",
+      "suit": "diamonds",
+      "kanji": "知能",
+      "hiragana": "ちのう",
+      "romaji": "chinou",
+      "english": "intelligence, mental capacity",
+      "rhyme": "Remember this word you see, it's chinou",
+      "sentence": {
+        "kanji": "あの子の知能はとても高いそうです。",
+        "romaji": "ano ko no chinou ha totemo takai sou desu",
+        "english": "Apparently, that child is highly intelligent."
+      },
+      "rtkLesson": 54,
+      "rtkFrame": 2237
+    },
+    {
+      "id": "rtk_l54f2238",
+      "rank": "4",
+      "suit": "spades",
+      "kanji": "能",
+      "hiragana": "のう",
+      "romaji": "nou",
+      "english": "noh play",
+      "rhyme": "Remember this word you see, it's nou",
+      "sentence": {
+        "kanji": "先日、初めて能を見に行きました。",
+        "romaji": "senjitsu hajimete nou wo mi ni ikimashita",
+        "english": "The other day, I went to see Noh for the first time."
+      },
+      "rtkLesson": 54,
+      "rtkFrame": 2238
+    },
+    {
+      "id": "rtk_l54f2240",
+      "rank": "6",
+      "suit": "diamonds",
+      "kanji": "不可能",
+      "hiragana": "ふかのう",
+      "romaji": "fukanou",
+      "english": "impossible",
+      "rhyme": "Remember this word you see, it's fukanou",
+      "sentence": {
+        "kanji": "レポートを1日で仕上げるのは不可能です。",
+        "romaji": "repo-to wo 1 nichi de shiageru no ha fukanou desu",
+        "english": "It's impossible to finish up the report in a day."
+      },
+      "rtkLesson": 54,
+      "rtkFrame": 2240
+    },
+    {
+      "id": "rtk_l54f2244",
+      "rank": "9",
+      "suit": "clubs",
+      "kanji": "駅前",
+      "hiragana": "えきまえ",
+      "romaji": "ekimae",
+      "english": "in front of the station",
+      "rhyme": "Remember this word you see, it's ekimae",
+      "sentence": {
+        "kanji": "駅前に交番が有ります。",
+        "romaji": "ekimae ni kouban ga arimasu",
+        "english": "There is a police box in front of the station."
+      },
+      "rtkLesson": 54,
+      "rtkFrame": 2244
+    },
+    {
+      "id": "rtk_l54f2293",
+      "rank": "12",
+      "suit": "diamonds",
+      "kanji": "性能",
+      "hiragana": "せいのう",
+      "romaji": "seinou",
+      "english": "performance, capacity",
+      "rhyme": "Remember this word you see, it's seinou",
+      "sentence": {
+        "kanji": "今度のパソコンは性能がすごく良い。",
+        "romaji": "kondo no pasokon ha seinou ga sugoku ii",
+        "english": "The performance of this new computer is extremely good."
+      },
+      "rtkLesson": 54,
+      "rtkFrame": 2293
+    },
+    {
+      "id": "rtk_l54f2330",
+      "rank": "13",
+      "suit": "clubs",
+      "kanji": "受験",
+      "hiragana": "じゅけん",
+      "romaji": "juken",
+      "english": "take an examination",
+      "rhyme": "Remember this word you see, it's juken",
+      "sentence": {
+        "kanji": "日本語能力試験を受験したんだ。",
+        "romaji": "nihongo nouryoku shiken wo juken shita n da",
+        "english": "I took the Japanese proficiency test."
+      },
+      "rtkLesson": 54,
+      "rtkFrame": 2330
+    },
+    {
+      "id": "rtk_l54f2516",
+      "rank": "13",
+      "suit": "spades",
+      "kanji": "本能",
+      "hiragana": "ほんのう",
+      "romaji": "honnou",
+      "english": "instinct",
+      "rhyme": "Remember this word you see, it's honnou",
+      "sentence": {
+        "kanji": "動物は本能のまま動くね。",
+        "romaji": "doubutsu ha honnou no mama ugoku ne",
+        "english": "Animals act purely on instinct."
+      },
+      "rtkLesson": 54,
+      "rtkFrame": 2516
+    },
+    {
+      "id": "rtk_l54f2802",
+      "rank": "10",
+      "suit": "spades",
+      "kanji": "駅長",
+      "hiragana": "えきちょう",
+      "romaji": "ekichou",
+      "english": "stationmaster",
+      "rhyme": "Remember this word you see, it's ekichou",
+      "sentence": {
+        "kanji": "彼は駅長です。",
+        "romaji": "kare ha ekichou desu",
+        "english": "He is a stationmaster."
+      },
+      "rtkLesson": 54,
+      "rtkFrame": 2802
+    },
+    {
+      "id": "rtk_l54f2888",
+      "rank": "1",
+      "suit": "hearts",
+      "kanji": "有能",
+      "hiragana": "ゆうのう",
+      "romaji": "yuunou",
+      "english": "able, competent",
+      "rhyme": "Remember this word you see, it's yuunou",
+      "sentence": {
+        "kanji": "彼女はとても有能な部下です。",
+        "romaji": "kanojo ha totemo yuunou na buka desu",
+        "english": "She's a very capable subordinate."
+      },
+      "rtkLesson": 54,
+      "rtkFrame": 2888
+    },
+    {
+      "id": "rtk_l54f2910",
+      "rank": "3",
+      "suit": "clubs",
+      "kanji": "無能",
+      "hiragana": "むのう",
+      "romaji": "munou",
+      "english": "inefficiency, incompetence",
+      "rhyme": "Remember this word you see, it's munou",
+      "sentence": {
+        "kanji": "彼は無能だ。",
+        "romaji": "kare ha munou da",
+        "english": "He's incapable."
+      },
+      "rtkLesson": 54,
+      "rtkFrame": 2910
+    },
+    {
+      "id": "rtk_l54f2948",
+      "rank": "5",
+      "suit": "hearts",
+      "kanji": "能",
+      "hiragana": "のう",
+      "romaji": "nou",
+      "english": "ability, capability",
+      "rhyme": "Remember this word you see, it's nou",
+      "sentence": {
+        "kanji": "彼は勉強するしか能のない人間だね。",
+        "romaji": "kare ha benkyou suru shika nou no nai ningen da ne",
+        "english": "He's the kind of person who only knows how to study."
+      },
+      "rtkLesson": 54,
+      "rtkFrame": 2948
+    },
+    {
+      "id": "rtk_l54f3062",
+      "rank": "11",
+      "suit": "hearts",
+      "kanji": "才能",
+      "hiragana": "さいのう",
+      "romaji": "sainou",
+      "english": "talent, ability",
+      "rhyme": "Remember this word you see, it's sainou",
+      "sentence": {
+        "kanji": "彼は芸術的な才能にあふれているね。",
+        "romaji": "kare ha geijutsuteki na sainou ni afurete iru ne",
+        "english": "He is full of artistic talent."
+      },
+      "rtkLesson": 54,
+      "rtkFrame": 3062
+    },
+    {
+      "id": "rtk_l54f3162",
+      "rank": "8",
+      "suit": "spades",
+      "kanji": "能率",
+      "hiragana": "のうりつ",
+      "romaji": "nouritsu",
+      "english": "efficiency",
+      "rhyme": "Remember this word you see, it's nouritsu",
+      "sentence": {
+        "kanji": "この方法だと能率がいいですね。",
+        "romaji": "kono houhou da to nouritsu ga ii desu ne",
+        "english": "Using this method is more efficient."
+      },
+      "rtkLesson": 54,
+      "rtkFrame": 3162
+    },
+    {
+      "id": "rtk_l54f3370",
+      "rank": "2",
+      "suit": "hearts",
+      "kanji": "実態",
+      "hiragana": "じったい",
+      "romaji": "jitai",
+      "english": "the actual situation, the realities",
+      "rhyme": "Remember this word you see, it's jitai",
+      "sentence": {
+        "kanji": "その会社の経営の実態を調査中だ。",
+        "romaji": "sono kaisha no keiei no jitai wo chousachuu da",
+        "english": "The state of that company's management is being investigated."
+      },
+      "rtkLesson": 54,
+      "rtkFrame": 3370
+    },
+    {
+      "id": "rtk_l54f3371",
+      "rank": "9",
+      "suit": "hearts",
+      "kanji": "態度",
+      "hiragana": "たいど",
+      "romaji": "taido",
+      "english": "attitude, manner",
+      "rhyme": "Remember this word you see, it's taido",
+      "sentence": {
+        "kanji": "あの男の態度にみんなあきれてたよ。",
+        "romaji": "ano otoko no taido ni minna akirete ta yo",
+        "english": "Everyone was tired of the man's attitude."
+      },
+      "rtkLesson": 54,
+      "rtkFrame": 3371
+    },
+    {
+      "id": "rtk_l54f4134",
+      "rank": "1",
+      "suit": "spades",
+      "kanji": "事態",
+      "hiragana": "じたい",
+      "romaji": "jitai",
+      "english": "situation, state of affairs",
+      "rhyme": "Remember this word you see, it's jitai",
+      "sentence": {
+        "kanji": "事態は深刻です。",
+        "romaji": "jitai ha shinkoku desu",
+        "english": "The situation is serious."
+      },
+      "rtkLesson": 54,
+      "rtkFrame": 4134
+    },
+    {
+      "id": "rtk_l54f4615",
+      "rank": "7",
+      "suit": "clubs",
+      "kanji": "体験",
+      "hiragana": "たいけん",
+      "romaji": "taiken",
+      "english": "experience",
+      "rhyme": "Remember this word you see, it's taiken",
+      "sentence": {
+        "kanji": "今日、珍しい体験をしました。",
+        "romaji": "kyou mezurashii taiken wo shimashita",
+        "english": "Today, I had an unusual experience."
+      },
+      "rtkLesson": 54,
+      "rtkFrame": 4615
+    },
+    {
+      "id": "rtk_l54f4660",
+      "rank": "10",
+      "suit": "diamonds",
+      "kanji": "放射能",
+      "hiragana": "ほうしゃのう",
+      "romaji": "houshanou",
+      "english": "radioactivity",
+      "rhyme": "Remember this word you see, it's houshanou",
+      "sentence": {
+        "kanji": "この地区は放射能に汚染されたんだ。",
+        "romaji": "kono chiku ha houshanou ni osen sareta n da",
+        "english": "This area has been contaminated by radioactivity."
+      },
+      "rtkLesson": 54,
+      "rtkFrame": 4660
+    },
+    {
+      "id": "rtk_l54f4684",
+      "rank": "3",
+      "suit": "diamonds",
+      "kanji": "劇",
+      "hiragana": "げき",
+      "romaji": "geki",
+      "english": "drama, play",
+      "rhyme": "Remember this word you see, it's geki",
+      "sentence": {
+        "kanji": "小学校で子供たちの劇を見ました。",
+        "romaji": "shougakou de kodomotachi no geki wo mimashita",
+        "english": "I saw a children's play at an elementary school."
+      },
+      "rtkLesson": 54,
+      "rtkFrame": 4684
+    },
+    {
+      "id": "rtk_l54f4686",
+      "rank": "4",
+      "suit": "clubs",
+      "kanji": "劇場",
+      "hiragana": "げきじょう",
+      "romaji": "gekijou",
+      "english": "theater",
+      "rhyme": "Remember this word you see, it's gekijou",
+      "sentence": {
+        "kanji": "午後8時に劇場の前で会いましょう。",
+        "romaji": "gogo hachiji ni gekijou no mae de aimashou",
+        "english": "Let's meet in front of the theater at 8:00 pm."
+      },
+      "rtkLesson": 54,
+      "rtkFrame": 4686
+    },
+    {
+      "id": "rtk_l54f4688",
+      "rank": "5",
+      "suit": "spades",
+      "kanji": "喜劇",
+      "hiragana": "きげき",
+      "romaji": "kigeki",
+      "english": "comedy",
+      "rhyme": "Remember this word you see, it's kigeki",
+      "sentence": {
+        "kanji": "昨夜はテレビで喜劇を見たよ。",
+        "romaji": "sakuya ha terebi de kigeki wo mita yo",
+        "english": "I watched a comedy show on TV last night."
+      },
+      "rtkLesson": 54,
+      "rtkFrame": 4688
+    },
+    {
+      "id": "rtk_l54f4694",
+      "rank": "11",
+      "suit": "clubs",
+      "kanji": "悲劇",
+      "hiragana": "ひげき",
+      "romaji": "higeki",
+      "english": "tragedy, tragic drama",
+      "rhyme": "Remember this word you see, it's higeki",
+      "sentence": {
+        "kanji": "あの悲劇を繰り返してはいけない。",
+        "romaji": "ano higeki wo kurikaeshite ha ikenai",
+        "english": "You must not repeat that tragedy."
+      },
+      "rtkLesson": 54,
+      "rtkFrame": 4694
+    },
+    {
+      "id": "rtk_l54f4819",
+      "rank": "12",
+      "suit": "spades",
+      "kanji": "駐車",
+      "hiragana": "ちゅうしゃ",
+      "romaji": "chuusha",
+      "english": "parking",
+      "rhyme": "Remember this word you see, it's chuusha",
+      "sentence": {
+        "kanji": "車はここに駐車してください。",
+        "romaji": "kuruma ha koko ni chuusha shite kudasai",
+        "english": "Please park the car here."
+      },
+      "rtkLesson": 54,
+      "rtkFrame": 4819
+    },
+    {
+      "id": "rtk_l54f4820",
+      "rank": "6",
+      "suit": "hearts",
+      "kanji": "騒ぎ",
+      "hiragana": "さわぎ",
+      "romaji": "sawagi",
+      "english": "clamor, commotion",
+      "rhyme": "Remember this word you see, it's sawagi",
+      "sentence": {
+        "kanji": "一体何の騒ぎですか。",
+        "romaji": "itai nan no sawagi desu ka",
+        "english": "What on earth is the commotion?"
+      },
+      "rtkLesson": 54,
+      "rtkFrame": 4820
+    },
+    {
+      "id": "rtk_l54f4821",
+      "rank": "7",
+      "suit": "diamonds",
+      "kanji": "騒がしい",
+      "hiragana": "さわがしい",
+      "romaji": "sawagashii",
+      "english": "noisy",
+      "rhyme": "Remember this word you see, it's sawagashii",
+      "sentence": {
+        "kanji": "何だか表が騒がしい。",
+        "romaji": "nandaka omote ga sawagashii",
+        "english": "It is noisy outside, for some reason."
+      },
+      "rtkLesson": 54,
+      "rtkFrame": 4821
+    },
+    {
+      "id": "rtk_l54f4823",
+      "rank": "13",
+      "suit": "hearts",
+      "kanji": "騒音",
+      "hiragana": "そうおん",
+      "romaji": "souon",
+      "english": "noise",
+      "rhyme": "Remember this word you see, it's souon",
+      "sentence": {
+        "kanji": "窓から車の騒音が入って来ます。",
+        "romaji": "mado kara kuruma no souon ga haite kimasu",
+        "english": "The noise of the cars is coming through the window."
+      },
+      "rtkLesson": 54,
+      "rtkFrame": 4823
+    },
+    {
+      "id": "rtk_l54f4824",
+      "rank": "1",
+      "suit": "diamonds",
+      "kanji": "騒動",
+      "hiragana": "そうどう",
+      "romaji": "soudou",
+      "english": "disturbance, confusion",
+      "rhyme": "Remember this word you see, it's soudou",
+      "sentence": {
+        "kanji": "警察がやって来て騒動を静めたんだ。",
+        "romaji": "keisatsu ga yatekite soudou wo shizumeta n da",
+        "english": "The police came and calmed the riot."
+      },
+      "rtkLesson": 54,
+      "rtkFrame": 4824
+    },
+    {
+      "id": "rtk_l54f4825",
+      "rank": "2",
+      "suit": "clubs",
+      "kanji": "騒々しい",
+      "hiragana": "そうぞうしい",
+      "romaji": "souzoushii",
+      "english": "noisy, rowdy",
+      "rhyme": "Remember this word you see, it's souzoushii",
+      "sentence": {
+        "kanji": "隣の家はいつも騒々しい。",
+        "romaji": "tonari no ie ha itsumo souzoushii",
+        "english": "The house next door is always noisy."
+      },
+      "rtkLesson": 54,
+      "rtkFrame": 4825
+    },
+    {
+      "id": "rtk_l54f4848",
+      "rank": "9",
+      "suit": "spades",
+      "kanji": "驚かす",
+      "hiragana": "おどろかす",
+      "romaji": "odorokasu",
+      "english": "surprise, amaze",
+      "rhyme": "Remember this word you see, it's odorokasu",
+      "sentence": {
+        "kanji": "あなたを驚かす話があります。",
+        "romaji": "anata wo odorokasu hanashi ga arimasu",
+        "english": "I have a story that will surprise you."
+      },
+      "rtkLesson": 54,
+      "rtkFrame": 4848
+    },
+    {
+      "id": "rtk_l54f4988",
+      "rank": "3",
+      "suit": "spades",
+      "kanji": "態勢",
+      "hiragana": "たいせい",
+      "romaji": "taisei",
+      "english": "state, preparedness",
+      "rhyme": "Remember this word you see, it's taisei",
+      "sentence": {
+        "kanji": "作業を始める態勢は整っています。",
+        "romaji": "sagyou wo hajimeru taisei ha totonote imasu",
+        "english": "The preparations for starting work are completed."
+      },
+      "rtkLesson": 54,
+      "rtkFrame": 4988
+    },
+    {
+      "id": "rtk_l54f5168",
+      "rank": "4",
+      "suit": "hearts",
+      "kanji": "皮膚",
+      "hiragana": "ひふ",
+      "romaji": "hifu",
+      "english": "skin",
+      "rhyme": "Remember this word you see, it's hifu",
+      "sentence": {
+        "kanji": "冬は皮膚が乾燥しますね。",
+        "romaji": "fuyu ha hifu ga kansou shimasu ne",
+        "english": "My skin dries out in winter."
+      },
+      "rtkLesson": 54,
+      "rtkFrame": 5168
+    },
+    {
+      "id": "rtk_l54f5265",
+      "rank": "10",
+      "suit": "hearts",
+      "kanji": "推薦",
+      "hiragana": "すいせん",
+      "romaji": "suisen",
+      "english": "recommendation, nomination",
+      "rhyme": "Remember this word you see, it's suisen",
+      "sentence": {
+        "kanji": "彼は会長に推薦されたよ。",
+        "romaji": "kare ha kaichou ni suisen sareta yo",
+        "english": "He was recommended to the chairman."
+      },
+      "rtkLesson": 54,
+      "rtkFrame": 5265
+    },
+    {
+      "id": "rtk_l54f5295",
+      "rank": "5",
+      "suit": "diamonds",
+      "kanji": "筆記試験",
+      "hiragana": "ひっきしけん",
+      "romaji": "hikishiken",
+      "english": "written examination",
+      "rhyme": "Remember this word you see, it's hikishiken",
+      "sentence": {
+        "kanji": "その会社の筆記試験は難しかったよ。",
+        "romaji": "sono kaisha no hikishiken ha muzukashikata yo",
+        "english": "That company's written examination was difficult."
+      },
+      "rtkLesson": 54,
+      "rtkFrame": 5295
+    },
+    {
+      "id": "rtk_l54f5543",
+      "rank": "8",
+      "suit": "clubs",
+      "kanji": "驚き",
+      "hiragana": "おどろき",
+      "romaji": "odoroki",
+      "english": "surprise, amazement",
+      "rhyme": "Remember this word you see, it's odoroki",
+      "sentence": {
+        "kanji": "彼女は驚きを隠せませんでしたよ。",
+        "romaji": "kanojo ha odoroki wo kakusemasendeshita yo",
+        "english": "She was not able to conceal her surprise."
+      },
+      "rtkLesson": 54,
+      "rtkFrame": 5543
+    },
+    {
+      "id": "rtk_l54f5606",
+      "rank": "6",
+      "suit": "clubs",
+      "kanji": "無駄",
+      "hiragana": "むだ",
+      "romaji": "muda",
+      "english": "no good, pointless",
+      "rhyme": "Remember this word you see, it's muda",
+      "sentence": {
+        "kanji": "それは時間の無駄です。",
+        "romaji": "sore ha jikan no muda desu",
+        "english": "It's a waste of time."
+      },
+      "rtkLesson": 54,
+      "rtkFrame": 5606
+    },
+    {
+      "id": "rtk_l54f5607",
+      "rank": "7",
+      "suit": "spades",
+      "kanji": "無駄遣い",
+      "hiragana": "むだづかい",
+      "romaji": "mudazukai",
+      "english": "wasting money",
+      "rhyme": "Remember this word you see, it's mudazukai",
+      "sentence": {
+        "kanji": "これは税金の無駄遣いだね。",
+        "romaji": "kore ha zeikin no mudazukai da ne",
+        "english": "This is a waste of tax money."
+      },
+      "rtkLesson": 54,
+      "rtkFrame": 5607
+    },
+    {
+      "id": "rtk_l54f5609",
+      "rank": "11",
+      "suit": "diamonds",
+      "kanji": "駆ける",
+      "hiragana": "かける",
+      "romaji": "kakeru",
+      "english": "gallop, run quickly",
+      "rhyme": "Remember this word you see, it's kakeru",
+      "sentence": {
+        "kanji": "子供たちは広場に駆けて行ったわよ。",
+        "romaji": "kodomotachi ha hiroba ni kakete ita wa yo",
+        "english": "The children rushed into the square."
+      },
+      "rtkLesson": 54,
+      "rtkFrame": 5609
+    },
+    {
+      "id": "rtk_l54f5610",
+      "rank": "12",
+      "suit": "clubs",
+      "kanji": "駆け足",
+      "hiragana": "かけあし",
+      "romaji": "kakeashi",
+      "english": "gallop, run",
+      "rhyme": "Remember this word you see, it's kakeashi",
+      "sentence": {
+        "kanji": "駅まで駆け足で行ったよ。",
+        "romaji": "eki made kakeashi de ita yo",
+        "english": "I ran to the station."
+      },
+      "rtkLesson": 54,
+      "rtkFrame": 5610
+    },
+    {
+      "id": "rtk_l54f5612",
+      "rank": "8",
+      "suit": "hearts",
+      "kanji": "沸騰",
+      "hiragana": "ふっとう",
+      "romaji": "futou",
+      "english": "boiling",
+      "rhyme": "Remember this word you see, it's futou",
+      "sentence": {
+        "kanji": "水が沸騰したよ。",
+        "romaji": "mizu ga futou shita yo",
+        "english": "The water boiled."
+      },
+      "rtkLesson": 54,
+      "rtkFrame": 5612
+    }
+  ]
+}

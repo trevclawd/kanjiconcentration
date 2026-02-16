@@ -1,0 +1,840 @@
+{
+  "name": "RTK Lesson 1",
+  "description": "RTK Lesson 1 - 49 cards",
+  "lesson": 1,
+  "cards": [
+    {
+      "id": "rtk_l01f0001",
+      "rank": "1",
+      "suit": "hearts",
+      "kanji": "一つ",
+      "hiragana": "ひとつ",
+      "romaji": "hitotsu",
+      "english": "one (thing)",
+      "rhyme": "Remember this word you see, it's hitotsu",
+      "sentence": {
+        "kanji": "それを一つください。",
+        "romaji": "sore wo hitotsu kudasai",
+        "english": "Please give me one of those."
+      },
+      "rtkLesson": 1,
+      "rtkFrame": 1
+    },
+    {
+      "id": "rtk_l01f0002",
+      "rank": "4",
+      "suit": "spades",
+      "kanji": "二つ",
+      "hiragana": "ふたつ",
+      "romaji": "futatsu",
+      "english": "two (things)",
+      "rhyme": "Remember this word you see, it's futatsu",
+      "sentence": {
+        "kanji": "ソフトクリームを二つください。",
+        "romaji": "sofutokuri-mu wo futatsu kudasai",
+        "english": "Please give me two ice cream cones."
+      },
+      "rtkLesson": 1,
+      "rtkFrame": 2
+    },
+    {
+      "id": "rtk_l01f0009",
+      "rank": "12",
+      "suit": "hearts",
+      "kanji": "八日",
+      "hiragana": "ようか",
+      "romaji": "youka",
+      "english": "eight days, 8th of the month",
+      "rhyme": "Remember this word you see, it's youka",
+      "sentence": {
+        "kanji": "八日からイギリスに行きます。",
+        "romaji": "youka kara igirisu ni ikimasu",
+        "english": "I go to England on the eighth."
+      },
+      "rtkLesson": 1,
+      "rtkFrame": 9
+    },
+    {
+      "id": "rtk_l01f0016",
+      "rank": "1",
+      "suit": "diamonds",
+      "kanji": "七",
+      "hiragana": "なな",
+      "romaji": "nana",
+      "english": "seven",
+      "rhyme": "Remember this word you see, it's nana",
+      "sentence": {
+        "kanji": "バナナが七本あります。",
+        "romaji": "banana ga nanahon arimasu",
+        "english": "There are seven bananas."
+      },
+      "rtkLesson": 1,
+      "rtkFrame": 16
+    },
+    {
+      "id": "rtk_l01f0020",
+      "rank": "3",
+      "suit": "hearts",
+      "kanji": "一日",
+      "hiragana": "ついたち",
+      "romaji": "tsuitachi",
+      "english": "1st of the month",
+      "rhyme": "Remember this word you see, it's tsuitachi",
+      "sentence": {
+        "kanji": "来月の一日は空いていますか。",
+        "romaji": "raigetsu no tsuitachi ha aiteimasu ka",
+        "english": "Are you free on the 1st of next month?"
+      },
+      "rtkLesson": 1,
+      "rtkFrame": 20
+    },
+    {
+      "id": "rtk_l01f0022",
+      "rank": "2",
+      "suit": "clubs",
+      "kanji": "七つ",
+      "hiragana": "ななつ",
+      "romaji": "nanatsu",
+      "english": "seven (things)",
+      "rhyme": "Remember this word you see, it's nanatsu",
+      "sentence": {
+        "kanji": "この子は今年七つになります。",
+        "romaji": "kono ko ha kotoshi nanatsu ni narimasu",
+        "english": "Our kid's turning seven this year."
+      },
+      "rtkLesson": 1,
+      "rtkFrame": 22
+    },
+    {
+      "id": "rtk_l01f0037",
+      "rank": "9",
+      "suit": "clubs",
+      "kanji": "口",
+      "hiragana": "くち",
+      "romaji": "kuchi",
+      "english": "mouth",
+      "rhyme": "Remember this word you see, it's kuchi",
+      "sentence": {
+        "kanji": "口を大きく開けてください。",
+        "romaji": "kuchi wo ookiku akete kudasai",
+        "english": "Open wide, please."
+      },
+      "rtkLesson": 1,
+      "rtkFrame": 37
+    },
+    {
+      "id": "rtk_l01f0040",
+      "rank": "9",
+      "suit": "diamonds",
+      "kanji": "六日",
+      "hiragana": "むいか",
+      "romaji": "muika",
+      "english": "six days, 6th of the month",
+      "rhyme": "Remember this word you see, it's muika",
+      "sentence": {
+        "kanji": "六日前に日本に帰ってきました。",
+        "romaji": "muikamae ni nihon ni kaete kimashita",
+        "english": "I came back to Japan six days ago."
+      },
+      "rtkLesson": 1,
+      "rtkFrame": 40
+    },
+    {
+      "id": "rtk_l01f0042",
+      "rank": "4",
+      "suit": "diamonds",
+      "kanji": "十日",
+      "hiragana": "とおか",
+      "romaji": "tooka",
+      "english": "ten days, 10th of the month",
+      "rhyme": "Remember this word you see, it's tooka",
+      "sentence": {
+        "kanji": "十日後に帰ります。",
+        "romaji": "tookago ni kaerimasu",
+        "english": "I'll come home in ten days."
+      },
+      "rtkLesson": 1,
+      "rtkFrame": 42
+    },
+    {
+      "id": "rtk_l01f0047",
+      "rank": "7",
+      "suit": "hearts",
+      "kanji": "月",
+      "hiragana": "つき",
+      "romaji": "tsuki",
+      "english": "moon",
+      "rhyme": "Remember this word you see, it's tsuki",
+      "sentence": {
+        "kanji": "今夜は月がとてもきれいです。",
+        "romaji": "konya ha tsuki ga totemo kirei desu",
+        "english": "The moon looks so beautiful tonight."
+      },
+      "rtkLesson": 1,
+      "rtkFrame": 47
+    },
+    {
+      "id": "rtk_l01f0053",
+      "rank": "6",
+      "suit": "diamonds",
+      "kanji": "三つ",
+      "hiragana": "みっつ",
+      "romaji": "mitsu",
+      "english": "three (things)",
+      "rhyme": "Remember this word you see, it's mitsu",
+      "sentence": {
+        "kanji": "コップを三つ買いました。",
+        "romaji": "kopu wo mitsu kaimashita",
+        "english": "I bought three glasses."
+      },
+      "rtkLesson": 1,
+      "rtkFrame": 53
+    },
+    {
+      "id": "rtk_l01f0111",
+      "rank": "2",
+      "suit": "spades",
+      "kanji": "九日",
+      "hiragana": "ここのか",
+      "romaji": "kokonoka",
+      "english": "nine days, 9th of the month",
+      "rhyme": "Remember this word you see, it's kokonoka",
+      "sentence": {
+        "kanji": "九日に荷物が届きます。",
+        "romaji": "kokonoka ni nimotsu ga todokimasu",
+        "english": "The package will arrive on the ninth."
+      },
+      "rtkLesson": 1,
+      "rtkFrame": 111
+    },
+    {
+      "id": "rtk_l01f0113",
+      "rank": "1",
+      "suit": "clubs",
+      "kanji": "二日",
+      "hiragana": "ふつか",
+      "romaji": "futsuka",
+      "english": "two days, 2nd of the month",
+      "rhyme": "Remember this word you see, it's futsuka",
+      "sentence": {
+        "kanji": "私は二日待った。",
+        "romaji": "watashi ha futsuka mata",
+        "english": "I waited two days."
+      },
+      "rtkLesson": 1,
+      "rtkFrame": 113
+    },
+    {
+      "id": "rtk_l01f0118",
+      "rank": "8",
+      "suit": "spades",
+      "kanji": "四",
+      "hiragana": "し",
+      "romaji": "shi",
+      "english": "four",
+      "rhyme": "Remember this word you see, it's shi",
+      "sentence": {
+        "kanji": "四月に大学に入学しました。",
+        "romaji": "shigatsu ni daigaku ni nyuugaku shimashita",
+        "english": "I entered my university in April."
+      },
+      "rtkLesson": 1,
+      "rtkFrame": 118
+    },
+    {
+      "id": "rtk_l01f0130",
+      "rank": "3",
+      "suit": "clubs",
+      "kanji": "二",
+      "hiragana": "に",
+      "romaji": "ni",
+      "english": "two",
+      "rhyme": "Remember this word you see, it's ni",
+      "sentence": {
+        "kanji": "その人には二回会った。",
+        "romaji": "sono hito ni ha ni kai ata",
+        "english": "I met that person twice."
+      },
+      "rtkLesson": 1,
+      "rtkFrame": 130
+    },
+    {
+      "id": "rtk_l01f0131",
+      "rank": "9",
+      "suit": "hearts",
+      "kanji": "四",
+      "hiragana": "よん",
+      "romaji": "yon",
+      "english": "four",
+      "rhyme": "Remember this word you see, it's yon",
+      "sentence": {
+        "kanji": "ハワイは四回目です。",
+        "romaji": "hawai ha yonkaime desu",
+        "english": "This is my fourth trip to Hawaii."
+      },
+      "rtkLesson": 1,
+      "rtkFrame": 131
+    },
+    {
+      "id": "rtk_l01f0132",
+      "rank": "3",
+      "suit": "spades",
+      "kanji": "八",
+      "hiragana": "はち",
+      "romaji": "hachi",
+      "english": "eight",
+      "rhyme": "Remember this word you see, it's hachi",
+      "sentence": {
+        "kanji": "りんごを八個ください。",
+        "romaji": "ringo wo hachiko kudasai",
+        "english": "Please give me eight apples."
+      },
+      "rtkLesson": 1,
+      "rtkFrame": 132
+    },
+    {
+      "id": "rtk_l01f0138",
+      "rank": "4",
+      "suit": "hearts",
+      "kanji": "八つ",
+      "hiragana": "やっつ",
+      "romaji": "yatsu",
+      "english": "eight (things)",
+      "rhyme": "Remember this word you see, it's yatsu",
+      "sentence": {
+        "kanji": "あの家には時計が八つあります。",
+        "romaji": "ano ie ni ha tokei ga yatsu arimasu",
+        "english": "There are eight clocks in that house."
+      },
+      "rtkLesson": 1,
+      "rtkFrame": 138
+    },
+    {
+      "id": "rtk_l01f0141",
+      "rank": "6",
+      "suit": "spades",
+      "kanji": "四日",
+      "hiragana": "よっか",
+      "romaji": "yoka",
+      "english": "four days, 4th of the month",
+      "rhyme": "Remember this word you see, it's yoka",
+      "sentence": {
+        "kanji": "新学期は来月の四日からです。",
+        "romaji": "shingaki ha raigetsu no yoka kara desu",
+        "english": "The new school term starts on the fourth of next month."
+      },
+      "rtkLesson": 1,
+      "rtkFrame": 141
+    },
+    {
+      "id": "rtk_l01f0143",
+      "rank": "7",
+      "suit": "spades",
+      "kanji": "十",
+      "hiragana": "じゅう",
+      "romaji": "juu",
+      "english": "ten",
+      "rhyme": "Remember this word you see, it's juu",
+      "sentence": {
+        "kanji": "その子は指で十数えました。",
+        "romaji": "sono ko ha yubi de juu kazoemashita",
+        "english": "The child counted to ten on her fingers."
+      },
+      "rtkLesson": 1,
+      "rtkFrame": 143
+    },
+    {
+      "id": "rtk_l01f0158",
+      "rank": "2",
+      "suit": "diamonds",
+      "kanji": "一",
+      "hiragana": "いち",
+      "romaji": "ichi",
+      "english": "one",
+      "rhyme": "Remember this word you see, it's ichi",
+      "sentence": {
+        "kanji": "一から始めましょう。",
+        "romaji": "ichi kara hajimemashou",
+        "english": "Let's start from the beginning."
+      },
+      "rtkLesson": 1,
+      "rtkFrame": 158
+    },
+    {
+      "id": "rtk_l01f0165",
+      "rank": "10",
+      "suit": "clubs",
+      "kanji": "三日",
+      "hiragana": "みっか",
+      "romaji": "mika",
+      "english": "three days, 3rd of the month",
+      "rhyme": "Remember this word you see, it's mika",
+      "sentence": {
+        "kanji": "手紙が届くのに三日かかりました。",
+        "romaji": "tegami ga todoku no ni mika kakarimashita",
+        "english": "It took three days for the letter to arrive."
+      },
+      "rtkLesson": 1,
+      "rtkFrame": 165
+    },
+    {
+      "id": "rtk_l01f0181",
+      "rank": "11",
+      "suit": "clubs",
+      "kanji": "五",
+      "hiragana": "ご",
+      "romaji": "go",
+      "english": "five",
+      "rhyme": "Remember this word you see, it's go",
+      "sentence": {
+        "kanji": "五人で旅行に行きました。",
+        "romaji": "gonin de ryokou ni ikimashita",
+        "english": "Five of us went on a trip."
+      },
+      "rtkLesson": 1,
+      "rtkFrame": 181
+    },
+    {
+      "id": "rtk_l01f0205",
+      "rank": "6",
+      "suit": "clubs",
+      "kanji": "九つ",
+      "hiragana": "ここのつ",
+      "romaji": "kokonotsu",
+      "english": "nine (things)",
+      "rhyme": "Remember this word you see, it's kokonotsu",
+      "sentence": {
+        "kanji": "娘は明日九つになります。",
+        "romaji": "musume ha asu kokonotsu ni narimasu",
+        "english": "My daughter's turning nine tomorrow."
+      },
+      "rtkLesson": 1,
+      "rtkFrame": 205
+    },
+    {
+      "id": "rtk_l01f0207",
+      "rank": "12",
+      "suit": "spades",
+      "kanji": "六つ",
+      "hiragana": "むっつ",
+      "romaji": "mutsu",
+      "english": "six (things)",
+      "rhyme": "Remember this word you see, it's mutsu",
+      "sentence": {
+        "kanji": "息子は六つになりました。",
+        "romaji": "musuko ha mutsu ni narimashita",
+        "english": "My son turned six."
+      },
+      "rtkLesson": 1,
+      "rtkFrame": 207
+    },
+    {
+      "id": "rtk_l01f0239",
+      "rank": "5",
+      "suit": "hearts",
+      "kanji": "三",
+      "hiragana": "さん",
+      "romaji": "san",
+      "english": "three",
+      "rhyme": "Remember this word you see, it's san",
+      "sentence": {
+        "kanji": "彼女は三人の子供の母親だ。",
+        "romaji": "kanojo ha sannin no kodomo no hahaoya da",
+        "english": "She's the mother of three children."
+      },
+      "rtkLesson": 1,
+      "rtkFrame": 239
+    },
+    {
+      "id": "rtk_l01f0243",
+      "rank": "8",
+      "suit": "diamonds",
+      "kanji": "目",
+      "hiragana": "め",
+      "romaji": "me",
+      "english": "eye",
+      "rhyme": "Remember this word you see, it's me",
+      "sentence": {
+        "kanji": "彼女は青い目をしています。",
+        "romaji": "kanojo ha aoi me wo shite imasu",
+        "english": "She has blue eyes."
+      },
+      "rtkLesson": 1,
+      "rtkFrame": 243
+    },
+    {
+      "id": "rtk_l01f0244",
+      "rank": "13",
+      "suit": "hearts",
+      "kanji": "六",
+      "hiragana": "ろく",
+      "romaji": "roku",
+      "english": "six",
+      "rhyme": "Remember this word you see, it's roku",
+      "sentence": {
+        "kanji": "彼には子供が六人います。",
+        "romaji": "kare ni ha kodomo ga rokunin imasu",
+        "english": "He has six children."
+      },
+      "rtkLesson": 1,
+      "rtkFrame": 244
+    },
+    {
+      "id": "rtk_l01f0247",
+      "rank": "8",
+      "suit": "hearts",
+      "kanji": "日",
+      "hiragana": "にち",
+      "romaji": "nichi",
+      "english": "day",
+      "rhyme": "Remember this word you see, it's nichi",
+      "sentence": {
+        "kanji": "私たちは先月11日に結婚しました。",
+        "romaji": "watashitachi ha sengetsu juuichi nichi ni kekon shimashita",
+        "english": "We got married last month on the 11th."
+      },
+      "rtkLesson": 1,
+      "rtkFrame": 247
+    },
+    {
+      "id": "rtk_l01f0283",
+      "rank": "5",
+      "suit": "diamonds",
+      "kanji": "九",
+      "hiragana": "きゅう",
+      "romaji": "kyuu",
+      "english": "nine",
+      "rhyme": "Remember this word you see, it's kyuu",
+      "sentence": {
+        "kanji": "野球は九人で1チームです。",
+        "romaji": "yakyuu ha kyuunin de hitochi-mu desu",
+        "english": "In baseball there are nine people on one team."
+      },
+      "rtkLesson": 1,
+      "rtkFrame": 283
+    },
+    {
+      "id": "rtk_l01f0326",
+      "rank": "13",
+      "suit": "diamonds",
+      "kanji": "二十日",
+      "hiragana": "はつか",
+      "romaji": "hatsuka",
+      "english": "20 days, 20th of the month",
+      "rhyme": "Remember this word you see, it's hatsuka",
+      "sentence": {
+        "kanji": "来月の二十日は弟の誕生日です。",
+        "romaji": "raigetsu no hatsuka ha otouto no tanjoubi desu",
+        "english": "The 20th of next month is my little brother's birthday."
+      },
+      "rtkLesson": 1,
+      "rtkFrame": 326
+    },
+    {
+      "id": "rtk_l01f0328",
+      "rank": "11",
+      "suit": "spades",
+      "kanji": "五日",
+      "hiragana": "いつか",
+      "romaji": "itsuka",
+      "english": "five days, 5th of the month",
+      "rhyme": "Remember this word you see, it's itsuka",
+      "sentence": {
+        "kanji": "五月五日は祝日です",
+        "romaji": "gogatsu itsuka ha shukujitsu desu",
+        "english": "May 5th is a holiday."
+      },
+      "rtkLesson": 1,
+      "rtkFrame": 328
+    },
+    {
+      "id": "rtk_l01f0363",
+      "rank": "5",
+      "suit": "clubs",
+      "kanji": "七日",
+      "hiragana": "なのか",
+      "romaji": "nanoka",
+      "english": "seven days, 7th of the month",
+      "rhyme": "Remember this word you see, it's nanoka",
+      "sentence": {
+        "kanji": "先月の七日に孫が生まれました。",
+        "romaji": "sengetsu no nanoka ni mago ga umaremashita",
+        "english": "My grandchild was born on the seventh of last month."
+      },
+      "rtkLesson": 1,
+      "rtkFrame": 363
+    },
+    {
+      "id": "rtk_l01f0371",
+      "rank": "7",
+      "suit": "clubs",
+      "kanji": "四つ",
+      "hiragana": "よっつ",
+      "romaji": "yotsu",
+      "english": "four (things)",
+      "rhyme": "Remember this word you see, it's yotsu",
+      "sentence": {
+        "kanji": "私は腕時計を四つ持っています。",
+        "romaji": "watashi ha udedokei wo yotsu mote imasu",
+        "english": "I have four wristwatches."
+      },
+      "rtkLesson": 1,
+      "rtkFrame": 371
+    },
+    {
+      "id": "rtk_l01f0390",
+      "rank": "10",
+      "suit": "diamonds",
+      "kanji": "五つ",
+      "hiragana": "いつつ",
+      "romaji": "itsutsu",
+      "english": "five (things)",
+      "rhyme": "Remember this word you see, it's itsutsu",
+      "sentence": {
+        "kanji": "桃を五つください。",
+        "romaji": "momo wo itsutsu kudasai",
+        "english": "I'd like five peaches, please."
+      },
+      "rtkLesson": 1,
+      "rtkFrame": 390
+    },
+    {
+      "id": "rtk_l01f0593",
+      "rank": "11",
+      "suit": "hearts",
+      "kanji": "日",
+      "hiragana": "ひ",
+      "romaji": "hi",
+      "english": "sun, sunlight, day",
+      "rhyme": "Remember this word you see, it's hi",
+      "sentence": {
+        "kanji": "夏は日が長い。",
+        "romaji": "natsu ha hi ga nagai",
+        "english": "The days are long in summer."
+      },
+      "rtkLesson": 1,
+      "rtkFrame": 593
+    },
+    {
+      "id": "rtk_l01f0747",
+      "rank": "10",
+      "suit": "spades",
+      "kanji": "九",
+      "hiragana": "く",
+      "romaji": "ku",
+      "english": "nine",
+      "rhyme": "Remember this word you see, it's ku",
+      "sentence": {
+        "kanji": "私は九月に行く予定です。",
+        "romaji": "watashi ha kugatsu ni iku yotei desu",
+        "english": "I plan to go in September."
+      },
+      "rtkLesson": 1,
+      "rtkFrame": 747
+    },
+    {
+      "id": "rtk_l01f1350",
+      "rank": "12",
+      "suit": "diamonds",
+      "kanji": "田んぼ",
+      "hiragana": "たんぼ",
+      "romaji": "tanbo",
+      "english": "rice field",
+      "rhyme": "Remember this word you see, it's tanbo",
+      "sentence": {
+        "kanji": "この辺は田んぼがたくさんあります。",
+        "romaji": "konohen ha tanbo ga takusan arimasu",
+        "english": "There are a lot of rice fields around here."
+      },
+      "rtkLesson": 1,
+      "rtkFrame": 1350
+    },
+    {
+      "id": "rtk_l01f2081",
+      "rank": "7",
+      "suit": "diamonds",
+      "kanji": "三日月",
+      "hiragana": "みかづき",
+      "romaji": "mikazuki",
+      "english": "new moon, crescent moon",
+      "rhyme": "Remember this word you see, it's mikazuki",
+      "sentence": {
+        "kanji": "空に三日月が見えました。",
+        "romaji": "sora ni mikazuki ga miemashita",
+        "english": "I was able to see a crescent moon in the sky."
+      },
+      "rtkLesson": 1,
+      "rtkFrame": 2081
+    },
+    {
+      "id": "rtk_l01f2523",
+      "rank": "8",
+      "suit": "clubs",
+      "kanji": "月日",
+      "hiragana": "つきひ",
+      "romaji": "tsukihi",
+      "english": "time, days",
+      "rhyme": "Remember this word you see, it's tsukihi",
+      "sentence": {
+        "kanji": "月日が経つのは早いものです。",
+        "romaji": "tsukihi ga tatsu no ha hayai mono desu",
+        "english": "Time passes by quickly."
+      },
+      "rtkLesson": 1,
+      "rtkFrame": 2523
+    },
+    {
+      "id": "rtk_l01f2651",
+      "rank": "5",
+      "suit": "spades",
+      "kanji": "日日",
+      "hiragana": "ひにち",
+      "romaji": "hinichi",
+      "english": "date, number of days",
+      "rhyme": "Remember this word you see, it's hinichi",
+      "sentence": {
+        "kanji": "ミーティングの日日を間違えました。",
+        "romaji": "mi-teingu no hinichi wo machigaemashita",
+        "english": "I mistook the day of the meeting."
+      },
+      "rtkLesson": 1,
+      "rtkFrame": 2651
+    },
+    {
+      "id": "rtk_l01f2712",
+      "rank": "1",
+      "suit": "spades",
+      "kanji": "口げんか",
+      "hiragana": "くちげんか",
+      "romaji": "kuchigenka",
+      "english": "quarrel",
+      "rhyme": "Remember this word you see, it's kuchigenka",
+      "sentence": {
+        "kanji": "きのう、弟と口げんかしました。",
+        "romaji": "kinou otouto to kuchigenka shimashita",
+        "english": "I quarreled with my younger brother yesterday."
+      },
+      "rtkLesson": 1,
+      "rtkFrame": 2712
+    },
+    {
+      "id": "rtk_l01f2859",
+      "rank": "2",
+      "suit": "hearts",
+      "kanji": "日ごろ",
+      "hiragana": "ひごろ",
+      "romaji": "higoro",
+      "english": "routinely, daily",
+      "rhyme": "Remember this word you see, it's higoro",
+      "sentence": {
+        "kanji": "彼女には日ごろからお世話になっています。",
+        "romaji": "kanojo ni ha higoro kara osewa ni nate imasu",
+        "english": "I'm indebted to her since she helps me on a daily basis."
+      },
+      "rtkLesson": 1,
+      "rtkFrame": 2859
+    },
+    {
+      "id": "rtk_l01f2896",
+      "rank": "9",
+      "suit": "spades",
+      "kanji": "一口",
+      "hiragana": "ひとくち",
+      "romaji": "hitokuchi",
+      "english": "mouthful, bite",
+      "rhyme": "Remember this word you see, it's hitokuchi",
+      "sentence": {
+        "kanji": "彼はおまんじゅうを一口で食べたの。",
+        "romaji": "kare ha omanjuu wo hitokuchi de tabeta no",
+        "english": "He ate the sweet bun in one mouthful."
+      },
+      "rtkLesson": 1,
+      "rtkFrame": 2896
+    },
+    {
+      "id": "rtk_l01f3309",
+      "rank": "10",
+      "suit": "hearts",
+      "kanji": "田",
+      "hiragana": "た",
+      "romaji": "ta",
+      "english": "rice field, rice paddy",
+      "rhyme": "Remember this word you see, it's ta",
+      "sentence": {
+        "kanji": "今は田に水を入れる季節です。",
+        "romaji": "ima ha ta ni mizu wo ireru kisetsu desu",
+        "english": "It's the season now when rice fields are filled with water."
+      },
+      "rtkLesson": 1,
+      "rtkFrame": 3309
+    },
+    {
+      "id": "rtk_l01f3347",
+      "rank": "3",
+      "suit": "diamonds",
+      "kanji": "日ソ",
+      "hiragana": "にっそ",
+      "romaji": "niso",
+      "english": "Japanese-Soviet",
+      "rhyme": "Remember this word you see, it's niso",
+      "sentence": {
+        "kanji": "当時、日ソ会談が開かれた。",
+        "romaji": "touji niso kaidan ga hirakareta",
+        "english": "At the time, talks were held between Japan and the Soviet Union."
+      },
+      "rtkLesson": 1,
+      "rtkFrame": 3347
+    },
+    {
+      "id": "rtk_l01f3352",
+      "rank": "13",
+      "suit": "clubs",
+      "kanji": "月日",
+      "hiragana": "がっぴ",
+      "romaji": "gapi",
+      "english": "date",
+      "rhyme": "Remember this word you see, it's gapi",
+      "sentence": {
+        "kanji": "ここに生年月日を記入してください。",
+        "romaji": "koko ni seinengapi wo kinyuu shite kudasai",
+        "english": "Please fill in your date of birth here."
+      },
+      "rtkLesson": 1,
+      "rtkFrame": 3352
+    },
+    {
+      "id": "rtk_l01f4280",
+      "rank": "6",
+      "suit": "hearts",
+      "kanji": "日々",
+      "hiragana": "ひび",
+      "romaji": "hibi",
+      "english": "daily, every day",
+      "rhyme": "Remember this word you see, it's hibi",
+      "sentence": {
+        "kanji": "日々の努力が大切です。",
+        "romaji": "hibi no doryoku ga taisetsu desu",
+        "english": "It's important to make efforts every day."
+      },
+      "rtkLesson": 1,
+      "rtkFrame": 4280
+    },
+    {
+      "id": "rtk_l01f5285",
+      "rank": "4",
+      "suit": "clubs",
+      "kanji": "日",
+      "hiragana": "にち",
+      "romaji": "nichi",
+      "english": "Japan",
+      "rhyme": "Remember this word you see, it's nichi",
+      "sentence": {
+        "kanji": "日仏の共同研究が始まったな。",
+        "romaji": "nichifutsu no kyoudou kenkyuu ga hajimata na",
+        "english": "Joint research has begun between Japan and France."
+      },
+      "rtkLesson": 1,
+      "rtkFrame": 5285
+    }
+  ]
+}

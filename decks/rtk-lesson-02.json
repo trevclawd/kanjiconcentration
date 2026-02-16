@@ -1,0 +1,296 @@
+{
+  "name": "RTK Lesson 2",
+  "description": "RTK Lesson 2 - 17 cards",
+  "lesson": 2,
+  "cards": [
+    {
+      "id": "rtk_l02f0100",
+      "rank": "11",
+      "suit": "diamonds",
+      "kanji": "古い",
+      "hiragana": "ふるい",
+      "romaji": "furui",
+      "english": "old",
+      "rhyme": "Remember this word you see, it's furui",
+      "sentence": {
+        "kanji": "私は古い車が好きです。",
+        "romaji": "watashi ha furui kuruma ga suki desu",
+        "english": "I like old cars."
+      },
+      "rtkLesson": 2,
+      "rtkFrame": 100
+    },
+    {
+      "id": "rtk_l02f0153",
+      "rank": "12",
+      "suit": "clubs",
+      "kanji": "早い",
+      "hiragana": "はやい",
+      "romaji": "hayai",
+      "english": "early",
+      "rhyme": "Remember this word you see, it's hayai",
+      "sentence": {
+        "kanji": "まだ学校へ行くには早い時間です。",
+        "romaji": "mada gakou he iku ni ha hayai jikan desu",
+        "english": "It's still too early to go to school."
+      },
+      "rtkLesson": 2,
+      "rtkFrame": 153
+    },
+    {
+      "id": "rtk_l02f0511",
+      "rank": "2",
+      "suit": "diamonds",
+      "kanji": "明日",
+      "hiragana": "あした",
+      "romaji": "ashita",
+      "english": "tomorrow",
+      "rhyme": "Remember this word you see, it's ashita",
+      "sentence": {
+        "kanji": "明日、会社を休みます。",
+        "romaji": "ashita kaisha wo yasumimasu",
+        "english": "I'm off work tomorrow."
+      },
+      "rtkLesson": 2,
+      "rtkFrame": 511
+    },
+    {
+      "id": "rtk_l02f0785",
+      "rank": "3",
+      "suit": "clubs",
+      "kanji": "早く",
+      "hiragana": "はやく",
+      "romaji": "hayaku",
+      "english": "early, soon",
+      "rhyme": "Remember this word you see, it's hayaku",
+      "sentence": {
+        "kanji": "なるべく早く来て下さい。",
+        "romaji": "narubeku hayaku kite kudasai",
+        "english": "Please come as early as possible."
+      },
+      "rtkLesson": 2,
+      "rtkFrame": 785
+    },
+    {
+      "id": "rtk_l02f0946",
+      "rank": "13",
+      "suit": "spades",
+      "kanji": "明らか",
+      "hiragana": "あきらか",
+      "romaji": "akiraka",
+      "english": "clear, obvious",
+      "rhyme": "Remember this word you see, it's akiraka",
+      "sentence": {
+        "kanji": "明らかに彼が悪い。",
+        "romaji": "akiraka ni kare ga warui",
+        "english": "It's clearly his fault."
+      },
+      "rtkLesson": 2,
+      "rtkFrame": 946
+    },
+    {
+      "id": "rtk_l02f0967",
+      "rank": "1",
+      "suit": "hearts",
+      "kanji": "明るい",
+      "hiragana": "あかるい",
+      "romaji": "akarui",
+      "english": "bright, cheerful",
+      "rhyme": "Remember this word you see, it's akarui",
+      "sentence": {
+        "kanji": "彼女は明るい性格です。",
+        "romaji": "kanojo ha akarui seikaku desu",
+        "english": "She has a cheerful personality."
+      },
+      "rtkLesson": 2,
+      "rtkFrame": 967
+    },
+    {
+      "id": "rtk_l02f1012",
+      "rank": "4",
+      "suit": "spades",
+      "kanji": "早口",
+      "hiragana": "はやくち",
+      "romaji": "hayakuchi",
+      "english": "fast talking",
+      "rhyme": "Remember this word you see, it's hayakuchi",
+      "sentence": {
+        "kanji": "彼女は早口だ。",
+        "romaji": "kanojo ha hayakuchi da",
+        "english": "She talks quickly."
+      },
+      "rtkLesson": 2,
+      "rtkFrame": 1012
+    },
+    {
+      "id": "rtk_l02f1607",
+      "rank": "5",
+      "suit": "hearts",
+      "kanji": "胃",
+      "hiragana": "い",
+      "romaji": "i",
+      "english": "stomach",
+      "rhyme": "Remember this word you see, it's i",
+      "sentence": {
+        "kanji": "昨日から胃が痛い。",
+        "romaji": "kinou kara i ga itai",
+        "english": "I've had a stomach ache since yesterday."
+      },
+      "rtkLesson": 2,
+      "rtkFrame": 1607
+    },
+    {
+      "id": "rtk_l02f2059",
+      "rank": "7",
+      "suit": "clubs",
+      "kanji": "明ける",
+      "hiragana": "あける",
+      "romaji": "akeru",
+      "english": "to dawn",
+      "rhyme": "Remember this word you see, it's akeru",
+      "sentence": {
+        "kanji": "もうすぐ夜が明けるね。",
+        "romaji": "mousugu yo ga akeru ne",
+        "english": "It will be dawn soon."
+      },
+      "rtkLesson": 2,
+      "rtkFrame": 2059
+    },
+    {
+      "id": "rtk_l02f2191",
+      "rank": "12",
+      "suit": "spades",
+      "kanji": "世",
+      "hiragana": "よ",
+      "romaji": "yo",
+      "english": "world, public,",
+      "rhyme": "Remember this word you see, it's yo",
+      "sentence": {
+        "kanji": "やっと私の作品が世に出たの。",
+        "romaji": "yato watashi no sakuhin ga yo ni deta no",
+        "english": "My work was finally released to the world."
+      },
+      "rtkLesson": 2,
+      "rtkFrame": 2191
+    },
+    {
+      "id": "rtk_l02f2276",
+      "rank": "6",
+      "suit": "diamonds",
+      "kanji": "明日",
+      "hiragana": "あす",
+      "romaji": "asu",
+      "english": "tomorrow",
+      "rhyme": "Remember this word you see, it's asu",
+      "sentence": {
+        "kanji": "明日のプレゼンテーションが心配だ。",
+        "romaji": "asu no purezente-shon ga shinpai da",
+        "english": "I'm worried about tomorrow's presentation."
+      },
+      "rtkLesson": 2,
+      "rtkFrame": 2276
+    },
+    {
+      "id": "rtk_l02f2343",
+      "rank": "8",
+      "suit": "spades",
+      "kanji": "明かり",
+      "hiragana": "あかり",
+      "romaji": "akari",
+      "english": "light",
+      "rhyme": "Remember this word you see, it's akari",
+      "sentence": {
+        "kanji": "部屋の明かりを点けましょう。",
+        "romaji": "heya no akari wo tsukemashou",
+        "english": "Let's turn on the room light."
+      },
+      "rtkLesson": 2,
+      "rtkFrame": 2343
+    },
+    {
+      "id": "rtk_l02f2389",
+      "rank": "9",
+      "suit": "hearts",
+      "kanji": "品",
+      "hiragana": "しな",
+      "romaji": "shina",
+      "english": "article, item",
+      "rhyme": "Remember this word you see, it's shina",
+      "sentence": {
+        "kanji": "そちらの品は半額になっています。",
+        "romaji": "sochira no shina ha hangaku ni nate imasu",
+        "english": "Those goods are half-price."
+      },
+      "rtkLesson": 2,
+      "rtkFrame": 2389
+    },
+    {
+      "id": "rtk_l02f2522",
+      "rank": "1",
+      "suit": "diamonds",
+      "kanji": "早まる",
+      "hiragana": "はやまる",
+      "romaji": "hayamaru",
+      "english": "make a hasty decision, jump the gun",
+      "rhyme": "Remember this word you see, it's hayamaru",
+      "sentence": {
+        "kanji": "早まらないでよく考えましょう。",
+        "romaji": "hayamaranai de yoku kangaemashou",
+        "english": "Let's think carefully without acting rashly."
+      },
+      "rtkLesson": 2,
+      "rtkFrame": 2522
+    },
+    {
+      "id": "rtk_l02f3020",
+      "rank": "11",
+      "suit": "clubs",
+      "kanji": "明日",
+      "hiragana": "みょうにち",
+      "romaji": "myounichi",
+      "english": "tomorrow",
+      "rhyme": "Remember this word you see, it's myounichi",
+      "sentence": {
+        "kanji": "明日、会議を開きます。",
+        "romaji": "myounichi kaigi wo hirakimasu",
+        "english": "The conference will be held tomorrow."
+      },
+      "rtkLesson": 2,
+      "rtkFrame": 3020
+    },
+    {
+      "id": "rtk_l02f3503",
+      "rank": "13",
+      "suit": "hearts",
+      "kanji": "早める",
+      "hiragana": "はやめる",
+      "romaji": "hayameru",
+      "english": "move forward (in time), expedite",
+      "rhyme": "Remember this word you see, it's hayameru",
+      "sentence": {
+        "kanji": "集合時間を30分早めました。",
+        "romaji": "shuugoujikan wo 30 pun hayamemashita",
+        "english": "I pushed forward the meeting time by 30 minutes."
+      },
+      "rtkLesson": 2,
+      "rtkFrame": 3503
+    },
+    {
+      "id": "rtk_l02f5902",
+      "rank": "10",
+      "suit": "diamonds",
+      "kanji": "一旦",
+      "hiragana": "いったん",
+      "romaji": "itan",
+      "english": "once, for a while",
+      "rhyme": "Remember this word you see, it's itan",
+      "sentence": {
+        "kanji": "疲れたでしょう、一旦休みましょう。",
+        "romaji": "tsukareta deshou itan yasumimashou",
+        "english": "You must be tired; let's take a rest for a while."
+      },
+      "rtkLesson": 2,
+      "rtkFrame": 5902
+    }
+  ]
+}

@@ -1,0 +1,343 @@
+{
+  "name": "RTK Core 6K Library",
+  "description": "Remembering the Kanji - Core 6K vocabulary organized by RTK Lesson (1-56)",
+  "totalCards": 5015,
+  "decks": [
+    {
+      "filename": "rtk-lesson-01.json",
+      "name": "RTK Lesson 1",
+      "cardCount": 49,
+      "lesson": 1
+    },
+    {
+      "filename": "rtk-lesson-02.json",
+      "name": "RTK Lesson 2",
+      "cardCount": 17,
+      "lesson": 2
+    },
+    {
+      "filename": "rtk-lesson-03.json",
+      "name": "RTK Lesson 3",
+      "cardCount": 54,
+      "lesson": 3
+    },
+    {
+      "filename": "rtk-lesson-04.json",
+      "name": "RTK Lesson 4",
+      "cardCount": 31,
+      "lesson": 4
+    },
+    {
+      "filename": "rtk-lesson-05.json",
+      "name": "RTK Lesson 5",
+      "cardCount": 38,
+      "lesson": 5
+    },
+    {
+      "filename": "rtk-lesson-06.json",
+      "name": "RTK Lesson 6",
+      "cardCount": 13,
+      "lesson": 6
+    },
+    {
+      "filename": "rtk-lesson-07.json",
+      "name": "RTK Lesson 7",
+      "cardCount": 51,
+      "lesson": 7
+    },
+    {
+      "filename": "rtk-lesson-08.json",
+      "name": "RTK Lesson 8",
+      "cardCount": 49,
+      "lesson": 8
+    },
+    {
+      "filename": "rtk-lesson-09.json",
+      "name": "RTK Lesson 9",
+      "cardCount": 39,
+      "lesson": 9
+    },
+    {
+      "filename": "rtk-lesson-10.json",
+      "name": "RTK Lesson 10",
+      "cardCount": 59,
+      "lesson": 10
+    },
+    {
+      "filename": "rtk-lesson-11.json",
+      "name": "RTK Lesson 11",
+      "cardCount": 22,
+      "lesson": 11
+    },
+    {
+      "filename": "rtk-lesson-12.json",
+      "name": "RTK Lesson 12",
+      "cardCount": 53,
+      "lesson": 12
+    },
+    {
+      "filename": "rtk-lesson-13.json",
+      "name": "RTK Lesson 13",
+      "cardCount": 47,
+      "lesson": 13
+    },
+    {
+      "filename": "rtk-lesson-14.json",
+      "name": "RTK Lesson 14",
+      "cardCount": 26,
+      "lesson": 14
+    },
+    {
+      "filename": "rtk-lesson-15.json",
+      "name": "RTK Lesson 15",
+      "cardCount": 60,
+      "lesson": 15
+    },
+    {
+      "filename": "rtk-lesson-16.json",
+      "name": "RTK Lesson 16",
+      "cardCount": 19,
+      "lesson": 16
+    },
+    {
+      "filename": "rtk-lesson-17.json",
+      "name": "RTK Lesson 17",
+      "cardCount": 42,
+      "lesson": 17
+    },
+    {
+      "filename": "rtk-lesson-18.json",
+      "name": "RTK Lesson 18",
+      "cardCount": 131,
+      "lesson": 18
+    },
+    {
+      "filename": "rtk-lesson-19.json",
+      "name": "RTK Lesson 19",
+      "cardCount": 66,
+      "lesson": 19
+    },
+    {
+      "filename": "rtk-lesson-20.json",
+      "name": "RTK Lesson 20",
+      "cardCount": 9,
+      "lesson": 20
+    },
+    {
+      "filename": "rtk-lesson-21.json",
+      "name": "RTK Lesson 21",
+      "cardCount": 172,
+      "lesson": 21
+    },
+    {
+      "filename": "rtk-lesson-22.json",
+      "name": "RTK Lesson 22",
+      "cardCount": 130,
+      "lesson": 22
+    },
+    {
+      "filename": "rtk-lesson-23.json",
+      "name": "RTK Lesson 23",
+      "cardCount": 243,
+      "lesson": 23
+    },
+    {
+      "filename": "rtk-lesson-24.json",
+      "name": "RTK Lesson 24",
+      "cardCount": 84,
+      "lesson": 24
+    },
+    {
+      "filename": "rtk-lesson-25.json",
+      "name": "RTK Lesson 25",
+      "cardCount": 199,
+      "lesson": 25
+    },
+    {
+      "filename": "rtk-lesson-26.json",
+      "name": "RTK Lesson 26",
+      "cardCount": 117,
+      "lesson": 26
+    },
+    {
+      "filename": "rtk-lesson-27.json",
+      "name": "RTK Lesson 27",
+      "cardCount": 260,
+      "lesson": 27
+    },
+    {
+      "filename": "rtk-lesson-28.json",
+      "name": "RTK Lesson 28",
+      "cardCount": 55,
+      "lesson": 28
+    },
+    {
+      "filename": "rtk-lesson-29.json",
+      "name": "RTK Lesson 29",
+      "cardCount": 86,
+      "lesson": 29
+    },
+    {
+      "filename": "rtk-lesson-30.json",
+      "name": "RTK Lesson 30",
+      "cardCount": 70,
+      "lesson": 30
+    },
+    {
+      "filename": "rtk-lesson-31.json",
+      "name": "RTK Lesson 31",
+      "cardCount": 228,
+      "lesson": 31
+    },
+    {
+      "filename": "rtk-lesson-32.json",
+      "name": "RTK Lesson 32",
+      "cardCount": 110,
+      "lesson": 32
+    },
+    {
+      "filename": "rtk-lesson-33.json",
+      "name": "RTK Lesson 33",
+      "cardCount": 109,
+      "lesson": 33
+    },
+    {
+      "filename": "rtk-lesson-34.json",
+      "name": "RTK Lesson 34",
+      "cardCount": 153,
+      "lesson": 34
+    },
+    {
+      "filename": "rtk-lesson-35.json",
+      "name": "RTK Lesson 35",
+      "cardCount": 67,
+      "lesson": 35
+    },
+    {
+      "filename": "rtk-lesson-36.json",
+      "name": "RTK Lesson 36",
+      "cardCount": 154,
+      "lesson": 36
+    },
+    {
+      "filename": "rtk-lesson-37.json",
+      "name": "RTK Lesson 37",
+      "cardCount": 84,
+      "lesson": 37
+    },
+    {
+      "filename": "rtk-lesson-38.json",
+      "name": "RTK Lesson 38",
+      "cardCount": 144,
+      "lesson": 38
+    },
+    {
+      "filename": "rtk-lesson-39.json",
+      "name": "RTK Lesson 39",
+      "cardCount": 125,
+      "lesson": 39
+    },
+    {
+      "filename": "rtk-lesson-40.json",
+      "name": "RTK Lesson 40",
+      "cardCount": 218,
+      "lesson": 40
+    },
+    {
+      "filename": "rtk-lesson-41.json",
+      "name": "RTK Lesson 41",
+      "cardCount": 101,
+      "lesson": 41
+    },
+    {
+      "filename": "rtk-lesson-42.json",
+      "name": "RTK Lesson 42",
+      "cardCount": 118,
+      "lesson": 42
+    },
+    {
+      "filename": "rtk-lesson-43.json",
+      "name": "RTK Lesson 43",
+      "cardCount": 109,
+      "lesson": 43
+    },
+    {
+      "filename": "rtk-lesson-44.json",
+      "name": "RTK Lesson 44",
+      "cardCount": 68,
+      "lesson": 44
+    },
+    {
+      "filename": "rtk-lesson-45.json",
+      "name": "RTK Lesson 45",
+      "cardCount": 147,
+      "lesson": 45
+    },
+    {
+      "filename": "rtk-lesson-46.json",
+      "name": "RTK Lesson 46",
+      "cardCount": 72,
+      "lesson": 46
+    },
+    {
+      "filename": "rtk-lesson-47.json",
+      "name": "RTK Lesson 47",
+      "cardCount": 82,
+      "lesson": 47
+    },
+    {
+      "filename": "rtk-lesson-48.json",
+      "name": "RTK Lesson 48",
+      "cardCount": 88,
+      "lesson": 48
+    },
+    {
+      "filename": "rtk-lesson-49.json",
+      "name": "RTK Lesson 49",
+      "cardCount": 79,
+      "lesson": 49
+    },
+    {
+      "filename": "rtk-lesson-50.json",
+      "name": "RTK Lesson 50",
+      "cardCount": 44,
+      "lesson": 50
+    },
+    {
+      "filename": "rtk-lesson-51.json",
+      "name": "RTK Lesson 51",
+      "cardCount": 136,
+      "lesson": 51
+    },
+    {
+      "filename": "rtk-lesson-52.json",
+      "name": "RTK Lesson 52",
+      "cardCount": 78,
+      "lesson": 52
+    },
+    {
+      "filename": "rtk-lesson-53.json",
+      "name": "RTK Lesson 53",
+      "cardCount": 101,
+      "lesson": 53
+    },
+    {
+      "filename": "rtk-lesson-54.json",
+      "name": "RTK Lesson 54",
+      "cardCount": 55,
+      "lesson": 54
+    },
+    {
+      "filename": "rtk-lesson-55.json",
+      "name": "RTK Lesson 55",
+      "cardCount": 53,
+      "lesson": 55
+    },
+    {
+      "filename": "rtk-lesson-56.json",
+      "name": "RTK Lesson 56",
+      "cardCount": 1,
+      "lesson": 56
+    }
+  ]
+}

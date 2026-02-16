@@ -1,0 +1,1027 @@
+{
+  "name": "RTK Lesson 15",
+  "description": "RTK Lesson 15 - 60 cards",
+  "lesson": 15,
+  "cards": [
+    {
+      "id": "rtk_l15f0121",
+      "rank": "8",
+      "suit": "diamonds",
+      "kanji": "大学",
+      "hiragana": "だいがく",
+      "romaji": "daigaku",
+      "english": "university, college",
+      "rhyme": "Remember this word you see, it's daigaku",
+      "sentence": {
+        "kanji": "大学に行ってもっと勉強したいです。",
+        "romaji": "daigaku ni ite moto benkyou shitai desu",
+        "english": "I want to go to college and study more."
+      },
+      "rtkLesson": 15,
+      "rtkFrame": 121
+    },
+    {
+      "id": "rtk_l15f0137",
+      "rank": "9",
+      "suit": "clubs",
+      "kanji": "時計",
+      "hiragana": "とけい",
+      "romaji": "tokei",
+      "english": "clock, watch",
+      "rhyme": "Remember this word you see, it's tokei",
+      "sentence": {
+        "kanji": "時計を見たらちょうど3時だった。",
+        "romaji": "tokei wo mitara choudo sanji data",
+        "english": "I looked at the clock and it was exactly three."
+      },
+      "rtkLesson": 15,
+      "rtkFrame": 137
+    },
+    {
+      "id": "rtk_l15f0173",
+      "rank": "10",
+      "suit": "spades",
+      "kanji": "書き直す",
+      "hiragana": "かきなおす",
+      "romaji": "kakinaosu",
+      "english": "rewrite",
+      "rhyme": "Remember this word you see, it's kakinaosu",
+      "sentence": {
+        "kanji": "この書類を書き直してください。",
+        "romaji": "kono shorui wo kakinaoshite kudasai",
+        "english": "Please rewrite this document."
+      },
+      "rtkLesson": 15,
+      "rtkFrame": 173
+    },
+    {
+      "id": "rtk_l15f0193",
+      "rank": "4",
+      "suit": "diamonds",
+      "kanji": "話す",
+      "hiragana": "はなす",
+      "romaji": "hanasu",
+      "english": "speak, tell",
+      "rhyme": "Remember this word you see, it's hanasu",
+      "sentence": {
+        "kanji": "母と電話で話しました。",
+        "romaji": "haha to denwa de hanashimashita",
+        "english": "I spoke to my mother on the phone."
+      },
+      "rtkLesson": 15,
+      "rtkFrame": 193
+    },
+    {
+      "id": "rtk_l15f0226",
+      "rank": "6",
+      "suit": "spades",
+      "kanji": "書く",
+      "hiragana": "かく",
+      "romaji": "kaku",
+      "english": "write",
+      "rhyme": "Remember this word you see, it's kaku",
+      "sentence": {
+        "kanji": "彼に手紙を書きました。",
+        "romaji": "kare ni tegami wo kakimashita",
+        "english": "I wrote him a letter."
+      },
+      "rtkLesson": 15,
+      "rtkFrame": 226
+    },
+    {
+      "id": "rtk_l15f0232",
+      "rank": "5",
+      "suit": "clubs",
+      "kanji": "読む",
+      "hiragana": "よむ",
+      "romaji": "yomu",
+      "english": "read",
+      "rhyme": "Remember this word you see, it's yomu",
+      "sentence": {
+        "kanji": "彼女は雑誌を読んでいます。",
+        "romaji": "kanojo ha zashi wo yonde imasu",
+        "english": "She's reading the magazine."
+      },
+      "rtkLesson": 15,
+      "rtkFrame": 232
+    },
+    {
+      "id": "rtk_l15f0334",
+      "rank": "11",
+      "suit": "hearts",
+      "kanji": "言葉",
+      "hiragana": "ことば",
+      "romaji": "kotoba",
+      "english": "word, language",
+      "rhyme": "Remember this word you see, it's kotoba",
+      "sentence": {
+        "kanji": "この言葉の意味が分かりません。",
+        "romaji": "kono kotoba no imi ga wakarimasen",
+        "english": "I don't understand the meaning of this word."
+      },
+      "rtkLesson": 15,
+      "rtkFrame": 334
+    },
+    {
+      "id": "rtk_l15f0344",
+      "rank": "7",
+      "suit": "hearts",
+      "kanji": "覚える",
+      "hiragana": "おぼえる",
+      "romaji": "oboeru",
+      "english": "memorize, learn",
+      "rhyme": "Remember this word you see, it's oboeru",
+      "sentence": {
+        "kanji": "妹は平仮名を全部覚えました。",
+        "romaji": "imouto ha hiragana wo zenbu oboemashita",
+        "english": "My little sister learned all the hiragana."
+      },
+      "rtkLesson": 15,
+      "rtkFrame": 344
+    },
+    {
+      "id": "rtk_l15f0350",
+      "rank": "3",
+      "suit": "hearts",
+      "kanji": "言う",
+      "hiragana": "いう",
+      "romaji": "iu",
+      "english": "say, tell",
+      "rhyme": "Remember this word you see, it's iu",
+      "sentence": {
+        "kanji": "上司が「一杯、飲もう。」と言った。",
+        "romaji": "joushi ga ipai nomou to ita",
+        "english": "My boss said: \"Let's have a drink.\""
+      },
+      "rtkLesson": 15,
+      "rtkFrame": 350
+    },
+    {
+      "id": "rtk_l15f0499",
+      "rank": "1",
+      "suit": "spades",
+      "kanji": "語る",
+      "hiragana": "かたる",
+      "romaji": "kataru",
+      "english": "tell, talk",
+      "rhyme": "Remember this word you see, it's kataru",
+      "sentence": {
+        "kanji": "今夜は大いに語りましょう。",
+        "romaji": "konya ha ooini katarimashou",
+        "english": "Let's talk about everything tonight."
+      },
+      "rtkLesson": 15,
+      "rtkFrame": 499
+    },
+    {
+      "id": "rtk_l15f0504",
+      "rank": "3",
+      "suit": "diamonds",
+      "kanji": "覚める",
+      "hiragana": "さめる",
+      "romaji": "sameru",
+      "english": "awake, wake up",
+      "rhyme": "Remember this word you see, it's sameru",
+      "sentence": {
+        "kanji": "今朝は6時に目が覚めた。",
+        "romaji": "kesa ha rokuji ni me ga sameta",
+        "english": "I woke up at six o'clock this morning."
+      },
+      "rtkLesson": 15,
+      "rtkFrame": 504
+    },
+    {
+      "id": "rtk_l15f0505",
+      "rank": "4",
+      "suit": "clubs",
+      "kanji": "覚ます",
+      "hiragana": "さます",
+      "romaji": "samasu",
+      "english": "awaken, wake up",
+      "rhyme": "Remember this word you see, it's samasu",
+      "sentence": {
+        "kanji": "子供が目を覚ました。",
+        "romaji": "kodomo ga me wo samashita",
+        "english": "The child woke up."
+      },
+      "rtkLesson": 15,
+      "rtkFrame": 505
+    },
+    {
+      "id": "rtk_l15f0508",
+      "rank": "5",
+      "suit": "spades",
+      "kanji": "話し合う",
+      "hiragana": "はなしあう",
+      "romaji": "hanashiau",
+      "english": "discuss, talk over",
+      "rhyme": "Remember this word you see, it's hanashiau",
+      "sentence": {
+        "kanji": "私たちはよく話し合いました。",
+        "romaji": "watashitachi ha yoku hanashiaimashita",
+        "english": "We often talked to each other."
+      },
+      "rtkLesson": 15,
+      "rtkFrame": 508
+    },
+    {
+      "id": "rtk_l15f0670",
+      "rank": "7",
+      "suit": "diamonds",
+      "kanji": "見学",
+      "hiragana": "けんがく",
+      "romaji": "kengaku",
+      "english": "observation tour, study tour, field trip",
+      "rhyme": "Remember this word you see, it's kengaku",
+      "sentence": {
+        "kanji": "今日、工場の見学に行きました。",
+        "romaji": "kyou koujou no kengaku ni ikimashita",
+        "english": "We went on a field trip to a factory today."
+      },
+      "rtkLesson": 15,
+      "rtkFrame": 670
+    },
+    {
+      "id": "rtk_l15f0832",
+      "rank": "12",
+      "suit": "diamonds",
+      "kanji": "話",
+      "hiragana": "はなし",
+      "romaji": "hanashi",
+      "english": "talk, story",
+      "rhyme": "Remember this word you see, it's hanashi",
+      "sentence": {
+        "kanji": "あなたの話は面白いね。",
+        "romaji": "anata no hanashi ha omoshiroi ne",
+        "english": "Your story's interesting."
+      },
+      "rtkLesson": 15,
+      "rtkFrame": 832
+    },
+    {
+      "id": "rtk_l15f0901",
+      "rank": "13",
+      "suit": "clubs",
+      "kanji": "読み",
+      "hiragana": "よみ",
+      "romaji": "yomi",
+      "english": "reading, judgment, foresight",
+      "rhyme": "Remember this word you see, it's yomi",
+      "sentence": {
+        "kanji": "母に読み書きを習いました。",
+        "romaji": "haha ni yomikaki wo naraimashita",
+        "english": "I learned reading and writing from my mother."
+      },
+      "rtkLesson": 15,
+      "rtkFrame": 901
+    },
+    {
+      "id": "rtk_l15f0935",
+      "rank": "6",
+      "suit": "hearts",
+      "kanji": "中学",
+      "hiragana": "ちゅうがく",
+      "romaji": "chuugaku",
+      "english": "junior high school",
+      "rhyme": "Remember this word you see, it's chuugaku",
+      "sentence": {
+        "kanji": "息子は中学に通っています。",
+        "romaji": "musuko ha chuugaku ni kayote imasu",
+        "english": "My son goes to junior high."
+      },
+      "rtkLesson": 15,
+      "rtkFrame": 935
+    },
+    {
+      "id": "rtk_l15f0955",
+      "rank": "2",
+      "suit": "hearts",
+      "kanji": "言語",
+      "hiragana": "げんご",
+      "romaji": "gengo",
+      "english": "language, speech",
+      "rhyme": "Remember this word you see, it's gengo",
+      "sentence": {
+        "kanji": "彼はアジアの言語を研究している。",
+        "romaji": "kare ha ajia no gengo wo kenkyuu shite iru",
+        "english": "He's doing research in Asian languages."
+      },
+      "rtkLesson": 15,
+      "rtkFrame": 955
+    },
+    {
+      "id": "rtk_l15f1168",
+      "rank": "10",
+      "suit": "hearts",
+      "kanji": "相談",
+      "hiragana": "そうだん",
+      "romaji": "soudan",
+      "english": "consultation, advice",
+      "rhyme": "Remember this word you see, it's soudan",
+      "sentence": {
+        "kanji": "相談したいことがあります。",
+        "romaji": "soudan shitai koto ga arimasu",
+        "english": "I'd like to get your advice on something."
+      },
+      "rtkLesson": 15,
+      "rtkFrame": 1168
+    },
+    {
+      "id": "rtk_l15f1207",
+      "rank": "9",
+      "suit": "spades",
+      "kanji": "調べる",
+      "hiragana": "しらべる",
+      "romaji": "shiraberu",
+      "english": "investigate, check",
+      "rhyme": "Remember this word you see, it's shiraberu",
+      "sentence": {
+        "kanji": "この単語の意味を辞書で調べましょう。",
+        "romaji": "kono tango no imi wo jisho de shirabemashou",
+        "english": "Let's look up the meaning of this word in the dictionary."
+      },
+      "rtkLesson": 15,
+      "rtkFrame": 1207
+    },
+    {
+      "id": "rtk_l15f1595",
+      "rank": "11",
+      "suit": "diamonds",
+      "kanji": "葉書",
+      "hiragana": "はがき",
+      "romaji": "hagaki",
+      "english": "postcard",
+      "rhyme": "Remember this word you see, it's hagaki",
+      "sentence": {
+        "kanji": "家族に葉書を書いています。",
+        "romaji": "kazoku ni hagaki wo kaiteimasu 。",
+        "english": "I wrote a postcard to my family."
+      },
+      "rtkLesson": 15,
+      "rtkFrame": 1595
+    },
+    {
+      "id": "rtk_l15f1663",
+      "rank": "8",
+      "suit": "clubs",
+      "kanji": "目覚まし時計",
+      "hiragana": "めざましどけい",
+      "romaji": "mezamashidokei",
+      "english": "alarm clock",
+      "rhyme": "Remember this word you see, it's mezamashidokei",
+      "sentence": {
+        "kanji": "7時に目覚まし時計が鳴りました。",
+        "romaji": "shichiji ni mezamashidokei ga narimashita",
+        "english": "The alarm clock went off at seven o'clock."
+      },
+      "rtkLesson": 15,
+      "rtkFrame": 1663
+    },
+    {
+      "id": "rtk_l15f1849",
+      "rank": "12",
+      "suit": "clubs",
+      "kanji": "冗談",
+      "hiragana": "じょうだん",
+      "romaji": "joudan",
+      "english": "joke",
+      "rhyme": "Remember this word you see, it's joudan",
+      "sentence": {
+        "kanji": "冗談は止めてください。",
+        "romaji": "joudan ha yamete kudasai",
+        "english": "Please stop joking."
+      },
+      "rtkLesson": 15,
+      "rtkFrame": 1849
+    },
+    {
+      "id": "rtk_l15f1890",
+      "rank": "13",
+      "suit": "spades",
+      "kanji": "敬語",
+      "hiragana": "けいご",
+      "romaji": "keigo",
+      "english": "honorific language, polite speech",
+      "rhyme": "Remember this word you see, it's keigo",
+      "sentence": {
+        "kanji": "お客様には敬語を使いなさい。",
+        "romaji": "okyakusama ni ha keigo wo tsukainasai",
+        "english": "Use polite language to customers."
+      },
+      "rtkLesson": 15,
+      "rtkFrame": 1890
+    },
+    {
+      "id": "rtk_l15f2091",
+      "rank": "1",
+      "suit": "clubs",
+      "kanji": "見覚え",
+      "hiragana": "みおぼえ",
+      "romaji": "mioboe",
+      "english": "recognition, remembrance",
+      "rhyme": "Remember this word you see, it's mioboe",
+      "sentence": {
+        "kanji": "この人に見覚えがありますか。",
+        "romaji": "kono hito ni mioboe ga arimasu ka",
+        "english": "Do you remember seeing this person?"
+      },
+      "rtkLesson": 15,
+      "rtkFrame": 2091
+    },
+    {
+      "id": "rtk_l15f2092",
+      "rank": "2",
+      "suit": "spades",
+      "kanji": "目覚まし",
+      "hiragana": "めざまし",
+      "romaji": "mezamashi",
+      "english": "waking up",
+      "rhyme": "Remember this word you see, it's mezamashi",
+      "sentence": {
+        "kanji": "目覚ましにコーヒーを飲んだの。",
+        "romaji": "mezamashi ni ko-hi- wo nonda no",
+        "english": "I drank coffee to wake up."
+      },
+      "rtkLesson": 15,
+      "rtkFrame": 2092
+    },
+    {
+      "id": "rtk_l15f2093",
+      "rank": "3",
+      "suit": "hearts",
+      "kanji": "話し合い",
+      "hiragana": "はなしあい",
+      "romaji": "hanashiai",
+      "english": "talk, discussion",
+      "rhyme": "Remember this word you see, it's hanashiai",
+      "sentence": {
+        "kanji": "プロジェクトメンバーと話し合いをしたの。",
+        "romaji": "purojiekuto menba- to hanashiai wo shita no",
+        "english": "I had a discussion with the project members."
+      },
+      "rtkLesson": 15,
+      "rtkFrame": 2093
+    },
+    {
+      "id": "rtk_l15f2313",
+      "rank": "6",
+      "suit": "diamonds",
+      "kanji": "語学",
+      "hiragana": "ごがく",
+      "romaji": "gogaku",
+      "english": "language study",
+      "rhyme": "Remember this word you see, it's gogaku",
+      "sentence": {
+        "kanji": "海外で語学の勉強をします。",
+        "romaji": "kaigai de gogaku no benkyou wo shimasu",
+        "english": "I will study a language abroad."
+      },
+      "rtkLesson": 15,
+      "rtkFrame": 2313
+    },
+    {
+      "id": "rtk_l15f2391",
+      "rank": "5",
+      "suit": "clubs",
+      "kanji": "計る",
+      "hiragana": "はかる",
+      "romaji": "hakaru",
+      "english": "compute, measure",
+      "rhyme": "Remember this word you see, it's hakaru",
+      "sentence": {
+        "kanji": "100メートル走のタイムを計ったんだ。",
+        "romaji": "100 me-torusou no taimu wo hakata n da",
+        "english": "I timed the 100m race."
+      },
+      "rtkLesson": 15,
+      "rtkFrame": 2391
+    },
+    {
+      "id": "rtk_l15f2392",
+      "rank": "8",
+      "suit": "spades",
+      "kanji": "合計",
+      "hiragana": "ごうけい",
+      "romaji": "goukei",
+      "english": "sum total",
+      "rhyme": "Remember this word you see, it's goukei",
+      "sentence": {
+        "kanji": "合計金額を計算してください。",
+        "romaji": "goukei kingaku wo keisan shite kudasai",
+        "english": "Please calculate the total amount of money."
+      },
+      "rtkLesson": 15,
+      "rtkFrame": 2392
+    },
+    {
+      "id": "rtk_l15f2443",
+      "rank": "7",
+      "suit": "clubs",
+      "kanji": "計",
+      "hiragana": "けい",
+      "romaji": "kei",
+      "english": "total",
+      "rhyme": "Remember this word you see, it's kei",
+      "sentence": {
+        "kanji": "3人分の代金は計6000円です。",
+        "romaji": "sanninbun no daikin ha kei rokusenen desu",
+        "english": "The cost for three people is 6000 yen in total."
+      },
+      "rtkLesson": 15,
+      "rtkFrame": 2443
+    },
+    {
+      "id": "rtk_l15f2521",
+      "rank": "2",
+      "suit": "diamonds",
+      "kanji": "覚え",
+      "hiragana": "おぼえ",
+      "romaji": "oboe",
+      "english": "recollection, memory",
+      "rhyme": "Remember this word you see, it's oboe",
+      "sentence": {
+        "kanji": "この子は覚えが早いね。",
+        "romaji": "kono ko ha oboe ga hayai ne",
+        "english": "This kid remembers things quickly."
+      },
+      "rtkLesson": 15,
+      "rtkFrame": 2521
+    },
+    {
+      "id": "rtk_l15f2717",
+      "rank": "12",
+      "suit": "hearts",
+      "kanji": "読み書き",
+      "hiragana": "よみかき",
+      "romaji": "yomikaki",
+      "english": "reading and writing",
+      "rhyme": "Remember this word you see, it's yomikaki",
+      "sentence": {
+        "kanji": "息子は学校で読み書きを勉強しています。",
+        "romaji": "musuko ha gakou de yomikaki wo benkyou shite imasu",
+        "english": "My son studies reading and writing at school."
+      },
+      "rtkLesson": 15,
+      "rtkFrame": 2717
+    },
+    {
+      "id": "rtk_l15f2763",
+      "rank": "5",
+      "suit": "hearts",
+      "kanji": "工学",
+      "hiragana": "こうがく",
+      "romaji": "kougaku",
+      "english": "engineering",
+      "rhyme": "Remember this word you see, it's kougaku",
+      "sentence": {
+        "kanji": "彼は大学で工学を勉強しました。",
+        "romaji": "kare ha daigaku de kougaku wo benkyou shimashita",
+        "english": "He studied engineering in college."
+      },
+      "rtkLesson": 15,
+      "rtkFrame": 2763
+    },
+    {
+      "id": "rtk_l15f3028",
+      "rank": "1",
+      "suit": "hearts",
+      "kanji": "下書き",
+      "hiragana": "したがき",
+      "romaji": "shitagaki",
+      "english": "draft",
+      "rhyme": "Remember this word you see, it's shitagaki",
+      "sentence": {
+        "kanji": "今、論文の下書きをしているところです。",
+        "romaji": "ima ronbun no shitagaki wo shite iru tokoro desu",
+        "english": "I am in the middle of the thesis draft now."
+      },
+      "rtkLesson": 15,
+      "rtkFrame": 3028
+    },
+    {
+      "id": "rtk_l15f3265",
+      "rank": "9",
+      "suit": "hearts",
+      "kanji": "願書",
+      "hiragana": "がんしょ",
+      "romaji": "gansho",
+      "english": "application form",
+      "rhyme": "Remember this word you see, it's gansho",
+      "sentence": {
+        "kanji": "今日大学に願書を送りました。",
+        "romaji": "kyou daigaku ni gansho wo okurimashita",
+        "english": "Today I sent an application form to the college."
+      },
+      "rtkLesson": 15,
+      "rtkFrame": 3265
+    },
+    {
+      "id": "rtk_l15f3269",
+      "rank": "10",
+      "suit": "clubs",
+      "kanji": "一言",
+      "hiragana": "ひとこと",
+      "romaji": "hitokoto",
+      "english": "single word",
+      "rhyme": "Remember this word you see, it's hitokoto",
+      "sentence": {
+        "kanji": "社長に一言お願いしたの。",
+        "romaji": "shachou ni hitokoto onegai shita no",
+        "english": "I asked the president to deliver a brief speech."
+      },
+      "rtkLesson": 15,
+      "rtkFrame": 3269
+    },
+    {
+      "id": "rtk_l15f3292",
+      "rank": "11",
+      "suit": "clubs",
+      "kanji": "好調",
+      "hiragana": "こうちょう",
+      "romaji": "kouchou",
+      "english": "favorable condition",
+      "rhyme": "Remember this word you see, it's kouchou",
+      "sentence": {
+        "kanji": "今月はエアコンの売り上げが好調です。",
+        "romaji": "kongetsu ha eakon no uriage ga kouchou desu",
+        "english": "Sales of air conditioners are good this month."
+      },
+      "rtkLesson": 15,
+      "rtkFrame": 3292
+    },
+    {
+      "id": "rtk_l15f3293",
+      "rank": "12",
+      "suit": "spades",
+      "kanji": "下調べ",
+      "hiragana": "したしらべ",
+      "romaji": "shitashirabe",
+      "english": "preliminary investigation, preparation",
+      "rhyme": "Remember this word you see, it's shitashirabe",
+      "sentence": {
+        "kanji": "まず第一に、しっかり下調べをしなさい。",
+        "romaji": "mazu daiichi ni shikari shitashirabe wo shinasai",
+        "english": "First of all, be sure to make a careful preliminary investigation."
+      },
+      "rtkLesson": 15,
+      "rtkFrame": 3293
+    },
+    {
+      "id": "rtk_l15f3296",
+      "rank": "7",
+      "suit": "hearts",
+      "kanji": "調子",
+      "hiragana": "ちょうし",
+      "romaji": "choushi",
+      "english": "tone, condition",
+      "rhyme": "Remember this word you see, it's choushi",
+      "sentence": {
+        "kanji": "体の調子がとても良いです。",
+        "romaji": "karada no choushi ga totemo ii desu",
+        "english": "I'm in good physical condition."
+      },
+      "rtkLesson": 15,
+      "rtkFrame": 3296
+    },
+    {
+      "id": "rtk_l15f3659",
+      "rank": "6",
+      "suit": "spades",
+      "kanji": "敗れる",
+      "hiragana": "やぶれる",
+      "romaji": "yabureru",
+      "english": "be defeated, be beaten",
+      "rhyme": "Remember this word you see, it's yabureru",
+      "sentence": {
+        "kanji": "私のチームは1回戦で敗れたよ。",
+        "romaji": "watashi no chi-mu ha 1 kaisen de yabureta yo",
+        "english": "My team lost in the first round."
+      },
+      "rtkLesson": 15,
+      "rtkFrame": 3659
+    },
+    {
+      "id": "rtk_l15f3982",
+      "rank": "11",
+      "suit": "spades",
+      "kanji": "読書",
+      "hiragana": "どくしょ",
+      "romaji": "dokusho",
+      "english": "reading a book",
+      "rhyme": "Remember this word you see, it's dokusho",
+      "sentence": {
+        "kanji": "私の趣味は読書です。",
+        "romaji": "watashi no shumi ha dokusho desu",
+        "english": "My hobby is reading."
+      },
+      "rtkLesson": 15,
+      "rtkFrame": 3982
+    },
+    {
+      "id": "rtk_l15f4089",
+      "rank": "1",
+      "suit": "diamonds",
+      "kanji": "順調",
+      "hiragana": "じゅんちょう",
+      "romaji": "junchou",
+      "english": "favorable condition, smooth progress",
+      "rhyme": "Remember this word you see, it's junchou",
+      "sentence": {
+        "kanji": "進み具合は全て順調です。",
+        "romaji": "susumi guai ha subete junchou desu",
+        "english": "It is all progressing well."
+      },
+      "rtkLesson": 15,
+      "rtkFrame": 4089
+    },
+    {
+      "id": "rtk_l15f4146",
+      "rank": "2",
+      "suit": "clubs",
+      "kanji": "栄える",
+      "hiragana": "さかえる",
+      "romaji": "sakaeru",
+      "english": "flourish, thrive",
+      "rhyme": "Remember this word you see, it's sakaeru",
+      "sentence": {
+        "kanji": "ここはかつてゴールドラッシュで栄えた町だよ。",
+        "romaji": "koko ha katsute go-rudo rashu de sakaeta machi da yo",
+        "english": "This town once prospered during the Gold Rush."
+      },
+      "rtkLesson": 15,
+      "rtkFrame": 4146
+    },
+    {
+      "id": "rtk_l15f4288",
+      "rank": "10",
+      "suit": "diamonds",
+      "kanji": "調べ",
+      "hiragana": "しらべ",
+      "romaji": "shirabe",
+      "english": "investigation, inquiry",
+      "rhyme": "Remember this word you see, it's shirabe",
+      "sentence": {
+        "kanji": "警察の調べで女性の身元がわかりました。",
+        "romaji": "keisatsu no shirabe de josei no mimoto ga wakarimashita",
+        "english": "An investigation by the police uncovered the woman's identity."
+      },
+      "rtkLesson": 15,
+      "rtkFrame": 4288
+    },
+    {
+      "id": "rtk_l15f4552",
+      "rank": "3",
+      "suit": "spades",
+      "kanji": "書き言葉",
+      "hiragana": "かきことば",
+      "romaji": "kakikotoba",
+      "english": "written language",
+      "rhyme": "Remember this word you see, it's kakikotoba",
+      "sentence": {
+        "kanji": "書き言葉と話し言葉はだいぶ違うことがあります。",
+        "romaji": "kakikotoba to hanashikotoba ha daibu chigau koto ga arimasu",
+        "english": "Written language and spoken language are sometimes quite different."
+      },
+      "rtkLesson": 15,
+      "rtkFrame": 4552
+    },
+    {
+      "id": "rtk_l15f4557",
+      "rank": "8",
+      "suit": "diamonds",
+      "kanji": "話し言葉",
+      "hiragana": "はなしことば",
+      "romaji": "hanashikotoba",
+      "english": "spoken language",
+      "rhyme": "Remember this word you see, it's hanashikotoba",
+      "sentence": {
+        "kanji": "話し言葉と書き言葉は少し違いますね。",
+        "romaji": "hanashikotoba to kakikotoba ha sukoshi chigaimasu ne",
+        "english": "The spoken and written language are a little different."
+      },
+      "rtkLesson": 15,
+      "rtkFrame": 4557
+    },
+    {
+      "id": "rtk_l15f4740",
+      "rank": "4",
+      "suit": "hearts",
+      "kanji": "訓読み",
+      "hiragana": "くんよみ",
+      "romaji": "kunyomi",
+      "english": "Japanese pronunciation",
+      "rhyme": "Remember this word you see, it's kunyomi",
+      "sentence": {
+        "kanji": "漢字には音読みと訓読みがあります。",
+        "romaji": "kanji ni ha onyomi to kunyomi ga arimasu",
+        "english": "Every kanji has both Chinese-derived and Japanese pronunciations."
+      },
+      "rtkLesson": 15,
+      "rtkFrame": 4740
+    },
+    {
+      "id": "rtk_l15f4741",
+      "rank": "5",
+      "suit": "diamonds",
+      "kanji": "訓",
+      "hiragana": "くん",
+      "romaji": "kun",
+      "english": "Japanese reading of kanji",
+      "rhyme": "Remember this word you see, it's kun",
+      "sentence": {
+        "kanji": "漢字の読み方には、音と訓の2通りがあるの。",
+        "romaji": "kanji no yomikata ni ha on to kun no futatoori ga aru no",
+        "english": "There are two ways to pronounce kanji: the Chinese-derived reading and the Japanese reading."
+      },
+      "rtkLesson": 15,
+      "rtkFrame": 4741
+    },
+    {
+      "id": "rtk_l15f4808",
+      "rank": "4",
+      "suit": "spades",
+      "kanji": "世話",
+      "hiragana": "せわ",
+      "romaji": "sewa",
+      "english": "take care of, provide service",
+      "rhyme": "Remember this word you see, it's sewa",
+      "sentence": {
+        "kanji": "旅行の間、犬の世話をしてください。",
+        "romaji": "ryokou no aida inu no sewa wo shite kudasai",
+        "english": "Please take care of the dog while we're on our trip."
+      },
+      "rtkLesson": 15,
+      "rtkFrame": 4808
+    },
+    {
+      "id": "rtk_l15f4816",
+      "rank": "13",
+      "suit": "hearts",
+      "kanji": "警告",
+      "hiragana": "けいこく",
+      "romaji": "keikoku",
+      "english": "warning, admonition",
+      "rhyme": "Remember this word you see, it's keikoku",
+      "sentence": {
+        "kanji": "車に駐車違反の警告を貼られました。",
+        "romaji": "kuruma ni chuusha ihan no keikoku wo hararemashita",
+        "english": "A parking ticket was stuck on the car."
+      },
+      "rtkLesson": 15,
+      "rtkFrame": 4816
+    },
+    {
+      "id": "rtk_l15f4930",
+      "rank": "6",
+      "suit": "clubs",
+      "kanji": "専攻",
+      "hiragana": "せんこう",
+      "romaji": "senkou",
+      "english": "major, specialization",
+      "rhyme": "Remember this word you see, it's senkou",
+      "sentence": {
+        "kanji": "大学では物理を専攻していました。",
+        "romaji": "daigaku de ha butsuri wo senkou shite imashita",
+        "english": "I majored in physics at university."
+      },
+      "rtkLesson": 15,
+      "rtkFrame": 4930
+    },
+    {
+      "id": "rtk_l15f4931",
+      "rank": "7",
+      "suit": "spades",
+      "kanji": "攻める",
+      "hiragana": "せめる",
+      "romaji": "semeru",
+      "english": "attack, take the offensive",
+      "rhyme": "Remember this word you see, it's semeru",
+      "sentence": {
+        "kanji": "彼は積極的に攻めたが勝てなかったな。",
+        "romaji": "kare ha sekyokuteki ni semeta ga katenakata na",
+        "english": "He didn't win although he put up a good attack."
+      },
+      "rtkLesson": 15,
+      "rtkFrame": 4931
+    },
+    {
+      "id": "rtk_l15f4990",
+      "rank": "3",
+      "suit": "clubs",
+      "kanji": "書道",
+      "hiragana": "しょどう",
+      "romaji": "shodou",
+      "english": "Japanese calligraphy",
+      "rhyme": "Remember this word you see, it's shodou",
+      "sentence": {
+        "kanji": "書道をすると姿勢も良くなります。",
+        "romaji": "shodou wo suru to shisei mo yoku narimasu",
+        "english": "Posture also improves when you study calligraphy."
+      },
+      "rtkLesson": 15,
+      "rtkFrame": 4990
+    },
+    {
+      "id": "rtk_l15f5039",
+      "rank": "8",
+      "suit": "hearts",
+      "kanji": "詩",
+      "hiragana": "し",
+      "romaji": "shi",
+      "english": "poetry",
+      "rhyme": "Remember this word you see, it's shi",
+      "sentence": {
+        "kanji": "彼女の詩は世界中で有名になったんだ。",
+        "romaji": "kanojo no shi ha sekaijuu de yuumei ni nata n da",
+        "english": "Her poetry became famous all over the world."
+      },
+      "rtkLesson": 15,
+      "rtkFrame": 5039
+    },
+    {
+      "id": "rtk_l15f5043",
+      "rank": "9",
+      "suit": "clubs",
+      "kanji": "詰める",
+      "hiragana": "つめる",
+      "romaji": "tsumeru",
+      "english": "stuff, fill",
+      "rhyme": "Remember this word you see, it's tsumeru",
+      "sentence": {
+        "kanji": "かばんに荷物を詰めました。",
+        "romaji": "kaban ni nimotsu wo tsumemashita",
+        "english": "I packed my things into the bag."
+      },
+      "rtkLesson": 15,
+      "rtkFrame": 5043
+    },
+    {
+      "id": "rtk_l15f5044",
+      "rank": "10",
+      "suit": "spades",
+      "kanji": "詰まる",
+      "hiragana": "つまる",
+      "romaji": "tsumaru",
+      "english": "be stuffed, be stopped up",
+      "rhyme": "Remember this word you see, it's tsumaru",
+      "sentence": {
+        "kanji": "プリンタのインクが詰まってしまいました。",
+        "romaji": "purinta no inku ga tsumate shimaimashita",
+        "english": "The printer's ink got blocked up."
+      },
+      "rtkLesson": 15,
+      "rtkFrame": 5044
+    },
+    {
+      "id": "rtk_l15f5427",
+      "rank": "13",
+      "suit": "diamonds",
+      "kanji": "目覚ましい",
+      "hiragana": "めざましい",
+      "romaji": "mezamashii",
+      "english": "striking, marvelous",
+      "rhyme": "Remember this word you see, it's mezamashii",
+      "sentence": {
+        "kanji": "あの国は目覚ましい発展を遂げたの。",
+        "romaji": "ano kuni ha mezamashii haten wo togeta no",
+        "english": "That country accomplished remarkable development."
+      },
+      "rtkLesson": 15,
+      "rtkFrame": 5427
+    },
+    {
+      "id": "rtk_l15f5645",
+      "rank": "9",
+      "suit": "diamonds",
+      "kanji": "敬う",
+      "hiragana": "うやまう",
+      "romaji": "uyamau",
+      "english": "respect, honor",
+      "rhyme": "Remember this word you see, it's uyamau",
+      "sentence": {
+        "kanji": "両親を敬うことは大切です。",
+        "romaji": "ryoushin wo uyamau koto ha taisetsu desu",
+        "english": "It is important to respect your parents."
+      },
+      "rtkLesson": 15,
+      "rtkFrame": 5645
+    },
+    {
+      "id": "rtk_l15f5777",
+      "rank": "4",
+      "suit": "diamonds",
+      "kanji": "学ぶ",
+      "hiragana": "まなぶ",
+      "romaji": "manabu",
+      "english": "learn, study",
+      "rhyme": "Remember this word you see, it's manabu",
+      "sentence": {
+        "kanji": "私は哲学を学んでいます。",
+        "romaji": "watashi ha tetsugaku wo manande imasu",
+        "english": "I study philosophy."
+      },
+      "rtkLesson": 15,
+      "rtkFrame": 5777
+    }
+  ]
+}

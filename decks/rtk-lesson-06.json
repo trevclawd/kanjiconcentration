@@ -1,0 +1,228 @@
+{
+  "name": "RTK Lesson 6",
+  "description": "RTK Lesson 6 - 13 cards",
+  "lesson": 6,
+  "cards": [
+    {
+      "id": "rtk_l06f0025",
+      "rank": "9",
+      "suit": "clubs",
+      "kanji": "好き",
+      "hiragana": "すき",
+      "romaji": "suki",
+      "english": "favorite, liked",
+      "rhyme": "Remember this word you see, it's suki",
+      "sentence": {
+        "kanji": "私はワインが好きです。",
+        "romaji": "watashi ha wain ga suki desu",
+        "english": "I like wine."
+      },
+      "rtkLesson": 6,
+      "rtkFrame": 25
+    },
+    {
+      "id": "rtk_l06f0194",
+      "rank": "11",
+      "suit": "hearts",
+      "kanji": "母",
+      "hiragana": "はは",
+      "romaji": "haha",
+      "english": "(speaker's)mother",
+      "rhyme": "Remember this word you see, it's haha",
+      "sentence": {
+        "kanji": "昨日、母と話をしました。",
+        "romaji": "kinou haha to hanashi wo shimashita",
+        "english": "I talked to my mother yesterday."
+      },
+      "rtkLesson": 6,
+      "rtkFrame": 194
+    },
+    {
+      "id": "rtk_l06f0201",
+      "rank": "13",
+      "suit": "clubs",
+      "kanji": "お兄さん",
+      "hiragana": "おにいさん",
+      "romaji": "oniisan",
+      "english": "older brother",
+      "rhyme": "Remember this word you see, it's oniisan",
+      "sentence": {
+        "kanji": "あなたのお兄さんは何歳?",
+        "romaji": "anata no oniisan ha nansai",
+        "english": "How old's your big brother?"
+      },
+      "rtkLesson": 6,
+      "rtkFrame": 201
+    },
+    {
+      "id": "rtk_l06f0208",
+      "rank": "8",
+      "suit": "diamonds",
+      "kanji": "女",
+      "hiragana": "おんな",
+      "romaji": "onna",
+      "english": "woman, girl",
+      "rhyme": "Remember this word you see, it's onna",
+      "sentence": {
+        "kanji": "店員は若い女の人でした。",
+        "romaji": "tenin ha wakai onna no hito deshita",
+        "english": "The salesclerk was a young woman."
+      },
+      "rtkLesson": 6,
+      "rtkFrame": 208
+    },
+    {
+      "id": "rtk_l06f0331",
+      "rank": "12",
+      "suit": "diamonds",
+      "kanji": "兄",
+      "hiragana": "あに",
+      "romaji": "ani",
+      "english": "older brother",
+      "rhyme": "Remember this word you see, it's ani",
+      "sentence": {
+        "kanji": "兄は水泳が得意です。",
+        "romaji": "ani ha suiei ga tokui desu",
+        "english": "My big brother is good at swimming."
+      },
+      "rtkLesson": 6,
+      "rtkFrame": 331
+    },
+    {
+      "id": "rtk_l06f0353",
+      "rank": "10",
+      "suit": "spades",
+      "kanji": "お母さん",
+      "hiragana": "おかあさん",
+      "romaji": "okaasan",
+      "english": "mother",
+      "rhyme": "Remember this word you see, it's okaasan",
+      "sentence": {
+        "kanji": "お母さんによろしくお伝えください。",
+        "romaji": "okaasan ni yoroshiku otsutae kudasai",
+        "english": "Please give my best to your mother."
+      },
+      "rtkLesson": 6,
+      "rtkFrame": 353
+    },
+    {
+      "id": "rtk_l06f0500",
+      "rank": "1",
+      "suit": "spades",
+      "kanji": "子",
+      "hiragana": "こ",
+      "romaji": "ko",
+      "english": "child, kid",
+      "rhyme": "Remember this word you see, it's ko",
+      "sentence": {
+        "kanji": "その子は日本語が分からない。",
+        "romaji": "sono ko ha nihongo ga wakaranai",
+        "english": "That kid doesn't understand Japanese."
+      },
+      "rtkLesson": 6,
+      "rtkFrame": 500
+    },
+    {
+      "id": "rtk_l06f0622",
+      "rank": "2",
+      "suit": "hearts",
+      "kanji": "女の子",
+      "hiragana": "おんなのこ",
+      "romaji": "onnanoko",
+      "english": "girl, daughter",
+      "rhyme": "Remember this word you see, it's onnanoko",
+      "sentence": {
+        "kanji": "あの女の子を知っていますか。",
+        "romaji": "ano onnanoko wo shite imasu ka",
+        "english": "Do you know that girl?"
+      },
+      "rtkLesson": 6,
+      "rtkFrame": 622
+    },
+    {
+      "id": "rtk_l06f0927",
+      "rank": "3",
+      "suit": "diamonds",
+      "kanji": "兄さん",
+      "hiragana": "にいさん",
+      "romaji": "niisan",
+      "english": "older brother",
+      "rhyme": "Remember this word you see, it's niisan",
+      "sentence": {
+        "kanji": "兄さん、おめでとう。",
+        "romaji": "niisan omedetou",
+        "english": "Congratulations, big brother."
+      },
+      "rtkLesson": 6,
+      "rtkFrame": 927
+    },
+    {
+      "id": "rtk_l06f2037",
+      "rank": "5",
+      "suit": "spades",
+      "kanji": "女子",
+      "hiragana": "じょし",
+      "romaji": "joshi",
+      "english": "woman, girl",
+      "rhyme": "Remember this word you see, it's joshi",
+      "sentence": {
+        "kanji": "このクラスの女子は18人です。",
+        "romaji": "kono kurasu no joshi ha juuhachinin desu",
+        "english": "There are 18 girls in this class."
+      },
+      "rtkLesson": 6,
+      "rtkFrame": 2037
+    },
+    {
+      "id": "rtk_l06f2706",
+      "rank": "7",
+      "suit": "diamonds",
+      "kanji": "好み",
+      "hiragana": "このみ",
+      "romaji": "konomi",
+      "english": "taste, preference",
+      "rhyme": "Remember this word you see, it's konomi",
+      "sentence": {
+        "kanji": "姉と私は服の好みが似ています。",
+        "romaji": "ane to watashi ha fuku no konomi ga nite imasu",
+        "english": "My elder sister and I have the same taste in clothes."
+      },
+      "rtkLesson": 6,
+      "rtkFrame": 2706
+    },
+    {
+      "id": "rtk_l06f2814",
+      "rank": "4",
+      "suit": "clubs",
+      "kanji": "女らしい",
+      "hiragana": "おんならしい",
+      "romaji": "onnarashii",
+      "english": "womanly, feminine",
+      "rhyme": "Remember this word you see, it's onnarashii",
+      "sentence": {
+        "kanji": "彼女は女らしい。",
+        "romaji": "kanojo ha onnarashii",
+        "english": "She's feminine."
+      },
+      "rtkLesson": 6,
+      "rtkFrame": 2814
+    },
+    {
+      "id": "rtk_l06f4596",
+      "rank": "6",
+      "suit": "hearts",
+      "kanji": "好む",
+      "hiragana": "このむ",
+      "romaji": "konomu",
+      "english": "like, be fond of",
+      "rhyme": "Remember this word you see, it's konomu",
+      "sentence": {
+        "kanji": "彼女は背の高い男性を好みますね。",
+        "romaji": "kanojo ha se no takai dansei wo konomimasu ne",
+        "english": "She prefers tall men."
+      },
+      "rtkLesson": 6,
+      "rtkFrame": 4596
+    }
+  ]
+}

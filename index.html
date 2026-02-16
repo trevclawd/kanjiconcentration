@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kanji Card Concentration</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=1771193991">
 </head>
 <body>
     <!-- Settings Modal -->
@@ -323,10 +323,22 @@
                 <button id="printSentencesBtn" class="control-btn">📝 Print Sentences</button>
                 <button id="printCombinedBtn" class="control-btn">📚 Print Combined</button>
                 <button id="printBigKanjiBtn" class="control-btn">🎌 Big Kanji Print</button>
+                <button id="libraryBtn" class="control-btn special-btn">📖 Library</button>
                 <input type="file" id="fileInput" accept=".json" style="display: none;">
                 <input type="file" id="batchFileInput" accept=".json" multiple style="display: none;">
             </div>
         </header>
+
+        <!-- Library Modal -->
+        <div id="libraryModal" class="modal">
+            <div class="modal-content library-modal">
+                <span class="close" id="libraryClose">&times;</span>
+                <h2>📖 Deck Library</h2>
+                <div id="libraryContent" class="library-content">
+                    <p>Loading library...</p>
+                </div>
+            </div>
+        </div>
 
         <!-- Pre-game Screen (Now the first screen) -->
         <div id="preGameScreen" class="screen active">
@@ -522,6 +534,6 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=1771193991"></script>
 </body>
 </html>

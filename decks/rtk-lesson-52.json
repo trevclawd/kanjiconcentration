@@ -1,0 +1,1333 @@
+{
+  "name": "RTK Lesson 52",
+  "description": "RTK Lesson 52 - 78 cards",
+  "lesson": 52,
+  "cards": [
+    {
+      "id": "rtk_l52f0341",
+      "rank": "10",
+      "suit": "hearts",
+      "kanji": "一番",
+      "hiragana": "いちばん",
+      "romaji": "ichiban",
+      "english": "most",
+      "rhyme": "Remember this word you see, it's ichiban",
+      "sentence": {
+        "kanji": "彼はクラスで一番背が高い。",
+        "romaji": "kare ha kurasu de ichiban se ga takai",
+        "english": "He's the tallest in class."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 341
+    },
+    {
+      "id": "rtk_l52f0367",
+      "rank": "9",
+      "suit": "spades",
+      "kanji": "長い",
+      "hiragana": "ながい",
+      "romaji": "nagai",
+      "english": "long",
+      "rhyme": "Remember this word you see, it's nagai",
+      "sentence": {
+        "kanji": "彼女の髪はとても長い。",
+        "romaji": "kanojo no kami ha totemo nagai",
+        "english": "Her hair is very long."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 367
+    },
+    {
+      "id": "rtk_l52f0368",
+      "rank": "11",
+      "suit": "diamonds",
+      "kanji": "髪の毛",
+      "hiragana": "かみのけ",
+      "romaji": "kaminoke",
+      "english": "hair",
+      "rhyme": "Remember this word you see, it's kaminoke",
+      "sentence": {
+        "kanji": "髪の毛が伸びたね。",
+        "romaji": "kaminoke ga nobita ne",
+        "english": "Your hair's longer, isn't it?"
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 368
+    },
+    {
+      "id": "rtk_l52f0389",
+      "rank": "12",
+      "suit": "clubs",
+      "kanji": "風邪",
+      "hiragana": "かぜ",
+      "romaji": "kaze",
+      "english": "cold (illness)",
+      "rhyme": "Remember this word you see, it's kaze",
+      "sentence": {
+        "kanji": "私は風邪を引きました。",
+        "romaji": "watashi ha kaze wo hikimashita 。",
+        "english": "I caught a cold."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 389
+    },
+    {
+      "id": "rtk_l52f0544",
+      "rank": "13",
+      "suit": "spades",
+      "kanji": "社長",
+      "hiragana": "しゃちょう",
+      "romaji": "shachou",
+      "english": "president (of a company)",
+      "rhyme": "Remember this word you see, it's shachou",
+      "sentence": {
+        "kanji": "おばは小さな会社の社長です。",
+        "romaji": "oba ha chiisa na kaisha no shachou desu",
+        "english": "My aunt is the president of a small firm."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 544
+    },
+    {
+      "id": "rtk_l52f0545",
+      "rank": "2",
+      "suit": "diamonds",
+      "kanji": "長さ",
+      "hiragana": "ながさ",
+      "romaji": "nagasa",
+      "english": "length",
+      "rhyme": "Remember this word you see, it's nagasa",
+      "sentence": {
+        "kanji": "このケーブルの長さは1メートルです。",
+        "romaji": "kono ke-buru no nagasa ha ichime-toru desu",
+        "english": "The length of this cable is one meter."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 545
+    },
+    {
+      "id": "rtk_l52f0628",
+      "rank": "5",
+      "suit": "hearts",
+      "kanji": "交番",
+      "hiragana": "こうばん",
+      "romaji": "kouban",
+      "english": "police box",
+      "rhyme": "Remember this word you see, it's kouban",
+      "sentence": {
+        "kanji": "あそこの交番で道を聞きましょう。",
+        "romaji": "asoko no kouban de michi wo kikimashou",
+        "english": "Let's ask for directions at that police box."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 628
+    },
+    {
+      "id": "rtk_l52f0629",
+      "rank": "7",
+      "suit": "clubs",
+      "kanji": "番号",
+      "hiragana": "ばんごう",
+      "romaji": "bangou",
+      "english": "number, serial number",
+      "rhyme": "Remember this word you see, it's bangou",
+      "sentence": {
+        "kanji": "この番号に電話してください。",
+        "romaji": "kono bangou ni denwa shite kudasai",
+        "english": "Please call this number."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 629
+    },
+    {
+      "id": "rtk_l52f0676",
+      "rank": "8",
+      "suit": "spades",
+      "kanji": "校長",
+      "hiragana": "こうちょう",
+      "romaji": "kouchou",
+      "english": "principal, schoolmaster",
+      "rhyme": "Remember this word you see, it's kouchou",
+      "sentence": {
+        "kanji": "あの人は高校の校長だ。",
+        "romaji": "ano hito ha koukou no kouchou da",
+        "english": "That person is a high school principal."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 676
+    },
+    {
+      "id": "rtk_l52f0914",
+      "rank": "4",
+      "suit": "spades",
+      "kanji": "長女",
+      "hiragana": "ちょうじょ",
+      "romaji": "choujo",
+      "english": "eldest daughter",
+      "rhyme": "Remember this word you see, it's choujo",
+      "sentence": {
+        "kanji": "うちの長女は10歳です。",
+        "romaji": "uchi no choujo ha jusai desu",
+        "english": "Our oldest daughter is ten."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 914
+    },
+    {
+      "id": "rtk_l52f0971",
+      "rank": "3",
+      "suit": "clubs",
+      "kanji": "長男",
+      "hiragana": "ちょうなん",
+      "romaji": "chounan",
+      "english": "eldest son",
+      "rhyme": "Remember this word you see, it's chounan",
+      "sentence": {
+        "kanji": "彼の長男は8才です。",
+        "romaji": "kare no chounan ha hasai desu",
+        "english": "His oldest son is eight years old."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 971
+    },
+    {
+      "id": "rtk_l52f1199",
+      "rank": "9",
+      "suit": "hearts",
+      "kanji": "番組",
+      "hiragana": "ばんぐみ",
+      "romaji": "bangumi",
+      "english": "program",
+      "rhyme": "Remember this word you see, it's bangumi",
+      "sentence": {
+        "kanji": "私はこの番組が好きです。",
+        "romaji": "watashi ha kono bangumi ga suki desu",
+        "english": "I like this show."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 1199
+    },
+    {
+      "id": "rtk_l52f1335",
+      "rank": "6",
+      "suit": "diamonds",
+      "kanji": "番地",
+      "hiragana": "ばんち",
+      "romaji": "banchi",
+      "english": "lot number, address",
+      "rhyme": "Remember this word you see, it's banchi",
+      "sentence": {
+        "kanji": "その建物の番地は分かりますか。",
+        "romaji": "sono tatemono no banchi ha wakarimasu ka",
+        "english": "Do you know the building's plot number?"
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 1335
+    },
+    {
+      "id": "rtk_l52f1397",
+      "rank": "11",
+      "suit": "clubs",
+      "kanji": "自宅",
+      "hiragana": "じたく",
+      "romaji": "jitaku",
+      "english": "one's house, one's home",
+      "rhyme": "Remember this word you see, it's jitaku",
+      "sentence": {
+        "kanji": "自宅に電話を下さい。",
+        "romaji": "jitaku ni denwa wo kudasai",
+        "english": "Please call home."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 1397
+    },
+    {
+      "id": "rtk_l52f1398",
+      "rank": "12",
+      "suit": "spades",
+      "kanji": "お宅",
+      "hiragana": "おたく",
+      "romaji": "otaku",
+      "english": "your home, you, fan, geek",
+      "rhyme": "Remember this word you see, it's otaku",
+      "sentence": {
+        "kanji": "先生のお宅はどちらですか。",
+        "romaji": "sensei no otaku ha dochira desu ka",
+        "english": "Where is the teacher's house?"
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 1398
+    },
+    {
+      "id": "rtk_l52f1404",
+      "rank": "10",
+      "suit": "diamonds",
+      "kanji": "住宅",
+      "hiragana": "じゅうたく",
+      "romaji": "juutaku",
+      "english": "housing, residence",
+      "rhyme": "Remember this word you see, it's juutaku",
+      "sentence": {
+        "kanji": "ここは静かな住宅地だ。",
+        "romaji": "koko ha shizukana juutakuchi da",
+        "english": "This is a quiet residential area."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 1404
+    },
+    {
+      "id": "rtk_l52f1690",
+      "rank": "13",
+      "suit": "hearts",
+      "kanji": "主張",
+      "hiragana": "しゅちょう",
+      "romaji": "shuchou",
+      "english": "insistence, assertion",
+      "rhyme": "Remember this word you see, it's shuchou",
+      "sentence": {
+        "kanji": "上司は私の主張を受け入れた。",
+        "romaji": "joushi ha watashi no shuchou wo ukeireta",
+        "english": "My boss accepted my argument."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 1690
+    },
+    {
+      "id": "rtk_l52f1692",
+      "rank": "1",
+      "suit": "diamonds",
+      "kanji": "引っ張る",
+      "hiragana": "ひっぱる",
+      "romaji": "hiparu",
+      "english": "pull, drag",
+      "rhyme": "Remember this word you see, it's hiparu",
+      "sentence": {
+        "kanji": "娘が私の手を引っ張った。",
+        "romaji": "musume ga watashi no te wo hipata",
+        "english": "My daughter tugged on my hand."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 1692
+    },
+    {
+      "id": "rtk_l52f1768",
+      "rank": "3",
+      "suit": "spades",
+      "kanji": "髪",
+      "hiragana": "かみ",
+      "romaji": "kami",
+      "english": "hair, hairstyle",
+      "rhyme": "Remember this word you see, it's kami",
+      "sentence": {
+        "kanji": "昨日、髪を切りました。",
+        "romaji": "kinou kami wo kirimashita",
+        "english": "I had my hair cut yesterday."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 1768
+    },
+    {
+      "id": "rtk_l52f1808",
+      "rank": "4",
+      "suit": "hearts",
+      "kanji": "毛布",
+      "hiragana": "もうふ",
+      "romaji": "moufu",
+      "english": "blanket",
+      "rhyme": "Remember this word you see, it's moufu",
+      "sentence": {
+        "kanji": "この毛布は暖かい。",
+        "romaji": "kono moufu ha atatakai",
+        "english": "This blanket is warm."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 1808
+    },
+    {
+      "id": "rtk_l52f1817",
+      "rank": "5",
+      "suit": "diamonds",
+      "kanji": "手帳",
+      "hiragana": "てちょう",
+      "romaji": "techou",
+      "english": "pocketbook, memo",
+      "rhyme": "Remember this word you see, it's techou",
+      "sentence": {
+        "kanji": "新しい手帳を買いました。",
+        "romaji": "atarashii techou wo kaimashita",
+        "english": "I bought a new notebook."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 1817
+    },
+    {
+      "id": "rtk_l52f1818",
+      "rank": "6",
+      "suit": "clubs",
+      "kanji": "電話帳",
+      "hiragana": "でんわちょう",
+      "romaji": "denwachou",
+      "english": "telephone book",
+      "rhyme": "Remember this word you see, it's denwachou",
+      "sentence": {
+        "kanji": "電話帳を見せてください。",
+        "romaji": "denwachou wo misete kudasai",
+        "english": "Please show me the telephone book."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 1818
+    },
+    {
+      "id": "rtk_l52f1866",
+      "rank": "7",
+      "suit": "spades",
+      "kanji": "頑張る",
+      "hiragana": "がんばる",
+      "romaji": "ganbaru",
+      "english": "persist, be tenacious",
+      "rhyme": "Remember this word you see, it's ganbaru",
+      "sentence": {
+        "kanji": "明日の試験、頑張ってね。",
+        "romaji": "ashita no shiken ganbate ne",
+        "english": "Good luck on tomorrow's exam."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 1866
+    },
+    {
+      "id": "rtk_l52f1904",
+      "rank": "2",
+      "suit": "clubs",
+      "kanji": "毛",
+      "hiragana": "け",
+      "romaji": "ke",
+      "english": "hair, wool",
+      "rhyme": "Remember this word you see, it's ke",
+      "sentence": {
+        "kanji": "猫の毛がセーターに付いた。",
+        "romaji": "neko no ke ga se-ta- ni tsuita",
+        "english": "I got cat hair on my sweater."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 1904
+    },
+    {
+      "id": "rtk_l52f1921",
+      "rank": "8",
+      "suit": "hearts",
+      "kanji": "風邪薬",
+      "hiragana": "かぜぐすり",
+      "romaji": "kazegusuri",
+      "english": "remedy for a cold",
+      "rhyme": "Remember this word you see, it's kazegusuri",
+      "sentence": {
+        "kanji": "この風邪薬を飲みなさい。",
+        "romaji": "kono kazegusuri wo nominasai",
+        "english": "Take this cold medicine."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 1921
+    },
+    {
+      "id": "rtk_l52f1946",
+      "rank": "1",
+      "suit": "hearts",
+      "kanji": "会長",
+      "hiragana": "かいちょう",
+      "romaji": "kaichou",
+      "english": "president, chairperson",
+      "rhyme": "Remember this word you see, it's kaichou",
+      "sentence": {
+        "kanji": "初めに会長が挨拶した。",
+        "romaji": "hajime ni kaichou ga aisatsu shita",
+        "english": "First was the chairman's greetings."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 1946
+    },
+    {
+      "id": "rtk_l52f1974",
+      "rank": "9",
+      "suit": "diamonds",
+      "kanji": "長袖",
+      "hiragana": "ながそで",
+      "romaji": "nagasode",
+      "english": "clothes with long sleeves",
+      "rhyme": "Remember this word you see, it's nagasode",
+      "sentence": {
+        "kanji": "今日は寒いので長袖を着ました。",
+        "romaji": "kyou ha samui node nagasode wo kimashita 。",
+        "english": "I put on a long-sleeved shirt because it's cold today."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 1974
+    },
+    {
+      "id": "rtk_l52f2284",
+      "rank": "8",
+      "suit": "clubs",
+      "kanji": "長らく",
+      "hiragana": "ながらく",
+      "romaji": "nagaraku",
+      "english": "for a long time",
+      "rhyme": "Remember this word you see, it's nagaraku",
+      "sentence": {
+        "kanji": "長らくお待たせしました。",
+        "romaji": "nagaraku o matase shimashita 。",
+        "english": "I'm sorry to keep you waiting for such a long time."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 2284
+    },
+    {
+      "id": "rtk_l52f2288",
+      "rank": "13",
+      "suit": "spades",
+      "kanji": "長持ち",
+      "hiragana": "ながもち",
+      "romaji": "nagamochi",
+      "english": "endurance, lasting long",
+      "rhyme": "Remember this word you see, it's nagamochi",
+      "sentence": {
+        "kanji": "このコートは長持ちしている。",
+        "romaji": "kono ko-to ha nagamochi shite iru",
+        "english": "I've had this coat for a long time."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 2288
+    },
+    {
+      "id": "rtk_l52f2292",
+      "rank": "1",
+      "suit": "hearts",
+      "kanji": "長生き",
+      "hiragana": "ながいき",
+      "romaji": "nagaiki",
+      "english": "long life, longevity",
+      "rhyme": "Remember this word you see, it's nagaiki",
+      "sentence": {
+        "kanji": "この村の人たちは長生きです。",
+        "romaji": "kono mura no hitotachi ha nagaiki desu",
+        "english": "People in this village live a long life."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 2292
+    },
+    {
+      "id": "rtk_l52f2608",
+      "rank": "5",
+      "suit": "hearts",
+      "kanji": "長方形",
+      "hiragana": "ちょうほうけい",
+      "romaji": "chouhoukei",
+      "english": "rectangle",
+      "rhyme": "Remember this word you see, it's chouhoukei",
+      "sentence": {
+        "kanji": "私の部屋は長方形です。",
+        "romaji": "watashi no heya ha chouhoukei desu",
+        "english": "My room is rectangular."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 2608
+    },
+    {
+      "id": "rtk_l52f2696",
+      "rank": "9",
+      "suit": "spades",
+      "kanji": "長話",
+      "hiragana": "ながばなし",
+      "romaji": "nagabanashi",
+      "english": "long conversation, talk for a long time",
+      "rhyme": "Remember this word you see, it's nagabanashi",
+      "sentence": {
+        "kanji": "母が電話で長話をしているんだ。",
+        "romaji": "haha ga denwa de nagabanashi wo shite iru n da",
+        "english": "My mother is having a long talk on the telephone."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 2696
+    },
+    {
+      "id": "rtk_l52f2846",
+      "rank": "6",
+      "suit": "hearts",
+      "kanji": "長年",
+      "hiragana": "ながねん",
+      "romaji": "naganen",
+      "english": "many years, long time",
+      "rhyme": "Remember this word you see, it's naganen",
+      "sentence": {
+        "kanji": "彼は長年の友人です。",
+        "romaji": "kare ha naganen no yuujin desu",
+        "english": "He's an old friend of mine."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 2846
+    },
+    {
+      "id": "rtk_l52f2908",
+      "rank": "7",
+      "suit": "diamonds",
+      "kanji": "年長",
+      "hiragana": "ねんちょう",
+      "romaji": "nenchou",
+      "english": "seniority",
+      "rhyme": "Remember this word you see, it's nenchou",
+      "sentence": {
+        "kanji": "彼がこのグループで一番年長です。",
+        "romaji": "kare ga kono guru-pu de ichiban nenchou desu",
+        "english": "He's the most senior in this group."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 2908
+    },
+    {
+      "id": "rtk_l52f3021",
+      "rank": "2",
+      "suit": "diamonds",
+      "kanji": "長引く",
+      "hiragana": "ながびく",
+      "romaji": "nagabiku",
+      "english": "be prolonged, drag on",
+      "rhyme": "Remember this word you see, it's nagabiku",
+      "sentence": {
+        "kanji": "会議が長引いているようです。",
+        "romaji": "kaigi ga nagabiite iru you desu",
+        "english": "The conference seems to be dragging on."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 3021
+    },
+    {
+      "id": "rtk_l52f3222",
+      "rank": "6",
+      "suit": "diamonds",
+      "kanji": "船長",
+      "hiragana": "せんちょう",
+      "romaji": "senchou",
+      "english": "captain",
+      "rhyme": "Remember this word you see, it's senchou",
+      "sentence": {
+        "kanji": "私がこの船の船長です。",
+        "romaji": "watashi ga kono fune no senchou desu",
+        "english": "I'm captain of this ship."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 3222
+    },
+    {
+      "id": "rtk_l52f3341",
+      "rank": "7",
+      "suit": "clubs",
+      "kanji": "長続き",
+      "hiragana": "ながつづき",
+      "romaji": "nagatsuzuki",
+      "english": "lasting for a long time",
+      "rhyme": "Remember this word you see, it's nagatsuzuki",
+      "sentence": {
+        "kanji": "彼は仕事が長続きしません。",
+        "romaji": "kare ha shigoto ga nagatsuzuki shimasen",
+        "english": "He can't keep a job for long."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 3341
+    },
+    {
+      "id": "rtk_l52f3346",
+      "rank": "10",
+      "suit": "hearts",
+      "kanji": "部長",
+      "hiragana": "ぶちょう",
+      "romaji": "buchou",
+      "english": "section chief, department head",
+      "rhyme": "Remember this word you see, it's buchou",
+      "sentence": {
+        "kanji": "部長に仕事の相談をしたんだ。",
+        "romaji": "buchou ni shigoto no soudan wo shita n da",
+        "english": "I consulted the manager about my job."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 3346
+    },
+    {
+      "id": "rtk_l52f3385",
+      "rank": "10",
+      "suit": "clubs",
+      "kanji": "市長",
+      "hiragana": "しちょう",
+      "romaji": "shichou",
+      "english": "mayor",
+      "rhyme": "Remember this word you see, it's shichou",
+      "sentence": {
+        "kanji": "新しい市長が選ばれました。",
+        "romaji": "atarashii shichou ga erabaremashita",
+        "english": "A new mayor was chosen."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 3385
+    },
+    {
+      "id": "rtk_l52f3932",
+      "rank": "4",
+      "suit": "spades",
+      "kanji": "長期",
+      "hiragana": "ちょうき",
+      "romaji": "chouki",
+      "english": "long period",
+      "rhyme": "Remember this word you see, it's chouki",
+      "sentence": {
+        "kanji": "今回は長期の滞在です。",
+        "romaji": "konkai ha chouki no taizai desu",
+        "english": "This time I'll stay for a long time."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 3932
+    },
+    {
+      "id": "rtk_l52f3949",
+      "rank": "8",
+      "suit": "spades",
+      "kanji": "留守番",
+      "hiragana": "るすばん",
+      "romaji": "rusuban",
+      "english": "caretaking, caretaker",
+      "rhyme": "Remember this word you see, it's rusuban",
+      "sentence": {
+        "kanji": "私は留守番の者です。",
+        "romaji": "watashi ha rusuban no mono desu",
+        "english": "I'm looking after the house."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 3949
+    },
+    {
+      "id": "rtk_l52f3951",
+      "rank": "3",
+      "suit": "hearts",
+      "kanji": "帰宅",
+      "hiragana": "きたく",
+      "romaji": "kitaku",
+      "english": "return home",
+      "rhyme": "Remember this word you see, it's kitaku",
+      "sentence": {
+        "kanji": "夜の11時に帰宅しました。",
+        "romaji": "yoru no juuichiji ni kitaku shimashita",
+        "english": "I came home at 11 o'clock in the evening."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 3951
+    },
+    {
+      "id": "rtk_l52f3952",
+      "rank": "4",
+      "suit": "diamonds",
+      "kanji": "住宅地",
+      "hiragana": "じゅうたくち",
+      "romaji": "juutakuchi",
+      "english": "residential district",
+      "rhyme": "Remember this word you see, it's juutakuchi",
+      "sentence": {
+        "kanji": "その住宅地は便利な場所にあるね。",
+        "romaji": "sono juutakuchi ha benri na basho ni aru ne",
+        "english": "That residential area is conveniently located."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 3952
+    },
+    {
+      "id": "rtk_l52f4031",
+      "rank": "10",
+      "suit": "diamonds",
+      "kanji": "翻訳",
+      "hiragana": "ほんやく",
+      "romaji": "honyaku",
+      "english": "translation",
+      "rhyme": "Remember this word you see, it's honyaku",
+      "sentence": {
+        "kanji": "彼の翻訳は分かりやすいですよ。",
+        "romaji": "kare no honyaku ha wakariyasui desu yo",
+        "english": "His translation is easy to understand."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 4031
+    },
+    {
+      "id": "rtk_l52f4092",
+      "rank": "5",
+      "suit": "clubs",
+      "kanji": "順番",
+      "hiragana": "じゅんばん",
+      "romaji": "junban",
+      "english": "order, turn",
+      "rhyme": "Remember this word you see, it's junban",
+      "sentence": {
+        "kanji": "これを順番通りに並べ替えて下さい。",
+        "romaji": "kore wo junban doori ni narabe kaete kudasai",
+        "english": "Please rearrange these in order."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 4092
+    },
+    {
+      "id": "rtk_l52f4226",
+      "rank": "12",
+      "suit": "hearts",
+      "kanji": "課長",
+      "hiragana": "かちょう",
+      "romaji": "kachou",
+      "english": "section chief",
+      "rhyme": "Remember this word you see, it's kachou",
+      "sentence": {
+        "kanji": "彼は課長に昇進しました。",
+        "romaji": "kare ha kachou ni shoushin shimashita",
+        "english": "He was promoted to section chief."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 4226
+    },
+    {
+      "id": "rtk_l52f4292",
+      "rank": "6",
+      "suit": "spades",
+      "kanji": "身長",
+      "hiragana": "しんちょう",
+      "romaji": "shinchou",
+      "english": "stature, height",
+      "rhyme": "Remember this word you see, it's shinchou",
+      "sentence": {
+        "kanji": "身長はどれくらいありますか。",
+        "romaji": "shinchou ha dore kurai arimasu ka",
+        "english": "How tall are you?"
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 4292
+    },
+    {
+      "id": "rtk_l52f4368",
+      "rank": "7",
+      "suit": "hearts",
+      "kanji": "延長",
+      "hiragana": "えんちょう",
+      "romaji": "enchou",
+      "english": "extension, prolongation",
+      "rhyme": "Remember this word you see, it's enchou",
+      "sentence": {
+        "kanji": "国会の会期が延長されたわね。",
+        "romaji": "kokai no kaiki ga enchou sareta wa ne",
+        "english": "The session of the Diet has been extended."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 4368
+    },
+    {
+      "id": "rtk_l52f4438",
+      "rank": "11",
+      "suit": "clubs",
+      "kanji": "偽物",
+      "hiragana": "にせもの",
+      "romaji": "nisemono",
+      "english": "sham, imitation",
+      "rhyme": "Remember this word you see, it's nisemono",
+      "sentence": {
+        "kanji": "彼らが売っていたのは偽物だ。",
+        "romaji": "karera ga ute ita no ha nisemono da",
+        "english": "What they were selling was a fake."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 4438
+    },
+    {
+      "id": "rtk_l52f4439",
+      "rank": "8",
+      "suit": "diamonds",
+      "kanji": "行為",
+      "hiragana": "こうい",
+      "romaji": "koui",
+      "english": "act, conduct",
+      "rhyme": "Remember this word you see, it's koui",
+      "sentence": {
+        "kanji": "彼の行為はみんなの誤解を招いたわ。",
+        "romaji": "kare no koui ha minna no gokai wo maneita wa",
+        "english": "His actions ended up misleading everyone."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 4439
+    },
+    {
+      "id": "rtk_l52f4510",
+      "rank": "2",
+      "suit": "spades",
+      "kanji": "成長",
+      "hiragana": "せいちょう",
+      "romaji": "seichou",
+      "english": "growth",
+      "rhyme": "Remember this word you see, it's seichou",
+      "sentence": {
+        "kanji": "庭の木、大きく成長したわね。",
+        "romaji": "niwa no ki、 ookiku seichou shita wa ne",
+        "english": "The tree in the garden has grown a lot."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 4510
+    },
+    {
+      "id": "rtk_l52f4586",
+      "rank": "11",
+      "suit": "diamonds",
+      "kanji": "番",
+      "hiragana": "ばん",
+      "romaji": "ban",
+      "english": "one's turn, watch",
+      "rhyme": "Remember this word you see, it's ban",
+      "sentence": {
+        "kanji": "今日は私が皿を洗う番ですね。",
+        "romaji": "kyou ha watashi ga sara wo arau ban desu ne",
+        "english": "It's my turn to do dishes today."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 4586
+    },
+    {
+      "id": "rtk_l52f4655",
+      "rank": "1",
+      "suit": "clubs",
+      "kanji": "機長",
+      "hiragana": "きちょう",
+      "romaji": "kichou",
+      "english": "airplane captain",
+      "rhyme": "Remember this word you see, it's kichou",
+      "sentence": {
+        "kanji": "機長の放送があったの。",
+        "romaji": "kichou no housou ga ata no",
+        "english": "There was an announcement from the captain."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 4655
+    },
+    {
+      "id": "rtk_l52f4715",
+      "rank": "12",
+      "suit": "spades",
+      "kanji": "展開",
+      "hiragana": "てんかい",
+      "romaji": "tenkai",
+      "english": "unfolding, development",
+      "rhyme": "Remember this word you see, it's tenkai",
+      "sentence": {
+        "kanji": "話の展開についていけない。",
+        "romaji": "hanashi no tenkai ni tsuiteikenai",
+        "english": "I can't follow the thread of the conversation."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 4715
+    },
+    {
+      "id": "rtk_l52f4716",
+      "rank": "13",
+      "suit": "hearts",
+      "kanji": "発展",
+      "hiragana": "はってん",
+      "romaji": "haten",
+      "english": "expansion, prosperity",
+      "rhyme": "Remember this word you see, it's haten",
+      "sentence": {
+        "kanji": "あの会社は目覚しく発展しているね。",
+        "romaji": "ano kaisha ha mezamashiku haten shite iru ne",
+        "english": "That company has expanded remarkably."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 4716
+    },
+    {
+      "id": "rtk_l52f4884",
+      "rank": "9",
+      "suit": "clubs",
+      "kanji": "緊張",
+      "hiragana": "きんちょう",
+      "romaji": "kinchou",
+      "english": "tension, strain",
+      "rhyme": "Remember this word you see, it's kinchou",
+      "sentence": {
+        "kanji": "彼は緊張していたな。",
+        "romaji": "kare ha kinchou shite ita na",
+        "english": "He felt nervous."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 4884
+    },
+    {
+      "id": "rtk_l52f4886",
+      "rank": "11",
+      "suit": "hearts",
+      "kanji": "出張",
+      "hiragana": "しゅっちょう",
+      "romaji": "shuchou",
+      "english": "business trip",
+      "rhyme": "Remember this word you see, it's shuchou",
+      "sentence": {
+        "kanji": "部長は京都に出張中です。",
+        "romaji": "buchou ha kyouto ni shuchouchuu desu",
+        "english": "The manager is on a business trip to Kyoto."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 4886
+    },
+    {
+      "id": "rtk_l52f4889",
+      "rank": "2",
+      "suit": "clubs",
+      "kanji": "張り切る",
+      "hiragana": "はりきる",
+      "romaji": "harikiru",
+      "english": "go all out, make efforts",
+      "rhyme": "Remember this word you see, it's harikiru",
+      "sentence": {
+        "kanji": "母は張り切ってお弁当を用意したの。",
+        "romaji": "haha ha harikite obentou wo youi shita no",
+        "english": "My mother went all out when she made this lunch box."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 4889
+    },
+    {
+      "id": "rtk_l52f4890",
+      "rank": "3",
+      "suit": "spades",
+      "kanji": "欲張り",
+      "hiragana": "よくばり",
+      "romaji": "yokubari",
+      "english": "greed, greedy",
+      "rhyme": "Remember this word you see, it's yokubari",
+      "sentence": {
+        "kanji": "彼女は欲張りです。",
+        "romaji": "kanojo ha yokubari desu",
+        "english": "She's greedy."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 4890
+    },
+    {
+      "id": "rtk_l52f4983",
+      "rank": "12",
+      "suit": "diamonds",
+      "kanji": "威張る",
+      "hiragana": "いばる",
+      "romaji": "ibaru",
+      "english": "put on airs, be arrogant",
+      "rhyme": "Remember this word you see, it's ibaru",
+      "sentence": {
+        "kanji": "彼は威張ってなんかいません。",
+        "romaji": "kare ha ibate nanka imasen",
+        "english": "He's not putting on airs."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 4983
+    },
+    {
+      "id": "rtk_l52f5030",
+      "rank": "9",
+      "suit": "hearts",
+      "kanji": "細長い",
+      "hiragana": "ほそながい",
+      "romaji": "hosonagai",
+      "english": "long and thin, slender",
+      "rhyme": "Remember this word you see, it's hosonagai",
+      "sentence": {
+        "kanji": "その細長い棒を取ってください。",
+        "romaji": "sono hosonagai bou wo tote kudasai",
+        "english": "Please take that long, thin stick."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 5030
+    },
+    {
+      "id": "rtk_l52f5169",
+      "rank": "13",
+      "suit": "clubs",
+      "kanji": "毛皮",
+      "hiragana": "けがわ",
+      "romaji": "kegawa",
+      "english": "fur",
+      "rhyme": "Remember this word you see, it's kegawa",
+      "sentence": {
+        "kanji": "彼女は毛皮のコートを着ていたの。",
+        "romaji": "kanojo ha kegawa no ko-to wo kite ita no",
+        "english": "She wore a fur coat."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 5169
+    },
+    {
+      "id": "rtk_l52f5171",
+      "rank": "1",
+      "suit": "spades",
+      "kanji": "毛糸",
+      "hiragana": "けいと",
+      "romaji": "keito",
+      "english": "woolen yarn, wool",
+      "rhyme": "Remember this word you see, it's keito",
+      "sentence": {
+        "kanji": "彼女は毛糸のセーターを編みました。",
+        "romaji": "kanojo ha keito no se-ta- wo amimashita",
+        "english": "She knitted a woolen sweater."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 5171
+    },
+    {
+      "id": "rtk_l52f5173",
+      "rank": "2",
+      "suit": "hearts",
+      "kanji": "尾",
+      "hiragana": "お",
+      "romaji": "o",
+      "english": "tail",
+      "rhyme": "Remember this word you see, it's o",
+      "sentence": {
+        "kanji": "尾の長い鳥が飛んでいますね。",
+        "romaji": "o no nagai tori ga tonde imasu ne",
+        "english": "A bird with a long tail is flying."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 5173
+    },
+    {
+      "id": "rtk_l52f5180",
+      "rank": "1",
+      "suit": "diamonds",
+      "kanji": "張る",
+      "hiragana": "はる",
+      "romaji": "haru",
+      "english": "strain, be stretched",
+      "rhyme": "Remember this word you see, it's haru",
+      "sentence": {
+        "kanji": "疲れて肩が張っています。",
+        "romaji": "tsukarete kata ga hate imasu",
+        "english": "My shoulders are stiff with fatigue."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 5180
+    },
+    {
+      "id": "rtk_l52f5190",
+      "rank": "4",
+      "suit": "clubs",
+      "kanji": "解釈",
+      "hiragana": "かいしゃく",
+      "romaji": "kaishaku",
+      "english": "interpretation, explanation",
+      "rhyme": "Remember this word you see, it's kaishaku",
+      "sentence": {
+        "kanji": "この詩を解釈してみましょう。",
+        "romaji": "kono shi wo kaishaku shite mimashou",
+        "english": "Let's try to interpret this poem."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 5190
+    },
+    {
+      "id": "rtk_l52f5228",
+      "rank": "12",
+      "suit": "clubs",
+      "kanji": "長所",
+      "hiragana": "ちょうしょ",
+      "romaji": "chousho",
+      "english": "strong point, merit",
+      "rhyme": "Remember this word you see, it's chousho",
+      "sentence": {
+        "kanji": "君の長所は明るいところだね。",
+        "romaji": "kimi no chousho ha akarui tokoro da ne",
+        "english": "Your strong point is your cheerfulness."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 5228
+    },
+    {
+      "id": "rtk_l52f5261",
+      "rank": "4",
+      "suit": "hearts",
+      "kanji": "芽",
+      "hiragana": "め",
+      "romaji": "me",
+      "english": "bud, sprout",
+      "rhyme": "Remember this word you see, it's me",
+      "sentence": {
+        "kanji": "チューリップの芽が出ました。",
+        "romaji": "chu-ripu no me ga demashita",
+        "english": "The tulip buds emerged."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 5261
+    },
+    {
+      "id": "rtk_l52f5343",
+      "rank": "5",
+      "suit": "diamonds",
+      "kanji": "通帳",
+      "hiragana": "つうちょう",
+      "romaji": "tsuuchou",
+      "english": "bankbook, passbook",
+      "rhyme": "Remember this word you see, it's tsuuchou",
+      "sentence": {
+        "kanji": "銀行の通帳を持ってきてください。",
+        "romaji": "ginkou no tsuuchou wo mote kite kudasai",
+        "english": "Please bring your bank book."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 5343
+    },
+    {
+      "id": "rtk_l52f5401",
+      "rank": "3",
+      "suit": "clubs",
+      "kanji": "当番",
+      "hiragana": "とうばん",
+      "romaji": "touban",
+      "english": "being on duty, person on duty",
+      "rhyme": "Remember this word you see, it's touban",
+      "sentence": {
+        "kanji": "今日は私が掃除の当番です。",
+        "romaji": "kyou ha watashi ga souji no touban desu",
+        "english": "I'm in charge of the cleaning today."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 5401
+    },
+    {
+      "id": "rtk_l52f5471",
+      "rank": "5",
+      "suit": "spades",
+      "kanji": "審議",
+      "hiragana": "しんぎ",
+      "romaji": "shingi",
+      "english": "deliberation, consideration",
+      "rhyme": "Remember this word you see, it's shingi",
+      "sentence": {
+        "kanji": "その問題は審議中です。",
+        "romaji": "sono mondai ha shingichuu desu",
+        "english": "The issue is under deliberation."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 5471
+    },
+    {
+      "id": "rtk_l52f5474",
+      "rank": "6",
+      "suit": "clubs",
+      "kanji": "展覧会",
+      "hiragana": "てんらんかい",
+      "romaji": "tenrankai",
+      "english": "exhibition",
+      "rhyme": "Remember this word you see, it's tenrankai",
+      "sentence": {
+        "kanji": "昨日、絵の展覧会に行ってきました。",
+        "romaji": "kinou e no tenrankai ni ite kimashita",
+        "english": "I went to an exhibition yesterday."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 5474
+    },
+    {
+      "id": "rtk_l52f5744",
+      "rank": "3",
+      "suit": "diamonds",
+      "kanji": "白髪",
+      "hiragana": "しらが",
+      "romaji": "shiraga",
+      "english": "white hair, gray hair",
+      "rhyme": "Remember this word you see, it's shiraga",
+      "sentence": {
+        "kanji": "祖父は白髪が少ないほうです。",
+        "romaji": "sofu ha shiraga ga sukunai hou desu",
+        "english": "My grandfather has relatively little gray hair."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 5744
+    },
+    {
+      "id": "rtk_l52f5761",
+      "rank": "7",
+      "suit": "spades",
+      "kanji": "無邪気",
+      "hiragana": "むじゃき",
+      "romaji": "mujaki",
+      "english": "innocence, simplicity",
+      "rhyme": "Remember this word you see, it's mujaki",
+      "sentence": {
+        "kanji": "子供たちが無邪気に遊んでいるね。",
+        "romaji": "kodomotachi ga mujaki ni asonde iru ne",
+        "english": "The kids are playing so innocently."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 5761
+    },
+    {
+      "id": "rtk_l52f5842",
+      "rank": "10",
+      "suit": "spades",
+      "kanji": "拡張",
+      "hiragana": "かくちょう",
+      "romaji": "kakuchou",
+      "english": "expansion, extension",
+      "rhyme": "Remember this word you see, it's kakuchou",
+      "sentence": {
+        "kanji": "その会社は店舗を拡張していますね。",
+        "romaji": "sono kaisha ha tenpo wo kakuchou shite imasu ne",
+        "english": "The company is expanding the store."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 5842
+    },
+    {
+      "id": "rtk_l52f5858",
+      "rank": "13",
+      "suit": "diamonds",
+      "kanji": "議長",
+      "hiragana": "ぎちょう",
+      "romaji": "gichou",
+      "english": "chairman, president",
+      "rhyme": "Remember this word you see, it's gichou",
+      "sentence": {
+        "kanji": "議長が開会の挨拶をしました。",
+        "romaji": "gichou ga kaikai no aisatsu wo shimashita",
+        "english": "The chairman made the opening greetings for the meeting."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 5858
+    },
+    {
+      "id": "rtk_l52f5859",
+      "rank": "11",
+      "suit": "spades",
+      "kanji": "学長",
+      "hiragana": "がくちょう",
+      "romaji": "gakuchou",
+      "english": "college president",
+      "rhyme": "Remember this word you see, it's gakuchou",
+      "sentence": {
+        "kanji": "入学式で学長の挨拶がありました。",
+        "romaji": "nyuugakushiki de gakuchou no aisatsu ga arimashita",
+        "english": "The headmaster gave a greeting speech at the entrance ceremony."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 5859
+    },
+    {
+      "id": "rtk_l52f5974",
+      "rank": "8",
+      "suit": "hearts",
+      "kanji": "眉毛",
+      "hiragana": "まゆげ",
+      "romaji": "mayuge",
+      "english": "eyebrows",
+      "rhyme": "Remember this word you see, it's mayuge",
+      "sentence": {
+        "kanji": "彼女の眉毛は太いな。",
+        "romaji": "kanojo no mayuge ha futoi na",
+        "english": "She has thick eyebrows."
+      },
+      "rtkLesson": 52,
+      "rtkFrame": 5974
+    }
+  ]
+}
