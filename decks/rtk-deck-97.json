@@ -1,0 +1,418 @@
+{
+  "cards": [
+    {
+      "id": "A_hearts",
+      "rank": "A",
+      "suit": "hearts",
+      "kanji": "身振り",
+      "hiragana": "みぶり",
+      "romaji": "miburi",
+      "english": "gesture, gesticulation",
+      "rhyme": "Remember this word you see, it's miburi",
+      "sentence": {
+        "kanji": "彼は身振りを交えて説明してくれたの。",
+        "romaji": "kare ha miburi wo majiete setsumei shite kureta no",
+        "english": "He explained it to me while gesturing."
+      },
+      "rtkLesson": 55,
+      "rtkFrame": 4301,
+      "sourceLesson": 55
+    },
+    {
+      "id": "2_hearts",
+      "rank": "2",
+      "suit": "hearts",
+      "kanji": "送別",
+      "hiragana": "そうべつ",
+      "romaji": "soubetsu",
+      "english": "farewell, send-off",
+      "rhyme": "Remember this word you see, it's soubetsu",
+      "sentence": {
+        "kanji": "送別の辞は誰に頼みましょうか。",
+        "romaji": "soubetsu no ji ha dare ni tanomimashou ka",
+        "english": "Whom shall we ask to give a farewell speech?"
+      },
+      "rtkLesson": 55,
+      "rtkFrame": 4347,
+      "sourceLesson": 55
+    },
+    {
+      "id": "3_hearts",
+      "rank": "3",
+      "suit": "hearts",
+      "kanji": "振り仮名",
+      "hiragana": "ふりがな",
+      "romaji": "furigana",
+      "english": "reading aid in kana characters",
+      "rhyme": "Remember this word you see, it's furigana",
+      "sentence": {
+        "kanji": "名前に振り仮名をつけてください。",
+        "romaji": "namae ni furigana wo tsukete kudasai",
+        "english": "Please indicate the pronunciation of your name with kana."
+      },
+      "rtkLesson": 55,
+      "rtkFrame": 4678,
+      "sourceLesson": 55
+    },
+    {
+      "id": "4_hearts",
+      "rank": "4",
+      "suit": "hearts",
+      "kanji": "演説",
+      "hiragana": "えんぜつ",
+      "romaji": "enzetsu",
+      "english": "speech, address",
+      "rhyme": "Remember this word you see, it's enzetsu",
+      "sentence": {
+        "kanji": "彼は地方で演説したのよ。",
+        "romaji": "kare ha chihou de enzetsu shita no yo",
+        "english": "He made a speech in the provinces."
+      },
+      "rtkLesson": 55,
+      "rtkFrame": 4679,
+      "sourceLesson": 55
+    },
+    {
+      "id": "5_hearts",
+      "rank": "5",
+      "suit": "hearts",
+      "kanji": "公演",
+      "hiragana": "こうえん",
+      "romaji": "kouen",
+      "english": "public performance",
+      "rhyme": "Remember this word you see, it's kouen",
+      "sentence": {
+        "kanji": "彼らの海外公演が発表されたよ。",
+        "romaji": "karera no kaigaikouen ga hapyou sareta yo",
+        "english": "Their overseas performances were announced."
+      },
+      "rtkLesson": 55,
+      "rtkFrame": 4680,
+      "sourceLesson": 55
+    },
+    {
+      "id": "6_hearts",
+      "rank": "6",
+      "suit": "hearts",
+      "kanji": "出演",
+      "hiragana": "しゅつえん",
+      "romaji": "shutsuen",
+      "english": "appearance on stage, performance",
+      "rhyme": "Remember this word you see, it's shutsuen",
+      "sentence": {
+        "kanji": "彼女はその映画に出演しているよ。",
+        "romaji": "kanojo ha sono eiga ni shutsuen shite iru yo",
+        "english": "She is performing in the movie."
+      },
+      "rtkLesson": 55,
+      "rtkFrame": 4681,
+      "sourceLesson": 55
+    },
+    {
+      "id": "7_hearts",
+      "rank": "7",
+      "suit": "hearts",
+      "kanji": "演劇",
+      "hiragana": "えんげき",
+      "romaji": "engeki",
+      "english": "drama, play",
+      "rhyme": "Remember this word you see, it's engeki",
+      "sentence": {
+        "kanji": "彼女は演劇を学んでいます。",
+        "romaji": "kanojo ha engeki wo manande imasu",
+        "english": "She studies acting."
+      },
+      "rtkLesson": 55,
+      "rtkFrame": 4687,
+      "sourceLesson": 55
+    },
+    {
+      "id": "8_hearts",
+      "rank": "8",
+      "suit": "hearts",
+      "kanji": "講演",
+      "hiragana": "こうえん",
+      "romaji": "kouen",
+      "english": "lecture",
+      "rhyme": "Remember this word you see, it's kouen",
+      "sentence": {
+        "kanji": "彼の講演は評判がいい。",
+        "romaji": "kare no kouen ha hyouban ga ii",
+        "english": "His lectures have a good reputation."
+      },
+      "rtkLesson": 55,
+      "rtkFrame": 4758,
+      "sourceLesson": 55
+    },
+    {
+      "id": "9_hearts",
+      "rank": "9",
+      "suit": "hearts",
+      "kanji": "関わる",
+      "hiragana": "かかわる",
+      "romaji": "kakawaru",
+      "english": "involve, concern",
+      "rhyme": "Remember this word you see, it's kakawaru",
+      "sentence": {
+        "kanji": "医師は人の命に関わる大切な職業だよ。",
+        "romaji": "ishi ha hito no inochi ni kakawaru taisetsu na shokugyou da yo",
+        "english": "A doctor's job is very important, as people's lives depend on it."
+      },
+      "rtkLesson": 55,
+      "rtkFrame": 4767,
+      "sourceLesson": 55
+    },
+    {
+      "id": "10_hearts",
+      "rank": "10",
+      "suit": "hearts",
+      "kanji": "振動",
+      "hiragana": "しんどう",
+      "romaji": "shindou",
+      "english": "vibration",
+      "rhyme": "Remember this word you see, it's shindou",
+      "sentence": {
+        "kanji": "車の振動で棚の荷物が落ちた。",
+        "romaji": "kuruma no shindou de tana no nimotsu ga ochita 。",
+        "english": "Vibration from a passing car caused things on the shelf to fall down."
+      },
+      "rtkLesson": 55,
+      "rtkFrame": 5025,
+      "sourceLesson": 55
+    },
+    {
+      "id": "J_hearts",
+      "rank": "J",
+      "suit": "hearts",
+      "kanji": "税関",
+      "hiragana": "ぜいかん",
+      "romaji": "zeikan",
+      "english": "custom house, customs",
+      "rhyme": "Remember this word you see, it's zeikan",
+      "sentence": {
+        "kanji": "毛皮を税関で没収されたんだ。",
+        "romaji": "kegawa wo zeikan de boshuu sareta n da",
+        "english": "The fur was seized at customs."
+      },
+      "rtkLesson": 55,
+      "rtkFrame": 5170,
+      "sourceLesson": 55
+    },
+    {
+      "id": "Q_hearts",
+      "rank": "Q",
+      "suit": "hearts",
+      "kanji": "唇",
+      "hiragana": "くちびる",
+      "romaji": "kuchibiru",
+      "english": "lip, lips",
+      "rhyme": "Remember this word you see, it's kuchibiru",
+      "sentence": {
+        "kanji": "寒くて唇が青くなってしまった。",
+        "romaji": "samuku te kuchibiru ga aoku nate shimata",
+        "english": "My lips are blue with cold."
+      },
+      "rtkLesson": 55,
+      "rtkFrame": 5183,
+      "sourceLesson": 55
+    },
+    {
+      "id": "K_hearts",
+      "rank": "K",
+      "suit": "hearts",
+      "kanji": "妊娠",
+      "hiragana": "にんしん",
+      "romaji": "ninshin",
+      "english": "pregnancy, conception",
+      "rhyme": "Remember this word you see, it's ninshin",
+      "sentence": {
+        "kanji": "彼女が妊娠したそうです。",
+        "romaji": "kanojo ga ninshin shita sou desu",
+        "english": "I hear that she's pregnant."
+      },
+      "rtkLesson": 55,
+      "rtkFrame": 5347,
+      "sourceLesson": 55
+    },
+    {
+      "id": "A_diamonds",
+      "rank": "A",
+      "suit": "diamonds",
+      "kanji": "振り向く",
+      "hiragana": "ふりむく",
+      "romaji": "furimuku",
+      "english": "turn around, look back",
+      "rhyme": "Remember this word you see, it's furimuku",
+      "sentence": {
+        "kanji": "彼女は振り向いて俺に微笑んだんだ。",
+        "romaji": "kanojo ha furimuite ore ni hohoenda n da",
+        "english": "She turned around and smiled at me."
+      },
+      "rtkLesson": 55,
+      "rtkFrame": 5449,
+      "sourceLesson": 55
+    },
+    {
+      "id": "2_diamonds",
+      "rank": "2",
+      "suit": "diamonds",
+      "kanji": "振り返る",
+      "hiragana": "ふりかえる",
+      "romaji": "furikaeru",
+      "english": "turn one's head, turn round",
+      "rhyme": "Remember this word you see, it's furikaeru",
+      "sentence": {
+        "kanji": "学生時代を懐かしく振り返ったんだ。",
+        "romaji": "gakusei jidai wo natsukashiku furikaeta n da",
+        "english": "I looked back fondly on my school days."
+      },
+      "rtkLesson": 55,
+      "rtkFrame": 5488,
+      "sourceLesson": 55
+    },
+    {
+      "id": "3_diamonds",
+      "rank": "3",
+      "suit": "diamonds",
+      "kanji": "魅力",
+      "hiragana": "みりょく",
+      "romaji": "miryoku",
+      "english": "charm, attraction",
+      "rhyme": "Remember this word you see, it's miryoku",
+      "sentence": {
+        "kanji": "彼女の明るさに魅力を感じました。",
+        "romaji": "kanojo no akarusa ni miryoku wo kanjimashita",
+        "english": "I was charmed by her cheerfulness."
+      },
+      "rtkLesson": 55,
+      "rtkFrame": 5547,
+      "sourceLesson": 55
+    },
+    {
+      "id": "4_diamonds",
+      "rank": "4",
+      "suit": "diamonds",
+      "kanji": "塊",
+      "hiragana": "かたまり",
+      "romaji": "katamari",
+      "english": "lump, ingot",
+      "rhyme": "Remember this word you see, it's katamari",
+      "sentence": {
+        "kanji": "道に土の塊ができてたよ。",
+        "romaji": "michi ni tsuchi no katamari ga dekiteta yo",
+        "english": "A clump of earth had formed on the road."
+      },
+      "rtkLesson": 55,
+      "rtkFrame": 5548,
+      "sourceLesson": 55
+    },
+    {
+      "id": "5_diamonds",
+      "rank": "5",
+      "suit": "diamonds",
+      "kanji": "醜い",
+      "hiragana": "みにくい",
+      "romaji": "minikui",
+      "english": "ugly, bad-looking",
+      "rhyme": "Remember this word you see, it's minikui",
+      "sentence": {
+        "kanji": "醜い争いはやめましょう。",
+        "romaji": "minikui arasoi ha yamemashou",
+        "english": "Let's stop an ugly fight."
+      },
+      "rtkLesson": 55,
+      "rtkFrame": 5549,
+      "sourceLesson": 55
+    },
+    {
+      "id": "6_diamonds",
+      "rank": "6",
+      "suit": "diamonds",
+      "kanji": "演じる",
+      "hiragana": "えんじる",
+      "romaji": "enjiru",
+      "english": "perform, play",
+      "rhyme": "Remember this word you see, it's enjiru",
+      "sentence": {
+        "kanji": "彼はよく刑事の役を演じるね。",
+        "romaji": "kare ha yoku keiji no yaku wo enjiru ne",
+        "english": "He often performs the role of a detective."
+      },
+      "rtkLesson": 55,
+      "rtkFrame": 5588,
+      "sourceLesson": 55
+    },
+    {
+      "id": "7_diamonds",
+      "rank": "7",
+      "suit": "diamonds",
+      "kanji": "邪魔",
+      "hiragana": "じゃま",
+      "romaji": "jama",
+      "english": "hindrance, obstruction",
+      "rhyme": "Remember this word you see, it's jama",
+      "sentence": {
+        "kanji": "邪魔です、どいてください。",
+        "romaji": "jama desu doite kudasai",
+        "english": "You're in the way, so please move."
+      },
+      "rtkLesson": 55,
+      "rtkFrame": 5759,
+      "sourceLesson": 55
+    },
+    {
+      "id": "8_diamonds",
+      "rank": "8",
+      "suit": "diamonds",
+      "kanji": "演奏",
+      "hiragana": "えんそう",
+      "romaji": "ensou",
+      "english": "musical performance",
+      "rhyme": "Remember this word you see, it's ensou",
+      "sentence": {
+        "kanji": "彼女のピアノの演奏は素晴らしいね。",
+        "romaji": "kanojo no piano no ensou ha subarashii ne",
+        "english": "Her piano performance is wonderful."
+      },
+      "rtkLesson": 55,
+      "rtkFrame": 5869,
+      "sourceLesson": 55
+    },
+    {
+      "id": "9_diamonds",
+      "rank": "9",
+      "suit": "diamonds",
+      "kanji": "襲う",
+      "hiragana": "おそう",
+      "romaji": "osou",
+      "english": "raid, attack",
+      "rhyme": "Remember this word you see, it's osou",
+      "sentence": {
+        "kanji": "山で登山客が熊に襲われたよ。",
+        "romaji": "yama de tozan kyaku ga kuma ni osowareta yo",
+        "english": "Some climbers were attacked by a bear in the mountains."
+      },
+      "rtkLesson": 55,
+      "rtkFrame": 5915,
+      "sourceLesson": 55
+    },
+    {
+      "id": "10_diamonds",
+      "rank": "10",
+      "suit": "diamonds",
+      "kanji": "雰囲気",
+      "hiragana": "ふんいき",
+      "romaji": "funiki",
+      "english": "atmosphere, mood",
+      "rhyme": "Remember this word you see, it's funiki",
+      "sentence": {
+        "kanji": "とても雰囲気のいいお店ですね。",
+        "romaji": "totemo funiki no ii omise desu ne",
+        "english": "The shop has a really good atmosphere."
+      },
+      "rtkLesson": 56,
+      "rtkFrame": 5665,
+      "sourceLesson": 56
+    }
+  ]
+}

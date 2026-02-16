@@ -1,0 +1,940 @@
+{
+  "cards": [
+    {
+      "id": "A_hearts",
+      "rank": "A",
+      "suit": "hearts",
+      "kanji": "今夜",
+      "hiragana": "こんや",
+      "romaji": "konya",
+      "english": "tonight, this evening",
+      "rhyme": "Remember this word you see, it's konya",
+      "sentence": {
+        "kanji": "今夜は月がとてもきれいです。",
+        "romaji": "konya ha tsuki ga totemo kirei desu",
+        "english": "The moon is very beautiful tonight."
+      },
+      "rtkLesson": 41,
+      "rtkFrame": 468,
+      "sourceLesson": 41
+    },
+    {
+      "id": "2_hearts",
+      "rank": "2",
+      "suit": "hearts",
+      "kanji": "今度",
+      "hiragana": "こんど",
+      "romaji": "kondo",
+      "english": "this time, next time",
+      "rhyme": "Remember this word you see, it's kondo",
+      "sentence": {
+        "kanji": "今度はどこに行きたいですか。",
+        "romaji": "kondo ha doko ni ikitai desu ka",
+        "english": "Where do you want to go this time?"
+      },
+      "rtkLesson": 41,
+      "rtkFrame": 541,
+      "sourceLesson": 41
+    },
+    {
+      "id": "3_hearts",
+      "rank": "3",
+      "suit": "hearts",
+      "kanji": "野菜",
+      "hiragana": "やさい",
+      "romaji": "yasai",
+      "english": "vegetable",
+      "rhyme": "Remember this word you see, it's yasai",
+      "sentence": {
+        "kanji": "私は毎日たくさん野菜を食べます。",
+        "romaji": "watashi ha mainichi takusan yasai wo tabemasu",
+        "english": "I eat a lot of vegetables every day."
+      },
+      "rtkLesson": 41,
+      "rtkFrame": 557,
+      "sourceLesson": 41
+    },
+    {
+      "id": "4_hearts",
+      "rank": "4",
+      "suit": "hearts",
+      "kanji": "価格",
+      "hiragana": "かかく",
+      "romaji": "kakaku",
+      "english": "price, cost",
+      "rhyme": "Remember this word you see, it's kakaku",
+      "sentence": {
+        "kanji": "ガソリンの価格がどんどん上がっている。",
+        "romaji": "gasorin no kakaku ga dondon agate iru",
+        "english": "The price of gasoline keeps going up fast."
+      },
+      "rtkLesson": 41,
+      "rtkFrame": 588,
+      "sourceLesson": 41
+    },
+    {
+      "id": "5_hearts",
+      "rank": "5",
+      "suit": "hearts",
+      "kanji": "南",
+      "hiragana": "みなみ",
+      "romaji": "minami",
+      "english": "south",
+      "rhyme": "Remember this word you see, it's minami",
+      "sentence": {
+        "kanji": "私の家は町の南にあります。",
+        "romaji": "watashi no ie ha machi no minami ni arimasu",
+        "english": "My house is in the south of the town."
+      },
+      "rtkLesson": 41,
+      "rtkFrame": 639,
+      "sourceLesson": 41
+    },
+    {
+      "id": "6_hearts",
+      "rank": "6",
+      "suit": "hearts",
+      "kanji": "必要",
+      "hiragana": "ひつよう",
+      "romaji": "hitsuyou",
+      "english": "need, necessity",
+      "rhyme": "Remember this word you see, it's hitsuyou",
+      "sentence": {
+        "kanji": "私にはたくさんのお金が必要だ。",
+        "romaji": "watashi ni ha takusan no okane ga hitsuyou da",
+        "english": "I need a lot of money."
+      },
+      "rtkLesson": 41,
+      "rtkFrame": 713,
+      "sourceLesson": 41
+    },
+    {
+      "id": "7_hearts",
+      "rank": "7",
+      "suit": "hearts",
+      "kanji": "予定",
+      "hiragana": "よてい",
+      "romaji": "yotei",
+      "english": "schedule, plan",
+      "rhyme": "Remember this word you see, it's yotei",
+      "sentence": {
+        "kanji": "今日の予定を教えてください。",
+        "romaji": "kyou no yotei wo oshiete kudasai",
+        "english": "Please tell me what your schedule is for today."
+      },
+      "rtkLesson": 41,
+      "rtkFrame": 743,
+      "sourceLesson": 41
+    },
+    {
+      "id": "8_hearts",
+      "rank": "8",
+      "suit": "hearts",
+      "kanji": "予習",
+      "hiragana": "よしゅう",
+      "romaji": "yoshuu",
+      "english": "preparation, previewing (a lesson)",
+      "rhyme": "Remember this word you see, it's yoshuu",
+      "sentence": {
+        "kanji": "明日の予習をしましょう。",
+        "romaji": "ashita no yoshuu wo shimashou",
+        "english": "Let's prepare for tomorrow."
+      },
+      "rtkLesson": 41,
+      "rtkFrame": 746,
+      "sourceLesson": 41
+    },
+    {
+      "id": "9_hearts",
+      "rank": "9",
+      "suit": "hearts",
+      "kanji": "予約",
+      "hiragana": "よやく",
+      "romaji": "yoyaku",
+      "english": "reservation, subscription",
+      "rhyme": "Remember this word you see, it's yoyaku",
+      "sentence": {
+        "kanji": "レストランを予約しました。",
+        "romaji": "resutoran wo yoyaku shimashita",
+        "english": "I made a reservation at the restaurant."
+      },
+      "rtkLesson": 41,
+      "rtkFrame": 748,
+      "sourceLesson": 41
+    },
+    {
+      "id": "10_hearts",
+      "rank": "10",
+      "suit": "hearts",
+      "kanji": "要求",
+      "hiragana": "ようきゅう",
+      "romaji": "youkyuu",
+      "english": "requirement, demand",
+      "rhyme": "Remember this word you see, it's youkyuu",
+      "sentence": {
+        "kanji": "彼は私の要求にこたえた。",
+        "romaji": "kare ha watashi no youkyuu ni kotaeta",
+        "english": "He answered my demands."
+      },
+      "rtkLesson": 41,
+      "rtkFrame": 951,
+      "sourceLesson": 41
+    },
+    {
+      "id": "J_hearts",
+      "rank": "J",
+      "suit": "hearts",
+      "kanji": "禁煙",
+      "hiragana": "きんえん",
+      "romaji": "kinen",
+      "english": "no smoking, giving up smoking",
+      "rhyme": "Remember this word you see, it's kinen",
+      "sentence": {
+        "kanji": "彼は今、禁煙しています。",
+        "romaji": "kare ha ima kinen shite imasu",
+        "english": "He's stopped smoking now."
+      },
+      "rtkLesson": 41,
+      "rtkFrame": 1090,
+      "sourceLesson": 41
+    },
+    {
+      "id": "Q_hearts",
+      "rank": "Q",
+      "suit": "hearts",
+      "kanji": "今後",
+      "hiragana": "こんご",
+      "romaji": "kongo",
+      "english": "after this, in the future",
+      "rhyme": "Remember this word you see, it's kongo",
+      "sentence": {
+        "kanji": "今後ともよろしくお願いします。",
+        "romaji": "kongo tomo yoroshiku onegai shimasu",
+        "english": "I look forward to working with you in the future."
+      },
+      "rtkLesson": 41,
+      "rtkFrame": 1142,
+      "sourceLesson": 41
+    },
+    {
+      "id": "K_hearts",
+      "rank": "K",
+      "suit": "hearts",
+      "kanji": "今朝",
+      "hiragana": "けさ",
+      "romaji": "kesa",
+      "english": "this morning",
+      "rhyme": "Remember this word you see, it's kesa",
+      "sentence": {
+        "kanji": "今朝から頭が痛い。",
+        "romaji": "kesa kara atama ga itai",
+        "english": "I've had a headache since this morning."
+      },
+      "rtkLesson": 41,
+      "rtkFrame": 1194,
+      "sourceLesson": 41
+    },
+    {
+      "id": "A_diamonds",
+      "rank": "A",
+      "suit": "diamonds",
+      "kanji": "評価",
+      "hiragana": "ひょうか",
+      "romaji": "hyouka",
+      "english": "evaluation, appraisal",
+      "rhyme": "Remember this word you see, it's hyouka",
+      "sentence": {
+        "kanji": "最近、彼の評価が上がった。",
+        "romaji": "saikin kare no hyouka ga agata",
+        "english": "He's been receiving more recognition lately."
+      },
+      "rtkLesson": 41,
+      "rtkFrame": 1247,
+      "sourceLesson": 41
+    },
+    {
+      "id": "2_diamonds",
+      "rank": "2",
+      "suit": "diamonds",
+      "kanji": "西",
+      "hiragana": "にし",
+      "romaji": "nishi",
+      "english": "west, western",
+      "rhyme": "Remember this word you see, it's nishi",
+      "sentence": {
+        "kanji": "太陽は西に沈みます。",
+        "romaji": "taiyou ha nishi ni shizumimasu",
+        "english": "The sun sets in the west."
+      },
+      "rtkLesson": 41,
+      "rtkFrame": 1303,
+      "sourceLesson": 41
+    },
+    {
+      "id": "3_diamonds",
+      "rank": "3",
+      "suit": "diamonds",
+      "kanji": "野球",
+      "hiragana": "やきゅう",
+      "romaji": "yakyuu",
+      "english": "baseball",
+      "rhyme": "Remember this word you see, it's yakyuu",
+      "sentence": {
+        "kanji": "友達と野球をしました。",
+        "romaji": "tomodachi to yakyuu wo shimashita",
+        "english": "I played baseball with a friend."
+      },
+      "rtkLesson": 41,
+      "rtkFrame": 1312,
+      "sourceLesson": 41
+    },
+    {
+      "id": "4_diamonds",
+      "rank": "4",
+      "suit": "diamonds",
+      "kanji": "記念日",
+      "hiragana": "きねんび",
+      "romaji": "kinenbi",
+      "english": "memorial day, anniversary",
+      "rhyme": "Remember this word you see, it's kinenbi",
+      "sentence": {
+        "kanji": "今日は両親の結婚記念日です。",
+        "romaji": "kyou ha ryoushin no kekon kinenbi desu",
+        "english": "Today's my parents' wedding anniversary."
+      },
+      "rtkLesson": 41,
+      "rtkFrame": 1442,
+      "sourceLesson": 41
+    },
+    {
+      "id": "5_diamonds",
+      "rank": "5",
+      "suit": "diamonds",
+      "kanji": "残念",
+      "hiragana": "ざんねん",
+      "romaji": "zannen",
+      "english": "regretful, disappointing",
+      "rhyme": "Remember this word you see, it's zannen",
+      "sentence": {
+        "kanji": "その試合は残念な結果になった。",
+        "romaji": "sono shiai ha zannen na keka ni nata",
+        "english": "The result of the game was disappointing."
+      },
+      "rtkLesson": 41,
+      "rtkFrame": 1443,
+      "sourceLesson": 41
+    },
+    {
+      "id": "6_diamonds",
+      "rank": "6",
+      "suit": "diamonds",
+      "kanji": "預かる",
+      "hiragana": "あずかる",
+      "romaji": "azukaru",
+      "english": "receive on deposit, take charge of",
+      "rhyme": "Remember this word you see, it's azukaru",
+      "sentence": {
+        "kanji": "荷物を預かってください。",
+        "romaji": "nimotsu wo azukate kudasai",
+        "english": "Please take care of the luggage."
+      },
+      "rtkLesson": 41,
+      "rtkFrame": 1557,
+      "sourceLesson": 41
+    },
+    {
+      "id": "7_diamonds",
+      "rank": "7",
+      "suit": "diamonds",
+      "kanji": "分野",
+      "hiragana": "ぶんや",
+      "romaji": "bunya",
+      "english": "field, sphere",
+      "rhyme": "Remember this word you see, it's bunya",
+      "sentence": {
+        "kanji": "音楽は彼の得意な分野です。",
+        "romaji": "ongaku ha kare no tokui na bunya desu",
+        "english": "Music is his field of specialty."
+      },
+      "rtkLesson": 41,
+      "rtkFrame": 1558,
+      "sourceLesson": 41
+    },
+    {
+      "id": "8_diamonds",
+      "rank": "8",
+      "suit": "diamonds",
+      "kanji": "今回",
+      "hiragana": "こんかい",
+      "romaji": "konkai",
+      "english": "this time",
+      "rhyme": "Remember this word you see, it's konkai",
+      "sentence": {
+        "kanji": "まあ今回は許してあげよう。",
+        "romaji": "maa konkai ha yurushite ageyou",
+        "english": "Well, I'll let you off this time."
+      },
+      "rtkLesson": 41,
+      "rtkFrame": 1643,
+      "sourceLesson": 41
+    },
+    {
+      "id": "9_diamonds",
+      "rank": "9",
+      "suit": "diamonds",
+      "kanji": "嫌",
+      "hiragana": "いや",
+      "romaji": "iya",
+      "english": "dislike, have a dislike for",
+      "rhyme": "Remember this word you see, it's iya",
+      "sentence": {
+        "kanji": "私は待つのが嫌だ。",
+        "romaji": "watashi ha matsu no ga iya da",
+        "english": "I hate waiting."
+      },
+      "rtkLesson": 41,
+      "rtkFrame": 1705,
+      "sourceLesson": 41
+    },
+    {
+      "id": "10_diamonds",
+      "rank": "10",
+      "suit": "diamonds",
+      "kanji": "大嫌い",
+      "hiragana": "だいきらい",
+      "romaji": "daikirai",
+      "english": "hate",
+      "rhyme": "Remember this word you see, it's daikirai",
+      "sentence": {
+        "kanji": "私はテストが大嫌い。",
+        "romaji": "watashi ha tesuto ga daikirai",
+        "english": "I hate tests."
+      },
+      "rtkLesson": 41,
+      "rtkFrame": 1707,
+      "sourceLesson": 41
+    },
+    {
+      "id": "J_diamonds",
+      "rank": "J",
+      "suit": "diamonds",
+      "kanji": "預ける",
+      "hiragana": "あずける",
+      "romaji": "azukeru",
+      "english": "deposit, entrust",
+      "rhyme": "Remember this word you see, it's azukeru",
+      "sentence": {
+        "kanji": "鍵を彼に預けた。",
+        "romaji": "kagi wo kare ni azuketa",
+        "english": "I gave him the key to look after."
+      },
+      "rtkLesson": 41,
+      "rtkFrame": 1734,
+      "sourceLesson": 41
+    },
+    {
+      "id": "Q_diamonds",
+      "rank": "Q",
+      "suit": "diamonds",
+      "kanji": "西暦",
+      "hiragana": "せいれき",
+      "romaji": "seireki",
+      "english": "Christian Era, A.D.",
+      "rhyme": "Remember this word you see, it's seireki",
+      "sentence": {
+        "kanji": "西暦1964年に東京でオリンピックがあった。",
+        "romaji": "seireki senkyuuhyakurokujuuyonen ni toukyou de orinpiku ga ata",
+        "english": "The Tokyo Olympics were held in 1964."
+      },
+      "rtkLesson": 41,
+      "rtkFrame": 1766,
+      "sourceLesson": 41
+    },
+    {
+      "id": "K_diamonds",
+      "rank": "K",
+      "suit": "diamonds",
+      "kanji": "日陰",
+      "hiragana": "ひかげ",
+      "romaji": "hikage",
+      "english": "the shade",
+      "rhyme": "Remember this word you see, it's hikage",
+      "sentence": {
+        "kanji": "暑いので日陰で休みましょう。",
+        "romaji": "atsui no de hikage de yasumimashou",
+        "english": "It's hot so let's take a rest in the shade."
+      },
+      "rtkLesson": 41,
+      "rtkFrame": 1862,
+      "sourceLesson": 41
+    },
+    {
+      "id": "A_clubs",
+      "rank": "A",
+      "suit": "clubs",
+      "kanji": "今に",
+      "hiragana": "いまに",
+      "romaji": "imani",
+      "english": "before long, someday",
+      "rhyme": "Remember this word you see, it's imani",
+      "sentence": {
+        "kanji": "あなたも今に分かるでしょう。",
+        "romaji": "anata mo imani wakaru deshou",
+        "english": "You will understand one day."
+      },
+      "rtkLesson": 41,
+      "rtkFrame": 2004,
+      "sourceLesson": 41
+    },
+    {
+      "id": "2_clubs",
+      "rank": "2",
+      "suit": "clubs",
+      "kanji": "今ごろ",
+      "hiragana": "いまごろ",
+      "romaji": "imagoro",
+      "english": "about this time",
+      "rhyme": "Remember this word you see, it's imagoro",
+      "sentence": {
+        "kanji": "今ごろそんなこと言わないで。",
+        "romaji": "imagoro sonna koto iwanai de",
+        "english": "Don't say such a thing now."
+      },
+      "rtkLesson": 41,
+      "rtkFrame": 2086,
+      "sourceLesson": 41
+    },
+    {
+      "id": "3_clubs",
+      "rank": "3",
+      "suit": "clubs",
+      "kanji": "東西",
+      "hiragana": "とうざい",
+      "romaji": "touzai",
+      "english": "east and west",
+      "rhyme": "Remember this word you see, it's touzai",
+      "sentence": {
+        "kanji": "東西に大きな道路が通っています。",
+        "romaji": "touzai ni ooki na douro ga toote imasu",
+        "english": "There's a major road running from east to west."
+      },
+      "rtkLesson": 41,
+      "rtkFrame": 2123,
+      "sourceLesson": 41
+    },
+    {
+      "id": "4_clubs",
+      "rank": "4",
+      "suit": "clubs",
+      "kanji": "南北",
+      "hiragana": "なんぼく",
+      "romaji": "nanboku",
+      "english": "north and south",
+      "rhyme": "Remember this word you see, it's nanboku",
+      "sentence": {
+        "kanji": "南北に山が広がっています。",
+        "romaji": "nanboku ni yama ga hirogate imasu",
+        "english": "The mountains stretch out to the north and south."
+      },
+      "rtkLesson": 41,
+      "rtkFrame": 2142,
+      "sourceLesson": 41
+    },
+    {
+      "id": "5_clubs",
+      "rank": "5",
+      "suit": "clubs",
+      "kanji": "価値",
+      "hiragana": "かち",
+      "romaji": "kachi",
+      "english": "value, merit",
+      "rhyme": "Remember this word you see, it's kachi",
+      "sentence": {
+        "kanji": "とても価値のある話を聞いたよ。",
+        "romaji": "totemo kachi no aru hanashi wo kiita yo",
+        "english": "I heard a very valuable story."
+      },
+      "rtkLesson": 41,
+      "rtkFrame": 2196,
+      "sourceLesson": 41
+    },
+    {
+      "id": "6_clubs",
+      "rank": "6",
+      "suit": "clubs",
+      "kanji": "物価",
+      "hiragana": "ぶっか",
+      "romaji": "buka",
+      "english": "prices",
+      "rhyme": "Remember this word you see, it's buka",
+      "sentence": {
+        "kanji": "この国の物価はここ10年でだいぶ上がったね。",
+        "romaji": "kono kuni no buka ha koko 10 nen de daibu agata ne",
+        "english": "Prices in this country have gone up considerably these last ten years."
+      },
+      "rtkLesson": 41,
+      "rtkFrame": 2265,
+      "sourceLesson": 41
+    },
+    {
+      "id": "7_clubs",
+      "rank": "7",
+      "suit": "clubs",
+      "kanji": "要点",
+      "hiragana": "ようてん",
+      "romaji": "youten",
+      "english": "main point, gist",
+      "rhyme": "Remember this word you see, it's youten",
+      "sentence": {
+        "kanji": "話の要点だけ教えてください。",
+        "romaji": "hanashi no youten dake oshiete kudasai",
+        "english": "Please tell me just the main points of the talk."
+      },
+      "rtkLesson": 41,
+      "rtkFrame": 2386,
+      "sourceLesson": 41
+    },
+    {
+      "id": "8_clubs",
+      "rank": "8",
+      "suit": "clubs",
+      "kanji": "定価",
+      "hiragana": "ていか",
+      "romaji": "teika",
+      "english": "fixed price",
+      "rhyme": "Remember this word you see, it's teika",
+      "sentence": {
+        "kanji": "この本の定価は525円です。",
+        "romaji": "kono hon no teika ha 525 en desu",
+        "english": "The regular price of this book is 525 yen."
+      },
+      "rtkLesson": 41,
+      "rtkFrame": 2451,
+      "sourceLesson": 41
+    },
+    {
+      "id": "9_clubs",
+      "rank": "9",
+      "suit": "clubs",
+      "kanji": "予算",
+      "hiragana": "よさん",
+      "romaji": "yosan",
+      "english": "budget",
+      "rhyme": "Remember this word you see, it's yosan",
+      "sentence": {
+        "kanji": "車の費用、予算オーバーだ。",
+        "romaji": "kuruma no hiyou、 yosan o-ba- da",
+        "english": "The car expenses are over budget."
+      },
+      "rtkLesson": 41,
+      "rtkFrame": 2456,
+      "sourceLesson": 41
+    },
+    {
+      "id": "10_clubs",
+      "rank": "10",
+      "suit": "clubs",
+      "kanji": "予報",
+      "hiragana": "よほう",
+      "romaji": "yohou",
+      "english": "forecast, prediction",
+      "rhyme": "Remember this word you see, it's yohou",
+      "sentence": {
+        "kanji": "予報では明日は雨ですね。",
+        "romaji": "yohou de ha ashita ha ame desu ne",
+        "english": "It will rain tomorrow according to the forecast."
+      },
+      "rtkLesson": 41,
+      "rtkFrame": 2457,
+      "sourceLesson": 41
+    },
+    {
+      "id": "J_clubs",
+      "rank": "J",
+      "suit": "clubs",
+      "kanji": "今にも",
+      "hiragana": "いまにも",
+      "romaji": "imanimo",
+      "english": "at any moment",
+      "rhyme": "Remember this word you see, it's imanimo",
+      "sentence": {
+        "kanji": "今にも雨が降りそうですね。",
+        "romaji": "imanimo ame ga furisou desu ne",
+        "english": "It looks like it's going to rain any moment now."
+      },
+      "rtkLesson": 41,
+      "rtkFrame": 2478,
+      "sourceLesson": 41
+    },
+    {
+      "id": "Q_clubs",
+      "rank": "Q",
+      "suit": "clubs",
+      "kanji": "南東",
+      "hiragana": "なんとう",
+      "romaji": "nantou",
+      "english": "southeast",
+      "rhyme": "Remember this word you see, it's nantou",
+      "sentence": {
+        "kanji": "南東の方角に月が見えるよ。",
+        "romaji": "nantou no hougaku ni tsuki ga mieru yo",
+        "english": "You can see the moon in the southeast."
+      },
+      "rtkLesson": 41,
+      "rtkFrame": 2632,
+      "sourceLesson": 41
+    },
+    {
+      "id": "K_clubs",
+      "rank": "K",
+      "suit": "clubs",
+      "kanji": "予言",
+      "hiragana": "よげん",
+      "romaji": "yogen",
+      "english": "prediction, forecast",
+      "rhyme": "Remember this word you see, it's yogen",
+      "sentence": {
+        "kanji": "彼の予言は当たったことがないね。",
+        "romaji": "kare no yogen ha atata koto ga nai ne",
+        "english": "His predictions have never been correct."
+      },
+      "rtkLesson": 41,
+      "rtkFrame": 2963,
+      "sourceLesson": 41
+    },
+    {
+      "id": "A_spades",
+      "rank": "A",
+      "suit": "spades",
+      "kanji": "主要",
+      "hiragana": "しゅよう",
+      "romaji": "shuyou",
+      "english": "main, principal",
+      "rhyme": "Remember this word you see, it's shuyou",
+      "sentence": {
+        "kanji": "IT産業はインドの主要産業よね。",
+        "romaji": "aitei- sangyou ha indo no shuyou sangyou yo ne",
+        "english": "IT is a major industry in India."
+      },
+      "rtkLesson": 41,
+      "rtkFrame": 3002,
+      "sourceLesson": 41
+    },
+    {
+      "id": "2_spades",
+      "rank": "2",
+      "suit": "spades",
+      "kanji": "平野",
+      "hiragana": "へいや",
+      "romaji": "heiya",
+      "english": "plain, open field",
+      "rhyme": "Remember this word you see, it's heiya",
+      "sentence": {
+        "kanji": "広い平野が一面雪で真っ白でした。",
+        "romaji": "hiroi heiya ga ichimen yuki de mashiro deshita",
+        "english": "The vast plains were pure-white with the snow."
+      },
+      "rtkLesson": 41,
+      "rtkFrame": 3082,
+      "sourceLesson": 41
+    },
+    {
+      "id": "3_spades",
+      "rank": "3",
+      "suit": "spades",
+      "kanji": "要するに",
+      "hiragana": "ようするに",
+      "romaji": "yousuruni",
+      "english": "in a word, in short",
+      "rhyme": "Remember this word you see, it's yousuruni",
+      "sentence": {
+        "kanji": "要するに時機を待つべきだ。",
+        "romaji": "yousuruni jiki wo matsubeki da",
+        "english": "In short, we should wait for the right opportunity."
+      },
+      "rtkLesson": 41,
+      "rtkFrame": 3167,
+      "sourceLesson": 41
+    },
+    {
+      "id": "4_spades",
+      "rank": "4",
+      "suit": "spades",
+      "kanji": "要する",
+      "hiragana": "ようする",
+      "romaji": "yousuru",
+      "english": "require, need",
+      "rhyme": "Remember this word you see, it's yousuru",
+      "sentence": {
+        "kanji": "このビルは完成までに2年を要した。",
+        "romaji": "kono biru ha kansei made ni 2 nen wo youshita",
+        "english": "The building needed two years to be completed."
+      },
+      "rtkLesson": 41,
+      "rtkFrame": 3232,
+      "sourceLesson": 41
+    },
+    {
+      "id": "5_spades",
+      "rank": "5",
+      "suit": "spades",
+      "kanji": "野原",
+      "hiragana": "のはら",
+      "romaji": "nohara",
+      "english": "field, plain",
+      "rhyme": "Remember this word you see, it's nohara",
+      "sentence": {
+        "kanji": "私たちは野原で花をつんだの。",
+        "romaji": "watashitachi ha nohara de hana wo tsunda no",
+        "english": "We picked flowers in the field."
+      },
+      "rtkLesson": 41,
+      "rtkFrame": 3251,
+      "sourceLesson": 41
+    },
+    {
+      "id": "6_spades",
+      "rank": "6",
+      "suit": "spades",
+      "kanji": "要因",
+      "hiragana": "よういん",
+      "romaji": "youin",
+      "english": "primary factor, main cause",
+      "rhyme": "Remember this word you see, it's youin",
+      "sentence": {
+        "kanji": "私たちはがんの要因を研究しています。",
+        "romaji": "watashitachi ha gan no youin wo kenkyuu shite imasu",
+        "english": "We're researching the contributing factors of cancer."
+      },
+      "rtkLesson": 41,
+      "rtkFrame": 3254,
+      "sourceLesson": 41
+    },
+    {
+      "id": "7_spades",
+      "rank": "7",
+      "suit": "spades",
+      "kanji": "投票",
+      "hiragana": "とうひょう",
+      "romaji": "touhyou",
+      "english": "vote, ballot",
+      "rhyme": "Remember this word you see, it's touhyou",
+      "sentence": {
+        "kanji": "私は朝早く投票を済ませました。",
+        "romaji": "watashi ha asa hayaku touhyou wo sumasemashita",
+        "english": "I finished voting early in the morning."
+      },
+      "rtkLesson": 41,
+      "rtkFrame": 3318,
+      "sourceLesson": 41
+    },
+    {
+      "id": "8_spades",
+      "rank": "8",
+      "suit": "spades",
+      "kanji": "目標",
+      "hiragana": "もくひょう",
+      "romaji": "mokuhyou",
+      "english": "target, goal",
+      "rhyme": "Remember this word you see, it's mokuhyou",
+      "sentence": {
+        "kanji": "私は父を目標にしています。",
+        "romaji": "watashi ha chichi wo mokuhyou ni shite imasu",
+        "english": "I take my father as a role model."
+      },
+      "rtkLesson": 41,
+      "rtkFrame": 3320,
+      "sourceLesson": 41
+    },
+    {
+      "id": "9_spades",
+      "rank": "9",
+      "suit": "spades",
+      "kanji": "標準",
+      "hiragana": "ひょうじゅん",
+      "romaji": "hyoujun",
+      "english": "standard, norm",
+      "rhyme": "Remember this word you see, it's hyoujun",
+      "sentence": {
+        "kanji": "ニュースでは標準語が使われるの。",
+        "romaji": "nyu-su de ha hyoujungo ga tsukawareru no",
+        "english": "Standard language is used in news broadcasts."
+      },
+      "rtkLesson": 41,
+      "rtkFrame": 3321,
+      "sourceLesson": 41
+    },
+    {
+      "id": "10_spades",
+      "rank": "10",
+      "suit": "spades",
+      "kanji": "地価",
+      "hiragana": "ちか",
+      "romaji": "chika",
+      "english": "price of land",
+      "rhyme": "Remember this word you see, it's chika",
+      "sentence": {
+        "kanji": "東京の地価は上がり続けているんだ。",
+        "romaji": "toukyou no chika ha agaritsuzukete iru n da",
+        "english": "The price of land in Tokyo keeps going up."
+      },
+      "rtkLesson": 41,
+      "rtkFrame": 3337,
+      "sourceLesson": 41
+    },
+    {
+      "id": "J_spades",
+      "rank": "J",
+      "suit": "spades",
+      "kanji": "北西",
+      "hiragana": "ほくせい",
+      "romaji": "hokusei",
+      "english": "northwest",
+      "rhyme": "Remember this word you see, it's hokusei",
+      "sentence": {
+        "kanji": "台風は北西に進んでいます。",
+        "romaji": "taifuu ha hokusei ni susunde imasu",
+        "english": "The typhoon is advancing toward the northwest."
+      },
+      "rtkLesson": 41,
+      "rtkFrame": 3444,
+      "sourceLesson": 41
+    },
+    {
+      "id": "Q_spades",
+      "rank": "Q",
+      "suit": "spades",
+      "kanji": "南西",
+      "hiragana": "なんせい",
+      "romaji": "nansei",
+      "english": "southwest",
+      "rhyme": "Remember this word you see, it's nansei",
+      "sentence": {
+        "kanji": "ここから南西に進むと村があります。",
+        "romaji": "koko kara nansei ni susumu to mura ga arimasu",
+        "english": "There's a village if you continue southwest from here."
+      },
+      "rtkLesson": 41,
+      "rtkFrame": 3445,
+      "sourceLesson": 41
+    },
+    {
+      "id": "K_spades",
+      "rank": "K",
+      "suit": "spades",
+      "kanji": "予想",
+      "hiragana": "よそう",
+      "romaji": "yosou",
+      "english": "prospect, expectation",
+      "rhyme": "Remember this word you see, it's yosou",
+      "sentence": {
+        "kanji": "私の予想が当たった。",
+        "romaji": "watashi no yosou ga atata",
+        "english": "My forecast proved right."
+      },
+      "rtkLesson": 41,
+      "rtkFrame": 3583,
+      "sourceLesson": 41
+    }
+  ]
+}

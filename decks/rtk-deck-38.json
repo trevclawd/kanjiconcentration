@@ -1,0 +1,940 @@
+{
+  "cards": [
+    {
+      "id": "A_hearts",
+      "rank": "A",
+      "suit": "hearts",
+      "kanji": "値",
+      "hiragana": "あたい",
+      "romaji": "atai",
+      "english": "value, worth",
+      "rhyme": "Remember this word you see, it's atai",
+      "sentence": {
+        "kanji": "xの値を求めなさい。",
+        "romaji": "ekusu no atai wo motomenasai",
+        "english": "Calculate the value of x."
+      },
+      "rtkLesson": 27,
+      "rtkFrame": 2388,
+      "sourceLesson": 27
+    },
+    {
+      "id": "2_hearts",
+      "rank": "2",
+      "suit": "hearts",
+      "kanji": "貸し出し",
+      "hiragana": "かしだし",
+      "romaji": "kashidashi",
+      "english": "lending service, checking out",
+      "rhyme": "Remember this word you see, it's kashidashi",
+      "sentence": {
+        "kanji": "その本は貸し出ししていません。",
+        "romaji": "sono hon ha kashidashi shite imasen",
+        "english": "That book can't be checked out."
+      },
+      "rtkLesson": 27,
+      "rtkFrame": 2420,
+      "sourceLesson": 27
+    },
+    {
+      "id": "3_hearts",
+      "rank": "3",
+      "suit": "hearts",
+      "kanji": "人込み",
+      "hiragana": "ひとごみ",
+      "romaji": "hitogomi",
+      "english": "crowd",
+      "rhyme": "Remember this word you see, it's hitogomi",
+      "sentence": {
+        "kanji": "私は人込みが好きではありません。",
+        "romaji": "watashi ha hitogomi ga suki de ha arimasen",
+        "english": "I don't like crowds."
+      },
+      "rtkLesson": 27,
+      "rtkFrame": 2427,
+      "sourceLesson": 27
+    },
+    {
+      "id": "4_hearts",
+      "rank": "4",
+      "suit": "hearts",
+      "kanji": "一人一人",
+      "hiragana": "ひとりひとり",
+      "romaji": "hitorihitori",
+      "english": "each and every person",
+      "rhyme": "Remember this word you see, it's hitorihitori",
+      "sentence": {
+        "kanji": "この学校では一人一人の生徒を大切にしているの。",
+        "romaji": "kono gakou de ha hitorihitori no seito wo taisetsu ni shite iru no",
+        "english": "Each individual student is valued in this school."
+      },
+      "rtkLesson": 27,
+      "rtkFrame": 2437,
+      "sourceLesson": 27
+    },
+    {
+      "id": "5_hearts",
+      "rank": "5",
+      "suit": "hearts",
+      "kanji": "値上げ",
+      "hiragana": "ねあげ",
+      "romaji": "neage",
+      "english": "price hike",
+      "rhyme": "Remember this word you see, it's neage",
+      "sentence": {
+        "kanji": "バス代が値上げされました。",
+        "romaji": "basudai ga neage saremashita",
+        "english": "Bus fares were raised."
+      },
+      "rtkLesson": 27,
+      "rtkFrame": 2445,
+      "sourceLesson": 27
+    },
+    {
+      "id": "6_hearts",
+      "rank": "6",
+      "suit": "hearts",
+      "kanji": "代金",
+      "hiragana": "だいきん",
+      "romaji": "daikin",
+      "english": "charge, fee",
+      "rhyme": "Remember this word you see, it's daikin",
+      "sentence": {
+        "kanji": "ここで代金をお支払いください。",
+        "romaji": "koko de daikin wo o shiharai kudasai",
+        "english": "Please pay the bill here."
+      },
+      "rtkLesson": 27,
+      "rtkFrame": 2446,
+      "sourceLesson": 27
+    },
+    {
+      "id": "7_hearts",
+      "rank": "7",
+      "suit": "hearts",
+      "kanji": "定休日",
+      "hiragana": "ていきゅうび",
+      "romaji": "teikyuubi",
+      "english": "regular holiday",
+      "rhyme": "Remember this word you see, it's teikyuubi",
+      "sentence": {
+        "kanji": "この店は水曜が定休日です。",
+        "romaji": "kono mise ha suiyou ga teikyuubi desu",
+        "english": "This shop is closed on Wednesdays."
+      },
+      "rtkLesson": 27,
+      "rtkFrame": 2453,
+      "sourceLesson": 27
+    },
+    {
+      "id": "8_hearts",
+      "rank": "8",
+      "suit": "hearts",
+      "kanji": "運賃",
+      "hiragana": "うんちん",
+      "romaji": "unchin",
+      "english": "passenger fare",
+      "rhyme": "Remember this word you see, it's unchin",
+      "sentence": {
+        "kanji": "鉄道の運賃が値上げされたね。",
+        "romaji": "tetsudou no unchin ga neage sareta ne",
+        "english": "Train fares have gone up."
+      },
+      "rtkLesson": 27,
+      "rtkFrame": 2503,
+      "sourceLesson": 27
+    },
+    {
+      "id": "9_hearts",
+      "rank": "9",
+      "suit": "hearts",
+      "kanji": "値する",
+      "hiragana": "あたいする",
+      "romaji": "ataisuru",
+      "english": "be worth, deserve",
+      "rhyme": "Remember this word you see, it's ataisuru",
+      "sentence": {
+        "kanji": "その絵は一見に値しますよ。",
+        "romaji": "sono e ha iken ni atai shimasu yo",
+        "english": "That painting is worth a look."
+      },
+      "rtkLesson": 27,
+      "rtkFrame": 2569,
+      "sourceLesson": 27
+    },
+    {
+      "id": "10_hearts",
+      "rank": "10",
+      "suit": "hearts",
+      "kanji": "値打ち",
+      "hiragana": "ねうち",
+      "romaji": "neuchi",
+      "english": "value, worth",
+      "rhyme": "Remember this word you see, it's neuchi",
+      "sentence": {
+        "kanji": "この絵はとても値打ちがあります。",
+        "romaji": "kono e ha totemo neuchi ga arimasu",
+        "english": "This painting is very valuable."
+      },
+      "rtkLesson": 27,
+      "rtkFrame": 2571,
+      "sourceLesson": 27
+    },
+    {
+      "id": "J_hearts",
+      "rank": "J",
+      "suit": "hearts",
+      "kanji": "大体",
+      "hiragana": "だいたい",
+      "romaji": "daitai",
+      "english": "outline, generally",
+      "rhyme": "Remember this word you see, it's daitai",
+      "sentence": {
+        "kanji": "大体、初めから無理な計画だったのだ。",
+        "romaji": "daitai hajime kara muri na keikaku data no da",
+        "english": "To be fair, it was a far-fetched plan from the beginning."
+      },
+      "rtkLesson": 27,
+      "rtkFrame": 2592,
+      "sourceLesson": 27
+    },
+    {
+      "id": "Q_hearts",
+      "rank": "Q",
+      "suit": "hearts",
+      "kanji": "人類",
+      "hiragana": "じんるい",
+      "romaji": "jinrui",
+      "english": "mankind, humankind",
+      "rhyme": "Remember this word you see, it's jinrui",
+      "sentence": {
+        "kanji": "人類は2本の足で歩きます。",
+        "romaji": "jinrui ha nihon no ashi de arukimasu",
+        "english": "Humans walk on two feet."
+      },
+      "rtkLesson": 27,
+      "rtkFrame": 2614,
+      "sourceLesson": 27
+    },
+    {
+      "id": "K_hearts",
+      "rank": "K",
+      "suit": "hearts",
+      "kanji": "室内",
+      "hiragana": "しつない",
+      "romaji": "shitsunai",
+      "english": "indoors",
+      "rhyme": "Remember this word you see, it's shitsunai",
+      "sentence": {
+        "kanji": "雨の日は子供を室内で遊ばせます。",
+        "romaji": "ame no hi ha kodomo wo shitsunai de asobasemasu",
+        "english": "I have the kids play indoors on rainy days."
+      },
+      "rtkLesson": 27,
+      "rtkFrame": 2681,
+      "sourceLesson": 27
+    },
+    {
+      "id": "A_diamonds",
+      "rank": "A",
+      "suit": "diamonds",
+      "kanji": "便り",
+      "hiragana": "たより",
+      "romaji": "tayori",
+      "english": "news, correspondence",
+      "rhyme": "Remember this word you see, it's tayori",
+      "sentence": {
+        "kanji": "月に一度母から便りが来ます。",
+        "romaji": "tsuki ni ichido haha kara tayori ga kimasu",
+        "english": "I get a letter from my mother once a month."
+      },
+      "rtkLesson": 27,
+      "rtkFrame": 2694,
+      "sourceLesson": 27
+    },
+    {
+      "id": "2_diamonds",
+      "rank": "2",
+      "suit": "diamonds",
+      "kanji": "下宿",
+      "hiragana": "げしゅく",
+      "romaji": "geshuku",
+      "english": "lodging, boarding house",
+      "rhyme": "Remember this word you see, it's geshuku",
+      "sentence": {
+        "kanji": "親類の家に4年間下宿しました。",
+        "romaji": "shinrui no ie ni yonenkan geshuku shimashita",
+        "english": "I boarded at a relative's house for four years."
+      },
+      "rtkLesson": 27,
+      "rtkFrame": 2699,
+      "sourceLesson": 27
+    },
+    {
+      "id": "3_diamonds",
+      "rank": "3",
+      "suit": "diamonds",
+      "kanji": "休息",
+      "hiragana": "きゅうそく",
+      "romaji": "kyuusoku",
+      "english": "rest, break",
+      "rhyme": "Remember this word you see, it's kyuusoku",
+      "sentence": {
+        "kanji": "休息をとることは大切です。",
+        "romaji": "kyuusoku wo toru koto ha taisetsu desu",
+        "english": "It's important to take breaks."
+      },
+      "rtkLesson": 27,
+      "rtkFrame": 2716,
+      "sourceLesson": 27
+    },
+    {
+      "id": "4_diamonds",
+      "rank": "4",
+      "suit": "diamonds",
+      "kanji": "体力",
+      "hiragana": "たいりょく",
+      "romaji": "tairyoku",
+      "english": "physical strength",
+      "rhyme": "Remember this word you see, it's tairyoku",
+      "sentence": {
+        "kanji": "若者は体力がありますね。",
+        "romaji": "wakamono ha tairyoku ga arimasu ne",
+        "english": "Young people have a lot of stamina."
+      },
+      "rtkLesson": 27,
+      "rtkFrame": 2723,
+      "sourceLesson": 27
+    },
+    {
+      "id": "5_diamonds",
+      "rank": "5",
+      "suit": "diamonds",
+      "kanji": "世代",
+      "hiragana": "せだい",
+      "romaji": "sedai",
+      "english": "generation",
+      "rhyme": "Remember this word you see, it's sedai",
+      "sentence": {
+        "kanji": "私は彼と同じ世代です。",
+        "romaji": "watashi ha kare to onaji sedai desu",
+        "english": "I am of the same generation as him."
+      },
+      "rtkLesson": 27,
+      "rtkFrame": 2733,
+      "sourceLesson": 27
+    },
+    {
+      "id": "6_diamonds",
+      "rank": "6",
+      "suit": "diamonds",
+      "kanji": "求人",
+      "hiragana": "きゅうじん",
+      "romaji": "kyuujin",
+      "english": "recruiting",
+      "rhyme": "Remember this word you see, it's kyuujin",
+      "sentence": {
+        "kanji": "彼は求人広告で仕事を見つけたんだ。",
+        "romaji": "kare ha kyuujin koukoku de shigoto wo mitsuketa n da",
+        "english": "He found a job through a recruiting ad."
+      },
+      "rtkLesson": 27,
+      "rtkFrame": 2757,
+      "sourceLesson": 27
+    },
+    {
+      "id": "7_diamonds",
+      "rank": "7",
+      "suit": "diamonds",
+      "kanji": "仕上げる",
+      "hiragana": "しあげる",
+      "romaji": "shiageru",
+      "english": "finish, complete",
+      "rhyme": "Remember this word you see, it's shiageru",
+      "sentence": {
+        "kanji": "彼はやっと報告書を仕上げたよ。",
+        "romaji": "kare ha yato houkokusho wo shiageta yo",
+        "english": "He finally finished up the report."
+      },
+      "rtkLesson": 27,
+      "rtkFrame": 2764,
+      "sourceLesson": 27
+    },
+    {
+      "id": "8_diamonds",
+      "rank": "8",
+      "suit": "diamonds",
+      "kanji": "貸し",
+      "hiragana": "かし",
+      "romaji": "kashi",
+      "english": "loan, renting",
+      "rhyme": "Remember this word you see, it's kashi",
+      "sentence": {
+        "kanji": "彼には貸しがあるの。",
+        "romaji": "kare ni ha kashi ga aru no",
+        "english": "He owes me one."
+      },
+      "rtkLesson": 27,
+      "rtkFrame": 2800,
+      "sourceLesson": 27
+    },
+    {
+      "id": "9_diamonds",
+      "rank": "9",
+      "suit": "diamonds",
+      "kanji": "友人",
+      "hiragana": "ゆうじん",
+      "romaji": "yuujin",
+      "english": "friend",
+      "rhyme": "Remember this word you see, it's yuujin",
+      "sentence": {
+        "kanji": "彼は高校時代からの友人です。",
+        "romaji": "kare ha koukou jidai kara no yuujin desu",
+        "english": "He's my old friend from high school."
+      },
+      "rtkLesson": 27,
+      "rtkFrame": 2833,
+      "sourceLesson": 27
+    },
+    {
+      "id": "10_diamonds",
+      "rank": "10",
+      "suit": "diamonds",
+      "kanji": "大使",
+      "hiragana": "たいし",
+      "romaji": "taishi",
+      "english": "ambassador",
+      "rhyme": "Remember this word you see, it's taishi",
+      "sentence": {
+        "kanji": "彼は昔、ドイツの大使でした。",
+        "romaji": "kare ha mukashi doitsu no taishi deshita",
+        "english": "He was ambassador to Germany a long time ago."
+      },
+      "rtkLesson": 27,
+      "rtkFrame": 2845,
+      "sourceLesson": 27
+    },
+    {
+      "id": "J_diamonds",
+      "rank": "J",
+      "suit": "diamonds",
+      "kanji": "内心",
+      "hiragana": "ないしん",
+      "romaji": "naishin",
+      "english": "back of one's mind, one's real intention",
+      "rhyme": "Remember this word you see, it's naishin",
+      "sentence": {
+        "kanji": "彼女は内心どきどきしていましたよ。",
+        "romaji": "kanojo ha naishin dokidoki shite imashita yo",
+        "english": "Inside, her heart was pounding."
+      },
+      "rtkLesson": 27,
+      "rtkFrame": 2887,
+      "sourceLesson": 27
+    },
+    {
+      "id": "Q_diamonds",
+      "rank": "Q",
+      "suit": "diamonds",
+      "kanji": "体格",
+      "hiragana": "たいかく",
+      "romaji": "taikaku",
+      "english": "physique, build",
+      "rhyme": "Remember this word you see, it's taikaku",
+      "sentence": {
+        "kanji": "彼はとても体格がいいわ。",
+        "romaji": "kare ha totemo taikaku ga ii wa",
+        "english": "He has a very nice body."
+      },
+      "rtkLesson": 27,
+      "rtkFrame": 2889,
+      "sourceLesson": 27
+    },
+    {
+      "id": "K_diamonds",
+      "rank": "K",
+      "suit": "diamonds",
+      "kanji": "何で",
+      "hiragana": "なんで",
+      "romaji": "nande",
+      "english": "why, what for",
+      "rhyme": "Remember this word you see, it's nande",
+      "sentence": {
+        "kanji": "彼女は何で来ないんだろう。",
+        "romaji": "kanojo ha nande konain darou",
+        "english": "I wonder why she hasn't come."
+      },
+      "rtkLesson": 27,
+      "rtkFrame": 2922,
+      "sourceLesson": 27
+    },
+    {
+      "id": "A_clubs",
+      "rank": "A",
+      "suit": "clubs",
+      "kanji": "値切る",
+      "hiragana": "ねぎる",
+      "romaji": "negiru",
+      "english": "bargain, haggle",
+      "rhyme": "Remember this word you see, it's negiru",
+      "sentence": {
+        "kanji": "彼は値切るのが上手です。",
+        "romaji": "kare ha negiru no ga jouzu desu",
+        "english": "He's good at haggling."
+      },
+      "rtkLesson": 27,
+      "rtkFrame": 2923,
+      "sourceLesson": 27
+    },
+    {
+      "id": "2_clubs",
+      "rank": "2",
+      "suit": "clubs",
+      "kanji": "その内",
+      "hiragana": "そのうち",
+      "romaji": "sonouchi",
+      "english": "before long, sooner or later",
+      "rhyme": "Remember this word you see, it's sonouchi",
+      "sentence": {
+        "kanji": "彼女もその内、親の気持ちが分かるだろう。",
+        "romaji": "kanojo mo sonouchi oya no kimochi ga wakaru darou",
+        "english": "Sooner or later, she'll come to understand her parents' feelings."
+      },
+      "rtkLesson": 27,
+      "rtkFrame": 2939,
+      "sourceLesson": 27
+    },
+    {
+      "id": "3_clubs",
+      "rank": "3",
+      "suit": "clubs",
+      "kanji": "何しろ",
+      "hiragana": "なにしろ",
+      "romaji": "nanishiro",
+      "english": "anyhow, as you know",
+      "rhyme": "Remember this word you see, it's nanishiro",
+      "sentence": {
+        "kanji": "彼は何しろよくしゃべります。",
+        "romaji": "kare ha nanishiro yoku shaberimasu",
+        "english": "Anyway, he talks a lot."
+      },
+      "rtkLesson": 27,
+      "rtkFrame": 2945,
+      "sourceLesson": 27
+    },
+    {
+      "id": "4_clubs",
+      "rank": "4",
+      "suit": "clubs",
+      "kanji": "何と",
+      "hiragana": "なんと",
+      "romaji": "nanto",
+      "english": "what, how",
+      "rhyme": "Remember this word you see, it's nanto",
+      "sentence": {
+        "kanji": "何と彼らは結婚したそうです。",
+        "romaji": "nanto karera ha kekon shita sou desu",
+        "english": "I heard that they got married."
+      },
+      "rtkLesson": 27,
+      "rtkFrame": 2971,
+      "sourceLesson": 27
+    },
+    {
+      "id": "5_clubs",
+      "rank": "5",
+      "suit": "clubs",
+      "kanji": "使い",
+      "hiragana": "つかい",
+      "romaji": "tsukai",
+      "english": "errand",
+      "rhyme": "Remember this word you see, it's tsukai",
+      "sentence": {
+        "kanji": "主人の使いで市役所に行くところです。",
+        "romaji": "shujin no tsukai de shiyakusho ni iku tokoro desu",
+        "english": "I'm about to go to city hall on an errand for my husband."
+      },
+      "rtkLesson": 27,
+      "rtkFrame": 3006,
+      "sourceLesson": 27
+    },
+    {
+      "id": "6_clubs",
+      "rank": "6",
+      "suit": "clubs",
+      "kanji": "仕上げ",
+      "hiragana": "しあげ",
+      "romaji": "shiage",
+      "english": "completion, finishing",
+      "rhyme": "Remember this word you see, it's shiage",
+      "sentence": {
+        "kanji": "彼は論文の仕上げに入ったの。",
+        "romaji": "kare ha ronbun no shiage ni haita no",
+        "english": "He entered the final stages of the thesis."
+      },
+      "rtkLesson": 27,
+      "rtkFrame": 3026,
+      "sourceLesson": 27
+    },
+    {
+      "id": "7_clubs",
+      "rank": "7",
+      "suit": "clubs",
+      "kanji": "人手",
+      "hiragana": "ひとで",
+      "romaji": "hitode",
+      "english": "hand, manpower",
+      "rhyme": "Remember this word you see, it's hitode",
+      "sentence": {
+        "kanji": "人手が足りなくて忙しい。",
+        "romaji": "hitode ga tarinakute isogashii",
+        "english": "We're busy because we lack manpower."
+      },
+      "rtkLesson": 27,
+      "rtkFrame": 3110,
+      "sourceLesson": 27
+    },
+    {
+      "id": "8_clubs",
+      "rank": "8",
+      "suit": "clubs",
+      "kanji": "休める",
+      "hiragana": "やすめる",
+      "romaji": "yasumeru",
+      "english": "give a rest, set at ease",
+      "rhyme": "Remember this word you see, it's yasumeru",
+      "sentence": {
+        "kanji": "疲れた体を休めてください。",
+        "romaji": "tsukareta karada wo yasumete kudasai",
+        "english": "Please rest your weary bones."
+      },
+      "rtkLesson": 27,
+      "rtkFrame": 3114,
+      "sourceLesson": 27
+    },
+    {
+      "id": "9_clubs",
+      "rank": "9",
+      "suit": "clubs",
+      "kanji": "保つ",
+      "hiragana": "たもつ",
+      "romaji": "tamotsu",
+      "english": "preserve, sustain",
+      "rhyme": "Remember this word you see, it's tamotsu",
+      "sentence": {
+        "kanji": "彼女は若さを保とうと必死だ。",
+        "romaji": "kanojo ha wakasa wo tamotou to hishi da",
+        "english": "She's desperately trying to retain her youth."
+      },
+      "rtkLesson": 27,
+      "rtkFrame": 3126,
+      "sourceLesson": 27
+    },
+    {
+      "id": "10_clubs",
+      "rank": "10",
+      "suit": "clubs",
+      "kanji": "保証",
+      "hiragana": "ほしょう",
+      "romaji": "hoshou",
+      "english": "guarantee, warranty",
+      "rhyme": "Remember this word you see, it's hoshou",
+      "sentence": {
+        "kanji": "この製品の保証期間は5年間となっております。",
+        "romaji": "kono seihin no hoshou kikan ha 5 nen kan to nate orimasu",
+        "english": "The guarantee period of this product is five years."
+      },
+      "rtkLesson": 27,
+      "rtkFrame": 3129,
+      "sourceLesson": 27
+    },
+    {
+      "id": "J_clubs",
+      "rank": "J",
+      "suit": "clubs",
+      "kanji": "保証人",
+      "hiragana": "ほしょうにん",
+      "romaji": "hoshounin",
+      "english": "guarantor",
+      "rhyme": "Remember this word you see, it's hoshounin",
+      "sentence": {
+        "kanji": "彼が私の保証人になってくれました。",
+        "romaji": "kare ga watashi no hoshounin ni nate kuremashita",
+        "english": "He became my guarantor."
+      },
+      "rtkLesson": 27,
+      "rtkFrame": 3130,
+      "sourceLesson": 27
+    },
+    {
+      "id": "Q_clubs",
+      "rank": "Q",
+      "suit": "clubs",
+      "kanji": "保存",
+      "hiragana": "ほぞん",
+      "romaji": "hozon",
+      "english": "preservation, conservation",
+      "rhyme": "Remember this word you see, it's hozon",
+      "sentence": {
+        "kanji": "データを30分おきに保存してください。",
+        "romaji": "de-ta wo 30 pun oki ni hozon shite kudasai",
+        "english": "Please save data every 30 minutes."
+      },
+      "rtkLesson": 27,
+      "rtkFrame": 3133,
+      "sourceLesson": 27
+    },
+    {
+      "id": "K_clubs",
+      "rank": "K",
+      "suit": "clubs",
+      "kanji": "死体",
+      "hiragana": "したい",
+      "romaji": "shitai",
+      "english": "corpse, body",
+      "rhyme": "Remember this word you see, it's shitai",
+      "sentence": {
+        "kanji": "公園で死体が見つかったの。",
+        "romaji": "kouen de shitai ga mitsukata no",
+        "english": "A corpse was found in the park."
+      },
+      "rtkLesson": 27,
+      "rtkFrame": 3196,
+      "sourceLesson": 27
+    },
+    {
+      "id": "A_spades",
+      "rank": "A",
+      "suit": "spades",
+      "kanji": "人出",
+      "hiragana": "ひとで",
+      "romaji": "hitode",
+      "english": "turnout, crowd",
+      "rhyme": "Remember this word you see, it's hitode",
+      "sentence": {
+        "kanji": "今日も遊園地は大変な人出だったよ。",
+        "romaji": "kyou mo yuuenchi ha taihen na hitode data yo",
+        "english": "The amusement park was very crowded too today."
+      },
+      "rtkLesson": 27,
+      "rtkFrame": 3200,
+      "sourceLesson": 27
+    },
+    {
+      "id": "2_spades",
+      "rank": "2",
+      "suit": "spades",
+      "kanji": "成人",
+      "hiragana": "せいじん",
+      "romaji": "seijin",
+      "english": "adult, grownup",
+      "rhyme": "Remember this word you see, it's seijin",
+      "sentence": {
+        "kanji": "娘が今年成人します。",
+        "romaji": "musume ga kotoshi seijin shimasu",
+        "english": "My daughter comes of age this year."
+      },
+      "rtkLesson": 27,
+      "rtkFrame": 3230,
+      "sourceLesson": 27
+    },
+    {
+      "id": "3_spades",
+      "rank": "3",
+      "suit": "spades",
+      "kanji": "確信",
+      "hiragana": "かくしん",
+      "romaji": "kakushin",
+      "english": "firm belief, conviction",
+      "rhyme": "Remember this word you see, it's kakushin",
+      "sentence": {
+        "kanji": "私は彼の成功を確信しています。",
+        "romaji": "watashi ha kare no seikou wo kakushin shite imasu",
+        "english": "I am convinced of his success."
+      },
+      "rtkLesson": 27,
+      "rtkFrame": 3235,
+      "sourceLesson": 27
+    },
+    {
+      "id": "4_spades",
+      "rank": "4",
+      "suit": "spades",
+      "kanji": "何とか",
+      "hiragana": "なんとか",
+      "romaji": "nantoka",
+      "english": "somehow or other, one way or another",
+      "rhyme": "Remember this word you see, it's nantoka",
+      "sentence": {
+        "kanji": "何とかお願いします。",
+        "romaji": "nantoka onegai shimasu",
+        "english": "I beg you to take care of it."
+      },
+      "rtkLesson": 27,
+      "rtkFrame": 3266,
+      "sourceLesson": 27
+    },
+    {
+      "id": "5_spades",
+      "rank": "5",
+      "suit": "spades",
+      "kanji": "正座",
+      "hiragana": "せいざ",
+      "romaji": "seiza",
+      "english": "sitting upright with legs folded under one",
+      "rhyme": "Remember this word you see, it's seiza",
+      "sentence": {
+        "kanji": "彼はきちんと正座して待っていたね。",
+        "romaji": "kare ha kichinto seiza shite mate ita ne",
+        "english": "He waited while sitting properly on the floor, Japanese style."
+      },
+      "rtkLesson": 27,
+      "rtkFrame": 3278,
+      "sourceLesson": 27
+    },
+    {
+      "id": "6_spades",
+      "rank": "6",
+      "suit": "spades",
+      "kanji": "体調",
+      "hiragana": "たいちょう",
+      "romaji": "taichou",
+      "english": "health condition",
+      "rhyme": "Remember this word you see, it's taichou",
+      "sentence": {
+        "kanji": "今日は体調が悪いです。",
+        "romaji": "kyou ha taichou ga warui desu",
+        "english": "I feel sick today."
+      },
+      "rtkLesson": 27,
+      "rtkFrame": 3298,
+      "sourceLesson": 27
+    },
+    {
+      "id": "7_spades",
+      "rank": "7",
+      "suit": "spades",
+      "kanji": "大便",
+      "hiragana": "だいべん",
+      "romaji": "daiben",
+      "english": "stool, feces",
+      "rhyme": "Remember this word you see, it's daiben",
+      "sentence": {
+        "kanji": "病院で大便の検査をした。",
+        "romaji": "byouin de daiben no kensa wo shita",
+        "english": "I had a stool examination at the hospital."
+      },
+      "rtkLesson": 27,
+      "rtkFrame": 3312,
+      "sourceLesson": 27
+    },
+    {
+      "id": "8_spades",
+      "rank": "8",
+      "suit": "spades",
+      "kanji": "連休",
+      "hiragana": "れんきゅう",
+      "romaji": "renkyuu",
+      "english": "consecutive holidays",
+      "rhyme": "Remember this word you see, it's renkyuu",
+      "sentence": {
+        "kanji": "今度の連休は実家に帰ります。",
+        "romaji": "kondo no renkyuu ha jika ni kaerimasu",
+        "english": "I'll go back to my parents' house for the next consecutive holidays."
+      },
+      "rtkLesson": 27,
+      "rtkFrame": 3326,
+      "sourceLesson": 27
+    },
+    {
+      "id": "9_spades",
+      "rank": "9",
+      "suit": "spades",
+      "kanji": "主体",
+      "hiragana": "しゅたい",
+      "romaji": "shutai",
+      "english": "agent, main constituent",
+      "rhyme": "Remember this word you see, it's shutai",
+      "sentence": {
+        "kanji": "政治は国民主体であるべきです。",
+        "romaji": "seiji ha kokumin shutai de aru beki desu",
+        "english": "The government should be the agent of the people."
+      },
+      "rtkLesson": 27,
+      "rtkFrame": 3377,
+      "sourceLesson": 27
+    },
+    {
+      "id": "10_spades",
+      "rank": "10",
+      "suit": "spades",
+      "kanji": "体制",
+      "hiragana": "たいせい",
+      "romaji": "taisei",
+      "english": "system, structure",
+      "rhyme": "Remember this word you see, it's taisei",
+      "sentence": {
+        "kanji": "政治の体制を変える必要があります。",
+        "romaji": "seiji no taisei wo kaeru hitsuyou ga arimasu",
+        "english": "It's necessary to change the political system."
+      },
+      "rtkLesson": 27,
+      "rtkFrame": 3379,
+      "sourceLesson": 27
+    },
+    {
+      "id": "J_spades",
+      "rank": "J",
+      "suit": "spades",
+      "kanji": "府立",
+      "hiragana": "ふりつ",
+      "romaji": "furitsu",
+      "english": "prefectural",
+      "rhyme": "Remember this word you see, it's furitsu",
+      "sentence": {
+        "kanji": "彼女は府立大学に通っています。",
+        "romaji": "kanojo ha furitsu daigaku ni kayote imasu",
+        "english": "She goes to the prefectural university."
+      },
+      "rtkLesson": 27,
+      "rtkFrame": 3383,
+      "sourceLesson": 27
+    },
+    {
+      "id": "Q_spades",
+      "rank": "Q",
+      "suit": "spades",
+      "kanji": "自信",
+      "hiragana": "じしん",
+      "romaji": "jishin",
+      "english": "self-confidence",
+      "rhyme": "Remember this word you see, it's jishin",
+      "sentence": {
+        "kanji": "あの人の顔には自信があふれているね。",
+        "romaji": "ano hito no kao ni ha jishin ga afurete iru ne",
+        "english": "That person's face is brimming with confidence."
+      },
+      "rtkLesson": 27,
+      "rtkFrame": 3413,
+      "sourceLesson": 27
+    },
+    {
+      "id": "K_spades",
+      "rank": "K",
+      "suit": "spades",
+      "kanji": "何となく",
+      "hiragana": "なんとなく",
+      "romaji": "nantonaku",
+      "english": "in some way, somehow",
+      "rhyme": "Remember this word you see, it's nantonaku",
+      "sentence": {
+        "kanji": "パーティーに行くのは何となく気が進まないな。",
+        "romaji": "pa-tei- ni iku no ha nantonaku ki ga susumanai na",
+        "english": "Somehow I don't feel like going to the party."
+      },
+      "rtkLesson": 27,
+      "rtkFrame": 3446,
+      "sourceLesson": 27
+    }
+  ]
+}

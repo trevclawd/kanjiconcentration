@@ -1,0 +1,940 @@
+{
+  "cards": [
+    {
+      "id": "A_hearts",
+      "rank": "A",
+      "suit": "hearts",
+      "kanji": "開く",
+      "hiragana": "あく",
+      "romaji": "aku",
+      "english": "open",
+      "rhyme": "Remember this word you see, it's aku",
+      "sentence": {
+        "kanji": "電車のドアが開きました。",
+        "romaji": "densha no doa ga akimashita",
+        "english": "The train door opened."
+      },
+      "rtkLesson": 42,
+      "rtkFrame": 521,
+      "sourceLesson": 42
+    },
+    {
+      "id": "2_hearts",
+      "rank": "2",
+      "suit": "hearts",
+      "kanji": "問題",
+      "hiragana": "もんだい",
+      "romaji": "mondai",
+      "english": "problem, question",
+      "rhyme": "Remember this word you see, it's mondai",
+      "sentence": {
+        "kanji": "問題が一つあります。",
+        "romaji": "mondai ga hitotsu arimasu",
+        "english": "There's one problem."
+      },
+      "rtkLesson": 42,
+      "rtkFrame": 692,
+      "sourceLesson": 42
+    },
+    {
+      "id": "3_hearts",
+      "rank": "3",
+      "suit": "hearts",
+      "kanji": "人間",
+      "hiragana": "にんげん",
+      "romaji": "ningen",
+      "english": "human being, people",
+      "rhyme": "Remember this word you see, it's ningen",
+      "sentence": {
+        "kanji": "人間の心は複雑です。",
+        "romaji": "ningen no kokoro ha fukuzatsu desu",
+        "english": "Man's mind is complex."
+      },
+      "rtkLesson": 42,
+      "rtkFrame": 699,
+      "sourceLesson": 42
+    },
+    {
+      "id": "4_hearts",
+      "rank": "4",
+      "suit": "hearts",
+      "kanji": "開始",
+      "hiragana": "かいし",
+      "romaji": "kaishi",
+      "english": "beginning",
+      "rhyme": "Remember this word you see, it's kaishi",
+      "sentence": {
+        "kanji": "運動会は9時開始です。",
+        "romaji": "undoukai ha kuji kaishi desu",
+        "english": "The athletic meet begins at nine o'clock."
+      },
+      "rtkLesson": 42,
+      "rtkFrame": 787,
+      "sourceLesson": 42
+    },
+    {
+      "id": "5_hearts",
+      "rank": "5",
+      "suit": "hearts",
+      "kanji": "間違い",
+      "hiragana": "まちがい",
+      "romaji": "machigai",
+      "english": "mistake, error",
+      "rhyme": "Remember this word you see, it's machigai",
+      "sentence": {
+        "kanji": "この文には間違いがあります。",
+        "romaji": "kono bun ni ha machigai ga arimasu",
+        "english": "There's a mistake in this sentence."
+      },
+      "rtkLesson": 42,
+      "rtkFrame": 865,
+      "sourceLesson": 42
+    },
+    {
+      "id": "6_hearts",
+      "rank": "6",
+      "suit": "hearts",
+      "kanji": "間違える",
+      "hiragana": "まちがえる",
+      "romaji": "machigaeru",
+      "english": "mistake, confuse",
+      "rhyme": "Remember this word you see, it's machigaeru",
+      "sentence": {
+        "kanji": "電話番号を間違えました。",
+        "romaji": "denwa bangou wo machigaemashita",
+        "english": "I called the wrong number."
+      },
+      "rtkLesson": 42,
+      "rtkFrame": 866,
+      "sourceLesson": 42
+    },
+    {
+      "id": "7_hearts",
+      "rank": "7",
+      "suit": "hearts",
+      "kanji": "間違う",
+      "hiragana": "まちがう",
+      "romaji": "machigau",
+      "english": "be mistaken, be incorrect",
+      "rhyme": "Remember this word you see, it's machigau",
+      "sentence": {
+        "kanji": "あなたは間違っている。",
+        "romaji": "anata ha machigate iru",
+        "english": "You're mistaken."
+      },
+      "rtkLesson": 42,
+      "rtkFrame": 867,
+      "sourceLesson": 42
+    },
+    {
+      "id": "8_hearts",
+      "rank": "8",
+      "suit": "hearts",
+      "kanji": "この間",
+      "hiragana": "このあいだ",
+      "romaji": "konoaida",
+      "english": "the other day, recently",
+      "rhyme": "Remember this word you see, it's konoaida",
+      "sentence": {
+        "kanji": "この間彼女に会った。",
+        "romaji": "konoaida kanojo ni ata",
+        "english": "I met her the other day."
+      },
+      "rtkLesson": 42,
+      "rtkFrame": 1003,
+      "sourceLesson": 42
+    },
+    {
+      "id": "9_hearts",
+      "rank": "9",
+      "suit": "hearts",
+      "kanji": "決定",
+      "hiragana": "けってい",
+      "romaji": "ketei",
+      "english": "decision, settlement",
+      "rhyme": "Remember this word you see, it's ketei",
+      "sentence": {
+        "kanji": "会議で重要な決定がありました。",
+        "romaji": "kaigi de juuyou na ketei ga arimashita",
+        "english": "An important decision was made at the conference."
+      },
+      "rtkLesson": 42,
+      "rtkFrame": 1051,
+      "sourceLesson": 42
+    },
+    {
+      "id": "10_hearts",
+      "rank": "10",
+      "suit": "hearts",
+      "kanji": "昼間",
+      "hiragana": "ひるま",
+      "romaji": "hiruma",
+      "english": "daytime, day",
+      "rhyme": "Remember this word you see, it's hiruma",
+      "sentence": {
+        "kanji": "昼間は仕事で忙しいです。",
+        "romaji": "hiruma ha shigoto de isogashii desu",
+        "english": "I'm busy with work in the daytime."
+      },
+      "rtkLesson": 42,
+      "rtkFrame": 1087,
+      "sourceLesson": 42
+    },
+    {
+      "id": "J_hearts",
+      "rank": "J",
+      "suit": "hearts",
+      "kanji": "公開",
+      "hiragana": "こうかい",
+      "romaji": "koukai",
+      "english": "opening (to the public)",
+      "rhyme": "Remember this word you see, it's koukai",
+      "sentence": {
+        "kanji": "その映画は今日、公開されます。",
+        "romaji": "sono eiga ha kyou koukai saremasu",
+        "english": "The movie opens to the public today."
+      },
+      "rtkLesson": 42,
+      "rtkFrame": 1114,
+      "sourceLesson": 42
+    },
+    {
+      "id": "Q_hearts",
+      "rank": "Q",
+      "suit": "hearts",
+      "kanji": "非常に",
+      "hiragana": "ひじょうに",
+      "romaji": "hijouni",
+      "english": "very, extremely",
+      "rhyme": "Remember this word you see, it's hijouni",
+      "sentence": {
+        "kanji": "これは非常に重要です。",
+        "romaji": "kore ha hijou ni juuyou desu",
+        "english": "This is very important."
+      },
+      "rtkLesson": 42,
+      "rtkFrame": 1154,
+      "sourceLesson": 42
+    },
+    {
+      "id": "K_hearts",
+      "rank": "K",
+      "suit": "hearts",
+      "kanji": "間",
+      "hiragana": "あいだ",
+      "romaji": "aida",
+      "english": "interval",
+      "rhyme": "Remember this word you see, it's aida",
+      "sentence": {
+        "kanji": "雲の間から月が出た。",
+        "romaji": "kumo no aida kara tsuki ga deta",
+        "english": "The moon came out from between the clouds."
+      },
+      "rtkLesson": 42,
+      "rtkFrame": 1313,
+      "sourceLesson": 42
+    },
+    {
+      "id": "A_diamonds",
+      "rank": "A",
+      "suit": "diamonds",
+      "kanji": "新聞",
+      "hiragana": "しんぶん",
+      "romaji": "shinbun",
+      "english": "newspaper",
+      "rhyme": "Remember this word you see, it's shinbun",
+      "sentence": {
+        "kanji": "今日の新聞、どこに置いた?",
+        "romaji": "kyou no shinbun doko ni oita",
+        "english": "Where did you put today's newspaper?"
+      },
+      "rtkLesson": 42,
+      "rtkFrame": 1343,
+      "sourceLesson": 42
+    },
+    {
+      "id": "2_diamonds",
+      "rank": "2",
+      "suit": "diamonds",
+      "kanji": "聞こえる",
+      "hiragana": "きこえる",
+      "romaji": "kikoeru",
+      "english": "hear, be heard",
+      "rhyme": "Remember this word you see, it's kikoeru",
+      "sentence": {
+        "kanji": "隣の部屋からテレビの音が聞こえる。",
+        "romaji": "tonari no heya kara terebi no oto ga kikoeru",
+        "english": "I can hear the sound of the television from the next room."
+      },
+      "rtkLesson": 42,
+      "rtkFrame": 1351,
+      "sourceLesson": 42
+    },
+    {
+      "id": "3_diamonds",
+      "rank": "3",
+      "suit": "diamonds",
+      "kanji": "年間",
+      "hiragana": "ねんかん",
+      "romaji": "nenkan",
+      "english": "period of one year",
+      "rhyme": "Remember this word you see, it's nenkan",
+      "sentence": {
+        "kanji": "年間5万人がここを訪れます。",
+        "romaji": "nenkan gomannin ga koko wo otozuremasu",
+        "english": "This place gets 50,000 visitors a year."
+      },
+      "rtkLesson": 42,
+      "rtkFrame": 1361,
+      "sourceLesson": 42
+    },
+    {
+      "id": "4_diamonds",
+      "rank": "4",
+      "suit": "diamonds",
+      "kanji": "悲しむ",
+      "hiragana": "かなしむ",
+      "romaji": "kanashimu",
+      "english": "feel sad, lament",
+      "rhyme": "Remember this word you see, it's kanashimu",
+      "sentence": {
+        "kanji": "父は友だちの死を悲しんでいます。",
+        "romaji": "chichi ha tomodachi no shi wo kanashinde imasu",
+        "english": "My father is grieving because of his friend's death."
+      },
+      "rtkLesson": 42,
+      "rtkFrame": 1632,
+      "sourceLesson": 42
+    },
+    {
+      "id": "5_diamonds",
+      "rank": "5",
+      "suit": "diamonds",
+      "kanji": "開催",
+      "hiragana": "かいさい",
+      "romaji": "kaisai",
+      "english": "holding (of an event), opening",
+      "rhyme": "Remember this word you see, it's kaisai",
+      "sentence": {
+        "kanji": "京都で国際会議が開催された。",
+        "romaji": "kyouto de kokusaikaigi ga kaisai sareta",
+        "english": "An international conference was held in Kyoto."
+      },
+      "rtkLesson": 42,
+      "rtkFrame": 1641,
+      "sourceLesson": 42
+    },
+    {
+      "id": "6_diamonds",
+      "rank": "6",
+      "suit": "diamonds",
+      "kanji": "間に合う",
+      "hiragana": "まにあう",
+      "romaji": "maniau",
+      "english": "be in time, answer the purpose, can do without",
+      "rhyme": "Remember this word you see, it's maniau",
+      "sentence": {
+        "kanji": "授業に間に合いました。",
+        "romaji": "jugyou ni maniaimashita",
+        "english": "I made it in time for class."
+      },
+      "rtkLesson": 42,
+      "rtkFrame": 1656,
+      "sourceLesson": 42
+    },
+    {
+      "id": "7_diamonds",
+      "rank": "7",
+      "suit": "diamonds",
+      "kanji": "偉い",
+      "hiragana": "えらい",
+      "romaji": "erai",
+      "english": "great, famous, eminent",
+      "rhyme": "Remember this word you see, it's erai",
+      "sentence": {
+        "kanji": "彼は偉い学者です。",
+        "romaji": "kare ha erai gakusha desu",
+        "english": "He's a great scholar."
+      },
+      "rtkLesson": 42,
+      "rtkFrame": 1719,
+      "sourceLesson": 42
+    },
+    {
+      "id": "8_diamonds",
+      "rank": "8",
+      "suit": "diamonds",
+      "kanji": "是非",
+      "hiragana": "ぜひ",
+      "romaji": "zehi",
+      "english": "by all means, at any cost",
+      "rhyme": "Remember this word you see, it's zehi",
+      "sentence": {
+        "kanji": "是非、うちに来てください。",
+        "romaji": "zehi uchi ni kite kudasai",
+        "english": "By all means come to my house."
+      },
+      "rtkLesson": 42,
+      "rtkFrame": 1889,
+      "sourceLesson": 42
+    },
+    {
+      "id": "9_diamonds",
+      "rank": "9",
+      "suit": "diamonds",
+      "kanji": "開き",
+      "hiragana": "あき",
+      "romaji": "aki",
+      "english": "gap, vacancy",
+      "rhyme": "Remember this word you see, it's aki",
+      "sentence": {
+        "kanji": "このブラウスは後ろ開きです。",
+        "romaji": "kono burausu ha ushiroaki desu",
+        "english": "This blouse opens from the back."
+      },
+      "rtkLesson": 42,
+      "rtkFrame": 2055,
+      "sourceLesson": 42
+    },
+    {
+      "id": "10_diamonds",
+      "rank": "10",
+      "suit": "diamonds",
+      "kanji": "間に合わせる",
+      "hiragana": "まにあわせる",
+      "romaji": "maniawaseru",
+      "english": "make do",
+      "rhyme": "Remember this word you see, it's maniawaseru",
+      "sentence": {
+        "kanji": "昼食はクッキーで間に合わせたの。",
+        "romaji": "chuushoku ha kuki- de maniawaseta no",
+        "english": "I made do with cookies for lunch."
+      },
+      "rtkLesson": 42,
+      "rtkFrame": 2095,
+      "sourceLesson": 42
+    },
+    {
+      "id": "J_diamonds",
+      "rank": "J",
+      "suit": "diamonds",
+      "kanji": "客間",
+      "hiragana": "きゃくま",
+      "romaji": "kyakuma",
+      "english": "guest room, parlor",
+      "rhyme": "Remember this word you see, it's kyakuma",
+      "sentence": {
+        "kanji": "お客さんを客間にお通ししたわよ。",
+        "romaji": "okyakusan wo kyakuma ni otooshi shita wa yo",
+        "english": "I showed the guest into the reception room."
+      },
+      "rtkLesson": 42,
+      "rtkFrame": 2117,
+      "sourceLesson": 42
+    },
+    {
+      "id": "Q_diamonds",
+      "rank": "Q",
+      "suit": "diamonds",
+      "kanji": "手間",
+      "hiragana": "てま",
+      "romaji": "tema",
+      "english": "trouble, time",
+      "rhyme": "Remember this word you see, it's tema",
+      "sentence": {
+        "kanji": "これはとても手間のかかる料理です。",
+        "romaji": "kore ha totemo tema no kakaru ryouri desu",
+        "english": "This is a very time-consuming dish."
+      },
+      "rtkLesson": 42,
+      "rtkFrame": 2163,
+      "sourceLesson": 42
+    },
+    {
+      "id": "K_diamonds",
+      "rank": "K",
+      "suit": "diamonds",
+      "kanji": "開店",
+      "hiragana": "かいてん",
+      "romaji": "kaiten",
+      "english": "opening of a store, setting up",
+      "rhyme": "Remember this word you see, it's kaiten",
+      "sentence": {
+        "kanji": "デパートは10時に開店しますよ。",
+        "romaji": "depa-to ha juuji ni kaiten shimasu yo",
+        "english": "The department store opens at ten o'clock."
+      },
+      "rtkLesson": 42,
+      "rtkFrame": 2182,
+      "sourceLesson": 42
+    },
+    {
+      "id": "A_clubs",
+      "rank": "A",
+      "suit": "clubs",
+      "kanji": "閉店",
+      "hiragana": "へいてん",
+      "romaji": "heiten",
+      "english": "shop closing",
+      "rhyme": "Remember this word you see, it's heiten",
+      "sentence": {
+        "kanji": "この店は8時に閉店します。",
+        "romaji": "kono mise ha 8 ji ni heiten shimasu",
+        "english": "This shop closes at eight o'clock."
+      },
+      "rtkLesson": 42,
+      "rtkFrame": 2184,
+      "sourceLesson": 42
+    },
+    {
+      "id": "2_clubs",
+      "rank": "2",
+      "suit": "clubs",
+      "kanji": "新聞社",
+      "hiragana": "しんぶんしゃ",
+      "romaji": "shinbunsha",
+      "english": "newspaper office",
+      "rhyme": "Remember this word you see, it's shinbunsha",
+      "sentence": {
+        "kanji": "このビルは新聞社です。",
+        "romaji": "kono biru ha shinbunsha desu",
+        "english": "This building is a newspaper office."
+      },
+      "rtkLesson": 42,
+      "rtkFrame": 2213,
+      "sourceLesson": 42
+    },
+    {
+      "id": "3_clubs",
+      "rank": "3",
+      "suit": "clubs",
+      "kanji": "聞かす",
+      "hiragana": "きかす",
+      "romaji": "kikasu",
+      "english": "tell, read aloud",
+      "rhyme": "Remember this word you see, it's kikasu",
+      "sentence": {
+        "kanji": "子供に昔話を聞かせてあげたの。",
+        "romaji": "kodomo ni mukashibanashi wo kikaseteageta no 。",
+        "english": "I read a story to the children."
+      },
+      "rtkLesson": 42,
+      "rtkFrame": 2218,
+      "sourceLesson": 42
+    },
+    {
+      "id": "4_clubs",
+      "rank": "4",
+      "suit": "clubs",
+      "kanji": "決して",
+      "hiragana": "けっして",
+      "romaji": "keshite",
+      "english": "never, by no means",
+      "rhyme": "Remember this word you see, it's keshite",
+      "sentence": {
+        "kanji": "このことを決して忘れないでください。",
+        "romaji": "kono koto wo keshite wasurenai de kudasai",
+        "english": "Please never forget this."
+      },
+      "rtkLesson": 42,
+      "rtkFrame": 2229,
+      "sourceLesson": 42
+    },
+    {
+      "id": "5_clubs",
+      "rank": "5",
+      "suit": "clubs",
+      "kanji": "決心",
+      "hiragana": "けっしん",
+      "romaji": "keshin",
+      "english": "determination, resolve",
+      "rhyme": "Remember this word you see, it's keshin",
+      "sentence": {
+        "kanji": "今度こそタバコを止める決心をしました。",
+        "romaji": "kondo koso tabako wo yameru keshin wo shimashita",
+        "english": "I am determined to stop smoking this time."
+      },
+      "rtkLesson": 42,
+      "rtkFrame": 2230,
+      "sourceLesson": 42
+    },
+    {
+      "id": "6_clubs",
+      "rank": "6",
+      "suit": "clubs",
+      "kanji": "間近",
+      "hiragana": "まぢか",
+      "romaji": "majika",
+      "english": "nearby, close at hand",
+      "rhyme": "Remember this word you see, it's majika",
+      "sentence": {
+        "kanji": "有名人を間近で見たよ。",
+        "romaji": "yuumeijin wo majika de mita yo",
+        "english": "I saw a celebrity up close."
+      },
+      "rtkLesson": 42,
+      "rtkFrame": 2249,
+      "sourceLesson": 42
+    },
+    {
+      "id": "7_clubs",
+      "rank": "7",
+      "suit": "clubs",
+      "kanji": "取り決め",
+      "hiragana": "とりきめ",
+      "romaji": "torikime",
+      "english": "decision, agreement",
+      "rhyme": "Remember this word you see, it's torikime",
+      "sentence": {
+        "kanji": "これは会社間の取り決めです。",
+        "romaji": "kore ha kaishakan no torikime desu",
+        "english": "This is a decision between companies."
+      },
+      "rtkLesson": 42,
+      "rtkFrame": 2279,
+      "sourceLesson": 42
+    },
+    {
+      "id": "8_clubs",
+      "rank": "8",
+      "suit": "clubs",
+      "kanji": "門",
+      "hiragana": "もん",
+      "romaji": "mon",
+      "english": "gate, entrance",
+      "rhyme": "Remember this word you see, it's mon",
+      "sentence": {
+        "kanji": "8時に学校の門が開きます。",
+        "romaji": "8 ji ni gakou no mon ga hirakimasu",
+        "english": "The gate of the school opens at eight o'clock."
+      },
+      "rtkLesson": 42,
+      "rtkFrame": 2306,
+      "sourceLesson": 42
+    },
+    {
+      "id": "9_clubs",
+      "rank": "9",
+      "suit": "clubs",
+      "kanji": "聞き取り",
+      "hiragana": "ききとり",
+      "romaji": "kikitori",
+      "english": "listening comprehension, dictation",
+      "rhyme": "Remember this word you see, it's kikitori",
+      "sentence": {
+        "kanji": "英語の聞き取り試験を受けたよ。",
+        "romaji": "eigo no kikitori shiken wo uketa yo",
+        "english": "I took an English listening comprehension exam."
+      },
+      "rtkLesson": 42,
+      "rtkFrame": 2331,
+      "sourceLesson": 42
+    },
+    {
+      "id": "10_clubs",
+      "rank": "10",
+      "suit": "clubs",
+      "kanji": "開会",
+      "hiragana": "かいかい",
+      "romaji": "kaikai",
+      "english": "opening, start a meeting",
+      "rhyme": "Remember this word you see, it's kaikai",
+      "sentence": {
+        "kanji": "運動会は9時に開会します。",
+        "romaji": "undoukai ha kuji ni kaikai shimasu",
+        "english": "The sports festival starts at nine o'clock."
+      },
+      "rtkLesson": 42,
+      "rtkFrame": 2510,
+      "sourceLesson": 42
+    },
+    {
+      "id": "J_clubs",
+      "rank": "J",
+      "suit": "clubs",
+      "kanji": "人違い",
+      "hiragana": "ひとちがい",
+      "romaji": "hitochigai",
+      "english": "mistaken identity",
+      "rhyme": "Remember this word you see, it's hitochigai",
+      "sentence": {
+        "kanji": "すみません、人違いでした。",
+        "romaji": "sumimasen hitochigai deshita",
+        "english": "I'm sorry I mistook you for someone else."
+      },
+      "rtkLesson": 42,
+      "rtkFrame": 2649,
+      "sourceLesson": 42
+    },
+    {
+      "id": "Q_clubs",
+      "rank": "Q",
+      "suit": "clubs",
+      "kanji": "違い",
+      "hiragana": "ちがい",
+      "romaji": "chigai",
+      "english": "difference, mistake",
+      "rhyme": "Remember this word you see, it's chigai",
+      "sentence": {
+        "kanji": "この二つには大きな違いがある。",
+        "romaji": "kono futatsu ni ha ooki na chigai ga aru",
+        "english": "There's a big difference between these two."
+      },
+      "rtkLesson": 42,
+      "rtkFrame": 2650,
+      "sourceLesson": 42
+    },
+    {
+      "id": "K_clubs",
+      "rank": "K",
+      "suit": "clubs",
+      "kanji": "聞き手",
+      "hiragana": "ききて",
+      "romaji": "kikite",
+      "english": "listener, audience",
+      "rhyme": "Remember this word you see, it's kikite",
+      "sentence": {
+        "kanji": "彼女はいつも聞き手にまわるね。",
+        "romaji": "kanojo ha itsumo kikite ni mawaru ne",
+        "english": "She always turns to the listener."
+      },
+      "rtkLesson": 42,
+      "rtkFrame": 2806,
+      "sourceLesson": 42
+    },
+    {
+      "id": "A_spades",
+      "rank": "A",
+      "suit": "spades",
+      "kanji": "洋間",
+      "hiragana": "ようま",
+      "romaji": "youma",
+      "english": "Western-style room",
+      "rhyme": "Remember this word you see, it's youma",
+      "sentence": {
+        "kanji": "彼の家には洋間があります。",
+        "romaji": "kare no ie ni ha youma ga arimasu",
+        "english": "There's a Western-style room in his house."
+      },
+      "rtkLesson": 42,
+      "rtkFrame": 2930,
+      "sourceLesson": 42
+    },
+    {
+      "id": "2_spades",
+      "rank": "2",
+      "suit": "spades",
+      "kanji": "違反",
+      "hiragana": "いはん",
+      "romaji": "ihan",
+      "english": "violation, breach",
+      "rhyme": "Remember this word you see, it's ihan",
+      "sentence": {
+        "kanji": "彼は校則に違反しました。",
+        "romaji": "kare ha kousoku ni ihan shimashita",
+        "english": "He violated school regulations."
+      },
+      "rtkLesson": 42,
+      "rtkFrame": 3032,
+      "sourceLesson": 42
+    },
+    {
+      "id": "3_spades",
+      "rank": "3",
+      "suit": "spades",
+      "kanji": "問い",
+      "hiragana": "とい",
+      "romaji": "toi",
+      "english": "question, inquiry",
+      "rhyme": "Remember this word you see, it's toi",
+      "sentence": {
+        "kanji": "この問いに答えられますか。",
+        "romaji": "kono toi ni kotaeraremasu ka",
+        "english": "Can you answer this question?"
+      },
+      "rtkLesson": 42,
+      "rtkFrame": 3048,
+      "sourceLesson": 42
+    },
+    {
+      "id": "4_spades",
+      "rank": "4",
+      "suit": "spades",
+      "kanji": "専門",
+      "hiragana": "せんもん",
+      "romaji": "senmon",
+      "english": "specialty, profession",
+      "rhyme": "Remember this word you see, it's senmon",
+      "sentence": {
+        "kanji": "法律は私の専門です。",
+        "romaji": "houritsu ha watashi no senmon desu",
+        "english": "My specialty is law."
+      },
+      "rtkLesson": 42,
+      "rtkFrame": 3057,
+      "sourceLesson": 42
+    },
+    {
+      "id": "5_spades",
+      "rank": "5",
+      "suit": "spades",
+      "kanji": "問い合わせる",
+      "hiragana": "といあわせる",
+      "romaji": "toiawaseru",
+      "english": "inquire, contact",
+      "rhyme": "Remember this word you see, it's toiawaseru",
+      "sentence": {
+        "kanji": "保険会社に問い合わせます。",
+        "romaji": "hoken gaisha ni toiawasemasu",
+        "english": "I'll inquire with my insurance company."
+      },
+      "rtkLesson": 42,
+      "rtkFrame": 3128,
+      "sourceLesson": 42
+    },
+    {
+      "id": "6_spades",
+      "rank": "6",
+      "suit": "spades",
+      "kanji": "違いない",
+      "hiragana": "ちがいない",
+      "romaji": "chigainai",
+      "english": "no mistaking it, for certain",
+      "rhyme": "Remember this word you see, it's chigainai",
+      "sentence": {
+        "kanji": "彼は成功するに違いないわ。",
+        "romaji": "kare ha seikou suru ni chigainai wa",
+        "english": "He will certainly succeed."
+      },
+      "rtkLesson": 42,
+      "rtkFrame": 3237,
+      "sourceLesson": 42
+    },
+    {
+      "id": "7_spades",
+      "rank": "7",
+      "suit": "spades",
+      "kanji": "間接",
+      "hiragana": "かんせつ",
+      "romaji": "kansetsu",
+      "english": "indirect",
+      "rhyme": "Remember this word you see, it's kansetsu",
+      "sentence": {
+        "kanji": "それは間接的な原因の一つです。",
+        "romaji": "sore ha kansetsuteki na genin no hitotsu desu",
+        "english": "It's one of the indirect causes."
+      },
+      "rtkLesson": 42,
+      "rtkFrame": 3253,
+      "sourceLesson": 42
+    },
+    {
+      "id": "8_spades",
+      "rank": "8",
+      "suit": "spades",
+      "kanji": "正門",
+      "hiragana": "せいもん",
+      "romaji": "seimon",
+      "english": "main gate, main entrance",
+      "rhyme": "Remember this word you see, it's seimon",
+      "sentence": {
+        "kanji": "受験生は正門から入って下さい。",
+        "romaji": "jukensei ha seimon kara haite kudasai",
+        "english": "Test-takers must enter from the front gate."
+      },
+      "rtkLesson": 42,
+      "rtkFrame": 3275,
+      "sourceLesson": 42
+    },
+    {
+      "id": "9_spades",
+      "rank": "9",
+      "suit": "spades",
+      "kanji": "非常識",
+      "hiragana": "ひじょうしき",
+      "romaji": "hijoushiki",
+      "english": "lack of common sense",
+      "rhyme": "Remember this word you see, it's hijoushiki",
+      "sentence": {
+        "kanji": "彼は非常識な時間に電話してきたの。",
+        "romaji": "kare ha hijoushiki na jikan ni denwa shite kita no",
+        "english": "He called me at an unreasonable hour."
+      },
+      "rtkLesson": 42,
+      "rtkFrame": 3288,
+      "sourceLesson": 42
+    },
+    {
+      "id": "10_spades",
+      "rank": "10",
+      "suit": "spades",
+      "kanji": "非常口",
+      "hiragana": "ひじょうぐち",
+      "romaji": "hijouguchi",
+      "english": "emergency exit",
+      "rhyme": "Remember this word you see, it's hijouguchi",
+      "sentence": {
+        "kanji": "ビルの非常口を確認したの。",
+        "romaji": "biru no hijouguchi wo kakunin shita no",
+        "english": "I checked the building's fire exit."
+      },
+      "rtkLesson": 42,
+      "rtkFrame": 3289,
+      "sourceLesson": 42
+    },
+    {
+      "id": "J_spades",
+      "rank": "J",
+      "suit": "spades",
+      "kanji": "非常",
+      "hiragana": "ひじょう",
+      "romaji": "hijou",
+      "english": "emergency, calamity",
+      "rhyme": "Remember this word you see, it's hijou",
+      "sentence": {
+        "kanji": "非常事態です。",
+        "romaji": "hijou jitai desu",
+        "english": "We're in a state of emergency!"
+      },
+      "rtkLesson": 42,
+      "rtkFrame": 3372,
+      "sourceLesson": 42
+    },
+    {
+      "id": "Q_spades",
+      "rank": "Q",
+      "suit": "spades",
+      "kanji": "判決",
+      "hiragana": "はんけつ",
+      "romaji": "hanketsu",
+      "english": "judicial decision, judgment",
+      "rhyme": "Remember this word you see, it's hanketsu",
+      "sentence": {
+        "kanji": "判決が下された。",
+        "romaji": "hanketsu ga kudasareta",
+        "english": "Judgment was passed."
+      },
+      "rtkLesson": 42,
+      "rtkFrame": 3571,
+      "sourceLesson": 42
+    },
+    {
+      "id": "K_spades",
+      "rank": "K",
+      "suit": "spades",
+      "kanji": "犯罪",
+      "hiragana": "はんざい",
+      "romaji": "hanzai",
+      "english": "offense, crime",
+      "rhyme": "Remember this word you see, it's hanzai",
+      "sentence": {
+        "kanji": "最近犯罪が減っています。",
+        "romaji": "saikin hanzai ga hete imasu",
+        "english": "Crime has been decreasing lately."
+      },
+      "rtkLesson": 42,
+      "rtkFrame": 3641,
+      "sourceLesson": 42
+    }
+  ]
+}

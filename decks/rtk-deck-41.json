@@ -1,0 +1,940 @@
+{
+  "cards": [
+    {
+      "id": "A_hearts",
+      "rank": "A",
+      "suit": "hearts",
+      "kanji": "夜",
+      "hiragana": "よる",
+      "romaji": "yoru",
+      "english": "night (from sunset to sunrise)",
+      "rhyme": "Remember this word you see, it's yoru",
+      "sentence": {
+        "kanji": "きのうの夜は家にいました。",
+        "romaji": "kinou no yoru ha ie ni imashita",
+        "english": "I was at home last night."
+      },
+      "rtkLesson": 28,
+      "rtkFrame": 48,
+      "sourceLesson": 28
+    },
+    {
+      "id": "2_hearts",
+      "rank": "2",
+      "suit": "hearts",
+      "kanji": "年",
+      "hiragana": "とし",
+      "romaji": "toshi",
+      "english": "year, age",
+      "rhyme": "Remember this word you see, it's toshi",
+      "sentence": {
+        "kanji": "新しい年が始まりました。",
+        "romaji": "atarashii toshi ga hajimarimashita",
+        "english": "A new year has started."
+      },
+      "rtkLesson": 28,
+      "rtkFrame": 159,
+      "sourceLesson": 28
+    },
+    {
+      "id": "3_hearts",
+      "rank": "3",
+      "suit": "hearts",
+      "kanji": "去年",
+      "hiragana": "きょねん",
+      "romaji": "kyonen",
+      "english": "last year",
+      "rhyme": "Remember this word you see, it's kyonen",
+      "sentence": {
+        "kanji": "私は去年フランスへ行った。",
+        "romaji": "watashi ha kyonen furansu he ita",
+        "english": "I went to France last year."
+      },
+      "rtkLesson": 28,
+      "rtkFrame": 163,
+      "sourceLesson": 28
+    },
+    {
+      "id": "4_hearts",
+      "rank": "4",
+      "suit": "hearts",
+      "kanji": "少年",
+      "hiragana": "しょうねん",
+      "romaji": "shounen",
+      "english": "boy",
+      "rhyme": "Remember this word you see, it's shounen",
+      "sentence": {
+        "kanji": "少年たちがサッカーをしている。",
+        "romaji": "shounentachi ga saka- wo shite iru",
+        "english": "The boys are playing soccer."
+      },
+      "rtkLesson": 28,
+      "rtkFrame": 413,
+      "sourceLesson": 28
+    },
+    {
+      "id": "5_hearts",
+      "rank": "5",
+      "suit": "hearts",
+      "kanji": "夜中",
+      "hiragana": "よなか",
+      "romaji": "yonaka",
+      "english": "midnight, dead of night",
+      "rhyme": "Remember this word you see, it's yonaka",
+      "sentence": {
+        "kanji": "夜中に電話がありました。",
+        "romaji": "yonaka ni denwa ga arimashita",
+        "english": "I got a telephone call in the middle of the night."
+      },
+      "rtkLesson": 28,
+      "rtkFrame": 520,
+      "sourceLesson": 28
+    },
+    {
+      "id": "6_hearts",
+      "rank": "6",
+      "suit": "hearts",
+      "kanji": "毎年",
+      "hiragana": "まいとし",
+      "romaji": "maitoshi",
+      "english": "every year",
+      "rhyme": "Remember this word you see, it's maitoshi",
+      "sentence": {
+        "kanji": "私は毎年、海外旅行に行きます。",
+        "romaji": "watashi ha maitoshi kaigai ryokou ni ikimasu",
+        "english": "I travel abroad every year."
+      },
+      "rtkLesson": 28,
+      "rtkFrame": 870,
+      "sourceLesson": 28
+    },
+    {
+      "id": "7_hearts",
+      "rank": "7",
+      "suit": "hearts",
+      "kanji": "似ている",
+      "hiragana": "にている",
+      "romaji": "niteiru",
+      "english": "look like, resemble",
+      "rhyme": "Remember this word you see, it's niteiru",
+      "sentence": {
+        "kanji": "私は母に似ています。",
+        "romaji": "watashi ha haha ni nite imasu",
+        "english": "I look like my mother."
+      },
+      "rtkLesson": 28,
+      "rtkFrame": 905,
+      "sourceLesson": 28
+    },
+    {
+      "id": "8_hearts",
+      "rank": "8",
+      "suit": "hearts",
+      "kanji": "年上",
+      "hiragana": "としうえ",
+      "romaji": "toshiue",
+      "english": "older, senior",
+      "rhyme": "Remember this word you see, it's toshiue",
+      "sentence": {
+        "kanji": "彼は私より年上です。",
+        "romaji": "kare ha watashi yori toshiue desu",
+        "english": "He's older than me."
+      },
+      "rtkLesson": 28,
+      "rtkFrame": 1028,
+      "sourceLesson": 28
+    },
+    {
+      "id": "9_hearts",
+      "rank": "9",
+      "suit": "hearts",
+      "kanji": "以上",
+      "hiragana": "いじょう",
+      "romaji": "ijou",
+      "english": "not less than, more than",
+      "rhyme": "Remember this word you see, it's ijou",
+      "sentence": {
+        "kanji": "飛行機が1時間以上遅れた。",
+        "romaji": "hikouki ga ichijikan ijou okureta",
+        "english": "The plane arrived over an hour late."
+      },
+      "rtkLesson": 28,
+      "rtkFrame": 1122,
+      "sourceLesson": 28
+    },
+    {
+      "id": "10_hearts",
+      "rank": "10",
+      "suit": "hearts",
+      "kanji": "毎年",
+      "hiragana": "まいねん",
+      "romaji": "mainen",
+      "english": "every year",
+      "rhyme": "Remember this word you see, it's mainen",
+      "sentence": {
+        "kanji": "毎年給料が上がる。",
+        "romaji": "mainen kyuuryou ga agaru",
+        "english": "My salary goes up every year."
+      },
+      "rtkLesson": 28,
+      "rtkFrame": 1231,
+      "sourceLesson": 28
+    },
+    {
+      "id": "J_hearts",
+      "rank": "J",
+      "suit": "hearts",
+      "kanji": "換える",
+      "hiragana": "かえる",
+      "romaji": "kaeru",
+      "english": "exchange, convert",
+      "rhyme": "Remember this word you see, it's kaeru",
+      "sentence": {
+        "kanji": "車のタイヤを換えた。",
+        "romaji": "kuruma no taiya wo kaeta",
+        "english": "I changed the tires on the car."
+      },
+      "rtkLesson": 28,
+      "rtkFrame": 1253,
+      "sourceLesson": 28
+    },
+    {
+      "id": "Q_hearts",
+      "rank": "Q",
+      "suit": "hearts",
+      "kanji": "年寄り",
+      "hiragana": "としより",
+      "romaji": "toshiyori",
+      "english": "old person, older councilor",
+      "rhyme": "Remember this word you see, it's toshiyori",
+      "sentence": {
+        "kanji": "あの村にはお年寄りがたくさん住んでいます。",
+        "romaji": "ano mura ni ha otoshiyori ga takusan sunde imasu",
+        "english": "A lot of elderly people live in that village."
+      },
+      "rtkLesson": 28,
+      "rtkFrame": 1329,
+      "sourceLesson": 28
+    },
+    {
+      "id": "K_hearts",
+      "rank": "K",
+      "suit": "hearts",
+      "kanji": "年下",
+      "hiragana": "としした",
+      "romaji": "toshishita",
+      "english": "younger, junior",
+      "rhyme": "Remember this word you see, it's toshishita",
+      "sentence": {
+        "kanji": "彼は奥さんより年下です。",
+        "romaji": "kare ha okusan yori toshishita desu",
+        "english": "He's younger than his wife."
+      },
+      "rtkLesson": 28,
+      "rtkFrame": 1508,
+      "sourceLesson": 28
+    },
+    {
+      "id": "A_diamonds",
+      "rank": "A",
+      "suit": "diamonds",
+      "kanji": "万年筆",
+      "hiragana": "まんねんひつ",
+      "romaji": "mannenhitsu",
+      "english": "fountain pen",
+      "rhyme": "Remember this word you see, it's mannenhitsu",
+      "sentence": {
+        "kanji": "父に万年筆をプレゼントしました。",
+        "romaji": "chichi ni mannenhitsu wo purezento shimashita",
+        "english": "I gave my father a fountain pen."
+      },
+      "rtkLesson": 28,
+      "rtkFrame": 1795,
+      "sourceLesson": 28
+    },
+    {
+      "id": "2_diamonds",
+      "rank": "2",
+      "suit": "diamonds",
+      "kanji": "年賀状",
+      "hiragana": "ねんがじょう",
+      "romaji": "nengajou",
+      "english": "New Year's card",
+      "rhyme": "Remember this word you see, it's nengajou",
+      "sentence": {
+        "kanji": "昨日、年賀状を出しました。",
+        "romaji": "kinou nengajou wo dashimashita",
+        "english": "I sent my New Year cards yesterday."
+      },
+      "rtkLesson": 28,
+      "rtkFrame": 1942,
+      "sourceLesson": 28
+    },
+    {
+      "id": "3_diamonds",
+      "rank": "3",
+      "suit": "diamonds",
+      "kanji": "瓶",
+      "hiragana": "びん",
+      "romaji": "bin",
+      "english": "bottle, flask",
+      "rhyme": "Remember this word you see, it's bin",
+      "sentence": {
+        "kanji": "瓶ビールを注文した。",
+        "romaji": "binbi-ru wo chuumon shita",
+        "english": "I ordered a bottle of beer."
+      },
+      "rtkLesson": 28,
+      "rtkFrame": 1969,
+      "sourceLesson": 28
+    },
+    {
+      "id": "4_diamonds",
+      "rank": "4",
+      "suit": "diamonds",
+      "kanji": "夜",
+      "hiragana": "よ",
+      "romaji": "yo",
+      "english": "night, evening",
+      "rhyme": "Remember this word you see, it's yo",
+      "sentence": {
+        "kanji": "あと1時間で夜が明けますね。",
+        "romaji": "ato 1 jikan de yo ga akemasu ne",
+        "english": "It will be dawn in another hour."
+      },
+      "rtkLesson": 28,
+      "rtkFrame": 2061,
+      "sourceLesson": 28
+    },
+    {
+      "id": "5_diamonds",
+      "rank": "5",
+      "suit": "diamonds",
+      "kanji": "忘年会",
+      "hiragana": "ぼうねんかい",
+      "romaji": "bounenkai",
+      "english": "year-end party",
+      "rhyme": "Remember this word you see, it's bounenkai",
+      "sentence": {
+        "kanji": "明日は会社の忘年会があります。",
+        "romaji": "ashita ha kaisha no bounenkai ga arimasu",
+        "english": "The company will have a year-end party tomorrow."
+      },
+      "rtkLesson": 28,
+      "rtkFrame": 2226,
+      "sourceLesson": 28
+    },
+    {
+      "id": "6_diamonds",
+      "rank": "6",
+      "suit": "diamonds",
+      "kanji": "年月",
+      "hiragana": "としつき",
+      "romaji": "toshitsuki",
+      "english": "time, years",
+      "rhyme": "Remember this word you see, it's toshitsuki",
+      "sentence": {
+        "kanji": "あれから長い年月が経ちました。",
+        "romaji": "are kara nagai toshitsuki ga tachimashita",
+        "english": "A long time has passed since then."
+      },
+      "rtkLesson": 28,
+      "rtkFrame": 2369,
+      "sourceLesson": 28
+    },
+    {
+      "id": "7_diamonds",
+      "rank": "7",
+      "suit": "diamonds",
+      "kanji": "年末",
+      "hiragana": "ねんまつ",
+      "romaji": "nenmatsu",
+      "english": "end of year",
+      "rhyme": "Remember this word you see, it's nenmatsu",
+      "sentence": {
+        "kanji": "年末のセールはいつも込んでいるね。",
+        "romaji": "nenmatsu no se-ru ha itsumo konde iru ne",
+        "english": "The year-end sale is always crowded."
+      },
+      "rtkLesson": 28,
+      "rtkFrame": 2424,
+      "sourceLesson": 28
+    },
+    {
+      "id": "8_diamonds",
+      "rank": "8",
+      "suit": "diamonds",
+      "kanji": "夜更かし",
+      "hiragana": "よふかし",
+      "romaji": "yofukashi",
+      "english": "sitting up late at night",
+      "rhyme": "Remember this word you see, it's yofukashi",
+      "sentence": {
+        "kanji": "最近の子供たちは夜更かしです。",
+        "romaji": "saikin no kodomo tachi ha yofukashi desu",
+        "english": "These days children stay up till late."
+      },
+      "rtkLesson": 28,
+      "rtkFrame": 2464,
+      "sourceLesson": 28
+    },
+    {
+      "id": "9_diamonds",
+      "rank": "9",
+      "suit": "diamonds",
+      "kanji": "年々",
+      "hiragana": "ねんねん",
+      "romaji": "nennen",
+      "english": "year by year, annually",
+      "rhyme": "Remember this word you see, it's nennen",
+      "sentence": {
+        "kanji": "東京の人口は年々増えています。",
+        "romaji": "toukyou no jinkou ha nennen fuete imasu",
+        "english": "The population of Tokyo increases year by year."
+      },
+      "rtkLesson": 28,
+      "rtkFrame": 2468,
+      "sourceLesson": 28
+    },
+    {
+      "id": "10_diamonds",
+      "rank": "10",
+      "suit": "diamonds",
+      "kanji": "運営",
+      "hiragana": "うんえい",
+      "romaji": "unei",
+      "english": "operation, management",
+      "rhyme": "Remember this word you see, it's unei",
+      "sentence": {
+        "kanji": "その事業は国が運営しています。",
+        "romaji": "sono jigyou ha kuni ga unei shite imasu",
+        "english": "The project is operated by the government."
+      },
+      "rtkLesson": 28,
+      "rtkFrame": 2502,
+      "sourceLesson": 28
+    },
+    {
+      "id": "J_diamonds",
+      "rank": "J",
+      "suit": "diamonds",
+      "kanji": "夜明け",
+      "hiragana": "よあけ",
+      "romaji": "yoake",
+      "english": "dawn, daybreak",
+      "rhyme": "Remember this word you see, it's yoake",
+      "sentence": {
+        "kanji": "夜明けと共に目が覚めたんだ。",
+        "romaji": "yoake to tomo ni me ga sameta n da",
+        "english": "I awoke at daybreak."
+      },
+      "rtkLesson": 28,
+      "rtkFrame": 2640,
+      "sourceLesson": 28
+    },
+    {
+      "id": "Q_diamonds",
+      "rank": "Q",
+      "suit": "diamonds",
+      "kanji": "似る",
+      "hiragana": "にる",
+      "romaji": "niru",
+      "english": "resemble, be alike",
+      "rhyme": "Remember this word you see, it's niru",
+      "sentence": {
+        "kanji": "女の子は話し方まで母親に似るわね。",
+        "romaji": "onna no ko ha hanashikata made hahaoya ni niru wa ne",
+        "english": "The girl even talks like her mother."
+      },
+      "rtkLesson": 28,
+      "rtkFrame": 2701,
+      "sourceLesson": 28
+    },
+    {
+      "id": "K_diamonds",
+      "rank": "K",
+      "suit": "diamonds",
+      "kanji": "以前",
+      "hiragana": "いぜん",
+      "romaji": "izen",
+      "english": "before, ago",
+      "rhyme": "Remember this word you see, it's izen",
+      "sentence": {
+        "kanji": "以前彼はこの町に住んでいたんだ。",
+        "romaji": "izen kare ha kono machi ni sunde ita n da",
+        "english": "He used to live in this town."
+      },
+      "rtkLesson": 28,
+      "rtkFrame": 2729,
+      "sourceLesson": 28
+    },
+    {
+      "id": "A_clubs",
+      "rank": "A",
+      "suit": "clubs",
+      "kanji": "学年",
+      "hiragana": "がくねん",
+      "romaji": "gakunen",
+      "english": "school year, grade",
+      "rhyme": "Remember this word you see, it's gakunen",
+      "sentence": {
+        "kanji": "彼は私より一学年上です。",
+        "romaji": "kare ha watashi yori hito gakunen ue desu",
+        "english": "He's one year above me in school."
+      },
+      "rtkLesson": 28,
+      "rtkFrame": 2761,
+      "sourceLesson": 28
+    },
+    {
+      "id": "2_clubs",
+      "rank": "2",
+      "suit": "clubs",
+      "kanji": "年代",
+      "hiragana": "ねんだい",
+      "romaji": "nendai",
+      "english": "age, date",
+      "rhyme": "Remember this word you see, it's nendai",
+      "sentence": {
+        "kanji": "私と彼は同じ年代です。",
+        "romaji": "watashi to kare ha onaji nendai desu",
+        "english": "He and I are the same generation."
+      },
+      "rtkLesson": 28,
+      "rtkFrame": 2841,
+      "sourceLesson": 28
+    },
+    {
+      "id": "3_clubs",
+      "rank": "3",
+      "suit": "clubs",
+      "kanji": "真夜中",
+      "hiragana": "まよなか",
+      "romaji": "mayonaka",
+      "english": "midnight, middle of the night",
+      "rhyme": "Remember this word you see, it's mayonaka",
+      "sentence": {
+        "kanji": "彼は真夜中に帰ってきたの。",
+        "romaji": "kare ha mayonaka ni kaete kita no",
+        "english": "He came back at midnight."
+      },
+      "rtkLesson": 28,
+      "rtkFrame": 2912,
+      "sourceLesson": 28
+    },
+    {
+      "id": "4_clubs",
+      "rank": "4",
+      "suit": "clubs",
+      "kanji": "似合う",
+      "hiragana": "にあう",
+      "romaji": "niau",
+      "english": "suit, match well",
+      "rhyme": "Remember this word you see, it's niau",
+      "sentence": {
+        "kanji": "彼女は着物がよく似合います。",
+        "romaji": "kanojo ha kimono ga yoku niaimasu",
+        "english": "Kimonos suit her well."
+      },
+      "rtkLesson": 28,
+      "rtkFrame": 2913,
+      "sourceLesson": 28
+    },
+    {
+      "id": "5_clubs",
+      "rank": "5",
+      "suit": "clubs",
+      "kanji": "似せる",
+      "hiragana": "にせる",
+      "romaji": "niseru",
+      "english": "imitate, forge",
+      "rhyme": "Remember this word you see, it's niseru",
+      "sentence": {
+        "kanji": "彼の字に似せて書きました。",
+        "romaji": "kare no ji ni nisete kakimashita",
+        "english": "I wrote it by imitating his handwriting."
+      },
+      "rtkLesson": 28,
+      "rtkFrame": 2919,
+      "sourceLesson": 28
+    },
+    {
+      "id": "6_clubs",
+      "rank": "6",
+      "suit": "clubs",
+      "kanji": "以下",
+      "hiragana": "いか",
+      "romaji": "ika",
+      "english": "below",
+      "rhyme": "Remember this word you see, it's ika",
+      "sentence": {
+        "kanji": "数学が平均点以下だった。",
+        "romaji": "suugaku ga heikinten ika data",
+        "english": "The math score was below average."
+      },
+      "rtkLesson": 28,
+      "rtkFrame": 3084,
+      "sourceLesson": 28
+    },
+    {
+      "id": "7_clubs",
+      "rank": "7",
+      "suit": "clubs",
+      "kanji": "未成年",
+      "hiragana": "みせいねん",
+      "romaji": "miseinen",
+      "english": "minor, underage",
+      "rhyme": "Remember this word you see, it's miseinen",
+      "sentence": {
+        "kanji": "未成年はお酒を飲めません。",
+        "romaji": "miseinen ha osake wo nomemasen",
+        "english": "Minors can't drink alcohol."
+      },
+      "rtkLesson": 28,
+      "rtkFrame": 3234,
+      "sourceLesson": 28
+    },
+    {
+      "id": "8_clubs",
+      "rank": "8",
+      "suit": "clubs",
+      "kanji": "本年",
+      "hiragana": "ほんねん",
+      "romaji": "honnen",
+      "english": "this year",
+      "rhyme": "Remember this word you see, it's honnen",
+      "sentence": {
+        "kanji": "会社の本年の目標が発表されたよ。",
+        "romaji": "kaisha no honnen no mokuhyou ga hapyou sareta yo",
+        "english": "The company's goal this year was announced."
+      },
+      "rtkLesson": 28,
+      "rtkFrame": 3324,
+      "sourceLesson": 28
+    },
+    {
+      "id": "9_clubs",
+      "rank": "9",
+      "suit": "clubs",
+      "kanji": "前年",
+      "hiragana": "ぜんねん",
+      "romaji": "zennen",
+      "english": "the year before",
+      "rhyme": "Remember this word you see, it's zennen",
+      "sentence": {
+        "kanji": "前年に比べて利益が上がりました。",
+        "romaji": "zennen ni kurabete rieki ga agarimashita",
+        "english": "Profits went up compared with the previous year."
+      },
+      "rtkLesson": 28,
+      "rtkFrame": 3566,
+      "sourceLesson": 28
+    },
+    {
+      "id": "10_clubs",
+      "rank": "10",
+      "suit": "clubs",
+      "kanji": "年月",
+      "hiragana": "ねんげつ",
+      "romaji": "nengetsu",
+      "english": "years, time",
+      "rhyme": "Remember this word you see, it's nengetsu",
+      "sentence": {
+        "kanji": "そのお寺は長い年月をかけて建てられた。",
+        "romaji": "sono otera ha nagai nengetsu wo kakete taterareta",
+        "english": "The temple was built over the course of many years."
+      },
+      "rtkLesson": 28,
+      "rtkFrame": 3848,
+      "sourceLesson": 28
+    },
+    {
+      "id": "J_clubs",
+      "rank": "J",
+      "suit": "clubs",
+      "kanji": "例年",
+      "hiragana": "れいねん",
+      "romaji": "reinen",
+      "english": "normal year, average year",
+      "rhyme": "Remember this word you see, it's reinen",
+      "sentence": {
+        "kanji": "例年8月は雨が少ないね。",
+        "romaji": "reinen 8 gatsu ha ame ga sukunai ne",
+        "english": "There's little rain in a typical August."
+      },
+      "rtkLesson": 28,
+      "rtkFrame": 4115,
+      "sourceLesson": 28
+    },
+    {
+      "id": "Q_clubs",
+      "rank": "Q",
+      "suit": "clubs",
+      "kanji": "金融",
+      "hiragana": "きんゆう",
+      "romaji": "kinyuu",
+      "english": "finance",
+      "rhyme": "Remember this word you see, it's kinyuu",
+      "sentence": {
+        "kanji": "彼は金融関係の会社で働いています。",
+        "romaji": "kare ha kinyuu kankei no kaisha de hataraite imasu",
+        "english": "He works at a financial company."
+      },
+      "rtkLesson": 28,
+      "rtkFrame": 4456,
+      "sourceLesson": 28
+    },
+    {
+      "id": "K_clubs",
+      "rank": "K",
+      "suit": "clubs",
+      "kanji": "月夜",
+      "hiragana": "つきよ",
+      "romaji": "tsukiyo",
+      "english": "moonlit night",
+      "rhyme": "Remember this word you see, it's tsukiyo",
+      "sentence": {
+        "kanji": "散歩にいい月夜ですね。",
+        "romaji": "sanpo ni ii tsukiyo desu ne",
+        "english": "It's a good moonlit night for a stroll."
+      },
+      "rtkLesson": 28,
+      "rtkFrame": 4526,
+      "sourceLesson": 28
+    },
+    {
+      "id": "A_spades",
+      "rank": "A",
+      "suit": "spades",
+      "kanji": "言い換える",
+      "hiragana": "いいかえる",
+      "romaji": "iikaeru",
+      "english": "express in different words, paraphrase",
+      "rhyme": "Remember this word you see, it's iikaeru",
+      "sentence": {
+        "kanji": "彼は易しい言葉に言い換えたんだ。",
+        "romaji": "kare ha yasashii kotoba ni iikaeta n da",
+        "english": "He paraphrased it in easy language."
+      },
+      "rtkLesson": 28,
+      "rtkFrame": 4550,
+      "sourceLesson": 28
+    },
+    {
+      "id": "2_spades",
+      "rank": "2",
+      "suit": "spades",
+      "kanji": "液",
+      "hiragana": "えき",
+      "romaji": "eki",
+      "english": "liquid, fluid",
+      "rhyme": "Remember this word you see, it's eki",
+      "sentence": {
+        "kanji": "容器から液がこぼれていますよ。",
+        "romaji": "youki kara eki ga koborete imasu yo",
+        "english": "The liquid is spilling from the container."
+      },
+      "rtkLesson": 28,
+      "rtkFrame": 4593,
+      "sourceLesson": 28
+    },
+    {
+      "id": "3_spades",
+      "rank": "3",
+      "suit": "spades",
+      "kanji": "中年",
+      "hiragana": "ちゅうねん",
+      "romaji": "chuunen",
+      "english": "middle age",
+      "rhyme": "Remember this word you see, it's chuunen",
+      "sentence": {
+        "kanji": "これは、中年の男性によく見られる症状です。",
+        "romaji": "kore ha chuunen no dansei ni yoku mirareru shoujou desu",
+        "english": "These symptoms are often seen in middle-aged men."
+      },
+      "rtkLesson": 28,
+      "rtkFrame": 4626,
+      "sourceLesson": 28
+    },
+    {
+      "id": "4_spades",
+      "rank": "4",
+      "suit": "spades",
+      "kanji": "徹夜",
+      "hiragana": "てつや",
+      "romaji": "tetsuya",
+      "english": "staying up all night",
+      "rhyme": "Remember this word you see, it's tetsuya",
+      "sentence": {
+        "kanji": "ゆうべは徹夜しました。",
+        "romaji": "yuube ha tetsuya shimashita",
+        "english": "I stayed up all last night."
+      },
+      "rtkLesson": 28,
+      "rtkFrame": 4967,
+      "sourceLesson": 28
+    },
+    {
+      "id": "5_spades",
+      "rank": "5",
+      "suit": "spades",
+      "kanji": "年月日",
+      "hiragana": "ねんがっぴ",
+      "romaji": "nengapi",
+      "english": "date",
+      "rhyme": "Remember this word you see, it's nengapi",
+      "sentence": {
+        "kanji": "申請の年月日を西暦で書いてください。",
+        "romaji": "shinsei no nengapi wo seireki de kaite kudasai",
+        "english": "Please write down the application date in the Western calendar."
+      },
+      "rtkLesson": 28,
+      "rtkFrame": 5163,
+      "sourceLesson": 28
+    },
+    {
+      "id": "6_spades",
+      "rank": "6",
+      "suit": "spades",
+      "kanji": "成年",
+      "hiragana": "せいねん",
+      "romaji": "seinen",
+      "english": "majority, adult",
+      "rhyme": "Remember this word you see, it's seinen",
+      "sentence": {
+        "kanji": "成年になると独立した戸籍を作れます。",
+        "romaji": "seinen ni naru to dokuritsu shita koseki wo tsukuremasu",
+        "english": "An individual family register can be made when you become an adult."
+      },
+      "rtkLesson": 28,
+      "rtkFrame": 5207,
+      "sourceLesson": 28
+    },
+    {
+      "id": "7_spades",
+      "rank": "7",
+      "suit": "spades",
+      "kanji": "翌年",
+      "hiragana": "よくねん",
+      "romaji": "yokunen",
+      "english": "the following year",
+      "rhyme": "Remember this word you see, it's yokunen",
+      "sentence": {
+        "kanji": "彼女は大学卒業の翌年に結婚したの。",
+        "romaji": "kanojo ha daigaku sotsugyou no yokunen ni kekon shita no",
+        "english": "She married the year after graduating from university."
+      },
+      "rtkLesson": 28,
+      "rtkFrame": 5215,
+      "sourceLesson": 28
+    },
+    {
+      "id": "8_spades",
+      "rank": "8",
+      "suit": "spades",
+      "kanji": "定年",
+      "hiragana": "ていねん",
+      "romaji": "teinen",
+      "english": "mandatory retirement age",
+      "rhyme": "Remember this word you see, it's teinen",
+      "sentence": {
+        "kanji": "彼は来年定年を迎える。",
+        "romaji": "kare ha rainen teinen wo mukaeru",
+        "english": "He will retire next year."
+      },
+      "rtkLesson": 28,
+      "rtkFrame": 5422,
+      "sourceLesson": 28
+    },
+    {
+      "id": "9_spades",
+      "rank": "9",
+      "suit": "spades",
+      "kanji": "液体",
+      "hiragana": "えきたい",
+      "romaji": "ekitai",
+      "english": "liquid, fluid",
+      "rhyme": "Remember this word you see, it's ekitai",
+      "sentence": {
+        "kanji": "洗濯に液体の洗剤を使っています。",
+        "romaji": "sentaku ni ekitai no senzai wo tsukate imasu",
+        "english": "I use liquid detergent for washing clothes."
+      },
+      "rtkLesson": 28,
+      "rtkFrame": 5586,
+      "sourceLesson": 28
+    },
+    {
+      "id": "10_spades",
+      "rank": "10",
+      "suit": "spades",
+      "kanji": "年中",
+      "hiragana": "ねんじゅう",
+      "romaji": "nenjuu",
+      "english": "all year",
+      "rhyme": "Remember this word you see, it's nenjuu",
+      "sentence": {
+        "kanji": "叔母は年中旅行しています。",
+        "romaji": "oba ha nenjuu ryokou shite imasu",
+        "english": "My aunt travels all year round."
+      },
+      "rtkLesson": 28,
+      "rtkFrame": 5734,
+      "sourceLesson": 28
+    },
+    {
+      "id": "J_spades",
+      "rank": "J",
+      "suit": "spades",
+      "kanji": "改善",
+      "hiragana": "かいぜん",
+      "romaji": "kaizen",
+      "english": "improvement, amelioration",
+      "rhyme": "Remember this word you see, it's kaizen",
+      "sentence": {
+        "kanji": "彼は食生活を改善しました。",
+        "romaji": "kare ha shokuseikatsu wo kaizen shimashita",
+        "english": "He has improved his eating habits."
+      },
+      "rtkLesson": 28,
+      "rtkFrame": 5779,
+      "sourceLesson": 28
+    },
+    {
+      "id": "Q_spades",
+      "rank": "Q",
+      "suit": "spades",
+      "kanji": "年賀",
+      "hiragana": "ねんが",
+      "romaji": "nenga",
+      "english": "New Year's card",
+      "rhyme": "Remember this word you see, it's nenga",
+      "sentence": {
+        "kanji": "年賀葉書が売り出されたね。",
+        "romaji": "nengahagaki ga uridasareta ne",
+        "english": "New Year's greeting cards are now on sale."
+      },
+      "rtkLesson": 28,
+      "rtkFrame": 5844,
+      "sourceLesson": 28
+    },
+    {
+      "id": "K_spades",
+      "rank": "K",
+      "suit": "spades",
+      "kanji": "年始",
+      "hiragana": "ねんし",
+      "romaji": "nenshi",
+      "english": "beginning of the year",
+      "rhyme": "Remember this word you see, it's nenshi",
+      "sentence": {
+        "kanji": "部下の方が年始の挨拶に見えましたよ。",
+        "romaji": "buka no kata ga nenshi no aisatsu ni miemashita yo",
+        "english": "Your men came to give greetings for the new year."
+      },
+      "rtkLesson": 28,
+      "rtkFrame": 5862,
+      "sourceLesson": 28
+    }
+  ]
+}

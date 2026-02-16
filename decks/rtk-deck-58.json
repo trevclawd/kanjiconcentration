@@ -1,0 +1,940 @@
+{
+  "cards": [
+    {
+      "id": "A_hearts",
+      "rank": "A",
+      "suit": "hearts",
+      "kanji": "続く",
+      "hiragana": "つづく",
+      "romaji": "tsuzuku",
+      "english": "continue, follow",
+      "rhyme": "Remember this word you see, it's tsuzuku",
+      "sentence": {
+        "kanji": "工事は3月まで続きます。",
+        "romaji": "kouji ha sangatsu made tsuzukimasu",
+        "english": "Construction will continue until March."
+      },
+      "rtkLesson": 36,
+      "rtkFrame": 274,
+      "sourceLesson": 36
+    },
+    {
+      "id": "2_hearts",
+      "rank": "2",
+      "suit": "hearts",
+      "kanji": "一緒に",
+      "hiragana": "いっしょに",
+      "romaji": "ishoni",
+      "english": "together, at the same time",
+      "rhyme": "Remember this word you see, it's ishoni",
+      "sentence": {
+        "kanji": "一緒に帰りましょう。",
+        "romaji": "ishoni kaerimashou",
+        "english": "Let's go home together."
+      },
+      "rtkLesson": 36,
+      "rtkFrame": 296,
+      "sourceLesson": 36
+    },
+    {
+      "id": "3_hearts",
+      "rank": "3",
+      "suit": "hearts",
+      "kanji": "緑",
+      "hiragana": "みどり",
+      "romaji": "midori",
+      "english": "green, foliage",
+      "rhyme": "Remember this word you see, it's midori",
+      "sentence": {
+        "kanji": "この町には緑がたくさんあります。",
+        "romaji": "kono machi ni ha midori ga takusan arimasu",
+        "english": "There's a lot of greenery in this town."
+      },
+      "rtkLesson": 36,
+      "rtkFrame": 298,
+      "sourceLesson": 36
+    },
+    {
+      "id": "4_hearts",
+      "rank": "4",
+      "suit": "hearts",
+      "kanji": "細い",
+      "hiragana": "ほそい",
+      "romaji": "hosoi",
+      "english": "thin, slender, narrow",
+      "rhyme": "Remember this word you see, it's hosoi",
+      "sentence": {
+        "kanji": "彼女は指が細いですね。",
+        "romaji": "kanojo ha yubi ga hosoi desu ne",
+        "english": "Her fingers are thin."
+      },
+      "rtkLesson": 36,
+      "rtkFrame": 310,
+      "sourceLesson": 36
+    },
+    {
+      "id": "5_hearts",
+      "rank": "5",
+      "suit": "hearts",
+      "kanji": "締める",
+      "hiragana": "しめる",
+      "romaji": "shimeru",
+      "english": "tighten, fasten",
+      "rhyme": "Remember this word you see, it's shimeru",
+      "sentence": {
+        "kanji": "彼はシートベルトを締めた。",
+        "romaji": "kare ha shi-toberuto wo shimeta",
+        "english": "He fastened his seat belt."
+      },
+      "rtkLesson": 36,
+      "rtkFrame": 313,
+      "sourceLesson": 36
+    },
+    {
+      "id": "6_hearts",
+      "rank": "6",
+      "suit": "hearts",
+      "kanji": "明後日",
+      "hiragana": "あさって",
+      "romaji": "asate",
+      "english": "day after tomorrow",
+      "rhyme": "Remember this word you see, it's asate",
+      "sentence": {
+        "kanji": "明後日は休日です。",
+        "romaji": "asate ha kyuujitsu desu 。",
+        "english": "The day after tomorrow's a holiday."
+      },
+      "rtkLesson": 36,
+      "rtkFrame": 462,
+      "sourceLesson": 36
+    },
+    {
+      "id": "7_hearts",
+      "rank": "7",
+      "suit": "hearts",
+      "kanji": "最後",
+      "hiragana": "さいご",
+      "romaji": "saigo",
+      "english": "last, final",
+      "rhyme": "Remember this word you see, it's saigo",
+      "sentence": {
+        "kanji": "今日が夏休み最後の日だ。",
+        "romaji": "kyou ga natsuyasumi saigo no hi da",
+        "english": "Today's the last day of summer vacation."
+      },
+      "rtkLesson": 36,
+      "rtkFrame": 589,
+      "sourceLesson": 36
+    },
+    {
+      "id": "8_hearts",
+      "rank": "8",
+      "suit": "hearts",
+      "kanji": "経つ",
+      "hiragana": "たつ",
+      "romaji": "tatsu",
+      "english": "pass, elapse",
+      "rhyme": "Remember this word you see, it's tatsu",
+      "sentence": {
+        "kanji": "あれから14年が経ちました。",
+        "romaji": "are kara juuyonen ga tachimashita",
+        "english": "Fourteen years have passed since then."
+      },
+      "rtkLesson": 36,
+      "rtkFrame": 708,
+      "sourceLesson": 36
+    },
+    {
+      "id": "9_hearts",
+      "rank": "9",
+      "suit": "hearts",
+      "kanji": "絵",
+      "hiragana": "え",
+      "romaji": "e",
+      "english": "picture, painting, drawing",
+      "rhyme": "Remember this word you see, it's e",
+      "sentence": {
+        "kanji": "これは有名な画家の絵です。",
+        "romaji": "kore ha yuumei na gaka no e desu",
+        "english": "This is a painting by a famous painter."
+      },
+      "rtkLesson": 36,
+      "rtkFrame": 830,
+      "sourceLesson": 36
+    },
+    {
+      "id": "10_hearts",
+      "rank": "10",
+      "suit": "hearts",
+      "kanji": "練習",
+      "hiragana": "れんしゅう",
+      "romaji": "renshuu",
+      "english": "practice, training",
+      "rhyme": "Remember this word you see, it's renshuu",
+      "sentence": {
+        "kanji": "娘は今、バイオリンを練習しています。",
+        "romaji": "musume ha ima baiorin wo renshuu shite imasu",
+        "english": "My daughter is practicing the violin now."
+      },
+      "rtkLesson": 36,
+      "rtkFrame": 931,
+      "sourceLesson": 36
+    },
+    {
+      "id": "J_hearts",
+      "rank": "J",
+      "suit": "hearts",
+      "kanji": "結合",
+      "hiragana": "けつごう",
+      "romaji": "ketsugou",
+      "english": "combination, joining",
+      "rhyme": "Remember this word you see, it's ketsugou",
+      "sentence": {
+        "kanji": "ファイルを結合して1つにしました。",
+        "romaji": "fuairu wo ketsugou shite hitotsu ni shimashita",
+        "english": "I consolidated the files into just one."
+      },
+      "rtkLesson": 36,
+      "rtkFrame": 1030,
+      "sourceLesson": 36
+    },
+    {
+      "id": "Q_hearts",
+      "rank": "Q",
+      "suit": "hearts",
+      "kanji": "結果",
+      "hiragana": "けっか",
+      "romaji": "keka",
+      "english": "result, outcome",
+      "rhyme": "Remember this word you see, it's keka",
+      "sentence": {
+        "kanji": "試合の結果を早く知りたい。",
+        "romaji": "shiai no keka wo hayaku shiritai",
+        "english": "I want to know soon the results of the game."
+      },
+      "rtkLesson": 36,
+      "rtkFrame": 1034,
+      "sourceLesson": 36
+    },
+    {
+      "id": "K_hearts",
+      "rank": "K",
+      "suit": "hearts",
+      "kanji": "ジェット機",
+      "hiragana": "ジェットき",
+      "romaji": "ジェットki",
+      "english": "jet airplane",
+      "rhyme": "Remember this word you see, it's ジェットki",
+      "sentence": {
+        "kanji": "ジェット機が飛んでいる。",
+        "romaji": "jietoki ga tonde iru",
+        "english": "The jet plane is flying."
+      },
+      "rtkLesson": 36,
+      "rtkFrame": 1124,
+      "sourceLesson": 36
+    },
+    {
+      "id": "A_diamonds",
+      "rank": "A",
+      "suit": "diamonds",
+      "kanji": "続ける",
+      "hiragana": "つづける",
+      "romaji": "tsuzukeru",
+      "english": "continue, keep up",
+      "rhyme": "Remember this word you see, it's tsuzukeru",
+      "sentence": {
+        "kanji": "仕事を続けてください。",
+        "romaji": "shigoto wo tsuzukete kudasai",
+        "english": "Please continue working."
+      },
+      "rtkLesson": 36,
+      "rtkFrame": 1164,
+      "sourceLesson": 36
+    },
+    {
+      "id": "2_diamonds",
+      "rank": "2",
+      "suit": "diamonds",
+      "kanji": "給料",
+      "hiragana": "きゅうりょう",
+      "romaji": "kyuuryou",
+      "english": "salary, pay",
+      "rhyme": "Remember this word you see, it's kyuuryou",
+      "sentence": {
+        "kanji": "来年から給料が上がります。",
+        "romaji": "rainen kara kyuuryou ga agarimasu",
+        "english": "I'm getting a pay raise as of next year."
+      },
+      "rtkLesson": 36,
+      "rtkFrame": 1230,
+      "sourceLesson": 36
+    },
+    {
+      "id": "3_diamonds",
+      "rank": "3",
+      "suit": "diamonds",
+      "kanji": "機械",
+      "hiragana": "きかい",
+      "romaji": "kikai",
+      "english": "machine",
+      "rhyme": "Remember this word you see, it's kikai",
+      "sentence": {
+        "kanji": "新しい機械が壊れた。",
+        "romaji": "atarashii kikai ga kowareta",
+        "english": "The new machine broke."
+      },
+      "rtkLesson": 36,
+      "rtkFrame": 1258,
+      "sourceLesson": 36
+    },
+    {
+      "id": "4_diamonds",
+      "rank": "4",
+      "suit": "diamonds",
+      "kanji": "世紀",
+      "hiragana": "せいき",
+      "romaji": "seiki",
+      "english": "century",
+      "rhyme": "Remember this word you see, it's seiki",
+      "sentence": {
+        "kanji": "新しい世紀の始まりです。",
+        "romaji": "atarashii seiki no hajimari desu",
+        "english": "It's the start of a new century."
+      },
+      "rtkLesson": 36,
+      "rtkFrame": 1330,
+      "sourceLesson": 36
+    },
+    {
+      "id": "5_diamonds",
+      "rank": "5",
+      "suit": "diamonds",
+      "kanji": "繰り返す",
+      "hiragana": "くりかえす",
+      "romaji": "kurikaesu",
+      "english": "repeat",
+      "rhyme": "Remember this word you see, it's kurikaesu",
+      "sentence": {
+        "kanji": "彼女は同じ間違いを繰り返した。",
+        "romaji": "kanojo ha onaji machigai wo kurikaeshita",
+        "english": "She repeated the same mistake."
+      },
+      "rtkLesson": 36,
+      "rtkFrame": 1383,
+      "sourceLesson": 36
+    },
+    {
+      "id": "6_diamonds",
+      "rank": "6",
+      "suit": "diamonds",
+      "kanji": "細かい",
+      "hiragana": "こまかい",
+      "romaji": "komakai",
+      "english": "minute, elaborate",
+      "rhyme": "Remember this word you see, it's komakai",
+      "sentence": {
+        "kanji": "彼女は細かいことにうるさい。",
+        "romaji": "kanojo ha komakai koto ni urusai",
+        "english": "She's fussy about small details."
+      },
+      "rtkLesson": 36,
+      "rtkFrame": 1424,
+      "sourceLesson": 36
+    },
+    {
+      "id": "7_diamonds",
+      "rank": "7",
+      "suit": "diamonds",
+      "kanji": "細か",
+      "hiragana": "こまか",
+      "romaji": "komaka",
+      "english": "minute, elaborate",
+      "rhyme": "Remember this word you see, it's komaka",
+      "sentence": {
+        "kanji": "それは細かな問題です。",
+        "romaji": "sore ha komaka na mondai desu",
+        "english": "That's a complex issue."
+      },
+      "rtkLesson": 36,
+      "rtkFrame": 1426,
+      "sourceLesson": 36
+    },
+    {
+      "id": "8_diamonds",
+      "rank": "8",
+      "suit": "diamonds",
+      "kanji": "紹介",
+      "hiragana": "しょうかい",
+      "romaji": "shoukai",
+      "english": "introduction, presentation",
+      "rhyme": "Remember this word you see, it's shoukai",
+      "sentence": {
+        "kanji": "両親に彼女を紹介した。",
+        "romaji": "ryoushin ni kanojo wo shoukai shita",
+        "english": "I introduced my girlfriend to my parents."
+      },
+      "rtkLesson": 36,
+      "rtkFrame": 1499,
+      "sourceLesson": 36
+    },
+    {
+      "id": "9_diamonds",
+      "rank": "9",
+      "suit": "diamonds",
+      "kanji": "経営",
+      "hiragana": "けいえい",
+      "romaji": "keiei",
+      "english": "management, operation",
+      "rhyme": "Remember this word you see, it's keiei",
+      "sentence": {
+        "kanji": "我が社の経営はうまくいっています。",
+        "romaji": "wagasha no keiei ha umaku ite imasu",
+        "english": "Our company is well managed."
+      },
+      "rtkLesson": 36,
+      "rtkFrame": 1515,
+      "sourceLesson": 36
+    },
+    {
+      "id": "10_diamonds",
+      "rank": "10",
+      "suit": "diamonds",
+      "kanji": "絵葉書",
+      "hiragana": "えはがき",
+      "romaji": "ehagaki",
+      "english": "picture postcard",
+      "rhyme": "Remember this word you see, it's ehagaki",
+      "sentence": {
+        "kanji": "友達から絵葉書が届きました。",
+        "romaji": "tomodachi kara ehagaki ga todokimashita",
+        "english": "I received a picture postcard from a friend."
+      },
+      "rtkLesson": 36,
+      "rtkFrame": 1594,
+      "sourceLesson": 36
+    },
+    {
+      "id": "J_diamonds",
+      "rank": "J",
+      "suit": "diamonds",
+      "kanji": "孫",
+      "hiragana": "まご",
+      "romaji": "mago",
+      "english": "grandchild",
+      "rhyme": "Remember this word you see, it's mago",
+      "sentence": {
+        "kanji": "昨日、孫が生まれました。",
+        "romaji": "kinou mago ga umaremashita",
+        "english": "My grandchild was born yesterday."
+      },
+      "rtkLesson": 36,
+      "rtkFrame": 1717,
+      "sourceLesson": 36
+    },
+    {
+      "id": "Q_diamonds",
+      "rank": "Q",
+      "suit": "diamonds",
+      "kanji": "木綿",
+      "hiragana": "もめん",
+      "romaji": "momen",
+      "english": "cotton",
+      "rhyme": "Remember this word you see, it's momen",
+      "sentence": {
+        "kanji": "彼女は木綿のシャツを着ています。",
+        "romaji": "kanojo ha momen no shatsu wo kite imasu",
+        "english": "She's wearing a cotton shirt."
+      },
+      "rtkLesson": 36,
+      "rtkFrame": 1718,
+      "sourceLesson": 36
+    },
+    {
+      "id": "K_diamonds",
+      "rank": "K",
+      "suit": "diamonds",
+      "kanji": "糸",
+      "hiragana": "いと",
+      "romaji": "ito",
+      "english": "thread, yarn",
+      "rhyme": "Remember this word you see, it's ito",
+      "sentence": {
+        "kanji": "母は糸を針に通した。",
+        "romaji": "haha ha ito wo hari ni tooshita",
+        "english": "My mother threaded the needle."
+      },
+      "rtkLesson": 36,
+      "rtkFrame": 1731,
+      "sourceLesson": 36
+    },
+    {
+      "id": "A_clubs",
+      "rank": "A",
+      "suit": "clubs",
+      "kanji": "洗濯機",
+      "hiragana": "せんたくき",
+      "romaji": "sentakuki",
+      "english": "washing machine",
+      "rhyme": "Remember this word you see, it's sentakuki",
+      "sentence": {
+        "kanji": "新しい洗濯機を買いました。",
+        "romaji": "atarashii sentaki wo kaimashita",
+        "english": "I bought a new washing machine."
+      },
+      "rtkLesson": 36,
+      "rtkFrame": 1748,
+      "sourceLesson": 36
+    },
+    {
+      "id": "2_clubs",
+      "rank": "2",
+      "suit": "clubs",
+      "kanji": "扇風機",
+      "hiragana": "せんぷうき",
+      "romaji": "senpuuki",
+      "english": "electric fan",
+      "rhyme": "Remember this word you see, it's senpuuki",
+      "sentence": {
+        "kanji": "暑いから扇風機をつけよう。",
+        "romaji": "atsui kara senpuuki wo tsukeyou",
+        "english": "It's hot, so let's turn on the fan."
+      },
+      "rtkLesson": 36,
+      "rtkFrame": 1780,
+      "sourceLesson": 36
+    },
+    {
+      "id": "3_clubs",
+      "rank": "3",
+      "suit": "clubs",
+      "kanji": "幾つ",
+      "hiragana": "いくつ",
+      "romaji": "ikutsu",
+      "english": "how many, how old",
+      "rhyme": "Remember this word you see, it's ikutsu",
+      "sentence": {
+        "kanji": "娘さんは幾つになりましたか。",
+        "romaji": "musumesan ha ikutsu ni narimashita ka",
+        "english": "How old is your daughter now?"
+      },
+      "rtkLesson": 36,
+      "rtkFrame": 1844,
+      "sourceLesson": 36
+    },
+    {
+      "id": "4_clubs",
+      "rank": "4",
+      "suit": "clubs",
+      "kanji": "後",
+      "hiragana": "のち",
+      "romaji": "nochi",
+      "english": "after, afterwards",
+      "rhyme": "Remember this word you see, it's nochi",
+      "sentence": {
+        "kanji": "後に彼は総理大臣になりました。",
+        "romaji": "nochi ni kare ha souri daijin ni narimashita",
+        "english": "He would later become Prime Minister."
+      },
+      "rtkLesson": 36,
+      "rtkFrame": 1852,
+      "sourceLesson": 36
+    },
+    {
+      "id": "5_clubs",
+      "rank": "5",
+      "suit": "clubs",
+      "kanji": "幼稚園",
+      "hiragana": "ようちえん",
+      "romaji": "youchien",
+      "english": "kindergarten",
+      "rhyme": "Remember this word you see, it's youchien",
+      "sentence": {
+        "kanji": "娘は幼稚園に通っています。",
+        "romaji": "musume ha youchien ni kayote imasu",
+        "english": "My daughter goes to kindergarten."
+      },
+      "rtkLesson": 36,
+      "rtkFrame": 1859,
+      "sourceLesson": 36
+    },
+    {
+      "id": "6_clubs",
+      "rank": "6",
+      "suit": "clubs",
+      "kanji": "紫",
+      "hiragana": "むらさき",
+      "romaji": "murasaki",
+      "english": "purple",
+      "rhyme": "Remember this word you see, it's murasaki",
+      "sentence": {
+        "kanji": "彼女は紫のドレスを着ていた。",
+        "romaji": "kanojo ha murasaki no doresu wo kite ita",
+        "english": "She wore a purple dress."
+      },
+      "rtkLesson": 36,
+      "rtkFrame": 1929,
+      "sourceLesson": 36
+    },
+    {
+      "id": "7_clubs",
+      "rank": "7",
+      "suit": "clubs",
+      "kanji": "紅茶",
+      "hiragana": "こうちゃ",
+      "romaji": "koucha",
+      "english": "black tea",
+      "rhyme": "Remember this word you see, it's koucha",
+      "sentence": {
+        "kanji": "温かい紅茶が飲みたい。",
+        "romaji": "atatakai koucha ga nomitai",
+        "english": "I want to drink hot tea."
+      },
+      "rtkLesson": 36,
+      "rtkFrame": 1931,
+      "sourceLesson": 36
+    },
+    {
+      "id": "8_clubs",
+      "rank": "8",
+      "suit": "clubs",
+      "kanji": "幾ら",
+      "hiragana": "いくら",
+      "romaji": "ikura",
+      "english": "how much",
+      "rhyme": "Remember this word you see, it's ikura",
+      "sentence": {
+        "kanji": "この靴は幾らですか。",
+        "romaji": "kono kutsu ha ikura desu ka",
+        "english": "How much are these shoes?"
+      },
+      "rtkLesson": 36,
+      "rtkFrame": 1962,
+      "sourceLesson": 36
+    },
+    {
+      "id": "9_clubs",
+      "rank": "9",
+      "suit": "clubs",
+      "kanji": "後書き",
+      "hiragana": "あとがき",
+      "romaji": "atogaki",
+      "english": "postscript, afterword",
+      "rhyme": "Remember this word you see, it's atogaki",
+      "sentence": {
+        "kanji": "後書きをよく読んで下さい。",
+        "romaji": "atogaki wo yoku yonde kudasai",
+        "english": "Please read the postscript carefully."
+      },
+      "rtkLesson": 36,
+      "rtkFrame": 2090,
+      "sourceLesson": 36
+    },
+    {
+      "id": "10_clubs",
+      "rank": "10",
+      "suit": "clubs",
+      "kanji": "後回し",
+      "hiragana": "あとまわし",
+      "romaji": "atomawashi",
+      "english": "deferment, postponement",
+      "rhyme": "Remember this word you see, it's atomawashi",
+      "sentence": {
+        "kanji": "おしゃべりは後回しにしましょう。",
+        "romaji": "oshaberi ha atomawashi ni shimashou",
+        "english": "Let's leave the chit-chat for later."
+      },
+      "rtkLesson": 36,
+      "rtkFrame": 2351,
+      "sourceLesson": 36
+    },
+    {
+      "id": "J_clubs",
+      "rank": "J",
+      "suit": "clubs",
+      "kanji": "前後",
+      "hiragana": "ぜんご",
+      "romaji": "zengo",
+      "english": "before and after, order",
+      "rhyme": "Remember this word you see, it's zengo",
+      "sentence": {
+        "kanji": "そちらに着くのは6時前後です。",
+        "romaji": "sochira ni tsuku no ha rokuji zengo desu",
+        "english": "I will arrive there around 6 o'clock."
+      },
+      "rtkLesson": 36,
+      "rtkFrame": 2482,
+      "sourceLesson": 36
+    },
+    {
+      "id": "Q_clubs",
+      "rank": "Q",
+      "suit": "clubs",
+      "kanji": "最終",
+      "hiragana": "さいしゅう",
+      "romaji": "saishuu",
+      "english": "last, final",
+      "rhyme": "Remember this word you see, it's saishuu",
+      "sentence": {
+        "kanji": "東京行きの最終電車は何時ですか。",
+        "romaji": "toukyouyuki no saishuu densha ha nanji desu ka",
+        "english": "What time is the last train for Tokyo?"
+      },
+      "rtkLesson": 36,
+      "rtkFrame": 2539,
+      "sourceLesson": 36
+    },
+    {
+      "id": "K_clubs",
+      "rank": "K",
+      "suit": "clubs",
+      "kanji": "終点",
+      "hiragana": "しゅうてん",
+      "romaji": "shuuten",
+      "english": "last stop, terminus",
+      "rhyme": "Remember this word you see, it's shuuten",
+      "sentence": {
+        "kanji": "電車の終点で降りました。",
+        "romaji": "densha no shuuten de orimashita",
+        "english": "I got off at the terminal."
+      },
+      "rtkLesson": 36,
+      "rtkFrame": 2540,
+      "sourceLesson": 36
+    },
+    {
+      "id": "A_spades",
+      "rank": "A",
+      "suit": "spades",
+      "kanji": "始終",
+      "hiragana": "しじゅう",
+      "romaji": "shijuu",
+      "english": "from beginning to end, at all times",
+      "rhyme": "Remember this word you see, it's shijuu",
+      "sentence": {
+        "kanji": "その部屋は始終、人が出入りしているね。",
+        "romaji": "sono heya ha shijuu hito ga deiri shite iru ne",
+        "english": "People keep going in and out of the room."
+      },
+      "rtkLesson": 36,
+      "rtkFrame": 2541,
+      "sourceLesson": 36
+    },
+    {
+      "id": "2_spades",
+      "rank": "2",
+      "suit": "spades",
+      "kanji": "終電",
+      "hiragana": "しゅうでん",
+      "romaji": "shuuden",
+      "english": "last train",
+      "rhyme": "Remember this word you see, it's shuuden",
+      "sentence": {
+        "kanji": "終電にやっと間に合った。",
+        "romaji": "shuuden ni yato maniata",
+        "english": "I was just in time for the last train."
+      },
+      "rtkLesson": 36,
+      "rtkFrame": 2542,
+      "sourceLesson": 36
+    },
+    {
+      "id": "3_spades",
+      "rank": "3",
+      "suit": "spades",
+      "kanji": "絵本",
+      "hiragana": "えほん",
+      "romaji": "ehon",
+      "english": "picture book",
+      "rhyme": "Remember this word you see, it's ehon",
+      "sentence": {
+        "kanji": "その子は絵本が大好きです。",
+        "romaji": "sono ko ha ehon ga daisuki desu",
+        "english": "That child loves picture books."
+      },
+      "rtkLesson": 36,
+      "rtkFrame": 2570,
+      "sourceLesson": 36
+    },
+    {
+      "id": "4_spades",
+      "rank": "4",
+      "suit": "spades",
+      "kanji": "終える",
+      "hiragana": "おえる",
+      "romaji": "oeru",
+      "english": "end, finish",
+      "rhyme": "Remember this word you see, it's oeru",
+      "sentence": {
+        "kanji": "やっと宿題を終えた。",
+        "romaji": "yato shukudai wo oeta",
+        "english": "At last I have finished my homework."
+      },
+      "rtkLesson": 36,
+      "rtkFrame": 2662,
+      "sourceLesson": 36
+    },
+    {
+      "id": "5_spades",
+      "rank": "5",
+      "suit": "spades",
+      "kanji": "後方",
+      "hiragana": "こうほう",
+      "romaji": "kouhou",
+      "english": "back, rear",
+      "rhyme": "Remember this word you see, it's kouhou",
+      "sentence": {
+        "kanji": "彼は後方の座席に着いたの。",
+        "romaji": "kare ha kouhou no zaseki ni tsuita no",
+        "english": "He sat down on a rear seat."
+      },
+      "rtkLesson": 36,
+      "rtkFrame": 2772,
+      "sourceLesson": 36
+    },
+    {
+      "id": "6_spades",
+      "rank": "6",
+      "suit": "spades",
+      "kanji": "結局",
+      "hiragana": "けっきょく",
+      "romaji": "kekyoku",
+      "english": "after all, finally",
+      "rhyme": "Remember this word you see, it's kekyoku",
+      "sentence": {
+        "kanji": "彼は結局何を言いたかったのだろう。",
+        "romaji": "kare ha kekyoku nani wo iitakata no darou",
+        "english": "I wonder what he wanted to say after all."
+      },
+      "rtkLesson": 36,
+      "rtkFrame": 2967,
+      "sourceLesson": 36
+    },
+    {
+      "id": "7_spades",
+      "rank": "7",
+      "suit": "spades",
+      "kanji": "結び",
+      "hiragana": "むすび",
+      "romaji": "musubi",
+      "english": "end, close",
+      "rhyme": "Remember this word you see, it's musubi",
+      "sentence": {
+        "kanji": "彼は会の結びとしてスピーチをしたよ。",
+        "romaji": "kare ha kai no musubi to shite supi-chi wo shita yo",
+        "english": "He made a speech to close the meeting."
+      },
+      "rtkLesson": 36,
+      "rtkFrame": 2969,
+      "sourceLesson": 36
+    },
+    {
+      "id": "8_spades",
+      "rank": "8",
+      "suit": "spades",
+      "kanji": "経由",
+      "hiragana": "けいゆ",
+      "romaji": "keiyu",
+      "english": "via, through",
+      "rhyme": "Remember this word you see, it's keiyu",
+      "sentence": {
+        "kanji": "メールを経由して広がるウィルスもあります。",
+        "romaji": "me-ru wo keiyu shite hirogaru uirusu mo arimasu",
+        "english": "There are even viruses that spread via e-mail."
+      },
+      "rtkLesson": 36,
+      "rtkFrame": 2991,
+      "sourceLesson": 36
+    },
+    {
+      "id": "9_spades",
+      "rank": "9",
+      "suit": "spades",
+      "kanji": "機会",
+      "hiragana": "きかい",
+      "romaji": "kikai",
+      "english": "opportunity, occasion",
+      "rhyme": "Remember this word you see, it's kikai",
+      "sentence": {
+        "kanji": "家族で話し合う機会を持ちました。",
+        "romaji": "kazoku de hanashiau kikai wo mochimashita",
+        "english": "I set up an opportunity to have a discussion with the family."
+      },
+      "rtkLesson": 36,
+      "rtkFrame": 3163,
+      "sourceLesson": 36
+    },
+    {
+      "id": "10_spades",
+      "rank": "10",
+      "suit": "spades",
+      "kanji": "時機",
+      "hiragana": "じき",
+      "romaji": "jiki",
+      "english": "opportunity, chance",
+      "rhyme": "Remember this word you see, it's jiki",
+      "sentence": {
+        "kanji": "あせらずに時機を待つべきです。",
+        "romaji": "aserazu ni jiki wo matsu beki desu",
+        "english": "You should wait patiently for the right opportunity."
+      },
+      "rtkLesson": 36,
+      "rtkFrame": 3165,
+      "sourceLesson": 36
+    },
+    {
+      "id": "J_spades",
+      "rank": "J",
+      "suit": "spades",
+      "kanji": "結成",
+      "hiragana": "けっせい",
+      "romaji": "kesei",
+      "english": "organization, formation",
+      "rhyme": "Remember this word you see, it's kesei",
+      "sentence": {
+        "kanji": "新しい代表チームが結成されました。",
+        "romaji": "atarashii daihyou chi-mu ga kesei saremashita",
+        "english": "The new representative team was formed."
+      },
+      "rtkLesson": 36,
+      "rtkFrame": 3228,
+      "sourceLesson": 36
+    },
+    {
+      "id": "Q_spades",
+      "rank": "Q",
+      "suit": "spades",
+      "kanji": "後者",
+      "hiragana": "こうしゃ",
+      "romaji": "kousha",
+      "english": "the latter",
+      "rhyme": "Remember this word you see, it's kousha",
+      "sentence": {
+        "kanji": "正しい答は後者です。",
+        "romaji": "tadashii kotae ha kousha desu",
+        "english": "The right answer is the latter."
+      },
+      "rtkLesson": 36,
+      "rtkFrame": 3271,
+      "sourceLesson": 36
+    },
+    {
+      "id": "K_spades",
+      "rank": "K",
+      "suit": "spades",
+      "kanji": "経費",
+      "hiragana": "けいひ",
+      "romaji": "keihi",
+      "english": "expense",
+      "rhyme": "Remember this word you see, it's keihi",
+      "sentence": {
+        "kanji": "これからは経費を節約しましょう。",
+        "romaji": "kore kara ha keihi wo setsuyaku shimashou",
+        "english": "From now on let's save on expenses."
+      },
+      "rtkLesson": 36,
+      "rtkFrame": 3305,
+      "sourceLesson": 36
+    }
+  ]
+}

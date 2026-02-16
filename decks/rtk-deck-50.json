@@ -1,0 +1,940 @@
+{
+  "cards": [
+    {
+      "id": "A_hearts",
+      "rank": "A",
+      "suit": "hearts",
+      "kanji": "欠席",
+      "hiragana": "けっせき",
+      "romaji": "keseki",
+      "english": "absence, nonattendance",
+      "rhyme": "Remember this word you see, it's keseki",
+      "sentence": {
+        "kanji": "風邪のため今日は欠席します。",
+        "romaji": "kaze no tame kyou ha keseki shimasu",
+        "english": "I'll be absent today because of a cold."
+      },
+      "rtkLesson": 32,
+      "rtkFrame": 1918,
+      "sourceLesson": 32
+    },
+    {
+      "id": "2_hearts",
+      "rank": "2",
+      "suit": "hearts",
+      "kanji": "伴う",
+      "hiragana": "ともなう",
+      "romaji": "tomonau",
+      "english": "accompany, go with",
+      "rhyme": "Remember this word you see, it's tomonau",
+      "sentence": {
+        "kanji": "その仕事は危険を伴う。",
+        "romaji": "sono shigoto ha kiken wo tomonau",
+        "english": "Danger comes with the job."
+      },
+      "rtkLesson": 32,
+      "rtkFrame": 1948,
+      "sourceLesson": 32
+    },
+    {
+      "id": "3_hearts",
+      "rank": "3",
+      "suit": "hearts",
+      "kanji": "巻く",
+      "hiragana": "まく",
+      "romaji": "maku",
+      "english": "roll up, wind, wrap",
+      "rhyme": "Remember this word you see, it's maku",
+      "sentence": {
+        "kanji": "彼は頭にタオルを巻いていた。",
+        "romaji": "kare ha atama ni taoru wo maite ita",
+        "english": "He had a towel tied around his head."
+      },
+      "rtkLesson": 32,
+      "rtkFrame": 1949,
+      "sourceLesson": 32
+    },
+    {
+      "id": "4_hearts",
+      "rank": "4",
+      "suit": "hearts",
+      "kanji": "半袖",
+      "hiragana": "はんそで",
+      "romaji": "hansode",
+      "english": "short-sleeved shirt",
+      "rhyme": "Remember this word you see, it's hansode",
+      "sentence": {
+        "kanji": "今日は、半袖のシャツを着よう。",
+        "romaji": "kyou ha 、 hansode no shatsu wo kiyou 。",
+        "english": "I'll put on a short-sleeved shirt today."
+      },
+      "rtkLesson": 32,
+      "rtkFrame": 1975,
+      "sourceLesson": 32
+    },
+    {
+      "id": "5_hearts",
+      "rank": "5",
+      "suit": "hearts",
+      "kanji": "半年",
+      "hiragana": "はんとし",
+      "romaji": "hantoshi",
+      "english": "half a year",
+      "rhyme": "Remember this word you see, it's hantoshi",
+      "sentence": {
+        "kanji": "日本に来て半年になります。",
+        "romaji": "nipon ni kite hantoshi ni narimasu",
+        "english": "It has been half a year since I came to Japan."
+      },
+      "rtkLesson": 32,
+      "rtkFrame": 2057,
+      "sourceLesson": 32
+    },
+    {
+      "id": "6_hearts",
+      "rank": "6",
+      "suit": "hearts",
+      "kanji": "二度と",
+      "hiragana": "にどと",
+      "romaji": "nidoto",
+      "english": "never again",
+      "rhyme": "Remember this word you see, it's nidoto",
+      "sentence": {
+        "kanji": "もうここには二度と来ません。",
+        "romaji": "mou koko ni ha nidoto kimasen",
+        "english": "I'll never come here again."
+      },
+      "rtkLesson": 32,
+      "rtkFrame": 2134,
+      "sourceLesson": 32
+    },
+    {
+      "id": "7_hearts",
+      "rank": "7",
+      "suit": "hearts",
+      "kanji": "毎度",
+      "hiragana": "まいど",
+      "romaji": "maido",
+      "english": "every time, always",
+      "rhyme": "Remember this word you see, it's maido",
+      "sentence": {
+        "kanji": "毎度ありがとうございます。",
+        "romaji": "maido arigatou gozaimasu",
+        "english": "Thank you for your patronage."
+      },
+      "rtkLesson": 32,
+      "rtkFrame": 2136,
+      "sourceLesson": 32
+    },
+    {
+      "id": "8_hearts",
+      "rank": "8",
+      "suit": "hearts",
+      "kanji": "勝手",
+      "hiragana": "かって",
+      "romaji": "kate",
+      "english": "selfish, self-centered",
+      "rhyme": "Remember this word you see, it's kate",
+      "sentence": {
+        "kanji": "勝手なことばかり言わないでくれ。",
+        "romaji": "kate na koto bakari iwanaide kure",
+        "english": "Don't say self-centered things all the time."
+      },
+      "rtkLesson": 32,
+      "rtkFrame": 2359,
+      "sourceLesson": 32
+    },
+    {
+      "id": "9_hearts",
+      "rank": "9",
+      "suit": "hearts",
+      "kanji": "不規則",
+      "hiragana": "ふきそく",
+      "romaji": "fukisoku",
+      "english": "irregular",
+      "rhyme": "Remember this word you see, it's fukisoku",
+      "sentence": {
+        "kanji": "最近、不規則な生活をしている。",
+        "romaji": "saikin fukisoku na seikatsu wo shite iru",
+        "english": "My life has been quite disorganized lately."
+      },
+      "rtkLesson": 32,
+      "rtkFrame": 2367,
+      "sourceLesson": 32
+    },
+    {
+      "id": "10_hearts",
+      "rank": "10",
+      "suit": "hearts",
+      "kanji": "支度",
+      "hiragana": "したく",
+      "romaji": "shitaku",
+      "english": "arrangement, preparation",
+      "rhyme": "Remember this word you see, it's shitaku",
+      "sentence": {
+        "kanji": "支度ができたら出かけましょう。",
+        "romaji": "shitaku ga dekitara dekakemashou",
+        "english": "Let's go out when we are ready."
+      },
+      "rtkLesson": 32,
+      "rtkFrame": 2410,
+      "sourceLesson": 32
+    },
+    {
+      "id": "J_hearts",
+      "rank": "J",
+      "suit": "hearts",
+      "kanji": "借り",
+      "hiragana": "かり",
+      "romaji": "kari",
+      "english": "borrowing, debt",
+      "rhyme": "Remember this word you see, it's kari",
+      "sentence": {
+        "kanji": "この借りは必ず返します。",
+        "romaji": "kono kari ha kanarazu kaeshimasu",
+        "english": "I will definitely pay it back."
+      },
+      "rtkLesson": 32,
+      "rtkFrame": 2418,
+      "sourceLesson": 32
+    },
+    {
+      "id": "Q_hearts",
+      "rank": "Q",
+      "suit": "hearts",
+      "kanji": "券",
+      "hiragana": "けん",
+      "romaji": "ken",
+      "english": "voucher, ticket",
+      "rhyme": "Remember this word you see, it's ken",
+      "sentence": {
+        "kanji": "入場券をお持ちですか。",
+        "romaji": "nyuujouken wo o mochi desu ka",
+        "english": "Do you have an admission ticket?"
+      },
+      "rtkLesson": 32,
+      "rtkFrame": 2439,
+      "sourceLesson": 32
+    },
+    {
+      "id": "K_hearts",
+      "rank": "K",
+      "suit": "hearts",
+      "kanji": "回数券",
+      "hiragana": "かいすうけん",
+      "romaji": "kaisuuken",
+      "english": "book of tickets",
+      "rhyme": "Remember this word you see, it's kaisuuken",
+      "sentence": {
+        "kanji": "バスの回数券を買いました。",
+        "romaji": "basu no kaisuuken wo kaimashita",
+        "english": "I bought a strip of tickets for the bus."
+      },
+      "rtkLesson": 32,
+      "rtkFrame": 2440,
+      "sourceLesson": 32
+    },
+    {
+      "id": "A_diamonds",
+      "rank": "A",
+      "suit": "diamonds",
+      "kanji": "前売り券",
+      "hiragana": "まえうりけん",
+      "romaji": "maeuriken",
+      "english": "advance ticket",
+      "rhyme": "Remember this word you see, it's maeuriken",
+      "sentence": {
+        "kanji": "コンサートの前売り券を手に入れたんだ。",
+        "romaji": "konsa-to no maeuriken wo te ni ireta n da",
+        "english": "I got an advance ticket for the concert."
+      },
+      "rtkLesson": 32,
+      "rtkFrame": 2442,
+      "sourceLesson": 32
+    },
+    {
+      "id": "2_diamonds",
+      "rank": "2",
+      "suit": "diamonds",
+      "kanji": "客席",
+      "hiragana": "きゃくせき",
+      "romaji": "kyakuseki",
+      "english": "seat, passenger seat",
+      "rhyme": "Remember this word you see, it's kyakuseki",
+      "sentence": {
+        "kanji": "私たちは客席に座ったんだ。",
+        "romaji": "watashitachi ha kyakuseki ni suwata n da",
+        "english": "We sat on the seat."
+      },
+      "rtkLesson": 32,
+      "rtkFrame": 2495,
+      "sourceLesson": 32
+    },
+    {
+      "id": "3_diamonds",
+      "rank": "3",
+      "suit": "diamonds",
+      "kanji": "着席",
+      "hiragana": "ちゃくせき",
+      "romaji": "chakuseki",
+      "english": "taking a seat",
+      "rhyme": "Remember this word you see, it's chakuseki",
+      "sentence": {
+        "kanji": "みなさん、着席してください。",
+        "romaji": "minasan chakuseki shite kudasai",
+        "english": "Everybody, please be seated."
+      },
+      "rtkLesson": 32,
+      "rtkFrame": 2496,
+      "sourceLesson": 32
+    },
+    {
+      "id": "4_diamonds",
+      "rank": "4",
+      "suit": "diamonds",
+      "kanji": "勝負",
+      "hiragana": "しょうぶ",
+      "romaji": "shoubu",
+      "english": "match",
+      "rhyme": "Remember this word you see, it's shoubu",
+      "sentence": {
+        "kanji": "勝負はまだ始まったばかりよ。",
+        "romaji": "shoubu ha mada hajimata bakari yo",
+        "english": "The match has just started."
+      },
+      "rtkLesson": 32,
+      "rtkFrame": 2530,
+      "sourceLesson": 32
+    },
+    {
+      "id": "5_diamonds",
+      "rank": "5",
+      "suit": "diamonds",
+      "kanji": "借金",
+      "hiragana": "しゃっきん",
+      "romaji": "shakin",
+      "english": "borrowing money, debt",
+      "rhyme": "Remember this word you see, it's shakin",
+      "sentence": {
+        "kanji": "彼は友達に借金をしたんだ。",
+        "romaji": "kare ha tomodachi ni shakin wo shita n da",
+        "english": "He borrowed money from a friend."
+      },
+      "rtkLesson": 32,
+      "rtkFrame": 2827,
+      "sourceLesson": 32
+    },
+    {
+      "id": "6_diamonds",
+      "rank": "6",
+      "suit": "diamonds",
+      "kanji": "不満",
+      "hiragana": "ふまん",
+      "romaji": "fuman",
+      "english": "dissatisfaction, discontent",
+      "rhyme": "Remember this word you see, it's fuman",
+      "sentence": {
+        "kanji": "私は彼のやり方には不満です。",
+        "romaji": "watashi ha kare no yarikata ni ha fuman desu",
+        "english": "I'm dissatisfied with his way of doing things."
+      },
+      "rtkLesson": 32,
+      "rtkFrame": 2835,
+      "sourceLesson": 32
+    },
+    {
+      "id": "7_diamonds",
+      "rank": "7",
+      "suit": "diamonds",
+      "kanji": "半ば",
+      "hiragana": "なかば",
+      "romaji": "nakaba",
+      "english": "middle, halfway",
+      "rhyme": "Remember this word you see, it's nakaba",
+      "sentence": {
+        "kanji": "彼は30代の半ばです。",
+        "romaji": "kare ha 30 dai no nakaba desu",
+        "english": "He's in his mid-thirties."
+      },
+      "rtkLesson": 32,
+      "rtkFrame": 2849,
+      "sourceLesson": 32
+    },
+    {
+      "id": "8_diamonds",
+      "rank": "8",
+      "suit": "diamonds",
+      "kanji": "不利",
+      "hiragana": "ふり",
+      "romaji": "furi",
+      "english": "disadvantage",
+      "rhyme": "Remember this word you see, it's furi",
+      "sentence": {
+        "kanji": "彼は今、不利な立場にいます。",
+        "romaji": "kare ha ima furi na tachiba ni imasu",
+        "english": "He's at a disadvantage now."
+      },
+      "rtkLesson": 32,
+      "rtkFrame": 2863,
+      "sourceLesson": 32
+    },
+    {
+      "id": "9_diamonds",
+      "rank": "9",
+      "suit": "diamonds",
+      "kanji": "度々",
+      "hiragana": "たびたび",
+      "romaji": "tabitabi",
+      "english": "often",
+      "rhyme": "Remember this word you see, it's tabitabi",
+      "sentence": {
+        "kanji": "彼から度々メールが来ます。",
+        "romaji": "kare kara tabitabi me-ru ga kimasu",
+        "english": "I often get email from him."
+      },
+      "rtkLesson": 32,
+      "rtkFrame": 2894,
+      "sourceLesson": 32
+    },
+    {
+      "id": "10_diamonds",
+      "rank": "10",
+      "suit": "diamonds",
+      "kanji": "度忘れ",
+      "hiragana": "どわすれ",
+      "romaji": "dowasure",
+      "english": "memory lapse, mental block",
+      "rhyme": "Remember this word you see, it's dowasure",
+      "sentence": {
+        "kanji": "彼の名前を度忘れしたぞ。",
+        "romaji": "kare no namae wo dowasure shita zo",
+        "english": "His name has completely slipped from my memory."
+      },
+      "rtkLesson": 32,
+      "rtkFrame": 2935,
+      "sourceLesson": 32
+    },
+    {
+      "id": "J_diamonds",
+      "rank": "J",
+      "suit": "diamonds",
+      "kanji": "この度",
+      "hiragana": "このたび",
+      "romaji": "konotabi",
+      "english": "on this occasion",
+      "rhyme": "Remember this word you see, it's konotabi",
+      "sentence": {
+        "kanji": "この度はご結婚おめでとうございます。",
+        "romaji": "konotabi ha gokekon omedetou gozaimasu",
+        "english": "Congratulations on your marriage."
+      },
+      "rtkLesson": 32,
+      "rtkFrame": 2974,
+      "sourceLesson": 32
+    },
+    {
+      "id": "Q_diamonds",
+      "rank": "Q",
+      "suit": "diamonds",
+      "kanji": "不思議",
+      "hiragana": "ふしぎ",
+      "romaji": "fushigi",
+      "english": "mystery, wonder",
+      "rhyme": "Remember this word you see, it's fushigi",
+      "sentence": {
+        "kanji": "それはとても不思議な話だね。",
+        "romaji": "sore ha totemo fushigi na hanashi da ne",
+        "english": "It's a very mysterious story."
+      },
+      "rtkLesson": 32,
+      "rtkFrame": 3018,
+      "sourceLesson": 32
+    },
+    {
+      "id": "K_diamonds",
+      "rank": "K",
+      "suit": "diamonds",
+      "kanji": "座席",
+      "hiragana": "ざせき",
+      "romaji": "zaseki",
+      "english": "seat",
+      "rhyme": "Remember this word you see, it's zaseki",
+      "sentence": {
+        "kanji": "飛行機の座席はゆったりしていたよ。",
+        "romaji": "hikouki no zaseki ha yutari shite ita yo",
+        "english": "The airplane seat was spacious."
+      },
+      "rtkLesson": 32,
+      "rtkFrame": 3207,
+      "sourceLesson": 32
+    },
+    {
+      "id": "A_clubs",
+      "rank": "A",
+      "suit": "clubs",
+      "kanji": "不完全",
+      "hiragana": "ふかんぜん",
+      "romaji": "fukanzen",
+      "english": "imperfection, incompleteness",
+      "rhyme": "Remember this word you see, it's fukanzen",
+      "sentence": {
+        "kanji": "このデータはまだ不完全ね。",
+        "romaji": "kono de-ta ha mada fukanzen ne",
+        "english": "This data is still unfinished."
+      },
+      "rtkLesson": 32,
+      "rtkFrame": 3227,
+      "sourceLesson": 32
+    },
+    {
+      "id": "2_clubs",
+      "rank": "2",
+      "suit": "clubs",
+      "kanji": "勝敗",
+      "hiragana": "しょうはい",
+      "romaji": "shouhai",
+      "english": "victory or defeat",
+      "rhyme": "Remember this word you see, it's shouhai",
+      "sentence": {
+        "kanji": "このセットで勝敗が決まります。",
+        "romaji": "kono seto de shouhai ga kimarimasu",
+        "english": "Victory or defeat will be decided in this set."
+      },
+      "rtkLesson": 32,
+      "rtkFrame": 3241,
+      "sourceLesson": 32
+    },
+    {
+      "id": "3_clubs",
+      "rank": "3",
+      "suit": "clubs",
+      "kanji": "不明",
+      "hiragana": "ふめい",
+      "romaji": "fumei",
+      "english": "unknown",
+      "rhyme": "Remember this word you see, it's fumei",
+      "sentence": {
+        "kanji": "その病気は原因不明と言われているんだよ。",
+        "romaji": "sono byouki ha genin fumei to iwareteiru n da yo",
+        "english": "The cause of this illness is said to be unknown."
+      },
+      "rtkLesson": 32,
+      "rtkFrame": 3255,
+      "sourceLesson": 32
+    },
+    {
+      "id": "4_clubs",
+      "rank": "4",
+      "suit": "clubs",
+      "kanji": "証券",
+      "hiragana": "しょうけん",
+      "romaji": "shouken",
+      "english": "bill, bond",
+      "rhyme": "Remember this word you see, it's shouken",
+      "sentence": {
+        "kanji": "証券を売って資金にしようと思うの。",
+        "romaji": "shouken wo ute shikin ni shiyou to omou no",
+        "english": "I'm thinking of selling some securities and converting them to funds."
+      },
+      "rtkLesson": 32,
+      "rtkFrame": 3256,
+      "sourceLesson": 32
+    },
+    {
+      "id": "5_clubs",
+      "rank": "5",
+      "suit": "clubs",
+      "kanji": "不正",
+      "hiragana": "ふせい",
+      "romaji": "fusei",
+      "english": "fraud, impropriety",
+      "rhyme": "Remember this word you see, it's fusei",
+      "sentence": {
+        "kanji": "試験で不正が見つかったよ。",
+        "romaji": "shiken de fusei ga mitsukata yo",
+        "english": "Cheating was discovered in the examination."
+      },
+      "rtkLesson": 32,
+      "rtkFrame": 3280,
+      "sourceLesson": 32
+    },
+    {
+      "id": "6_clubs",
+      "rank": "6",
+      "suit": "clubs",
+      "kanji": "不安定",
+      "hiragana": "ふあんてい",
+      "romaji": "fuantei",
+      "english": "instability",
+      "rhyme": "Remember this word you see, it's fuantei",
+      "sentence": {
+        "kanji": "最近、体調が少し不安定です。",
+        "romaji": "saikin taichou ga sukoshi fuantei desu",
+        "english": "Recently, my physical condition is a little unstable."
+      },
+      "rtkLesson": 32,
+      "rtkFrame": 3297,
+      "sourceLesson": 32
+    },
+    {
+      "id": "7_clubs",
+      "rank": "7",
+      "suit": "clubs",
+      "kanji": "不安",
+      "hiragana": "ふあん",
+      "romaji": "fuan",
+      "english": "uneasiness, anxiety",
+      "rhyme": "Remember this word you see, it's fuan",
+      "sentence": {
+        "kanji": "明日、病院に検査に行くので少し不安です。",
+        "romaji": "asu byouin ni kensa ni iku no de sukoshi fuan desu",
+        "english": "I'm a bit worried since I have to go to the hospital for tests tomorrow."
+      },
+      "rtkLesson": 32,
+      "rtkFrame": 3311,
+      "sourceLesson": 32
+    },
+    {
+      "id": "8_clubs",
+      "rank": "8",
+      "suit": "clubs",
+      "kanji": "前半",
+      "hiragana": "ぜんはん",
+      "romaji": "zenhan",
+      "english": "first half",
+      "rhyme": "Remember this word you see, it's zenhan",
+      "sentence": {
+        "kanji": "相手チームのリードで前半が終わったよ。",
+        "romaji": "aite chi-mu no ri-do de zenhan ga owata yo",
+        "english": "The first half ended with the opposing team in the lead."
+      },
+      "rtkLesson": 32,
+      "rtkFrame": 3344,
+      "sourceLesson": 32
+    },
+    {
+      "id": "9_clubs",
+      "rank": "9",
+      "suit": "clubs",
+      "kanji": "不確か",
+      "hiragana": "ふたしか",
+      "romaji": "futashika",
+      "english": "unreliable, uncertain",
+      "rhyme": "Remember this word you see, it's futashika",
+      "sentence": {
+        "kanji": "人の記憶は不確かよ。",
+        "romaji": "hito no kioku ha futashika yo",
+        "english": "Human memories are unreliable."
+      },
+      "rtkLesson": 32,
+      "rtkFrame": 3356,
+      "sourceLesson": 32
+    },
+    {
+      "id": "10_clubs",
+      "rank": "10",
+      "suit": "clubs",
+      "kanji": "不自然",
+      "hiragana": "ふしぜん",
+      "romaji": "fushizen",
+      "english": "unnatural, artificial",
+      "rhyme": "Remember this word you see, it's fushizen",
+      "sentence": {
+        "kanji": "彼の態度はどこか不自然だったな。",
+        "romaji": "kare no taido ha dokoka fushizen data na",
+        "english": "His behavior was somewhat unnatural."
+      },
+      "rtkLesson": 32,
+      "rtkFrame": 3373,
+      "sourceLesson": 32
+    },
+    {
+      "id": "J_clubs",
+      "rank": "J",
+      "suit": "clubs",
+      "kanji": "高度",
+      "hiragana": "こうど",
+      "romaji": "koudo",
+      "english": "high degree",
+      "rhyme": "Remember this word you see, it's koudo",
+      "sentence": {
+        "kanji": "高度な技術を持つ人材を集めました。",
+        "romaji": "koudo na gijutsu wo motsu jinzai wo atsumemashita",
+        "english": "We've attracted highly-skilled personnel."
+      },
+      "rtkLesson": 32,
+      "rtkFrame": 3498,
+      "sourceLesson": 32
+    },
+    {
+      "id": "Q_clubs",
+      "rank": "Q",
+      "suit": "clubs",
+      "kanji": "判子",
+      "hiragana": "はんこ",
+      "romaji": "hanko",
+      "english": "seal, stamp",
+      "rhyme": "Remember this word you see, it's hanko",
+      "sentence": {
+        "kanji": "ここに判子を押してください。",
+        "romaji": "koko ni hanko wo oshite kudasai",
+        "english": "Please put your personal seal here."
+      },
+      "rtkLesson": 32,
+      "rtkFrame": 3572,
+      "sourceLesson": 32
+    },
+    {
+      "id": "K_clubs",
+      "rank": "K",
+      "suit": "clubs",
+      "kanji": "勝ち",
+      "hiragana": "かち",
+      "romaji": "kachi",
+      "english": "win, victory",
+      "rhyme": "Remember this word you see, it's kachi",
+      "sentence": {
+        "kanji": "歌合戦は赤組の勝ちでしたね。",
+        "romaji": "utagasen ha aka gumi no kachi deshita ne",
+        "english": "The red team won the singing contest."
+      },
+      "rtkLesson": 32,
+      "rtkFrame": 3654,
+      "sourceLesson": 32
+    },
+    {
+      "id": "A_spades",
+      "rank": "A",
+      "suit": "spades",
+      "kanji": "不況",
+      "hiragana": "ふきょう",
+      "romaji": "fukyou",
+      "english": "depression, slump",
+      "rhyme": "Remember this word you see, it's fukyou",
+      "sentence": {
+        "kanji": "不況の影響で仕事が少ないね。",
+        "romaji": "fukyou no eikyou de shigoto ga sukunai ne",
+        "english": "There's little work due to the recession."
+      },
+      "rtkLesson": 32,
+      "rtkFrame": 3764,
+      "sourceLesson": 32
+    },
+    {
+      "id": "2_spades",
+      "rank": "2",
+      "suit": "spades",
+      "kanji": "不運",
+      "hiragana": "ふうん",
+      "romaji": "fuun",
+      "english": "misfortune, bad luck",
+      "rhyme": "Remember this word you see, it's fuun",
+      "sentence": {
+        "kanji": "彼に不運な出来事が起こったの。",
+        "romaji": "kare ni fuun na dekigoto ga okota no",
+        "english": "He suffered an unfortunate incident."
+      },
+      "rtkLesson": 32,
+      "rtkFrame": 3966,
+      "sourceLesson": 32
+    },
+    {
+      "id": "3_spades",
+      "rank": "3",
+      "suit": "spades",
+      "kanji": "不注意",
+      "hiragana": "ふちゅうい",
+      "romaji": "fuchuui",
+      "english": "carelessness, inattention",
+      "rhyme": "Remember this word you see, it's fuchuui",
+      "sentence": {
+        "kanji": "その事故は運転手の不注意が原因で起きたの。",
+        "romaji": "sono jiko ha untenshu no fuchuui ga genin de okita no",
+        "english": "The accident happened due to the driver's carelessness."
+      },
+      "rtkLesson": 32,
+      "rtkFrame": 3967,
+      "sourceLesson": 32
+    },
+    {
+      "id": "4_spades",
+      "rank": "4",
+      "suit": "spades",
+      "kanji": "片手",
+      "hiragana": "かたて",
+      "romaji": "katate",
+      "english": "one hand",
+      "rhyme": "Remember this word you see, it's katate",
+      "sentence": {
+        "kanji": "片手運転は危ないよ。",
+        "romaji": "katate unten ha abunaiyo",
+        "english": "Single-handed driving is dangerous."
+      },
+      "rtkLesson": 32,
+      "rtkFrame": 3991,
+      "sourceLesson": 32
+    },
+    {
+      "id": "5_spades",
+      "rank": "5",
+      "suit": "spades",
+      "kanji": "片方",
+      "hiragana": "かたほう",
+      "romaji": "katahou",
+      "english": "one side",
+      "rhyme": "Remember this word you see, it's katahou",
+      "sentence": {
+        "kanji": "片方の目がかゆいです。",
+        "romaji": "katahou no me ga kayui desu",
+        "english": "One of my eyes is itchy."
+      },
+      "rtkLesson": 32,
+      "rtkFrame": 3992,
+      "sourceLesson": 32
+    },
+    {
+      "id": "6_spades",
+      "rank": "6",
+      "suit": "spades",
+      "kanji": "片側",
+      "hiragana": "かたがわ",
+      "romaji": "katagawa",
+      "english": "one side",
+      "rhyme": "Remember this word you see, it's katagawa",
+      "sentence": {
+        "kanji": "この道は片側通行です。",
+        "romaji": "kono michi ha katagawa tsuukou desu",
+        "english": "This road is a one-way street."
+      },
+      "rtkLesson": 32,
+      "rtkFrame": 3993,
+      "sourceLesson": 32
+    },
+    {
+      "id": "7_spades",
+      "rank": "7",
+      "suit": "spades",
+      "kanji": "出版",
+      "hiragana": "しゅっぱん",
+      "romaji": "shupan",
+      "english": "publishing, publication",
+      "rhyme": "Remember this word you see, it's shupan",
+      "sentence": {
+        "kanji": "この本は15年前に出版された。",
+        "romaji": "kono hon ha juugonenmae ni shupan sareta",
+        "english": "This book was published 15 years ago."
+      },
+      "rtkLesson": 32,
+      "rtkFrame": 4011,
+      "sourceLesson": 32
+    },
+    {
+      "id": "8_spades",
+      "rank": "8",
+      "suit": "spades",
+      "kanji": "出版社",
+      "hiragana": "しゅっぱんしゃ",
+      "romaji": "shupansha",
+      "english": "publishing company",
+      "rhyme": "Remember this word you see, it's shupansha",
+      "sentence": {
+        "kanji": "彼女は出版社で働いています。",
+        "romaji": "kanojo ha shupansha de hataraite imasu",
+        "english": "She works for a publisher."
+      },
+      "rtkLesson": 32,
+      "rtkFrame": 4012,
+      "sourceLesson": 32
+    },
+    {
+      "id": "9_spades",
+      "rank": "9",
+      "suit": "spades",
+      "kanji": "不合格",
+      "hiragana": "ふごうかく",
+      "romaji": "fugoukaku",
+      "english": "failure, disqualification",
+      "rhyme": "Remember this word you see, it's fugoukaku",
+      "sentence": {
+        "kanji": "残念ながら試験は不合格でした。",
+        "romaji": "zannen nagara shiken ha fugoukaku deshita",
+        "english": "To our regret, he failed the examination."
+      },
+      "rtkLesson": 32,
+      "rtkFrame": 4084,
+      "sourceLesson": 32
+    },
+    {
+      "id": "10_spades",
+      "rank": "10",
+      "suit": "spades",
+      "kanji": "不器用",
+      "hiragana": "ぶきよう",
+      "romaji": "bukiyou",
+      "english": "clumsy, unskillful",
+      "rhyme": "Remember this word you see, it's bukiyou",
+      "sentence": {
+        "kanji": "妹は不器用で、料理も苦手なの。",
+        "romaji": "imouto ha bukiyou de ryouri mo nigate na no",
+        "english": "My little sister is clumsy and not good at cooking."
+      },
+      "rtkLesson": 32,
+      "rtkFrame": 4162,
+      "sourceLesson": 32
+    },
+    {
+      "id": "J_spades",
+      "rank": "J",
+      "suit": "spades",
+      "kanji": "昔",
+      "hiragana": "むかし",
+      "romaji": "mukashi",
+      "english": "old times, the old days",
+      "rhyme": "Remember this word you see, it's mukashi",
+      "sentence": {
+        "kanji": "彼は昔は貧乏だった。",
+        "romaji": "kare ha mukashi ha binbou data",
+        "english": "He used to be poor."
+      },
+      "rtkLesson": 32,
+      "rtkFrame": 4176,
+      "sourceLesson": 32
+    },
+    {
+      "id": "Q_spades",
+      "rank": "Q",
+      "suit": "spades",
+      "kanji": "乏しい",
+      "hiragana": "とぼしい",
+      "romaji": "toboshii",
+      "english": "scarce, short of",
+      "rhyme": "Remember this word you see, it's toboshii",
+      "sentence": {
+        "kanji": "彼女はまだ仕事の経験が乏しい。",
+        "romaji": "kanojo ha mada shigoto no keiken ga toboshii。",
+        "english": "She still lacks work experience."
+      },
+      "rtkLesson": 32,
+      "rtkFrame": 4177,
+      "sourceLesson": 32
+    },
+    {
+      "id": "K_spades",
+      "rank": "K",
+      "suit": "spades",
+      "kanji": "貧乏人",
+      "hiragana": "びんぼうにん",
+      "romaji": "binbounin",
+      "english": "poor person, the poor",
+      "rhyme": "Remember this word you see, it's binbounin",
+      "sentence": {
+        "kanji": "貧乏人が大金持ちになることもあるさ。",
+        "romaji": "binbounin ga ooganemochi ni naru koto mo aru sa",
+        "english": "Occasionally, poor people can become millionaires."
+      },
+      "rtkLesson": 32,
+      "rtkFrame": 4178,
+      "sourceLesson": 32
+    }
+  ]
+}

@@ -1,0 +1,940 @@
+{
+  "cards": [
+    {
+      "id": "A_hearts",
+      "rank": "A",
+      "suit": "hearts",
+      "kanji": "紙",
+      "hiragana": "かみ",
+      "romaji": "kami",
+      "english": "paper",
+      "rhyme": "Remember this word you see, it's kami",
+      "sentence": {
+        "kanji": "紙と鉛筆はありますか。",
+        "romaji": "kami to enpitsu ha arimasu ka",
+        "english": "Do you have paper and pencil?"
+      },
+      "rtkLesson": 49,
+      "rtkFrame": 374,
+      "sourceLesson": 49
+    },
+    {
+      "id": "2_hearts",
+      "rank": "2",
+      "suit": "hearts",
+      "kanji": "郵便屋さん",
+      "hiragana": "ゆうびんやさん",
+      "romaji": "yuubinyasan",
+      "english": "mailman",
+      "rhyme": "Remember this word you see, it's yuubinyasan",
+      "sentence": {
+        "kanji": "郵便屋さんはもう来ましたか。",
+        "romaji": "yuubinyasan ha mou kimashita ka",
+        "english": "Has the postman already come?"
+      },
+      "rtkLesson": 49,
+      "rtkFrame": 625,
+      "sourceLesson": 49
+    },
+    {
+      "id": "3_hearts",
+      "rank": "3",
+      "suit": "hearts",
+      "kanji": "氏名",
+      "hiragana": "しめい",
+      "romaji": "shimei",
+      "english": "name",
+      "rhyme": "Remember this word you see, it's shimei",
+      "sentence": {
+        "kanji": "ここに住所と氏名を書いてください。",
+        "romaji": "koko ni juusho to shimei wo kaite kudasai",
+        "english": "Please write your name and address here."
+      },
+      "rtkLesson": 49,
+      "rtkFrame": 637,
+      "sourceLesson": 49
+    },
+    {
+      "id": "4_hearts",
+      "rank": "4",
+      "suit": "hearts",
+      "kanji": "都市",
+      "hiragana": "とし",
+      "romaji": "toshi",
+      "english": "cities, urban community",
+      "rhyme": "Remember this word you see, it's toshi",
+      "sentence": {
+        "kanji": "東京は日本一大きな都市です。",
+        "romaji": "toukyou ha nihonichi ooki na toshi desu",
+        "english": "Tokyo is the largest city in Japan."
+      },
+      "rtkLesson": 49,
+      "rtkFrame": 642,
+      "sourceLesson": 49
+    },
+    {
+      "id": "5_hearts",
+      "rank": "5",
+      "suit": "hearts",
+      "kanji": "都合",
+      "hiragana": "つごう",
+      "romaji": "tsugou",
+      "english": "circumstances",
+      "rhyme": "Remember this word you see, it's tsugou",
+      "sentence": {
+        "kanji": "今日は都合が悪くて行けません。",
+        "romaji": "kyou ha tsugou ga warukute ikemasen",
+        "english": "I can't go today because it's not convenient for me."
+      },
+      "rtkLesson": 49,
+      "rtkFrame": 643,
+      "sourceLesson": 49
+    },
+    {
+      "id": "6_hearts",
+      "rank": "6",
+      "suit": "hearts",
+      "kanji": "郵便",
+      "hiragana": "ゆうびん",
+      "romaji": "yuubin",
+      "english": "mail service, postal matter",
+      "rhyme": "Remember this word you see, it's yuubin",
+      "sentence": {
+        "kanji": "さっき郵便が届きました。",
+        "romaji": "saki yuubin ga todokimashita",
+        "english": "The mail has just arrived."
+      },
+      "rtkLesson": 49,
+      "rtkFrame": 654,
+      "sourceLesson": 49
+    },
+    {
+      "id": "7_hearts",
+      "rank": "7",
+      "suit": "hearts",
+      "kanji": "部分",
+      "hiragana": "ぶぶん",
+      "romaji": "bubun",
+      "english": "part, section",
+      "rhyme": "Remember this word you see, it's bubun",
+      "sentence": {
+        "kanji": "この部分は問題ないです。",
+        "romaji": "kono bubun ha mondai nai desu",
+        "english": "There's no problem with this part."
+      },
+      "rtkLesson": 49,
+      "rtkFrame": 695,
+      "sourceLesson": 49
+    },
+    {
+      "id": "8_hearts",
+      "rank": "8",
+      "suit": "hearts",
+      "kanji": "郵便局",
+      "hiragana": "ゆうびんきょく",
+      "romaji": "yuubinkyoku",
+      "english": "post office",
+      "rhyme": "Remember this word you see, it's yuubinkyoku",
+      "sentence": {
+        "kanji": "郵便局で切手を買いました。",
+        "romaji": "yuubinkyokude kite wo kaimashita",
+        "english": "I bought a stamp at the post office."
+      },
+      "rtkLesson": 49,
+      "rtkFrame": 733,
+      "sourceLesson": 49
+    },
+    {
+      "id": "9_hearts",
+      "rank": "9",
+      "suit": "hearts",
+      "kanji": "手紙",
+      "hiragana": "てがみ",
+      "romaji": "tegami",
+      "english": "letter",
+      "rhyme": "Remember this word you see, it's tegami",
+      "sentence": {
+        "kanji": "友人から手紙をもらいました。",
+        "romaji": "yuujin kara tegami wo moraimashita",
+        "english": "I got a letter from a friend."
+      },
+      "rtkLesson": 49,
+      "rtkFrame": 808,
+      "sourceLesson": 49
+    },
+    {
+      "id": "10_hearts",
+      "rank": "10",
+      "suit": "hearts",
+      "kanji": "一部",
+      "hiragana": "いちぶ",
+      "romaji": "ichibu",
+      "english": "part",
+      "rhyme": "Remember this word you see, it's ichibu",
+      "sentence": {
+        "kanji": "計画を一部変更しましょう。",
+        "romaji": "keikaku wo ichibu henkou shimashou",
+        "english": "Let's change part of the plan."
+      },
+      "rtkLesson": 49,
+      "rtkFrame": 829,
+      "sourceLesson": 49
+    },
+    {
+      "id": "J_hearts",
+      "rank": "J",
+      "suit": "hearts",
+      "kanji": "市民",
+      "hiragana": "しみん",
+      "romaji": "shimin",
+      "english": "citizens, townsmen",
+      "rhyme": "Remember this word you see, it's shimin",
+      "sentence": {
+        "kanji": "市民の安全は大切だ。",
+        "romaji": "shimin no anzen ha taisetsu da",
+        "english": "The citizens' safety is important."
+      },
+      "rtkLesson": 49,
+      "rtkFrame": 1050,
+      "sourceLesson": 49
+    },
+    {
+      "id": "Q_hearts",
+      "rank": "Q",
+      "suit": "hearts",
+      "kanji": "候補",
+      "hiragana": "こうほ",
+      "romaji": "kouho",
+      "english": "candidacy, candidate",
+      "rhyme": "Remember this word you see, it's kouho",
+      "sentence": {
+        "kanji": "会長の候補は3人います。",
+        "romaji": "kaichou no kouho ha sannin imasu",
+        "english": "There are three candidates for chairman."
+      },
+      "rtkLesson": 49,
+      "rtkFrame": 1189,
+      "sourceLesson": 49
+    },
+    {
+      "id": "K_hearts",
+      "rank": "K",
+      "suit": "hearts",
+      "kanji": "首都",
+      "hiragana": "しゅと",
+      "romaji": "shuto",
+      "english": "capital",
+      "rhyme": "Remember this word you see, it's shuto",
+      "sentence": {
+        "kanji": "東京は日本の首都です。",
+        "romaji": "toukyou ha nipon no shuto desu",
+        "english": "Tokyo is the capital of Japan."
+      },
+      "rtkLesson": 49,
+      "rtkFrame": 1191,
+      "sourceLesson": 49
+    },
+    {
+      "id": "A_diamonds",
+      "rank": "A",
+      "suit": "diamonds",
+      "kanji": "逮捕",
+      "hiragana": "たいほ",
+      "romaji": "taiho",
+      "english": "arrest, capture",
+      "rhyme": "Remember this word you see, it's taiho",
+      "sentence": {
+        "kanji": "逃げていた犯人が逮捕されました。",
+        "romaji": "nigete ita hannin ga taiho saremashita",
+        "english": "They arrested that criminal who escaped."
+      },
+      "rtkLesson": 49,
+      "rtkFrame": 1265,
+      "sourceLesson": 49
+    },
+    {
+      "id": "2_diamonds",
+      "rank": "2",
+      "suit": "diamonds",
+      "kanji": "影響",
+      "hiragana": "えいきょう",
+      "romaji": "eikyou",
+      "english": "influence, effect",
+      "rhyme": "Remember this word you see, it's eikyou",
+      "sentence": {
+        "kanji": "私は彼から大きな影響を受けました。",
+        "romaji": "watashi ha kare kara ooki na eikyou wo ukemashita",
+        "english": "I was deeply influenced by him."
+      },
+      "rtkLesson": 49,
+      "rtkFrame": 1299,
+      "sourceLesson": 49
+    },
+    {
+      "id": "3_diamonds",
+      "rank": "3",
+      "suit": "diamonds",
+      "kanji": "離婚",
+      "hiragana": "りこん",
+      "romaji": "rikon",
+      "english": "divorce",
+      "rhyme": "Remember this word you see, it's rikon",
+      "sentence": {
+        "kanji": "友人が離婚しました。",
+        "romaji": "yuujin ga rikon shimashita",
+        "english": "My friend got divorced."
+      },
+      "rtkLesson": 49,
+      "rtkFrame": 1345,
+      "sourceLesson": 49
+    },
+    {
+      "id": "4_diamonds",
+      "rank": "4",
+      "suit": "diamonds",
+      "kanji": "住民",
+      "hiragana": "じゅうみん",
+      "romaji": "juumin",
+      "english": "residents, dwellers",
+      "rhyme": "Remember this word you see, it's juumin",
+      "sentence": {
+        "kanji": "地域の住民が集まって話合いをした。",
+        "romaji": "chiiki no juumin ga atsumate hanashiai wo shita",
+        "english": "The local residents got together and talked."
+      },
+      "rtkLesson": 49,
+      "rtkFrame": 1548,
+      "sourceLesson": 49
+    },
+    {
+      "id": "5_diamonds",
+      "rank": "5",
+      "suit": "diamonds",
+      "kanji": "眠い",
+      "hiragana": "ねむい",
+      "romaji": "nemui",
+      "english": "sleepy",
+      "rhyme": "Remember this word you see, it's nemui",
+      "sentence": {
+        "kanji": "今日はとても眠いです。",
+        "romaji": "kyou ha totemo nemui desu",
+        "english": "I'm very sleepy today."
+      },
+      "rtkLesson": 49,
+      "rtkFrame": 1825,
+      "sourceLesson": 49
+    },
+    {
+      "id": "6_diamonds",
+      "rank": "6",
+      "suit": "diamonds",
+      "kanji": "眠る",
+      "hiragana": "ねむる",
+      "romaji": "nemuru",
+      "english": "sleep",
+      "rhyme": "Remember this word you see, it's nemuru",
+      "sentence": {
+        "kanji": "昨日は8時間眠りました。",
+        "romaji": "kinou ha hachijikan nemurimashita",
+        "english": "I slept for eight hours yesterday."
+      },
+      "rtkLesson": 49,
+      "rtkFrame": 1826,
+      "sourceLesson": 49
+    },
+    {
+      "id": "7_diamonds",
+      "rank": "7",
+      "suit": "diamonds",
+      "kanji": "大抵",
+      "hiragana": "たいてい",
+      "romaji": "taitei",
+      "english": "generally, mostly",
+      "rhyme": "Remember this word you see, it's taitei",
+      "sentence": {
+        "kanji": "朝食は大抵7時頃に食べます。",
+        "romaji": "choushoku ha taitei shichijigoro ni tabemasu",
+        "english": "I usually eat breakfast around seven o'clock."
+      },
+      "rtkLesson": 49,
+      "rtkFrame": 1869,
+      "sourceLesson": 49
+    },
+    {
+      "id": "8_diamonds",
+      "rank": "8",
+      "suit": "diamonds",
+      "kanji": "廊下",
+      "hiragana": "ろうか",
+      "romaji": "rouka",
+      "english": "hallway, corridor",
+      "rhyme": "Remember this word you see, it's rouka",
+      "sentence": {
+        "kanji": "廊下は走らないでください。",
+        "romaji": "rouka ha hashiranai de kudasai",
+        "english": "Don't run in the hallway."
+      },
+      "rtkLesson": 49,
+      "rtkFrame": 1967,
+      "sourceLesson": 49
+    },
+    {
+      "id": "9_diamonds",
+      "rank": "9",
+      "suit": "diamonds",
+      "kanji": "都",
+      "hiragana": "みやこ",
+      "romaji": "miyako",
+      "english": "capital, city",
+      "rhyme": "Remember this word you see, it's miyako",
+      "sentence": {
+        "kanji": "ミラノはファッションの都です。",
+        "romaji": "mirano ha fuashon no miyako desu",
+        "english": "Milan is the capital of fashion."
+      },
+      "rtkLesson": 49,
+      "rtkFrame": 2259,
+      "sourceLesson": 49
+    },
+    {
+      "id": "10_diamonds",
+      "rank": "10",
+      "suit": "diamonds",
+      "kanji": "低下",
+      "hiragana": "ていか",
+      "romaji": "teika",
+      "english": "falling, lowering",
+      "rhyme": "Remember this word you see, it's teika",
+      "sentence": {
+        "kanji": "最近、教育レベルが低下しています。",
+        "romaji": "saikin kyouiku reberu ga teika shite imasu",
+        "english": "Recently, education levels are decreasing."
+      },
+      "rtkLesson": 49,
+      "rtkFrame": 2312,
+      "sourceLesson": 49
+    },
+    {
+      "id": "J_diamonds",
+      "rank": "J",
+      "suit": "diamonds",
+      "kanji": "氏",
+      "hiragana": "し",
+      "romaji": "shi",
+      "english": "Mr.",
+      "rhyme": "Remember this word you see, it's shi",
+      "sentence": {
+        "kanji": "会長は田中氏に決定。",
+        "romaji": "kaichou ha tanakashi ni ketei",
+        "english": "It has been decided that Mr. Tanaka will be chairman."
+      },
+      "rtkLesson": 49,
+      "rtkFrame": 2450,
+      "sourceLesson": 49
+    },
+    {
+      "id": "Q_diamonds",
+      "rank": "Q",
+      "suit": "diamonds",
+      "kanji": "用紙",
+      "hiragana": "ようし",
+      "romaji": "youshi",
+      "english": "blank form, stationery",
+      "rhyme": "Remember this word you see, it's youshi",
+      "sentence": {
+        "kanji": "この用紙に名前を書いてください。",
+        "romaji": "kono youshi ni namae wo kaite kudasai",
+        "english": "Please write your name on this form."
+      },
+      "rtkLesson": 49,
+      "rtkFrame": 2566,
+      "sourceLesson": 49
+    },
+    {
+      "id": "K_diamonds",
+      "rank": "K",
+      "suit": "diamonds",
+      "kanji": "表紙",
+      "hiragana": "ひょうし",
+      "romaji": "hyoushi",
+      "english": "cover, binding",
+      "rhyme": "Remember this word you see, it's hyoushi",
+      "sentence": {
+        "kanji": "その人気アイドルが今月の表紙だよ。",
+        "romaji": "sono ninki aidoru ga kongetsu no hyoushi da yo",
+        "english": "The popular star is on the cover this month."
+      },
+      "rtkLesson": 49,
+      "rtkFrame": 2567,
+      "sourceLesson": 49
+    },
+    {
+      "id": "A_clubs",
+      "rank": "A",
+      "suit": "clubs",
+      "kanji": "白紙",
+      "hiragana": "はくし",
+      "romaji": "hakushi",
+      "english": "blank sheet, clean slate",
+      "rhyme": "Remember this word you see, it's hakushi",
+      "sentence": {
+        "kanji": "テストを白紙で出したの。",
+        "romaji": "tesuto wo hakushi de dashita no",
+        "english": "I handed in my test answer sheet completely blank."
+      },
+      "rtkLesson": 49,
+      "rtkFrame": 2568,
+      "sourceLesson": 49
+    },
+    {
+      "id": "2_clubs",
+      "rank": "2",
+      "suit": "clubs",
+      "kanji": "学部",
+      "hiragana": "がくぶ",
+      "romaji": "gakubu",
+      "english": "faculty, department",
+      "rhyme": "Remember this word you see, it's gakubu",
+      "sentence": {
+        "kanji": "彼は経済学部の学生です。",
+        "romaji": "kare ha keizai gakubu no gakusei desu",
+        "english": "He is a student in the Department of Economics."
+      },
+      "rtkLesson": 49,
+      "rtkFrame": 2790,
+      "sourceLesson": 49
+    },
+    {
+      "id": "3_clubs",
+      "rank": "3",
+      "suit": "clubs",
+      "kanji": "都心",
+      "hiragana": "としん",
+      "romaji": "toshin",
+      "english": "heart of a city",
+      "rhyme": "Remember this word you see, it's toshin",
+      "sentence": {
+        "kanji": "彼は都心に住んでいます。",
+        "romaji": "kare ha toshin ni sunde imasu",
+        "english": "He lives downtown."
+      },
+      "rtkLesson": 49,
+      "rtkFrame": 2842,
+      "sourceLesson": 49
+    },
+    {
+      "id": "4_clubs",
+      "rank": "4",
+      "suit": "clubs",
+      "kanji": "都会",
+      "hiragana": "とかい",
+      "romaji": "tokai",
+      "english": "city, town",
+      "rhyme": "Remember this word you see, it's tokai",
+      "sentence": {
+        "kanji": "彼は都会での生活を楽しんでいるの。",
+        "romaji": "kare ha tokai de no seikatsu wo tanoshinde iru no",
+        "english": "He's enjoying city life."
+      },
+      "rtkLesson": 49,
+      "rtkFrame": 2848,
+      "sourceLesson": 49
+    },
+    {
+      "id": "5_clubs",
+      "rank": "5",
+      "suit": "clubs",
+      "kanji": "法学部",
+      "hiragana": "ほうがくぶ",
+      "romaji": "hougakubu",
+      "english": "law department",
+      "rhyme": "Remember this word you see, it's hougakubu",
+      "sentence": {
+        "kanji": "彼女は法学部の学生です。",
+        "romaji": "kanojo ha hougakubu no gakusei desu",
+        "english": "She's a student in the Law Department."
+      },
+      "rtkLesson": 49,
+      "rtkFrame": 2879,
+      "sourceLesson": 49
+    },
+    {
+      "id": "6_clubs",
+      "rank": "6",
+      "suit": "clubs",
+      "kanji": "低",
+      "hiragana": "てい",
+      "romaji": "tei",
+      "english": "low",
+      "rhyme": "Remember this word you see, it's tei",
+      "sentence": {
+        "kanji": "彼は低賃金で働いているんだ。",
+        "romaji": "kare ha teichingin de hataraite iru n da",
+        "english": "He's working for a low wage."
+      },
+      "rtkLesson": 49,
+      "rtkFrame": 2944,
+      "sourceLesson": 49
+    },
+    {
+      "id": "7_clubs",
+      "rank": "7",
+      "suit": "clubs",
+      "kanji": "婚約",
+      "hiragana": "こんやく",
+      "romaji": "konyaku",
+      "english": "engagement, betrothal",
+      "rhyme": "Remember this word you see, it's konyaku",
+      "sentence": {
+        "kanji": "二人は婚約しています。",
+        "romaji": "futari ha konyaku shite imasu",
+        "english": "They are engaged."
+      },
+      "rtkLesson": 49,
+      "rtkFrame": 2970,
+      "sourceLesson": 49
+    },
+    {
+      "id": "8_clubs",
+      "rank": "8",
+      "suit": "clubs",
+      "kanji": "未婚",
+      "hiragana": "みこん",
+      "romaji": "mikon",
+      "english": "unmarried",
+      "rhyme": "Remember this word you see, it's mikon",
+      "sentence": {
+        "kanji": "彼はまだ未婚です。",
+        "romaji": "kare ha mada mikon desu",
+        "english": "He's still single."
+      },
+      "rtkLesson": 49,
+      "rtkFrame": 2973,
+      "sourceLesson": 49
+    },
+    {
+      "id": "9_clubs",
+      "rank": "9",
+      "suit": "clubs",
+      "kanji": "国民",
+      "hiragana": "こくみん",
+      "romaji": "kokumin",
+      "english": "the people, nation",
+      "rhyme": "Remember this word you see, it's kokumin",
+      "sentence": {
+        "kanji": "国民の安全が最も大切です。",
+        "romaji": "kokumin no anzen ga motomo taisetsu desu",
+        "english": "Citizen safety is most important."
+      },
+      "rtkLesson": 49,
+      "rtkFrame": 3001,
+      "sourceLesson": 49
+    },
+    {
+      "id": "10_clubs",
+      "rank": "10",
+      "suit": "clubs",
+      "kanji": "民主",
+      "hiragana": "みんしゅ",
+      "romaji": "minshu",
+      "english": "democracy",
+      "rhyme": "Remember this word you see, it's minshu",
+      "sentence": {
+        "kanji": "民主主義について勉強しました。",
+        "romaji": "minshushugi ni tsuite benkyou shimashita",
+        "english": "We studied democracy."
+      },
+      "rtkLesson": 49,
+      "rtkFrame": 3011,
+      "sourceLesson": 49
+    },
+    {
+      "id": "J_clubs",
+      "rank": "J",
+      "suit": "clubs",
+      "kanji": "都立",
+      "hiragana": "とりつ",
+      "romaji": "toritsu",
+      "english": "metropolitan, Tokyo metropolitan",
+      "rhyme": "Remember this word you see, it's toritsu",
+      "sentence": {
+        "kanji": "ここは都立の病院です。",
+        "romaji": "koko ha toritsu no byouin desu",
+        "english": "This is a metropolitan hospital."
+      },
+      "rtkLesson": 49,
+      "rtkFrame": 3097,
+      "sourceLesson": 49
+    },
+    {
+      "id": "Q_clubs",
+      "rank": "Q",
+      "suit": "clubs",
+      "kanji": "低温",
+      "hiragana": "ていおん",
+      "romaji": "teion",
+      "english": "low temperature",
+      "rhyme": "Remember this word you see, it's teion",
+      "sentence": {
+        "kanji": "この製品は低温で保存してください。",
+        "romaji": "kono seihin ha teion de hozon shite kudasai",
+        "english": "Please store this product at a low temperature."
+      },
+      "rtkLesson": 49,
+      "rtkFrame": 3134,
+      "sourceLesson": 49
+    },
+    {
+      "id": "K_clubs",
+      "rank": "K",
+      "suit": "clubs",
+      "kanji": "内部",
+      "hiragana": "ないぶ",
+      "romaji": "naibu",
+      "english": "interior, inner parts",
+      "rhyme": "Remember this word you see, it's naibu",
+      "sentence": {
+        "kanji": "これは機械の内部の問題です。",
+        "romaji": "kore ha kikai no naibu no mondai desu",
+        "english": "This is a problem with the internal parts of the machine."
+      },
+      "rtkLesson": 49,
+      "rtkFrame": 3169,
+      "sourceLesson": 49
+    },
+    {
+      "id": "A_spades",
+      "rank": "A",
+      "suit": "spades",
+      "kanji": "最低",
+      "hiragana": "さいてい",
+      "romaji": "saitei",
+      "english": "lowest",
+      "rhyme": "Remember this word you see, it's saitei",
+      "sentence": {
+        "kanji": "これは今までで最低の記録だ。",
+        "romaji": "kore ha ima made de saitei no kiroku da",
+        "english": "This is the worst record so far."
+      },
+      "rtkLesson": 49,
+      "rtkFrame": 3357,
+      "sourceLesson": 49
+    },
+    {
+      "id": "2_spades",
+      "rank": "2",
+      "suit": "spades",
+      "kanji": "人民",
+      "hiragana": "じんみん",
+      "romaji": "jinmin",
+      "english": "the people, populace",
+      "rhyme": "Remember this word you see, it's jinmin",
+      "sentence": {
+        "kanji": "彼は人民のための政治を行った。",
+        "romaji": "kare ha jinmin no tame no seiji wo okonata",
+        "english": "He engaged in politics for the people's benefit."
+      },
+      "rtkLesson": 49,
+      "rtkFrame": 3378,
+      "sourceLesson": 49
+    },
+    {
+      "id": "3_spades",
+      "rank": "3",
+      "suit": "spades",
+      "kanji": "補う",
+      "hiragana": "おぎなう",
+      "romaji": "oginau",
+      "english": "supplement, replenish",
+      "rhyme": "Remember this word you see, it's oginau",
+      "sentence": {
+        "kanji": "夏は水分を十分に補いましょう。",
+        "romaji": "natsu ha suibun wo juubun ni oginaimashou",
+        "english": "Make sure you take enough liquids in the summer."
+      },
+      "rtkLesson": 49,
+      "rtkFrame": 3397,
+      "sourceLesson": 49
+    },
+    {
+      "id": "4_spades",
+      "rank": "4",
+      "suit": "spades",
+      "kanji": "都内",
+      "hiragana": "とない",
+      "romaji": "tonai",
+      "english": "in the metropolitan area of Tokyo",
+      "rhyme": "Remember this word you see, it's tonai",
+      "sentence": {
+        "kanji": "彼の職場は都内にあります。",
+        "romaji": "kare no shokuba ha tonai ni arimasu",
+        "english": "His office is in the Tokyo metropolitan area."
+      },
+      "rtkLesson": 49,
+      "rtkFrame": 3522,
+      "sourceLesson": 49
+    },
+    {
+      "id": "5_spades",
+      "rank": "5",
+      "suit": "spades",
+      "kanji": "都",
+      "hiragana": "と",
+      "romaji": "to",
+      "english": "metropolis of Tokyo",
+      "rhyme": "Remember this word you see, it's to",
+      "sentence": {
+        "kanji": "彼女は都の職員です。",
+        "romaji": "kanojo ha to no shokuin desu",
+        "english": "She's an official of the metropolitan government."
+      },
+      "rtkLesson": 49,
+      "rtkFrame": 3524,
+      "sourceLesson": 49
+    },
+    {
+      "id": "6_spades",
+      "rank": "6",
+      "suit": "spades",
+      "kanji": "部品",
+      "hiragana": "ぶひん",
+      "romaji": "buhin",
+      "english": "parts, accessories",
+      "rhyme": "Remember this word you see, it's buhin",
+      "sentence": {
+        "kanji": "車の部品を取り替えたんだ。",
+        "romaji": "kuruma no buhin wo torikaeta n da",
+        "english": "I changed some parts of the car."
+      },
+      "rtkLesson": 49,
+      "rtkFrame": 3607,
+      "sourceLesson": 49
+    },
+    {
+      "id": "7_spades",
+      "rank": "7",
+      "suit": "spades",
+      "kanji": "捕まる",
+      "hiragana": "つかまる",
+      "romaji": "tsukamaru",
+      "english": "be caught, be arrested",
+      "rhyme": "Remember this word you see, it's tsukamaru",
+      "sentence": {
+        "kanji": "彼女はついに捕まりました。",
+        "romaji": "kanojo ha tsuini tsukamarimashita",
+        "english": "She was finally caught."
+      },
+      "rtkLesson": 49,
+      "rtkFrame": 3647,
+      "sourceLesson": 49
+    },
+    {
+      "id": "8_spades",
+      "rank": "8",
+      "suit": "spades",
+      "kanji": "外部",
+      "hiragana": "がいぶ",
+      "romaji": "gaibu",
+      "english": "outside, outer",
+      "rhyme": "Remember this word you see, it's gaibu",
+      "sentence": {
+        "kanji": "これは外部には秘密です。",
+        "romaji": "kore ha gaibu ni ha himitsu desu",
+        "english": "This is confidential."
+      },
+      "rtkLesson": 49,
+      "rtkFrame": 3815,
+      "sourceLesson": 49
+    },
+    {
+      "id": "9_spades",
+      "rank": "9",
+      "suit": "spades",
+      "kanji": "本部",
+      "hiragana": "ほんぶ",
+      "romaji": "honbu",
+      "english": "head office, headquarters",
+      "rhyme": "Remember this word you see, it's honbu",
+      "sentence": {
+        "kanji": "その事件の直後、捜査本部が設置された。",
+        "romaji": "sono jiken no chokugo sousa honbu ga sechi sareta",
+        "english": "Immediately after the incident, investigation headquarters were set up."
+      },
+      "rtkLesson": 49,
+      "rtkFrame": 3865,
+      "sourceLesson": 49
+    },
+    {
+      "id": "10_spades",
+      "rank": "10",
+      "suit": "spades",
+      "kanji": "部下",
+      "hiragana": "ぶか",
+      "romaji": "buka",
+      "english": "subordinate",
+      "rhyme": "Remember this word you see, it's buka",
+      "sentence": {
+        "kanji": "彼は優秀な部下を持っているわね。",
+        "romaji": "kare ha yuushuu na buka wo mote iru wa ne",
+        "english": "He has outstanding people working for him."
+      },
+      "rtkLesson": 49,
+      "rtkFrame": 4255,
+      "sourceLesson": 49
+    },
+    {
+      "id": "J_spades",
+      "rank": "J",
+      "suit": "spades",
+      "kanji": "新婚",
+      "hiragana": "しんこん",
+      "romaji": "shinkon",
+      "english": "newlywed",
+      "rhyme": "Remember this word you see, it's shinkon",
+      "sentence": {
+        "kanji": "妹夫婦は新婚です。",
+        "romaji": "imoutofuufu ha shinkon desu",
+        "english": "My younger sister and her husband are the newlyweds."
+      },
+      "rtkLesson": 49,
+      "rtkFrame": 4320,
+      "sourceLesson": 49
+    },
+    {
+      "id": "Q_spades",
+      "rank": "Q",
+      "suit": "spades",
+      "kanji": "部門",
+      "hiragana": "ぶもん",
+      "romaji": "bumon",
+      "english": "division, department",
+      "rhyme": "Remember this word you see, it's bumon",
+      "sentence": {
+        "kanji": "あの歌手は3部門で賞を取ったの。",
+        "romaji": "ano kashu ha 3 bumon de shou wo tota no",
+        "english": "That singer took the prize in three categories."
+      },
+      "rtkLesson": 49,
+      "rtkFrame": 4446,
+      "sourceLesson": 49
+    },
+    {
+      "id": "K_spades",
+      "rank": "K",
+      "suit": "spades",
+      "kanji": "幹部",
+      "hiragana": "かんぶ",
+      "romaji": "kanbu",
+      "english": "executive",
+      "rhyme": "Remember this word you see, it's kanbu",
+      "sentence": {
+        "kanji": "あの会社の幹部は皆とても優秀だね。",
+        "romaji": "ano kaisha no kanbu ha minna totemo yuushuu da ne",
+        "english": "That company's executives are all exceptional people."
+      },
+      "rtkLesson": 49,
+      "rtkFrame": 4488,
+      "sourceLesson": 49
+    }
+  ]
+}

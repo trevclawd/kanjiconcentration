@@ -1,0 +1,940 @@
+{
+  "cards": [
+    {
+      "id": "A_hearts",
+      "rank": "A",
+      "suit": "hearts",
+      "kanji": "墓参り",
+      "hiragana": "はかまいり",
+      "romaji": "hakamairi",
+      "english": "visit to a grave",
+      "rhyme": "Remember this word you see, it's hakamairi",
+      "sentence": {
+        "kanji": "明日は家族で墓参りに行きます。",
+        "romaji": "ashita ha kazoku de hakamairi ni ikimasu",
+        "english": "I'm going to visit the grave with my family tomorrow."
+      },
+      "rtkLesson": 45,
+      "rtkFrame": 5259,
+      "sourceLesson": 45
+    },
+    {
+      "id": "2_hearts",
+      "rank": "2",
+      "suit": "hearts",
+      "kanji": "水色",
+      "hiragana": "みずいろ",
+      "romaji": "mizuiro",
+      "english": "sky blue, turquoise",
+      "rhyme": "Remember this word you see, it's mizuiro",
+      "sentence": {
+        "kanji": "箱に水色のリボンがかかっていたの。",
+        "romaji": "hako ni mizuiro no ribon ga kakate ita no",
+        "english": "A light blue ribbon was tied around the box."
+      },
+      "rtkLesson": 45,
+      "rtkFrame": 5312,
+      "sourceLesson": 45
+    },
+    {
+      "id": "3_hearts",
+      "rank": "3",
+      "suit": "hearts",
+      "kanji": "文句",
+      "hiragana": "もんく",
+      "romaji": "monku",
+      "english": "complaint",
+      "rhyme": "Remember this word you see, it's monku",
+      "sentence": {
+        "kanji": "彼女はいつも文句ばかり言う。",
+        "romaji": "kanojo ha itsumo monku bakari iu",
+        "english": "She always does nothing but complain."
+      },
+      "rtkLesson": 45,
+      "rtkFrame": 5334,
+      "sourceLesson": 45
+    },
+    {
+      "id": "4_hearts",
+      "rank": "4",
+      "suit": "hearts",
+      "kanji": "膨れる",
+      "hiragana": "ふくれる",
+      "romaji": "fukureru",
+      "english": "expand, fill up",
+      "rhyme": "Remember this word you see, it's fukureru",
+      "sentence": {
+        "kanji": "お腹が膨れたら眠くなった。",
+        "romaji": "onaka ga fukuretara nemuku nata",
+        "english": "When my stomach was full, I became sleepy."
+      },
+      "rtkLesson": 45,
+      "rtkFrame": 5369,
+      "sourceLesson": 45
+    },
+    {
+      "id": "5_hearts",
+      "rank": "5",
+      "suit": "hearts",
+      "kanji": "英雄",
+      "hiragana": "えいゆう",
+      "romaji": "eiyuu",
+      "english": "hero",
+      "rhyme": "Remember this word you see, it's eiyuu",
+      "sentence": {
+        "kanji": "彼は国の英雄ですね。",
+        "romaji": "kare ha kuni no eiyuu desu ne",
+        "english": "He is a national hero."
+      },
+      "rtkLesson": 45,
+      "rtkFrame": 5526,
+      "sourceLesson": 45
+    },
+    {
+      "id": "6_hearts",
+      "rank": "6",
+      "suit": "hearts",
+      "kanji": "赤ん坊",
+      "hiragana": "あかんぼう",
+      "romaji": "akanbou",
+      "english": "baby",
+      "rhyme": "Remember this word you see, it's akanbou",
+      "sentence": {
+        "kanji": "その頃彼はまだ赤ん坊だったよね。",
+        "romaji": "sono koro kare ha mada akanbou data yo ne",
+        "english": "He was still a baby in those days."
+      },
+      "rtkLesson": 45,
+      "rtkFrame": 5576,
+      "sourceLesson": 45
+    },
+    {
+      "id": "7_hearts",
+      "rank": "7",
+      "suit": "hearts",
+      "kanji": "一斉に",
+      "hiragana": "いっせいに",
+      "romaji": "iseini",
+      "english": "all together, all at once",
+      "rhyme": "Remember this word you see, it's iseini",
+      "sentence": {
+        "kanji": "彼らは一斉に拍手したね。",
+        "romaji": "karera ha iseini hakushu shita ne",
+        "english": "They applauded all together."
+      },
+      "rtkLesson": 45,
+      "rtkFrame": 5584,
+      "sourceLesson": 45
+    },
+    {
+      "id": "8_hearts",
+      "rank": "8",
+      "suit": "hearts",
+      "kanji": "楽しみ",
+      "hiragana": "たのしみ",
+      "romaji": "tanoshimi",
+      "english": "pleasure, something looked forward to",
+      "rhyme": "Remember this word you see, it's tanoshimi",
+      "sentence": {
+        "kanji": "旅行は父の老後の楽しみです。",
+        "romaji": "ryokou ha chichi no rougo no tanoshimi desu",
+        "english": "My father looks forward to traveling in his old age."
+      },
+      "rtkLesson": 45,
+      "rtkFrame": 5596,
+      "sourceLesson": 45
+    },
+    {
+      "id": "9_hearts",
+      "rank": "9",
+      "suit": "hearts",
+      "kanji": "洗剤",
+      "hiragana": "せんざい",
+      "romaji": "senzai",
+      "english": "detergent, cleanser",
+      "rhyme": "Remember this word you see, it's senzai",
+      "sentence": {
+        "kanji": "床に洗剤をこぼしてしまいました。",
+        "romaji": "yuka ni senzai wo koboshite shimaimashita",
+        "english": "I spilt detergent on the floor."
+      },
+      "rtkLesson": 45,
+      "rtkFrame": 5623,
+      "sourceLesson": 45
+    },
+    {
+      "id": "10_hearts",
+      "rank": "10",
+      "suit": "hearts",
+      "kanji": "横切る",
+      "hiragana": "よこぎる",
+      "romaji": "yokogiru",
+      "english": "cross, go across",
+      "rhyme": "Remember this word you see, it's yokogiru",
+      "sentence": {
+        "kanji": "目の前を猫が横切ったんだ。",
+        "romaji": "me no mae wo neko ga yokogita n da",
+        "english": "The cat crossed in front of me."
+      },
+      "rtkLesson": 45,
+      "rtkFrame": 5710,
+      "sourceLesson": 45
+    },
+    {
+      "id": "J_hearts",
+      "rank": "J",
+      "suit": "hearts",
+      "kanji": "彫る",
+      "hiragana": "ほる",
+      "romaji": "horu",
+      "english": "engrave, carve",
+      "rhyme": "Remember this word you see, it's horu",
+      "sentence": {
+        "kanji": "彼は木の像を彫ったの。",
+        "romaji": "kare ha ki no zou wo hota no",
+        "english": "He carved a wooden image."
+      },
+      "rtkLesson": 45,
+      "rtkFrame": 5723,
+      "sourceLesson": 45
+    },
+    {
+      "id": "Q_hearts",
+      "rank": "Q",
+      "suit": "hearts",
+      "kanji": "中央",
+      "hiragana": "ちゅうおう",
+      "romaji": "chuuou",
+      "english": "center",
+      "rhyme": "Remember this word you see, it's chuuou",
+      "sentence": {
+        "kanji": "その公園は町のほぼ中央に位置するんだ。",
+        "romaji": "sono kouen ha machi no hobo chuuou ni ichi suru n da",
+        "english": "The park is located almost in the center of town."
+      },
+      "rtkLesson": 45,
+      "rtkFrame": 5728,
+      "sourceLesson": 45
+    },
+    {
+      "id": "K_hearts",
+      "rank": "K",
+      "suit": "hearts",
+      "kanji": "朝顔",
+      "hiragana": "あさがお",
+      "romaji": "asagao",
+      "english": "morning glory",
+      "rhyme": "Remember this word you see, it's asagao",
+      "sentence": {
+        "kanji": "紫の朝顔が咲きました。",
+        "romaji": "murasaki no asagao ga sakimashita",
+        "english": "A purple morning-glory bloomed."
+      },
+      "rtkLesson": 45,
+      "rtkFrame": 5790,
+      "sourceLesson": 45
+    },
+    {
+      "id": "A_diamonds",
+      "rank": "A",
+      "suit": "diamonds",
+      "kanji": "渋い",
+      "hiragana": "しぶい",
+      "romaji": "shibui",
+      "english": "bitter, astringent",
+      "rhyme": "Remember this word you see, it's shibui",
+      "sentence": {
+        "kanji": "この柿は渋いね。",
+        "romaji": "kono kaki ha shibui ne",
+        "english": "This persimmon is bitter."
+      },
+      "rtkLesson": 45,
+      "rtkFrame": 5969,
+      "sourceLesson": 45
+    },
+    {
+      "id": "2_diamonds",
+      "rank": "2",
+      "suit": "diamonds",
+      "kanji": "無い",
+      "hiragana": "ない",
+      "romaji": "nai",
+      "english": "to not be",
+      "rhyme": "Remember this word you see, it's nai",
+      "sentence": {
+        "kanji": "ここには何も無い。",
+        "romaji": "koko ni ha nani mo nai",
+        "english": "There's nothing here."
+      },
+      "rtkLesson": 46,
+      "rtkFrame": 82,
+      "sourceLesson": 46
+    },
+    {
+      "id": "3_diamonds",
+      "rank": "3",
+      "suit": "diamonds",
+      "kanji": "甘い",
+      "hiragana": "あまい",
+      "romaji": "amai",
+      "english": "sweet",
+      "rhyme": "Remember this word you see, it's amai",
+      "sentence": {
+        "kanji": "このイチゴは甘い。",
+        "romaji": "kono ichigo ha amai",
+        "english": "This strawberry is sweet."
+      },
+      "rtkLesson": 46,
+      "rtkFrame": 314,
+      "sourceLesson": 46
+    },
+    {
+      "id": "4_diamonds",
+      "rank": "4",
+      "suit": "diamonds",
+      "kanji": "無理",
+      "hiragana": "むり",
+      "romaji": "muri",
+      "english": "unreasonable, impossible, forced",
+      "rhyme": "Remember this word you see, it's muri",
+      "sentence": {
+        "kanji": "5時までに家に帰るのは無理です。",
+        "romaji": "goji made ni ie ni kaeru no ha muri desu",
+        "english": "I can't possibly get home by five o'clock."
+      },
+      "rtkLesson": 46,
+      "rtkFrame": 569,
+      "sourceLesson": 46
+    },
+    {
+      "id": "5_diamonds",
+      "rank": "5",
+      "suit": "diamonds",
+      "kanji": "無くなる",
+      "hiragana": "なくなる",
+      "romaji": "nakunaru",
+      "english": "disappear, run short, get lost",
+      "rhyme": "Remember this word you see, it's nakunaru",
+      "sentence": {
+        "kanji": "もうお金が無くなりました。",
+        "romaji": "mou okane ga nakunarimashita",
+        "english": "I've run out of money already."
+      },
+      "rtkLesson": 46,
+      "rtkFrame": 570,
+      "sourceLesson": 46
+    },
+    {
+      "id": "6_diamonds",
+      "rank": "6",
+      "suit": "diamonds",
+      "kanji": "期待",
+      "hiragana": "きたい",
+      "romaji": "kitai",
+      "english": "expectation, anticipation",
+      "rhyme": "Remember this word you see, it's kitai",
+      "sentence": {
+        "kanji": "みんな私たちに期待しています。",
+        "romaji": "minna watashitachi ni kitai shite imasu",
+        "english": "Everyone has high expectations of us."
+      },
+      "rtkLesson": 46,
+      "rtkFrame": 724,
+      "sourceLesson": 46
+    },
+    {
+      "id": "7_diamonds",
+      "rank": "7",
+      "suit": "diamonds",
+      "kanji": "期間",
+      "hiragana": "きかん",
+      "romaji": "kikan",
+      "english": "term, period",
+      "rhyme": "Remember this word you see, it's kikan",
+      "sentence": {
+        "kanji": "テスト期間は10日から15日までだ。",
+        "romaji": "tesuto kikan ha tooka kara juugonichi made da",
+        "english": "The test period is from the 10th to the 15th."
+      },
+      "rtkLesson": 46,
+      "rtkFrame": 725,
+      "sourceLesson": 46
+    },
+    {
+      "id": "8_diamonds",
+      "rank": "8",
+      "suit": "diamonds",
+      "kanji": "時期",
+      "hiragana": "じき",
+      "romaji": "jiki",
+      "english": "time, season",
+      "rhyme": "Remember this word you see, it's jiki",
+      "sentence": {
+        "kanji": "今はあなたにとって大事な時期です。",
+        "romaji": "ima ha anata ni tote daiji na jiki desu",
+        "english": "It's an important time for you now."
+      },
+      "rtkLesson": 46,
+      "rtkFrame": 726,
+      "sourceLesson": 46
+    },
+    {
+      "id": "9_diamonds",
+      "rank": "9",
+      "suit": "diamonds",
+      "kanji": "定期券",
+      "hiragana": "ていきけん",
+      "romaji": "teikiken",
+      "english": "commuter's pass",
+      "rhyme": "Remember this word you see, it's teikiken",
+      "sentence": {
+        "kanji": "定期券は1万2千円でした。",
+        "romaji": "teikiken ha ichimannisenen deshita",
+        "english": "The commuter pass was 1,2000 yen."
+      },
+      "rtkLesson": 46,
+      "rtkFrame": 742,
+      "sourceLesson": 46
+    },
+    {
+      "id": "10_diamonds",
+      "rank": "10",
+      "suit": "diamonds",
+      "kanji": "基づく",
+      "hiragana": "もとづく",
+      "romaji": "motozuku",
+      "english": "be based on",
+      "rhyme": "Remember this word you see, it's motozuku",
+      "sentence": {
+        "kanji": "この話は真実に基づいています。",
+        "romaji": "kono hanashi ha shinjitsu ni motozuite imasu",
+        "english": "This story is based on truth."
+      },
+      "rtkLesson": 46,
+      "rtkFrame": 1109,
+      "sourceLesson": 46
+    },
+    {
+      "id": "J_diamonds",
+      "rank": "J",
+      "suit": "diamonds",
+      "kanji": "基本",
+      "hiragana": "きほん",
+      "romaji": "kihon",
+      "english": "basis, foundation",
+      "rhyme": "Remember this word you see, it's kihon",
+      "sentence": {
+        "kanji": "今、ジャズダンスの基本を習っています。",
+        "romaji": "ima jazu dansu no kihon wo narate imasu",
+        "english": "We're learning the basics of jazz dance at the moment."
+      },
+      "rtkLesson": 46,
+      "rtkFrame": 1110,
+      "sourceLesson": 46
+    },
+    {
+      "id": "Q_diamonds",
+      "rank": "Q",
+      "suit": "diamonds",
+      "kanji": "基準",
+      "hiragana": "きじゅん",
+      "romaji": "kijun",
+      "english": "standard, criterion",
+      "rhyme": "Remember this word you see, it's kijun",
+      "sentence": {
+        "kanji": "判断の基準が示された。",
+        "romaji": "handan no kijun ga shimesareta",
+        "english": "The standards of judgment were outlined."
+      },
+      "rtkLesson": 46,
+      "rtkFrame": 1357,
+      "sourceLesson": 46
+    },
+    {
+      "id": "K_diamonds",
+      "rank": "K",
+      "suit": "diamonds",
+      "kanji": "無くす",
+      "hiragana": "なくす",
+      "romaji": "nakusu",
+      "english": "lose, get rid of",
+      "rhyme": "Remember this word you see, it's nakusu",
+      "sentence": {
+        "kanji": "今日、鍵を無くしました。",
+        "romaji": "kyou kagi wo nakushimashita",
+        "english": "I lost my key today."
+      },
+      "rtkLesson": 46,
+      "rtkFrame": 1735,
+      "sourceLesson": 46
+    },
+    {
+      "id": "A_clubs",
+      "rank": "A",
+      "suit": "clubs",
+      "kanji": "旗",
+      "hiragana": "はた",
+      "romaji": "hata",
+      "english": "flag, banner",
+      "rhyme": "Remember this word you see, it's hata",
+      "sentence": {
+        "kanji": "旗が風に揺れている。",
+        "romaji": "hata ga kaze ni yurete iru",
+        "english": "The flag is waving in the wind."
+      },
+      "rtkLesson": 46,
+      "rtkFrame": 1793,
+      "sourceLesson": 46
+    },
+    {
+      "id": "2_clubs",
+      "rank": "2",
+      "suit": "clubs",
+      "kanji": "仕舞う",
+      "hiragana": "しまう",
+      "romaji": "shimau",
+      "english": "put away",
+      "rhyme": "Remember this word you see, it's shimau",
+      "sentence": {
+        "kanji": "彼女は大切な書類を机に仕舞った。",
+        "romaji": "kanojo ha taisetsu na shorui wo tsukue ni shimata。",
+        "english": "She put the important documents away in her desk."
+      },
+      "rtkLesson": 46,
+      "rtkFrame": 1895,
+      "sourceLesson": 46
+    },
+    {
+      "id": "3_clubs",
+      "rank": "3",
+      "suit": "clubs",
+      "kanji": "無理",
+      "hiragana": "むり",
+      "romaji": "muri",
+      "english": "impossibility",
+      "rhyme": "Remember this word you see, it's muri",
+      "sentence": {
+        "kanji": "無理はしないでください。",
+        "romaji": "muri ha shinai de kudasai",
+        "english": "Don't overdo it."
+      },
+      "rtkLesson": 46,
+      "rtkFrame": 2168,
+      "sourceLesson": 46
+    },
+    {
+      "id": "4_clubs",
+      "rank": "4",
+      "suit": "clubs",
+      "kanji": "無茶",
+      "hiragana": "むちゃ",
+      "romaji": "mucha",
+      "english": "reckless, excessive",
+      "rhyme": "Remember this word you see, it's mucha",
+      "sentence": {
+        "kanji": "無茶をしないでくださいね。",
+        "romaji": "mucha wo shinai de kudasai ne",
+        "english": "Don't be unreasonable."
+      },
+      "rtkLesson": 46,
+      "rtkFrame": 2170,
+      "sourceLesson": 46
+    },
+    {
+      "id": "5_clubs",
+      "rank": "5",
+      "suit": "clubs",
+      "kanji": "無料",
+      "hiragana": "むりょう",
+      "romaji": "muryou",
+      "english": "no charge, free",
+      "rhyme": "Remember this word you see, it's muryou",
+      "sentence": {
+        "kanji": "お飲み物は無料でございます。",
+        "romaji": "o nomimono ha muryou de gozaimasu",
+        "english": "Beverages are free of charge."
+      },
+      "rtkLesson": 46,
+      "rtkFrame": 2266,
+      "sourceLesson": 46
+    },
+    {
+      "id": "6_clubs",
+      "rank": "6",
+      "suit": "clubs",
+      "kanji": "無用",
+      "hiragana": "むよう",
+      "romaji": "muyou",
+      "english": "useless, unnecessary",
+      "rhyme": "Remember this word you see, it's muyou",
+      "sentence": {
+        "kanji": "心配は無用です。",
+        "romaji": "shinpai ha muyou desu",
+        "english": "There's no need to worry."
+      },
+      "rtkLesson": 46,
+      "rtkFrame": 2277,
+      "sourceLesson": 46
+    },
+    {
+      "id": "7_clubs",
+      "rank": "7",
+      "suit": "clubs",
+      "kanji": "前期",
+      "hiragana": "ぜんき",
+      "romaji": "zenki",
+      "english": "previous term, last semester",
+      "rhyme": "Remember this word you see, it's zenki",
+      "sentence": {
+        "kanji": "前期の売上はとても良かったわ。",
+        "romaji": "zenki no uriage ha totemo yokata wa",
+        "english": "Sales during the first term were very good."
+      },
+      "rtkLesson": 46,
+      "rtkFrame": 2428,
+      "sourceLesson": 46
+    },
+    {
+      "id": "8_clubs",
+      "rank": "8",
+      "suit": "clubs",
+      "kanji": "短期",
+      "hiragana": "たんき",
+      "romaji": "tanki",
+      "english": "short-term",
+      "rhyme": "Remember this word you see, it's tanki",
+      "sentence": {
+        "kanji": "明日から2週間、短期のアルバイトをします。",
+        "romaji": "ashita kara 2 shuukan tanki no arubaito wo shimasu",
+        "english": "For two weeks starting tomorrow, I'm doing a short stint as a part-time worker."
+      },
+      "rtkLesson": 46,
+      "rtkFrame": 2429,
+      "sourceLesson": 46
+    },
+    {
+      "id": "9_clubs",
+      "rank": "9",
+      "suit": "clubs",
+      "kanji": "期限",
+      "hiragana": "きげん",
+      "romaji": "kigen",
+      "english": "time limit, term",
+      "rhyme": "Remember this word you see, it's kigen",
+      "sentence": {
+        "kanji": "期限までに申し込みました。",
+        "romaji": "kigen made ni moushikomimashita",
+        "english": "I signed up before the deadline."
+      },
+      "rtkLesson": 46,
+      "rtkFrame": 2430,
+      "sourceLesson": 46
+    },
+    {
+      "id": "10_clubs",
+      "rank": "10",
+      "suit": "clubs",
+      "kanji": "期日",
+      "hiragana": "きじつ",
+      "romaji": "kijitsu",
+      "english": "date, due date",
+      "rhyme": "Remember this word you see, it's kijitsu",
+      "sentence": {
+        "kanji": "代金を期日までにお支払いください。",
+        "romaji": "daikin wo kijitsu made ni oshiharai kudasai",
+        "english": "Please pay the charge by the due date."
+      },
+      "rtkLesson": 46,
+      "rtkFrame": 2444,
+      "sourceLesson": 46
+    },
+    {
+      "id": "J_clubs",
+      "rank": "J",
+      "suit": "clubs",
+      "kanji": "無事",
+      "hiragana": "ぶじ",
+      "romaji": "buji",
+      "english": "safely, peacefully",
+      "rhyme": "Remember this word you see, it's buji",
+      "sentence": {
+        "kanji": "無事、家に着きました。",
+        "romaji": "buji ie ni tsukimashita",
+        "english": "I arrived home safely."
+      },
+      "rtkLesson": 46,
+      "rtkFrame": 2483,
+      "sourceLesson": 46
+    },
+    {
+      "id": "Q_clubs",
+      "rank": "Q",
+      "suit": "clubs",
+      "kanji": "学期",
+      "hiragana": "がっき",
+      "romaji": "gaki",
+      "english": "school term",
+      "rhyme": "Remember this word you see, it's gaki",
+      "sentence": {
+        "kanji": "新学期が始まったね。",
+        "romaji": "shingaki ga hajimata ne",
+        "english": "A new semester has started."
+      },
+      "rtkLesson": 46,
+      "rtkFrame": 2531,
+      "sourceLesson": 46
+    },
+    {
+      "id": "K_clubs",
+      "rank": "K",
+      "suit": "clubs",
+      "kanji": "新学期",
+      "hiragana": "しんがっき",
+      "romaji": "shingaki",
+      "english": "new term, new semester",
+      "rhyme": "Remember this word you see, it's shingaki",
+      "sentence": {
+        "kanji": "今日から新学期が始まります。",
+        "romaji": "kyou kara shingaki ga hajimarimasu",
+        "english": "The new semester starts today."
+      },
+      "rtkLesson": 46,
+      "rtkFrame": 2537,
+      "sourceLesson": 46
+    },
+    {
+      "id": "A_spades",
+      "rank": "A",
+      "suit": "spades",
+      "kanji": "無制限",
+      "hiragana": "むせいげん",
+      "romaji": "museigen",
+      "english": "unlimited, free",
+      "rhyme": "Remember this word you see, it's museigen",
+      "sentence": {
+        "kanji": "このサイトでは音楽を無制限でダウンロードできる。",
+        "romaji": "kono saito de ha ongaku wo museigen de daunro-do dekiru",
+        "english": "You get unlimited music downloads on this site."
+      },
+      "rtkLesson": 46,
+      "rtkFrame": 2580,
+      "sourceLesson": 46
+    },
+    {
+      "id": "2_spades",
+      "rank": "2",
+      "suit": "spades",
+      "kanji": "無色",
+      "hiragana": "むしょく",
+      "romaji": "mushoku",
+      "english": "colorless, neutral",
+      "rhyme": "Remember this word you see, it's mushoku",
+      "sentence": {
+        "kanji": "アルコールは無色です。",
+        "romaji": "aruko-ru ha mushoku desu",
+        "english": "Alcohol is colorless."
+      },
+      "rtkLesson": 46,
+      "rtkFrame": 2607,
+      "sourceLesson": 46
+    },
+    {
+      "id": "3_spades",
+      "rank": "3",
+      "suit": "spades",
+      "kanji": "無線",
+      "hiragana": "むせん",
+      "romaji": "musen",
+      "english": "radio, wireless",
+      "rhyme": "Remember this word you see, it's musen",
+      "sentence": {
+        "kanji": "運転手が無線で話していたの。",
+        "romaji": "untenshu ga musen de hanashite ita no",
+        "english": "The driver was speaking on the radio."
+      },
+      "rtkLesson": 46,
+      "rtkFrame": 2630,
+      "sourceLesson": 46
+    },
+    {
+      "id": "4_spades",
+      "rank": "4",
+      "suit": "spades",
+      "kanji": "無口",
+      "hiragana": "むくち",
+      "romaji": "mukuchi",
+      "english": "not speaking much, reticence",
+      "rhyme": "Remember this word you see, it's mukuchi",
+      "sentence": {
+        "kanji": "彼女は無口な人ですね。",
+        "romaji": "kanojo ha mukuchi na hito desu ne",
+        "english": "She's a silent person."
+      },
+      "rtkLesson": 46,
+      "rtkFrame": 2883,
+      "sourceLesson": 46
+    },
+    {
+      "id": "5_spades",
+      "rank": "5",
+      "suit": "spades",
+      "kanji": "短期大学",
+      "hiragana": "たんきだいがく",
+      "romaji": "tankidaigaku",
+      "english": "junior college",
+      "rhyme": "Remember this word you see, it's tankidaigaku",
+      "sentence": {
+        "kanji": "彼女は短期大学で日本文学を勉強しました。",
+        "romaji": "kanojo ha tankidaigaku de nihon bungaku wo benkyou shimashita",
+        "english": "She studied Japanese literature in junior college."
+      },
+      "rtkLesson": 46,
+      "rtkFrame": 2933,
+      "sourceLesson": 46
+    },
+    {
+      "id": "6_spades",
+      "rank": "6",
+      "suit": "spades",
+      "kanji": "無言",
+      "hiragana": "むごん",
+      "romaji": "mugon",
+      "english": "silence, muteness",
+      "rhyme": "Remember this word you see, it's mugon",
+      "sentence": {
+        "kanji": "彼は一日中無言だったな。",
+        "romaji": "kare ha ichinichijuu mugon data na",
+        "english": "He was silent all day long."
+      },
+      "rtkLesson": 46,
+      "rtkFrame": 2958,
+      "sourceLesson": 46
+    },
+    {
+      "id": "7_spades",
+      "rank": "7",
+      "suit": "spades",
+      "kanji": "無効",
+      "hiragana": "むこう",
+      "romaji": "mukou",
+      "english": "invalidity, ineffectiveness",
+      "rhyme": "Remember this word you see, it's mukou",
+      "sentence": {
+        "kanji": "このクーポンはもう無効です。",
+        "romaji": "kono ku-pon ha mou mukou desu",
+        "english": "This coupon is already invalid."
+      },
+      "rtkLesson": 46,
+      "rtkFrame": 2984,
+      "sourceLesson": 46
+    },
+    {
+      "id": "8_spades",
+      "rank": "8",
+      "suit": "spades",
+      "kanji": "無意味",
+      "hiragana": "むいみ",
+      "romaji": "muimi",
+      "english": "meaningless, absurd",
+      "rhyme": "Remember this word you see, it's muimi",
+      "sentence": {
+        "kanji": "そんなことをしても無意味よ。",
+        "romaji": "sonna koto wo shite mo muimi yo",
+        "english": "It's meaningless to do such a thing."
+      },
+      "rtkLesson": 46,
+      "rtkFrame": 3148,
+      "sourceLesson": 46
+    },
+    {
+      "id": "9_spades",
+      "rank": "9",
+      "suit": "spades",
+      "kanji": "無限",
+      "hiragana": "むげん",
+      "romaji": "mugen",
+      "english": "infinite, endless",
+      "rhyme": "Remember this word you see, it's mugen",
+      "sentence": {
+        "kanji": "資源は無限ではありません。",
+        "romaji": "shigen ha mugen de ha arimasen",
+        "english": "Resources are not infinite."
+      },
+      "rtkLesson": 46,
+      "rtkFrame": 3262,
+      "sourceLesson": 46
+    },
+    {
+      "id": "10_spades",
+      "rank": "10",
+      "suit": "spades",
+      "kanji": "無知",
+      "hiragana": "むち",
+      "romaji": "muchi",
+      "english": "ignorance",
+      "rhyme": "Remember this word you see, it's muchi",
+      "sentence": {
+        "kanji": "彼女は政治について無知でした。",
+        "romaji": "kanojo ha seiji ni tsuite muchi deshita",
+        "english": "She was ignorant about politics."
+      },
+      "rtkLesson": 46,
+      "rtkFrame": 3381,
+      "sourceLesson": 46
+    },
+    {
+      "id": "J_spades",
+      "rank": "J",
+      "suit": "spades",
+      "kanji": "無意識",
+      "hiragana": "むいしき",
+      "romaji": "muishiki",
+      "english": "unconsciously, without thinking",
+      "rhyme": "Remember this word you see, it's muishiki",
+      "sentence": {
+        "kanji": "私は無意識に彼を傷つけてしまった。",
+        "romaji": "watashi ha muishiki ni kare wo kizutsukete shimata",
+        "english": "Unintentionally, I ended up hurting him."
+      },
+      "rtkLesson": 46,
+      "rtkFrame": 3600,
+      "sourceLesson": 46
+    },
+    {
+      "id": "Q_spades",
+      "rank": "Q",
+      "suit": "spades",
+      "kanji": "小遣い",
+      "hiragana": "こづかい",
+      "romaji": "kozukai",
+      "english": "pocket money, spending money",
+      "rhyme": "Remember this word you see, it's kozukai",
+      "sentence": {
+        "kanji": "おじいちゃんにお小遣いをもらったよ。",
+        "romaji": "ojiichan ni okozukai wo morata yo",
+        "english": "I got pocket money from grandpa."
+      },
+      "rtkLesson": 46,
+      "rtkFrame": 3633,
+      "sourceLesson": 46
+    },
+    {
+      "id": "K_spades",
+      "rank": "K",
+      "suit": "spades",
+      "kanji": "無数",
+      "hiragana": "むすう",
+      "romaji": "musuu",
+      "english": "countless, innumerable",
+      "rhyme": "Remember this word you see, it's musuu",
+      "sentence": {
+        "kanji": "宇宙には無数の星があります。",
+        "romaji": "uchuu ni ha musuu no hoshi ga arimasu",
+        "english": "There are an infinite number of stars in space."
+      },
+      "rtkLesson": 46,
+      "rtkFrame": 3789,
+      "sourceLesson": 46
+    }
+  ]
+}

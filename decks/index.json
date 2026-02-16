@@ -1,343 +1,589 @@
 {
-  "name": "RTK Core 6K Library",
-  "description": "Remembering the Kanji - Core 6K vocabulary organized by RTK Lesson (1-56)",
+  "name": "RTK Core 6K Library (52-Card Decks)",
+  "description": "Remembering the Kanji - Core 6K vocabulary organized into 52-card decks",
   "totalCards": 5015,
   "decks": [
     {
-      "filename": "rtk-lesson-01.json",
-      "name": "RTK Lesson 1",
-      "cardCount": 49,
-      "lesson": 1
+      "filename": "rtk-deck-01.json",
+      "name": "RTK Deck 1",
+      "cardCount": 52,
+      "deck": 1
     },
     {
-      "filename": "rtk-lesson-02.json",
-      "name": "RTK Lesson 2",
-      "cardCount": 17,
-      "lesson": 2
+      "filename": "rtk-deck-02.json",
+      "name": "RTK Deck 2",
+      "cardCount": 52,
+      "deck": 2
     },
     {
-      "filename": "rtk-lesson-03.json",
-      "name": "RTK Lesson 3",
-      "cardCount": 54,
-      "lesson": 3
+      "filename": "rtk-deck-03.json",
+      "name": "RTK Deck 3",
+      "cardCount": 52,
+      "deck": 3
     },
     {
-      "filename": "rtk-lesson-04.json",
-      "name": "RTK Lesson 4",
-      "cardCount": 31,
-      "lesson": 4
+      "filename": "rtk-deck-04.json",
+      "name": "RTK Deck 4",
+      "cardCount": 52,
+      "deck": 4
     },
     {
-      "filename": "rtk-lesson-05.json",
-      "name": "RTK Lesson 5",
-      "cardCount": 38,
-      "lesson": 5
+      "filename": "rtk-deck-05.json",
+      "name": "RTK Deck 5",
+      "cardCount": 52,
+      "deck": 5
     },
     {
-      "filename": "rtk-lesson-06.json",
-      "name": "RTK Lesson 6",
-      "cardCount": 13,
-      "lesson": 6
+      "filename": "rtk-deck-06.json",
+      "name": "RTK Deck 6",
+      "cardCount": 52,
+      "deck": 6
     },
     {
-      "filename": "rtk-lesson-07.json",
-      "name": "RTK Lesson 7",
-      "cardCount": 51,
-      "lesson": 7
+      "filename": "rtk-deck-07.json",
+      "name": "RTK Deck 7",
+      "cardCount": 52,
+      "deck": 7
     },
     {
-      "filename": "rtk-lesson-08.json",
-      "name": "RTK Lesson 8",
-      "cardCount": 49,
-      "lesson": 8
+      "filename": "rtk-deck-08.json",
+      "name": "RTK Deck 8",
+      "cardCount": 52,
+      "deck": 8
     },
     {
-      "filename": "rtk-lesson-09.json",
-      "name": "RTK Lesson 9",
-      "cardCount": 39,
-      "lesson": 9
+      "filename": "rtk-deck-09.json",
+      "name": "RTK Deck 9",
+      "cardCount": 52,
+      "deck": 9
     },
     {
-      "filename": "rtk-lesson-10.json",
-      "name": "RTK Lesson 10",
-      "cardCount": 59,
-      "lesson": 10
+      "filename": "rtk-deck-10.json",
+      "name": "RTK Deck 10",
+      "cardCount": 52,
+      "deck": 10
     },
     {
-      "filename": "rtk-lesson-11.json",
-      "name": "RTK Lesson 11",
-      "cardCount": 22,
-      "lesson": 11
+      "filename": "rtk-deck-11.json",
+      "name": "RTK Deck 11",
+      "cardCount": 52,
+      "deck": 11
     },
     {
-      "filename": "rtk-lesson-12.json",
-      "name": "RTK Lesson 12",
-      "cardCount": 53,
-      "lesson": 12
+      "filename": "rtk-deck-12.json",
+      "name": "RTK Deck 12",
+      "cardCount": 52,
+      "deck": 12
     },
     {
-      "filename": "rtk-lesson-13.json",
-      "name": "RTK Lesson 13",
-      "cardCount": 47,
-      "lesson": 13
+      "filename": "rtk-deck-13.json",
+      "name": "RTK Deck 13",
+      "cardCount": 52,
+      "deck": 13
     },
     {
-      "filename": "rtk-lesson-14.json",
-      "name": "RTK Lesson 14",
-      "cardCount": 26,
-      "lesson": 14
+      "filename": "rtk-deck-14.json",
+      "name": "RTK Deck 14",
+      "cardCount": 52,
+      "deck": 14
     },
     {
-      "filename": "rtk-lesson-15.json",
-      "name": "RTK Lesson 15",
-      "cardCount": 60,
-      "lesson": 15
+      "filename": "rtk-deck-15.json",
+      "name": "RTK Deck 15",
+      "cardCount": 52,
+      "deck": 15
     },
     {
-      "filename": "rtk-lesson-16.json",
-      "name": "RTK Lesson 16",
-      "cardCount": 19,
-      "lesson": 16
+      "filename": "rtk-deck-16.json",
+      "name": "RTK Deck 16",
+      "cardCount": 52,
+      "deck": 16
     },
     {
-      "filename": "rtk-lesson-17.json",
-      "name": "RTK Lesson 17",
-      "cardCount": 42,
-      "lesson": 17
+      "filename": "rtk-deck-17.json",
+      "name": "RTK Deck 17",
+      "cardCount": 52,
+      "deck": 17
     },
     {
-      "filename": "rtk-lesson-18.json",
-      "name": "RTK Lesson 18",
-      "cardCount": 131,
-      "lesson": 18
+      "filename": "rtk-deck-18.json",
+      "name": "RTK Deck 18",
+      "cardCount": 52,
+      "deck": 18
     },
     {
-      "filename": "rtk-lesson-19.json",
-      "name": "RTK Lesson 19",
-      "cardCount": 66,
-      "lesson": 19
+      "filename": "rtk-deck-19.json",
+      "name": "RTK Deck 19",
+      "cardCount": 52,
+      "deck": 19
     },
     {
-      "filename": "rtk-lesson-20.json",
-      "name": "RTK Lesson 20",
-      "cardCount": 9,
-      "lesson": 20
+      "filename": "rtk-deck-20.json",
+      "name": "RTK Deck 20",
+      "cardCount": 52,
+      "deck": 20
     },
     {
-      "filename": "rtk-lesson-21.json",
-      "name": "RTK Lesson 21",
-      "cardCount": 172,
-      "lesson": 21
+      "filename": "rtk-deck-21.json",
+      "name": "RTK Deck 21",
+      "cardCount": 52,
+      "deck": 21
     },
     {
-      "filename": "rtk-lesson-22.json",
-      "name": "RTK Lesson 22",
-      "cardCount": 130,
-      "lesson": 22
+      "filename": "rtk-deck-22.json",
+      "name": "RTK Deck 22",
+      "cardCount": 52,
+      "deck": 22
     },
     {
-      "filename": "rtk-lesson-23.json",
-      "name": "RTK Lesson 23",
-      "cardCount": 243,
-      "lesson": 23
+      "filename": "rtk-deck-23.json",
+      "name": "RTK Deck 23",
+      "cardCount": 52,
+      "deck": 23
     },
     {
-      "filename": "rtk-lesson-24.json",
-      "name": "RTK Lesson 24",
-      "cardCount": 84,
-      "lesson": 24
+      "filename": "rtk-deck-24.json",
+      "name": "RTK Deck 24",
+      "cardCount": 52,
+      "deck": 24
     },
     {
-      "filename": "rtk-lesson-25.json",
-      "name": "RTK Lesson 25",
-      "cardCount": 199,
-      "lesson": 25
+      "filename": "rtk-deck-25.json",
+      "name": "RTK Deck 25",
+      "cardCount": 52,
+      "deck": 25
     },
     {
-      "filename": "rtk-lesson-26.json",
-      "name": "RTK Lesson 26",
-      "cardCount": 117,
-      "lesson": 26
+      "filename": "rtk-deck-26.json",
+      "name": "RTK Deck 26",
+      "cardCount": 52,
+      "deck": 26
     },
     {
-      "filename": "rtk-lesson-27.json",
-      "name": "RTK Lesson 27",
-      "cardCount": 260,
-      "lesson": 27
+      "filename": "rtk-deck-27.json",
+      "name": "RTK Deck 27",
+      "cardCount": 52,
+      "deck": 27
     },
     {
-      "filename": "rtk-lesson-28.json",
-      "name": "RTK Lesson 28",
-      "cardCount": 55,
-      "lesson": 28
+      "filename": "rtk-deck-28.json",
+      "name": "RTK Deck 28",
+      "cardCount": 52,
+      "deck": 28
     },
     {
-      "filename": "rtk-lesson-29.json",
-      "name": "RTK Lesson 29",
-      "cardCount": 86,
-      "lesson": 29
+      "filename": "rtk-deck-29.json",
+      "name": "RTK Deck 29",
+      "cardCount": 52,
+      "deck": 29
     },
     {
-      "filename": "rtk-lesson-30.json",
-      "name": "RTK Lesson 30",
-      "cardCount": 70,
-      "lesson": 30
+      "filename": "rtk-deck-30.json",
+      "name": "RTK Deck 30",
+      "cardCount": 52,
+      "deck": 30
     },
     {
-      "filename": "rtk-lesson-31.json",
-      "name": "RTK Lesson 31",
-      "cardCount": 228,
-      "lesson": 31
+      "filename": "rtk-deck-31.json",
+      "name": "RTK Deck 31",
+      "cardCount": 52,
+      "deck": 31
     },
     {
-      "filename": "rtk-lesson-32.json",
-      "name": "RTK Lesson 32",
-      "cardCount": 110,
-      "lesson": 32
+      "filename": "rtk-deck-32.json",
+      "name": "RTK Deck 32",
+      "cardCount": 52,
+      "deck": 32
     },
     {
-      "filename": "rtk-lesson-33.json",
-      "name": "RTK Lesson 33",
-      "cardCount": 109,
-      "lesson": 33
+      "filename": "rtk-deck-33.json",
+      "name": "RTK Deck 33",
+      "cardCount": 52,
+      "deck": 33
     },
     {
-      "filename": "rtk-lesson-34.json",
-      "name": "RTK Lesson 34",
-      "cardCount": 153,
-      "lesson": 34
+      "filename": "rtk-deck-34.json",
+      "name": "RTK Deck 34",
+      "cardCount": 52,
+      "deck": 34
     },
     {
-      "filename": "rtk-lesson-35.json",
-      "name": "RTK Lesson 35",
-      "cardCount": 67,
-      "lesson": 35
+      "filename": "rtk-deck-35.json",
+      "name": "RTK Deck 35",
+      "cardCount": 52,
+      "deck": 35
     },
     {
-      "filename": "rtk-lesson-36.json",
-      "name": "RTK Lesson 36",
-      "cardCount": 154,
-      "lesson": 36
+      "filename": "rtk-deck-36.json",
+      "name": "RTK Deck 36",
+      "cardCount": 52,
+      "deck": 36
     },
     {
-      "filename": "rtk-lesson-37.json",
-      "name": "RTK Lesson 37",
-      "cardCount": 84,
-      "lesson": 37
+      "filename": "rtk-deck-37.json",
+      "name": "RTK Deck 37",
+      "cardCount": 52,
+      "deck": 37
     },
     {
-      "filename": "rtk-lesson-38.json",
-      "name": "RTK Lesson 38",
-      "cardCount": 144,
-      "lesson": 38
+      "filename": "rtk-deck-38.json",
+      "name": "RTK Deck 38",
+      "cardCount": 52,
+      "deck": 38
     },
     {
-      "filename": "rtk-lesson-39.json",
-      "name": "RTK Lesson 39",
-      "cardCount": 125,
-      "lesson": 39
+      "filename": "rtk-deck-39.json",
+      "name": "RTK Deck 39",
+      "cardCount": 52,
+      "deck": 39
     },
     {
-      "filename": "rtk-lesson-40.json",
-      "name": "RTK Lesson 40",
-      "cardCount": 218,
-      "lesson": 40
+      "filename": "rtk-deck-40.json",
+      "name": "RTK Deck 40",
+      "cardCount": 52,
+      "deck": 40
     },
     {
-      "filename": "rtk-lesson-41.json",
-      "name": "RTK Lesson 41",
-      "cardCount": 101,
-      "lesson": 41
+      "filename": "rtk-deck-41.json",
+      "name": "RTK Deck 41",
+      "cardCount": 52,
+      "deck": 41
     },
     {
-      "filename": "rtk-lesson-42.json",
-      "name": "RTK Lesson 42",
-      "cardCount": 118,
-      "lesson": 42
+      "filename": "rtk-deck-42.json",
+      "name": "RTK Deck 42",
+      "cardCount": 52,
+      "deck": 42
     },
     {
-      "filename": "rtk-lesson-43.json",
-      "name": "RTK Lesson 43",
-      "cardCount": 109,
-      "lesson": 43
+      "filename": "rtk-deck-43.json",
+      "name": "RTK Deck 43",
+      "cardCount": 52,
+      "deck": 43
     },
     {
-      "filename": "rtk-lesson-44.json",
-      "name": "RTK Lesson 44",
-      "cardCount": 68,
-      "lesson": 44
+      "filename": "rtk-deck-44.json",
+      "name": "RTK Deck 44",
+      "cardCount": 52,
+      "deck": 44
     },
     {
-      "filename": "rtk-lesson-45.json",
-      "name": "RTK Lesson 45",
-      "cardCount": 147,
-      "lesson": 45
+      "filename": "rtk-deck-45.json",
+      "name": "RTK Deck 45",
+      "cardCount": 52,
+      "deck": 45
     },
     {
-      "filename": "rtk-lesson-46.json",
-      "name": "RTK Lesson 46",
-      "cardCount": 72,
-      "lesson": 46
+      "filename": "rtk-deck-46.json",
+      "name": "RTK Deck 46",
+      "cardCount": 52,
+      "deck": 46
     },
     {
-      "filename": "rtk-lesson-47.json",
-      "name": "RTK Lesson 47",
-      "cardCount": 82,
-      "lesson": 47
+      "filename": "rtk-deck-47.json",
+      "name": "RTK Deck 47",
+      "cardCount": 52,
+      "deck": 47
     },
     {
-      "filename": "rtk-lesson-48.json",
-      "name": "RTK Lesson 48",
-      "cardCount": 88,
-      "lesson": 48
+      "filename": "rtk-deck-48.json",
+      "name": "RTK Deck 48",
+      "cardCount": 52,
+      "deck": 48
     },
     {
-      "filename": "rtk-lesson-49.json",
-      "name": "RTK Lesson 49",
-      "cardCount": 79,
-      "lesson": 49
+      "filename": "rtk-deck-49.json",
+      "name": "RTK Deck 49",
+      "cardCount": 52,
+      "deck": 49
     },
     {
-      "filename": "rtk-lesson-50.json",
-      "name": "RTK Lesson 50",
-      "cardCount": 44,
-      "lesson": 50
+      "filename": "rtk-deck-50.json",
+      "name": "RTK Deck 50",
+      "cardCount": 52,
+      "deck": 50
     },
     {
-      "filename": "rtk-lesson-51.json",
-      "name": "RTK Lesson 51",
-      "cardCount": 136,
-      "lesson": 51
+      "filename": "rtk-deck-51.json",
+      "name": "RTK Deck 51",
+      "cardCount": 52,
+      "deck": 51
     },
     {
-      "filename": "rtk-lesson-52.json",
-      "name": "RTK Lesson 52",
-      "cardCount": 78,
-      "lesson": 52
+      "filename": "rtk-deck-52.json",
+      "name": "RTK Deck 52",
+      "cardCount": 52,
+      "deck": 52
     },
     {
-      "filename": "rtk-lesson-53.json",
-      "name": "RTK Lesson 53",
-      "cardCount": 101,
-      "lesson": 53
+      "filename": "rtk-deck-53.json",
+      "name": "RTK Deck 53",
+      "cardCount": 52,
+      "deck": 53
     },
     {
-      "filename": "rtk-lesson-54.json",
-      "name": "RTK Lesson 54",
-      "cardCount": 55,
-      "lesson": 54
+      "filename": "rtk-deck-54.json",
+      "name": "RTK Deck 54",
+      "cardCount": 52,
+      "deck": 54
     },
     {
-      "filename": "rtk-lesson-55.json",
-      "name": "RTK Lesson 55",
-      "cardCount": 53,
-      "lesson": 55
+      "filename": "rtk-deck-55.json",
+      "name": "RTK Deck 55",
+      "cardCount": 52,
+      "deck": 55
     },
     {
-      "filename": "rtk-lesson-56.json",
-      "name": "RTK Lesson 56",
-      "cardCount": 1,
-      "lesson": 56
+      "filename": "rtk-deck-56.json",
+      "name": "RTK Deck 56",
+      "cardCount": 52,
+      "deck": 56
+    },
+    {
+      "filename": "rtk-deck-57.json",
+      "name": "RTK Deck 57",
+      "cardCount": 52,
+      "deck": 57
+    },
+    {
+      "filename": "rtk-deck-58.json",
+      "name": "RTK Deck 58",
+      "cardCount": 52,
+      "deck": 58
+    },
+    {
+      "filename": "rtk-deck-59.json",
+      "name": "RTK Deck 59",
+      "cardCount": 52,
+      "deck": 59
+    },
+    {
+      "filename": "rtk-deck-60.json",
+      "name": "RTK Deck 60",
+      "cardCount": 52,
+      "deck": 60
+    },
+    {
+      "filename": "rtk-deck-61.json",
+      "name": "RTK Deck 61",
+      "cardCount": 52,
+      "deck": 61
+    },
+    {
+      "filename": "rtk-deck-62.json",
+      "name": "RTK Deck 62",
+      "cardCount": 52,
+      "deck": 62
+    },
+    {
+      "filename": "rtk-deck-63.json",
+      "name": "RTK Deck 63",
+      "cardCount": 52,
+      "deck": 63
+    },
+    {
+      "filename": "rtk-deck-64.json",
+      "name": "RTK Deck 64",
+      "cardCount": 52,
+      "deck": 64
+    },
+    {
+      "filename": "rtk-deck-65.json",
+      "name": "RTK Deck 65",
+      "cardCount": 52,
+      "deck": 65
+    },
+    {
+      "filename": "rtk-deck-66.json",
+      "name": "RTK Deck 66",
+      "cardCount": 52,
+      "deck": 66
+    },
+    {
+      "filename": "rtk-deck-67.json",
+      "name": "RTK Deck 67",
+      "cardCount": 52,
+      "deck": 67
+    },
+    {
+      "filename": "rtk-deck-68.json",
+      "name": "RTK Deck 68",
+      "cardCount": 52,
+      "deck": 68
+    },
+    {
+      "filename": "rtk-deck-69.json",
+      "name": "RTK Deck 69",
+      "cardCount": 52,
+      "deck": 69
+    },
+    {
+      "filename": "rtk-deck-70.json",
+      "name": "RTK Deck 70",
+      "cardCount": 52,
+      "deck": 70
+    },
+    {
+      "filename": "rtk-deck-71.json",
+      "name": "RTK Deck 71",
+      "cardCount": 52,
+      "deck": 71
+    },
+    {
+      "filename": "rtk-deck-72.json",
+      "name": "RTK Deck 72",
+      "cardCount": 52,
+      "deck": 72
+    },
+    {
+      "filename": "rtk-deck-73.json",
+      "name": "RTK Deck 73",
+      "cardCount": 52,
+      "deck": 73
+    },
+    {
+      "filename": "rtk-deck-74.json",
+      "name": "RTK Deck 74",
+      "cardCount": 52,
+      "deck": 74
+    },
+    {
+      "filename": "rtk-deck-75.json",
+      "name": "RTK Deck 75",
+      "cardCount": 52,
+      "deck": 75
+    },
+    {
+      "filename": "rtk-deck-76.json",
+      "name": "RTK Deck 76",
+      "cardCount": 52,
+      "deck": 76
+    },
+    {
+      "filename": "rtk-deck-77.json",
+      "name": "RTK Deck 77",
+      "cardCount": 52,
+      "deck": 77
+    },
+    {
+      "filename": "rtk-deck-78.json",
+      "name": "RTK Deck 78",
+      "cardCount": 52,
+      "deck": 78
+    },
+    {
+      "filename": "rtk-deck-79.json",
+      "name": "RTK Deck 79",
+      "cardCount": 52,
+      "deck": 79
+    },
+    {
+      "filename": "rtk-deck-80.json",
+      "name": "RTK Deck 80",
+      "cardCount": 52,
+      "deck": 80
+    },
+    {
+      "filename": "rtk-deck-81.json",
+      "name": "RTK Deck 81",
+      "cardCount": 52,
+      "deck": 81
+    },
+    {
+      "filename": "rtk-deck-82.json",
+      "name": "RTK Deck 82",
+      "cardCount": 52,
+      "deck": 82
+    },
+    {
+      "filename": "rtk-deck-83.json",
+      "name": "RTK Deck 83",
+      "cardCount": 52,
+      "deck": 83
+    },
+    {
+      "filename": "rtk-deck-84.json",
+      "name": "RTK Deck 84",
+      "cardCount": 52,
+      "deck": 84
+    },
+    {
+      "filename": "rtk-deck-85.json",
+      "name": "RTK Deck 85",
+      "cardCount": 52,
+      "deck": 85
+    },
+    {
+      "filename": "rtk-deck-86.json",
+      "name": "RTK Deck 86",
+      "cardCount": 52,
+      "deck": 86
+    },
+    {
+      "filename": "rtk-deck-87.json",
+      "name": "RTK Deck 87",
+      "cardCount": 52,
+      "deck": 87
+    },
+    {
+      "filename": "rtk-deck-88.json",
+      "name": "RTK Deck 88",
+      "cardCount": 52,
+      "deck": 88
+    },
+    {
+      "filename": "rtk-deck-89.json",
+      "name": "RTK Deck 89",
+      "cardCount": 52,
+      "deck": 89
+    },
+    {
+      "filename": "rtk-deck-90.json",
+      "name": "RTK Deck 90",
+      "cardCount": 52,
+      "deck": 90
+    },
+    {
+      "filename": "rtk-deck-91.json",
+      "name": "RTK Deck 91",
+      "cardCount": 52,
+      "deck": 91
+    },
+    {
+      "filename": "rtk-deck-92.json",
+      "name": "RTK Deck 92",
+      "cardCount": 52,
+      "deck": 92
+    },
+    {
+      "filename": "rtk-deck-93.json",
+      "name": "RTK Deck 93",
+      "cardCount": 52,
+      "deck": 93
+    },
+    {
+      "filename": "rtk-deck-94.json",
+      "name": "RTK Deck 94",
+      "cardCount": 52,
+      "deck": 94
+    },
+    {
+      "filename": "rtk-deck-95.json",
+      "name": "RTK Deck 95",
+      "cardCount": 52,
+      "deck": 95
+    },
+    {
+      "filename": "rtk-deck-96.json",
+      "name": "RTK Deck 96",
+      "cardCount": 52,
+      "deck": 96
+    },
+    {
+      "filename": "rtk-deck-97.json",
+      "name": "RTK Deck 97",
+      "cardCount": 23,
+      "deck": 97
     }
   ]
 }

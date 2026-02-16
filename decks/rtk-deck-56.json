@@ -1,0 +1,940 @@
+{
+  "cards": [
+    {
+      "id": "A_hearts",
+      "rank": "A",
+      "suit": "hearts",
+      "kanji": "交わす",
+      "hiragana": "かわす",
+      "romaji": "kawasu",
+      "english": "exchange",
+      "rhyme": "Remember this word you see, it's kawasu",
+      "sentence": {
+        "kanji": "彼は私と再会の約束を交わした。",
+        "romaji": "kare ha watashi to saikai no yakusoku wo kawashita",
+        "english": "He promised me that we'd meet again."
+      },
+      "rtkLesson": 34,
+      "rtkFrame": 4649,
+      "sourceLesson": 34
+    },
+    {
+      "id": "2_hearts",
+      "rank": "2",
+      "suit": "hearts",
+      "kanji": "追放",
+      "hiragana": "ついほう",
+      "romaji": "tsuihou",
+      "english": "banishment, deportation",
+      "rhyme": "Remember this word you see, it's tsuihou",
+      "sentence": {
+        "kanji": "彼は国外に追放されました。",
+        "romaji": "kare ha kokugai ni tsuihou saremashita",
+        "english": "He was deported."
+      },
+      "rtkLesson": 34,
+      "rtkFrame": 4658,
+      "sourceLesson": 34
+    },
+    {
+      "id": "3_hearts",
+      "rank": "3",
+      "suit": "hearts",
+      "kanji": "促す",
+      "hiragana": "うながす",
+      "romaji": "unagasu",
+      "english": "hasten, urge",
+      "rhyme": "Remember this word you see, it's unagasu",
+      "sentence": {
+        "kanji": "彼に集中するよう注意を促しといたよ。",
+        "romaji": "kare ni shuuchuu suru you chuui wo unagashi toi ta yo",
+        "english": "I urged him to concentrate."
+      },
+      "rtkLesson": 34,
+      "rtkFrame": 4720,
+      "sourceLesson": 34
+    },
+    {
+      "id": "4_hearts",
+      "rank": "4",
+      "suit": "hearts",
+      "kanji": "催促",
+      "hiragana": "さいそく",
+      "romaji": "saisoku",
+      "english": "demand, urging",
+      "rhyme": "Remember this word you see, it's saisoku",
+      "sentence": {
+        "kanji": "彼女に本を返すように催促したの。",
+        "romaji": "kanojo ni hon wo kaesu you ni saisoku shita no",
+        "english": "I urged her to return the book."
+      },
+      "rtkLesson": 34,
+      "rtkFrame": 4721,
+      "sourceLesson": 34
+    },
+    {
+      "id": "5_hearts",
+      "rank": "5",
+      "suit": "hearts",
+      "kanji": "有効",
+      "hiragana": "ゆうこう",
+      "romaji": "yuukou",
+      "english": "effective, valid",
+      "rhyme": "Remember this word you see, it's yuukou",
+      "sentence": {
+        "kanji": "私の免許は来年まで有効です。",
+        "romaji": "watashi no menkyo ha rainen made yuukou desu",
+        "english": "My license is effective until next year."
+      },
+      "rtkLesson": 34,
+      "rtkFrame": 4735,
+      "sourceLesson": 34
+    },
+    {
+      "id": "6_hearts",
+      "rank": "6",
+      "suit": "hearts",
+      "kanji": "技師",
+      "hiragana": "ぎし",
+      "romaji": "gishi",
+      "english": "engineer, technician",
+      "rhyme": "Remember this word you see, it's gishi",
+      "sentence": {
+        "kanji": "彼はレントゲン技師です。",
+        "romaji": "kare ha rentogen gishi desu",
+        "english": "He is a radiographer."
+      },
+      "rtkLesson": 34,
+      "rtkFrame": 4765,
+      "sourceLesson": 34
+    },
+    {
+      "id": "7_hearts",
+      "rank": "7",
+      "suit": "hearts",
+      "kanji": "師走",
+      "hiragana": "しわす",
+      "romaji": "shiwasu",
+      "english": "December",
+      "rhyme": "Remember this word you see, it's shiwasu",
+      "sentence": {
+        "kanji": "師走に入ると忙しくなります。",
+        "romaji": "shiwasu ni hairu to isogashiku narimasu",
+        "english": "I get very busy once December comes."
+      },
+      "rtkLesson": 34,
+      "rtkFrame": 4768,
+      "sourceLesson": 34
+    },
+    {
+      "id": "8_hearts",
+      "rank": "8",
+      "suit": "hearts",
+      "kanji": "過労",
+      "hiragana": "かろう",
+      "romaji": "karou",
+      "english": "overwork",
+      "rhyme": "Remember this word you see, it's karou",
+      "sentence": {
+        "kanji": "彼は過労のために倒れたの。",
+        "romaji": "kare ha karou no tame ni taoreta no",
+        "english": "He collapsed from overworking."
+      },
+      "rtkLesson": 34,
+      "rtkFrame": 4859,
+      "sourceLesson": 34
+    },
+    {
+      "id": "9_hearts",
+      "rank": "9",
+      "suit": "hearts",
+      "kanji": "狭まる",
+      "hiragana": "せばまる",
+      "romaji": "sebamaru",
+      "english": "become narrow, contract",
+      "rhyme": "Remember this word you see, it's sebamaru",
+      "sentence": {
+        "kanji": "ここから道の幅が狭まっています。",
+        "romaji": "koko kara michi no haba ga sebamate imasu",
+        "english": "The road narrows from here."
+      },
+      "rtkLesson": 34,
+      "rtkFrame": 4872,
+      "sourceLesson": 34
+    },
+    {
+      "id": "10_hearts",
+      "rank": "10",
+      "suit": "hearts",
+      "kanji": "狭める",
+      "hiragana": "せばめる",
+      "romaji": "sebameru",
+      "english": "narrow, contract",
+      "rhyme": "Remember this word you see, it's sebameru",
+      "sentence": {
+        "kanji": "もっと範囲を狭めて探しましょう",
+        "romaji": "moto hani wo sebamete sagashimashou",
+        "english": "Let's narrow the range and search."
+      },
+      "rtkLesson": 34,
+      "rtkFrame": 4873,
+      "sourceLesson": 34
+    },
+    {
+      "id": "J_hearts",
+      "rank": "J",
+      "suit": "hearts",
+      "kanji": "十字路",
+      "hiragana": "じゅうじろ",
+      "romaji": "juujiro",
+      "english": "crossroads",
+      "rhyme": "Remember this word you see, it's juujiro",
+      "sentence": {
+        "kanji": "十字路で車とバイクが衝突したぞ。",
+        "romaji": "juujiro de kuruma to baiku ga shoutotsu shita zo",
+        "english": "The car collided with a motorcycle in the crossroads."
+      },
+      "rtkLesson": 34,
+      "rtkFrame": 4894,
+      "sourceLesson": 34
+    },
+    {
+      "id": "Q_hearts",
+      "rank": "Q",
+      "suit": "hearts",
+      "kanji": "滑らか",
+      "hiragana": "なめらか",
+      "romaji": "nameraka",
+      "english": "smooth, glassy",
+      "rhyme": "Remember this word you see, it's nameraka",
+      "sentence": {
+        "kanji": "この生地は滑らかな手触りが特長です。",
+        "romaji": "kono kiji ha nameraka na tezawari ga tokuchou desu",
+        "english": "This cloth's main feature is its smooth texture."
+      },
+      "rtkLesson": 34,
+      "rtkFrame": 4904,
+      "sourceLesson": 34
+    },
+    {
+      "id": "K_hearts",
+      "rank": "K",
+      "suit": "hearts",
+      "kanji": "管",
+      "hiragana": "かん",
+      "romaji": "kan",
+      "english": "pipe, tube",
+      "rhyme": "Remember this word you see, it's kan",
+      "sentence": {
+        "kanji": "ガス管が爆発しました。",
+        "romaji": "gasukan ga bakuhatsu shimashita",
+        "english": "The gas pipe exploded."
+      },
+      "rtkLesson": 34,
+      "rtkFrame": 4937,
+      "sourceLesson": 34
+    },
+    {
+      "id": "A_diamonds",
+      "rank": "A",
+      "suit": "diamonds",
+      "kanji": "受け身",
+      "hiragana": "うけみ",
+      "romaji": "ukemi",
+      "english": "passiveness, passive voice",
+      "rhyme": "Remember this word you see, it's ukemi",
+      "sentence": {
+        "kanji": "彼はいつも受け身の姿勢で、自分からは何もしないんだ。",
+        "romaji": "kare ha itsumo ukemi no shisei de jibun karaha nani mo shinai n da",
+        "english": "He is always passive and never initiates anything himself."
+      },
+      "rtkLesson": 34,
+      "rtkFrame": 4991,
+      "sourceLesson": 34
+    },
+    {
+      "id": "2_diamonds",
+      "rank": "2",
+      "suit": "diamonds",
+      "kanji": "仏教",
+      "hiragana": "ぶっきょう",
+      "romaji": "bukyou",
+      "english": "Buddhism",
+      "rhyme": "Remember this word you see, it's bukyou",
+      "sentence": {
+        "kanji": "お葬式は仏教で行うことが多いです。",
+        "romaji": "osoushiki ha bukyou de okonau koto ga ooi desu",
+        "english": "Funerals are often conducted according to Buddhist rites."
+      },
+      "rtkLesson": 34,
+      "rtkFrame": 5284,
+      "sourceLesson": 34
+    },
+    {
+      "id": "3_diamonds",
+      "rank": "3",
+      "suit": "diamonds",
+      "kanji": "筆者",
+      "hiragana": "ひっしゃ",
+      "romaji": "hisha",
+      "english": "writer",
+      "rhyme": "Remember this word you see, it's hisha",
+      "sentence": {
+        "kanji": "筆者の趣旨を考えてください。",
+        "romaji": "hisha no shushi wo kangaete kudasai",
+        "english": "Please consider the author's point."
+      },
+      "rtkLesson": 34,
+      "rtkFrame": 5294,
+      "sourceLesson": 34
+    },
+    {
+      "id": "4_diamonds",
+      "rank": "4",
+      "suit": "diamonds",
+      "kanji": "全身",
+      "hiragana": "ぜんしん",
+      "romaji": "zenshin",
+      "english": "the whole body",
+      "rhyme": "Remember this word you see, it's zenshin",
+      "sentence": {
+        "kanji": "運動した翌日は全身の筋肉が痛い。",
+        "romaji": "undou shita yokujitsu ha zenshin no kinniku ga itai",
+        "english": "I have muscular pain all over my body the day after I exercise."
+      },
+      "rtkLesson": 34,
+      "rtkFrame": 5302,
+      "sourceLesson": 34
+    },
+    {
+      "id": "5_diamonds",
+      "rank": "5",
+      "suit": "diamonds",
+      "kanji": "宗教",
+      "hiragana": "しゅうきょう",
+      "romaji": "shuukyou",
+      "english": "religion",
+      "rhyme": "Remember this word you see, it's shuukyou",
+      "sentence": {
+        "kanji": "宗教を持たない人もたくさんいるわ。",
+        "romaji": "shuukyou wo motanai hito mo takusan iru wa",
+        "english": "There are also many people who have no religion."
+      },
+      "rtkLesson": 34,
+      "rtkFrame": 5469,
+      "sourceLesson": 34
+    },
+    {
+      "id": "6_diamonds",
+      "rank": "6",
+      "suit": "diamonds",
+      "kanji": "追う",
+      "hiragana": "おう",
+      "romaji": "ou",
+      "english": "chase, pursue",
+      "rhyme": "Remember this word you see, it's ou",
+      "sentence": {
+        "kanji": "警官は怪しい男の後を追ったよ。",
+        "romaji": "keikan ha ayashii otoko no ato wo ota yo",
+        "english": "The police officer went after the suspicious man."
+      },
+      "rtkLesson": 34,
+      "rtkFrame": 5500,
+      "sourceLesson": 34
+    },
+    {
+      "id": "7_diamonds",
+      "rank": "7",
+      "suit": "diamonds",
+      "kanji": "老人",
+      "hiragana": "ろうじん",
+      "romaji": "roujin",
+      "english": "old person, elderly",
+      "rhyme": "Remember this word you see, it's roujin",
+      "sentence": {
+        "kanji": "子供が老人の手を引いて歩いていたの。",
+        "romaji": "kodomo ga roujin no te wo hiite aruite ita no",
+        "english": "The child held the old person's hand as they walked."
+      },
+      "rtkLesson": 34,
+      "rtkFrame": 5595,
+      "sourceLesson": 34
+    },
+    {
+      "id": "8_diamonds",
+      "rank": "8",
+      "suit": "diamonds",
+      "kanji": "煮る",
+      "hiragana": "にる",
+      "romaji": "niru",
+      "english": "boil, cook",
+      "rhyme": "Remember this word you see, it's niru",
+      "sentence": {
+        "kanji": "今、豆を煮ています。",
+        "romaji": "ima mame wo nite imasu",
+        "english": "I'm boiling some beans now."
+      },
+      "rtkLesson": 34,
+      "rtkFrame": 5599,
+      "sourceLesson": 34
+    },
+    {
+      "id": "9_diamonds",
+      "rank": "9",
+      "suit": "diamonds",
+      "kanji": "煮える",
+      "hiragana": "にえる",
+      "romaji": "nieru",
+      "english": "boil, be boiled",
+      "rhyme": "Remember this word you see, it's nieru",
+      "sentence": {
+        "kanji": "もうすぐじゃがいもが煮えます。",
+        "romaji": "mousugu jagaimo ga niemasu",
+        "english": "The potato will be cooked soon."
+      },
+      "rtkLesson": 34,
+      "rtkFrame": 5600,
+      "sourceLesson": 34
+    },
+    {
+      "id": "10_diamonds",
+      "rank": "10",
+      "suit": "diamonds",
+      "kanji": "官庁",
+      "hiragana": "かんちょう",
+      "romaji": "kanchou",
+      "english": "government office",
+      "rhyme": "Remember this word you see, it's kanchou",
+      "sentence": {
+        "kanji": "その古い建物は官庁です。",
+        "romaji": "sono furui tatemono ha kanchou desu",
+        "english": "That old building is the government office."
+      },
+      "rtkLesson": 34,
+      "rtkFrame": 5617,
+      "sourceLesson": 34
+    },
+    {
+      "id": "J_diamonds",
+      "rank": "J",
+      "suit": "diamonds",
+      "kanji": "露",
+      "hiragana": "つゆ",
+      "romaji": "tsuyu",
+      "english": "dew, dewdrop",
+      "rhyme": "Remember this word you see, it's tsuyu",
+      "sentence": {
+        "kanji": "花に露がついていました。",
+        "romaji": "hana ni tsuyu ga tsuite imashita",
+        "english": "There was some dew on the flower."
+      },
+      "rtkLesson": 34,
+      "rtkFrame": 5663,
+      "sourceLesson": 34
+    },
+    {
+      "id": "Q_diamonds",
+      "rank": "Q",
+      "suit": "diamonds",
+      "kanji": "跳ねる",
+      "hiragana": "はねる",
+      "romaji": "haneru",
+      "english": "leap, hop, bound",
+      "rhyme": "Remember this word you see, it's haneru",
+      "sentence": {
+        "kanji": "ウサギが雪の上を跳ねていったよ。",
+        "romaji": "usagi ga yuki no ue wo hanete ita yo",
+        "english": "The rabbit hopped through the snow."
+      },
+      "rtkLesson": 34,
+      "rtkFrame": 5688,
+      "sourceLesson": 34
+    },
+    {
+      "id": "K_diamonds",
+      "rank": "K",
+      "suit": "diamonds",
+      "kanji": "読者",
+      "hiragana": "どくしゃ",
+      "romaji": "dokusha",
+      "english": "reader, subscriber",
+      "rhyme": "Remember this word you see, it's dokusha",
+      "sentence": {
+        "kanji": "新聞の読者の投書欄は好きです。",
+        "romaji": "shinbun no dokusha no toushoran ha suki desu",
+        "english": "I like the readers' letters column in the newspaper."
+      },
+      "rtkLesson": 34,
+      "rtkFrame": 5802,
+      "sourceLesson": 34
+    },
+    {
+      "id": "A_clubs",
+      "rank": "A",
+      "suit": "clubs",
+      "kanji": "海峡",
+      "hiragana": "かいきょう",
+      "romaji": "kaikyou",
+      "english": "straits, channel",
+      "rhyme": "Remember this word you see, it's kaikyou",
+      "sentence": {
+        "kanji": "その海峡に橋が掛けられました。",
+        "romaji": "sono kaikyou ni hashi ga kakeraremashita",
+        "english": "A bridge was built across that strait."
+      },
+      "rtkLesson": 34,
+      "rtkFrame": 5819,
+      "sourceLesson": 34
+    },
+    {
+      "id": "2_clubs",
+      "rank": "2",
+      "suit": "clubs",
+      "kanji": "校舎",
+      "hiragana": "こうしゃ",
+      "romaji": "kousha",
+      "english": "school building",
+      "rhyme": "Remember this word you see, it's kousha",
+      "sentence": {
+        "kanji": "古い校舎の修理が必要です。",
+        "romaji": "furui kousha no shuuri ga hitsuyou desu",
+        "english": "It is necessary to repair the old school building."
+      },
+      "rtkLesson": 34,
+      "rtkFrame": 5825,
+      "sourceLesson": 34
+    },
+    {
+      "id": "3_clubs",
+      "rank": "3",
+      "suit": "clubs",
+      "kanji": "賭ける",
+      "hiragana": "かける",
+      "romaji": "kakeru",
+      "english": "bet, stake",
+      "rhyme": "Remember this word you see, it's kakeru",
+      "sentence": {
+        "kanji": "彼は新しい仕事に人生を賭けている。",
+        "romaji": "kare ha atarashii shigoto ni jinsei wo kakete iru",
+        "english": "He stakes his fortune on this new job."
+      },
+      "rtkLesson": 34,
+      "rtkFrame": 5845,
+      "sourceLesson": 34
+    },
+    {
+      "id": "4_clubs",
+      "rank": "4",
+      "suit": "clubs",
+      "kanji": "挟む",
+      "hiragana": "はさむ",
+      "romaji": "hasamu",
+      "english": "trap",
+      "rhyme": "Remember this word you see, it's hasamu",
+      "sentence": {
+        "kanji": "ドアに指を挟んだ。",
+        "romaji": "doa ni yubi wo hasanda",
+        "english": "I trapped my finger in the door."
+      },
+      "rtkLesson": 34,
+      "rtkFrame": 5864,
+      "sourceLesson": 34
+    },
+    {
+      "id": "5_clubs",
+      "rank": "5",
+      "suit": "clubs",
+      "kanji": "足音",
+      "hiragana": "あしおと",
+      "romaji": "ashioto",
+      "english": "sound of footsteps",
+      "rhyme": "Remember this word you see, it's ashioto",
+      "sentence": {
+        "kanji": "廊下から大きな足音が聞こえた。",
+        "romaji": "rouka kara ooki na ashioto ga kikoeta",
+        "english": "Loud footsteps were heard from the hallway."
+      },
+      "rtkLesson": 34,
+      "rtkFrame": 5892,
+      "sourceLesson": 34
+    },
+    {
+      "id": "6_clubs",
+      "rank": "6",
+      "suit": "clubs",
+      "kanji": "空く",
+      "hiragana": "すく",
+      "romaji": "suku",
+      "english": "be empty",
+      "rhyme": "Remember this word you see, it's suku",
+      "sentence": {
+        "kanji": "レストランは空いていました。",
+        "romaji": "resutoran ha suite imashita",
+        "english": "The restaurant was empty."
+      },
+      "rtkLesson": 35,
+      "rtkFrame": 19,
+      "sourceLesson": 35
+    },
+    {
+      "id": "7_clubs",
+      "rank": "7",
+      "suit": "clubs",
+      "kanji": "探す",
+      "hiragana": "さがす",
+      "romaji": "sagasu",
+      "english": "search for, look for",
+      "rhyme": "Remember this word you see, it's sagasu",
+      "sentence": {
+        "kanji": "彼は郵便局を探していました。",
+        "romaji": "kare ha yuubinkyoku wo sagashite imashita",
+        "english": "He was looking for the post office."
+      },
+      "rtkLesson": 35,
+      "rtkFrame": 278,
+      "sourceLesson": 35
+    },
+    {
+      "id": "8_clubs",
+      "rank": "8",
+      "suit": "clubs",
+      "kanji": "空く",
+      "hiragana": "あく",
+      "romaji": "aku",
+      "english": "become available or vacant",
+      "rhyme": "Remember this word you see, it's aku",
+      "sentence": {
+        "kanji": "後ろの席が空いています。",
+        "romaji": "ushiro no seki ga aite imasu",
+        "english": "The rear seat is empty."
+      },
+      "rtkLesson": 35,
+      "rtkFrame": 773,
+      "sourceLesson": 35
+    },
+    {
+      "id": "9_clubs",
+      "rank": "9",
+      "suit": "clubs",
+      "kanji": "降りる",
+      "hiragana": "おりる",
+      "romaji": "oriru",
+      "english": "get off, land",
+      "rhyme": "Remember this word you see, it's oriru",
+      "sentence": {
+        "kanji": "次の駅で降ります。",
+        "romaji": "tsugi no eki de orimasu。",
+        "english": "I get off at the next station."
+      },
+      "rtkLesson": 35,
+      "rtkFrame": 776,
+      "sourceLesson": 35
+    },
+    {
+      "id": "10_clubs",
+      "rank": "10",
+      "suit": "clubs",
+      "kanji": "空",
+      "hiragana": "そら",
+      "romaji": "sora",
+      "english": "sky, weather",
+      "rhyme": "Remember this word you see, it's sora",
+      "sentence": {
+        "kanji": "空が真っ青です。",
+        "romaji": "sora ga masao desu",
+        "english": "The sky is bright blue."
+      },
+      "rtkLesson": 35,
+      "rtkFrame": 843,
+      "sourceLesson": 35
+    },
+    {
+      "id": "J_clubs",
+      "rank": "J",
+      "suit": "clubs",
+      "kanji": "二階",
+      "hiragana": "にかい",
+      "romaji": "nikai",
+      "english": "second floor, upstairs",
+      "rhyme": "Remember this word you see, it's nikai",
+      "sentence": {
+        "kanji": "兄は二階にいます。",
+        "romaji": "ani ha nikai ni imasu",
+        "english": "My elder brother is on the second floor."
+      },
+      "rtkLesson": 35,
+      "rtkFrame": 926,
+      "sourceLesson": 35
+    },
+    {
+      "id": "Q_clubs",
+      "rank": "Q",
+      "suit": "clubs",
+      "kanji": "降ろす",
+      "hiragana": "おろす",
+      "romaji": "orosu",
+      "english": "unload, set down",
+      "rhyme": "Remember this word you see, it's orosu",
+      "sentence": {
+        "kanji": "彼は車から荷物を降ろした。",
+        "romaji": "kare ha kuruma kara nimotsu wo oroshita",
+        "english": "He unloaded the luggage from the car."
+      },
+      "rtkLesson": 35,
+      "rtkFrame": 1014,
+      "sourceLesson": 35
+    },
+    {
+      "id": "K_clubs",
+      "rank": "K",
+      "suit": "clubs",
+      "kanji": "空手",
+      "hiragana": "からて",
+      "romaji": "karate",
+      "english": "karate, empty hand",
+      "rhyme": "Remember this word you see, it's karate",
+      "sentence": {
+        "kanji": "彼は空手を習っています。",
+        "romaji": "kare ha karate wo narate imasu",
+        "english": "He's learning karate."
+      },
+      "rtkLesson": 35,
+      "rtkFrame": 1026,
+      "sourceLesson": 35
+    },
+    {
+      "id": "A_spades",
+      "rank": "A",
+      "suit": "spades",
+      "kanji": "入院",
+      "hiragana": "にゅういん",
+      "romaji": "nyuuin",
+      "english": "be hospitalized",
+      "rhyme": "Remember this word you see, it's nyuuin",
+      "sentence": {
+        "kanji": "昨日、母が入院しました。",
+        "romaji": "kinou haha ga nyuuin shimashita",
+        "english": "My mother was hospitalized yesterday."
+      },
+      "rtkLesson": 35,
+      "rtkFrame": 1082,
+      "sourceLesson": 35
+    },
+    {
+      "id": "2_spades",
+      "rank": "2",
+      "suit": "spades",
+      "kanji": "国際",
+      "hiragana": "こくさい",
+      "romaji": "kokusai",
+      "english": "international",
+      "rhyme": "Remember this word you see, it's kokusai",
+      "sentence": {
+        "kanji": "ここで国際会議が開かれます。",
+        "romaji": "koko de kokusai kaigi ga hirakaremasu",
+        "english": "An international conference is going to be held here."
+      },
+      "rtkLesson": 35,
+      "rtkFrame": 1121,
+      "sourceLesson": 35
+    },
+    {
+      "id": "3_spades",
+      "rank": "3",
+      "suit": "spades",
+      "kanji": "大学院",
+      "hiragana": "だいがくいん",
+      "romaji": "daigakuin",
+      "english": "graduate school",
+      "rhyme": "Remember this word you see, it's daigakuin",
+      "sentence": {
+        "kanji": "彼は大学院に進みました。",
+        "romaji": "kare ha daigakuin ni susumimashita",
+        "english": "He's gone on to graduate school."
+      },
+      "rtkLesson": 35,
+      "rtkFrame": 1205,
+      "sourceLesson": 35
+    },
+    {
+      "id": "4_spades",
+      "rank": "4",
+      "suit": "spades",
+      "kanji": "深い",
+      "hiragana": "ふかい",
+      "romaji": "fukai",
+      "english": "deep, profound, intimate",
+      "rhyme": "Remember this word you see, it's fukai",
+      "sentence": {
+        "kanji": "あの池はとても深い。",
+        "romaji": "ano ike ha totemo fukai",
+        "english": "That pond is very deep."
+      },
+      "rtkLesson": 35,
+      "rtkFrame": 1271,
+      "sourceLesson": 35
+    },
+    {
+      "id": "5_spades",
+      "rank": "5",
+      "suit": "spades",
+      "kanji": "深さ",
+      "hiragana": "ふかさ",
+      "romaji": "fukasa",
+      "english": "depth, profundity",
+      "rhyme": "Remember this word you see, it's fukasa",
+      "sentence": {
+        "kanji": "このプールの深さは2メートルです。",
+        "romaji": "kono pu-ru no fukasa ha nime-toru desu",
+        "english": "This pool is two meters deep."
+      },
+      "rtkLesson": 35,
+      "rtkFrame": 1272,
+      "sourceLesson": 35
+    },
+    {
+      "id": "6_spades",
+      "rank": "6",
+      "suit": "spades",
+      "kanji": "故障",
+      "hiragana": "こしょう",
+      "romaji": "koshou",
+      "english": "malfunction, fault, breakdown",
+      "rhyme": "Remember this word you see, it's koshou",
+      "sentence": {
+        "kanji": "冷蔵庫が故障しました。",
+        "romaji": "reizouko ga koshou shimashita",
+        "english": "The refrigerator broke down."
+      },
+      "rtkLesson": 35,
+      "rtkFrame": 1291,
+      "sourceLesson": 35
+    },
+    {
+      "id": "7_spades",
+      "rank": "7",
+      "suit": "spades",
+      "kanji": "研究",
+      "hiragana": "けんきゅう",
+      "romaji": "kenkyuu",
+      "english": "research, study",
+      "rhyme": "Remember this word you see, it's kenkyuu",
+      "sentence": {
+        "kanji": "彼は何年も地震の研究をしている。",
+        "romaji": "kare ha nannen mo jishin no kenkyuu wo shite iru",
+        "english": "He's been researching earthquakes for many years."
+      },
+      "rtkLesson": 35,
+      "rtkFrame": 1317,
+      "sourceLesson": 35
+    },
+    {
+      "id": "8_spades",
+      "rank": "8",
+      "suit": "spades",
+      "kanji": "隣",
+      "hiragana": "となり",
+      "romaji": "tonari",
+      "english": "neighboring house, next seat",
+      "rhyme": "Remember this word you see, it's tonari",
+      "sentence": {
+        "kanji": "隣の家には犬がいます。",
+        "romaji": "tonari no ie ni ha inu ga imasu",
+        "english": "They have a dog next door."
+      },
+      "rtkLesson": 35,
+      "rtkFrame": 1668,
+      "sourceLesson": 35
+    },
+    {
+      "id": "9_spades",
+      "rank": "9",
+      "suit": "spades",
+      "kanji": "降る",
+      "hiragana": "ふる",
+      "romaji": "furu",
+      "english": "fall, come down",
+      "rhyme": "Remember this word you see, it's furu",
+      "sentence": {
+        "kanji": "激しい雨が降っています。",
+        "romaji": "hageshii ame ga fute imasu",
+        "english": "A very heavy rain is falling."
+      },
+      "rtkLesson": 35,
+      "rtkFrame": 1676,
+      "sourceLesson": 35
+    },
+    {
+      "id": "10_spades",
+      "rank": "10",
+      "suit": "spades",
+      "kanji": "突き当たる",
+      "hiragana": "つきあたる",
+      "romaji": "tsukiataru",
+      "english": "hit against, come to the end of",
+      "rhyme": "Remember this word you see, it's tsukiataru",
+      "sentence": {
+        "kanji": "突き当たったら右に曲がってください。",
+        "romaji": "tsukiatatara migi ni magate kudasai",
+        "english": "Please turn right when the street ends."
+      },
+      "rtkLesson": 35,
+      "rtkFrame": 1694,
+      "sourceLesson": 35
+    },
+    {
+      "id": "J_spades",
+      "rank": "J",
+      "suit": "spades",
+      "kanji": "突き当たり",
+      "hiragana": "つきあたり",
+      "romaji": "tsukiatari",
+      "english": "end of a street",
+      "rhyme": "Remember this word you see, it's tsukiatari",
+      "sentence": {
+        "kanji": "この先は突き当たりです。",
+        "romaji": "kono saki ha tsukiatari desu",
+        "english": "There's a T-intersection ahead."
+      },
+      "rtkLesson": 35,
+      "rtkFrame": 1695,
+      "sourceLesson": 35
+    },
+    {
+      "id": "Q_spades",
+      "rank": "Q",
+      "suit": "spades",
+      "kanji": "消防車",
+      "hiragana": "しょうぼうしゃ",
+      "romaji": "shoubousha",
+      "english": "fire engine",
+      "rhyme": "Remember this word you see, it's shoubousha",
+      "sentence": {
+        "kanji": "消防車が4台も来た。",
+        "romaji": "shoubousha ga yondai mo kita",
+        "english": "Four fire engines came."
+      },
+      "rtkLesson": 35,
+      "rtkFrame": 1703,
+      "sourceLesson": 35
+    },
+    {
+      "id": "K_spades",
+      "rank": "K",
+      "suit": "spades",
+      "kanji": "美容院",
+      "hiragana": "びよういん",
+      "romaji": "biyouin",
+      "english": "beauty shop",
+      "rhyme": "Remember this word you see, it's biyouin",
+      "sentence": {
+        "kanji": "父は美容院で髪を切ります。",
+        "romaji": "chichi ha biyouin de kami wo kirimasu",
+        "english": "My father has his hair cut at a hair salon."
+      },
+      "rtkLesson": 35,
+      "rtkFrame": 1770,
+      "sourceLesson": 35
+    }
+  ]
+}
