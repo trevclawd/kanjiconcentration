@@ -5109,12 +5109,11 @@ class KanjiConcentrationGame {
             return this.audioCache[text];
         }
         
-        // Add Japanese language anchor and ensure punctuation for better pronunciation
+        // Ensure punctuation for better cadence
         let inputText = text;
         if (!inputText.endsWith('。') && !inputText.endsWith('！') && !inputText.endsWith('？')) {
             inputText = inputText + '。';
         }
-        inputText = `日本語: ${inputText}`;
         
         const response = await fetch('https://api.openai.com/v1/audio/speech', {
             method: 'POST',
