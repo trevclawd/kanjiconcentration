@@ -5,7 +5,7 @@ const url = require('url');
 
 const PORT = 8890;
 const ROOT_DIR = __dirname;
-const OPENAI_KEY = process.env.OPENAI_API_KEY || '';
+const OPENAI_KEY = process.env.OPENAI_API_KEY || 'YOUR_OPENAI_API_KEY_HERE';
 
 const MIME_TYPES = {
   '.html': 'text/html',
