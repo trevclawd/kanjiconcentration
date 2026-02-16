@@ -17,6 +17,8 @@ class KanjiConcentrationGame {
             timerDuration: 60,
             timedMemoryDuration: 5,
             timedMemoryTimerEnabled: true,
+            timedMemorySpeakJapanese: true,
+            timedMemorySpeakEnglish: true,
             openaiApiKey: ''
         };
         this.preGameTimer = null;
@@ -74,6 +76,8 @@ class KanjiConcentrationGame {
         document.getElementById('timerDuration').value = this.settings.timerDuration;
         document.getElementById('timedMemoryDuration').value = this.settings.timedMemoryDuration;
         document.getElementById('timedMemoryTimerEnabled').checked = this.settings.timedMemoryTimerEnabled;
+        document.getElementById('timedMemorySpeakJapanese').checked = this.settings.timedMemorySpeakJapanese;
+        document.getElementById('timedMemorySpeakEnglish').checked = this.settings.timedMemorySpeakEnglish;
         const apiKeyInput = document.getElementById('openaiApiKey');
         if (apiKeyInput) apiKeyInput.value = this.settings.openaiApiKey || '';
     }
@@ -4751,6 +4755,50 @@ class KanjiConcentrationGame {
         
         cardPairContainer.appendChild(kanjiCard);
         cardPairContainer.appendChild(romajiCard);
+        
+        // Speak the word if TTS is enabled
+        this.speakTimedMemoryCard(currentCard);
+    }
+
+    async speakTimedMemoryCard(card) {
+        if (!this.settings.openaiApiKey) return;
+        if (!this.settings.timedMemorySpeakJapanese && !this.settings.timedMemorySpeakEnglish) return;
+        
+        // Cancel any ongoing speech
+        if (this.currentAudio) {
+            this.currentAudio.pause();
+            this.currentAudio = null;
+        }
+        
+        // Build the text to speak and determine language
+        let textParts = [];
+        let language = 'japanese';
+        
+        if (this.settings.timedMemorySpeakJapanese) {
+            // Speak the word in Japanese (hiragana for better pronunciation)
+            textParts.push(card.hiragana || card.romaji);
+        }
+        
+        if (this.settings.timedMemorySpeakEnglish) {
+            // Add a pause between Japanese and English
+            if (textParts.length > 0) {
+                textParts.push('、'); // Japanese comma as separator
+                language = 'mixed'; // Mixed Japanese + English
+            }
+            textParts.push(card.english);
+        }
+        
+        const textToSpeak = textParts.join(' ');
+        
+        try {
+            const audioBlob = await this.getOpenAITTS(textToSpeak, language);
+            if (audioBlob) {
+                this.currentAudio = new Audio(URL.createObjectURL(audioBlob));
+                this.currentAudio.play();
+            }
+        } catch (error) {
+            console.error('TTS Error in timed memory:', error);
+        }
     }
 
     createTimedMemoryCard(cardData, type) {
@@ -4912,6 +4960,12 @@ class KanjiConcentrationGame {
     handleTimedMemoryThumbsUp() {
         if (!this.timedMemoryActive) return;
         
+        // Stop any TTS audio
+        if (this.currentAudio) {
+            this.currentAudio.pause();
+            this.currentAudio = null;
+        }
+        
         if (!this.settings.timedMemoryTimerEnabled) {
             // Timer is disabled - this is the "Next Card" button
             this.proceedToNextTimedMemoryCard();
@@ -4927,6 +4981,12 @@ class KanjiConcentrationGame {
 
     handleTimedMemoryThumbsDown() {
         if (!this.timedMemoryActive) return;
+        
+        // Stop any TTS audio
+        if (this.currentAudio) {
+            this.currentAudio.pause();
+            this.currentAudio = null;
+        }
         
         if (!this.settings.timedMemoryTimerEnabled) {
             // Timer is disabled - this is the "Previous Card" button
@@ -4968,6 +5028,12 @@ class KanjiConcentrationGame {
         this.stopTimedMemoryTimer();
         this.timedMemoryActive = false;
         
+        // Stop any TTS audio
+        if (this.currentAudio) {
+            this.currentAudio.pause();
+            this.currentAudio = null;
+        }
+        
         // Show completion message
         const totalCards = this.timedMemoryCards.length;
         const maxScore = totalCards * 10;
@@ -4982,6 +5048,13 @@ class KanjiConcentrationGame {
     exitTimedMemoryMode() {
         this.stopTimedMemoryTimer();
         this.timedMemoryActive = false;
+        
+        // Stop any TTS audio
+        if (this.currentAudio) {
+            this.currentAudio.pause();
+            this.currentAudio = null;
+        }
+        
         document.getElementById('timedMemoryOverlay').style.display = 'none';
     }
 
@@ -5082,7 +5155,7 @@ class KanjiConcentrationGame {
         try {
             // Use kanji for better Japanese pronunciation
             const text = card.sentence.kanji || card.sentence.romaji;
-            const audioBlob = await this.getOpenAITTS(text);
+            const audioBlob = await this.getOpenAITTS(text, 'japanese');
             if (audioBlob) {
                 this.currentAudio = new Audio(URL.createObjectURL(audioBlob));
                 this.currentAudio.onended = () => {
@@ -5103,16 +5176,28 @@ class KanjiConcentrationGame {
         alert('TTS cache cleared!');
     }
 
-    async getOpenAITTS(text) {
+    async getOpenAITTS(text, language = 'japanese') {
         // Check cache first
-        if (this.audioCache[text]) {
-            return this.audioCache[text];
+        const cacheKey = `${language}:${text}`;
+        if (this.audioCache[cacheKey]) {
+            return this.audioCache[cacheKey];
         }
         
         // Ensure punctuation for better cadence
         let inputText = text;
-        if (!inputText.endsWith('。') && !inputText.endsWith('！') && !inputText.endsWith('？')) {
+        if (!inputText.endsWith('。') && !inputText.endsWith('！') && !inputText.endsWith('？') && !inputText.endsWith('.')) {
             inputText = inputText + '。';
+        }
+        
+        // Determine instructions based on language
+        let instructions;
+        if (language === 'japanese') {
+            instructions = 'Speak only Japanese with natural native pronunciation (標準語). Read dates and numbers in Japanese.';
+        } else if (language === 'english') {
+            instructions = 'Speak in clear, natural English.';
+        } else {
+            // Mixed - Japanese followed by English
+            instructions = 'First read the Japanese text with native pronunciation (標準語), then pause briefly and read the English text clearly in natural English.';
         }
         
         const response = await fetch('https://api.openai.com/v1/audio/speech', {
@@ -5125,7 +5210,7 @@ class KanjiConcentrationGame {
                 model: 'gpt-4o-mini-tts',
                 input: inputText,
                 voice: 'coral',
-                instructions: 'Speak only Japanese with natural native pronunciation (標準語). Read dates and numbers in Japanese.',
+                instructions: instructions,
                 response_format: 'mp3'
             })
         });
@@ -5135,8 +5220,10 @@ class KanjiConcentrationGame {
         }
 
         const blob = await response.blob();
-        // Cache the result (use original text as key)
-        this.audioCache[text] = blob;
+        // Cache the result (use language-prefixed key)
+        this.audioCache[cacheKey] = blob;
+        return blob;
+    }
         return blob;
     }
 
@@ -5171,7 +5258,7 @@ class KanjiConcentrationGame {
             try {
                 // Use kanji for better Japanese pronunciation
                 const text = card.sentence.kanji || card.sentence.romaji;
-                const audioBlob = await this.getOpenAITTS(text);
+                const audioBlob = await this.getOpenAITTS(text, 'japanese');
                 if (audioBlob && this.isPlayingAll) {
                     await new Promise((resolve) => {
                         this.currentAudio = new Audio(URL.createObjectURL(audioBlob));
@@ -5242,6 +5329,8 @@ class KanjiConcentrationGame {
             this.settings.timerDuration = parseInt(document.getElementById('timerDuration').value);
             this.settings.timedMemoryDuration = parseInt(document.getElementById('timedMemoryDuration').value);
             this.settings.timedMemoryTimerEnabled = document.getElementById('timedMemoryTimerEnabled').checked;
+            this.settings.timedMemorySpeakJapanese = document.getElementById('timedMemorySpeakJapanese').checked;
+            this.settings.timedMemorySpeakEnglish = document.getElementById('timedMemorySpeakEnglish').checked;
             const apiKeyInput = document.getElementById('openaiApiKey');
             if (apiKeyInput) this.settings.openaiApiKey = apiKeyInput.value;
             this.saveSettings();
