@@ -29,6 +29,10 @@ class KanjiConcentrationGame {
         this.timedMemoryAudioQueue = [];  // Queue for sequential TTS playback
         this.timedMemoryAudioPlaying = false;  // Flag to track if audio is playing
         
+        // Listen to Sentences mode toggles
+        this.listenSpeakEnglish = false;  // Play English after Japanese
+        this.listenLoop = false;  // Loop back to first sentence
+        
         // Card selection functionality
         this.isCardSelectionMode = false;
         this.selectedCards = new Set();
@@ -5241,19 +5245,22 @@ class KanjiConcentrationGame {
             return this.audioCache[cacheKey];
         }
         
-        // Determine instructions based on language
+        // Determine instructions and voice based on language
         let instructions;
+        let voice;
         let inputText = text;
         
         if (language === 'japanese') {
             instructions = 'Speak only Japanese with natural native pronunciation (標準語). Read dates and numbers in Japanese.';
+            voice = 'coral';  // Japanese voice
             // Add Japanese punctuation if missing
             if (!inputText.endsWith('。') && !inputText.endsWith('！') && !inputText.endsWith('？')) {
                 inputText = inputText + '。';
             }
         } else {
-            // English
+            // English - use different voice for contrast
             instructions = 'Speak in clear, natural English. Do not use Japanese pronunciation. Read the text as normal English words.';
+            voice = 'onyx';  // English voice (different from Japanese)
             // Add English punctuation if missing
             if (!inputText.endsWith('.') && !inputText.endsWith('!') && !inputText.endsWith('?')) {
                 inputText = inputText + '.';
@@ -5269,7 +5276,7 @@ class KanjiConcentrationGame {
             body: JSON.stringify({
                 model: 'gpt-4o-mini-tts',
                 input: inputText,
-                voice: 'coral',
+                voice: voice,
                 instructions: instructions,
                 response_format: 'mp3'
             })
@@ -5300,7 +5307,8 @@ class KanjiConcentrationGame {
         document.getElementById('playAllSentencesBtn').textContent = '⏳ Playing...';
         document.getElementById('playAllSentencesBtn').disabled = true;
 
-        for (let i = 0; i < cardsWithSentences.length && this.isPlayingAll; i++) {
+        let i = 0;
+        while (this.isPlayingAll) {
             const card = cardsWithSentences[i];
             const btn = document.querySelector(`.listen-play-btn[data-index="${i}"]`);
             
@@ -5314,22 +5322,45 @@ class KanjiConcentrationGame {
             }
 
             try {
-                // Use kanji for better Japanese pronunciation
-                const text = card.sentence.kanji || card.sentence.romaji;
-                const audioBlob = await this.getOpenAITTS(text, 'japanese');
-                if (audioBlob && this.isPlayingAll) {
+                // Play Japanese sentence with Japanese voice
+                const japaneseText = card.sentence.kanji || card.sentence.romaji;
+                const japaneseBlob = await this.getOpenAITTS(japaneseText, 'japanese');
+                if (japaneseBlob && this.isPlayingAll) {
                     await new Promise((resolve) => {
-                        this.currentAudio = new Audio(URL.createObjectURL(audioBlob));
+                        this.currentAudio = new Audio(URL.createObjectURL(japaneseBlob));
                         this.currentAudio.onended = resolve;
                         this.currentAudio.onerror = resolve;
                         this.currentAudio.play();
                     });
+                }
+                
+                // Play English translation if toggle is on (with English voice)
+                if (this.listenSpeakEnglish && this.isPlayingAll && card.sentence.english) {
+                    const englishBlob = await this.getOpenAITTS(card.sentence.english, 'english');
+                    if (englishBlob && this.isPlayingAll) {
+                        await new Promise((resolve) => {
+                            this.currentAudio = new Audio(URL.createObjectURL(englishBlob));
+                            this.currentAudio.onended = resolve;
+                            this.currentAudio.onerror = resolve;
+                            this.currentAudio.play();
+                        });
+                    }
                 }
             } catch (error) {
                 console.error('TTS Error for card:', card.kanji, error);
             }
 
             if (btn) btn.textContent = '▶️';
+            
+            // Move to next card or loop back
+            i++;
+            if (i >= cardsWithSentences.length) {
+                if (this.listenLoop && this.isPlayingAll) {
+                    i = 0;  // Loop back to beginning
+                } else {
+                    break;  // Stop if not looping
+                }
+            }
         }
 
         this.isPlayingAll = false;
@@ -5768,6 +5799,16 @@ class KanjiConcentrationGame {
         
         document.getElementById('toggleListenEnglish').addEventListener('click', () => {
             this.toggleListenSentenceVisibility('english');
+        });
+        
+        document.getElementById('toggleListenSpeakEnglish').addEventListener('click', () => {
+            this.listenSpeakEnglish = !this.listenSpeakEnglish;
+            document.getElementById('toggleListenSpeakEnglish').classList.toggle('active', this.listenSpeakEnglish);
+        });
+        
+        document.getElementById('toggleListenLoop').addEventListener('click', () => {
+            this.listenLoop = !this.listenLoop;
+            document.getElementById('toggleListenLoop').classList.toggle('active', this.listenLoop);
         });
         
         document.getElementById('clearTTSCacheBtn').addEventListener('click', () => {
