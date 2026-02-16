@@ -5815,6 +5815,7 @@ class KanjiConcentrationGame {
         
         document.getElementById('toggleListenLoop').addEventListener('click', () => {
             this.listenLoop = !this.listenLoop;
+            console.log('Loop toggled to:', this.listenLoop);
             document.getElementById('toggleListenLoop').classList.toggle('active', this.listenLoop);
         });
         
