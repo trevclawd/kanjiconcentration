@@ -5179,9 +5179,10 @@ class KanjiConcentrationGame {
                         <span class="listen-sentence-romaji-vocab">${card.romaji}</span>
                         <span class="listen-sentence-english-vocab">${card.english}</span>
                     </div>
-                    <button class="listen-play-btn" data-index="${index}" title="Play sentence">
-                        ▶️
-                    </button>
+                    <div class="listen-sentence-buttons">
+                        <button class="listen-play-btn" data-index="${index}" title="Play sentence">▶️</button>
+                        <button class="listen-ask-ai-btn" data-index="${index}" title="Ask AI to break down sentence">🤖</button>
+                    </div>
                 </div>
                 <div class="listen-sentence-content">
                     <div class="listen-sentence-japanese">${card.sentence.kanji}</div>
@@ -5193,6 +5194,9 @@ class KanjiConcentrationGame {
             listContainer.appendChild(sentenceItem);
         });
 
+        // Store cards for later use
+        this.listenSentencesCards = cardsWithSentences;
+
         // Add click handlers for play buttons
         listContainer.querySelectorAll('.listen-play-btn').forEach(btn => {
             btn.addEventListener('click', (e) => {
@@ -5200,6 +5204,106 @@ class KanjiConcentrationGame {
                 this.playSentence(cardsWithSentences[index], index);
             });
         });
+
+        // Add click handlers for Ask AI buttons
+        listContainer.querySelectorAll('.listen-ask-ai-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const index = parseInt(e.target.dataset.index);
+                this.askAiAboutSentence(cardsWithSentences[index], index);
+            });
+        });
+    }
+
+    async askAiAboutSentence(card, index) {
+        if (!this.settings.openaiApiKey) {
+            alert('Please set your OpenAI API key in Settings.');
+            return;
+        }
+
+        const modal = document.getElementById('aiSentenceModal');
+        const content = document.getElementById('aiSentenceContent');
+        const title = document.getElementById('aiSentenceTitle');
+
+        // Set title
+        title.textContent = `🤖 AI Breakdown: ${card.kanji}`;
+
+        // Show loading
+        content.innerHTML = '<div class="ai-loading">🤔 Analyzing sentence...</div>';
+        modal.style.display = 'flex';
+
+        try {
+            const sentence = card.sentence;
+            const prompt = `Analyze this Japanese sentence and break it down word by word.
+
+Sentence (Kanji): ${sentence.kanji}
+Sentence (Romaji): ${sentence.romaji}
+Sentence (English): ${sentence.english}
+
+For each word in the sentence, provide:
+1. The word in kanji (if applicable)
+2. The word in hiragana/katakana
+3. The romaji reading
+4. The definition in English
+5. If it's a verb: the verb stem (dictionary form), verb type (ichidan/godan), and common conjugations (present, past, te-form)
+6. Any usage hints or common patterns
+
+Format your response in a clear, structured way using markdown with sections for each word.`;
+
+            const response = await fetch('https://api.openai.com/v1/chat/completions', {
+                method: 'POST',
+                headers: {
+                    'Authorization': `Bearer ${this.settings.openaiApiKey}`,
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    model: 'gpt-4o-mini',
+                    messages: [
+                        {
+                            role: 'system',
+                            content: 'You are a helpful Japanese language teacher. Provide clear, detailed breakdowns of Japanese sentences for learners. Use markdown formatting.'
+                        },
+                        {
+                            role: 'user',
+                            content: prompt
+                        }
+                    ],
+                    max_tokens: 2000
+                })
+            });
+
+            if (!response.ok) {
+                throw new Error(`OpenAI API error: ${response.status}`);
+            }
+
+            const data = await response.json();
+            const aiResponse = data.choices[0].message.content;
+
+            // Render markdown-like content
+            content.innerHTML = `<div class="ai-breakdown">${this.renderMarkdown(aiResponse)}</div>`;
+
+        } catch (error) {
+            console.error('AI Error:', error);
+            content.innerHTML = `<div class="ai-error">❌ Error: ${error.message}</div>`;
+        }
+    }
+
+    renderMarkdown(text) {
+        // Simple markdown rendering
+        return text
+            .replace(/^### (.*$)/gim, '<h3>$1</h3>')
+            .replace(/^## (.*$)/gim, '<h2>$1</h2>')
+            .replace(/^# (.*$)/gim, '<h1>$1</h1>')
+            .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+            .replace(/\*(.*?)\*/g, '<em>$1</em>')
+            .replace(/^- (.*$)/gim, '<li>$1</li>')
+            .replace(/^\d+\. (.*$)/gim, '<li>$1</li>')
+            .replace(/\n/g, '<br>')
+            .replace(/<li>/g, '</li><li>')
+            .replace(/^<\/li>/, '');
+    }
+
+    closeAiSentenceModal() {
+        document.getElementById('aiSentenceModal').style.display = 'none';
     }
 
     async playSentence(card, index) {
@@ -5213,6 +5317,9 @@ class KanjiConcentrationGame {
 
         const btn = document.querySelector(`.listen-play-btn[data-index="${index}"]`);
         if (btn) btn.textContent = '⏳';
+
+        // Set up Media Session for lock screen playback
+        this.setupMediaSession(card);
 
         try {
             // Use kanji for better Japanese pronunciation
@@ -5230,6 +5337,32 @@ class KanjiConcentrationGame {
             console.error('TTS Error:', error);
             alert('Failed to play audio. Check your API key and try again.');
             if (btn) btn.textContent = '▶️';
+        }
+    }
+
+    setupMediaSession(card) {
+        // Use Media Session API to keep audio playing on lock screen
+        if ('mediaSession' in navigator) {
+            navigator.mediaSession.metadata = new MediaMetadata({
+                title: card.kanji || 'Japanese Sentence',
+                artist: card.romaji || 'Kanji Concentration',
+                album: 'Listen to Sentences',
+                artwork: [
+                    { src: '/favicon.ico', sizes: '96x96', type: 'image/x-icon' }
+                ]
+            });
+
+            navigator.mediaSession.setActionHandler('play', () => {
+                if (this.currentAudio) this.currentAudio.play();
+            });
+
+            navigator.mediaSession.setActionHandler('pause', () => {
+                if (this.currentAudio) this.currentAudio.pause();
+            });
+
+            navigator.mediaSession.setActionHandler('stop', () => {
+                this.stopPlayback();
+            });
         }
     }
 
@@ -5307,10 +5440,48 @@ class KanjiConcentrationGame {
         document.getElementById('playAllSentencesBtn').textContent = '⏳ Playing...';
         document.getElementById('playAllSentencesBtn').disabled = true;
 
+        // Set up Media Session for lock screen controls
+        if ('mediaSession' in navigator) {
+            navigator.mediaSession.metadata = new MediaMetadata({
+                title: 'Listen to Sentences',
+                artist: 'Kanji Concentration',
+                album: 'Japanese Learning'
+            });
+
+            navigator.mediaSession.setActionHandler('play', () => {
+                if (this.currentAudio) this.currentAudio.play();
+            });
+
+            navigator.mediaSession.setActionHandler('pause', () => {
+                if (this.currentAudio) this.currentAudio.pause();
+            });
+
+            navigator.mediaSession.setActionHandler('stop', () => {
+                this.stopPlayback();
+            });
+
+            navigator.mediaSession.setActionHandler('nexttrack', () => {
+                // Skip to next sentence
+                if (this.currentAudio) {
+                    this.currentAudio.pause();
+                    this.currentAudio = null;
+                }
+            });
+        }
+
         let i = 0;
         while (this.isPlayingAll) {
             const card = cardsWithSentences[i];
             const btn = document.querySelector(`.listen-play-btn[data-index="${i}"]`);
+            
+            // Update Media Session with current card
+            if ('mediaSession' in navigator) {
+                navigator.mediaSession.metadata = new MediaMetadata({
+                    title: card.sentence.kanji || 'Japanese Sentence',
+                    artist: card.romaji || 'Kanji Concentration',
+                    album: `Sentence ${i + 1} of ${cardsWithSentences.length}`
+                });
+            }
             
             // Highlight current item
             document.querySelectorAll('.listen-sentence-item').forEach(item => {
@@ -5821,6 +5992,17 @@ class KanjiConcentrationGame {
         
         document.getElementById('clearTTSCacheBtn').addEventListener('click', () => {
             this.clearTTSCache();
+        });
+        
+        // AI Sentence Modal
+        document.getElementById('closeAiSentenceModal').addEventListener('click', () => {
+            this.closeAiSentenceModal();
+        });
+        
+        document.getElementById('aiSentenceModal').addEventListener('click', (e) => {
+            if (e.target.id === 'aiSentenceModal') {
+                this.closeAiSentenceModal();
+            }
         });
         
         // Timed Memory Mode controls
