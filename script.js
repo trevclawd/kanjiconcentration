@@ -5568,6 +5568,107 @@ Format your response in a clear, structured way using markdown with sections for
         });
     }
 
+    async convertToMP3() {
+        const cardsToUse = this.getCardsForGame();
+        const cardsWithSentences = cardsToUse.filter(card => card.sentence && card.sentence.kanji);
+
+        if (cardsWithSentences.length === 0) {
+            alert('No sentences available to convert. Import a deck with sentence data.');
+            return;
+        }
+
+        if (!this.settings.openaiApiKey) {
+            alert('Please set your OpenAI API key in Settings first.');
+            return;
+        }
+
+        const progressDiv = document.createElement('div');
+        progressDiv.className = 'conversion-progress';
+        progressDiv.innerHTML = `
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+            <div class="progress-text">Preparing to convert ${cardsWithSentences.length} sentences to MP3...</div>
+        `;
+        document.body.appendChild(progressDiv);
+
+        try {
+            const allAudioBlobs = [];
+            
+            // Process each sentence
+            for (let i = 0; i < cardsWithSentences.length; i++) {
+                const card = cardsWithSentences[i];
+                const progressFill = progressDiv.querySelector('.progress-fill');
+                const progressText = progressDiv.querySelector('.progress-text');
+                
+                const percentage = Math.round(((i + 1) / cardsWithSentences.length) * 100);
+                progressFill.style.width = `${percentage}%`;
+                progressText.textContent = `Processing ${i + 1}/${cardsWithSentences.length}: ${card.kanji}`;
+
+                // Japanese sentence
+                const japaneseText = card.sentence.kanji || card.sentence.romaji;
+                const japaneseAudio = await this.getOpenAITTS(japaneseText, 'japanese');
+                if (japaneseAudio) allAudioBlobs.push(japaneseAudio);
+
+                // English translation
+                if (card.sentence.english && this.settings.listenSpeakEnglish) {
+                    const englishAudio = await this.getOpenAITTS(card.sentence.english, 'english');
+                    if (englishAudio) allAudioBlobs.push(englishAudio);
+                }
+            }
+
+            // Create a single audio element with all sounds
+            const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            const mergedAudio = await this.mergeAudioBlobs(audioContext, allAudioBlobs);
+
+            // Download the merged audio
+            const blob = new Blob([mergedAudio], { type: 'audio/mp3' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'kanji-sentences.mp3';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+
+            progressDiv.innerHTML = '<div class="success-msg">✅ MP3 conversion complete! File downloaded.</div>';
+            setTimeout(() => progressDiv.remove(), 3000);
+
+        } catch (error) {
+            console.error('Conversion Error:', error);
+            progressDiv.innerHTML = `<div class="error-msg">❌ Error: ${error.message}</div>`;
+            setTimeout(() => progressDiv.remove(), 3000);
+        }
+    }
+
+    async mergeAudioBlobs(audioContext, audioBlobs) {
+        // Create a destination buffer with enough space
+        const sampleRate = 24000; // OpenAI TTS sample rate
+        const channelCount = 1;
+        
+        // Calculate total length
+        let totalLength = 0;
+        for (const blob of audioBlobs) {
+            const arrayBuffer = await blob.arrayBuffer();
+            totalLength += arrayBuffer.byteLength;
+        }
+
+        // Create a new buffer to hold all audio
+        const mergedBuffer = new ArrayBuffer(totalLength);
+        const mergedView = new Uint8Array(mergedBuffer);
+        
+        let offset = 0;
+        for (const blob of audioBlobs) {
+            const arrayBuffer = await blob.arrayBuffer();
+            const view = new Uint8Array(arrayBuffer);
+            mergedView.set(view, offset);
+            offset += view.length;
+        }
+
+        return mergedBuffer;
+    }
+
     toggleListenSentenceVisibility(type) {
         const elements = document.querySelectorAll(`.listen-sentence-${type}`);
         const btn = document.getElementById(`toggleListen${type.charAt(0).toUpperCase() + type.slice(1)}`);
@@ -5964,6 +6065,10 @@ Format your response in a clear, structured way using markdown with sections for
         
         document.getElementById('stopPlaybackBtn').addEventListener('click', () => {
             this.stopPlayback();
+        });
+        
+        document.getElementById('convertToMp3Btn').addEventListener('click', () => {
+            this.convertToMP3();
         });
         
         document.getElementById('backToModeSelectFromListen').addEventListener('click', () => {
