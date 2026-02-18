@@ -5643,30 +5643,108 @@ Format your response in a clear, structured way using markdown with sections for
     }
 
     async mergeAudioBlobs(audioContext, audioBlobs) {
-        // Create a destination buffer with enough space
-        const sampleRate = 24000; // OpenAI TTS sample rate
-        const channelCount = 1;
+        // For MP3 concatenation, we need to decode each blob and combine them
+        const decodedChunks = [];
         
-        // Calculate total length
-        let totalLength = 0;
+        // Decode each audio blob
         for (const blob of audioBlobs) {
-            const arrayBuffer = await blob.arrayBuffer();
-            totalLength += arrayBuffer.byteLength;
+            try {
+                const arrayBuffer = await blob.arrayBuffer();
+                const audioBuffer = await audioContext.decodeAudioData(arrayBuffer);
+                decodedChunks.push(audioBuffer);
+            } catch (e) {
+                console.error('Failed to decode audio blob:', e);
+            }
         }
-
-        // Create a new buffer to hold all audio
-        const mergedBuffer = new ArrayBuffer(totalLength);
-        const mergedView = new Uint8Array(mergedBuffer);
         
+        if (decodedChunks.length === 0) {
+            throw new Error('No valid audio chunks to merge');
+        }
+        
+        // Create a single buffer with combined duration
+        const sampleRate = audioContext.sampleRate;
+        let totalSamples = 0;
+        for (const chunk of decodedChunks) {
+            totalSamples += chunk.length;
+        }
+        
+        // Create output buffer (mono for MP3 compatibility)
+        const outputBuffer = audioContext.createBuffer(1, totalSamples, sampleRate);
+        const outputData = outputBuffer.getChannelData(0);
+        
+        // Copy audio data from each chunk
         let offset = 0;
-        for (const blob of audioBlobs) {
-            const arrayBuffer = await blob.arrayBuffer();
-            const view = new Uint8Array(arrayBuffer);
-            mergedView.set(view, offset);
-            offset += view.length;
+        for (const chunk of decodedChunks) {
+            const chunkData = chunk.getChannelData(0);
+            outputData.set(chunkData, offset);
+            offset += chunk.length;
         }
-
-        return mergedBuffer;
+        
+        // Encode to WAV format (which can be played as audio)
+        const wavBlob = this.encodeWAV(outputBuffer);
+        return wavBlob;
+    }
+    
+    encodeWAV(audioBuffer) {
+        const numberOfChannels = audioBuffer.numberOfChannels;
+        const sampleRate = audioBuffer.sampleRate;
+        const format = 1; // PCM
+        const bitDepth = 16;
+        
+        let result = null;
+        if (numberOfChannels === 1) {
+            result = audioBuffer.getChannelData(0);
+        } else if (numberOfChannels === 2) {
+            result = new Float32Array(audioBuffer.length * 2);
+            const left = audioBuffer.getChannelData(0);
+            const right = audioBuffer.getChannelData(1);
+            for (let i = 0; i < audioBuffer.length; i++) {
+                result[2 * i] = left[i];
+                result[2 * i + 1] = right[i];
+            }
+        } else {
+            throw new Error('Unsupported number of channels');
+        }
+        
+        // Convert to 16-bit PCM
+        const buffer = new ArrayBuffer(44 + result.length * 2);
+        const view = new DataView(buffer);
+        
+        // Write the WAV container
+        this.writeString(view, 0, 'RIFF');
+        view.setUint32(4, 36 + result.length * 2, true);
+        this.writeString(view, 8, 'WAVE');
+        
+        // Write the fmt chunk
+        this.writeString(view, 12, 'fmt ');
+        view.setUint32(16, 16, true);
+        view.setUint16(20, format, true);
+        view.setUint16(22, numberOfChannels, true);
+        view.setUint32(24, sampleRate, true);
+        view.setUint32(28, sampleRate * numberOfChannels * 2, true);
+        view.setUint16(32, numberOfChannels * 2, true);
+        view.setUint16(34, bitDepth, true);
+        
+        // Write the data chunk
+        this.writeString(view, 36, 'data');
+        view.setUint32(40, result.length * 2, true);
+        
+        // Write the PCM samples
+        const bytes = new Int16Array(result.length);
+        for (let i = 0; i < result.length; i++) {
+            bytes[i] = Math.max(-1, Math.min(1, result[i])) * 0x7FFF;
+        }
+        for (let i = 0; i < bytes.length; i++) {
+            view.setInt16(44 + i * 2, bytes[i], true);
+        }
+        
+        return new Blob([view], { type: 'audio/wav' });
+    }
+    
+    writeString(view, offset, string) {
+        for (let i = 0; i < string.length; i++) {
+            view.setUint8(offset + i, string.charCodeAt(i));
+        }
     }
 
     toggleListenSentenceVisibility(type) {
