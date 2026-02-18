@@ -5512,6 +5512,7 @@ Format your response in a clear, structured way using markdown with sections for
                 if (japaneseBlob && this.isPlayingAll) {
                     await new Promise((resolve) => {
                         this.currentAudio = new Audio(URL.createObjectURL(japaneseBlob));
+                        this.currentAudio.volume = jpVolume;
                         this.currentAudio.onended = resolve;
                         this.currentAudio.onerror = resolve;
                         this.currentAudio.play();
