@@ -5318,6 +5318,12 @@ Format your response in a clear, structured way using markdown with sections for
         const btn = document.querySelector(`.listen-play-btn[data-index="${index}"]`);
         if (btn) btn.textContent = '⏳';
 
+        // Get volume settings
+        const jpVolumeEl = document.getElementById('jpVolume');
+        const enVolumeEl = document.getElementById('enVolume');
+        const jpVolume = jpVolumeEl ? jpVolumeEl.value / 100 : 0.8;
+        const enVolume = enVolumeEl ? enVolumeEl.value / 100 : 0.8;
+
         // Set up Media Session for lock screen playback
         this.setupMediaSession(card);
 
@@ -5327,6 +5333,7 @@ Format your response in a clear, structured way using markdown with sections for
             const audioBlob = await this.getOpenAITTS(text, 'japanese');
             if (audioBlob) {
                 this.currentAudio = new Audio(URL.createObjectURL(audioBlob));
+                this.currentAudio.volume = jpVolume;
                 this.currentAudio.onended = () => {
                     if (btn) btn.textContent = '▶️';
                     this.currentAudio = null;
@@ -5440,6 +5447,12 @@ Format your response in a clear, structured way using markdown with sections for
         document.getElementById('playAllSentencesBtn').textContent = '⏳ Playing...';
         document.getElementById('playAllSentencesBtn').disabled = true;
 
+        // Get volume settings
+        const jpVolumeEl = document.getElementById('jpVolume');
+        const enVolumeEl = document.getElementById('enVolume');
+        const jpVolume = jpVolumeEl ? jpVolumeEl.value / 100 : 0.8;
+        const enVolume = enVolumeEl ? enVolumeEl.value / 100 : 0.8;
+
         // Set up Media Session for lock screen controls
         if ('mediaSession' in navigator) {
             navigator.mediaSession.metadata = new MediaMetadata({
@@ -5511,6 +5524,7 @@ Format your response in a clear, structured way using markdown with sections for
                     if (englishBlob && this.isPlayingAll) {
                         await new Promise((resolve) => {
                             this.currentAudio = new Audio(URL.createObjectURL(englishBlob));
+                            this.currentAudio.volume = enVolume;
                             this.currentAudio.onended = resolve;
                             this.currentAudio.onerror = resolve;
                             this.currentAudio.play();
