@@ -5610,8 +5610,8 @@ Format your response in a clear, structured way using markdown with sections for
                 const japaneseAudio = await this.getOpenAITTS(japaneseText, 'japanese');
                 if (japaneseAudio) allAudioBlobs.push(japaneseAudio);
 
-                // English translation
-                if (card.sentence.english && this.settings.listenSpeakEnglish) {
+                // English translation - always include it
+                if (card.sentence.english) {
                     const englishAudio = await this.getOpenAITTS(card.sentence.english, 'english');
                     if (englishAudio) allAudioBlobs.push(englishAudio);
                 }
@@ -5682,6 +5682,17 @@ Format your response in a clear, structured way using markdown with sections for
         
         // Encode to WAV format (which can be played as audio)
         const wavBlob = this.encodeWAV(outputBuffer);
+        return wavBlob;
+    }
+    
+    // Create silence blob (1 second at 24kHz)
+    async createSilenceBlob(audioContext, length) {
+        const buffer = audioContext.createBuffer(1, length, 24000);
+        const data = buffer.getChannelData(0);
+        for (let i = 0; i < length; i++) {
+            data[i] = 0; // Silence
+        }
+        const wavBlob = this.encodeWAV(buffer);
         return wavBlob;
     }
     
