@@ -5609,6 +5609,13 @@ Format your response in a clear, structured way using markdown with sections for
 
         try {
             const allAudioBlobs = [];
+            const audioVolumes = []; // Track volume for each blob
+            
+            // Get volume settings
+            const jpVolumeEl = document.getElementById('jpVolume');
+            const enVolumeEl = document.getElementById('enVolume');
+            const jpVolume = jpVolumeEl ? jpVolumeEl.value / 100 : 0.8;
+            const enVolume = enVolumeEl ? enVolumeEl.value / 100 : 0.8;
             
             // Process each sentence
             for (let i = 0; i < cardsWithSentences.length; i++) {
@@ -5623,25 +5630,31 @@ Format your response in a clear, structured way using markdown with sections for
                 // Japanese sentence
                 const japaneseText = card.sentence.kanji || card.sentence.romaji;
                 const japaneseAudio = await this.getOpenAITTS(japaneseText, 'japanese');
-                if (japaneseAudio) allAudioBlobs.push(japaneseAudio);
+                if (japaneseAudio) {
+                    allAudioBlobs.push(japaneseAudio);
+                    audioVolumes.push(jpVolume);
+                }
 
                 // English translation - always include it
                 if (card.sentence.english) {
                     const englishAudio = await this.getOpenAITTS(card.sentence.english, 'english');
-                    if (englishAudio) allAudioBlobs.push(englishAudio);
+                    if (englishAudio) {
+                        allAudioBlobs.push(englishAudio);
+                        audioVolumes.push(enVolume);
+                    }
                 }
             }
 
             // Create a single audio element with all sounds
             const audioContext = new (window.AudioContext || window.webkitAudioContext)();
-            const mergedAudio = await this.mergeAudioBlobs(audioContext, allAudioBlobs);
+            const mergedAudio = await this.mergeAudioBlobs(audioContext, allAudioBlobs, audioVolumes);
 
             // Download the merged audio
-            const blob = new Blob([mergedAudio], { type: 'audio/mp3' });
+            const blob = new Blob([mergedAudio], { type: 'audio/wav' });
             const url = URL.createObjectURL(blob);
             const a = document.createElement('a');
             a.href = url;
-            a.download = 'kanji-sentences.mp3';
+            a.download = 'kanji-sentences.wav';
             document.body.appendChild(a);
             a.click();
             document.body.removeChild(a);
@@ -5657,7 +5670,7 @@ Format your response in a clear, structured way using markdown with sections for
         }
     }
 
-    async mergeAudioBlobs(audioContext, audioBlobs) {
+    async mergeAudioBlobs(audioContext, audioBlobs, audioVolumes) {
         // For MP3 concatenation, we need to decode each blob and combine them
         const decodedChunks = [];
         
@@ -5687,11 +5700,17 @@ Format your response in a clear, structured way using markdown with sections for
         const outputBuffer = audioContext.createBuffer(1, totalSamples, sampleRate);
         const outputData = outputBuffer.getChannelData(0);
         
-        // Copy audio data from each chunk
+        // Copy audio data from each chunk with volume adjustment
         let offset = 0;
-        for (const chunk of decodedChunks) {
+        for (let i = 0; i < decodedChunks.length; i++) {
+            const chunk = decodedChunks[i];
+            const volume = audioVolumes[i] || 1.0;
             const chunkData = chunk.getChannelData(0);
-            outputData.set(chunkData, offset);
+            
+            // Apply volume while copying
+            for (let j = 0; j < chunkData.length; j++) {
+                outputData[offset + j] = chunkData[j] * volume;
+            }
             offset += chunk.length;
         }
         
