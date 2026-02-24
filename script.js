@@ -37,11 +37,6 @@ class KanjiConcentrationGame {
         this.breakdownMode = false;  // Audio Breakdown Mode active
         this.sentenceBreakdowns = {};  // Cache for AI-generated breakdowns
         this.isPlayingAllBreakdowns = false;  // Playing all breakdowns flag
-        
-        // Audio Breakdown Mode
-        this.breakdownModeEnabled = false;  // Breakdown mode toggle
-        this.sentenceBreakdowns = {};  // Cache for AI-generated breakdowns
-        this.isPlayingAllBreakdowns = false;  // Flag for playing all breakdowns
         this.breakdownsGenerated = false;  // Flag to track if breakdowns are generated
         
         // Card selection functionality
@@ -6511,10 +6506,6 @@ Format your response as plain text that will be read aloud by TTS. Be conversati
             this.listenLoop = !this.listenLoop;
             console.log('Loop toggled to:', this.listenLoop);
             document.getElementById('toggleListenLoop').classList.toggle('active', this.listenLoop);
-        });
-        
-        document.getElementById('toggleBreakdownMode').addEventListener('click', () => {
-            this.toggleBreakdownMode();
         });
         
         document.getElementById('toggleBreakdownMode').addEventListener('click', () => {
