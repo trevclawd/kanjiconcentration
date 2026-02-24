@@ -33,6 +33,17 @@ class KanjiConcentrationGame {
         this.listenSpeakEnglish = false;  // Play English after Japanese
         this.listenLoop = false;  // Loop back to first sentence
         
+        // Audio Breakdown Mode
+        this.breakdownMode = false;  // Audio Breakdown Mode active
+        this.sentenceBreakdowns = {};  // Cache for AI-generated breakdowns
+        this.isPlayingAllBreakdowns = false;  // Playing all breakdowns flag
+        
+        // Audio Breakdown Mode
+        this.breakdownModeEnabled = false;  // Breakdown mode toggle
+        this.sentenceBreakdowns = {};  // Cache for AI-generated breakdowns
+        this.isPlayingAllBreakdowns = false;  // Flag for playing all breakdowns
+        this.breakdownsGenerated = false;  // Flag to track if breakdowns are generated
+        
         // Card selection functionality
         this.isCardSelectionMode = false;
         this.selectedCards = new Set();
@@ -5566,6 +5577,7 @@ Format your response in a clear, structured way using markdown with sections for
 
     stopPlayback() {
         this.isPlayingAll = false;
+        this.isPlayingAllBreakdowns = false;  // Also stop breakdown playback
         if (this.currentAudio) {
             this.currentAudio.pause();
             this.currentAudio = null;
@@ -5575,12 +5587,295 @@ Format your response in a clear, structured way using markdown with sections for
             playAllBtn.textContent = '▶️ Play All';
             playAllBtn.disabled = false;
         }
+        const playAllBreakdownsBtn = document.getElementById('playAllBreakdownsBtn');
+        if (playAllBreakdownsBtn) {
+            playAllBreakdownsBtn.textContent = '▶️ Play All Breakdowns';
+            playAllBreakdownsBtn.disabled = !this.breakdownsGenerated;
+        }
         document.querySelectorAll('.listen-play-btn').forEach(btn => {
             btn.textContent = '▶️';
         });
         document.querySelectorAll('.listen-sentence-item').forEach(item => {
             item.classList.remove('playing');
         });
+    }
+
+    // ============================================
+    // AUDIO BREAKDOWN MODE
+    // ============================================
+    
+    toggleBreakdownMode() {
+        this.breakdownMode = !this.breakdownMode;
+        const btn = document.getElementById('toggleBreakdownMode');
+        const controls = document.getElementById('breakdownModeControls');
+        
+        btn.classList.toggle('active', this.breakdownMode);
+        controls.style.display = this.breakdownMode ? 'block' : 'none';
+        
+        // Update buttons based on breakdown generation state
+        const playAllBreakdownsBtn = document.getElementById('playAllBreakdownsBtn');
+        const convertBreakdownsToMp3Btn = document.getElementById('convertBreakdownsToMp3Btn');
+        playAllBreakdownsBtn.disabled = !this.breakdownsGenerated;
+        convertBreakdownsToMp3Btn.disabled = !this.breakdownsGenerated;
+    }
+    
+    async generateAllBreakdowns() {
+        if (!this.settings.openaiApiKey) {
+            alert('Please set your OpenAI API key in Settings.');
+            return;
+        }
+        
+        const cardsToUse = this.getCardsForGame();
+        const cardsWithSentences = cardsToUse.filter(card => card.sentence && card.sentence.kanji);
+        
+        if (cardsWithSentences.length === 0) {
+            alert('No sentences available.');
+            return;
+        }
+        
+        const progressSpan = document.getElementById('breakdownProgress');
+        const generateBtn = document.getElementById('generateAllBreakdownsBtn');
+        generateBtn.disabled = true;
+        
+        this.sentenceBreakdowns = {};
+        
+        for (let i = 0; i < cardsWithSentences.length; i++) {
+            const card = cardsWithSentences[i];
+            progressSpan.textContent = `Generating ${i + 1}/${cardsWithSentences.length}...`;
+            
+            try {
+                const breakdown = await this.generateSentenceBreakdown(card);
+                this.sentenceBreakdowns[card.id] = breakdown;
+            } catch (error) {
+                console.error(`Error generating breakdown for ${card.kanji}:`, error);
+                this.sentenceBreakdowns[card.id] = { error: error.message };
+            }
+        }
+        
+        progressSpan.textContent = '✅ All breakdowns generated!';
+        this.breakdownsGenerated = true;
+        
+        // Enable the play and convert buttons
+        document.getElementById('playAllBreakdownsBtn').disabled = false;
+        document.getElementById('convertBreakdownsToMp3Btn').disabled = false;
+        generateBtn.disabled = false;
+        
+        setTimeout(() => {
+            progressSpan.textContent = '';
+        }, 3000);
+    }
+    
+    async generateSentenceBreakdown(card) {
+        const sentence = card.sentence;
+        
+        const prompt = `Create a detailed audio-friendly breakdown of this Japanese sentence for a Japanese language learner.
+
+Sentence: ${sentence.kanji}
+Reading: ${sentence.romaji}
+Meaning: ${sentence.english}
+
+Generate a breakdown that will be read aloud. Include:
+1. First, read the full sentence in Japanese slowly
+2. Then break down each word with its reading and meaning
+3. Explain any grammar points briefly
+4. End with reading the full sentence again at normal speed
+
+Format your response as plain text that will be read aloud by TTS. Be conversational and educational. Keep explanations brief and clear. Use simple language.`;
+
+        const response = await fetch('https://api.openai.com/v1/chat/completions', {
+            method: 'POST',
+            headers: {
+                'Authorization': `Bearer ${this.settings.openaiApiKey}`,
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                model: 'gpt-4o-mini',
+                messages: [
+                    {
+                        role: 'system',
+                        content: 'You are a friendly Japanese language teacher creating audio breakdowns for students. Write in a conversational style suitable for text-to-speech. Keep explanations brief and clear.'
+                    },
+                    {
+                        role: 'user',
+                        content: prompt
+                    }
+                ],
+                max_tokens: 1500
+            })
+        });
+
+        if (!response.ok) {
+            throw new Error(`OpenAI API error: ${response.status}`);
+        }
+
+        const data = await response.json();
+        return {
+            breakdown: data.choices[0].message.content,
+            card: card
+        };
+    }
+    
+    async playAllBreakdowns() {
+        if (this.isPlayingAllBreakdowns) {
+            this.stopPlayback();
+            return;
+        }
+        
+        const cardsToUse = this.getCardsForGame();
+        const cardsWithSentences = cardsToUse.filter(card => card.sentence && card.sentence.kanji);
+        
+        if (cardsWithSentences.length === 0) {
+            alert('No sentences available.');
+            return;
+        }
+        
+        if (Object.keys(this.sentenceBreakdowns).length === 0) {
+            alert('Please generate breakdowns first.');
+            return;
+        }
+        
+        this.isPlayingAllBreakdowns = true;
+        const playBtn = document.getElementById('playAllBreakdownsBtn');
+        playBtn.textContent = '⏹️ Stop';
+        
+        // Get volume settings
+        const jpVolumeEl = document.getElementById('jpVolume');
+        const enVolumeEl = document.getElementById('enVolume');
+        const jpVolume = jpVolumeEl ? jpVolumeEl.value / 100 : 0.8;
+        const enVolume = enVolumeEl ? enVolumeEl.value / 100 : 0.8;
+        
+        for (let i = 0; i < cardsWithSentences.length; i++) {
+            if (!this.isPlayingAllBreakdowns) break;
+            
+            const card = cardsWithSentences[i];
+            const breakdown = this.sentenceBreakdowns[card.id];
+            
+            if (!breakdown || breakdown.error) continue;
+            
+            // Highlight current item
+            document.querySelectorAll('.listen-sentence-item').forEach(item => {
+                item.classList.remove('playing');
+            });
+            const currentItem = document.querySelector(`.listen-sentence-item[data-index="${i}"]`);
+            if (currentItem) currentItem.classList.add('playing');
+            
+            // Update media session
+            if ('mediaSession' in navigator) {
+                navigator.mediaSession.metadata = new MediaMetadata({
+                    title: `Breakdown: ${card.kanji}`,
+                    artist: 'Kanji Concentration',
+                    album: `Sentence ${i + 1} of ${cardsWithSentences.length}`
+                });
+            }
+            
+            try {
+                // Play the breakdown text (it's in English, so use English voice)
+                const breakdownBlob = await this.getOpenAITTS(breakdown.breakdown, 'english');
+                if (breakdownBlob && this.isPlayingAllBreakdowns) {
+                    await new Promise((resolve) => {
+                        this.currentAudio = new Audio(URL.createObjectURL(breakdownBlob));
+                        this.currentAudio.volume = enVolume;
+                        this.currentAudio.onended = resolve;
+                        this.currentAudio.onerror = resolve;
+                        this.currentAudio.play();
+                    });
+                }
+            } catch (error) {
+                console.error('Error playing breakdown:', error);
+            }
+        }
+        
+        this.isPlayingAllBreakdowns = false;
+        playBtn.textContent = '▶️ Play All Breakdowns';
+        document.querySelectorAll('.listen-sentence-item').forEach(item => {
+            item.classList.remove('playing');
+        });
+    }
+    
+    async convertBreakdownsToMP3() {
+        const cardsToUse = this.getCardsForGame();
+        const cardsWithSentences = cardsToUse.filter(card => card.sentence && card.sentence.kanji);
+        
+        if (cardsWithSentences.length === 0) {
+            alert('No sentences available.');
+            return;
+        }
+        
+        if (Object.keys(this.sentenceBreakdowns).length === 0) {
+            alert('Please generate breakdowns first.');
+            return;
+        }
+        
+        if (!this.settings.openaiApiKey) {
+            alert('Please set your OpenAI API key in Settings first.');
+            return;
+        }
+        
+        // Create progress UI
+        const progressDiv = document.createElement('div');
+        progressDiv.className = 'conversion-progress';
+        progressDiv.innerHTML = `
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+            <div class="progress-text">Converting breakdowns to audio...</div>
+        `;
+        document.body.appendChild(progressDiv);
+        
+        try {
+            const allAudioBlobs = [];
+            const audioVolumes = [];
+            
+            // Get volume settings
+            const enVolumeEl = document.getElementById('enVolume');
+            const enVolume = enVolumeEl ? enVolumeEl.value / 100 : 0.8;
+            
+            for (let i = 0; i < cardsWithSentences.length; i++) {
+                const card = cardsWithSentences[i];
+                const breakdown = this.sentenceBreakdowns[card.id];
+                
+                const progressFill = progressDiv.querySelector('.progress-fill');
+                const progressText = progressDiv.querySelector('.progress-text');
+                const percentage = Math.round(((i + 1) / cardsWithSentences.length) * 100);
+                progressFill.style.width = `${percentage}%`;
+                progressText.textContent = `Converting ${i + 1}/${cardsWithSentences.length}: ${card.kanji}`;
+                
+                if (breakdown && !breakdown.error) {
+                    try {
+                        const audioBlob = await this.getOpenAITTS(breakdown.breakdown, 'english');
+                        if (audioBlob) {
+                            allAudioBlobs.push(audioBlob);
+                            audioVolumes.push(enVolume);
+                        }
+                    } catch (error) {
+                        console.error('Error converting breakdown:', error);
+                    }
+                }
+            }
+            
+            // Merge all audio
+            const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            const mergedAudio = await this.mergeAudioBlobs(audioContext, allAudioBlobs, audioVolumes);
+            
+            // Download
+            const blob = new Blob([mergedAudio], { type: 'audio/wav' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'sentence-breakdowns.wav';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            
+            progressDiv.innerHTML = '<div class="success-msg">✅ Breakdown MP3 conversion complete! File downloaded.</div>';
+            setTimeout(() => progressDiv.remove(), 3000);
+            
+        } catch (error) {
+            console.error('Error converting breakdowns:', error);
+            progressDiv.innerHTML = `<div class="error-msg">❌ Error: ${error.message}</div>`;
+            setTimeout(() => progressDiv.remove(), 5000);
+        }
     }
 
     async convertToMP3() {
@@ -6218,6 +6513,26 @@ Format your response in a clear, structured way using markdown with sections for
             document.getElementById('toggleListenLoop').classList.toggle('active', this.listenLoop);
         });
         
+        document.getElementById('toggleBreakdownMode').addEventListener('click', () => {
+            this.toggleBreakdownMode();
+        });
+        
+        document.getElementById('toggleBreakdownMode').addEventListener('click', () => {
+            this.toggleBreakdownMode();
+        });
+        
+        document.getElementById('generateAllBreakdownsBtn').addEventListener('click', () => {
+            this.generateAllBreakdowns();
+        });
+        
+        document.getElementById('playAllBreakdownsBtn').addEventListener('click', () => {
+            this.playAllBreakdowns();
+        });
+        
+        document.getElementById('convertBreakdownsToMp3Btn').addEventListener('click', () => {
+            this.convertBreakdownsToMP3();
+        });
+        
         document.getElementById('clearTTSCacheBtn').addEventListener('click', () => {
             this.clearTTSCache();
         });
@@ -6231,6 +6546,19 @@ Format your response in a clear, structured way using markdown with sections for
             if (e.target.id === 'aiSentenceModal') {
                 this.closeAiSentenceModal();
             }
+        });
+        
+        // Audio Breakdown Mode
+        document.getElementById('generateAllBreakdownsBtn').addEventListener('click', () => {
+            this.generateAllBreakdowns();
+        });
+        
+        document.getElementById('playAllBreakdownsBtn').addEventListener('click', () => {
+            this.playAllBreakdowns();
+        });
+        
+        document.getElementById('convertBreakdownsToMp3Btn').addEventListener('click', () => {
+            this.convertBreakdownsToMP3();
         });
         
         // Timed Memory Mode controls
