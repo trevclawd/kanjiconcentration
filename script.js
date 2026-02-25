@@ -5675,10 +5675,6 @@ Format your response in a clear, structured way using markdown with sections for
         document.getElementById('playAllBreakdownsBtn').disabled = false;
         document.getElementById('convertBreakdownsToMp3Btn').disabled = false;
         generateBtn.disabled = false;
-        
-        setTimeout(() => {
-            progressSpan.textContent = '';
-        }, 3000);
     }
     
     async generateSentenceBreakdown(card) {
@@ -6568,7 +6564,15 @@ Format your response as plain text that will be read aloud by TTS. Be conversati
         
         document.getElementById('playAllBreakdownsBtn').addEventListener('click', async () => {
             console.log('playAllBreakdownsBtn button clicked');
-            await this.playAllBreakdowns();
+            const btn = document.getElementById('playAllBreakdownsBtn');
+            btn.textContent = '⏳ Loading...';
+            try {
+                await this.playAllBreakdowns();
+            } catch (e) {
+                console.error('Error in playAllBreakdowns:', e);
+                document.getElementById('breakdownProgress').textContent = '❌ Error: ' + e.message;
+                btn.textContent = '▶️ Play All Breakdowns';
+            }
         });
         
         document.getElementById('convertBreakdownsToMp3Btn').addEventListener('click', async () => {

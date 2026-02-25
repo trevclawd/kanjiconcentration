@@ -551,10 +551,10 @@
                     <!-- Audio Breakdown Mode Controls -->
                     <div id="breakdownModeControls" class="breakdown-mode-controls">
                         <div class="breakdown-actions">
-                            <button id="generateAllBreakdownsBtn" class="control-btn primary-btn">🤖 Generate All Breakdowns</button>
-                            <button id="playAllBreakdownsBtn" class="control-btn">▶️ Play All Breakdowns</button>
-                            <button id="convertBreakdownsToMp3Btn" class="control-btn">💾 Convert Breakdowns to MP3</button>
-                            <span id="breakdownProgress" class="breakdown-progress"></span>
+                            <button id="generateAllBreakdownsBtn" class="control-btn primary-btn" onclick="if(window.game) { this.disabled=true; this.textContent='⏳ Generating...'; window.game.generateAllBreakdowns().finally(() => { this.disabled=false; this.textContent='🤖 Generate All Breakdowns'; }); }">🤖 Generate All Breakdowns</button>
+                            <button id="playAllBreakdownsBtn" class="control-btn" onclick="if(window.game) { this.textContent='⏳ Loading...'; window.game.playAllBreakdowns().catch(e => { document.getElementById('breakdownProgress').textContent='❌ '+e.message; this.textContent='▶️ Play All Breakdowns'; }); }">▶️ Play All Breakdowns</button>
+                            <button id="convertBreakdownsToMp3Btn" class="control-btn" onclick="if(window.game) window.game.convertBreakdownsToMP3()">💾 Convert Breakdowns to MP3</button>
+                            <span id="breakdownProgress" class="breakdown-progress" style="font-size:1.1em; font-weight:bold;"></span>
                         </div>
                     </div>
                 </div>
