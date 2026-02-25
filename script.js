@@ -5739,28 +5739,27 @@ Format your response in a clear, structured way using markdown with sections for
     async generateSentenceBreakdown(card) {
         const sentence = card.sentence;
         
-        const prompt = `Create a bilingual audio breakdown for this Japanese sentence. 
+        const prompt = `You are a friendly Japanese teacher explaining this sentence to a student naturally, as if having a conversation.
 
 Sentence: ${sentence.kanji}
 Reading: ${sentence.romaji}
 Meaning: ${sentence.english}
 
-IMPORTANT: Use this exact format with [JP] and [EN] markers:
-- Use [JP]text[/JP] for Japanese words/phrases that should be pronounced in Japanese
-- Use [EN]text[/EN] for English explanations
-- The Japanese text will be read by a Japanese voice, English by an English voice
+Create a natural audio explanation using [JP] and [EN] markers:
+- [JP]text[/JP] for Japanese (spoken by Japanese voice)
+- [EN]text[/EN] for English (spoken by English voice)
 
-Structure your breakdown like this:
-[EN]Let's look at the sentence:[/EN] [JP]${sentence.kanji}[/JP]
-[EN]This means: ${sentence.english}[/EN]
-[EN]Breaking it down word by word:[/EN]
-[EN]First word:[/EN] [JP]word[/JP] [EN]means meaning in English[/EN]
-[EN]Second word:[/EN] [JP]word[/JP] [EN]means meaning[/EN]
-...continue for each word...
-[EN]Putting it together: ${sentence.english}[/EN]
-[EN]Listen again:[/EN] [JP]${sentence.kanji}[/JP]
+Be conversational and natural. Don't mechanically list words. Flow like a real teacher talking.
 
-Keep it conversational and educational. Be concise.`;
+Good example:
+[EN]Okay, let's learn this sentence together![/EN] [JP]${sentence.kanji}[/JP]
+[EN]This means "${sentence.english}". Let me walk you through it.[/EN]
+[EN]We start with[/EN] [JP]yama[/JP] [EN]- that's mountain. Then we have[/EN] [JP]no[/JP] [EN]which connects things, like "of". So "yama no" gives us "mountain's" or "of the mountain".[/EN]
+[EN]Next is[/EN] [JP]kudari[/JP] [EN]- going down or descending. Combined with "yama no", we get "descending the mountain".[/EN]
+[EN]The sentence continues with[/EN] [JP]wa kiken desu[/JP] [EN]- "is dangerous". "Wa" marks the topic, "kiken" means dangerous, and "desu" makes it polite.[/EN]
+[EN]So putting it all together: going down the mountain is dangerous. Let's hear it once more:[/EN] [JP]${sentence.kanji}[/JP]
+
+Keep it flowing naturally. Connect words together when they form phrases. Don't say "word number one" or count mechanically.`;
 
         const response = await fetch('https://api.openai.com/v1/chat/completions', {
             method: 'POST',
