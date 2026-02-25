@@ -5737,8 +5737,11 @@ Format your response as plain text that will be read aloud by TTS. Be conversati
         console.log('sentenceBreakdowns:', this.sentenceBreakdowns);
         console.log('breakdownsGenerated:', this.breakdownsGenerated);
         
+        const progressSpan = document.getElementById('breakdownProgress');
+        
         if (this.isPlayingAllBreakdowns) {
             this.stopPlayback();
+            progressSpan.textContent = '⏹️ Stopped';
             return;
         }
         
@@ -5748,18 +5751,21 @@ Format your response as plain text that will be read aloud by TTS. Be conversati
         console.log('Cards with sentences:', cardsWithSentences.length);
         
         if (cardsWithSentences.length === 0) {
+            progressSpan.textContent = '❌ No sentences available';
             alert('No sentences available.');
             return;
         }
         
         if (Object.keys(this.sentenceBreakdowns).length === 0) {
-            alert('Please generate breakdowns first.');
+            progressSpan.textContent = '❌ Generate breakdowns first!';
+            alert('Please generate breakdowns first by clicking "Generate All Breakdowns".');
             return;
         }
         
         this.isPlayingAllBreakdowns = true;
         const playBtn = document.getElementById('playAllBreakdownsBtn');
         playBtn.textContent = '⏹️ Stop';
+        progressSpan.textContent = '▶️ Playing breakdowns...';
         
         // Get volume settings
         const jpVolumeEl = document.getElementById('jpVolume');
@@ -5810,6 +5816,7 @@ Format your response as plain text that will be read aloud by TTS. Be conversati
         
         this.isPlayingAllBreakdowns = false;
         playBtn.textContent = '▶️ Play All Breakdowns';
+        document.getElementById('breakdownProgress').textContent = '✅ Done!';
         document.querySelectorAll('.listen-sentence-item').forEach(item => {
             item.classList.remove('playing');
         });
@@ -5820,25 +5827,32 @@ Format your response as plain text that will be read aloud by TTS. Be conversati
         console.log('sentenceBreakdowns:', this.sentenceBreakdowns);
         console.log('breakdownsGenerated:', this.breakdownsGenerated);
         
+        const progressSpan = document.getElementById('breakdownProgress');
+        
         const cardsToUse = this.getCardsForGame();
         const cardsWithSentences = cardsToUse.filter(card => card.sentence && card.sentence.kanji);
         
         console.log('Cards with sentences:', cardsWithSentences.length);
         
         if (cardsWithSentences.length === 0) {
+            progressSpan.textContent = '❌ No sentences available';
             alert('No sentences available.');
             return;
         }
         
         if (Object.keys(this.sentenceBreakdowns).length === 0) {
-            alert('Please generate breakdowns first.');
+            progressSpan.textContent = '❌ Generate breakdowns first!';
+            alert('Please generate breakdowns first by clicking "Generate All Breakdowns".');
             return;
         }
         
         if (!this.settings.openaiApiKey) {
+            progressSpan.textContent = '❌ Set API key first!';
             alert('Please set your OpenAI API key in Settings first.');
             return;
         }
+        
+        progressSpan.textContent = '🔄 Converting to MP3...';
         
         // Create progress UI
         const progressDiv = document.createElement('div');
@@ -6549,19 +6563,16 @@ Format your response as plain text that will be read aloud by TTS. Be conversati
         
         document.getElementById('generateAllBreakdownsBtn').addEventListener('click', async () => {
             console.log('generateAllBreakdownsBtn button clicked');
-            alert('Generating breakdowns...');
             await this.generateAllBreakdowns();
         });
         
         document.getElementById('playAllBreakdownsBtn').addEventListener('click', async () => {
             console.log('playAllBreakdownsBtn button clicked');
-            alert('Playing all breakdowns...');
             await this.playAllBreakdowns();
         });
         
         document.getElementById('convertBreakdownsToMp3Btn').addEventListener('click', async () => {
             console.log('convertBreakdownsToMp3Btn button clicked');
-            alert('Converting breakdowns to MP3...');
             await this.convertBreakdownsToMP3();
         });
         
