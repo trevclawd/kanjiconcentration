@@ -5187,7 +5187,7 @@ class KanjiConcentrationGame {
                     </div>
                     <div class="listen-sentence-buttons">
                         <button class="listen-play-btn" data-index="${index}" title="Play sentence">▶️</button>
-                        <button class="listen-breakdown-btn" data-index="${index}" data-card-id="${card.id}" title="Play breakdown">🧠</button>
+                        <button class="listen-breakdown-btn" data-index="${index}" data-card-id="${card.id}" title="Generate/play breakdown (auto-generates if needed)">🧠</button>
                         <button class="listen-ask-ai-btn" data-index="${index}" title="Ask AI to break down sentence">🤖</button>
                     </div>
                 </div>
@@ -5233,15 +5233,33 @@ class KanjiConcentrationGame {
     async playSingleBreakdown(card, index, cardId) {
         const progressSpan = document.getElementById('breakdownProgress');
         
-        // Check if breakdown exists
+        // Check if breakdown exists, if not generate it
         if (!this.sentenceBreakdowns[cardId]) {
-            progressSpan.textContent = '❌ Generate breakdowns first!';
-            return;
+            if (!this.settings.openaiApiKey) {
+                progressSpan.textContent = '❌ Set API key first!';
+                alert('Please set your OpenAI API key in Settings.');
+                return;
+            }
+            
+            // Generate this single breakdown
+            progressSpan.textContent = `🔄 Generating breakdown for ${card.kanji}...`;
+            try {
+                const breakdown = await this.generateSentenceBreakdown(card);
+                this.sentenceBreakdowns[cardId] = breakdown;
+                progressSpan.textContent = '✅ Breakdown generated!';
+            } catch (error) {
+                console.error('Error generating breakdown:', error);
+                progressSpan.textContent = '❌ ' + error.message;
+                this.sentenceBreakdowns[cardId] = { error: error.message };
+                return;
+            }
         }
         
         const breakdown = this.sentenceBreakdowns[cardId];
         if (breakdown.error) {
-            progressSpan.textContent = '❌ Breakdown has error';
+            progressSpan.textContent = '❌ Breakdown has error - click to retry';
+            // Clear the error so next click regenerates
+            delete this.sentenceBreakdowns[cardId];
             return;
         }
         
