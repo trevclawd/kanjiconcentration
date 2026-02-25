@@ -5600,21 +5600,30 @@ Format your response in a clear, structured way using markdown with sections for
     // ============================================
     
     toggleBreakdownMode() {
+        console.log('toggleBreakdownMode called, current state:', this.breakdownMode);
         this.breakdownMode = !this.breakdownMode;
         const btn = document.getElementById('toggleBreakdownMode');
         const controls = document.getElementById('breakdownModeControls');
         
+        console.log('breakdownModeControls element:', controls);
+        
         btn.classList.toggle('active', this.breakdownMode);
         controls.style.display = this.breakdownMode ? 'block' : 'none';
+        
+        console.log('Controls display set to:', controls.style.display);
         
         // Update buttons based on breakdown generation state
         const playAllBreakdownsBtn = document.getElementById('playAllBreakdownsBtn');
         const convertBreakdownsToMp3Btn = document.getElementById('convertBreakdownsToMp3Btn');
         playAllBreakdownsBtn.disabled = !this.breakdownsGenerated;
         convertBreakdownsToMp3Btn.disabled = !this.breakdownsGenerated;
+        
+        console.log('Buttons disabled state:', playAllBreakdownsBtn.disabled, convertBreakdownsToMp3Btn.disabled);
     }
     
     async generateAllBreakdowns() {
+        console.log('generateAllBreakdowns called');
+        
         if (!this.settings.openaiApiKey) {
             alert('Please set your OpenAI API key in Settings.');
             return;
@@ -5622,6 +5631,8 @@ Format your response in a clear, structured way using markdown with sections for
         
         const cardsToUse = this.getCardsForGame();
         const cardsWithSentences = cardsToUse.filter(card => card.sentence && card.sentence.kanji);
+        
+        console.log('Cards with sentences:', cardsWithSentences.length);
         
         if (cardsWithSentences.length === 0) {
             alert('No sentences available.');
@@ -5634,21 +5645,31 @@ Format your response in a clear, structured way using markdown with sections for
         
         this.sentenceBreakdowns = {};
         
-        for (let i = 0; i < cardsWithSentences.length; i++) {
-            const card = cardsWithSentences[i];
-            progressSpan.textContent = `Generating ${i + 1}/${cardsWithSentences.length}...`;
-            
-            try {
-                const breakdown = await this.generateSentenceBreakdown(card);
-                this.sentenceBreakdowns[card.id] = breakdown;
-            } catch (error) {
-                console.error(`Error generating breakdown for ${card.kanji}:`, error);
-                this.sentenceBreakdowns[card.id] = { error: error.message };
+        try {
+            for (let i = 0; i < cardsWithSentences.length; i++) {
+                const card = cardsWithSentences[i];
+                progressSpan.textContent = `Generating ${i + 1}/${cardsWithSentences.length}...`;
+                
+                try {
+                    console.log(`Generating breakdown for ${card.kanji}...`);
+                    const breakdown = await this.generateSentenceBreakdown(card);
+                    console.log(`Breakdown generated for ${card.kanji}:`, breakdown);
+                    this.sentenceBreakdowns[card.id] = breakdown;
+                } catch (error) {
+                    console.error(`Error generating breakdown for ${card.kanji}:`, error);
+                    this.sentenceBreakdowns[card.id] = { error: error.message };
+                }
             }
+            
+            progressSpan.textContent = '✅ All breakdowns generated!';
+            this.breakdownsGenerated = true;
+            console.log('breakdownsGenerated set to true');
+        } catch (error) {
+            console.error('Error in generateAllBreakdowns:', error);
+            progressSpan.textContent = `❌ Error: ${error.message}`;
+            generateBtn.disabled = false;
+            return;
         }
-        
-        progressSpan.textContent = '✅ All breakdowns generated!';
-        this.breakdownsGenerated = true;
         
         // Enable the play and convert buttons
         document.getElementById('playAllBreakdownsBtn').disabled = false;
@@ -5711,6 +5732,11 @@ Format your response as plain text that will be read aloud by TTS. Be conversati
     }
     
     async playAllBreakdowns() {
+        console.log('playAllBreakdowns called');
+        console.log('isPlayingAllBreakdowns:', this.isPlayingAllBreakdowns);
+        console.log('sentenceBreakdowns:', this.sentenceBreakdowns);
+        console.log('breakdownsGenerated:', this.breakdownsGenerated);
+        
         if (this.isPlayingAllBreakdowns) {
             this.stopPlayback();
             return;
@@ -5718,6 +5744,8 @@ Format your response as plain text that will be read aloud by TTS. Be conversati
         
         const cardsToUse = this.getCardsForGame();
         const cardsWithSentences = cardsToUse.filter(card => card.sentence && card.sentence.kanji);
+        
+        console.log('Cards with sentences:', cardsWithSentences.length);
         
         if (cardsWithSentences.length === 0) {
             alert('No sentences available.');
@@ -5788,8 +5816,14 @@ Format your response as plain text that will be read aloud by TTS. Be conversati
     }
     
     async convertBreakdownsToMP3() {
+        console.log('convertBreakdownsToMP3 called');
+        console.log('sentenceBreakdowns:', this.sentenceBreakdowns);
+        console.log('breakdownsGenerated:', this.breakdownsGenerated);
+        
         const cardsToUse = this.getCardsForGame();
         const cardsWithSentences = cardsToUse.filter(card => card.sentence && card.sentence.kanji);
+        
+        console.log('Cards with sentences:', cardsWithSentences.length);
         
         if (cardsWithSentences.length === 0) {
             alert('No sentences available.');
@@ -6509,19 +6543,26 @@ Format your response as plain text that will be read aloud by TTS. Be conversati
         });
         
         document.getElementById('toggleBreakdownMode').addEventListener('click', () => {
+            console.log('toggleBreakdownMode button clicked');
             this.toggleBreakdownMode();
         });
         
-        document.getElementById('generateAllBreakdownsBtn').addEventListener('click', () => {
-            this.generateAllBreakdowns();
+        document.getElementById('generateAllBreakdownsBtn').addEventListener('click', async () => {
+            console.log('generateAllBreakdownsBtn button clicked');
+            alert('Generating breakdowns...');
+            await this.generateAllBreakdowns();
         });
         
-        document.getElementById('playAllBreakdownsBtn').addEventListener('click', () => {
-            this.playAllBreakdowns();
+        document.getElementById('playAllBreakdownsBtn').addEventListener('click', async () => {
+            console.log('playAllBreakdownsBtn button clicked');
+            alert('Playing all breakdowns...');
+            await this.playAllBreakdowns();
         });
         
-        document.getElementById('convertBreakdownsToMp3Btn').addEventListener('click', () => {
-            this.convertBreakdownsToMP3();
+        document.getElementById('convertBreakdownsToMp3Btn').addEventListener('click', async () => {
+            console.log('convertBreakdownsToMp3Btn button clicked');
+            alert('Converting breakdowns to MP3...');
+            await this.convertBreakdownsToMP3();
         });
         
         document.getElementById('clearTTSCacheBtn').addEventListener('click', () => {
@@ -6537,19 +6578,6 @@ Format your response as plain text that will be read aloud by TTS. Be conversati
             if (e.target.id === 'aiSentenceModal') {
                 this.closeAiSentenceModal();
             }
-        });
-        
-        // Audio Breakdown Mode
-        document.getElementById('generateAllBreakdownsBtn').addEventListener('click', () => {
-            this.generateAllBreakdowns();
-        });
-        
-        document.getElementById('playAllBreakdownsBtn').addEventListener('click', () => {
-            this.playAllBreakdowns();
-        });
-        
-        document.getElementById('convertBreakdownsToMp3Btn').addEventListener('click', () => {
-            this.convertBreakdownsToMP3();
         });
         
         // Timed Memory Mode controls
