@@ -5258,30 +5258,21 @@ class KanjiConcentrationGame {
         if (currentItem) currentItem.classList.add('playing');
         
         try {
-            // Get volume
+            // Get volumes
+            const jpVolumeEl = document.getElementById('jpVolume');
             const enVolumeEl = document.getElementById('enVolume');
+            const jpVolume = jpVolumeEl ? jpVolumeEl.value / 100 : 0.8;
             const enVolume = enVolumeEl ? enVolumeEl.value / 100 : 0.8;
             
-            // Play the breakdown text
-            const breakdownBlob = await this.getOpenAITTS(breakdown.breakdown, 'english');
-            if (breakdownBlob) {
-                await new Promise((resolve) => {
-                    this.currentAudio = new Audio(URL.createObjectURL(breakdownBlob));
-                    this.currentAudio.volume = enVolume;
-                    this.currentAudio.onended = () => {
-                        progressSpan.textContent = '✅ Done';
-                        document.querySelectorAll('.listen-sentence-item').forEach(item => {
-                            item.classList.remove('playing');
-                        });
-                        resolve();
-                    };
-                    this.currentAudio.onerror = () => {
-                        progressSpan.textContent = '❌ Audio error';
-                        resolve();
-                    };
-                    this.currentAudio.play();
-                });
-            }
+            // Play the breakdown with mixed voices
+            this.isPlayingAllBreakdowns = true; // Enable for playBreakdownText
+            await this.playBreakdownText(breakdown.breakdown, jpVolume, enVolume);
+            this.isPlayingAllBreakdowns = false;
+            
+            progressSpan.textContent = '✅ Done';
+            document.querySelectorAll('.listen-sentence-item').forEach(item => {
+                item.classList.remove('playing');
+            });
         } catch (error) {
             console.error('Error playing single breakdown:', error);
             progressSpan.textContent = '❌ ' + error.message;
@@ -5748,29 +5739,28 @@ Format your response in a clear, structured way using markdown with sections for
     async generateSentenceBreakdown(card) {
         const sentence = card.sentence;
         
-        const prompt = `Create a detailed audio-friendly breakdown of this Japanese sentence for a Japanese language learner.
+        const prompt = `Create a bilingual audio breakdown for this Japanese sentence. 
 
 Sentence: ${sentence.kanji}
 Reading: ${sentence.romaji}
 Meaning: ${sentence.english}
 
-Create an English audio breakdown for an English speaker learning Japanese. 
+IMPORTANT: Use this exact format with [JP] and [EN] markers:
+- Use [JP]text[/JP] for Japanese words/phrases that should be pronounced in Japanese
+- Use [EN]text[/EN] for English explanations
+- The Japanese text will be read by a Japanese voice, English by an English voice
 
-IMPORTANT: Write ENTIRELY IN ENGLISH. Only include Japanese words when teaching pronunciation.
+Structure your breakdown like this:
+[EN]Let's look at the sentence:[/EN] [JP]${sentence.kanji}[/JP]
+[EN]This means: ${sentence.english}[/EN]
+[EN]Breaking it down word by word:[/EN]
+[EN]First word:[/EN] [JP]word[/JP] [EN]means meaning in English[/EN]
+[EN]Second word:[/EN] [JP]word[/JP] [EN]means meaning[/EN]
+...continue for each word...
+[EN]Putting it together: ${sentence.english}[/EN]
+[EN]Listen again:[/EN] [JP]${sentence.kanji}[/JP]
 
-Structure your breakdown like this (spoken aloud in English):
-1. "Let's look at the sentence: [say the Japanese naturally]"
-2. "This means: [the English meaning]"
-3. "Breaking it down word by word..."
-4. For each word: "[Japanese word] means [English meaning], pronounced [romaji with English phonetic spelling]"
-5. Briefly explain any grammar in simple terms
-6. "Putting it together: [English meaning]"
-7. "Listen again: [say the Japanese at normal speed]"
-
-Example output style:
-"Let's look at the sentence. Yama no kudari wa kiken desu. This means 'Going downhill on the mountain is dangerous.' Breaking it down: Yama means mountain, pronounced yah-mah. No is a possessive particle, like 'of'. Kudari means descent or going down, pronounced koo-dah-ree. Wa is the topic marker. Kiken means dangerous, pronounced kee-ken. And desu is the polite copula, pronounced dess. Putting it together: The descent of the mountain is dangerous. Listen again: Yama no kudari wa kiken desu."
-
-Keep it conversational and educational. Use English phonetic pronunciations for Japanese words.`;
+Keep it conversational and educational. Be concise.`;
 
         const response = await fetch('https://api.openai.com/v1/chat/completions', {
             method: 'POST',
@@ -5803,6 +5793,65 @@ Keep it conversational and educational. Use English phonetic pronunciations for 
             breakdown: data.choices[0].message.content,
             card: card
         };
+    }
+    
+    // Parse breakdown text with [JP] and [EN] markers and play with appropriate voices
+    async playBreakdownText(text, jpVolume, enVolume) {
+        // Parse the text into segments
+        const segments = [];
+        const regex = /\[(JP|EN)\]([\s\S]*?)\[\/\1\]/g;
+        let lastIndex = 0;
+        let match;
+        
+        while ((match = regex.exec(text)) !== null) {
+            // Add any text before this match (treat as English)
+            if (match.index > lastIndex) {
+                const beforeText = text.substring(lastIndex, match.index).trim();
+                if (beforeText) {
+                    segments.push({ lang: 'english', text: beforeText });
+                }
+            }
+            // Add the matched segment
+            segments.push({ 
+                lang: match[1] === 'JP' ? 'japanese' : 'english', 
+                text: match[2].trim() 
+            });
+            lastIndex = match.index + match[0].length;
+        }
+        
+        // Add any remaining text (treat as English)
+        if (lastIndex < text.length) {
+            const remaining = text.substring(lastIndex).trim();
+            if (remaining) {
+                segments.push({ lang: 'english', text: remaining });
+            }
+        }
+        
+        // If no markers found, treat entire text as English
+        if (segments.length === 0) {
+            segments.push({ lang: 'english', text: text });
+        }
+        
+        console.log('Breakdown segments:', segments);
+        
+        // Play each segment
+        for (const segment of segments) {
+            if (!this.isPlayingAllBreakdowns) break;
+            if (!segment.text) continue;
+            
+            const volume = segment.lang === 'japanese' ? jpVolume : enVolume;
+            const blob = await this.getOpenAITTS(segment.text, segment.lang);
+            
+            if (blob && this.isPlayingAllBreakdowns) {
+                await new Promise((resolve) => {
+                    this.currentAudio = new Audio(URL.createObjectURL(blob));
+                    this.currentAudio.volume = volume;
+                    this.currentAudio.onended = resolve;
+                    this.currentAudio.onerror = resolve;
+                    this.currentAudio.play();
+                });
+            }
+        }
     }
     
     async playAllBreakdowns() {
@@ -5872,17 +5921,8 @@ Keep it conversational and educational. Use English phonetic pronunciations for 
             }
             
             try {
-                // Play the breakdown text (it's in English, so use English voice)
-                const breakdownBlob = await this.getOpenAITTS(breakdown.breakdown, 'english');
-                if (breakdownBlob && this.isPlayingAllBreakdowns) {
-                    await new Promise((resolve) => {
-                        this.currentAudio = new Audio(URL.createObjectURL(breakdownBlob));
-                        this.currentAudio.volume = enVolume;
-                        this.currentAudio.onended = resolve;
-                        this.currentAudio.onerror = resolve;
-                        this.currentAudio.play();
-                    });
-                }
+                // Play the breakdown with mixed JP/EN voices
+                await this.playBreakdownText(breakdown.breakdown, jpVolume, enVolume);
             } catch (error) {
                 console.error('Error playing breakdown:', error);
             }
