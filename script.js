@@ -6016,10 +6016,40 @@ Keep it flowing naturally. Connect words together when they form phrases. Don't 
                 
                 if (breakdown && !breakdown.error) {
                     try {
-                        const audioBlob = await this.getOpenAITTS(breakdown.breakdown, 'english');
-                        if (audioBlob) {
-                            allAudioBlobs.push(audioBlob);
-                            audioVolumes.push(enVolume);
+                        // Parse breakdown text for [JP] and [EN] markers
+                        const segments = [];
+                        const regex = /\[(JP|EN)\]([\s\S]*?)\[\/\1\]/g;
+                        let lastIndex = 0;
+                        let match;
+                        
+                        while ((match = regex.exec(breakdown.breakdown)) !== null) {
+                            // Add any text before this match (skip - it's usually whitespace)
+                            lastIndex = match.index + match[0].length;
+                            // Add the matched segment
+                            const segmentText = match[2].trim();
+                            if (segmentText) {
+                                segments.push({ 
+                                    lang: match[1] === 'JP' ? 'japanese' : 'english', 
+                                    text: segmentText 
+                                });
+                            }
+                        }
+                        
+                        // If no markers found, treat entire text as English
+                        if (segments.length === 0 && breakdown.breakdown.trim()) {
+                            segments.push({ lang: 'english', text: breakdown.breakdown.trim() });
+                        }
+                        
+                        // Get TTS for each segment with correct language
+                        const jpVolumeEl = document.getElementById('jpVolume');
+                        const jpVolume = jpVolumeEl ? jpVolumeEl.value / 100 : 0.8;
+                        
+                        for (const segment of segments) {
+                            const audioBlob = await this.getOpenAITTS(segment.text, segment.lang);
+                            if (audioBlob) {
+                                allAudioBlobs.push(audioBlob);
+                                audioVolumes.push(segment.lang === 'japanese' ? jpVolume : enVolume);
+                            }
                         }
                     } catch (error) {
                         console.error('Error converting breakdown:', error);
