@@ -5187,6 +5187,7 @@ class KanjiConcentrationGame {
                     </div>
                     <div class="listen-sentence-buttons">
                         <button class="listen-play-btn" data-index="${index}" title="Play sentence">▶️</button>
+                        <button class="listen-breakdown-btn" data-index="${index}" data-card-id="${card.id}" title="Play breakdown">🧠</button>
                         <button class="listen-ask-ai-btn" data-index="${index}" title="Ask AI to break down sentence">🤖</button>
                     </div>
                 </div>
@@ -5211,6 +5212,15 @@ class KanjiConcentrationGame {
             });
         });
 
+        // Add click handlers for individual breakdown buttons
+        listContainer.querySelectorAll('.listen-breakdown-btn').forEach(btn => {
+            btn.addEventListener('click', async (e) => {
+                const index = parseInt(e.target.dataset.index);
+                const cardId = e.target.dataset.cardId;
+                await this.playSingleBreakdown(cardsWithSentences[index], index, cardId);
+            });
+        });
+
         // Add click handlers for Ask AI buttons
         listContainer.querySelectorAll('.listen-ask-ai-btn').forEach(btn => {
             btn.addEventListener('click', (e) => {
@@ -5218,6 +5228,64 @@ class KanjiConcentrationGame {
                 this.askAiAboutSentence(cardsWithSentences[index], index);
             });
         });
+    }
+    
+    async playSingleBreakdown(card, index, cardId) {
+        const progressSpan = document.getElementById('breakdownProgress');
+        
+        // Check if breakdown exists
+        if (!this.sentenceBreakdowns[cardId]) {
+            progressSpan.textContent = '❌ Generate breakdowns first!';
+            return;
+        }
+        
+        const breakdown = this.sentenceBreakdowns[cardId];
+        if (breakdown.error) {
+            progressSpan.textContent = '❌ Breakdown has error';
+            return;
+        }
+        
+        // Stop any current playback
+        this.stopPlayback();
+        
+        progressSpan.textContent = `▶️ Playing breakdown for ${card.kanji}...`;
+        
+        // Highlight current item
+        document.querySelectorAll('.listen-sentence-item').forEach(item => {
+            item.classList.remove('playing');
+        });
+        const currentItem = document.querySelector(`.listen-sentence-item[data-index="${index}"]`);
+        if (currentItem) currentItem.classList.add('playing');
+        
+        try {
+            // Get volume
+            const enVolumeEl = document.getElementById('enVolume');
+            const enVolume = enVolumeEl ? enVolumeEl.value / 100 : 0.8;
+            
+            // Play the breakdown text
+            const breakdownBlob = await this.getOpenAITTS(breakdown.breakdown, 'english');
+            if (breakdownBlob) {
+                await new Promise((resolve) => {
+                    this.currentAudio = new Audio(URL.createObjectURL(breakdownBlob));
+                    this.currentAudio.volume = enVolume;
+                    this.currentAudio.onended = () => {
+                        progressSpan.textContent = '✅ Done';
+                        document.querySelectorAll('.listen-sentence-item').forEach(item => {
+                            item.classList.remove('playing');
+                        });
+                        resolve();
+                    };
+                    this.currentAudio.onerror = () => {
+                        progressSpan.textContent = '❌ Audio error';
+                        resolve();
+                    };
+                    this.currentAudio.play();
+                });
+            }
+        } catch (error) {
+            console.error('Error playing single breakdown:', error);
+            progressSpan.textContent = '❌ ' + error.message;
+        }
     }
 
     async askAiAboutSentence(card, index) {
@@ -5686,13 +5754,23 @@ Sentence: ${sentence.kanji}
 Reading: ${sentence.romaji}
 Meaning: ${sentence.english}
 
-Generate a breakdown that will be read aloud. Include:
-1. First, read the full sentence in Japanese slowly
-2. Then break down each word with its reading and meaning
-3. Explain any grammar points briefly
-4. End with reading the full sentence again at normal speed
+Create an English audio breakdown for an English speaker learning Japanese. 
 
-Format your response as plain text that will be read aloud by TTS. Be conversational and educational. Keep explanations brief and clear. Use simple language.`;
+IMPORTANT: Write ENTIRELY IN ENGLISH. Only include Japanese words when teaching pronunciation.
+
+Structure your breakdown like this (spoken aloud in English):
+1. "Let's look at the sentence: [say the Japanese naturally]"
+2. "This means: [the English meaning]"
+3. "Breaking it down word by word..."
+4. For each word: "[Japanese word] means [English meaning], pronounced [romaji with English phonetic spelling]"
+5. Briefly explain any grammar in simple terms
+6. "Putting it together: [English meaning]"
+7. "Listen again: [say the Japanese at normal speed]"
+
+Example output style:
+"Let's look at the sentence. Yama no kudari wa kiken desu. This means 'Going downhill on the mountain is dangerous.' Breaking it down: Yama means mountain, pronounced yah-mah. No is a possessive particle, like 'of'. Kudari means descent or going down, pronounced koo-dah-ree. Wa is the topic marker. Kiken means dangerous, pronounced kee-ken. And desu is the polite copula, pronounced dess. Putting it together: The descent of the mountain is dangerous. Listen again: Yama no kudari wa kiken desu."
+
+Keep it conversational and educational. Use English phonetic pronunciations for Japanese words.`;
 
         const response = await fetch('https://api.openai.com/v1/chat/completions', {
             method: 'POST',
