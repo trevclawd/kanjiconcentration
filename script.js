@@ -49,13 +49,6 @@ class KanjiConcentrationGame {
         } catch (e) {
             console.log('Could not load saved breakdowns:', e);
         }
-    
-    clearSavedBreakdowns() {
-        this.sentenceBreakdowns = {};
-        localStorage.removeItem('kanjiconcentration_breakdowns');
-        this.breakdownsGenerated = false;
-        console.log('Cleared all saved breakdowns');
-    }
         
         // Card selection functionality
         this.isCardSelectionMode = false;
@@ -65,6 +58,13 @@ class KanjiConcentrationGame {
         this.isHiraganaHidden = false;
         
         this.init();
+    }
+    
+    clearSavedBreakdowns() {
+        this.sentenceBreakdowns = {};
+        localStorage.removeItem('kanjiconcentration_breakdowns');
+        this.breakdownsGenerated = false;
+        console.log('Cleared all saved breakdowns');
     }
 
     async init() {
