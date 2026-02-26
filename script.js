@@ -39,6 +39,24 @@ class KanjiConcentrationGame {
         this.isPlayingAllBreakdowns = false;  // Playing all breakdowns flag
         this.breakdownsGenerated = false;  // Flag to track if breakdowns are generated
         
+        // Load saved breakdowns from localStorage (for resume after page refresh)
+        try {
+            const savedBreakdowns = localStorage.getItem('kanjiconcentration_breakdowns');
+            if (savedBreakdowns) {
+                this.sentenceBreakdowns = JSON.parse(savedBreakdowns);
+                console.log('Loaded', Object.keys(this.sentenceBreakdowns).length, 'saved breakdowns from localStorage');
+            }
+        } catch (e) {
+            console.log('Could not load saved breakdowns:', e);
+        }
+    
+    clearSavedBreakdowns() {
+        this.sentenceBreakdowns = {};
+        localStorage.removeItem('kanjiconcentration_breakdowns');
+        this.breakdownsGenerated = false;
+        console.log('Cleared all saved breakdowns');
+    }
+        
         // Card selection functionality
         this.isCardSelectionMode = false;
         this.selectedCards = new Set();
@@ -5720,32 +5738,101 @@ Format your response in a clear, structured way using markdown with sections for
         const generateBtn = document.getElementById('generateAllBreakdownsBtn');
         generateBtn.disabled = true;
         
-        this.sentenceBreakdowns = {};
+        // Keep existing breakdowns (for resume), don't clear
+        if (!this.sentenceBreakdowns) {
+            this.sentenceBreakdowns = {};
+        }
+        
+        // Use Wake Lock to prevent screen sleep on mobile
+        let wakeLock = null;
+        try {
+            if ('wakeLock' in navigator) {
+                wakeLock = await navigator.wakeLock.request('screen');
+                console.log('Wake Lock acquired');
+            }
+        } catch (e) {
+            console.log('Wake Lock not available or failed:', e);
+        }
+        
+        let generatedCount = 0;
+        let skippedCount = 0;
+        let errorCount = 0;
         
         try {
             for (let i = 0; i < cardsWithSentences.length; i++) {
                 const card = cardsWithSentences[i];
+                
+                // Skip if already has a valid breakdown (resume support)
+                if (this.sentenceBreakdowns[card.id] && !this.sentenceBreakdowns[card.id].error) {
+                    skippedCount++;
+                    progressSpan.textContent = `Skipping ${i + 1}/${cardsWithSentences.length} (already done)...`;
+                    continue;
+                }
+                
                 progressSpan.textContent = `Generating ${i + 1}/${cardsWithSentences.length}...`;
                 
                 try {
                     console.log(`Generating breakdown for ${card.kanji}...`);
                     const breakdown = await this.generateSentenceBreakdown(card);
-                    console.log(`Breakdown generated for ${card.kanji}:`, breakdown);
-                    this.sentenceBreakdowns[card.id] = breakdown;
+                    
+                    // Verify we actually got a valid breakdown
+                    if (breakdown && breakdown.breakdown) {
+                        this.sentenceBreakdowns[card.id] = breakdown;
+                        generatedCount++;
+                        console.log(`✓ Breakdown generated for ${card.kanji}`);
+                    } else {
+                        throw new Error('Empty response from API');
+                    }
                 } catch (error) {
-                    console.error(`Error generating breakdown for ${card.kanji}:`, error);
+                    console.error(`✗ Error generating breakdown for ${card.kanji}:`, error);
                     this.sentenceBreakdowns[card.id] = { error: error.message };
+                    errorCount++;
+                    
+                    // If error looks like network suspension, pause and retry once
+                    if (error.message.includes('fetch') || error.message.includes('network') || error.message.includes('Failed to fetch')) {
+                        progressSpan.textContent = `Network issue, retrying ${card.kanji}...`;
+                        await new Promise(r => setTimeout(r, 2000));
+                        try {
+                            const retryBreakdown = await this.generateSentenceBreakdown(card);
+                            if (retryBreakdown && retryBreakdown.breakdown) {
+                                this.sentenceBreakdowns[card.id] = retryBreakdown;
+                                generatedCount++;
+                                errorCount--;
+                                console.log(`✓ Retry succeeded for ${card.kanji}`);
+                            }
+                        } catch (retryError) {
+                            console.error(`✗ Retry also failed for ${card.kanji}`);
+                        }
+                    }
+                }
+                
+                // Save progress to localStorage after each card
+                try {
+                    localStorage.setItem('kanjiconcentration_breakdowns', JSON.stringify(this.sentenceBreakdowns));
+                } catch (e) {
+                    console.log('Could not save to localStorage:', e);
                 }
             }
             
-            progressSpan.textContent = '✅ All breakdowns generated!';
-            this.breakdownsGenerated = true;
-            console.log('breakdownsGenerated set to true');
+            const summary = `✅ Generated: ${generatedCount}\nSkipped: ${skippedCount}\nErrors: ${errorCount}`;
+            progressSpan.textContent = summary;
+            this.breakdownsGenerated = (errorCount === 0 && generatedCount + skippedCount === cardsWithSentences.length);
+            console.log('breakdownsGenerated:', this.breakdownsGenerated);
         } catch (error) {
             console.error('Error in generateAllBreakdowns:', error);
             progressSpan.textContent = `❌ Error: ${error.message}`;
             generateBtn.disabled = false;
+            
+            // Release wake lock on error
+            if (wakeLock) {
+                try { await wakeLock.release(); } catch (e) {}
+            }
             return;
+        }
+        
+        // Release wake lock
+        if (wakeLock) {
+            try { await wakeLock.release(); console.log('Wake Lock released'); } catch (e) {}
         }
         
         // Enable the play and convert buttons
