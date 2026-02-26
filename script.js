@@ -6046,7 +6046,8 @@ Keep it flowing naturally. Connect words together when they form phrases. Don't 
                             segments.push({ lang: 'english', text: breakdown.breakdown.trim() });
                         }
                         
-                        console.log(`Card ${card.kanji}: Found ${segments.length} segments`);
+                        console.log(`Card ${i + 1}/${cardsWithSentences.length} (${card.kanji}): Found ${segments.length} segments`);
+                        progressText.textContent = `Converting ${i + 1}/${cardsWithSentences.length}: ${card.kanji} (${segments.length} segments)`;
                         
                         // Get TTS for each segment with correct language
                         const jpVolumeEl = document.getElementById('jpVolume');
@@ -6064,6 +6065,8 @@ Keep it flowing naturally. Connect words together when they form phrases. Don't 
                                 } else {
                                     console.warn(`    ✗ getOpenAITTS returned null for segment`);
                                 }
+                                // Small delay to avoid rate limiting
+                                await new Promise(r => setTimeout(r, 100));
                             } catch (ttsError) {
                                 console.error(`    ✗ TTS error for segment: ${ttsError.message}`);
                             }
