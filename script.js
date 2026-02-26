@@ -5964,6 +5964,15 @@ Keep it flowing naturally. Connect words together when they form phrases. Don't 
         const cardsWithSentences = cardsToUse.filter(card => card.sentence && card.sentence.kanji);
         
         console.log('Cards with sentences:', cardsWithSentences.length);
+        console.log('Breakdowns available:', Object.keys(this.sentenceBreakdowns).length);
+        
+        // Count how many cards have valid breakdowns
+        let cardsWithValidBreakdowns = 0;
+        for (const card of cardsWithSentences) {
+            const bd = this.sentenceBreakdowns[card.id];
+            if (bd && !bd.error) cardsWithValidBreakdowns++;
+        }
+        console.log(`Cards with valid breakdowns: ${cardsWithValidBreakdowns}/${cardsWithSentences.length}`);
         
         if (cardsWithSentences.length === 0) {
             progressSpan.textContent = '❌ No sentences available';
@@ -6019,13 +6028,9 @@ Keep it flowing naturally. Connect words together when they form phrases. Don't 
                         // Parse breakdown text for [JP] and [EN] markers
                         const segments = [];
                         const regex = /\[(JP|EN)\]([\s\S]*?)\[\/\1\]/g;
-                        let lastIndex = 0;
                         let match;
                         
                         while ((match = regex.exec(breakdown.breakdown)) !== null) {
-                            // Add any text before this match (skip - it's usually whitespace)
-                            lastIndex = match.index + match[0].length;
-                            // Add the matched segment
                             const segmentText = match[2].trim();
                             if (segmentText) {
                                 segments.push({ 
@@ -6037,27 +6042,52 @@ Keep it flowing naturally. Connect words together when they form phrases. Don't 
                         
                         // If no markers found, treat entire text as English
                         if (segments.length === 0 && breakdown.breakdown.trim()) {
+                            console.warn(`No [JP]/[EN] markers found for card ${card.kanji}, treating as English`);
                             segments.push({ lang: 'english', text: breakdown.breakdown.trim() });
                         }
+                        
+                        console.log(`Card ${card.kanji}: Found ${segments.length} segments`);
                         
                         // Get TTS for each segment with correct language
                         const jpVolumeEl = document.getElementById('jpVolume');
                         const jpVolume = jpVolumeEl ? jpVolumeEl.value / 100 : 0.8;
                         
-                        for (const segment of segments) {
-                            const audioBlob = await this.getOpenAITTS(segment.text, segment.lang);
-                            if (audioBlob) {
-                                allAudioBlobs.push(audioBlob);
-                                audioVolumes.push(segment.lang === 'japanese' ? jpVolume : enVolume);
+                        for (let s = 0; s < segments.length; s++) {
+                            const segment = segments[s];
+                            console.log(`  Segment ${s + 1}/${segments.length}: [${segment.lang}] ${segment.text.substring(0, 30)}...`);
+                            try {
+                                const audioBlob = await this.getOpenAITTS(segment.text, segment.lang);
+                                if (audioBlob) {
+                                    allAudioBlobs.push(audioBlob);
+                                    audioVolumes.push(segment.lang === 'japanese' ? jpVolume : enVolume);
+                                    console.log(`    ✓ Got audio blob, size: ${audioBlob.size} bytes`);
+                                } else {
+                                    console.warn(`    ✗ getOpenAITTS returned null for segment`);
+                                }
+                            } catch (ttsError) {
+                                console.error(`    ✗ TTS error for segment: ${ttsError.message}`);
                             }
                         }
                     } catch (error) {
-                        console.error('Error converting breakdown:', error);
+                        console.error('Error converting breakdown for card', card.kanji, ':', error);
                     }
+                } else if (!breakdown) {
+                    console.log(`Skipping card ${card.kanji} - no breakdown generated`);
+                } else if (breakdown.error) {
+                    console.log(`Skipping card ${card.kanji} - breakdown has error: ${breakdown.error}`);
                 }
             }
             
             // Merge all audio
+            console.log(`Total audio blobs collected: ${allAudioBlobs.length}`);
+            console.log(`Total segments processed from ${cardsWithValidBreakdowns} cards`);
+            
+            if (allAudioBlobs.length === 0) {
+                progressDiv.innerHTML = '<div class="error-msg">❌ No audio was generated. Check console for errors.</div>';
+                setTimeout(() => progressDiv.remove(), 5000);
+                return;
+            }
+            
             const audioContext = new (window.AudioContext || window.webkitAudioContext)();
             const mergedAudio = await this.mergeAudioBlobs(audioContext, allAudioBlobs, audioVolumes);
             
