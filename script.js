@@ -6086,10 +6086,15 @@ Keep it flowing naturally. Connect words together when they form phrases. Don't 
             console.log(`Total segments processed from ${cardsWithValidBreakdowns} cards`);
             
             if (allAudioBlobs.length === 0) {
-                progressDiv.innerHTML = '<div class="error-msg">❌ No audio was generated. Check console for errors.</div>';
-                setTimeout(() => progressDiv.remove(), 5000);
+                const msg = `❌ No audio generated!\n\nCards: ${cardsWithSentences.length}\nBreakdowns: ${Object.keys(this.sentenceBreakdowns).length}\nValid: ${cardsWithValidBreakdowns}\n\nTry regenerating breakdowns first.`;
+                progressDiv.innerHTML = `<div class="error-msg" style="white-space:pre-wrap">${msg}</div>`;
+                setTimeout(() => progressDiv.remove(), 8000);
                 return;
             }
+            
+            // Show summary before merging
+            progressDiv.querySelector('.progress-text').textContent = 
+                `Merging ${allAudioBlobs.length} audio segments from ${cardsWithValidBreakdowns} cards...`;
             
             const audioContext = new (window.AudioContext || window.webkitAudioContext)();
             const mergedAudio = await this.mergeAudioBlobs(audioContext, allAudioBlobs, audioVolumes);
@@ -6105,8 +6110,9 @@ Keep it flowing naturally. Connect words together when they form phrases. Don't 
             document.body.removeChild(a);
             URL.revokeObjectURL(url);
             
-            progressDiv.innerHTML = '<div class="success-msg">✅ Breakdown MP3 conversion complete! File downloaded.</div>';
-            setTimeout(() => progressDiv.remove(), 3000);
+            const summary = `✅ Done!\n\nCards: ${cardsWithSentences.length}\nBreakdowns: ${Object.keys(this.sentenceBreakdowns).length}\nValid: ${cardsWithValidBreakdowns}\nSegments: ${allAudioBlobs.length}`;
+            progressDiv.innerHTML = `<div class="success-msg" style="white-space:pre-wrap">${summary}</div>`;
+            setTimeout(() => progressDiv.remove(), 6000);
             
         } catch (error) {
             console.error('Error converting breakdowns:', error);
