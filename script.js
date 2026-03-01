@@ -19,7 +19,8 @@ class KanjiConcentrationGame {
             timedMemoryTimerEnabled: true,
             timedMemorySpeakJapanese: true,
             timedMemorySpeakEnglish: true,
-            openaiApiKey: ''
+            openaiApiKey: '',
+            darkMode: false
         };
         this.preGameTimer = null;
         this.isGameActive = false;
@@ -93,6 +94,7 @@ class KanjiConcentrationGame {
         if (savedSettings) {
             this.settings = { ...this.settings, ...JSON.parse(savedSettings) };
         }
+        this.applyDarkMode();
         this.updateSettingsUI();
     }
 
@@ -100,9 +102,19 @@ class KanjiConcentrationGame {
         localStorage.setItem('kanjiGameSettings', JSON.stringify(this.settings));
     }
 
+    applyDarkMode() {
+        const body = document.body;
+        if (this.settings.darkMode) {
+            body.setAttribute('data-theme', 'dark');
+        } else {
+            body.removeAttribute('data-theme');
+        }
+    }
+
     updateSettingsUI() {
         document.getElementById('matchedPairBehavior').value = this.settings.matchedPairBehavior;
         document.getElementById('autoAdvance').checked = this.settings.autoAdvance;
+        document.getElementById('darkMode').checked = this.settings.darkMode;
         document.getElementById('timerDuration').value = this.settings.timerDuration;
         document.getElementById('timedMemoryDuration').value = this.settings.timedMemoryDuration;
         document.getElementById('timedMemoryTimerEnabled').checked = this.settings.timedMemoryTimerEnabled;
@@ -6442,16 +6454,17 @@ Keep it flowing naturally. Connect words together when they form phrases. Don't 
         document.getElementById('saveSettings').addEventListener('click', () => {
             this.settings.matchedPairBehavior = document.getElementById('matchedPairBehavior').value;
             this.settings.autoAdvance = document.getElementById('autoAdvance').checked;
+            this.settings.darkMode = document.getElementById('darkMode').checked;
             this.settings.timerDuration = parseInt(document.getElementById('timerDuration').value);
             this.settings.timedMemoryDuration = parseInt(document.getElementById('timedMemoryDuration').value);
             this.settings.timedMemoryTimerEnabled = document.getElementById('timedMemoryTimerEnabled').checked;
-            
+
             const speakJapaneseEl = document.getElementById('timedMemorySpeakJapanese');
             if (speakJapaneseEl) this.settings.timedMemorySpeakJapanese = speakJapaneseEl.checked;
-            
+
             const speakEnglishEl = document.getElementById('timedMemorySpeakEnglish');
             if (speakEnglishEl) this.settings.timedMemorySpeakEnglish = speakEnglishEl.checked;
-            
+
             const apiKeyInput = document.getElementById('openaiApiKey');
             if (apiKeyInput) this.settings.openaiApiKey = apiKeyInput.value;
             this.saveSettings();

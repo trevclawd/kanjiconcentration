@@ -5,16 +5,39 @@
     box-sizing: border-box;
 }
 
+:root {
+    --bg-gradient: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    --bg-color: #f5f5f5;
+    --text-color: #333;
+    --modal-bg: rgba(255, 255, 255, 0.95);
+    --header-bg: rgba(255, 255, 255, 0.95);
+    --card-bg: white;
+    --card-border: #333;
+    --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] {
+    --bg-gradient: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --modal-bg: rgba(30, 30, 50, 0.95);
+    --header-bg: rgba(30, 30, 50, 0.95);
+    --card-bg: #1e1e1e;
+    --card-border: #444;
+    --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    background: var(--bg-gradient);
     min-height: 100vh;
-    color: #333;
+    color: var(--text-color);
+    transition: background 0.3s, color 0.3s;
 }
 
 /* Header Styles */
 header {
-    background: rgba(255, 255, 255, 0.95);
+    background: var(--header-bg);
     padding: 1rem 2rem;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -23,7 +46,7 @@ header {
 }
 
 header h1 {
-    color: #1e3c72;
+    color: var(--text-color);
     font-size: 2rem;
     font-weight: bold;
 }
@@ -3971,4 +3994,273 @@ header h1 {
         margin-left: 0;
         margin-top: 10px;
     }
+}
+
+/* Dark Mode Theme */
+[data-theme="dark"] .control-btn {
+    background: #3a506b;
+    color: white;
+}
+
+[data-theme="dark"] .control-btn:hover {
+    background: #4a607b;
+}
+
+[data-theme="dark"] .special-btn {
+    background: linear-gradient(135deg, #d35400, #e67e22);
+}
+
+[data-theme="dark"] .special-btn:hover {
+    background: linear-gradient(135deg, #e85d0a, #f39c12);
+}
+
+[data-theme="dark"] .start-btn {
+    background: #e67e22;
+}
+
+[data-theme="dark"] .start-btn:hover {
+    background: #d35400;
+}
+
+[data-theme="dark"] .modal-content {
+    background-color: #2a2a3e;
+    color: var(--text-color);
+}
+
+[data-theme="dark"] header {
+    background: var(--header-bg);
+}
+
+[data-theme="dark"] h1, [data-theme="dark"] h2,
+[data-theme="dark"] h3, [data-theme="dark"] h4 {
+    color: white;
+}
+
+[data-theme="dark"] .setting-group label,
+[data-theme="dark"] .setting-group small {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .setting-group select,
+[data-theme="dark"] .setting-group input {
+    border: 2px solid #4a4a6a;
+    background: #1e1e2e;
+    color: white;
+}
+
+[data-theme="dark"] .pre-game-header h2 {
+    color: #FFD700;
+}
+
+[data-theme="dark"] .card-pairs-container {
+    background: rgba(30, 30, 50, 0.3);
+}
+
+[data-theme="dark"] .card-pair {
+    background: #1e1e2e;
+    border: 2px solid #4a4a6a;
+}
+
+[data-theme="dark"] .playing-card {
+    box-shadow: var(--card-shadow);
+}
+
+[data-theme="dark"] .card-face {
+    border: 2px solid var(--card-border);
+}
+
+[data-theme="dark"] .card-back {
+    background: linear-gradient(135deg, #2d1f2d, #4a1f4a);
+    color: white;
+}
+
+[data-theme="dark"] .game-header {
+    background: var(--header-bg);
+}
+
+[data-theme="dark"] .round-info h2 {
+    color: white;
+}
+
+[data-theme="dark"] .game-stats,
+[data-theme="dark"] .score-value {
+    color: #4CAF50;
+}
+
+[data-theme="dark"] .score-change.positive {
+    color: #4CAF50;
+}
+
+[data-theme="dark"] .score-change.negative {
+    color: #e74c3c;
+}
+
+[data-theme="dark"] .game-board {
+    background: rgba(30, 30, 50, 0.3);
+}
+
+[data-theme="dark"] .kanji,
+[data-theme="dark"] .romaji {
+    color: #fff;
+}
+
+[data-theme="dark"] .hiragana,
+[data-theme="dark"] .sentence-kanji,
+[data-theme="dark"] .target-romaji,
+[data-theme="dark"] .sentence-romaji {
+    color: #bdc3c7;
+}
+
+[data-theme="dark"] .sentence-display,
+[data-theme="dark"] .review-sentence,
+[data-theme="dark"] .target-sentence {
+    background: rgba(40, 40, 60, 0.9);
+    border-color: #5dade2;
+}
+
+[data-theme="dark"] .timed-memory-content {
+    background: rgba(30, 30, 50, 0.95);
+}
+
+[data-theme="dark"] .drag-drop-header,
+[data-theme="dark"] .story-header,
+[data-theme="dark"] .listen-sentences-header,
+[data-theme="dark"] .focused-reading-header {
+    background: var(--header-bg);
+}
+
+[data-theme="dark"] .drag-drop-content,
+[data-theme="dark"] .story-content,
+[data-theme="dark"] .listen-sentences-content,
+[data-theme="dark"] .focused-reading-content {
+    background: rgba(30, 30, 50, 0.3);
+}
+
+[data-theme="dark"] .card-pair.selected .card-front {
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+}
+
+[data-theme="dark"] .card-pair.selectable:hover {
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 165, 0, 0.1)) !important;
+}
+
+[data-theme="dark"] .review-rhyme {
+    background: linear-gradient(135deg, #4a2c2c, #5a3c3c);
+    border-color: #e74c3c;
+}
+
+[data-theme="dark"] .review-sentence .sentence-kanji,
+[data-theme="dark"] .review-pair-display .kanji {
+    color: white;
+}
+
+[data-theme="dark"] .review-pair-display .playing-card {
+    border: 3px solid #4a90a4;
+}
+
+[data-theme="dark"] .drag-drop-game-area {
+    background: rgba(30, 30, 50, 0.2);
+}
+
+[data-theme="dark"] .target-card {
+    background: #1e1e2e;
+    border-color: #4a4a6a;
+}
+
+[data-theme="dark"] .target-rhyme,
+[data-theme="dark"] .review-rhyme {
+    background: linear-gradient(135deg, #4a2c2c, #5a3c3c);
+    color: white;
+}
+
+[data-theme="dark"] .target-sentence,
+[data-theme="dark"] .listen-sentences-list {
+    background: rgba(40, 40, 60, 0.9);
+    border-color: #5dade2;
+}
+
+[data-theme="dark"] .sentence-controls .sentence-toggle-btn,
+[data-theme="dark"] .review-sentence-controls .sentence-toggle-btn {
+    background: #4a4a6a;
+}
+
+[data-theme="dark"] .sentence-controls .sentence-toggle-btn:hover,
+[data-theme="dark"] .review-sentence-controls .sentence-toggle-btn:hover {
+    background: #5a5a7a;
+}
+
+[data-theme="dark"] .section-title {
+    color: #fff;
+}
+
+[data-theme="dark"] .card-selection-status {
+    background: #2a2a3e;
+    color: white;
+    border-color: #FFD700;
+}
+
+[data-theme="dark"] .timer, [data-theme="dark"] .timed-memory-timer {
+    color: #FFD700;
+}
+
+[data-theme="dark"] .drag-drop-targets h3,
+[data-theme="dark"] .drag-drop-source h3,
+[data-theme="dark"] .mode-selection-header h2,
+[data-theme="dark"] .mode-selection-header p {
+    text-shadow: none;
+    color: #fff;
+}
+
+[data-theme="dark"] .mode-card {
+    background: #2a2a3e;
+}
+
+[data-theme="dark"] .mode-card h3 {
+    color: #5dade2;
+}
+
+[data-theme="dark"] .mode-card p {
+    color: #bdc3c7;
+}
+
+[data-theme="dark"] .toggle-btn.active {
+    background: linear-gradient(135deg, #d35400, #e67e22);
+    color: #2d3436;
+}
+
+[data-theme="dark"] .toggle-btn.active:hover {
+    background: linear-gradient(135deg, #f39c12, #e74c3c);
+}
+
+[data-theme="dark"] .volume-controls label {
+    color: white;
+}
+
+[data-theme="dark"] .volume-controls input[type="range"] {
+    background: #4a4a6a;
+}
+
+[data-theme="dark"] .volume-controls input[type="range"]::-webkit-slider-thumb {
+    background: #4CAF50;
+}
+
+[data-theme="dark"] .volume-controls input[type="range"]::-moz-range-thumb {
+    background: #4CAF50;
+}
+
+[data-theme="dark"] .library-modal {
+    background: #2a2a3e;
+}
+
+[data-theme="dark"] .library-content {
+    background: #1e1e2e;
+}
+
+[data-theme="dark"] .no-files {
+    color: #bdc3c7;
+}
+
+[data-theme="dark"] .file-item {
+    background: #1e1e2e;
+    border-color: #4a4a6a;
 }
